@@ -7,6 +7,6 @@ Route::get('/', function () {
 });
 
 
-Route::get('users/{id}', function ($id) {
-    dd($id);
+Route::get('users', function () {
+    dd('Hiii');
 });
