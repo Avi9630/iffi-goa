@@ -2,12 +2,11 @@
     <div class="col-lg-12 ">
         <div class="container">
             <div class="footer-logo">
-                <img src="images/f-logoOne.svg" alt="">
-                <img src="images/f-logoTwo.svg" alt="">
+                <img src="{{ asset('public/images/f-logoOne.svg') }}" alt="">
+                <img src="{{ asset('public/images/f-logoTwo.svg') }}" alt="">
                 <a href="https://filmbazaarindia.com/" target="_blank">
-                    <img src="images/Film-Bazar.png" alt="">
+                    <img src="{{ asset('public/images/Film-Bazar.png') }}" alt="">
                 </a>
-                <img class="d-none" src="images/f-logoFour.svg" alt="">
             </div>
             <div class="row">
                 <div class="col-md-3 col-sm-3">
@@ -72,13 +71,13 @@
     <div class="f-foot row">
         <div class="social-bar">
             <a href="https://www.facebook.com/IFFIGoa/" target="_blank">
-                <img src="images/facebook-round.svg" alt="">
+                <img src="{{ asset('public/images/facebook-round.svg') }}" alt="">
             </a>
             <a href="https://x.com/iffigoa" target="_blank">
-                <img src="images/X-social.svg" alt="">
+                <img src="{{ asset('public/images/X-social.svg') }}" alt="">
             </a>
             <a href="https://www.instagram.com/iffigoa/" target="_blank">
-                <img src="images/Insta.svg" alt="">
+                <img src="{{ asset('public/images/Insta.svg') }}" alt="">
             </a>
         </div>
         <div class="d-flex flex-column text-center justify-content-center f-foot-copyright">
@@ -94,6 +93,8 @@
 <script src="{{ asset('public/js/owl.carousel.min.js') }}"></script>
 <script src="{{ asset('public/js/bootstrap.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('public/js/custom.js') }}"></script>
+
+{{-- Social media corner js for FB Insta, Twitter --}}
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v15.0">
 </script>
 <script async src="https://www.instagram.com/embed.js"></script>
