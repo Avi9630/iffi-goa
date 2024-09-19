@@ -38,7 +38,7 @@ body p{ font-family:"Roboto", sans-serif; }
 .btn-menu{ border:none;   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); color:#fff; padding:6px 30px;text-transform:uppercase; } 
 .btn-menu:hover{ color:#fff; }
 
-.top-navigation{background: linear-gradient(44.16deg, rgba(62, 78, 176, 0.9) -20.28%, rgba(22, 78, 71, 0.9) 100%); color: #fff; padding: 50px 0; height: 100%!important}
+.top-navigation{background: linear-gradient(44.16deg, rgba(62, 78, 176, 0.9) -20.28%, rgba(22, 78, 71, 0.9) 100%); color: #fff; padding: 50px 0; height: 70%!important;}
  .top-navigation .btn-close{ color:#fff; opacity:1; background-color: #fff; border-radius: 100%;}
 .offcanvas-body{ height:100vh }
  .dropdown-item {
@@ -46,9 +46,7 @@ body p{ font-family:"Roboto", sans-serif; }
 }
 .dropdown .dropdown-menu {
   display: none;
- background: linear-gradient(44.16deg, rgba(62, 78, 176, 0.9) -20.28%, rgba(22, 78, 71, 0.9) 100%); 
-  right: 0;
-  top: 0;
+  background: #212529;
 }
 .dropdown:hover>.dropdown-menu, 
 .dropend:hover>.dropdown-menu {
@@ -56,10 +54,6 @@ body p{ font-family:"Roboto", sans-serif; }
   margin-top: .1em;
   margin-left: .1em;
 }
-.vertical-menu-custom a{ padding-left:0!important; color: #FFF;}
-.vertical-menu-custom a:hover{ color:#baf3f5!important}
-.dropdown .dropdown-menu a{ padding-left:15px!important }
-.dropdown .dropdown-menu a:hover{ color:#000!important; background: #baf3f5}
 @media screen and (min-width:769px) {
   .dropend:hover>.dropdown-menu {
     position: absolute;
@@ -108,7 +102,7 @@ body p{ font-family:"Roboto", sans-serif; }
 .owl-carousel-sponsor img{ width:150px!important; }
 footer { background: linear-gradient(44.43deg, #3e4eb0 -20.27%, #164e47 105%); padding: 32px 0 0 0; position: relative;overflow: hidden; color: #fff;}
 .footer-logo{ display:flex; justify-content: center; margin-bottom: 30px; border-bottom: solid 1px #9fa0a9; padding-bottom: 15px;}
-/*.footer-logo img{ width:100px;}*/
+.footer-logo img{ width:100px;}
 footer h4{ font-size:12px; text-transform:uppercase; font-weight:600;  text-transform: uppercase;}
 footer ul{ padding:0; margin-bottom::32px; }
 footer  li{ list-style:none; margin-bottom:2px;  }
@@ -126,5 +120,3 @@ footer a:hover{ color:#ffa706!important; }
 .quick-link ul li{ border-left:solid 1px #fff; padding-left:7px; padding-right:8px; line-height:normal; }
 .quick-link ul li a{ color:#fff; text-decoration:none; }
 .quick-link ul li:first-child{ border:inherit; }
-.yelow-color-link{    color: #ffa706 !important;
-    font-weight: 600 !important;}

@@ -2,89 +2,242 @@
 <div class="offcanvas offcanvas-top top-navigation" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
     <div class="container">
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasTopLabel">Offcanvas top</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <div class="offcanvas-body">
+        <div class="offcanvas-body1">
             <nav class="navbar navbar-expand-lg navbar-dark">
-                <div class="container">
+                <div class="container pl-0">
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <div class="row">
-                            <div class="col-md-4 col-sm-4">
+
+                            <!-- About Us Section Start -->
+                            <div class="col-md-3 col-sm-3 ">
                                 <h4 class="menu-title ">About us</h4>
                                 <ul class="navbar-nav vertical-menu-custom">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Home</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">About</a>
+                                    <li class="nav-item"><a href="https://www.iffigoa.org/about-iffi"
+                                            class="nav-link">About IFFI</a></li>
+                                    <li class="nav-item"><a href="https://www.youtube.com/watch?v=lsjuObbzDyM"
+                                            class="nav-link" target="_blank">Glimpses of IFFI 2023</a></li>
+                                    <li class="nav-item"><a href="https://www.iffigoa.org/festival_venue"
+                                            class="nav-link">Festival Venue</a>
                                     </li>
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" role="button"
-                                            data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                                            data-bs-toggle="dropdown" aria-expanded="false">About Goa</a>
                                         <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">Service Name</a></li>
-                                            <li><a class="dropdown-item" href="#">Service Name</a></li>
-                                            <li><a class="dropdown-item" href="#">Service Name</a></li>
-                                            <li><a class="dropdown-item" href="#">Service Name</a></li>
+                                            <li><a href="https://www.iffigoa.org/goa-tourist-places"
+                                                    class="dropdown-item">Goa Tourist Places</a></li>
+                                            <li><a href="https://www.iffigoa.org/connectivity"
+                                                    class="dropdown-item">Connectivity</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item"><a href="https://www.iffigoa.org/festival_venue"
+                                            class="nav-link">Contact Us</a>
+                                    </li>
+                                    <li class="nav-item"><a href="https://www.iffigoa.org/festival_venue"
+                                            class="nav-link">Faq</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- About Us Section End -->
+
+                            <!-- Film Selection Section Start -->
+                            <div class="col-md-3 col-sm-3 ">
+                                <h4 class="menu-title ">Film selection</h4>
+                                <ul class="navbar-nav vertical-menu-custom">
+
+                                    <!-- International Cinema menu Start-->
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">International Cinema</a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a href="https://filmfreeway.com/InternationalFilmFestivalofIndiaIFFI-Goa"
+                                                    class="dropdown-item nav-link yelow-color-link"
+                                                    target="_blank">Submit Your Entry</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.iffigoa.org/connectivity"
+                                                    class="dropdown-item">Rules & Regulations</a>
+                                            </li>
                                             <li class="nav-item dropend">
                                                 <a class="nav-link dropdown-toggle" href="#" role="button"
                                                     data-bs-toggle="dropdown" aria-expanded="false">
-                                                    Service Name
+                                                    Curated Sections 2023
                                                 </a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a class="dropdown-item" href="#">Service Name</a>
+                                                    <li><a class="dropdown-item" href="#">International
+                                                            Competition</a></li>
+                                                    <li><a class="dropdown-item" href="#">Award For The Best
+                                                            Debut</a></li>
+                                                    <li><a class="dropdown-item" href="#">ICFT-UNESCO Gandhi Medal
+                                                            2023</a></li>
+                                                    <li><a class="dropdown-item" href="#">Festival Kaleloscope</a>
                                                     </li>
-                                                    <li><a class="dropdown-item" href="#">Service Name</a>
+                                                    <li><a class="dropdown-item" href="#">Docu - Montage</a>
                                                     </li>
-                                                    <li><a class="dropdown-item" href="#">Service Name</a>
+                                                    <li><a class="dropdown-item" href="#">Intergrade</a>
                                                     </li>
-                                                    <li><a class="dropdown-item" href="#">Service Name</a>
+                                                    <li><a class="dropdown-item" href="#">Animation</a>
                                                     </li>
-                                                    <li class="nav-item dropend">
-                                                        <a class="nav-link dropdown-toggle" href="#"
-                                                            role="button" data-bs-toggle="dropdown"
-                                                            aria-expanded="false">
-                                                            Service Name
-                                                        </a>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a class="dropdown-item" href="#">Service
-                                                                    Name</a></li>
-                                                            <li><a class="dropdown-item" href="#">Service
-                                                                    Name</a></li>
-                                                            <li><a class="dropdown-item" href="#">Service
-                                                                    Name</a></li>
-                                                            <li class="nav-item dropend">
-                                                                <a class="nav-link dropdown-toggle" href="#"
-                                                                    role="button" data-bs-toggle="dropdown"
-                                                                    aria-expanded="false">
-                                                                    Service Name
-                                                                </a>
-                                                                <ul class="dropdown-menu">
-                                                                    <li><a class="dropdown-item" href="#">Service
-                                                                            Name</a></li>
-                                                                    <li><a class="dropdown-item" href="#">Service
-                                                                            Name</a></li>
-                                                                    <li><a class="dropdown-item" href="#">Service
-                                                                            Name</a></li>
-                                                                    <li><a class="dropdown-item" href="#">Service
-                                                                            Name</a></li>
-                                                                </ul>
-                                                            </li>
-                                                        </ul>
+                                                    <li><a class="dropdown-item" href="#">Macabre Dreams</a>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="#">Cinema Of The World</a>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="#">Restored Classics</a>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="#">UNICEF X IFFI</a>
                                                     </li>
                                                 </ul>
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link">Portfolio</a>
+
+                                    <!-- Indian Debut Director Award menu Start-->
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">Indian Debut Director
+                                            Awards</a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a href="https://www.iffigoa.org/connectivity"
+                                                    class="dropdown-item">About Debut Director</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://filmfreeway.com/InternationalFilmFestivalofIndiaIFFI-Goa"
+                                                    class="dropdown-item nav-link yelow-color-link"
+                                                    target="_blank">Submit Your Entry</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.iffigoa.org/connectivity"
+                                                    class="dropdown-item">Rules & Regulations</a>
+                                            </li>
+                                        </ul>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link">Contact</a>
+
+                                    <!-- Indian Panorama menu Start-->
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">Indian Panorama</a>
+                                        <ul class="dropdown-menu">
+
+                                            <li>
+                                                <a href="https://www.iffigoa.org/connectivity"
+                                                    class="dropdown-item">About Indian Panorama</a>
+                                            </li>
+
+                                            <li>
+                                                <a href="https://filmfreeway.com/InternationalFilmFestivalofIndiaIFFI-Goa"
+                                                    class="dropdown-item nav-link yelow-color-link"
+                                                    target="_blank">Submit Your Entry</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.iffigoa.org/connectivity"
+                                                    class="dropdown-item">Rules & Regulations</a>
+                                            </li>
+
+                                            <li class="nav-item dropend">
+                                                <a class="nav-link dropdown-toggle" href="#" role="button"
+                                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                                    Indian Panorama - IFFI 2023
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#">Official Selection :
+                                                            Feature</a>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="#">Official Selection :
+                                                            Non-Feature</a></li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="nav-item dropend">
+                                                <a class="nav-link dropdown-toggle" href="#" role="button"
+                                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                                    Indian Cinema - IFFI 2023
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#">Accessible
+                                                            India-Accessible Films</a>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="#">Special Screening</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <!-- Best Web Series menu Start-->
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">Best Web Series</a>
+                                        <ul class="dropdown-menu">
+
+                                            <li>
+                                                <a href="https://www.iffigoa.org/connectivity"
+                                                    class="dropdown-item">About Web Series</a>
+                                            </li>
+
+                                            <li>
+                                                <a href="https://filmfreeway.com/InternationalFilmFestivalofIndiaIFFI-Goa"
+                                                    class="dropdown-item nav-link yelow-color-link"
+                                                    target="_blank">View Your Entry</a>
+                                            </li>
+
+                                        </ul>
+                                    </li>
+
+                                    <!-- Gala Premieres & Red Carpet menu Start-->
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">Gala Premieres & Red
+                                            Carpet</a>
+                                        <ul class="dropdown-menu">
+
+
+                                            <li>
+                                                <a href="https://www.iffigoa.org/connectivity"
+                                                    class="dropdown-item">1st Edition (53rd IFFI)</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.iffigoa.org/connectivity"
+                                                    class="dropdown-item">2nd Edition (54th IFFI)</a>
+                                            </li>
+
+                                        </ul>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <!-- Film Selection Section End -->
+
+                            <!-- CMOT Section Start -->
+                            <div class="col-md-3 col-sm-3 ">
+                                <h4 class="menu-title ">Creative Minds Of Tomorrow (CMOT)</h4>
+                                <ul class="navbar-nav vertical-menu-custom">
+                                    <li class="nav-item"><a href="https://www.iffigoa.org/about_cmot"
+                                            class="nav-link">About CMOT</a></li>
+                                    <li class="nav-item"><a href="https://iffigoa.org/festival/creative-mind-tomorrow"
+                                            class="nav-link yelow-color-link">Submit your entry</a>
                                     </li>
                                 </ul>
                             </div>
+                            <!-- CMOT Section End -->
+
+                            <!-- Media Section Start -->
+                            <div class="col-md-3 col-sm-3 ">
+                                <h4 class="menu-title ">Media</h4>
+                                <ul class="navbar-nav vertical-menu-custom">
+                                    <li class="nav-item"><a href="https://www.iffigoa.org/press-release"
+                                            class="nav-link">Press Release</a></li>
+                                    <li class="nav-item"><a href="https://www.iffigoa.org/gallery"
+                                            class="nav-link">Gallery of 2023 IFFI Festival</a>
+                                    </li>
+                                    <li class="nav-item"><a href="https://www.iffigoa.org/news-and-updates"
+                                            class="nav-link">News and Updates</a></li>
+                                </ul>
+                            </div>
+                            <!-- Media Section End -->
+
                         </div>
                     </div>
                 </div>
