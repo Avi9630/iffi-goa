@@ -14,7 +14,6 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/iffigoa.css') }}">
     <link rel="icon" href="{{ asset('public/images/iffigoa.jpg') }}" />
-    @livewireStyles
 </head>
 
 <body id="text-resize">

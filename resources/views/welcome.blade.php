@@ -6,7 +6,7 @@
 @section('site_keywords',
     'IFFI Goa, IFFI Goa 2024, IFFI 2022, 55th IFFI, Goan Films, Goa Film news, Indian films, film
     in india, information, film festival, film producer, broadcasting')
-@section('main')
+@section('content')
 
     <!-- Navigation slide -->
     @include('pages.navigation-slide')
@@ -18,6 +18,9 @@
     @include('pages.ticker', [
         'tickers' => app(\App\Http\Controllers\TickerController::class)->getAllTicker(),
     ])
+
+    <!-- Counter -->
+    <livewire:counter />
 
     <!-- About IFFI -->
     @include('pages.about-iffi')

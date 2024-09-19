@@ -17,3 +17,7 @@ Route::get('sponsors',              [CommonController::class,   'sponsors'])->na
 Route::get('news-and-update', function () {
     return view('news-and-update.news-and-update');
 })->name('news-and-update');
+
+Route::get('/counter', function () {
+    return view('counterView');
+})->name('counter');

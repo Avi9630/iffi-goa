@@ -6,7 +6,7 @@
 @section('site_keywords',
     'IFFI GOA Press Release, IFFI news update, IFFI announcements, official IFFI statements,
     Latest IFFI news, IFFI press coverage, IFFI media releases, IFFI event news')
-@section('main')
+@section('content')
     <section class="otherhero IFFI-Press-banner px-0">
         <div class="otherhero-block">
             <header class="container-fluid py-4 w-100">

@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('main')
+@section('content')
     <section class="otherhero px-0">
         <div class="otherhero-block">
             <header class="container-fluid py-4 w-100">
