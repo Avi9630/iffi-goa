@@ -9,9 +9,12 @@
             </div>
         </div>
         <div class="overlaybg"></div>
-        <video loop="" autoplay="" muted="" playsinline="">
-            <source src="https://www.iffigoa.org/public/new/assets/video/Banner-video.mp4" type="video/mp4">
-        </video>
+        <div class="embed-responsive embed-responsive-16by9">
+            <video loop="" autoplay="" muted="" playsinline="" class="embed-responsive-item">
+                <source src="https://www.iffigoa.org/public/new/assets/video/Banner-video.mp4" type="video/mp4">
+            </video>
+
+        </div>
     </div>
 </div>
 <!-- Video Section Ends -->
