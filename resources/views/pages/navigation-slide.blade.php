@@ -14,29 +14,50 @@
                             <div class="col-md-3 col-sm-3 ">
                                 <h4 class="menu-title ">About us</h4>
                                 <ul class="navbar-nav vertical-menu-custom">
-                                    <li class="nav-item"><a href="https://www.iffigoa.org/about-iffi"
-                                            class="nav-link">About IFFI</a></li>
-                                    <li class="nav-item"><a href="https://www.youtube.com/watch?v=lsjuObbzDyM"
-                                            class="nav-link" target="_blank">Glimpses of IFFI 2023</a></li>
-                                    <li class="nav-item"><a href="https://www.iffigoa.org/festival_venue"
-                                            class="nav-link">Festival Venue</a>
+
+                                    <li class="nav-item">
+                                        <a href="{{ route('about-iffi') }}" class="nav-link">About
+                                            IFFI</a>
                                     </li>
+
+                                    <li class="nav-item">
+                                        <a href="https://www.youtube.com/watch?v=lsjuObbzDyM" class="nav-link"
+                                            target="_blank">Glimpses of IFFI 2023</a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="{{ route('festival-venue') }}" class="nav-link">Festival Venue</a>
+                                    </li>
+
                                     <li class="nav-item dropdown">
+
                                         <a class="nav-link dropdown-toggle" href="#" role="button"
-                                            data-bs-toggle="dropdown" aria-expanded="false">About Goa</a>
+                                            data-bs-toggle="dropdown" aria-expanded="false">About Goa
+                                        </a>
                                         <ul class="dropdown-menu">
-                                            <li><a href="https://www.iffigoa.org/goa-tourist-places"
-                                                    class="dropdown-item">Goa Tourist Places</a></li>
-                                            <li><a href="https://www.iffigoa.org/connectivity"
-                                                    class="dropdown-item">Connectivity</a></li>
+
+                                            <li>
+                                                <a href="{{ route('goa-tourist-places') }}" class="dropdown-item">Goa
+                                                    Tourist Places</a>
+                                            </li>
+
+                                            <li>
+                                                <a href="{{ route('connectivity') }}" class="dropdown-item">
+                                                    Connectivity </a>
+                                            </li>
+
                                         </ul>
+
                                     </li>
-                                    <li class="nav-item"><a href="https://www.iffigoa.org/festival_venue"
-                                            class="nav-link">Contact Us</a>
+
+                                    <li class="nav-item">
+                                        <a href="{{ route('contact-us') }}" class="nav-link">Contact Us</a>
                                     </li>
-                                    <li class="nav-item"><a href="https://www.iffigoa.org/festival_venue"
-                                            class="nav-link">Faq</a>
+
+                                    <li class="nav-item">
+                                        <a href="{{ route('faq') }}" class="nav-link">Faq</a>
                                     </li>
+
                                 </ul>
                             </div>
                             <!-- About Us Section End -->

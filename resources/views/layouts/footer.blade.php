@@ -86,6 +86,8 @@
     </div>
 </footer>
 <!-- Footer ends  -->
+
+@livewireScripts
 </body>
 <!-- Owl Carousel CSS -->
 <!-- Owl Carousel JS -->
