@@ -8,6 +8,10 @@
     in india, information, film festival, film producer, broadcasting')
 @section('content')
 
+    <!-- Top Logo Section -->
+    @include('pages.logo')
+    <!-- Top Logo Section Ends-->
+
     <!-- Navigation slide -->
     @include('pages.navigation-slide')
 
@@ -18,9 +22,6 @@
     @include('pages.ticker', [
         'tickers' => app(\App\Http\Controllers\TickerController::class)->getAllTicker(),
     ])
-
-    <!-- Counter -->
-    <livewire:counter />
 
     <!-- About IFFI -->
     @include('pages.about-iffi')

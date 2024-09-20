@@ -74,4 +74,33 @@ class CommonController extends Controller
         ];
         return $sponsors;
     }
+
+    public function goaTouristPlace()
+    {
+        $gtp = DB::table('mst_about_goa_tourist_places_gallery')
+            ->where('tourist_places_unesco_id', 1)
+            ->whereNull('deleted_at')
+            ->get();
+        $gtpu11 = DB::table('mst_about_goa_tourist_places_gallery')
+            ->where('tourist_places_unesco_id', 2)
+            ->whereNull('deleted_at')
+            ->get();
+        $gtpu = DB::table('mst_about_goa_tourist_places_unesco')->where('id', 1)->whereNull('deleted_at')->get();
+        $gtpp22 = DB::table('mst_about_goa_tourist_places_gallery')
+            ->where('tourist_places_unesco_id', 3)
+            ->whereNull('deleted_at')
+            ->get();
+        $gtpp33 = DB::table('mst_about_goa_tourist_places_gallery')
+            ->where('tourist_places_unesco_id', 4)
+            ->whereNull('deleted_at')
+            ->get();
+
+        return view('about-us.about-goa.goa-tourist-place', [
+            'gtp'       =>  $gtp,
+            'gtpu'      =>  $gtpu,
+            'gtpu11'    =>  $gtpu11,
+            'gtpp22'    =>  $gtpp22,
+            'gtpp33'    =>  $gtpp33,
+        ]);
+    }
 }

@@ -47,8 +47,9 @@ body p{ font-family:"Roboto", sans-serif; }
 .dropdown .dropdown-menu {
   display: none;
  background: linear-gradient(44.16deg, rgba(62, 78, 176, 0.9) -20.28%, rgba(22, 78, 71, 0.9) 100%); 
-  right: 0;
-  top: 0;
+  left:95%;
+  top: 0px;
+  width: 100%;
 }
 .dropdown:hover>.dropdown-menu, 
 .dropend:hover>.dropdown-menu {
@@ -56,10 +57,12 @@ body p{ font-family:"Roboto", sans-serif; }
   margin-top: .1em;
   margin-left: .1em;
 }
-.vertical-menu-custom a{ padding-left:0!important; color: #FFF;}
+.vertical-menu-custom a{  color: #FFF; white-space: inherit!important;}
 .vertical-menu-custom a:hover{ color:#baf3f5!important}
-.dropdown .dropdown-menu a{ padding-left:15px!important }
+
 .dropdown .dropdown-menu a:hover{ color:#000!important; background: #baf3f5}
+.vertical-menu-custom .dropdown-toggle::after{ position:absolute; right:10px; top:15px; }
+
 @media screen and (min-width:769px) {
   .dropend:hover>.dropdown-menu {
     position: absolute;
@@ -67,6 +70,7 @@ body p{ font-family:"Roboto", sans-serif; }
     left: 100%;
   }
   .dropend .dropdown-toggle {margin-left: .5em;}
+
 }
 .collapse:not(.show){ display:block!important; }
 .menu-title{ font-family: "Libre Franklin", sans-serif !important;font-size: 18px;font-weight: 500;color: #ffdc1c; margin-bottom: 15px;} 
@@ -128,3 +132,78 @@ footer a:hover{ color:#ffa706!important; }
 .quick-link ul li:first-child{ border:inherit; }
 .yelow-color-link{    color: #ffa706 !important;
     font-weight: 600 !important;}
+
+
+.page-header {
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/aboutbg.jpg) center center no-repeat;
+    background-size: cover;
+   padding: 150px 0!important;
+    height: 100%;
+    max-height: 500px;
+    display: flex;
+    justify-content: center;
+}
+.page-header h1 {
+    font-size: 90px;
+    font-weight: 900;
+    font-family: "Sora";
+    color: white;
+    text-shadow: 0px 12px 8px rgba(0, 0, 0, 0.2509803922);
+    /* text-transform: uppercase; */
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.static-content { margin-top:40px; }
+.static-content p {
+    font-weight: 400;
+    font-size: 18px;
+}
+.static-content li{ font-weight: 400; font-size: 18px; margin-bottom:10px; }
+.static-content .section-heading h2::after{ bottom:25px; }
+ .title-line h2::after{ bottom:2px!important; }
+.card-title{color: #973A64;}
+.card-title span{color: #000;}
+.up-awards-card h5{color:#3E4EB0 ;}
+.up-awards-card .price{color:#973A64 ; font-size: 22px; font-weight: 600;}
+
+.bannerBg-festival-venue {
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/Venuebg.jpg) center center no-repeat;
+    background-size: cover;
+}
+.bannerBg-goa-tourist-places{
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/IFFI-GoaTour-banner.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+ .card-text .location-icon {
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(44.43deg, #3E4EB0 -20.27%, #164E47 105%);
+    padding: 6px;
+    border-radius: 50%;
+    line-height: 18px; margin-right: 10px;
+}
+ .location-icon img{ width: 20px; height: 20px;  }
+ .card-text a {font-size: 14px;text-decoration: none;color: #615A5B;}
+.title {font-size:18px!important; text-transform: uppercase;}
+.card-image img{ width:100%; }
+.owl-prev{ font-size:40px!important }
+.owl-next{ font-size:40px!important }
+.owl-prev span{ font-size:40px!important }
+.owl-next span{ font-size:40px!important }
+.owl-carousel .card{ width:100% }
+.owl-carousel .owl-item img{ object-fit:cover; height:300px; }
+.owl-carousel-sponsor .owl-item img{ height:auto !important}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 767px) { 
+   .page-header h1{ font-size:60px; }
+   .top-logo {
+    display: flex;
+    flex-wrap: wrap;
+}
+   .top-logo img{ width:50px; }
+   .resize-content{ display:; }
+}
