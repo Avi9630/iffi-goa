@@ -34,6 +34,7 @@ Route::controller(CommonController::class)->group(function () {
     Route::get('sponsors',                              'sponsors')->name('sponsors');
 });
 
+
 //INTERNATIONAL CINEMA 
 Route::get('international-cinema/rules-regulation', function () {
     return view('international-cinema.rules-regulation');
