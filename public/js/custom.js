@@ -67,7 +67,7 @@ $(document).ready(function () {
                 items: 2, // Number of items at viewport width 600px
             },
             1000: {
-                items: 3, // Number of items at viewport width 1000px
+                items: 4, // Number of items at viewport width 1000px
             },
         },
     });
