@@ -275,7 +275,7 @@
                                     <li class="nav-item"><a href="https://www.iffigoa.org/gallery"
                                             class="nav-link">Gallery of 2023 IFFI Festival</a>
                                     </li>
-                                    <li class="nav-item"><a href="https://www.iffigoa.org/news-and-updates"
+                                    <li class="nav-item"><a href="{{ route('news-and-update') }}"
                                             class="nav-link">News and Updates</a></li>
                                 </ul>
                             </div>
