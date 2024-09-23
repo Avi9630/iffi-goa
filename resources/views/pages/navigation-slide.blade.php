@@ -78,7 +78,7 @@
                                                     target="_blank">Submit Your Entry</a>
                                             </li>
                                             <li>
-                                                <a href="https://www.iffigoa.org/connectivity"
+                                                <a href="{{ route('icinema-rules-regulation') }}"
                                                     class="dropdown-item">Rules & Regulations</a>
                                             </li>
                                             <li class="nav-item dropend">
@@ -87,27 +87,42 @@
                                                     Curated Sections 2023
                                                 </a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a class="dropdown-item" href="#">International
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('international-competition') }}">International
                                                             Competition</a></li>
-                                                    <li><a class="dropdown-item" href="#">Award For The Best
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('award-for-best-debute') }}">Award For The
+                                                            Best
                                                             Debut</a></li>
-                                                    <li><a class="dropdown-item" href="#">ICFT-UNESCO Gandhi Medal
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('icft-unesco-medal') }}">ICFT-UNESCO Gandhi
+                                                            Medal
                                                             2023</a></li>
-                                                    <li><a class="dropdown-item" href="#">Festival Kaleloscope</a>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('festival-kaleloscope') }}">Festival
+                                                            Kaleloscope</a>
                                                     </li>
-                                                    <li><a class="dropdown-item" href="#">Docu - Montage</a>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('docu-montage') }}">Docu - Montage</a>
                                                     </li>
-                                                    <li><a class="dropdown-item" href="#">Intergrade</a>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('integrade') }}">Intergrade</a>
                                                     </li>
-                                                    <li><a class="dropdown-item" href="#">Animation</a>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('animation') }}">Animation</a>
                                                     </li>
-                                                    <li><a class="dropdown-item" href="#">Macabre Dreams</a>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('macabre-dreams') }}">Macabre Dreams</a>
                                                     </li>
-                                                    <li><a class="dropdown-item" href="#">Cinema Of The World</a>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cinema-world') }}">Cinema Of The World</a>
                                                     </li>
-                                                    <li><a class="dropdown-item" href="#">Restored Classics</a>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('restored-classic') }}">Restored
+                                                            Classics</a>
                                                     </li>
-                                                    <li><a class="dropdown-item" href="#">UNICEF X IFFI</a>
+                                                    <li><a class="dropdown-item" href="{{ route('uniceff') }}">UNICEF X
+                                                            IFFI</a>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -121,16 +136,16 @@
                                             Awards</a>
                                         <ul class="dropdown-menu">
                                             <li>
-                                                <a href="https://www.iffigoa.org/connectivity"
+                                                <a href="{{ route('about-debut-director') }}"
                                                     class="dropdown-item">About Debut Director</a>
                                             </li>
                                             <li>
-                                                <a href="https://filmfreeway.com/InternationalFilmFestivalofIndiaIFFI-Goa"
+                                                <a href="https://iffigoa.org/festival/indian-debut-director"
                                                     class="dropdown-item nav-link yelow-color-link"
                                                     target="_blank">Submit Your Entry</a>
                                             </li>
                                             <li>
-                                                <a href="https://www.iffigoa.org/connectivity"
+                                                <a href="{{ route('dd-rules-regulations') }}"
                                                     class="dropdown-item">Rules & Regulations</a>
                                             </li>
                                         </ul>
@@ -143,17 +158,17 @@
                                         <ul class="dropdown-menu">
 
                                             <li>
-                                                <a href="https://www.iffigoa.org/connectivity"
+                                                <a href="{{ route('about-indian-panorama') }}"
                                                     class="dropdown-item">About Indian Panorama</a>
                                             </li>
 
                                             <li>
-                                                <a href="https://filmfreeway.com/InternationalFilmFestivalofIndiaIFFI-Goa"
+                                                <a href="https://iffigoa.org/festival/indian-paranoma"
                                                     class="dropdown-item nav-link yelow-color-link"
                                                     target="_blank">Submit Your Entry</a>
                                             </li>
                                             <li>
-                                                <a href="https://www.iffigoa.org/connectivity"
+                                                <a href="{{ route('indian-panorama-rules-regulations') }}"
                                                     class="dropdown-item">Rules & Regulations</a>
                                             </li>
 
@@ -163,10 +178,14 @@
                                                     Indian Panorama - IFFI 2023
                                                 </a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a class="dropdown-item" href="#">Official Selection :
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('official-selection-feature') }}">Official
+                                                            Selection :
                                                             Feature</a>
                                                     </li>
-                                                    <li><a class="dropdown-item" href="#">Official Selection :
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('official-selection-non-feature') }}">Official
+                                                            Selection :
                                                             Non-Feature</a></li>
                                                 </ul>
                                             </li>
@@ -177,10 +196,13 @@
                                                     Indian Cinema - IFFI 2023
                                                 </a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a class="dropdown-item" href="#">Accessible
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('accessible-film') }}">Accessible
                                                             India-Accessible Films</a>
                                                     </li>
-                                                    <li><a class="dropdown-item" href="#">Special Screening</a>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('special-screening') }}">Special
+                                                            Screening</a>
                                                     </li>
                                                 </ul>
                                             </li>
