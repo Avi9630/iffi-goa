@@ -103,25 +103,23 @@
                     <div class="section-heading title-line mb-4">
                         <h2>Forts</h2>
                     </div>
-                    <div class="row">
-                        <div class="owl-carousel">
-
-                            @foreach ($gtpp22 as $dd22)
-                                <div class=" item d-flex">
-                                    <div class="card shadow-sm">
-                                        <div class="card-image">
-                                            <img src="{{ asset('public/images/about-us/' . $dd22->image) }}"
-                                                class="img-fluid">
-                                        </div>
-                                        <div class="card-body text-start">
-                                            <h4 class="title">{{ $dd22->title }}</h4>
-                                            <p>{!! $dd22->description !!}</p>
-                                        </div>
+                    @foreach ($gtpp22 as $dd22)
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                {{-- <div class=" item d-flex"> --}}
+                                <div class="card shadow-sm">
+                                    <div class="card-image">
+                                        <img src="{{ asset('public/images/about-us/' . $dd22->image) }}" class="img-fluid">
+                                    </div>
+                                    <div class="card-body text-start">
+                                        <h4 class="title">{{ $dd22->title }}</h4>
+                                        <p>{!! $dd22->description !!}</p>
                                     </div>
                                 </div>
-                            @endforeach
+                                {{-- </div> --}}
+                            </div>
                         </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
