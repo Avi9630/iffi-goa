@@ -103,4 +103,9 @@ class CommonController extends Controller
             'gtpp33'    =>  $gtpp33,
         ]);
     }
+    public function faq()
+    {
+        $faqs  =   DB::table('iffi_faq')->where(['status' => 1])->get();
+        return view('about-us.faq', ['faqs' => $faqs]);
+    }
 }
