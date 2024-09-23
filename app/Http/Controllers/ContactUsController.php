@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 
 class ContactUsController extends Controller
 {
@@ -13,6 +14,7 @@ class ContactUsController extends Controller
 
     public function contactUsStore(Request $request)
     {
+
         $payload = $request->all();
 
         $request->validate([

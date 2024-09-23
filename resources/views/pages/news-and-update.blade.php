@@ -46,16 +46,17 @@
 
             <div class="col-md-4 col-sm-4 col-xs-12 d-flex">
                 <div class="card shadow-sm">
-                    <img src="{{ asset('public/images/desktop-image/CMOT_BANNER.png') }}" class="img-fluid">
+                    <img src="{{ asset('public/images/desktop-image/CMOT_BANNER_CLOSE.PNG') }}" class="img-fluid">
                     <div class="card-body text-start">
                         <h3>Creative Minds of Tomorrow Entries Are OPEN NOW!</h3>
-                        <p class="card-text">The Creative Minds of Tomorrow is an exciting initiative by the
-                            International Film Festival of India (IFFI) that aims to discover and nurture the next
-                            generation of cinematic talent. Get an unparalleled opportunity to gain recognition, and a
-                            chance to be part of India's next creative minds of cinema!.</p>
+                        <p class="card-text">The Creative Minds of Tomorrow entries are now officially closed. The last
+                            date to submit applications was September 20th, 2024. We appreciate all the aspiring talents
+                            who showed interest and submitted their entries. While submissions for this year are no
+                            longer accepted, don't be disheartened—stay tuned and prepare for the next edition for your
+                            chance to be part of India's next wave of creative cinema talent!</p>
                         <p>
                             <a href="https://iffigoa.org/festival/creative-mind-tomorrow" target="_blank">
-                                Submit your entry here.</a>
+                                View your entry.</a>
                         </p>
                     </div>
                 </div>
