@@ -71,7 +71,8 @@
                                 that just about any HTML can go within the <code>.accordion-body</code>, though the
                                 transition
                                 does limit overflow. --}}
-                                {{ $faq->description }}
+                                {!! $faq->description !!}
+                                {{-- {{ $faq->description }} --}}
                             </div>
                         </div>
                     </div>
