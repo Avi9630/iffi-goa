@@ -216,8 +216,8 @@
                                         <ul class="dropdown-menu">
 
                                             <li>
-                                                <a href="https://www.iffigoa.org/connectivity"
-                                                    class="dropdown-item">About Web Series</a>
+                                                <a href="{{ route('about-web-series') }}" class="dropdown-item">About
+                                                    Web Series</a>
                                             </li>
 
                                             <li>
@@ -238,12 +238,12 @@
 
 
                                             <li>
-                                                <a href="https://www.iffigoa.org/connectivity"
-                                                    class="dropdown-item">1st Edition (53rd IFFI)</a>
+                                                <a href="{{ route('1st-edition') }}" class="dropdown-item">
+                                                    1st Edition (53rd IFFI)</a>
                                             </li>
                                             <li>
-                                                <a href="https://www.iffigoa.org/connectivity"
-                                                    class="dropdown-item">2nd Edition (54th IFFI)</a>
+                                                <a href="{{ route('2nd-edition') }}" class="dropdown-item">2nd
+                                                    Edition (54th IFFI)</a>
                                             </li>
 
                                         </ul>
@@ -257,8 +257,8 @@
                             <div class="col-md-3 col-sm-3 ">
                                 <h4 class="menu-title ">Creative Minds Of Tomorrow (CMOT)</h4>
                                 <ul class="navbar-nav vertical-menu-custom">
-                                    <li class="nav-item"><a href="https://www.iffigoa.org/about_cmot"
-                                            class="nav-link">About CMOT</a></li>
+                                    <li class="nav-item"><a href="{{ route('about-cmot') }}" class="nav-link">About
+                                            CMOT</a></li>
                                     <li class="nav-item"><a href="https://iffigoa.org/festival/creative-mind-tomorrow"
                                             class="nav-link yelow-color-link">Submit your entry</a>
                                     </li>
@@ -272,15 +272,14 @@
                                 <ul class="navbar-nav vertical-menu-custom">
                                     <li class="nav-item"><a href="https://www.iffigoa.org/press-release"
                                             class="nav-link">Press Release</a></li>
-                                    <li class="nav-item"><a href="https://www.iffigoa.org/gallery"
-                                            class="nav-link">Gallery of 2023 IFFI Festival</a>
+                                    <li class="nav-item"><a href="{{ route('gallery') }}" class="nav-link">Gallery
+                                            of 2023 IFFI Festival</a>
                                     </li>
                                     <li class="nav-item"><a href="{{ route('news-and-update') }}"
                                             class="nav-link">News and Updates</a></li>
                                 </ul>
                             </div>
                             <!-- Media Section End -->
-
                         </div>
                     </div>
                 </div>
