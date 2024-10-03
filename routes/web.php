@@ -23,10 +23,6 @@ Route::get('about-us/about-goa/connectivity', function () {
     return view('about-us.about-goa.connectivity');
 })->name('connectivity');
 
-// Route::get('about-us/faq', function () {
-//     return view('about-us.faq');
-// })->name('faq');
-
 Route::controller(CommonController::class)->group(function () {
 
     Route::get('about-us/about-goa/goa-tourist-places', 'goaTouristPlace')->name('goa-tourist-places');
