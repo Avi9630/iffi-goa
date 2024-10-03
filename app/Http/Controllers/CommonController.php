@@ -118,4 +118,13 @@ class CommonController extends Controller
             'gallery'           =>  $gallery,
         ]);
     }
+
+    public function pressRelease()
+    {
+        $press = DB::table('mst_press_release')
+            ->where('status', '1')
+            ->orderBy('id', 'desc')
+            ->paginate(10);
+        return view('media.press-release', ['press' => $press]);
+    }
 }
