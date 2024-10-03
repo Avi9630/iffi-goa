@@ -3,18 +3,15 @@
     <!-- Header start-->
     @include('layouts.header')
     <!-- Header end-->
-
     <!-- Menu slide start-->
     @include('pages.navigation-slide')
     <!-- Menu slide end -->
-
     <!-- Inner Page Banner Section -->
     <div class="container-fluid page-header bannerBg-news py-5">
         <div class="container text-center ">
             <h1 class="page-title-header">News And Updates</h1>
         </div>
     </div>
-
     <!-- Inner Page Banner Section -->
     <div class="col-lg-12 mt-5 static-content">
         <div class="container">
@@ -22,7 +19,7 @@
 
                 <div class="col-md-6 col-sm-6 col-12 mb-4">
                     <p class="newsupdatesView-block-img">
-                        <img src="{{ asset('public/images/news-update/Viewing-Room-Entries-open.jpg') }}" alt=""
+                        <img src="{{ asset('public/images/desktop-image/Delegate-Registration-open.jpg') }}" alt=""
                             class="img-fluid">
                     </p>
                 </div>
@@ -41,7 +38,7 @@
 
                 <div class="col-md-6 col-sm-6 col-12 mb-4">
                     <p class="newsupdatesView-block-img">
-                        <img src="{{ asset('public/images/news-update/Viewing-Room-Entries-open.jpg') }}" alt=""
+                        <img src="{{ asset('public/images/desktop-image/Viewing-Room-Entries-open.jpg') }}" alt=""
                             class="img-fluid">
                     </p>
                 </div>
@@ -60,7 +57,7 @@
 
                 <div class="col-md-6 col-sm-6 col-12 mb-4">
                     <p class="newsupdatesView-block-img">
-                        <img src="{{ asset('public/images/news-update/dd-open-now.jpg') }}" alt=""
+                        <img src="{{ asset('public/images/desktop-image/dd-closed-now.jpg') }}" alt=""
                             class="img-fluid">
                     </p>
                 </div>
@@ -79,7 +76,7 @@
 
                 <div class="col-md-6 col-sm-6 col-12 mb-4">
                     <p class="newsupdatesView-block-img">
-                        <img src="{{ asset('public/images/news-update/strategizing.jpg') }}" alt=""
+                        <img src="{{ asset('public/images/desktop-image/strategizing.jpg') }}" alt=""
                             class="img-fluid">
                     </p>
                 </div>
@@ -188,7 +185,7 @@
 
                 <div class="col-md-6 col-sm-6 col-12 mb-4">
                     <p class="newsupdatesView-block-img">
-                        <img src="{{ asset('public/images/news-update/CMOT_BANNER_CLOSE.png') }}" alt=""
+                        <img src="{{ asset('public/images/desktop-image/CMOT_BANNER_CLOSE.png') }}" alt=""
                             class="img-fluid">
                     </p>
                 </div>
@@ -210,8 +207,8 @@
 
                 <div class="col-md-6 col-sm-6 col-12 mb-4">
                     <p class="newsupdatesView-block-img">
-                        <img src="{{ asset('public/images/news-update/INDIAN-PANORAMA-CLOSED-NOW.png') }}" alt=""
-                            class="img-fluid">
+                        <img src="{{ asset('public/images/desktop-image/INDIAN-PANORAMA-CLOSED-NOW.png') }}"
+                            alt="" class="img-fluid">
                     </p>
                 </div>
                 <div class="col-md-6 col-sm-6 col-12 mb-4">
@@ -229,7 +226,7 @@
 
                 <div class="col-md-6 col-sm-6 col-12 mb-4">
                     <p class="newsupdatesView-block-img">
-                        <img src="{{ asset('public/images/news-update/OTT_CLOSED NOW.png') }}" alt=""
+                        <img src="{{ asset('public/images/desktop-image/OTT_CLOSED NOW.png') }}" alt=""
                             class="img-fluid">
                     </p>
                 </div>
