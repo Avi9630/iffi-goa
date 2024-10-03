@@ -29,6 +29,7 @@
                                 target="_blank">View your entry</a></li>
                     </ul>
                 </div>
+
                 <div class="col-md-3 col-sm-3">
                     <h4>Creative Minds Of Tomorrow (CMOT)</h4>
                     <ul class="text-highlight">
