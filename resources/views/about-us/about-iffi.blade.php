@@ -28,7 +28,7 @@
             <div class="row">
                 <div class=" col-md-12 col-sm-12 col-12">
                     <p>IFFI is the only film festival in South Asia that is accredited by International Federation of Film
-                        Producers’ Associations (FIAPF) of the 44th international festivals in the Competitive Feature Films
+                        Producers' Associations (FIAPF) of the 44th international festivals in the Competitive Feature Films
                         Category.
                     </p>
                     <p>Since its inception in 1952, IFFI has been curating spectacular films from all over the world. Its
@@ -36,7 +36,7 @@
                         to
                         have access to excellent cinema from across the world.
                     </p>
-                    <p>IFFI’s International Cinema section is an assortment of culturally and aesthetically remarkable films
+                    <p>IFFI's International Cinema section is an assortment of culturally and aesthetically remarkable films
                         from around the world. It has kept its stature high by committing to promote art by showcasing the
                         international films of the year shortlisted by the eminent members associated with the Film
                         Industry.
@@ -67,15 +67,6 @@
                         <h2>Awards</h2>
                         <h4 class="mb-2">@ IFFI</h4>
                     </div>
-                    <ul>
-                        <li>Gala Opening and Closing Ceremonies and daily Red Carpet events &amp; celebrations</li>
-                        <li>Country Focus, Tributes, Retrospectives, Goan Films’ Section &amp; other specially curated
-                            packages of
-                            International &amp; Indian Films
-                        </li>
-                        <li>Workshops/Master classes/other Interactive &amp; Academic Sessions/Panel Discussions etc.</li>
-                        <li>Film Bazaar (Film Market) organized alongside from 20-24th Nov, 2024.</li>
-                    </ul>
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-body">

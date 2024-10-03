@@ -7,22 +7,18 @@
     'IFFI Goa rules, IFFI guidelines, Film Submission Rules, IFFI entry requirements, IFFI Goa
     policies, Film Festival Regulations, Event Rules IFFI')
 @section('content')
-
     <!-- Header start-->
     @include('layouts.header')
     <!-- Header end-->
-
     <!-- Menu slide start-->
     @include('pages.navigation-slide')
     <!-- Menu slide end -->
-
     <!-- Inner Page Banner Section -->
     <div class="container-fluid page-header bannerBg-rules py-5">
         <div class="container text-center ">
             <h1 class="page-title-header">International Cinema Rules & Regulations</h1>
         </div>
     </div>
-
     <!-- Inner Page Banner Section -->
     <div class="col-lg-12 mt-5 static-content">
         <div class="container">
@@ -310,7 +306,8 @@
                             Nehru Centre, Dr Annie Besant Road, Worli Mumbai- 400 018- India. <br>
                             Ph:<a href="tel:02266288295">022-66288295 </a>, Fax: <a href="tel:02224952262">022-24952262</a>
                             <br>
-                            Email: <a href="mailto:director@filmbazaarindia.com">director@filmbazaarindia.com</a></p>
+                            Email: <a href="mailto:director@filmbazaarindia.com">director@filmbazaarindia.com</a>
+                        </p>
                         <p>c) National Film Development Corporation Ltd may also invite films which it considers of
                             interest.
                         </p>
