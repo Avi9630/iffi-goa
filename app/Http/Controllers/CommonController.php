@@ -103,4 +103,28 @@ class CommonController extends Controller
             'gtpp33'    =>  $gtpp33,
         ]);
     }
+
+    public function faq()
+    {
+        $faqs  =   DB::table('iffi_faq')->where(['status' => 1])->get();
+        return view('about-us.faq', ['faqs' => $faqs]);
+    }
+
+    public function gallery()
+    {
+        $gallery = DB::table('mst_photos')->where('status', 1)->whereNull('deleted_at')->orderBy('id', 'DESC')->paginate(8);
+        // dd($gallery);
+        return view('gallery.gallery', [
+            'gallery'           =>  $gallery,
+        ]);
+    }
+
+    public function pressRelease()
+    {
+        $press = DB::table('mst_press_release')
+            ->where('status', '1')
+            ->orderBy('id', 'desc')
+            ->paginate(10);
+        return view('media.press-release', ['press' => $press]);
+    }
 }

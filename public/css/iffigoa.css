@@ -79,6 +79,7 @@ body p{ font-family:"Roboto", sans-serif; }
     .accordion-button:not(.collapsed){ padding: 24px 20px!important;
     background: linear-gradient(44.43deg, #3E4EB0 -20.27%, #164E47 105%)!important;
     color: white!important}
+    .common-expand .collapse:not(.show){ display:none!important; }
 .menu-title{ font-family: "Libre Franklin", sans-serif !important;font-size: 18px;font-weight: 500;color: #ffdc1c; margin-bottom: 15px;} 
 .vertical-menu-custom{ display:flex; flex-direction:column!important; }
 .vertical-menu-custom ul li .nav-link{ padding-left:0px; padding-right:0px; }
@@ -110,7 +111,7 @@ body p{ font-family:"Roboto", sans-serif; }
 .owl-stage .owl-item{ display:flex; }
  .owl-carousel .owl-dots.disabled, .owl-carousel .owl-nav.disabled{ display:block!important; text-align:right; font-size:40px; position:absolute; }
 .owl-carousel .owl-nav{ position:absolute; top: -50px; right: 0; }
-    .owl-carousel .card { box-shadow: 0px 4px 4px 0px #a9a3a4, 0px 0px 4px 0px #a9a3a4;border-radius: 12px; overflow: hidden; margin: 6px;}
+    .owl-carousel .card { box-shadow: 0px 4px 4px 0px #a9a3a4, 0px 0px 4px 0px #a9a3a4; overflow: hidden; margin: 6px;}
 .textContent{ font-size:45px;text-align:center;  }
 .textContent p{ font-size:45px; }
 .textContent span {color: #ffab00;}
@@ -155,7 +156,7 @@ footer a:hover{ color:#ffa706!important; }
     font-family: "Sora";
     color: white;
     text-shadow: 0px 12px 8px rgba(0, 0, 0, 0.2509803922);
-    text-transform: uppercase;
+  
     display: flex;
     height: 100%;
     align-items: center;
@@ -188,6 +189,46 @@ footer a:hover{ color:#ffa706!important; }
     background-size: cover;
 }
 
+.bannerBg-ContactUs{
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/ContactUs.jpg) center center no-repeat;
+    background-size: cover;
+}
+.bannerBg-news{
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/news.jpg) center center no-repeat;
+    background-size: cover;
+}
+.bannerBg-InternationalCompetition{
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/InternationalCompetition.jpg) center center no-repeat;
+    background-size: cover;
+}
+.bannerBg-rules{
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/rules.jpg) center center no-repeat;
+    background-size: cover;
+}
+.bannerBg-first_edition{
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/53rd-edition.jpg) center center no-repeat;
+    background-size: cover;
+}
+.bannerBg-second_edition{
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/second_edition.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.bannerBg-Gallery-banner{
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/Gallery-banner.jpg) center center no-repeat;
+    background-size: cover;
+}
+.iCinema-content h5{ font-size:14px; display:flex; 
+ gap:2px; width: 100%; flex-wrap: wrap;    font-weight: 400; }
+ .iCinema-content h5 span:nth-child(1) {
+    font-weight: 600;
+    color: #254e6f;
+}
+.title a {
+    color: #0e52c1 !important;
+    transition: box-shadow 0.4s ease-in-out;
+    text-decoration: none;
+}
  .card-text .location-icon {
     display: block;
     width: 32px;
@@ -201,6 +242,8 @@ footer a:hover{ color:#ffa706!important; }
  .card-text a {font-size: 14px;text-decoration: none;color: #615A5B;}
 .title {font-size:18px!important; text-transform: uppercase;}
 .card-image img{ width:100%; }
+.min-size-img  { height:300px; }
+.min-size-img img{ height:100%; object-fit: cover; border-radius: 5px 5px 0 0}
 .owl-prev{ font-size:40px!important }
 .owl-next{ font-size:40px!important }
 .owl-prev span{ font-size:40px!important }
@@ -208,17 +251,37 @@ footer a:hover{ color:#ffa706!important; }
 .owl-carousel .card{ width:100% }
 .owl-carousel .owl-item img{ object-fit:cover; height:300px; }
 .owl-carousel-sponsor .owl-item img{ height:auto!important }
-
+.contact-card {
+    background: linear-gradient(44.43deg, #3E4EB0 -20.27%, #164E47 105%);
+    width: 6rem;
+    height: 6rem;
+    padding: 2rem;
+    border-radius: 50%;
+}
+.contact-card img {width: 100%;height: 100%;}
+.contact-content{ font-size:16px; font-weight:400; }
+.newsupdatesView-block-img img{    width: 100%; height: 300px; overflow: hidden; object-fit: cover;}
+.rules-text ul{ list-style:none }
+ .rules-text h5 { color:#3E4EB0 }
+ .img-radius-5{ border-radius:10px; }
+ .card:hover{ box-shadow: 0px 8px 6px 0px rgba(118, 118, 118, 0.2509803922), 0px 0px 8px 0px rgba(118, 118, 118, 0.2509803922), 0px 0px 6px 0px rgba(118, 118, 118, 0.2509803922) !important;}
+ .owl-loaded {position:relative;}
+.owl-stage-outer{ overflow:hidden;  }
+.owl-nav { position: absolute;top: -50px;right: 0;}
+.owl-nav button{ background:none; border: inherit; padding: 0}
+.gallery { display: flex;flex-wrap: wrap; gap: 10px;  }
+.gallery img {width: 100%;height: auto;min-height: 180px;max-height: 180px;transition: transform 0.2s;}
+@media screen and (min-device-width: 768px) and (max-device-width: 990px) {
+ .gallery img { width: 100%;height: auto;min-height: 150px;max-height: 150px; }
 @media screen and (min-device-width: 320px) and (max-device-width: 767px) { 
    .page-header h1{ font-size:60px; }
-   .top-logo {
-    display: flex;
-    flex-wrap: wrap;
-}
+   .top-logo {display: flex;flex-wrap: wrap;}
    .top-logo img{ width:40px; }
    .resize-content{    justify-content: flex-start;}
    .text-resize button{ font-size:12px; }
    .hero-banner-text{ bottom:15vh }
    .btn-menu{ padding:6px!important; font-size:12px; }
+   .gallery {  justify-content: space-around;}
+   .gallery img { width: 100%;height: auto; min-height: 150px;max-height: 150px; }
 
 }

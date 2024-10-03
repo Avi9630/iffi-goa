@@ -5,7 +5,7 @@
     perspectives and storytelling at the 55th International Film Festival.')
 @section('content')
 
-<!-- Header start-->
+    <!-- Header start-->
     @include('layouts.header')
     <!-- Header end-->
 
@@ -21,8 +21,8 @@
     </div>
 
     <!-- Inner Page Banner Section -->
-    
-    <section class="rulesandregulation">
+
+    <div class="col-lg-12 mt-5 static-content">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -102,19 +102,5 @@
                 </div>
             </div>
         </div>
-    </section>
-    <style>
-        .font-16-table {
-            font-size: 16px;
-        }
-
-        .font-16-table td {
-            font-size: 16px;
-        }
-
-        .font-16-table th {
-            font-size: 16px;
-        }
-    </style>
-
+    </div>
 @endsection
