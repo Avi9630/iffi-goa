@@ -8,7 +8,7 @@
     policies, Film Festival Regulations, Event Rules IFFI')
 @section('content')
 
-<!-- Header start-->
+    <!-- Header start-->
     @include('layouts.header')
     <!-- Header end-->
 
@@ -24,7 +24,7 @@
     </div>
 
     <!-- Inner Page Banner Section -->
-    <section class="rulesandregulation">
+    <div class="col-lg-12 mt-5 static-content">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -58,7 +58,8 @@
                         </p>
                         <p>
                         <div class="col-12 text-center">
-                            <a href="https://iffigoa.org/festival/indian-paranoma" class="btn cus-prim-btn m-auto" target="_blank">Register
+                            <a href="https://iffigoa.org/festival/indian-paranoma" class="btn cus-prim-btn m-auto"
+                                target="_blank">Register
                                 Now</a>
                         </div>
                         </p>
@@ -67,6 +68,6 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
 @endsection

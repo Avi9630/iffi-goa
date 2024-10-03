@@ -14,7 +14,6 @@
                             <div class="col-md-3 col-sm-3 ">
                                 <h4 class="menu-title ">About us</h4>
                                 <ul class="navbar-nav vertical-menu-custom">
-
                                     <li class="nav-item">
                                         <a href="{{ route('about-iffi') }}" class="nav-link">About
                                             IFFI</a>
@@ -66,7 +65,6 @@
                             <div class="col-md-3 col-sm-3 ">
                                 <h4 class="menu-title ">Film selection</h4>
                                 <ul class="navbar-nav vertical-menu-custom">
-
                                     <!-- International Cinema menu Start-->
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" role="button"
@@ -128,7 +126,6 @@
                                             </li>
                                         </ul>
                                     </li>
-
                                     <!-- Indian Debut Director Award menu Start-->
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" role="button"
@@ -142,7 +139,7 @@
                                             <li>
                                                 <a href="https://iffigoa.org/festival/indian-debut-director"
                                                     class="dropdown-item nav-link yelow-color-link"
-                                                    target="_blank">Submit Your Entry</a>
+                                                    target="_blank">View your entry</a>
                                             </li>
                                             <li>
                                                 <a href="{{ route('dd-rules-regulations') }}"
@@ -150,7 +147,6 @@
                                             </li>
                                         </ul>
                                     </li>
-
                                     <!-- Indian Panorama menu Start-->
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" role="button"
@@ -165,7 +161,7 @@
                                             <li>
                                                 <a href="https://iffigoa.org/festival/indian-paranoma"
                                                     class="dropdown-item nav-link yelow-color-link"
-                                                    target="_blank">Submit Your Entry</a>
+                                                    target="_blank">View your entry</a>
                                             </li>
                                             <li>
                                                 <a href="{{ route('indian-panorama-rules-regulations') }}"
@@ -208,7 +204,6 @@
                                             </li>
                                         </ul>
                                     </li>
-
                                     <!-- Best Web Series menu Start-->
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" role="button"
@@ -216,71 +211,92 @@
                                         <ul class="dropdown-menu">
 
                                             <li>
-                                                <a href="https://www.iffigoa.org/connectivity"
-                                                    class="dropdown-item">About Web Series</a>
+                                                <a href="{{ route('about-web-series') }}" class="dropdown-item">About
+                                                    Web Series</a>
                                             </li>
 
                                             <li>
                                                 <a href="https://filmfreeway.com/InternationalFilmFestivalofIndiaIFFI-Goa"
                                                     class="dropdown-item nav-link yelow-color-link"
-                                                    target="_blank">View Your Entry</a>
+                                                    target="_blank">View your entry</a>
                                             </li>
 
                                         </ul>
                                     </li>
-
                                     <!-- Gala Premieres & Red Carpet menu Start-->
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" role="button"
                                             data-bs-toggle="dropdown" aria-expanded="false">Gala Premieres & Red
                                             Carpet</a>
                                         <ul class="dropdown-menu">
-
-
                                             <li>
-                                                <a href="https://www.iffigoa.org/connectivity"
-                                                    class="dropdown-item">1st Edition (53rd IFFI)</a>
+                                                <a href="{{ route('1st-edition') }}" class="dropdown-item">
+                                                    1st Edition (53rd IFFI)</a>
                                             </li>
                                             <li>
-                                                <a href="https://www.iffigoa.org/connectivity"
-                                                    class="dropdown-item">2nd Edition (54th IFFI)</a>
+                                                <a href="{{ route('2nd-edition') }}" class="dropdown-item">2nd
+                                                    Edition (54th IFFI)</a>
                                             </li>
-
                                         </ul>
                                     </li>
-
+                                    <!-- CMOT Section Start-->
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            Creative Minds Of Tomorrow (CMOT)
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a href="{{ route('about-cmot') }}" class="nav-link">About CMOT</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://iffigoa.org/festival/creative-mind-tomorrow"
+                                                    class="nav-link yelow-color-link">View your entry</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <!-- CMOT Section End-->
+                                    <!-- Technical Committee Start-->
+                                    <li class="nav-item dropdown">
+                                        <a href="{{ route('technical-committee') }}" class="nav-link">Technical
+                                            Committee</a>
+                                    </li>
+                                    <!-- Technical Committee End-->
                                 </ul>
                             </div>
                             <!-- Film Selection Section End -->
-
-                            <!-- CMOT Section Start -->
-                            <div class="col-md-3 col-sm-3 ">
-                                <h4 class="menu-title ">Creative Minds Of Tomorrow (CMOT)</h4>
-                                <ul class="navbar-nav vertical-menu-custom">
-                                    <li class="nav-item"><a href="https://www.iffigoa.org/about_cmot"
-                                            class="nav-link">About CMOT</a></li>
-                                    <li class="nav-item"><a href="https://iffigoa.org/festival/creative-mind-tomorrow"
-                                            class="nav-link yelow-color-link">Submit your entry</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- CMOT Section End -->
 
                             <!-- Media Section Start -->
                             <div class="col-md-3 col-sm-3 ">
                                 <h4 class="menu-title ">Media</h4>
                                 <ul class="navbar-nav vertical-menu-custom">
-                                    <li class="nav-item"><a href="https://www.iffigoa.org/press-release"
+                                    <li class="nav-item"><a href="{{ route('press-release') }}"
                                             class="nav-link">Press Release</a></li>
-                                    <li class="nav-item"><a href="https://www.iffigoa.org/gallery"
-                                            class="nav-link">Gallery of 2023 IFFI Festival</a>
+                                    <li class="nav-item">
+                                        <a href="{{ route('gallery') }}" class="nav-link">Gallery
+                                            of 2023 IFFI Festival</a>
                                     </li>
-                                    <li class="nav-item"><a href="https://www.iffigoa.org/news-and-updates"
+                                    <li class="nav-item"><a href="{{ route('news-and-update') }}"
                                             class="nav-link">News and Updates</a></li>
                                 </ul>
                             </div>
                             <!-- Media Section End -->
 
+                            <!-- Delegate Registration Section Start -->
+                            <div class="col-md-3 col-sm-3 ">
+                                <h4 class="menu-title ">Delegate Registration</h4>
+                                <ul class="navbar-nav vertical-menu-custom">
+                                    <li class="nav-item">
+                                        <a href="https://my.iffigoa.org/" class="nav-link" target="_blank">Delegate
+                                            Login</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="https://my.iffigoa.org/media-login" class="nav-link"
+                                            target="_blank">Media Login</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Delegate Registration Section End -->
                         </div>
                     </div>
                 </div>

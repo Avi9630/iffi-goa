@@ -5,7 +5,7 @@
     eligibility for Indian Debut Director Awards participations. ')
 @section('content')
 
-<!-- Header start-->
+    <!-- Header start-->
     @include('layouts.header')
     <!-- Header end-->
 
@@ -14,15 +14,14 @@
     <!-- Menu slide end -->
 
     <!-- Inner Page Banner Section -->
-    <div class="container-fluid page-header bannerBg-festival-venue py-5">
+    <div class="container-fluid page-header bannerBg-rules py-5">
         <div class="container text-center ">
             <h1 class="page-title-header">Best Debut Indian Film Rules & Regulations</h1>
         </div>
     </div>
 
     <!-- Inner Page Banner Section -->
-
-    <section class="rulesandregulation">
+    <div class="col-lg-12 mt-5 static-content">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -460,8 +459,8 @@
                 </div>
             </div>
         </div>
-    </section>
-    <style>
+    </div>
+    {{-- <style>
         .font-16-table {
             font-size: 16px;
         }
@@ -473,5 +472,5 @@
         .font-16-table th {
             font-size: 16px;
         }
-    </style>
+    </style> --}}
 @endsection
