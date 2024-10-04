@@ -16,27 +16,43 @@
     </div>
 
     <!-- Inner Page Banner Section -->
-    <section class="iCinema container">
-        <div class="row">
-            {{-- @foreach ($accessibleFilm as $accessible) --}}
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12 col-mb-16">
-                <div class="iCinema-card">
-                    <div class="iCinema-img">
-                        {{-- <img src="{{ asset('pulic/images/international-cinema/special-screening.jpg') }}" alt=""
-                            loading="lazy"> --}}
-                        <img src="{{ asset('public/images/film-selection/indian-panorama/special-screening.jpg') }}"
-                            class="img-fluid">
-                    </div>
-                    <div class="iCinema-content">
-                        <h2><a href="#">Gond Janjati Ki Veerangana Rani Durgawati</a></h2>
-                        <h5><span>Directed by</span><span>:</span><span>Ashok Sharan</span> </h5>
-                        <h5><span>Country of Origin</span><span>:</span><span>India</span> </h5>
-                        <h5><span>Language</span><span>:</span><span>Hindi</span></h5>
+
+    <div class="col-lg-12 mt-5 static-content">
+        <div class="container">
+            <div class="row">
+                {{-- @foreach ($accessibleFilm as $accessible) --}}
+                <div class="col-md-3 col-sm-4 col-xs-12 d-flex">
+                    <div class="card shadow-sm">
+                        <div class="card-image min-size-img">
+                            <img src="{{ asset('public/images/film-selection/indian-panorama/special-screening.jpg') }}"
+                                class="img-fluid">
+                        </div>
+                        <div class="card-body text-start">
+                            <div class="card-text d-flex">
+                                <div class="iCinema-content">
+                                    <h4 class="title"><a href="#">Gond Janjati Ki Veerangana Rani Durgawati</a></h4>
+                                    <h5>
+                                        <span>Directed by</span>
+                                        <span>:</span>
+                                        <span>Ashok Sharan</span>
+                                    </h5>
+                                    <h5>
+                                        <span>Country of Origin</span>
+                                        <span>:</span>
+                                        <span>India</span>
+                                    </h5>
+                                    <h5>
+                                        <span>Language</span>
+                                        <span>:</span>
+                                        <span>Hindi</span>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                {{-- @endforeach --}}
             </div>
-            {{-- @endforeach --}}
-
         </div>
-    </section>
+    </div>
 @endsection

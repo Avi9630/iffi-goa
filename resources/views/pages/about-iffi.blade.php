@@ -25,13 +25,14 @@
                     members associated with the Film Industry.
                 </p>
                 <div class="text-center">
-                    <a href="#" class="btn cus-prim-btn  text-center">Read More</a>
+                    <a href="{{ route('about-iffi') }}" class="btn cus-prim-btn  text-center">Read More</a>
                 </div>
             </div>
             <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                 <p><img src="{{ asset('public/images/PDF-Poster.png') }}" alt="" class="img-fluid"></p>
                 <div class="text-center">
-                    <a href="#" target="_blank" class="btn cus-prim-btn">Details Of Poster</a>
+                    <a href="https://drive.google.com/file/d/15mSIHlkgx-nZP51r7JgJAnlnz8z45mxk/view" target="_blank"
+                        class="btn cus-prim-btn">Details Of Poster</a>
                 </div>
             </div>
         </div>
