@@ -39,6 +39,8 @@ Route::controller(CommonController::class)->group(function () {
 
     Route::get('sponsors',                              'sponsors')->name('sponsors');
 
+    Route::get('technical-committee',                   'technicalCommittee')->name('technical-committee');
+
     Route::get('about-us/faq',                          'faq')->name('faq');
 
     Route::get('media/gallery',                         'gallery')->name('gallery');
@@ -124,9 +126,9 @@ Route::get('cmot/about-cmot', function () {
 })->name('about-cmot');
 
 //CMOT
-Route::get('technical-committee', function () {
-    return view('technical-committee');
-})->name('technical-committee');
+// Route::get('technical-committee', function () {
+//     return view('technical-committee');
+// })->name('technical-committee');
 
 //MEDIA
 Route::get('media/news-and-update', function () {

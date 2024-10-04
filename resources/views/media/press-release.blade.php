@@ -6,6 +6,14 @@
 @section('site_keywords',
     'IFFI GOA Press Release, IFFI news update, IFFI announcements, official IFFI statements,
     Latest IFFI news, IFFI press coverage, IFFI media releases, IFFI event news')
+
+    <style>
+        table p {
+            font-weight: 500;
+            margin: 0;
+            margin-top: 6px;
+        }
+    </style>
 @section('content')
     <!-- Header start-->
     @include('layouts.header')
@@ -25,7 +33,7 @@
     <!-- Inner Page Banner Section -->
     <div class="container press">
         <div class="table-responsive">
-            <table id="example" class="table table-hover">
+            <table id="example" class="table table-hover mt-3">
                 <thead>
 
                 </thead>
@@ -36,11 +44,11 @@
                         @endphp
                         <tr>
                             <td>
-                                <h4>{{ $value->title }}</h4>
+                                <p>{{ $value->title }}</p>
                             </td>
                             <td>
                                 {{-- <a href="{{ $value->link }}" class="btn  btn-primary" target="_blank">View</a> --}}
-                                <a href="{{ asset('press_release/' . $filename) }}" class="btn  btn-primary"
+                                <a href="{{ asset('/public/press-release/' . $filename) }}" class="btn  btn-primary"
                                     target="_blank">View</a>
                             </td>
                         </tr>
