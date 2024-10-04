@@ -1,4 +1,12 @@
 @extends('layouts.app')
+
+@section('site_title', 'Discover more about the Best Web Series Awards (OTT) | IFFI Goa 2024')
+@section('site_description',
+    'Explore details about the web series section at IFFI Goa 2024, including entry
+    requirements, selection criteria, and festival highlights.')
+@section('site_keywords', 'IFFI Goa rules, IFFI guidelines, Film Submission Rules, IFFI entry requirements, IFFI Goa
+    policies, Film Festival Regulations, Event Rules IFFI')
+
 @section('content')
     <!-- Header start-->
     @include('layouts.header')
