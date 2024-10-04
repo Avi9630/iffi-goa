@@ -36,7 +36,7 @@
                                     @endphp
                                     <tr>
                                         <td>
-                                            <h4>{{ $value->title }}</h4>
+                                            <p>{{ $value->title }}</p>
                                         </td>
                                         <td>
 

@@ -1,8 +1,8 @@
 @extends('layouts.app')
-@section('site_title', 'Indian Panorama – Discover more about Indian Panorama | IFFI Goa')
+@section('site_title', 'About Creative Minds of Tomorrow: IFFI Talent Initiative')
 @section('site_description',
-    'Explore Indian Panorama at IFFI Goa, a prestigious showcase of India’s rich cinematic
-    diversity, featuring the best feature and non-feature films from across the nation.')
+    'Discover the Creative Minds of Tomorrow at IFFI, showcasing young Indian talent across 13
+    film crafts. Apply now to be part of this prestigious program.')
 @section('site_keywords',
     'IFFI Goa rules, IFFI guidelines, Film Submission Rules, IFFI entry requirements, IFFI Goa
     policies, Film Festival Regulations, Event Rules IFFI')

@@ -1,9 +1,11 @@
 @extends('layouts.app')
-@section('site_title', 'Discover what IFFI is all about | IFFI GOA')
+@section('site_title', '1st Edition of 53rd Iffi film festival')
 @section('site_description',
-    'Discover the International Film Festival of India (IFFI), showcasing the best of Indian
-    and global cinema, fostering cultural exchange and cinematic excellence.')
-@section('site_keywords', 'About IFFI Goa, IFFI goa, IFFI goa registration, IFFI goa delegate registration, About us')
+    'Discover the Creative Minds of Tomorrow at IFFI, showcasing young Indian talent across 13
+    film crafts. Apply now to be part of this prestigious program.')
+@section('site_keywords',
+    'IFFI Goa rules, IFFI guidelines, Film Submission Rules, IFFI entry requirements, IFFI Goa
+    policies, Film Festival Regulations, Event Rules IFFI')
 @section('content')
 
     <!-- Header start-->
