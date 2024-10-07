@@ -104,7 +104,7 @@
                 <h4 class="mb-2">Fuelling Success Together</h4>
                 <h2>Sponsors & Partners</h2>
             </div>
-            <div class="owl-carousel owl-carousel-sponsor">
+            <div class=" owl-carousel-sponsor">
                 @include('pages.sponsor', [
                     'sponsors' => app(\App\Http\Controllers\CommonController::class)->sponsors(),
                 ])

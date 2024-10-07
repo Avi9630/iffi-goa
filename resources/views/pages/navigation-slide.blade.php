@@ -1,4 +1,10 @@
 <!-- Navigation slide -->
+<style>
+    .offcanvas {
+        overflow: scroll;
+    }
+</style>
+
 <div class="offcanvas offcanvas-top top-navigation" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
     <div class="container">
         <div class="offcanvas-header">
@@ -11,7 +17,7 @@
                         <div class="row">
 
                             <!-- About Us Section Start -->
-                            <div class="col-md-3 col-sm-3 ">
+                            <div class="col-md-3 col-sm-12 ">
                                 <h4 class="menu-title ">About us</h4>
                                 <ul class="navbar-nav vertical-menu-custom">
                                     <li class="nav-item">
@@ -62,7 +68,7 @@
                             <!-- About Us Section End -->
 
                             <!-- Film Selection Section Start -->
-                            <div class="col-md-3 col-sm-3 ">
+                            <div class="col-md-3 col-sm-12 ">
                                 <h4 class="menu-title ">Film selection</h4>
                                 <ul class="navbar-nav vertical-menu-custom">
                                     <!-- International Cinema menu Start-->
@@ -267,7 +273,7 @@
                             <!-- Film Selection Section End -->
 
                             <!-- Media Section Start -->
-                            <div class="col-md-3 col-sm-3 ">
+                            <div class="col-md-3 col-sm-12 ">
                                 <h4 class="menu-title ">Media</h4>
                                 <ul class="navbar-nav vertical-menu-custom">
                                     <li class="nav-item"><a href="{{ route('press-release') }}"
@@ -283,7 +289,7 @@
                             <!-- Media Section End -->
 
                             <!-- Delegate Registration Section Start -->
-                            <div class="col-md-3 col-sm-3 ">
+                            <div class="col-md-3 col-sm-12 ">
                                 <h4 class="menu-title ">Delegate Registration</h4>
                                 <ul class="navbar-nav vertical-menu-custom">
                                     <li class="nav-item">

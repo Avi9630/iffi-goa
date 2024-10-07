@@ -75,11 +75,14 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     $(".owl-carousel-sponsor").owlCarousel({
-        items: 3, // Number of items you want to display at once
+        items: 6, // Number of items you want to display at once
         loop: true, // Loop through the items
-        margin: 10, // Margin between items
+        // margin: 10, // Margin between items
         //nav: true, // Show navigation arrows
         //dots: false, // Show pagination dots
+        
+       dots: false, 
+        autoplay: true,
         responsive: {
             0: {
                 items: 1, // Number of items at viewport width 0px
@@ -88,7 +91,7 @@ $(document).ready(function () {
                 items: 2, // Number of items at viewport width 600px
             },
             1000: {
-                items: 7, // Number of items at viewport width 1000px
+                items:6, // Number of items at viewport width 1000px
             },
         },
     });

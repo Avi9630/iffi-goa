@@ -21,7 +21,7 @@
             <div class="row">
                 @foreach ($internationalCinemas as $internationalCinema)
                     <div class="col-md-3 col-sm-4 col-xs-12 d-flex">
-                        <div class="card shadow-sm">
+                        <div class="card shadow-sm w-100">
                             <div class="card-image min-size-img">
                                 <img src="{{ asset('public/images/film-selection/international-cinema/' . $internationalCinema->img_src) }}"
                                     class="img-fluid">

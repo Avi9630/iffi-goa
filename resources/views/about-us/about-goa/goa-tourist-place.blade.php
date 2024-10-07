@@ -77,23 +77,23 @@
                     <div class="section-heading title-line mb-4">
                         <h2>Other Unesco Heritage Sites In Goa</h2>
                     </div>
-                    <div class="row">
-                        <div class="owl-carousel">
+                  
+                        <div class="owl-carousel ">
                             @foreach ($gtpu11 as $item)
-                                <div class=" item d-flex">
+                                <div class=" item d-flex ">
                                     <div class="card shadow-sm">
                                         <div class="card-image">
                                             <img src="{{ asset('public/images/about-us/' . $item->image) }}"
                                                 class="img-fluid">
                                         </div>
-                                        <div class="card-body text-start">
+                                        <div class="card-body text-start title-height">
                                             <h4 class="title">{{ $item->title }}</h4>
                                         </div>
                                     </div>
                                 </div>
                             @endforeach
                         </div>
-                    </div>
+                    
                 </div>
             </div>
             <!-- Other Unesco Heritage Sites In Goa -->
@@ -103,12 +103,13 @@
                     <div class="section-heading title-line mb-4">
                         <h2>Forts</h2>
                     </div>
-                    @foreach ($gtpp22 as $dd22)
+                 
                         <div class="row">
-                            <div class="col-md-6 col-sm-6">
+                               @foreach ($gtpp22 as $dd22)
+                            <div class="col-md-6 col-sm-6 d-flex">
                                 {{-- <div class=" item d-flex"> --}}
                                 <div class="card shadow-sm">
-                                    <div class="card-image">
+                                    <div class="card-image min-img-height-card">
                                         <img src="{{ asset('public/images/about-us/' . $dd22->image) }}" class="img-fluid">
                                     </div>
                                     <div class="card-body text-start">
@@ -118,8 +119,9 @@
                                 </div>
                                 {{-- </div> --}}
                             </div>
+                             @endforeach
                         </div>
-                    @endforeach
+                   
                 </div>
             </div>
         </div>
