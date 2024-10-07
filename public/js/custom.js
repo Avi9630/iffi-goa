@@ -80,6 +80,8 @@ $(document).ready(function () {
         // margin: 10, // Margin between items
         //nav: true, // Show navigation arrows
         //dots: false, // Show pagination dots
+        
+       dots: false, 
         autoplay: true,
         responsive: {
             0: {
@@ -89,7 +91,7 @@ $(document).ready(function () {
                 items: 2, // Number of items at viewport width 600px
             },
             1000: {
-                items: 7, // Number of items at viewport width 1000px
+                items:6, // Number of items at viewport width 1000px
             },
         },
     });
