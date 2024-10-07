@@ -9,7 +9,7 @@
     <!-- Menu slide end -->
 
     <!-- Inner Page Banner Section -->
-    <div class="container-fluid page-header bannerBg-festival-venue py-5">
+    <div class="container-fluid page-header bannerBg-Award-banner py-5">
         <div class="container text-center ">
             <h1 class="page-title-header">Award For The Best Debut</h1>
         </div>
@@ -21,7 +21,7 @@
             <div class="row">
                 @foreach ($awardBestDebute as $debute)
                     <div class="col-md-3 col-sm-4 col-xs-12 d-flex">
-                        <div class="card shadow-sm">
+                        <div class="card shadow-sm w-100">
                             <div class="card-image min-size-img">
                                 <img src="{{ asset('public/images/film-selection/international-cinema/' . $debute->img_src) }}"
                                     class="img-fluid">

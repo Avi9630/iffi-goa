@@ -9,7 +9,7 @@
     <!-- Menu slide end -->
 
     <!-- Inner Page Banner Section -->
-    <div class="container-fluid page-header bannerBg-festival-venue py-5">
+    <div class="container-fluid page-header bannerBg-coverage-banner py-5">
         <div class="container text-center ">
             <h1 class="page-title-header">Festival Kaleidoscope</h1>
         </div>
