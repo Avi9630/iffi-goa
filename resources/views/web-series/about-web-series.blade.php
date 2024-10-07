@@ -55,14 +55,14 @@
                             celebrates creativity and innovation, underscoring the importance of this growing segment in
                             shaping the future of Indian entertainment.
                         </p>
-                        <p>
+                       
                         <div class="col-12 text-center">
                             <a href="https://iffigoa.org/festival/web-series" class="btn cus-prim-btn m-auto"
                                 target="_blank">Register
                                 Now</a>
                         </div>
-                        </p>
-                        <hr>
+                       
+                       
                     </div>
                 </div>
             </div>
