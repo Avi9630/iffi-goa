@@ -110,7 +110,7 @@ body p{ font-family:"Roboto", sans-serif; }
 .owl-carousel{ position:relative; }
 .owl-stage{ display:flex; align-items: center;}
 .owl-stage .owl-item{ display:flex; }
- .owl-carousel .owl-dots.disabled, .owl-carousel .owl-nav.disabled{ display:block!important; text-align:right; font-size:40px; position:absolute; }
+ .owl-carousel .owl-dots.disabled, .owl-carousel .owl-nav.disabled{ display:flex;!important; text-align:right; font-size:40px; }
 
     .owl-carousel .card { box-shadow: 0px 4px 4px 0px #a9a3a4, 0px 0px 4px 0px #a9a3a4; overflow: hidden; margin: 6px;}
 .textContent{ font-size:45px;text-align:center;  }
@@ -221,6 +221,24 @@ footer a:hover{ color:#ffa706!important; font-size: 14px; }
     background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/main-header/Gallery-banner.jpg) center center no-repeat;
     background-size: cover;
 }
+
+
+
+.bannerBg-Award-banner{
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/header-img/Award.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.bannerBg-unesco-banner{
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/header-img/unesco.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.bannerBg-coverage-banner{
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/header-img/IFFI-Goa-Festival-Coverage.jpg) center center no-repeat;
+    background-size: cover;
+}
+
 .iCinema-content h5{ font-size:14px; display:flex; 
  gap:2px; width: 100%; flex-wrap: wrap;    font-weight: 400; }
  .iCinema-content h5 span:nth-child(1) {
@@ -290,6 +308,9 @@ border: solid 1px #ddd !important;
 .dropdown-menu .yelow-color-link{ padding-left:15px!important; }
 .min-img-height-card{ max-height:300px; overflow:hidden; }
 .min-img-height-card img{ object-fit:cover;height:300px;  }
+.title-height{ min-height:80px; }
+.fit-img{ width:100%; max-height:325px;object-fit:cover; }
+.static-content .card{ width:100% }
 @media only screen and (min-width: 768px) and (max-width: 990px)  {
 
  .gallery img { width: 100%;height: auto;min-height: 150px;max-height: 150px; }
