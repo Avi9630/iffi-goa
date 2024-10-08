@@ -145,7 +145,7 @@ footer a:hover{ color:#ffa706!important; font-size: 14px; }
 
 
 .page-header {
-    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/aboutbg.jpg) center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/main-header/aboutbg.jpg) center center no-repeat;
     background-size: cover;
    padding: 150px 0!important;
     height: 100%;
@@ -179,46 +179,46 @@ footer a:hover{ color:#ffa706!important; font-size: 14px; }
 .up-awards-card .price{color:#973A64 ; font-size: 22px; font-weight: 600;}
 
 .bannerBg-festival-venue {
-    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/Venuebg.jpg) center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/main-header/Venuebg.jpg) center center no-repeat;
     background-size: cover;
 }
 .bannerBg-goa-tourist-places{
-    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/IFFI-GoaTour-banner.jpg) center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/main-header/IFFI-GoaTour-banner.jpg) center center no-repeat;
     background-size: cover;
 }
 
 .bannerBg-FAQ{
-    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/FAQ.jpg) center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/main-header/FAQ.jpg) center center no-repeat;
     background-size: cover;
 }
 
 .bannerBg-ContactUs{
-    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/ContactUs.jpg) center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/main-header/ContactUs.jpg) center center no-repeat;
     background-size: cover;
 }
 .bannerBg-news{
-    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/news.jpg) center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/main-header/news.jpg) center center no-repeat;
     background-size: cover;
 }
 .bannerBg-InternationalCompetition{
-    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/InternationalCompetition.jpg) center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/main-header/InternationalCompetition.jpg) center center no-repeat;
     background-size: cover;
 }
 .bannerBg-rules{
-    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/rules.jpg) center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/main-header/rules.jpg) center center no-repeat;
     background-size: cover;
 }
 .bannerBg-first_edition{
-    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/53rd-edition.jpg) center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/main-header/53rd-edition.jpg) center center no-repeat;
     background-size: cover;
 }
 .bannerBg-second_edition{
-    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/second_edition.jpg) center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/main-header/second_edition.jpg) center center no-repeat;
     background-size: cover;
 }
 
 .bannerBg-Gallery-banner{
-    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/Gallery-banner.jpg) center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/main-header/Gallery-banner.jpg) center center no-repeat;
     background-size: cover;
 }
 
