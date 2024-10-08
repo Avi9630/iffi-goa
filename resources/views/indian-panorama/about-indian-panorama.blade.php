@@ -59,8 +59,7 @@
                         <p>
                         <div class="col-12 text-center">
                             <a href="https://iffigoa.org/festival/indian-paranoma" class="btn cus-prim-btn m-auto"
-                                target="_blank">Register
-                                Now</a>
+                                target="_blank">View your entry</a>
                         </div>
                         </p>
 

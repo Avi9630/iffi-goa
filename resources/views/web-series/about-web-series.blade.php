@@ -59,11 +59,9 @@
 
                         <div class="col-12 text-center">
                             <a href="https://iffigoa.org/festival/web-series" class="btn cus-prim-btn m-auto"
-                                target="_blank">Register
-                                Now</a>
+                                target="_blank">Veiw your entry
+                            </a>
                         </div>
-
-
                     </div>
                 </div>
             </div>
