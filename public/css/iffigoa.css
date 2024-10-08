@@ -96,7 +96,7 @@ body p{ font-family:"Roboto", sans-serif; }
 .cus-prim-btn { background: linear-gradient(44.43deg, #3e4eb0 -20.27%, #164e47 105%); padding: 8px 24px !important; border-radius: 3px!important; font-size: 16px !important; color: white !important;}
 .cus-prim-btn:hover { background: linear-gradient(44.43deg, #164e47 -20.27%, #3e4eb0 105%);}
 
-.section-heading h4 { font-weight: 400; color: #867c7e; font-size: 16px;}
+.section-heading h4 { font-weight: 400; color: #867c7e; font-size: 17px;}
 .card-body h3{font-size: 24px; font-weight: 600;margin: 12px 0 6px;}
 .card-body a{ font-weight:bold; }
 .card { margin-bottom:15px; }
@@ -135,7 +135,7 @@ footer a:hover{ color:#ffa706!important; font-size: 14px; }
 .f-foot a{color:#c1bcbb; text-decoration: none;}
 .f-foot a:hover{color:#ffa706;}
 /* .quick-link{ background-color:#444; color:#000; padding:5px 0 } */
-.quick-link{ background-color:#827d7d; padding:7px; margin: 20px 0; border-radius: 0px 0px 0 0; }
+.quick-link{ background-color:#827d7d; padding:7px; margin: 20px 0; border-radius: 10px 10px 0 0; }
 .quick-link ul { display:flex; justify-content:center;font-size:13px; padding:0; margin:0;  }
 .quick-link ul li{ border-left:solid 1px #fff; padding-left:7px; padding-right:8px; line-height:normal; }
 .quick-link ul li a{ color:#fff; text-decoration:none; }
@@ -147,9 +147,10 @@ footer a:hover{ color:#ffa706!important; font-size: 14px; }
 .page-header {
     background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/main-header/aboutbg.jpg) center center no-repeat;
     background-size: cover;
-   padding: 150px 0!important;
-    height: 100%;
-    max-height: 500px;
+   /* padding: 150px 0!important; */
+    /* height: 100%; */
+    /* max-height: 500px; */
+    min-height: 600px;
     display: flex;
     justify-content: center;
 }
@@ -222,20 +223,50 @@ footer a:hover{ color:#ffa706!important; font-size: 14px; }
     background-size: cover;
 }
 
-
-
 .bannerBg-Award-banner{
-    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/header-img/Award.jpg) center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/main-header/Award.jpg) center center no-repeat;
     background-size: cover;
 }
 
 .bannerBg-unesco-banner{
-    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/header-img/unesco.jpg) center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/main-header/unesco.jpg) center center no-repeat;
     background-size: cover;
 }
 
 .bannerBg-coverage-banner{
-    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/header-img/IFFI-Goa-Festival-Coverage.jpg) center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/main-header/IFFI-Goa-Festival-Coverage.jpg) center center no-repeat;
+    background-size: cover;
+}
+.bannerBg-docu_montage{
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/main-header/docu_montage.png) center center no-repeat;
+    /* background-size: cover; */
+}
+.bannerBg-about-web{
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/main-header/About-Web-Series.png) center center no-repeat;
+    background-size: cover;
+}
+.bannerBg-Debut-Director{
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/main-header/IFFI-IP-banner.jpg) center center no-repeat;
+    background-size: cover;
+}
+.bannerBg-feature{
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/main-header/Feature-Films.png) center center no-repeat;
+    background-size: cover;
+}
+.bannerBg-non-feature{
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/main-header/official-non-feature.jpg) center center no-repeat;
+    background-size: cover;
+}
+.bannerBg-accessible-film{
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/main-header/accessiblbg.jpg) center center no-repeat;
+    background-size: cover;
+}
+.bannerBg-special-screening{
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/main-header/special.jpeg) center center no-repeat;
+    background-size: cover;
+}
+.bannerBg-committee{
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/main-header/committee.jpg) center center no-repeat;
     background-size: cover;
 }
 
@@ -261,7 +292,8 @@ footer a:hover{ color:#ffa706!important; font-size: 14px; }
 }
  .location-icon img{ width: 20px; height: 20px;  }
  .card-text a {font-size: 14px;text-decoration: none;color: #615A5B;}
-.title {font-size:18px!important; text-transform: uppercase;}
+.title {font-size:18px!important; text-transform: uppercase; font-weight: 600;}
+
 .card-image img{ width:100%; }
 .min-size-img  { height:300px; }
 .min-size-img img{ height:100%; object-fit: cover; border-radius: 5px 5px 0 0}
@@ -290,6 +322,7 @@ footer a:hover{ color:#ffa706!important; font-size: 14px; }
  .rules-text h5 { color:#3E4EB0; font-size:24px; }
  .img-radius-5{ border-radius:10px; }
  .card:hover{ box-shadow: 0px 8px 6px 0px rgba(118, 118, 118, 0.2509803922), 0px 0px 8px 0px rgba(118, 118, 118, 0.2509803922), 0px 0px 6px 0px rgba(118, 118, 118, 0.2509803922) !important;}
+ .card:hover .title{color: #3E4EB0;}
  .owl-loaded {position:relative;}
 .owl-stage-outer{ overflow:hidden; }
 .owl-nav { position: relative; width: 100px; margin: 0 auto; padding-top: 30px;}

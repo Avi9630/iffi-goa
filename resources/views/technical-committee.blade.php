@@ -18,7 +18,7 @@
     <!-- Menu slide end -->
 
     <!-- Inner Page Banner Section -->
-    <div class="container-fluid page-header bannerBg-news py-5">
+    <div class="container-fluid page-header bannerBg-committee py-5">
         <div class="container text-center ">
             <h1 class="page-title-header">Technical Committee</h1>
         </div>
