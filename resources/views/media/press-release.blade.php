@@ -34,9 +34,6 @@
     <div class="container press">
         <div class="table-responsive">
             <table id="example" class="table table-hover mt-3">
-                <thead>
-
-                </thead>
                 <tbody>
                     @foreach ($press as $key => $value)
                         @if (isset($value->link) && !empty($value->link) && $value->link != '')
