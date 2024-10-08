@@ -10,19 +10,6 @@ Route::get('/', function () {
     return view('welcome');
 })->name('/');
 
-//ABOUT-US
-Route::get('about-us/about-iffi', function () {
-    return view('about-us.about-iffi');
-})->name('about-iffi');
-
-Route::get('about-us/festival-venue', function () {
-    return view('about-us.festival-venue');
-})->name('festival-venue');
-
-Route::get('about-us/about-goa/connectivity', function () {
-    return view('about-us.about-goa.connectivity');
-})->name('connectivity');
-
 Route::controller(CommonController::class)->group(function () {
 
     Route::get('about-us/about-goa/goa-tourist-places', 'goaTouristPlace')->name('goa-tourist-places');
@@ -47,19 +34,6 @@ Route::controller(CommonController::class)->group(function () {
 
     Route::get('media/press-release',                   'pressRelease')->name('press-release');
 });
-
-Route::controller(ContactUsController::class)->group(function () {
-    Route::get('about-us/contact-us',    'contactUsView')->name('contact-us');
-    Route::post('about-us/contact-us',   'contactUsStore')->name('contact-us');
-});
-
-Route::get('get-all-ticker',        [TickerController::class,   'getAllTicker'])->name('get-all-ticker');
-
-//FILM SELECTION / INTERNATIONAL CINEMA
-
-Route::get('international-cinema/rules-regulation', function () {
-    return view('international-cinema.rules-regulation');
-})->name('icinema-rules-regulation');
 
 Route::controller(InternationalCinemaController::class)->group(function () {
 
@@ -93,6 +67,31 @@ Route::controller(IndianPanoramaController::class)->group(function () {
     Route::get('indian-panorama/accessible-film',                   'accessibleFilm')->name('accessible-film');
 });
 
+Route::get('get-all-ticker',        [TickerController::class,   'getAllTicker'])->name('get-all-ticker');
+
+//ABOUT-IFFI
+Route::get('about-us/about-iffi', function () {
+    return view('about-us.about-iffi');
+})->name('about-iffi');
+
+Route::get('about-us/festival-venue', function () {
+    return view('about-us.festival-venue');
+})->name('festival-venue');
+
+Route::get('about-us/about-goa/connectivity', function () {
+    return view('about-us.about-goa.connectivity');
+})->name('connectivity');
+
+Route::controller(ContactUsController::class)->group(function () {
+    Route::get('about-us/contact-us',    'contactUsView')->name('contact-us');
+    Route::post('about-us/contact-us',   'contactUsStore')->name('contact-us');
+});
+
+//FILM SELECTION / INTERNATIONAL CINEMA
+Route::get('international-cinema/rules-regulation', function () {
+    return view('international-cinema.rules-regulation');
+})->name('icinema-rules-regulation');
+
 //Indian Panorama
 Route::get('indian-panorama/indian-panorama-rules-regulations', function () {
     return view('indian-panorama.rules-regulations');
@@ -124,11 +123,6 @@ Route::get('gala-premier/2nd-edition', function () {
 Route::get('cmot/about-cmot', function () {
     return view('cmot.about-cmot');
 })->name('about-cmot');
-
-//CMOT
-// Route::get('technical-committee', function () {
-//     return view('technical-committee');
-// })->name('technical-committee');
 
 //MEDIA
 Route::get('media/news-and-update', function () {
