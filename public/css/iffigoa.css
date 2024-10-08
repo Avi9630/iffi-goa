@@ -150,7 +150,7 @@ footer a:hover{ color:#ffa706!important; font-size: 14px; }
    /* padding: 150px 0!important; */
     /* height: 100%; */
     /* max-height: 500px; */
-    min-height: 600px;
+    min-height: 650px;
     display: flex;
     justify-content: center;
 }
@@ -267,6 +267,30 @@ footer a:hover{ color:#ffa706!important; font-size: 14px; }
 }
 .bannerBg-committee{
     background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/main-header/committee.jpg) center center no-repeat;
+    background-size: cover;
+}
+.bannerBg-integrated{
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/main-header/integrated.jpg) center center no-repeat;
+    background-size: cover;
+}
+.bannerBg-animation{
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/main-header/animation.jpg) center center no-repeat;
+    background-size: cover;
+}
+.bannerBg-macabrebg{
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/main-header/macabrebg.webp) center center no-repeat;
+    background-size: cover;
+}
+.bannerBg-worldCinema{
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/main-header/worldCinema.png) center center no-repeat;
+    background-size: cover;
+}
+.bannerBg-restored-classic{
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/main-header/restored-classic.jpg) center center no-repeat;
+    background-size: cover;
+}
+.bannerBg-UNICEF{
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/main-header/UNICEF.jpg) center center no-repeat;
     background-size: cover;
 }
 
