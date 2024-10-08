@@ -59,9 +59,6 @@
                     <h2>Technical Partners</h2>
                 </div>
                 <div class="owl-carousel owl-carousel-sponsor">
-                    {{-- @include('pages.partner', [
-                        'partners' => app(\App\Http\Controllers\CommonController::class)->partners(),
-                    ]) --}}
                     @foreach ($partners as $partner)
                         <div class="item ">
                             <img src="{{ asset('public/images/sponsor/' . $partner) }}" class="img-fluid">

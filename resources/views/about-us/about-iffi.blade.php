@@ -17,7 +17,7 @@
     <!-- Inner Page Banner Section -->
     <div class="container-fluid page-header py-5">
         <div class="container text-center ">
-            <h1 class="page-title-header">About Us</h1>
+            <h1 class="page-title-header">About IFFI</h1>
         </div>
     </div>
     <!-- Inner Page Banner Section -->

@@ -222,7 +222,7 @@
                                             </li>
 
                                             <li>
-                                                <a href="https://filmfreeway.com/InternationalFilmFestivalofIndiaIFFI-Goa"
+                                                <a href="https://iffigoa.org/festival/web-series"
                                                     class="dropdown-item nav-link yelow-color-link"
                                                     target="_blank">View your entry</a>
                                             </li>
@@ -257,7 +257,8 @@
                                             </li>
                                             <li>
                                                 <a href="https://iffigoa.org/festival/creative-mind-tomorrow"
-                                                    class="nav-link yelow-color-link">View your entry</a>
+                                                    class="nav-link yelow-color-link" target="_blank">View your
+                                                    entry</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -303,6 +304,24 @@
                                 </ul>
                             </div>
                             <!-- Delegate Registration Section End -->
+
+                            <!-- Film Bazaar Section Start -->
+                            <div class="col-md-3 col-sm-12 ">
+                                <h4 class="menu-title ">Film Bazaar</h4>
+                                <ul class="navbar-nav vertical-menu-custom">
+                                    <li class="nav-item">
+                                        <a href="https://filmbazaarindia.com/programme/producers-workshop/"
+                                            class="nav-link" target="_blank">
+                                            Producers' Workshop Registration
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="https://filmbazaarindia.com/participate/attend-as-a-delegate/"
+                                            class="nav-link" target="_blank">Delegate Registration</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Film Bazaar Section End -->
                         </div>
                     </div>
                 </div>
