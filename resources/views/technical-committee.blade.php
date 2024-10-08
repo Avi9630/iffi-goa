@@ -54,11 +54,11 @@
 
         <!-- Sponsors  -->
         <div class="col-lg-12 mb-5">
-            <div class="container-fluid">
+            <div class="container">
                 <div class="section-heading mb-4 text-center mt-5 center-heading">
                     <h2>Technical Partners</h2>
                 </div>
-                <div class="owl-carousel owl-carousel-sponsor">
+                <div class="owl-carousel-sponsor">
                     @foreach ($partners as $partner)
                         <div class="item ">
                             <img src="{{ asset('public/images/sponsor/' . $partner) }}" class="img-fluid">
