@@ -17,6 +17,8 @@ class InternationalCinemaController extends Controller
                 'international_curated_sections.id',
             )
             // ->where('international_cinema.status', '=', '1')
+            // ->where('international_curated_sections.id', '=', '1')
+            ->where('international_cinema.curated_section_id', '=', '1')
             ->select(
                 'international_cinema.*',
                 'international_curated_sections.title AS curated_section_title',
@@ -25,7 +27,7 @@ class InternationalCinemaController extends Controller
             ->get();
         // dd($internationalCinemas);
         return view('international-cinema.international-competition', [
-            'internationalCinemas'  =>  $internationalCinemas,
+            'internationalCinemas'              =>  $internationalCinemas,
         ]);
     }
 
