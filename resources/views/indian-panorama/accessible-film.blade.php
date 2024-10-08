@@ -9,7 +9,7 @@
     <!-- Menu slide end -->
 
     <!-- Inner Page Banner Section -->
-    <div class="container-fluid page-header bannerBg-festival-venue py-5">
+    <div class="container-fluid page-header bannerBg-accessible-film py-5">
         <div class="container text-center ">
             <h1 class="page-title-header">Accessible India - Accessible Films</h1>
         </div>
@@ -29,7 +29,7 @@
                             <div class="card-body text-start">
                                 <div class="card-text d-flex">
                                     <div class="iCinema-content">
-                                        <h4 class="title"><a href="#">Woman Of</a></h4>
+                                        <h4 class="title"><a href="#">{{ $accessible->title }}</a></h4>
                                         <h5>
                                             <span>Directed by</span>
                                             <span>:</span>

@@ -4,7 +4,8 @@
 @section('site_description',
     'Explore details about the web series section at IFFI Goa 2024, including entry
     requirements, selection criteria, and festival highlights.')
-@section('site_keywords', 'IFFI Goa rules, IFFI guidelines, Film Submission Rules, IFFI entry requirements, IFFI Goa
+@section('site_keywords',
+    'IFFI Goa rules, IFFI guidelines, Film Submission Rules, IFFI entry requirements, IFFI Goa
     policies, Film Festival Regulations, Event Rules IFFI')
 
 @section('content')
@@ -17,7 +18,7 @@
     <!-- Menu slide end -->
 
     <!-- Inner Page Banner Section -->
-    <div class="container-fluid page-header bannerBg-festival-venue py-5">
+    <div class="container-fluid page-header bannerBg-about-web py-5">
         <div class="container text-center ">
             <h1 class="page-title-header">ABOUT WEB SERIES</h1>
         </div>
@@ -55,14 +56,14 @@
                             celebrates creativity and innovation, underscoring the importance of this growing segment in
                             shaping the future of Indian entertainment.
                         </p>
-                       
+
                         <div class="col-12 text-center">
                             <a href="https://iffigoa.org/festival/web-series" class="btn cus-prim-btn m-auto"
                                 target="_blank">Register
                                 Now</a>
                         </div>
-                       
-                       
+
+
                     </div>
                 </div>
             </div>

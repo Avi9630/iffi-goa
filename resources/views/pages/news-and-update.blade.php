@@ -9,25 +9,66 @@
 
             <div class="col-md-4 col-sm-4 col-xs-12 d-flex">
                 <div class="card shadow-sm">
-                    <img src="{{ asset('public/images/desktop-image/Delegate-Registration-open.jpg') }}"
+                    <img src="{{ asset('public/images/desktop-image/delegate-registration-open.jpg') }}"
                         class="img-fluid">
                     <div class="card-body text-start">
-                        <h3>Delegate Registration For IFFI 2024 Is Now Open!</h3>
+                        <h3>Film Bazaar Delegate Registration is Now Open!</h3>
                         <p class="card-text">
-                            Be a part of Asia's largest film market and engage with global film
-                            professionals. As a delegate, you'll have access to insightful panels,
-                            film screenings, and networking opportunities with industry leaders from around the world.
-                            Don't miss the chance to explore new projects, connect with filmmakers,
-                            and expand your cinematic horizons.
+                            Join the prestigious Film Bazaar 2024 as a delegate and immerse yourself in an unparalleled
+                            networking and learning experience. As a delegate, you'll have access to a wide array of
+                            industry professionals, engaging sessions, film screenings, and business opportunities
+                            across various segments of the global film industry. Don't miss this opportunity to connect
+                            with filmmakers, distributors, and key decision-makers from around the world.
                         </p>
                         <p>
-                            <a href="https://my.iffigoa.org/" target="_blank">Submit your entry here.</a>
+                            <a href="https://filmbazaarindia.com/participate/attend-as-a-delegate/"
+                                target="_blank">Submit your entry</a>
                         </p>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-4 col-sm-4 col-xs-12 d-flex">
+                <div class="card shadow-sm">
+                    <img src="{{ asset('public/images/desktop-image/producres-workshop-open.jpg') }}" class="img-fluid">
+                    <div class="card-body text-start">
+                        <h3>Producer's Workshop Registration For Film Bazaar 2024 Is Now Open!</h3>
+                        <p class="card-text">
+                            The Producer's Workshop at Film Bazaar 2024 offers a unique platform for emerging and
+                            experienced producers to enhance their skills, network with industry professionals, and gain
+                            insights into global film markets. This dynamic workshop covers various aspects of
+                            production, financing, distribution, and co-production opportunities. Don't miss the chance
+                            to elevate your career—register now and become a part of this vibrant cinematic experience.
+                        </p>
+                        <p>
+                            <a href="https://filmbazaarindia.com/programme/producers-workshop/" target="_blank">
+                                Submit your entry
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-4 col-xs-12 d-flex">
+                <div class="card shadow-sm">
+                    <img src="{{ asset('public/images/desktop-image/Entries-For-Delegate-Registration-open.jpg') }}"
+                        class="img-fluid">
+                    <div class="card-body text-start">
+                        <h3>Delegate Registration For IFFI 2024 Is Now Open!</h3>
+                        <p class="card-text">
+                            Be a part of Asia's largest film market and engage with global film professionals. As a
+                            delegate, you'll have access to insightful panels, film screenings, and networking
+                            opportunities with industry leaders from around the world. Don't miss the chance to explore
+                            new projects, connect with filmmakers, and expand your cinematic horizons.
+                        </p>
+                        <p>
+                            <a href="https://my.iffigoa.org/" target="_blank">Submit your entry.</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            {{-- <div class="col-md-4 col-sm-4 col-xs-12 d-flex">
                 <div class="card shadow-sm">
                     <img src="{{ asset('public/images/desktop-image/Viewing-Room-Entries-open.jpg') }}"
                         class="img-fluid">
@@ -62,7 +103,7 @@
                         </p>
                     </div>
                 </div>
-            </div>
+            </div> --}}
 
             <div class="text-center mt-1">
                 <a href="{{ route('news-and-update') }}" class="btn cus-prim-btn">View More</a>

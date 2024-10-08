@@ -19,6 +19,50 @@
 
                 <div class="col-md-6 col-sm-6 col-12 mb-4">
                     <p class="newsupdatesView-block-img">
+                        <img src="{{ asset('public/images/desktop-image/delegate-registration-open.jpg') }}" alt=""
+                            class="img-fluid">
+                    </p>
+                </div>
+                <div class="col-md-6 col-sm-6 col-12 mb-4">
+                    <h2>Film Bazaar Delegate Registration is Now Open!</h2>
+                    <p class="mb-0">
+                        Join the prestigious Film Bazaar 2024 as a delegate and immerse yourself in an unparalleled
+                        networking and learning experience. As a delegate, you'll have access to a wide array of industry
+                        professionals, engaging sessions, film screenings, and business opportunities across various
+                        segments of the global film industry. Don't miss this opportunity to connect with filmmakers,
+                        distributors, and key decision-makers from around the world.
+
+                        <a class="text-underline" style="font-weight: 600; text-decoration: underline;"
+                            href="https://filmbazaarindia.com/programme/producers-workshop/" target="_blank">
+                            Submit your entry
+                        </a>
+                    </p>
+                </div>
+
+                <div class="col-md-6 col-sm-6 col-12 mb-4">
+                    <p class="newsupdatesView-block-img">
+                        <img src="{{ asset('public/images/desktop-image/producres-workshop-open.jpg') }}" alt=""
+                            class="img-fluid">
+                    </p>
+                </div>
+                <div class="col-md-6 col-sm-6 col-12 mb-4">
+                    <h2>Producer's Workshop Registration For Film Bazaar 2024 Is Now Open!</h2>
+                    <p class="mb-0">
+                        The Producer's Workshop at Film Bazaar 2024 offers a unique platform for emerging and experienced
+                        producers to enhance their skills, network with industry professionals, and gain insights into
+                        global film markets. This dynamic workshop covers various aspects of production, financing,
+                        distribution, and co-production opportunities. Don't miss the chance to elevate your career—register
+                        now and become a part of this vibrant cinematic experience.
+
+                        <a class="text-underline" style="font-weight: 600; text-decoration: underline;"
+                            href="https://filmbazaarindia.com/programme/producers-workshop/" target="_blank">
+                            Submit your entry
+                        </a>
+                    </p>
+                </div>
+
+                <div class="col-md-6 col-sm-6 col-12 mb-4">
+                    <p class="newsupdatesView-block-img">
                         <img src="{{ asset('public/images/desktop-image/Delegate-Registration-open.jpg') }}" alt=""
                             class="img-fluid">
                     </p>
@@ -32,13 +76,13 @@
                         last date to submit your entry is by 30th September 2024.
                         <a class="text-underline" style="font-weight: 600; text-decoration: underline;"
                             href="https://my.iffigoa.org/" target="_blank">Submit your entry
-                            here.</a>
+                        </a>
                     </p>
                 </div>
 
                 <div class="col-md-6 col-sm-6 col-12 mb-4">
                     <p class="newsupdatesView-block-img">
-                        <img src="{{ asset('public/images/desktop-image/Viewing-Room-Entries-open.jpg') }}" alt=""
+                        <img src="{{ asset('public/images/desktop-image/Viewing-Room-Entries-closed.jpg') }}" alt=""
                             class="img-fluid">
                     </p>
                 </div>
@@ -46,12 +90,13 @@
                     <h2>Submit Your Film in the Viewing Room at Film Bazaar</h2>
                     <p class="mb-0">
                         The Viewing Room (VR) at Film Bazaar is now open for entries across all genres and lengths,
-                        including both fiction and documentary films. Whether your project is in the rough cut or final
-                        cut stage, this is a chance to showcase your work to industry experts and gain recognition. The
-                        last date to submit your entry is by 30th September 2024.
+                        including both fiction and documentary films. Whether your project is in the rough cut or final cut
+                        stage, this is a chance to showcase your work to industry experts and gain recognition. The last
+                        date to submit your entry is by 5th October 2024
+
                         <a class="text-underline" style="font-weight: 600; text-decoration: underline;"
-                            href=" https://filmbazaarindia.com/programme/viewing-room" target="_blank">Submit your entry
-                            here.</a>
+                            href=" https://filmbazaarindia.com/programme/viewing-room" target="_blank">View your entry
+                        </a>
                     </p>
                 </div>
 

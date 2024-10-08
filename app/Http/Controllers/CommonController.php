@@ -75,7 +75,8 @@ class CommonController extends Controller
         return $sponsors;
     }
 
-    public function technicalCommittee (){
+    public function technicalCommittee()
+    {
         $partners = [
             'barco-logo-png.png',
             'Puz-Electronics.png',
@@ -83,22 +84,8 @@ class CommonController extends Controller
             'Smpte.png',
             'qubewire.jpeg',
         ];
-        return view('technical-committee',['partners' => $partners]);
+        return view('technical-committee', ['partners' => $partners]);
     }
-
-    // public function partners()
-    // {
-    //     $partners = [
-    //         'barco-logo-png.png',
-    //         'big-fm.png',
-    //         'jist.png',
-    //         'Marriott-Hotel.png',
-    //         'Puz-Electronics.png',
-    //         'Qube-Cinema.png',
-    //         'Shorts-TV.png',
-    //     ];
-    //     return $partners;
-    // }
 
     public function goaTouristPlace()
     {
