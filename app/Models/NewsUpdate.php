@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Ticker extends Model
+class NewsUpdate extends Model
 {
     use HasFactory;
     protected $guarded = [];
