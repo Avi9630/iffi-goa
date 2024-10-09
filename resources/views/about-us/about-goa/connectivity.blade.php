@@ -64,8 +64,7 @@
             </div>
         </div>
         <div class="connectivity-block">
-            {{-- <img src="/assets/images/Car-icon.svg" alt="" srcset=""> --}}
-            <img src="{{ asset('public/images/icon/car-icon.png') }}" alt="" srcset="">
+            <img src="{{ asset('public/images/icon/Car-icon.png') }}" alt="" srcset="">
             <div class="connectivity-block-content">
                 <h3>Road</h3>
                 <p>Goa has an extensive roadway network which is efficiently connected with other states of the nation.
