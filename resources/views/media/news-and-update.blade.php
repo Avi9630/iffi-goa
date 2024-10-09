@@ -16,8 +16,27 @@
     <div class="col-lg-12 mt-5 static-content">
         <div class="container">
             <div class="row ">
+                @foreach ($newsUpdates as $newsUpdate)
+                    <div class="col-md-6 col-sm-6 col-12 mb-4">
+                        <p class="newsupdatesView-block-img">
+                            <img src="{{ asset('public/images/desktop-image/' . $newsUpdate->img_src) }}" alt=""
+                                class="img-fluid">
+                        </p>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-12 mb-4">
+                        <h2>{!! $newsUpdate->title !!}</h2>
+                        <p class="mb-0">
+                            {!! $newsUpdate->description !!}
 
-                <div class="col-md-6 col-sm-6 col-12 mb-4">
+                            <a class="text-underline" style="font-weight: 600; text-decoration: underline;"
+                                href="{{ $newsUpdate->link }}" target="_blank">
+                                {{ $newsUpdate->link_title }}
+                            </a>
+                        </p>
+                    </div>
+                @endforeach
+
+                {{-- <div class="col-md-6 col-sm-6 col-12 mb-4">
                     <p class="newsupdatesView-block-img">
                         <img src="{{ asset('public/images/desktop-image/delegate-registration-open.jpg') }}" alt=""
                             class="img-fluid">
@@ -78,9 +97,9 @@
                             href="https://my.iffigoa.org/" target="_blank">Submit your entry
                         </a>
                     </p>
-                </div>
+                </div> --}}
 
-                <div class="col-md-6 col-sm-6 col-12 mb-4">
+                {{-- <div class="col-md-6 col-sm-6 col-12 mb-4">
                     <p class="newsupdatesView-block-img">
                         <img src="{{ asset('public/images/desktop-image/Viewing-Room-Entries-closed.jpg') }}" alt=""
                             class="img-fluid">
@@ -95,12 +114,12 @@
                         date to submit your entry is by 5th October 2024
 
                         <a class="text-underline" style="font-weight: 600; text-decoration: underline;"
-                            href=" https://filmbazaarindia.com/programme/viewing-room" target="_blank">View your entry
+                            href="https://filmbazaarindia.com/programme/viewing-room" target="_blank">View your entry
                         </a>
                     </p>
-                </div>
+                </div> --}}
 
-                <div class="col-md-6 col-sm-6 col-12 mb-4">
+                {{-- <div class="col-md-6 col-sm-6 col-12 mb-4">
                     <p class="newsupdatesView-block-img">
                         <img src="{{ asset('public/images/desktop-image/dd-closed-now.jpg') }}" alt=""
                             class="img-fluid">
@@ -117,7 +136,7 @@
                         <a class="text-underline" style="font-weight: 600; text-decoration: underline;"
                             href="https://iffigoa.org/festival/indian-debut-director" target="_blank">View your entry.</a>
                     </p>
-                </div>
+                </div> --}}
 
                 <div class="col-md-6 col-sm-6 col-12 mb-4">
                     <p class="newsupdatesView-block-img">
@@ -228,7 +247,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-6 col-sm-6 col-12 mb-4">
+                {{-- <div class="col-md-6 col-sm-6 col-12 mb-4">
                     <p class="newsupdatesView-block-img">
                         <img src="{{ asset('public/images/desktop-image/CMOT_BANNER_CLOSE.png') }}" alt=""
                             class="img-fluid">
@@ -252,8 +271,8 @@
 
                 <div class="col-md-6 col-sm-6 col-12 mb-4">
                     <p class="newsupdatesView-block-img">
-                        <img src="{{ asset('public/images/desktop-image/INDIAN-PANORAMA-CLOSED-NOW.png') }}"
-                            alt="" class="img-fluid">
+                        <img src="{{ asset('public/images/desktop-image/INDIAN-PANORAMA-CLOSED-NOW.png') }}" alt=""
+                            class="img-fluid">
                     </p>
                 </div>
                 <div class="col-md-6 col-sm-6 col-12 mb-4">
@@ -285,7 +304,8 @@
                         <a class="text-underline" style="font-weight: 600; text-decoration: underline;"
                             href="http://iffigoa.org/festival/web-series">View your entry</a>
                     </p>
-                </div>
+                </div> --}}
+
             </div>
         </div>
     </div>
