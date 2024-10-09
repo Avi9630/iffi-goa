@@ -22,7 +22,8 @@
                         </p>
                         <p>
                             <a href="https://filmbazaarindia.com/participate/attend-as-a-delegate/"
-                                target="_blank">Submit your entry</a>
+                                target="_blank">Submit your entry
+                            </a>
                         </p>
                     </div>
                 </div>
