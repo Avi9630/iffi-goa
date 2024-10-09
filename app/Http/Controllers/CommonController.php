@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\NewsUpdate;
 use Illuminate\Http\Request;
 use DB;
 
@@ -138,5 +139,11 @@ class CommonController extends Controller
             ->orderBy('id', 'desc')
             ->paginate(10);
         return view('media.press-release', ['press' => $press]);
+    }
+
+    public function newsUpdate()
+    {
+        $newsUpdates = NewsUpdate::where('status', 1)->get();
+        return view('media.news-and-update', ['newsUpdates' => $newsUpdates]);
     }
 }

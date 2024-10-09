@@ -33,6 +33,8 @@ Route::controller(CommonController::class)->group(function () {
     Route::get('media/gallery',                         'gallery')->name('gallery');
 
     Route::get('media/press-release',                   'pressRelease')->name('press-release');
+
+    Route::get('media/news-and-update',                 'newsUpdate')->name('news-and-update');
 });
 
 Route::controller(InternationalCinemaController::class)->group(function () {
@@ -125,9 +127,9 @@ Route::get('cmot/about-cmot', function () {
 })->name('about-cmot');
 
 //MEDIA
-Route::get('media/news-and-update', function () {
-    return view('media.news-and-update');
-})->name('news-and-update');
+// Route::get('media/news-and-update', function () {
+//     return view('media.news-and-update');
+// })->name('news-and-update');
 
 Route::get('/counter', function () {
     return view('counterView');
