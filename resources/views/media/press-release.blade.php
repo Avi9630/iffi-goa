@@ -34,24 +34,18 @@
     <div class="container press">
         <div class="table-responsive">
             <table id="example" class="table table-hover mt-3">
-                <thead>
-
-                </thead>
                 <tbody>
                     @foreach ($press as $key => $value)
-                        @php
-                            $filename = basename($value->link);
-                        @endphp
-                        <tr>
-                            <td>
-                                <p>{{ $value->title }}</p>
-                            </td>
-                            <td>
-                                {{-- <a href="{{ $value->link }}" class="btn  btn-primary" target="_blank">View</a> --}}
-                                <a href="{{ asset('/public/press-release/' . $filename) }}" class="btn  btn-primary"
-                                    target="_blank">View</a>
-                            </td>
-                        </tr>
+                        @if (isset($value->link) && !empty($value->link) && $value->link != '')
+                            <tr>
+                                <td>
+                                    <p>{{ $value->title }}</p>
+                                </td>
+                                <td>
+                                    <a href="{{ $value->link }}" class="btn  btn-primary" target="_blank">View</a>
+                                </td>
+                            </tr>
+                        @endif
                     @endforeach
                 </tbody>
             </table>
