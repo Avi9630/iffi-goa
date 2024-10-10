@@ -293,6 +293,10 @@ footer a:hover{ color:#ffa706!important; font-size: 14px; }
     background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/main-header/UNICEF.jpg) center center no-repeat;
     background-size: cover;
 }
+.bannerBg-IFFI-Connect-banner{
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/main-header/IFFI-Connect-banner.jpg) center center no-repeat;
+    background-size: cover;
+}
 
 .iCinema-content h5{ font-size:14px; display:flex; 
  gap:2px; width: 100%; flex-wrap: wrap;    font-weight: 400; }
