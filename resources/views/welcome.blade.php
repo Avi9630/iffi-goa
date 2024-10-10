@@ -71,19 +71,19 @@
     </div>
 
     <!-- Indian Panorama  -->
-    <div class="col-lg-12 mb-5">
-        <div class="container">
-            <div class="section-heading mb-4">
-                <h4>A Kaleidoscope of Creativity and Culture of 54<sup>th</sup></h4>
-                <h2>Indian Panorama</h2>
-            </div>
-            <div class="owl-carousel international">
-                @include('pages.indian-panorama', [
-                    'indianPanormas' => app(\App\Http\Controllers\CommonController::class)->indianPanorama(),
-                ])
-            </div>
+    {{-- <div class="col-lg-12 mb-5"> --}}
+    <div class="container">
+        <div class="section-heading mb-4">
+            <h4>A Kaleidoscope of Creativity and Culture of 54<sup>th</sup></h4>
+            <h2>Indian Panorama</h2>
+        </div>
+        <div class="owl-carousel international">
+            @include('pages.indian-panorama', [
+                'indianPanormas' => app(\App\Http\Controllers\CommonController::class)->indianPanorama(),
+            ])
         </div>
     </div>
+    {{-- </div> --}}
     <!-- Indian Panorama Ends-->
 
     <!-- Lifetime Achievement Award  -->
