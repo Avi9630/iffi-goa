@@ -1,5 +1,5 @@
 <!-- Text Resize Section -->
-<div class="text-resize blackBG">
+<div class="text-resize blackBG d-none">
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-sm-4 ">
