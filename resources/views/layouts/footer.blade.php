@@ -133,7 +133,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.10.0/js/lightgallery-all.min.js"></script>
 <script>
     $(document).ready(function() {
-        $("#lightgallery").lightGallery();
+        $("#lightgallery").lightGallery({
+            selector: 'a',
+            thumbnail: true
+        });
+
     });
 </script>
 </body>
