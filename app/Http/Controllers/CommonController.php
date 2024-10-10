@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\NewsUpdate;
 use Illuminate\Http\Request;
 use DB;
 
@@ -73,5 +74,76 @@ class CommonController extends Controller
             'zee-media.png',
         ];
         return $sponsors;
+    }
+
+    public function technicalCommittee()
+    {
+        $partners = [
+            'barco-logo-png.png',
+            'Puz-Electronics.png',
+            'Qube-Cinema.png',
+            'Smpte.png',
+            'qubewire.jpeg',
+        ];
+        return view('technical-committee', ['partners' => $partners]);
+    }
+
+    public function goaTouristPlace()
+    {
+        $gtp = DB::table('mst_about_goa_tourist_places_gallery')
+            ->where('tourist_places_unesco_id', 1)
+            ->whereNull('deleted_at')
+            ->get();
+        $gtpu11 = DB::table('mst_about_goa_tourist_places_gallery')
+            ->where('tourist_places_unesco_id', 2)
+            ->whereNull('deleted_at')
+            ->get();
+        $gtpu = DB::table('mst_about_goa_tourist_places_unesco')->where('id', 1)->whereNull('deleted_at')->get();
+        $gtpp22 = DB::table('mst_about_goa_tourist_places_gallery')
+            ->where('tourist_places_unesco_id', 3)
+            ->whereNull('deleted_at')
+            ->get();
+        $gtpp33 = DB::table('mst_about_goa_tourist_places_gallery')
+            ->where('tourist_places_unesco_id', 4)
+            ->whereNull('deleted_at')
+            ->get();
+
+        return view('about-us.about-goa.goa-tourist-place', [
+            'gtp'       =>  $gtp,
+            'gtpu'      =>  $gtpu,
+            'gtpu11'    =>  $gtpu11,
+            'gtpp22'    =>  $gtpp22,
+            'gtpp33'    =>  $gtpp33,
+        ]);
+    }
+
+    public function faq()
+    {
+        $faqs  =   DB::table('iffi_faq')->where(['status' => 1])->get();
+        return view('about-us.faq', ['faqs' => $faqs]);
+    }
+
+    public function gallery()
+    {
+        $gallery = DB::table('mst_photos')->where('status', 1)->whereNull('deleted_at')->orderBy('id', 'DESC')->paginate(8);
+        // dd($gallery);
+        return view('gallery.gallery', [
+            'gallery'           =>  $gallery,
+        ]);
+    }
+
+    public function pressRelease()
+    {
+        $press = DB::table('mst_press_release')
+            ->where('status', '1')
+            ->orderBy('id', 'desc')
+            ->paginate(10);
+        return view('media.press-release', ['press' => $press]);
+    }
+
+    public function newsUpdate()
+    {
+        $newsUpdates = NewsUpdate::where('status', 1)->get();
+        return view('media.news-and-update', ['newsUpdates' => $newsUpdates]);
     }
 }

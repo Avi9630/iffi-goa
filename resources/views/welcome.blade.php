@@ -6,7 +6,11 @@
 @section('site_keywords',
     'IFFI Goa, IFFI Goa 2024, IFFI 2022, 55th IFFI, Goan Films, Goa Film news, Indian films, film
     in india, information, film festival, film producer, broadcasting')
-@section('main')
+@section('content')
+
+    <!-- Top Logo Section -->
+    @include('pages.logo')
+    <!-- Top Logo Section Ends-->
 
     <!-- Navigation slide -->
     @include('pages.navigation-slide')
@@ -67,19 +71,19 @@
     </div>
 
     <!-- Indian Panorama  -->
-    <div class="col-lg-12 mb-5">
-        <div class="container">
-            <div class="section-heading mb-4">
-                <h4>A Kaleidoscope of Creativity and Culture of 54<sup>th</sup></h4>
-                <h2>Indian Panorama</h2>
-            </div>
-            <div class="owl-carousel international">
-                @include('pages.indian-panorama', [
-                    'indianPanormas' => app(\App\Http\Controllers\CommonController::class)->indianPanorama(),
-                ])
-            </div>
+    {{-- <div class="col-lg-12 mb-5"> --}}
+    <div class="container">
+        <div class="section-heading mb-4">
+            <h4>A Kaleidoscope of Creativity and Culture of 54<sup>th</sup></h4>
+            <h2>Indian Panorama</h2>
+        </div>
+        <div class="owl-carousel international">
+            @include('pages.indian-panorama', [
+                'indianPanormas' => app(\App\Http\Controllers\CommonController::class)->indianPanorama(),
+            ])
         </div>
     </div>
+    {{-- </div> --}}
     <!-- Indian Panorama Ends-->
 
     <!-- Lifetime Achievement Award  -->
@@ -100,7 +104,7 @@
                 <h4 class="mb-2">Fuelling Success Together</h4>
                 <h2>Sponsors & Partners</h2>
             </div>
-            <div class="owl-carousel owl-carousel-sponsor">
+            <div class=" owl-carousel-sponsor">
                 @include('pages.sponsor', [
                     'sponsors' => app(\App\Http\Controllers\CommonController::class)->sponsors(),
                 ])

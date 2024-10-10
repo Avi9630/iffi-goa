@@ -2,10 +2,10 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-sm-6">
-                <img src="{{ asset('public/images/satyjeet-winner.jpg') }}" class="img-fluid">
+                <img src="{{ asset('public/images/satyjeet-winner.jpg') }}" class="img-fluid fit-img">
             </div>
-            <div class="col-md-6 col-sm-6">
-                <h4>54<sup>th</sup> IFFI Satyajit Ray Lifetime Achievement Award</h4>
+            <div class="col-md-6 col-sm-6 ">
+                <h4 class="mb-3">54<sup>th</sup> IFFI Satyajit Ray Lifetime Achievement Award</h4>
                 <p>The prestigious Satyajit Ray Lifetime Achievement Award for Excellence in Cinema goes to
                     Michael Kirk Douglas at 54TH IFFI Festival.
                 </p>
