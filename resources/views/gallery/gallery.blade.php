@@ -30,7 +30,8 @@
                 <div id="lightgallery" class="gallery">
                     @foreach ($gallery as $gall)
                         <div class="grid-item">
-                            <a href="{{ asset('public/images/gallery/' . $gall->image) }}">
+                            <a href="{{ asset('public/images/gallery/' . $gall->image) }}"
+                                data-src="{{ asset('public/images/gallery/' . $gall->image) }}">
                                 <img src="{{ asset('public/images/gallery/' . $gall->image) }}" alt="{{ $gall->image }}">
                             </a>
                         </div>
@@ -39,11 +40,6 @@
             </div>
             <nav aria-label="Page navigation pb-4">
                 <ul class="pagination">
-                    {{-- <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#">Next</a></li> --}}
                     {{ $gallery->withQueryString()->links() }}
                 </ul>
             </nav>
