@@ -60,7 +60,7 @@
                                     </li>
 
                                     <li class="nav-item">
-                                        <a href="{{ route('faq') }}" class="nav-link">Faqs</a>
+                                        <a href="{{ route('faq') }}" class="nav-link">FAQ's</a>
                                     </li>
 
                                 </ul>
