@@ -99,7 +99,7 @@
                 <li>
                     <a href="{{ route('contact-us') }}" class="cus-menuP-link">Contact Us</a>
                 </li>
-                <li> <a href="{{ route('faq') }}" class="cus-menuP-link">FAQs</a></li>
+                <li> <a href="{{ route('faq') }}" class="cus-menuP-link">FAQ's</a></li>
                 <li><a href="{{ route('press-release') }}" target="_blank">Press Release</a></li>
                 <li> <a href="{{ route('gallery') }}" target="_blank">Gallery</a></li>
                 <li> <a href="{{ route('privacy-policy') }}">Privacy Policy</a></li>
