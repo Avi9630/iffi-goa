@@ -4,7 +4,7 @@
         <div class="container">
             <div class="hero-banner-text ">
                 <h1>55<sup>th</sup> International Film</h1>
-                <h2>Festival of India, IFFI</h2>
+                <h1>Festival of India, IFFI</h1>
                 <h6>20<sup>th</sup>- 28<sup>th</sup>November,2024</h6>
             </div>
         </div>

@@ -35,8 +35,8 @@
                         </li>
                         <li> <a href="{{ route('faq') }}" class="cus-menuP-link">FAQ</a></li>
                         <li><a href="{{ route('press-release') }}" target="_blank">Press Release</a></li>
-                        <li> <a href="{{ route('gallery') }}" target="_blank">Gallary</a></li>
-                        <li> <a href="https://www.iffigoa.org/privacy-policy">Privacy Policy</a></li>
+                        <li> <a href="{{ route('gallery') }}" target="_blank">Gallery</a></li>
+                        <li> <a href="{{ route('privacy-policy') }}">Privacy Policy</a></li>
                     </ul>
                 </div>
             </div>
