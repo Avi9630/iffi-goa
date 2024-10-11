@@ -27,7 +27,7 @@ body p{ font-family:"Roboto", sans-serif; }
  background: linear-gradient(225deg, #cb8c0c 0%, #c81616 100%); color: white; font-weight: 500;line-height: normal;position: relative;margin-top: -7px; margin-bottom: 40px;}
  .breaking-news span{ display:inline-flex; column-gap:10px; }
 .top-logo{ display:flex; justify-content:space-between; align-items:center; }
-.top-logo img{ width:100px; color:#fff; }
+.top-logo img{ width:70px; color:#fff; }
 .logo-section{   
       position: absolute;
       top: 10px;

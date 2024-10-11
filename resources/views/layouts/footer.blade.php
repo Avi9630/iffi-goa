@@ -126,6 +126,10 @@
 <!-- Footer ends  -->
 @livewireScripts
 </body>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v15.0">
+</script>
+<script async src="//www.instagram.com/embed.js"></script>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <script src="{{ asset('public/js/jquery-3.6.0.min.js') }}"></script>
 <script src="{{ asset('public/js/owl.carousel.min.js') }}"></script>
 <script src="{{ asset('public/js/bootstrap.min.js') }}"></script>
@@ -133,7 +137,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.10.0/js/lightgallery-all.min.js"></script>
 <script>
     $(document).ready(function() {
-        $("#lightgallery").lightGallery();
+        $("#lightgallery").lightGallery({
+            selector: 'a',
+            thumbnail: true
+        });
+
     });
 </script>
 </body>
