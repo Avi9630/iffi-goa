@@ -142,3 +142,7 @@ Route::get('debut-director/about-debut-director', function () {
 Route::get('debut-director/rules-regulations', function () {
     return view('indian-debut-director-awards.rules-regulations');
 })->name('dd-rules-regulations');
+
+Route::get('privacy-policy', function () {
+    return view('privacy-policy');
+})->name('privacy-policy');
