@@ -17,13 +17,13 @@
         <div class="container">
             <div class="row ">
                 @foreach ($newsUpdates as $newsUpdate)
-                    <div class="col-md-6 col-sm-6 col-12 mb-4">
+                    <div class="col-md-5 col-sm-6 col-12 mb-4">
                         <p class="newsupdatesView-block-img">
                             <img src="{{ asset('public/images/desktop-image/' . $newsUpdate->img_src) }}" alt=""
                                 class="img-fluid">
                         </p>
                     </div>
-                    <div class="col-md-6 col-sm-6 col-12 mb-4">
+                    <div class="col-md-7 col-sm-6 col-12 mb-4">
                         <h2>{!! $newsUpdate->title !!}</h2>
                         <p class="mb-0">
                             {!! $newsUpdate->description !!}
@@ -36,13 +36,13 @@
                     </div>
                 @endforeach
 
-                {{-- <div class="col-md-6 col-sm-6 col-12 mb-4">
+                {{-- <div class="col-md-5 col-sm-12 col-12 mb-4">
                     <p class="newsupdatesView-block-img">
                         <img src="{{ asset('public/images/desktop-image/delegate-registration-open.jpg') }}" alt=""
                             class="img-fluid">
                     </p>
                 </div>
-                <div class="col-md-6 col-sm-6 col-12 mb-4">
+                <div class="col-md-7 col-sm-12 col-12 mb-4">
                     <h2>Film Bazaar Delegate Registration is Now Open!</h2>
                     <p class="mb-0">
                         Join the prestigious Film Bazaar 2024 as a delegate and immerse yourself in an unparalleled
@@ -58,13 +58,13 @@
                     </p>
                 </div>
 
-                <div class="col-md-6 col-sm-6 col-12 mb-4">
+                <div class="col-md-5 col-sm-12 col-12 mb-4">
                     <p class="newsupdatesView-block-img">
                         <img src="{{ asset('public/images/desktop-image/producres-workshop-open.jpg') }}" alt=""
                             class="img-fluid">
                     </p>
                 </div>
-                <div class="col-md-6 col-sm-6 col-12 mb-4">
+                <div class="col-md-7 col-sm-12 col-12 mb-4">
                     <h2>Producer's Workshop Registration For Film Bazaar 2024 Is Now Open!</h2>
                     <p class="mb-0">
                         The Producer's Workshop at Film Bazaar 2024 offers a unique platform for emerging and experienced
@@ -80,13 +80,13 @@
                     </p>
                 </div>
 
-                <div class="col-md-6 col-sm-6 col-12 mb-4">
+                <div class="col-md-5 col-sm-12 col-12 mb-4">
                     <p class="newsupdatesView-block-img">
                         <img src="{{ asset('public/images/desktop-image/Delegate-Registration-open.jpg') }}" alt=""
                             class="img-fluid">
                     </p>
                 </div>
-                <div class="col-md-6 col-sm-6 col-12 mb-4">
+                <div class="col-md-7 col-sm-12 col-12 mb-4">
                     <h2>Delegate Registration For IFFI 2024 Is Now Open!</h2>
                     <p class="mb-0">
                         The Viewing Room (VR) at Film Bazaar is now open for entries across all genres and lengths,
@@ -99,13 +99,13 @@
                     </p>
                 </div> --}}
 
-                {{-- <div class="col-md-6 col-sm-6 col-12 mb-4">
+                {{-- <div class="col-md-5 col-sm-12 col-12 mb-4">
                     <p class="newsupdatesView-block-img">
                         <img src="{{ asset('public/images/desktop-image/Viewing-Room-Entries-closed.jpg') }}" alt=""
                             class="img-fluid">
                     </p>
                 </div>
-                <div class="col-md-6 col-sm-6 col-12 mb-4">
+                <div class="col-md-7 col-sm-12 col-12 mb-4">
                     <h2>Submit Your Film in the Viewing Room at Film Bazaar</h2>
                     <p class="mb-0">
                         The Viewing Room (VR) at Film Bazaar is now open for entries across all genres and lengths,
@@ -119,13 +119,13 @@
                     </p>
                 </div> --}}
 
-                {{-- <div class="col-md-6 col-sm-6 col-12 mb-4">
+                {{-- <div class="col-md-5 col-sm-12 col-12 mb-4">
                     <p class="newsupdatesView-block-img">
                         <img src="{{ asset('public/images/desktop-image/dd-closed-now.jpg') }}" alt=""
                             class="img-fluid">
                     </p>
                 </div>
-                <div class="col-md-6 col-sm-6 col-12 mb-4">
+                <div class="col-md-7 col-sm-12 col-12 mb-4">
                     <h2>Best Indian Debut Director Award For The First Time</h2>
                     <p class="mb-0">
                         IFFI 2024 introduces the Best Indian Debut Director Award for the first time to showcase the
@@ -138,13 +138,13 @@
                     </p>
                 </div> --}}
 
-                <div class="col-md-6 col-sm-6 col-12 mb-4">
+                <div class="col-md-5 col-sm-12 col-12 mb-4">
                     <p class="newsupdatesView-block-img">
                         <img src="{{ asset('public/images/desktop-image/strategizing.jpg') }}" alt=""
                             class="img-fluid">
                     </p>
                 </div>
-                <div class="col-md-6 col-sm-6 col-12 mb-4">
+                <div class="col-md-7 col-sm-12 col-12 mb-4">
                     <h2>Strategizing IFFI 2024 at NMIC Mumbai</h2>
                     <p class="mb-0">
                         IFFI 2024 introduces the Best Indian Debut Director Award for the first time to showcase the
@@ -156,7 +156,7 @@
                         <a style="font-weight: 600; color: blue; text-decoration: underline;" data-bs-toggle="modal"
                             data-bs-target="#exampleModal">Read More</a>
                     </p>
-
+</div>
                     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                         aria-hidden="true">
                         <div class="modal-dialog modal-lg">
