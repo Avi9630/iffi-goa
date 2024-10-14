@@ -22,6 +22,7 @@
             <div class="col-md-4 col-sm-4">
                 <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/iffigoa/"
                     data-instgrm-version="14" style="border: 0; margin: 1px; padding: 0; width: 100%; height:100%;">
+                    <a href="https://www.instagram.com/iffigoa/">Instagram</a>
                 </blockquote>
             </div>
         </div>
