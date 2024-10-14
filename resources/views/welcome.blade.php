@@ -8,10 +8,6 @@
     in india, information, film festival, film producer, broadcasting')
 @section('content')
 
-    <!-- Top Logo Section -->
-    @include('pages.logo')
-    <!-- Top Logo Section Ends-->
-
     <!-- Navigation slide -->
     @include('pages.navigation-slide')
 
