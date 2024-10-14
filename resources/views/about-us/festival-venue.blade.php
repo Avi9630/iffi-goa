@@ -46,7 +46,8 @@
                                         <img src="{{ asset('public/images/festival-venue/location-icon.svg') }}"
                                             alt="" srcset="">
                                     </span>
-                                    <a href="#">Goa University, MDR3, Taleigao, Goa 403206</a>
+                                    <a href="https://www.unigoa.ac.in/" target="_blank">Goa University, MDR3, Taleigao, Goa
+                                        403206</a>
                                 </p>
                             </div>
                         </div>
