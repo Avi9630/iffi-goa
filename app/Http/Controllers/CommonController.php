@@ -39,6 +39,62 @@ class CommonController extends Controller
         return $internationalCinemas;
     }
 
+    // public function internationalCompetitionDetail($id)
+    // {
+    //     // dd($id);
+    //     $internationalCinemas = DB::table('international_cinema')
+    //         ->join(
+    //             'international_curated_sections',
+    //             'international_cinema.curated_section_id',
+    //             '=',
+    //             'international_curated_sections.id',
+    //         )
+    //         ->where('international_cinema.status', '=', '1')
+    //         ->select(
+    //             'international_cinema.*',
+    //             'international_curated_sections.title AS curated_section_title',
+    //         )
+    //         ->limit(20)
+    //         ->get();
+    //     return view('pages.international-competition-detail');
+    // }
+
+    public function internationalCompetitionDetail($slug)
+    {
+        $fetch_cinema_details = DB::table('international_cinema')
+            ->where('status', '=', '1')
+            ->where('slug', '=', $slug)
+            ->first();
+
+        $fetch_cinema_basic_details = DB::table('international_cinema_basic_details')
+            ->where('status', '=', '1')
+            ->where('cinema_id', '=', $fetch_cinema_details->id)
+            ->first();
+        // dd($fetch_cinema_basic_details);
+        $currentURL = $_SERVER['REQUEST_URI'];
+
+        $list_international_cinema_images = DB::table('international_cinema_images')
+            ->where('status', '=', '1')
+            ->where('cinema_id', '=', $fetch_cinema_details->id)
+            ->get();
+
+        $list_international_cinema_videos = DB::table('international_cinema_videos')
+            ->where('status', '=', '1')
+            ->where('cinema_id', '=', $fetch_cinema_details->id)
+            ->get();
+
+        return view(
+            'pages.international-competition-detail',
+            [
+                'fetch_cinema_details'              =>  $fetch_cinema_details,
+                'fetch_cinema_basic_details'        =>  $fetch_cinema_basic_details,
+                'currentURL'                        =>  $currentURL,
+                'list_international_cinema_images'  =>  $list_international_cinema_images,
+                'list_international_cinema_videos'  =>  $list_international_cinema_videos,
+            ]
+        );
+    }
+
     public function directorDebutFilm()
     {
         $directorDebutFilm = DB::table('international_cinema')

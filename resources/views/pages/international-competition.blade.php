@@ -40,7 +40,8 @@
                     <img src="{{ asset('public/images/international-competition/' . $cinema->img_src) }}"
                         class="img-fluid">
                     <div class="International-competition">
-                        <p> <a href="" class="post-title">{{ $cinema->title }}</a></p>
+                        <p> <a href="{{ route('international-competition-detail', ['slug' => $cinema->slug]) }}"
+                                class="post-title">{{ $cinema->title }}</a></p>
                         <p class="sub-post-title">
                             ({{ isset($cinema->award) && $cinema->award !== '' ? $cinema->award : null }})
                         </p>

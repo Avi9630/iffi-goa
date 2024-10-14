@@ -20,6 +20,8 @@ Route::controller(CommonController::class)->group(function () {
 
     Route::get('international-cinema',                  'internationalCinema')->name('international-cinema');
 
+    Route::get('international-competition-detail/{slug}','internationalCompetitionDetail')->name('international-competition-detail');
+
     Route::get('director-debut-film',                   'directorDebutFilm')->name('director-debut-film');
 
     Route::get('indian-panorama',                       'indianPanorama')->name('indian-panorama');
