@@ -322,6 +322,16 @@
                                 </ul>
                             </div>
                             <!-- Film Bazaar Section End -->
+
+                            <!-- Master class Section Start -->
+                            <div class="col-md-3 col-sm-12 ">
+                                <h4 class="menu-title ">
+                                    <a href="{{ route('master-classes') }}" class="nav-link">
+                                        Master Classes
+                                    </a>
+                                </h4>
+                            </div>
+                            <!-- Masterclass Section End -->
                         </div>
                     </div>
                 </div>
