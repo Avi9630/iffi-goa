@@ -20,6 +20,8 @@ Route::controller(CommonController::class)->group(function () {
 
     Route::get('international-cinema',                  'internationalCinema')->name('international-cinema');
 
+    Route::get('international-competition-detail/{slug}','internationalCompetitionDetail')->name('international-competition-detail');
+
     Route::get('director-debut-film',                   'directorDebutFilm')->name('director-debut-film');
 
     Route::get('indian-panorama',                       'indianPanorama')->name('indian-panorama');
@@ -126,11 +128,6 @@ Route::get('cmot/about-cmot', function () {
     return view('cmot.about-cmot');
 })->name('about-cmot');
 
-//MEDIA
-// Route::get('media/news-and-update', function () {
-//     return view('media.news-and-update');
-// })->name('news-and-update');
-
 Route::get('/counter', function () {
     return view('counterView');
 })->name('counter');
@@ -142,3 +139,12 @@ Route::get('debut-director/about-debut-director', function () {
 Route::get('debut-director/rules-regulations', function () {
     return view('indian-debut-director-awards.rules-regulations');
 })->name('dd-rules-regulations');
+
+Route::get('privacy-policy', function () {
+    return view('privacy-policy');
+})->name('privacy-policy');
+
+//Master Classes
+Route::get('master-classes', function () {
+    return view('master-class.master');
+})->name('master-classes');

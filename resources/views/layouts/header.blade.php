@@ -1,7 +1,7 @@
-{{-- @include('layouts.gig') --}}
+@include('layouts.gig')
 
 <!-- Top Logo Section -->
-<div class="col-lg-12">
+{{-- <div class="col-lg-12">
     <div class="logo-section">
         <div class="container">
             <div class="top-logo">
@@ -12,5 +12,6 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
+@include('layouts.logo')
 <!-- Top Logo Section Ends-->

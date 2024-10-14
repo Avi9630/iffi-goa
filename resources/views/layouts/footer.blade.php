@@ -8,7 +8,7 @@
                     <img src="{{ asset('public/images/Film-Bazar.png') }}" alt="">
                 </a>
             </div>
-            <div class=" ">
+            {{-- <div class=" ">
                 <div class=" text-center quick-link">
                     <ul>
                         <li>
@@ -33,14 +33,14 @@
                         <li>
                             <a href="{{ route('contact-us') }}" class="cus-menuP-link">Contact Us</a>
                         </li>
-                        <li> <a href="{{ route('faq') }}" class="cus-menuP-link">FAQ</a></li>
+                        <li> <a href="{{ route('faq') }}" class="cus-menuP-link">FAQ's</a></li>
                         <li><a href="{{ route('press-release') }}" target="_blank">Press Release</a></li>
                         <li> <a href="{{ route('gallery') }}" target="_blank">Gallary</a></li>
                         <li> <a href="https://www.iffigoa.org/privacy-policy">Privacy Policy</a></li>
                     </ul>
                 </div>
-            </div>
-            <div class="row">
+            </div> --}}
+            <div class="row mt-4">
                 <div class="col-md-3 col-sm-3">
                     <h4>Indian Panorama</h4>
                     <ul class="text-highlight">
@@ -75,7 +75,7 @@
         </div>
     </div>
     </div>
-    {{-- <div class="row ">
+    <div class="row ">
         <div class=" text-center quick-link">
             <ul>
                 <li>
@@ -99,13 +99,13 @@
                 <li>
                     <a href="{{ route('contact-us') }}" class="cus-menuP-link">Contact Us</a>
                 </li>
-                <li> <a href="{{ route('faq') }}" class="cus-menuP-link">FAQ</a></li>
+                <li> <a href="{{ route('faq') }}" class="cus-menuP-link">FAQ's</a></li>
                 <li><a href="{{ route('press-release') }}" target="_blank">Press Release</a></li>
-                <li> <a href="{{ route('gallery') }}" target="_blank">Gallary</a></li>
-                <li> <a href="https://www.iffigoa.org/privacy-policy">Privacy Policy</a></li>
+                <li> <a href="{{ route('gallery') }}" target="_blank">Gallery</a></li>
+                <li> <a href="{{ route('privacy-policy') }}">Privacy Policy</a></li>
             </ul>
         </div>
-    </div> --}}
+    </div>
     <div class="f-foot row">
         <div class="social-bar">
             <a href="https://www.facebook.com/IFFIGoa/" target="_blank">
@@ -130,6 +130,7 @@
 </script>
 <script async src="//www.instagram.com/embed.js"></script>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 <script src="{{ asset('public/js/jquery-3.6.0.min.js') }}"></script>
 <script src="{{ asset('public/js/owl.carousel.min.js') }}"></script>
 <script src="{{ asset('public/js/bootstrap.min.js') }}"></script>
@@ -141,7 +142,6 @@
             selector: 'a',
             thumbnail: true
         });
-
     });
 </script>
 </body>

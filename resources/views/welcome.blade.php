@@ -8,10 +8,6 @@
     in india, information, film festival, film producer, broadcasting')
 @section('content')
 
-    <!-- Top Logo Section -->
-    @include('pages.logo')
-    <!-- Top Logo Section Ends-->
-
     <!-- Navigation slide -->
     @include('pages.navigation-slide')
 
@@ -72,7 +68,7 @@
 
     <!-- Indian Panorama  -->
     {{-- <div class="col-lg-12 mb-5"> --}}
-    <div class="container">
+    <div class="container mb-5">
         <div class="section-heading mb-4">
             <h4>A Kaleidoscope of Creativity and Culture of 54<sup>th</sup></h4>
             <h2>Indian Panorama</h2>
