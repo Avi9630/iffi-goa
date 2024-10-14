@@ -76,11 +76,11 @@
                             </div>
                             <div class="user-profile-icon">
                                 <ul>
-                                    <li><img src="images/user1.jpg"></li>
-                                    <li><img src="images/user2.jpg"></li>
-                                    <li><img src="images/user3.jpg"></li>
-                                    <li><img src="images/user4.jpg"></li>
-                                    <li><img src="images/user5.jpg"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user1.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user2.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user3.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user4.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user5.jpg') }}"></li>
                                 </ul>
                             </div>
                         </div>
@@ -93,11 +93,11 @@
                             </div>
                             <div class="user-profile-icon">
                                 <ul>
-                                    <li><img src="images/user1.jpg"></li>
-                                    <li><img src="images/user2.jpg"></li>
-                                    <li><img src="images/user3.jpg"></li>
-                                    <li><img src="images/user4.jpg"></li>
-                                    <li><img src="images/user5.jpg"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user1.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user2.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user3.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user4.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user5.jpg') }}"></li>
                                 </ul>
                             </div>
                         </div>
@@ -113,11 +113,11 @@
                             </div>
                             <div class="user-profile-icon">
                                 <ul>
-                                    <li><img src="images/user1.jpg"></li>
-                                    <li><img src="images/user2.jpg"></li>
-                                    <li><img src="images/user3.jpg"></li>
-                                    <li><img src="images/user4.jpg"></li>
-                                    <li><img src="images/user5.jpg"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user1.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user2.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user3.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user4.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user5.jpg') }}"></li>
                                 </ul>
                             </div>
                         </div>
@@ -130,11 +130,11 @@
                             </div>
                             <div class="user-profile-icon">
                                 <ul>
-                                    <li><img src="images/user1.jpg"></li>
-                                    <li><img src="images/user2.jpg"></li>
-                                    <li><img src="images/user3.jpg"></li>
-                                    <li><img src="images/user4.jpg"></li>
-                                    <li><img src="images/user5.jpg"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user1.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user2.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user3.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user4.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user5.jpg') }}"></li>
                                 </ul>
                             </div>
                         </div>
@@ -152,11 +152,11 @@
                             </div>
                             <div class="user-profile-icon">
                                 <ul>
-                                    <li><img src="images/user1.jpg"></li>
-                                    <li><img src="images/user2.jpg"></li>
-                                    <li><img src="images/user3.jpg"></li>
-                                    <li><img src="images/user4.jpg"></li>
-                                    <li><img src="images/user5.jpg"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user1.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user2.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user3.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user4.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user5.jpg') }}"></li>
                                 </ul>
                             </div>
                         </div>
@@ -169,11 +169,11 @@
                             </div>
                             <div class="user-profile-icon">
                                 <ul>
-                                    <li><img src="images/user1.jpg"></li>
-                                    <li><img src="images/user2.jpg"></li>
-                                    <li><img src="images/user3.jpg"></li>
-                                    <li><img src="images/user4.jpg"></li>
-                                    <li><img src="images/user5.jpg"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user1.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user2.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user3.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user4.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user5.jpg') }}"></li>
                                 </ul>
                             </div>
                         </div>
@@ -191,11 +191,11 @@
                             </div>
                             <div class="user-profile-icon">
                                 <ul>
-                                    <li><img src="images/user1.jpg"></li>
-                                    <li><img src="images/user2.jpg"></li>
-                                    <li><img src="images/user3.jpg"></li>
-                                    <li><img src="images/user4.jpg"></li>
-                                    <li><img src="images/user5.jpg"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user1.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user2.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user3.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user4.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user5.jpg') }}"></li>
                                 </ul>
                             </div>
                         </div>
@@ -208,11 +208,11 @@
                             </div>
                             <div class="user-profile-icon">
                                 <ul>
-                                    <li><img src="images/user1.jpg"></li>
-                                    <li><img src="images/user2.jpg"></li>
-                                    <li><img src="images/user3.jpg"></li>
-                                    <li><img src="images/user4.jpg"></li>
-                                    <li><img src="images/user5.jpg"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user1.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user2.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user3.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user4.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user5.jpg') }}"></li>
                                 </ul>
                             </div>
                         </div>
@@ -230,11 +230,11 @@
                             </div>
                             <div class="user-profile-icon">
                                 <ul>
-                                    <li><img src="images/user1.jpg"></li>
-                                    <li><img src="images/user2.jpg"></li>
-                                    <li><img src="images/user3.jpg"></li>
-                                    <li><img src="images/user4.jpg"></li>
-                                    <li><img src="images/user5.jpg"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user1.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user2.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user3.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user4.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user5.jpg') }}"></li>
                                 </ul>
                             </div>
                         </div>
@@ -247,11 +247,11 @@
                             </div>
                             <div class="user-profile-icon">
                                 <ul>
-                                    <li><img src="images/user1.jpg"></li>
-                                    <li><img src="images/user2.jpg"></li>
-                                    <li><img src="images/user3.jpg"></li>
-                                    <li><img src="images/user4.jpg"></li>
-                                    <li><img src="images/user5.jpg"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user1.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user2.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user3.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user4.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user5.jpg') }}"></li>
                                 </ul>
                             </div>
                         </div>
@@ -269,11 +269,11 @@
                             </div>
                             <div class="user-profile-icon">
                                 <ul>
-                                    <li><img src="images/user1.jpg"></li>
-                                    <li><img src="images/user2.jpg"></li>
-                                    <li><img src="images/user3.jpg"></li>
-                                    <li><img src="images/user4.jpg"></li>
-                                    <li><img src="images/user5.jpg"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user1.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user2.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user3.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user4.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user5.jpg') }}"></li>
                                 </ul>
                             </div>
                         </div>
@@ -286,11 +286,11 @@
                             </div>
                             <div class="user-profile-icon">
                                 <ul>
-                                    <li><img src="images/user1.jpg"></li>
-                                    <li><img src="images/user2.jpg"></li>
-                                    <li><img src="images/user3.jpg"></li>
-                                    <li><img src="images/user4.jpg"></li>
-                                    <li><img src="images/user5.jpg"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user1.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user2.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user3.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user4.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user5.jpg') }}"></li>
                                 </ul>
                             </div>
                         </div>
@@ -308,11 +308,11 @@
                             </div>
                             <div class="user-profile-icon">
                                 <ul>
-                                    <li><img src="images/user1.jpg"></li>
-                                    <li><img src="images/user2.jpg"></li>
-                                    <li><img src="images/user3.jpg"></li>
-                                    <li><img src="images/user4.jpg"></li>
-                                    <li><img src="images/user5.jpg"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user1.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user2.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user3.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user4.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user5.jpg') }}"></li>
                                 </ul>
                             </div>
                         </div>
@@ -325,11 +325,11 @@
                             </div>
                             <div class="user-profile-icon">
                                 <ul>
-                                    <li><img src="images/user1.jpg"></li>
-                                    <li><img src="images/user2.jpg"></li>
-                                    <li><img src="images/user3.jpg"></li>
-                                    <li><img src="images/user4.jpg"></li>
-                                    <li><img src="images/user5.jpg"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user1.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user2.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user3.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user4.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user5.jpg') }}"></li>
                                 </ul>
                             </div>
                         </div>
@@ -347,11 +347,11 @@
                             </div>
                             <div class="user-profile-icon">
                                 <ul>
-                                    <li><img src="images/user1.jpg"></li>
-                                    <li><img src="images/user2.jpg"></li>
-                                    <li><img src="images/user3.jpg"></li>
-                                    <li><img src="images/user4.jpg"></li>
-                                    <li><img src="images/user5.jpg"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user1.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user2.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user3.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user4.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user5.jpg') }}"></li>
                                 </ul>
                             </div>
                         </div>
@@ -364,11 +364,11 @@
                             </div>
                             <div class="user-profile-icon">
                                 <ul>
-                                    <li><img src="images/user1.jpg"></li>
-                                    <li><img src="images/user2.jpg"></li>
-                                    <li><img src="images/user3.jpg"></li>
-                                    <li><img src="images/user4.jpg"></li>
-                                    <li><img src="images/user5.jpg"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user1.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user2.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user3.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user4.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user5.jpg') }}"></li>
                                 </ul>
                             </div>
                         </div>
@@ -386,11 +386,11 @@
                             </div>
                             <div class="user-profile-icon">
                                 <ul>
-                                    <li><img src="images/user1.jpg"></li>
-                                    <li><img src="images/user2.jpg"></li>
-                                    <li><img src="images/user3.jpg"></li>
-                                    <li><img src="images/user4.jpg"></li>
-                                    <li><img src="images/user5.jpg"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user1.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user2.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user3.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user4.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user5.jpg') }}"></li>
                                 </ul>
                             </div>
                         </div>
@@ -403,11 +403,11 @@
                             </div>
                             <div class="user-profile-icon">
                                 <ul>
-                                    <li><img src="images/user1.jpg"></li>
-                                    <li><img src="images/user2.jpg"></li>
-                                    <li><img src="images/user3.jpg"></li>
-                                    <li><img src="images/user4.jpg"></li>
-                                    <li><img src="images/user5.jpg"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user1.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user2.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user3.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user4.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user5.jpg') }}"></li>
                                 </ul>
                             </div>
                         </div>
@@ -425,11 +425,11 @@
                             </div>
                             <div class="user-profile-icon">
                                 <ul>
-                                    <li><img src="images/user1.jpg"></li>
-                                    <li><img src="images/user2.jpg"></li>
-                                    <li><img src="images/user3.jpg"></li>
-                                    <li><img src="images/user4.jpg"></li>
-                                    <li><img src="images/user5.jpg"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user1.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user2.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user3.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user4.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user5.jpg') }}"></li>
                                 </ul>
                             </div>
                         </div>
@@ -442,11 +442,11 @@
                             </div>
                             <div class="user-profile-icon">
                                 <ul>
-                                    <li><img src="images/user1.jpg"></li>
-                                    <li><img src="images/user2.jpg"></li>
-                                    <li><img src="images/user3.jpg"></li>
-                                    <li><img src="images/user4.jpg"></li>
-                                    <li><img src="images/user5.jpg"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user1.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user2.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user3.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user4.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user5.jpg') }}"></li>
                                 </ul>
                             </div>
                         </div>
@@ -464,11 +464,11 @@
                             </div>
                             <div class="user-profile-icon">
                                 <ul>
-                                    <li><img src="images/user1.jpg"></li>
-                                    <li><img src="images/user2.jpg"></li>
-                                    <li><img src="images/user3.jpg"></li>
-                                    <li><img src="images/user4.jpg"></li>
-                                    <li><img src="images/user5.jpg"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user1.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user2.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user3.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user4.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user5.jpg') }}"></li>
                                 </ul>
                             </div>
                         </div>
@@ -481,11 +481,11 @@
                             </div>
                             <div class="user-profile-icon">
                                 <ul>
-                                    <li><img src="images/user1.jpg"></li>
-                                    <li><img src="images/user2.jpg"></li>
-                                    <li><img src="images/user3.jpg"></li>
-                                    <li><img src="images/user4.jpg"></li>
-                                    <li><img src="images/user5.jpg"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user1.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user2.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user3.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user4.jpg') }}"></li>
+                                    <li><img src="{{ asset('public/images/master-class/user5.jpg') }}"></li>
                                 </ul>
                             </div>
                         </div>
