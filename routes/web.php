@@ -126,11 +126,6 @@ Route::get('cmot/about-cmot', function () {
     return view('cmot.about-cmot');
 })->name('about-cmot');
 
-//MEDIA
-// Route::get('media/news-and-update', function () {
-//     return view('media.news-and-update');
-// })->name('news-and-update');
-
 Route::get('/counter', function () {
     return view('counterView');
 })->name('counter');
@@ -146,3 +141,8 @@ Route::get('debut-director/rules-regulations', function () {
 Route::get('privacy-policy', function () {
     return view('privacy-policy');
 })->name('privacy-policy');
+
+//Master Classes
+Route::get('master-classes', function () {
+    return view('master-class.master');
+})->name('master-classes');

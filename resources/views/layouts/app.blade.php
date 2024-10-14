@@ -16,6 +16,7 @@
 </head>
 
 <body id="text-resize">
-    @include('layouts.gig')
+    {{-- @include('layouts.gig') --}}
+    @include('layouts.header')
     @yield('content')
     @include('layouts.footer')
