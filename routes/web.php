@@ -12,7 +12,7 @@ Route::get('/', function () {
 
 Route::controller(CommonController::class)->group(function () {
 
-    Route::get('about-goa',                             'goaTouristPlace')->name('goa-tourist-places');
+    Route::get('goa-tourist-places',                             'goaTouristPlace')->name('goa-tourist-places');
 
     Route::get('55th-iffi-festival',                    'iffiFestival')->name('55th-iffi-festival');
 
@@ -47,7 +47,7 @@ Route::controller(InternationalCinemaController::class)->group(function () {
 
     Route::get('international-cinema/icft-unesco-medal'         , 'icftUnescoMedal')->name('icft-unesco-medal');
 
-    Route::get('international-cinema/festival-kaleloscope'      , 'festivalKaleloscope')->name('festival-kaleloscope');
+    Route::get('international-cinema/festival-kaleidoscope'      , 'festivalKaleloscope')->name('festival-kaleloscope');
 
     Route::get('international-cinema/docu-montage'              , 'docuMontage')->name('docu-montage');
 
@@ -101,7 +101,7 @@ Route::get('indian-panorama/indian-panorama-rules-regulations', function () {
     return view('indian-panorama.rules-regulations');
 })->name('indian-panorama-rules-regulations');
 
-Route::get('indian-panorama/IP', function () {
+Route::get('indian-panorama/about-IP', function () {
     return view('indian-panorama.about-indian-panorama');
 })->name('about-indian-panorama');
 
