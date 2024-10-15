@@ -1,6 +1,6 @@
 <div class="col-lg-12">
     <div class="logo-section">
-        <div class="container-fluid">
+        <div class="container-fluid" id="menu">
             <div class="top-logo">
                 <a href="{{ route('/') }}">
                     <img src="{{ asset('public/images/iffi.svg') }}" alt="iffi-logo">

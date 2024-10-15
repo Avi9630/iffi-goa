@@ -51,7 +51,7 @@
                 <div class="col-md-3 col-sm-3">
                     <h4>Web Series</h4>
                     <ul class="text-highlight">
-                        <li><a href="#">View your entry</a></li>
+                        <li><a href="https://iffigoa.org/festival/web-series" target="_blank">View your entry</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3 col-sm-3">
@@ -143,6 +143,30 @@
             thumbnail: true
         });
     });
+</script>
+
+<script>
+    window.onscroll = function() {
+        var menu = document.getElementById('menu');
+        if (window.scrollY > 100) { // Change background after scrolling 100px
+            menu.style.backgroundColor =
+                '#3e4eb0'; // Dark background color
+        } else {
+            menu.style.backgroundColor =
+                'transprant'; // Transparent when at the top
+        }
+    };
+
+    // window.addEventListener('scroll', function() {
+    //     const menu = document.getElementById('menu');
+    //     const headerHeight = menu.offsetHeight; // Get the height of the header
+
+    //     if (window.scrollY > headerHeight) {
+    //         menu.classList.add('nav-scrolled');
+    //     } else {
+    //         menu.classList.remove('nav-scrolled');
+    //     }
+    // });
 </script>
 </body>
 
