@@ -431,6 +431,28 @@ border: solid 1px #ddd !important;
   -webkit-background-clip: text;
   color: transparent;
 }
+.table-responsive table p {
+    font-weight: 500;
+    margin: 0;
+    margin-top: 6px;
+}
+.connectivity {
+    padding-top: 64px;
+    padding-bottom: 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+
+.connectivity-block {
+    display: flex;
+    gap: 30px;
+
+}
+.connectivity-block img {
+    width: 120px;
+    height: 120px;
+}
 
 .hiddentext {
   opacity: 0;
@@ -455,7 +477,10 @@ border: solid 1px #ddd !important;
  .newsupdatesView-block-img img{ height:auto!important; }
 }
 @media only screen and (min-width: 320px) and (max-width: 767px)  {
-.page-header h1{ font-size:60px; }
+/* .page-header h1{ font-size:60px; } */
+.page-header h1{ font-size:48px; }
+/* .top-logo {display: flex;flex-wrap: wrap; flex-direction: row;} */
+/* .page-header h1{ font-size:60px; } */
 .top-logo {display: flex;flex-wrap: wrap; flex-direction: row; column-gap: 10px}
 .top-logo img{ width:50px; }
 .resize-content{    justify-content: flex-start;}
@@ -476,6 +501,22 @@ border: solid 1px #ddd !important;
 .min-size-img{ height:150px; }
 .card-text{display: block !important; }
 .newsupdatesView-block-img img{ height:auto!important; }
+.connectivity-block{
+    flex-direction: column;
+    gap: 0;
+    align-items: center;
+}
+.connectivity-block-content{
+    text-align: center;
+    & p{
+        text-align: justify;
+    }
+}
+.connectivity{
+    padding-top: 0;
+    padding-bottom: 0;
+    gap: 0;
+}
 }
 @media only screen and (min-width:601px) and (max-width: 767px)  {
 .quick-link ul  { flex-direction: row;column-gap: 14px; }

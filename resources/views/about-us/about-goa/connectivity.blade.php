@@ -6,26 +6,6 @@
 @section('site_keywords',
     'IFFI Goa connectivity, Travel to IFFI Goa, Goa transport options, IFFI venue access, Reach
     IFFI Goa, Airport to IFFI Goa, Public Transport Goa, Transport in Goa for IFFI')
-    <style>
-        .connectivity {
-            padding-top: 64px;
-            padding-bottom: 64px;
-            display: flex;
-            flex-direction: column;
-            gap: 64px;
-        }
-
-        .connectivity-block {
-            display: flex;
-            gap: 30px;
-
-        }
-
-        .connectivity-block img {
-            width: 120px;
-            height: 120px;
-        }
-    </style>
 @section('content')
 
     <!-- Header start-->
@@ -46,7 +26,7 @@
     <!-- Inner Page Banner Section -->
     <section class="container connectivity">
         <div class="connectivity-block">
-            <img src="{{ asset('public/images/icon/Air-icon.png') }}" alt="" srcset="">
+            <img src="{{ asset('public/images/icon/Air-icon.png') }}" class="img-fluid" alt="" srcset="">
             <div class="connectivity-block-content">
                 <h3>Air</h3>
                 <p>Goa is served by two International Airports, the Goa International Airport, is a civil enclave at INS
@@ -56,7 +36,7 @@
             </div>
         </div>
         <div class="connectivity-block">
-            <img src="{{ asset('public/images/icon/Rail-icon.png') }}" alt="" srcset="">
+            <img src="{{ asset('public/images/icon/Rail-icon.png') }}" class="img-fluid" alt="" srcset="">
             <div class="connectivity-block-content">
                 <h3>Rail</h3>
                 <p>The two major railheads that connect Goa with other states of the country are Vasco da Gama and
@@ -64,7 +44,7 @@
             </div>
         </div>
         <div class="connectivity-block">
-            <img src="{{ asset('public/images/icon/Car-icon.png') }}" alt="" srcset="">
+            <img src="{{ asset('public/images/icon/Car-icon.png') }}" class="img-fluid" alt="" srcset="">
             <div class="connectivity-block-content">
                 <h3>Road</h3>
                 <p>Goa has an extensive roadway network which is efficiently connected with other states of the nation.
