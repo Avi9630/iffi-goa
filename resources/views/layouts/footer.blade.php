@@ -40,7 +40,7 @@
                     </ul>
                 </div>
             </div> --}}
-            <div class="row mt-4">
+            <div class="row mt-4 phone-text">
                 <div class="col-md-3 col-sm-3">
                     <h4>Indian Panorama</h4>
                     <ul class="text-highlight">
@@ -77,7 +77,7 @@
     </div>
     <div class="row ">
         <div class=" text-center quick-link">
-            <ul>
+            <ul class="phone-text">
                 <li>
                     <a href="{{ route('about-iffi') }}" class="cus-menuP-link">About IFFI</a>
                 </li>
@@ -150,23 +150,23 @@
         var menu = document.getElementById('menu');
         if (window.scrollY > 100) { // Change background after scrolling 100px
             menu.style.backgroundColor =
-                '#3e4eb0'; // Dark background color
+                'transprant'; // Dark background color
         } else {
             menu.style.backgroundColor =
                 'transprant'; // Transparent when at the top
         }
     };
 
-    // window.addEventListener('scroll', function() {
-    //     const menu = document.getElementById('menu');
-    //     const headerHeight = menu.offsetHeight; // Get the height of the header
+    window.addEventListener('scroll', function() {
+        const menu = document.getElementById('menu');
+        const headerHeight = menu.offsetHeight; // Get the height of the header
 
-    //     if (window.scrollY > headerHeight) {
-    //         menu.classList.add('nav-scrolled');
-    //     } else {
-    //         menu.classList.remove('nav-scrolled');
-    //     }
-    // });
+        if (window.scrollY > headerHeight) {
+            menu.classList.add('nav-scrolled');
+        } else {
+            menu.classList.remove('nav-scrolled');
+        }
+    });
 </script>
 </body>
 

@@ -1,4 +1,8 @@
 @extends('layouts.app')
+@section('site_title', 'Award for Best Debut | IFFI Goa')
+@section('site_description', 'Explore the prestigious Award for Best Debut at IFFI Goa, celebrating outstanding
+    first-time filmmakers and their contributions to cinema.')
+    {{-- @section('site_keywords', 'About IFFI Goa, IFFI goa, IFFI goa registration, IFFI goa delegate registration, About us') --}}
 @section('content')
     <!-- Header start-->
     @include('layouts.header')

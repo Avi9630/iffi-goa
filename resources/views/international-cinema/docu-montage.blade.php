@@ -1,4 +1,9 @@
 @extends('layouts.app')
+@section('site_title', 'Docu Montage: A Curated Collection of International Cinema')
+@section('site_description',
+    'Explore Docu Montage, a curated section showcasing impactful international documentaries.
+    Discover unique stories that inspire and provoke thought.')
+    {{-- @section('site_keywords', 'About IFFI Goa, IFFI goa, IFFI goa registration, IFFI goa delegate registration, About us') --}}
 @section('content')
     <!-- Header start-->
     @include('layouts.header')
