@@ -417,6 +417,7 @@ border: solid 1px #ddd !important;
 
 .jury-heading h2::after{ bottom:-2px!important }
 .rules-text ul{ padding-left:0 }
+ .nav-scrolled{ background:#3e4eb0!important; position:fixed; top:0px; }
 .single-blog-content {
     padding: 20px;
     background: #070707;
