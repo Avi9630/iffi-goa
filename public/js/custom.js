@@ -91,7 +91,7 @@ $(document).ready(function () {
                 items: 2, // Number of items at viewport width 600px
             },
             1000: {
-                items:6, // Number of items at viewport width 1000px
+                items:8, // Number of items at viewport width 1000px
             },
         },
     });
@@ -106,3 +106,47 @@ $(document).ready(function () {
 
     window.addEventListener("load", reloadInstagramEmbed);
 });
+
+
+ window.addEventListener('scroll', function() {
+        const targetElement = document.getElementById('start-animation');
+        const elementToAnimate = document.querySelector('.animate-me');
+        const targetPosition = targetElement.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (targetPosition < windowHeight && elementToAnimate.classList.contains('hiddentext')) {
+            elementToAnimate.classList.remove('hiddentext');
+            typeText(elementToAnimate);
+        }
+    });
+
+    function typeText(element) {
+        const fullText = element.textContent; // Get the full text content from the HTML
+        element.innerHTML = ''; // Clear the content initially
+        let index = 0;
+        const speed = 50; // Adjust typing speed (milliseconds)
+
+        function type() {
+            if (index < fullText.length) {
+                if (isGradientText(index)) {
+                    element.innerHTML += `<span class="gradient-text">${fullText.charAt(index)}</span>`;
+                } else {
+                    element.innerHTML += fullText.charAt(index);
+                }
+                index++;
+                setTimeout(type, speed);
+            }
+        }
+
+        function isGradientText(idx) {
+            const gradientWords = ['9 days', '45,000', 'creating unforgettable memories'];
+            for (let word of gradientWords) {
+                if (idx >= fullText.indexOf(word) && idx < fullText.indexOf(word) + word.length) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        type();
+    }
