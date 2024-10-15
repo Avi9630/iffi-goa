@@ -29,7 +29,7 @@
                             <div class="card-body text-start">
                                 <div class="card-text d-flex">
                                     <div class="iCinema-content">
-                                        <h4 class="title"><a href="#">{{ $accessible->title }}</a></h4>
+                                        <h4 class="title">{{ $accessible->title }}</h4>
                                         <h5>
                                             <span>Directed by</span>
                                             <span>:</span>
