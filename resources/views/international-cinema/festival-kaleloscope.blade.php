@@ -1,4 +1,9 @@
 @extends('layouts.app')
+@section('site_title', 'Festival Kaleloscope: A Celebration of International Cinema')
+@section('site_description',
+    'Discover Festival Kaleloscope, featuring a curated selection of exceptional international
+    films at IFFI Goa. ')
+    {{-- @section('site_keywords', 'About IFFI Goa, IFFI goa, IFFI goa registration, IFFI goa delegate registration, About us') --}}
 @section('content')
     <!-- Header start-->
     @include('layouts.header')

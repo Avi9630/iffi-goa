@@ -6,7 +6,7 @@
             <h2>About IFFI</h2>
         </div>
         <div class="row">
-            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-3">
                 <p>IFFI is the only film festival in
                     South
                     Asia that is accredited by International Federation of Film Producers’ Associations (FIAPF) of

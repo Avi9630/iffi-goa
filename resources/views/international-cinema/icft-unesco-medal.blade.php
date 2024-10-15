@@ -1,4 +1,9 @@
 @extends('layouts.app')
+@section('site_title', 'ICFT-UNESCO Medal for Excellence in Film at IFFI Goa')
+@section('site_description',
+    'Discover the ICFT-UNESCO Medal awarded at IFFI Goa, celebrating outstanding films that
+    promote cultural diversity and social change in cinema.')
+    {{-- @section('site_keywords', 'About IFFI Goa, IFFI goa, IFFI goa registration, IFFI goa delegate registration, About us') --}}
 @section('content')
     <!-- Header start-->
     @include('layouts.header')

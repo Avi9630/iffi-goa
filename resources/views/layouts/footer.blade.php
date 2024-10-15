@@ -40,7 +40,7 @@
                     </ul>
                 </div>
             </div> --}}
-            <div class="row mt-4">
+            <div class="row mt-4 phone-text">
                 <div class="col-md-3 col-sm-3">
                     <h4>Indian Panorama</h4>
                     <ul class="text-highlight">
@@ -77,7 +77,7 @@
     </div>
     <div class="row ">
         <div class=" text-center quick-link">
-            <ul>
+            <ul class="phone-text">
                 <li>
                     <a href="{{ route('about-iffi') }}" class="cus-menuP-link">About IFFI</a>
                 </li>
