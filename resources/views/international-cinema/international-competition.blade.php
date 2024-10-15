@@ -1,4 +1,9 @@
 @extends('layouts.app')
+@section('site_title', 'International Competition - IFFI Goa 2023')
+@section('site_description',
+    'Discover the best of global cinema at the International Competition of IFFI Goa. Celebrate
+    creativity and innovation in film from around the world!')
+    {{-- @section('site_keywords', 'About IFFI Goa, IFFI goa, IFFI goa registration, IFFI goa delegate registration, About us') --}}
 @section('content')
     <!-- Header start-->
     @include('layouts.header')

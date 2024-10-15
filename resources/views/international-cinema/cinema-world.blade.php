@@ -1,4 +1,9 @@
 @extends('layouts.app')
+@section('site_title', 'Explore the Cinema World: Curated International Films')
+@section('site_description',
+    'Discover a curated selection of international films celebrating diverse cinema styles and
+    stories from around the globe. Join us in exploring the world of film!')
+    {{-- @section('site_keywords', 'About IFFI Goa, IFFI goa, IFFI goa registration, IFFI goa delegate registration, About us') --}}
 @section('content')
     <!-- Header start-->
     @include('layouts.header')

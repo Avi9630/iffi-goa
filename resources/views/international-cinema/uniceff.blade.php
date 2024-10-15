@@ -1,4 +1,9 @@
 @extends('layouts.app')
+@section('site_title', 'UNICEF Curated Cinema at IFFI Goa – Films for Social Change')
+@section('site_description',
+    'Explore the UNICEF curated film section at IFFI Goa, showcasing powerful films that
+    highlight global social issues, promoting awareness and positive change.')
+    {{-- @section('site_keywords', 'About IFFI Goa, IFFI goa, IFFI goa registration, IFFI goa delegate registration, About us') --}}
 @section('content')
     <!-- Header start-->
     @include('layouts.header')

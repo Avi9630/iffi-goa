@@ -1,4 +1,9 @@
 @extends('layouts.app')
+@section('site_title', 'Explore the Integrade Curated Section | IFFI Goa')
+@section('site_description',
+    'Discover captivating films in the Integrade section at IFFI Goa, showcasing diverse
+    international cinema that inspires and entertains audiences.')
+    {{-- @section('site_keywords', 'About IFFI Goa, IFFI goa, IFFI goa registration, IFFI goa delegate registration, About us') --}}
 @section('content')
     <!-- Header start-->
     @include('layouts.header')
