@@ -253,7 +253,8 @@
                                         </a>
                                         <ul class="dropdown-menu">
                                             <li>
-                                                <a href="{{ route('about-cmot') }}" class="nav-link">About CMOT</a>
+                                                <a href="{{ route('about-cmot') }}" class="dropdown-item">About
+                                                    CMOT</a>
                                             </li>
                                             <li>
                                                 <a href="https://iffigoa.org/festival/creative-mind-tomorrow"
