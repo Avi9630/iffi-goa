@@ -413,6 +413,32 @@ border: solid 1px #ddd !important;
     background: #070707;
     color: #fff;
 }
+
+/*animate text*/
+.gradient-text-sponser {
+  background: linear-gradient(90deg, #ff7e5f, #feb47b);
+  /* Gradient colors */
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hiddentext {
+  opacity: 0;
+}
+
+.animate-me {
+  animation: typing 3.5s steps(40, end);
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
 @media only screen and (min-width: 768px) and (max-width: 990px)  {
 
  .gallery img { width: 100%;height: auto;min-height: 150px;max-height: 150px; }
