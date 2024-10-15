@@ -38,11 +38,13 @@
                     @endforeach
                 </div>
             </div>
-            <nav aria-label="Page navigation pb-4">
-                <ul class="pagination">
-                    {{ $gallery->withQueryString()->links() }}
-                </ul>
-            </nav>
+            <div class="container">
+                <nav aria-label="Page navigation pb-4">
+                    <ul class="pagination overflow-hidden">
+                        {{ $gallery->withQueryString()->links() }}
+                    </ul>
+                </nav>
+            </div>
         </div>
     </div>
 @endsection

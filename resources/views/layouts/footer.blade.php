@@ -87,11 +87,11 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('festival-venue') }}" target="_blank" class="cus-menuP-link">Festival
+                    <a href="{{ route('festival-venue') }}" class="cus-menuP-link">Festival
                         Venue</a>
                 </li>
                 <li>
-                    <a href="{{ route('goa-tourist-places') }}" target="_blank" class="cus-menuP-link">
+                    <a href="{{ route('goa-tourist-places') }}"class="cus-menuP-link">
                         Goa Tourist Places
                     </a>
                 </li>
@@ -100,8 +100,8 @@
                     <a href="{{ route('contact-us') }}" class="cus-menuP-link">Contact Us</a>
                 </li>
                 <li> <a href="{{ route('faq') }}" class="cus-menuP-link">FAQ's</a></li>
-                <li><a href="{{ route('press-release') }}" target="_blank">Press Release</a></li>
-                <li> <a href="{{ route('gallery') }}" target="_blank">Gallery</a></li>
+                <li><a href="{{ route('press-release') }}">Press Release</a></li>
+                <li> <a href="{{ route('gallery') }}">Gallery</a></li>
                 <li> <a href="{{ route('privacy-policy') }}">Privacy Policy</a></li>
             </ul>
         </div>
