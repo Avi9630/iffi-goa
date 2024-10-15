@@ -181,7 +181,7 @@ class CommonController extends Controller
 
     public function gallery()
     {
-        $gallery = DB::table('mst_photos')->where('status', 1)->whereNull('deleted_at')->orderBy('id', 'DESC')->paginate(8);
+        $gallery = DB::table('mst_photos')->where('status', 1)->whereNull('deleted_at')->orderBy('id', 'DESC')->paginate(8)->onEachSide(1);
         // dd($gallery);
         return view('gallery.gallery', [
             'gallery'           =>  $gallery,

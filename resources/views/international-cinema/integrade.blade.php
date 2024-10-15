@@ -11,7 +11,7 @@
     <!-- Inner Page Banner Section -->
     <div class="container-fluid page-header bannerBg-integrated py-5">
         <div class="container text-center ">
-            <h1 class="page-title-header">Integrade</h1>
+            <h1 class="page-title-header">Intergrade</h1>
         </div>
     </div>
 
