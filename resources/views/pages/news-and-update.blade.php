@@ -9,7 +9,7 @@
 
             <div class="col-md-4 col-sm-4 col-xs-12 d-flex">
                 <div class="card shadow-sm">
-                    <img src="{{ asset('public/images/desktop-image/delegate-Registration-open.jpg') }}"
+                    <img src="{{ asset('public/images/desktop-image/delegate-Registration-open.jpg') }}"alt="image"
                         class="img-fluid">
                     <div class="card-body text-start">
                         <h3>Film Bazaar Delegate Registration is Now Open!</h3>
@@ -31,7 +31,8 @@
 
             <div class="col-md-4 col-sm-4 col-xs-12 d-flex">
                 <div class="card shadow-sm">
-                    <img src="{{ asset('public/images/desktop-image/producres-workshop-open.jpg') }}" class="img-fluid">
+                    <img src="{{ asset('public/images/desktop-image/producres-workshop-open.jpg') }}" alt="image"
+                        class="img-fluid">
                     <div class="card-body text-start">
                         <h3>Producer's Workshop Registration For Film Bazaar 2024 Is Now Open!</h3>
                         <p class="card-text">
@@ -53,7 +54,7 @@
             <div class="col-md-4 col-sm-4 col-xs-12 d-flex">
                 <div class="card shadow-sm">
                     <img src="{{ asset('public/images/desktop-image/Entries-For-Delegate-Registration-open.jpg') }}"
-                        class="img-fluid">
+                        alt="image" class="img-fluid">
                     <div class="card-body text-start">
                         <h3>Delegate Registration For IFFI 2024 Is Now Open!</h3>
                         <p class="card-text">
@@ -106,10 +107,10 @@
         </div>
     </div> --}}
 
-    <div class="text-center mt-1">
-        <a href="{{ route('news-and-update') }}" class="btn cus-prim-btn">View More</a>
+            <div class="text-center mt-1">
+                <a href="{{ route('news-and-update') }}" class="btn cus-prim-btn">View More</a>
+            </div>
+        </div>
     </div>
-</div>
-</div>
 </div>
 <!-- News & Updates Ends -->
