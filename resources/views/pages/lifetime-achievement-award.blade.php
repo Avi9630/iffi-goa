@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-sm-6">
-                <img src="{{ asset('public/images/satyjeet-winner.jpg') }}" class="img-fluid fit-img">
+                <img src="{{ asset('public/images/satyjeet-winner.jpg') }}" alt="image" class="img-fluid fit-img">
             </div>
             <div class="col-md-6 col-sm-6 ">
                 <h4 class="mb-3">54<sup>th</sup> IFFI Satyajit Ray Lifetime Achievement Award</h4>

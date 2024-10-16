@@ -19,7 +19,7 @@
                 @foreach ($newsUpdates as $newsUpdate)
                     <div class="col-md-5 col-sm-6 col-12 mb-4">
                         <p class="newsupdatesView-block-img">
-                            <img src="{{ asset('public/images/desktop-image/' . $newsUpdate->img_src) }}" alt=""
+                            <img src="{{ asset('public/images/desktop-image/' . $newsUpdate->img_src) }}" alt="image"
                                 class="img-fluid">
                         </p>
                     </div>
@@ -38,7 +38,7 @@
 
                 {{-- <div class="col-md-5 col-sm-12 col-12 mb-4">
                     <p class="newsupdatesView-block-img">
-                        <img src="{{ asset('public/images/desktop-image/delegate-registration-open.jpg') }}" alt=""
+                        <img src="{{ asset('public/images/desktop-image/delegate-registration-open.jpg') }}" alt="image"
                             class="img-fluid">
                     </p>
                 </div>
@@ -60,7 +60,7 @@
 
                 <div class="col-md-5 col-sm-12 col-12 mb-4">
                     <p class="newsupdatesView-block-img">
-                        <img src="{{ asset('public/images/desktop-image/producres-workshop-open.jpg') }}" alt=""
+                        <img src="{{ asset('public/images/desktop-image/producres-workshop-open.jpg') }}" alt="image"
                             class="img-fluid">
                     </p>
                 </div>
@@ -82,7 +82,7 @@
 
                 <div class="col-md-5 col-sm-12 col-12 mb-4">
                     <p class="newsupdatesView-block-img">
-                        <img src="{{ asset('public/images/desktop-image/Delegate-Registration-open.jpg') }}" alt=""
+                        <img src="{{ asset('public/images/desktop-image/Delegate-Registration-open.jpg') }}" alt="image"
                             class="img-fluid">
                     </p>
                 </div>
@@ -101,7 +101,7 @@
 
                 {{-- <div class="col-md-5 col-sm-12 col-12 mb-4">
                     <p class="newsupdatesView-block-img">
-                        <img src="{{ asset('public/images/desktop-image/Viewing-Room-Entries-closed.jpg') }}" alt=""
+                        <img src="{{ asset('public/images/desktop-image/Viewing-Room-Entries-closed.jpg') }}" alt="image"
                             class="img-fluid">
                     </p>
                 </div>
@@ -121,7 +121,7 @@
 
                 {{-- <div class="col-md-5 col-sm-12 col-12 mb-4">
                     <p class="newsupdatesView-block-img">
-                        <img src="{{ asset('public/images/desktop-image/dd-closed-now.jpg') }}" alt=""
+                        <img src="{{ asset('public/images/desktop-image/dd-closed-now.jpg') }}" alt="image"
                             class="img-fluid">
                     </p>
                 </div>
@@ -140,7 +140,7 @@
 
                 <div class="col-md-5 col-sm-12 col-12 mb-4">
                     <p class="newsupdatesView-block-img">
-                        <img src="{{ asset('public/images/desktop-image/strategizing.jpg') }}" alt=""
+                        <img src="{{ asset('public/images/desktop-image/strategizing.jpg') }}" alt="image"
                             class="img-fluid">
                     </p>
                 </div>
@@ -246,7 +246,7 @@
 
             {{-- <div class="col-md-6 col-sm-6 col-12 mb-4">
                     <p class="newsupdatesView-block-img">
-                        <img src="{{ asset('public/images/desktop-image/CMOT_BANNER_CLOSE.png') }}" alt=""
+                        <img src="{{ asset('public/images/desktop-image/CMOT_BANNER_CLOSE.png') }}" alt="image"
                             class="img-fluid">
                     </p>
                 </div>
@@ -268,7 +268,7 @@
 
                 <div class="col-md-6 col-sm-6 col-12 mb-4">
                     <p class="newsupdatesView-block-img">
-                        <img src="{{ asset('public/images/desktop-image/INDIAN-PANORAMA-CLOSED-NOW.png') }}" alt=""
+                        <img src="{{ asset('public/images/desktop-image/INDIAN-PANORAMA-CLOSED-NOW.png') }}" alt="image"
                             class="img-fluid">
                     </p>
                 </div>
@@ -287,7 +287,7 @@
 
                 <div class="col-md-6 col-sm-6 col-12 mb-4">
                     <p class="newsupdatesView-block-img">
-                        <img src="{{ asset('public/images/desktop-image/OTT_CLOSED NOW.png') }}" alt=""
+                        <img src="{{ asset('public/images/desktop-image/OTT_CLOSED NOW.png') }}" alt="image"
                             class="img-fluid">
                     </p>
                 </div>

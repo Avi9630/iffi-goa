@@ -9,7 +9,30 @@
 
             <div class="col-md-4 col-sm-4 col-xs-12 d-flex">
                 <div class="card shadow-sm">
-                    <img src="{{ asset('public/images/desktop-image/delegate-Registration-open.jpg') }}"
+                    <img src="{{ asset('public/images/desktop-image/Entries-For-Goan-Films.jpg') }}"alt="Entries For Goan Films"
+                        class="img-fluid">
+                    <div class="card-body text-start">
+                        <h3>Submit Your Entries in Goan Films</h3>
+                        <p class="card-text">
+                            The film makers and production houses are invited to submit their entries in 55th
+                            International Film Festival of India (IFFI), Goa which is scheduled in Panaji-Goa from 20th
+                            to 28th November 2024. The aim of the Special Goan Premier and Non-Premiere Section Feature
+                            & Non-Feature Films for the 55th IFFI is to select feature and non-feature films of
+                            cinematic, thematic and aesthetic excellence in Special Goan Section, for the promotion of
+                            film art through the non-profit screening of these films.
+                        </p>
+                        <p>
+                            <a href="https://esg.co.in/entries-for-special-goan-section-feature-non-feature-films-for-the-55th-iffi-2024/"
+                                target="_blank">Submit your entry
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-4 col-xs-12 d-flex">
+                <div class="card shadow-sm">
+                    <img src="{{ asset('public/images/desktop-image/delegate-Registration-open.jpg') }}"alt="image"
                         class="img-fluid">
                     <div class="card-body text-start">
                         <h3>Film Bazaar Delegate Registration is Now Open!</h3>
@@ -31,7 +54,8 @@
 
             <div class="col-md-4 col-sm-4 col-xs-12 d-flex">
                 <div class="card shadow-sm">
-                    <img src="{{ asset('public/images/desktop-image/producres-workshop-open.jpg') }}" class="img-fluid">
+                    <img src="{{ asset('public/images/desktop-image/producres-workshop-open.jpg') }}" alt="image"
+                        class="img-fluid">
                     <div class="card-body text-start">
                         <h3>Producer's Workshop Registration For Film Bazaar 2024 Is Now Open!</h3>
                         <p class="card-text">
@@ -50,10 +74,10 @@
                 </div>
             </div>
 
-            <div class="col-md-4 col-sm-4 col-xs-12 d-flex">
+            {{-- <div class="col-md-4 col-sm-4 col-xs-12 d-flex">
                 <div class="card shadow-sm">
                     <img src="{{ asset('public/images/desktop-image/Entries-For-Delegate-Registration-open.jpg') }}"
-                        class="img-fluid">
+                        alt="image" class="img-fluid">
                     <div class="card-body text-start">
                         <h3>Delegate Registration For IFFI 2024 Is Now Open!</h3>
                         <p class="card-text">
@@ -67,7 +91,7 @@
                         </p>
                     </div>
                 </div>
-            </div>
+            </div> --}}
 
             {{-- <div class="col-md-4 col-sm-4 col-xs-12 d-flex">
                 <div class="card shadow-sm">
@@ -106,10 +130,10 @@
         </div>
     </div> --}}
 
-    <div class="text-center mt-1">
-        <a href="{{ route('news-and-update') }}" class="btn cus-prim-btn">View More</a>
+            <div class="text-center mt-1">
+                <a href="{{ route('news-and-update') }}" class="btn cus-prim-btn">View More</a>
+            </div>
+        </div>
     </div>
-</div>
-</div>
 </div>
 <!-- News & Updates Ends -->
