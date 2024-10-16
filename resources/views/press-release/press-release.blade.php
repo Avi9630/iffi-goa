@@ -48,8 +48,15 @@
                             </tbody>
                         </table>
                     </div>
-                    <div class="pull-right d-flex justify-content-center">
+                    {{-- <div class="pull-right d-flex justify-content-center">
                         {{ $press->withQueryString()->links() }}
+                    </div> --}}
+                    <div class="container">
+                        <nav aria-label="Page navigation pb-4">
+                            <ul class="pagination overflow-hidden">
+                                {{ $press->withQueryString()->links() }}
+                            </ul>
+                        </nav>
                     </div>
                 </div>
             </div>

@@ -1,4 +1,8 @@
 @extends('layouts.app')
+@section('site_title', 'Award for Best Debut | IFFI Goa')
+@section('site_description', 'Explore the prestigious Award for Best Debut at IFFI Goa, celebrating outstanding
+    first-time filmmakers and their contributions to cinema.')
+    {{-- @section('site_keywords', 'About IFFI Goa, IFFI goa, IFFI goa registration, IFFI goa delegate registration, About us') --}}
 @section('content')
     <!-- Header start-->
     @include('layouts.header')
@@ -29,7 +33,7 @@
                             <div class="card-body text-start">
                                 <div class="card-text d-flex">
                                     <div class="iCinema-content">
-                                        <h4 class="title"><a href="#">{{ $debute->title }}</a></h4>
+                                        <h4 class="title">{{ $debute->title }}</h4>
                                         <h5>
                                             <span>Directed by</span>
                                             <span>:</span>

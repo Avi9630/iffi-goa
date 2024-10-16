@@ -1,4 +1,9 @@
 @extends('layouts.app')
+@section('site_title', 'Curated Animation Section | IFFI Goa International Cinema')
+@section('site_description',
+    'Explore the curated animation section at IFFI Goa, showcasing innovative animated films
+    from around the world. Experience creativity and storytelling at its best.')
+    {{-- @section('site_keywords', 'About IFFI Goa, IFFI goa, IFFI goa registration, IFFI goa delegate registration, About us') --}}
 @section('content')
     <!-- Header start-->
     @include('layouts.header')
@@ -29,7 +34,7 @@
                             <div class="card-body text-start">
                                 <div class="card-text d-flex">
                                     <div class="iCinema-content">
-                                        <h4 class="title"><a href="#">{{ $animation->title }}</a></h4>
+                                        <h4 class="title">{{ $animation->title }}</h4>
                                         <h5>
                                             <span>Directed by</span>
                                             <span>:</span>

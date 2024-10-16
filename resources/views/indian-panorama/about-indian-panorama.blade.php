@@ -29,7 +29,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="rules-text">
-                        <h5>Indian Panorama</h5>
+                        <h2>Indian Panorama</h2>
                         <p></p>
                         <p>
                             Indian Panorama is a flagship component of the International Film Festival of India (IFFI),

@@ -27,7 +27,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="rules-text">
-                        <h5>Best Debut Indian Film Section 2024</h5>
+                        <h2>Best Debut Indian Film Section 2024</h2>
                         <p></p>
                         <p>
                             This year, IFFI will also focus on Indian debut films, which will showcase a diverse range of
@@ -43,7 +43,7 @@
                             encouraging the next generation of cinematic storytellers.
                             <br><br>
                         </p>
-                        <P><b>Sections</b></P>
+                        <h4><b>Sections</b></h4>
                         <ul>
                             <li>A maximum of 5 debut feature films showcasing the work of new directors who are
                                 contributing fresh perspectives and stories to Indian cinema shall be selected in accordance

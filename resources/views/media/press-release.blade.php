@@ -7,13 +7,13 @@
     'IFFI GOA Press Release, IFFI news update, IFFI announcements, official IFFI statements,
     Latest IFFI news, IFFI press coverage, IFFI media releases, IFFI event news')
 
-    <style>
-        table p {
+    {{-- <style>
+        .table-responsive table p {
             font-weight: 500;
             margin: 0;
             margin-top: 6px;
         }
-    </style>
+    </style> --}}
 @section('content')
     <!-- Header start-->
     @include('layouts.header')
@@ -50,8 +50,15 @@
                 </tbody>
             </table>
         </div>
-        <div class="pull-right d-flex justify-content-center">
+        {{-- <div class="pull-right d-flex justify-content-center">
             {{ $press->withQueryString()->links() }}
+        </div> --}}
+        <div class="container">
+            <nav aria-label="Page navigation pb-4">
+                <ul class="pagination overflow-hidden">
+                    {{ $press->withQueryString()->links() }}
+                </ul>
+            </nav>
         </div>
     </div>
 @endsection
