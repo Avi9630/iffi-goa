@@ -42,7 +42,7 @@
                     </p>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                    <p><img src="{{ asset('public/images/about-us/goa.jpg') }}" alt="" class="img-fluid">
+                    <p><img src="{{ asset('public/images/about-us/goa.jpg') }}" alt="image" class="img-fluid">
                     </p>
                 </div>
             </div>
@@ -57,7 +57,8 @@
                             <div class="col-md-4 col-sm-4 col-xs-12 d-flex">
                                 <div class="card shadow-sm">
                                     <div class="card-image">
-                                        <img src="{{ asset('public/images/about-us/' . $value->image) }}" class="img-fluid">
+                                        <img src="{{ asset('public/images/about-us/' . $value->image) }}" alt="image"
+                                            class="img-fluid">
                                     </div>
                                     <div class="card-body text-start">
                                         <h4 class="title">{{ $value->title }}</h4>
@@ -77,23 +78,23 @@
                     <div class="section-heading title-line mb-4">
                         <h2>Other Unesco Heritage Sites In Goa</h2>
                     </div>
-                  
-                        <div class="owl-carousel ">
-                            @foreach ($gtpu11 as $item)
-                                <div class=" item d-flex ">
-                                    <div class="card shadow-sm">
-                                        <div class="card-image">
-                                            <img src="{{ asset('public/images/about-us/' . $item->image) }}"
-                                                class="img-fluid">
-                                        </div>
-                                        <div class="card-body text-start title-height">
-                                            <h4 class="title">{{ $item->title }}</h4>
-                                        </div>
+
+                    <div class="owl-carousel ">
+                        @foreach ($gtpu11 as $item)
+                            <div class=" item d-flex ">
+                                <div class="card shadow-sm">
+                                    <div class="card-image">
+                                        <img src="{{ asset('public/images/about-us/' . $item->image) }}" alt="image"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="card-body text-start title-height">
+                                        <h4 class="title">{{ $item->title }}</h4>
                                     </div>
                                 </div>
-                            @endforeach
-                        </div>
-                    
+                            </div>
+                        @endforeach
+                    </div>
+
                 </div>
             </div>
             <!-- Other Unesco Heritage Sites In Goa -->
@@ -103,14 +104,15 @@
                     <div class="section-heading title-line mb-4">
                         <h2>Forts</h2>
                     </div>
-                 
-                        <div class="row">
-                               @foreach ($gtpp22 as $dd22)
+
+                    <div class="row">
+                        @foreach ($gtpp22 as $dd22)
                             <div class="col-md-6 col-sm-6 d-flex">
                                 {{-- <div class=" item d-flex"> --}}
                                 <div class="card shadow-sm">
                                     <div class="card-image min-img-height-card">
-                                        <img src="{{ asset('public/images/about-us/' . $dd22->image) }}" class="img-fluid">
+                                        <img src="{{ asset('public/images/about-us/' . $dd22->image) }}" alt="image"
+                                            class="img-fluid">
                                     </div>
                                     <div class="card-body text-start">
                                         <h4 class="title">{{ $dd22->title }}</h4>
@@ -119,9 +121,9 @@
                                 </div>
                                 {{-- </div> --}}
                             </div>
-                             @endforeach
-                        </div>
-                   
+                        @endforeach
+                    </div>
+
                 </div>
             </div>
         </div>

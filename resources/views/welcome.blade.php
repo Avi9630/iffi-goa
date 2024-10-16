@@ -26,7 +26,7 @@
     <div class="col-lg-12 mb-5">
         <div class="container">
             <div class="section-heading mb-4">
-                <h4>Why you should attend</h4>
+                <p>Why you should attend</p>
                 <h2>55<sup>th</sup> IFFI Festival?</h2>
             </div>
             <div class="row card-same-height">
@@ -55,7 +55,7 @@
     <div class="col-lg-12 mb-5">
         <div class="container">
             <div class="section-heading mb-4">
-                <h4>Best 54<sup>th</sup> debut feature film of a</h4>
+                <p>Best 54<sup>th</sup> debut feature film of a</p>
                 <h2>Director</h2>
             </div>
             <div class="owl-carousel international">
@@ -70,7 +70,7 @@
     {{-- <div class="col-lg-12 mb-5"> --}}
     <div class="container mb-5">
         <div class="section-heading mb-4">
-            <h4>A Kaleidoscope of Creativity and Culture of 54<sup>th</sup></h4>
+            <p>A Kaleidoscope of Creativity and Culture of 54<sup>th</sup></p>
             <h2>Indian Panorama</h2>
         </div>
         <div class="owl-carousel international">
