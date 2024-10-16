@@ -2,10 +2,10 @@
     <div class="col-lg-12 ">
         <div class="container">
             <div class="footer-logo">
-                <img src="{{ asset('public/images/f-logoOne.svg') }}" alt="">
-                <img src="{{ asset('public/images/f-logoTwo.svg') }}" alt="">
+                <img src="{{ asset('public/images/f-logoOne.svg') }}" alt="image">
+                <img src="{{ asset('public/images/f-logoTwo.svg') }}" alt="image">
                 <a href="https://filmbazaarindia.com/" target="_blank">
-                    <img src="{{ asset('public/images/Film-Bazar.png') }}" alt="">
+                    <img src="{{ asset('public/images/Film-Bazar.png') }}" alt="image">
                 </a>
             </div>
             {{-- <div class=" ">
@@ -109,13 +109,13 @@
     <div class="f-foot row">
         <div class="social-bar">
             <a href="https://www.facebook.com/IFFIGoa/" target="_blank">
-                <img src="{{ asset('public/images/facebook-round.svg') }}" alt="">
+                <img src="{{ asset('public/images/facebook-round.svg') }}" alt="image">
             </a>
             <a href="https://x.com/iffigoa" target="_blank">
-                <img src="{{ asset('public/images/X-social.svg') }}" alt="">
+                <img src="{{ asset('public/images/X-social.svg') }}" alt="image">
             </a>
             <a href="https://www.instagram.com/iffigoa/" target="_blank">
-                <img src="{{ asset('public/images/Insta.svg') }}" alt="">
+                <img src="{{ asset('public/images/Insta.svg') }}" alt="image">
             </a>
         </div>
         <div class="d-flex flex-column text-center justify-content-center f-foot-copyright">

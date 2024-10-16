@@ -2,7 +2,7 @@
 @foreach ($datas as $data)
     <div class="col-md-4 col-sm-4 col-xs-12 d-flex">
         <div class="card shadow-sm">
-            <img src="{{ asset('public/images/desktop-image/' . $data->img_src) }}" class="img-fluid">
+            <img src="{{ asset('public/images/desktop-image/' . $data->img_src) }}" class="img-fluid" alt="image">
             <div class="card-body text-start">
                 <h3>{{ $data->title }}</h3>
                 <p class="card-text">{{ $data->description }}</p>

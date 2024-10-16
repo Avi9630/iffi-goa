@@ -28,7 +28,7 @@
                     <div class="international-img">
                         {{-- <p class=""> --}}
                         <img src="{{ asset('public/images/international-competition/' . $fetch_cinema_details->img_src . '') }}"
-                            class="img-fluid">
+                            alt="image" class="img-fluid">
                         {{-- <img src="images/When-the-Seedlings-Grow.jpg" alt="images" class="img-fluid"> --}}
                         {{-- </p> --}}
                     </div>

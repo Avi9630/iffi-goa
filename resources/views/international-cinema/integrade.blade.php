@@ -29,7 +29,7 @@
                         <div class="card shadow-sm">
                             <div class="card-image min-size-img">
                                 <img src="{{ asset('public/images/film-selection/international-cinema/' . $integrade->img_src) }}"
-                                    class="img-fluid">
+                                    alt="image" class="img-fluid">
                             </div>
                             <div class="card-body text-start">
                                 <div class="card-text d-flex">
