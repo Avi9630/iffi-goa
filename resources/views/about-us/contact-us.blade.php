@@ -39,7 +39,8 @@
                     <div class=" card text-center">
 
                         <div class="contact-card mb-3 mx-auto mt-4">
-                            <img class="m-auto" src="{{ asset('public/images/location-icon.svg') }}" alt="">
+                            <img class="m-auto" src="{{ asset('public/images/location-icon.svg') }}" alt="icon"
+                                alt="">
                         </div>
 
                         <div class="card-body">
@@ -57,7 +58,7 @@
                     <div class=" card text-center">
 
                         <div class="contact-card mb-3 mx-auto mt-4">
-                            <img class="m-auto" src="{{ asset('public/images/Email-icon.svg') }}" alt="">
+                            <img class="m-auto" src="{{ asset('public/images/Email-icon.svg') }}" alt="icon">
                         </div>
 
                         <div class="card-body">

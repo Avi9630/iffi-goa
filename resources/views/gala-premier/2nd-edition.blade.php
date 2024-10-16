@@ -44,11 +44,11 @@
                     <div class="row mt-4 mb-3 pb-4">
                         <div class="col-md-6 col-sm-6">
                             <img class="img-fluid img-radius-5"
-                                src="{{ asset('public/images/gala-premier/2nd-edition/image1.jpg') }}">
+                                src="{{ asset('public/images/gala-premier/2nd-edition/image1.jpg') }}" alt="image">
                         </div>
                         <div class="col-md-6 col-sm-6">
                             <img class="img-fluid img-radius-5"
-                                src="{{ asset('public/images/gala-premier/2nd-edition/image2.jpg') }}">
+                                src="{{ asset('public/images/gala-premier/2nd-edition/image2.jpg') }}" alt="image">
                         </div>
                     </div>
                     <p>The segment was designed to connect cinema to reach the roots of India, providing a
@@ -85,27 +85,27 @@
                     <div class="row mt-4 mb-3 pb-4 ">
                         <div class="col-md-4 col-sm-4 ">
                             <img src="{{ asset('public/images/gala-premier/2nd-edition/image4.jpg') }}"
-                                class="img-fluid img-radius-5">
+                                class="img-fluid img-radius-5" alt="image">
                         </div>
                         <div class="col-md-4 col-sm-4 mb-2">
                             <img src="{{ asset('public/images/gala-premier/2nd-edition/image5.jpg') }}"
-                                class="img-fluid img-radius-5">
+                                class="img-fluid img-radius-5" alt="image">
                         </div>
                         <div class="col-md-4 col-sm-4 mb-2">
                             <img src="{{ asset('public/images/gala-premier/2nd-edition/image3.jpg') }}"
-                                class="img-fluid img-radius-5">
+                                class="img-fluid img-radius-5" alt="image">
                         </div>
                         <div class="col-md-4 col-sm-4 mb-2">
                             <img src="{{ asset('public/images/gala-premier/2nd-edition/image6.jpg') }}"
-                                class="img-fluid img-radius-5">
+                                class="img-fluid img-radius-5" alt="image">
                         </div>
                         <div class="col-md-4 col-sm-4 mb-2">
                             <img src="{{ asset('public/images/gala-premier/2nd-edition/image7.jpg') }}"
-                                class="img-fluid img-radius-5">
+                                class="img-fluid img-radius-5" alt="image">
                         </div>
                         <div class="col-md-4 col-sm-4 mb-2">
                             <img src="{{ asset('public/images/gala-premier/2nd-edition/image8.jpg') }}"
-                                class="img-fluid img-radius-5">
+                                class="img-fluid img-radius-5" alt="image">
                         </div>
                     </div>
                     <p><b> Films showcased/cancelled in Gala Premieres </b></p>
@@ -259,75 +259,75 @@
                     </p>
                     <div class="row mt-4 pb-4">
                         <div class="col-md-6 col-sm-6 mb-2 ">
-                            <img src="{{ asset('public/images/gala-premier/2nd-edition/image9.jpg') }}"
+                            <img src="{{ asset('public/images/gala-premier/2nd-edition/image9.jpg') }}" alt="image"
                                 class="img-fluid img-radius-5">
                         </div>
                         <div class="col-md-6 col-sm-6 mb-2">
-                            <img src="{{ asset('public/images/gala-premier/2nd-edition/image10.jpg') }}"
+                            <img src="{{ asset('public/images/gala-premier/2nd-edition/image10.jpg') }}" alt="image"
                                 class="img-fluid img-radius-5">
                         </div>
                         <div class="col-md-6 col-sm-6 mb-2">
-                            <img src="{{ asset('public/images/gala-premier/2nd-edition/image11.jpg') }}"
+                            <img src="{{ asset('public/images/gala-premier/2nd-edition/image11.jpg') }}" alt="image"
                                 class="img-fluid img-radius-5">
                         </div>
                         <div class="col-md-6 col-sm-6 mb-2">
-                            <img src="{{ asset('public/images/gala-premier/2nd-edition/image12.jpg') }}"
+                            <img src="{{ asset('public/images/gala-premier/2nd-edition/image12.jpg') }}" alt="image"
                                 class="img-fluid img-radius-5">
                         </div>
                         <div class="col-md-6 col-sm-6 mb-2 ">
-                            <img src="{{ asset('public/images/gala-premier/2nd-edition/image13.jpg') }}"
+                            <img src="{{ asset('public/images/gala-premier/2nd-edition/image13.jpg') }}" alt="image"
                                 class="img-fluid img-radius-5">
                         </div>
                         <div class="col-md-6 col-sm-6 mb-2">
-                            <img src="{{ asset('public/images/gala-premier/2nd-edition/image14.jpg') }}"
+                            <img src="{{ asset('public/images/gala-premier/2nd-edition/image14.jpg') }}" alt="image"
                                 class="img-fluid img-radius-5">
                         </div>
                         <div class="col-md-6 col-sm-6 mb-2">
-                            <img src="{{ asset('public/images/gala-premier/2nd-edition/image15.jpg') }}"
+                            <img src="{{ asset('public/images/gala-premier/2nd-edition/image15.jpg') }}" alt="image"
                                 class="img-fluid img-radius-5">
                         </div>
                         <div class="col-md-6 col-sm-6 mb-2">
-                            <img src="{{ asset('public/images/gala-premier/2nd-edition/image16.jpg') }}"
+                            <img src="{{ asset('public/images/gala-premier/2nd-edition/image16.jpg') }}" alt="image"
                                 class="img-fluid img-radius-5">
                         </div>
                         <div class="col-md-4 col-sm-4 mb-2 ">
-                            <img src="{{ asset('public/images/gala-premier/2nd-edition/image17.jpg') }}"
+                            <img src="{{ asset('public/images/gala-premier/2nd-edition/image17.jpg') }}" alt="image"
                                 class="img-fluid img-radius-5">
                         </div>
                         <div class="col-md-4 col-sm-4 mb-2">
-                            <img src="{{ asset('public/images/gala-premier/2nd-edition/image18.jpg') }}"
+                            <img src="{{ asset('public/images/gala-premier/2nd-edition/image18.jpg') }}" alt="image"
                                 class="img-fluid img-radius-5">
                         </div>
                         <div class="col-md-4 col-sm-4 mb-2">
-                            <img src="{{ asset('public/images/gala-premier/2nd-edition/image19.jpg') }}"
+                            <img src="{{ asset('public/images/gala-premier/2nd-edition/image19.jpg') }}" alt="image"
                                 class="img-fluid img-radius-5">
                         </div>
                         <div class="col-md-6 col-sm-6 mb-2 ">
-                            <img src="{{ asset('public/images/gala-premier/2nd-edition/image20.jpg') }}"
+                            <img src="{{ asset('public/images/gala-premier/2nd-edition/image20.jpg') }}" alt="image"
                                 class="img-fluid img-radius-5">
                         </div>
                         <div class="col-md-6 col-sm-6 mb-2">
-                            <img src="{{ asset('public/images/gala-premier/2nd-edition/image21.jpg') }}"
+                            <img src="{{ asset('public/images/gala-premier/2nd-edition/image21.jpg') }}" alt="image"
                                 class="img-fluid img-radius-5">
                         </div>
                         <div class="col-md-4 col-sm-4 mb-2 ">
-                            <img src="{{ asset('public/images/gala-premier/2nd-edition/image22.jpg') }}"
+                            <img src="{{ asset('public/images/gala-premier/2nd-edition/image22.jpg') }}" alt="image"
                                 class="img-fluid img-radius-5">
                         </div>
                         <div class="col-md-4 col-sm-4 mb-2">
-                            <img src="{{ asset('public/images/gala-premier/2nd-edition/image23.jpg') }}"
+                            <img src="{{ asset('public/images/gala-premier/2nd-edition/image23.jpg') }}" alt="image"
                                 class="img-fluid img-radius-5">
                         </div>
                         <div class="col-md-4 col-sm-4 mb-2">
-                            <img src="{{ asset('public/images/gala-premier/2nd-edition/image24.jpg') }}"
+                            <img src="{{ asset('public/images/gala-premier/2nd-edition/image24.jpg') }}" alt="image"
                                 class="img-fluid img-radius-5">
                         </div>
                         <div class="col-md-6 col-sm-6 mb-2 ">
-                            <img src="{{ asset('public/images/gala-premier/2nd-edition/image25.jpg') }}"
+                            <img src="{{ asset('public/images/gala-premier/2nd-edition/image25.jpg') }}" alt="image"
                                 class="img-fluid img-radius-5">
                         </div>
                         <div class="col-md-6 col-sm-6 mb-2">
-                            <img src="{{ asset('public/images/gala-premier/2nd-edition/image26.jpg') }}"
+                            <img src="{{ asset('public/images/gala-premier/2nd-edition/image26.jpg') }}" alt="image"
                                 class="img-fluid img-radius-5">
                         </div>
                     </div>
@@ -404,15 +404,15 @@
                     </p>
                     <div class="row mt-4 pb-4 ">
                         <div class="col-md-6 col-sm-6 mb-2 ">
-                            <img src="{{ asset('public/images/gala-premier/2nd-edition/image36.jpg') }}"
+                            <img src="{{ asset('public/images/gala-premier/2nd-edition/image36.jpg') }}" alt="image"
                                 class="img-fluid img-radius-5">
                         </div>
                         <div class="col-md-6 col-sm-6 mb-2">
-                            <img src="{{ asset('public/images/gala-premier/2nd-edition/image37.jpg') }}"
+                            <img src="{{ asset('public/images/gala-premier/2nd-edition/image37.jpg') }}" alt="image"
                                 class="img-fluid img-radius-5">
                         </div>
                         <div class="col-md-12 col-sm-12 mb-2">
-                            <img src="{{ asset('public/images/gala-premier/2nd-edition/image46.jpg') }}"
+                            <img src="{{ asset('public/images/gala-premier/2nd-edition/image46.jpg') }}" alt="image"
                                 class="img-fluid img-radius-5">
                         </div>
                     </div>
@@ -532,11 +532,11 @@
                     </p>
                     <div class="row mt-4 pb-4 ">
                         <div class="col-md-6 col-sm-6 mb-2">
-                            <img src="{{ asset('public/images/gala-premier/2nd-edition/image40.jpg') }}"
+                            <img src="{{ asset('public/images/gala-premier/2nd-edition/image40.jpg') }}" alt="image"
                                 class="img-fluid img-radius-5">
                         </div>
                         <div class="col-md-6 col-sm-12 mb-2">
-                            <img src="{{ asset('public/images/gala-premier/2nd-edition/image41.jpg') }}"
+                            <img src="{{ asset('public/images/gala-premier/2nd-edition/image41.jpg') }}" alt="image"
                                 class="img-fluid img-radius-5">
                         </div>
                     </div>
@@ -687,11 +687,11 @@
                         <div class="row mt-4 pb-4 ">
                             <div class="col-md-6 col-sm-6 mb-2">
                                 <img src="{{ asset('public/images/gala-premier/2nd-edition/image42.jpg') }}"
-                                    class="img-fluid img-radius-5">
+                                    alt="image" class="img-fluid img-radius-5">
                             </div>
                             <div class="col-md-6 col-sm-12 mb-2">
                                 <img src="{{ asset('public/images/gala-premier/2nd-edition/image43.jpg') }}"
-                                    class="img-fluid img-radius-5">
+                                    alt="image" class="img-fluid img-radius-5">
                             </div>
                         </div>
                         <p>⦁ Master Classes Initiatives</p>
@@ -710,11 +710,11 @@
                         <div class="row mt-4  pb-4">
                             <div class="col-md-6 col-sm-6 mb-2">
                                 <img src="{{ asset('public/images/gala-premier/2nd-edition/image44.jpg') }}"
-                                    class="img-fluid img-radius-5">
+                                    alt="image" class="img-fluid img-radius-5">
                             </div>
                             <div class="col-md-6 col-sm-12 mb-2">
                                 <img src="{{ asset('public/images/gala-premier/2nd-edition/image45.jpg') }}"
-                                    class="img-fluid img-radius-5">
+                                    alt="image" class="img-fluid img-radius-5">
                             </div>
                         </div>
                         <p>Addressing &amp; implementing these recommendations would undoubtedly contribute to the smoother

@@ -61,7 +61,8 @@
                 <div class="owl-carousel-sponsor">
                     @foreach ($partners as $partner)
                         <div class="item ">
-                            <img src="{{ asset('public/images/sponsor/' . $partner) }}" class="img-fluid">
+                            <img src="{{ asset('public/images/sponsor/' . $partner) }}" alt="Patners logo"
+                                class="img-fluid">
                         </div>
                     @endforeach
                 </div>
