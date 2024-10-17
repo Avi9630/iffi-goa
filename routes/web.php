@@ -12,7 +12,7 @@ Route::get('/', function () {
 
 Route::controller(CommonController::class)->group(function () {
 
-    Route::get('about-us/about-goa/goa-tourist-places', 'goaTouristPlace')->name('goa-tourist-places');
+    Route::get('goa-tourist-places',                             'goaTouristPlace')->name('goa-tourist-places');
 
     Route::get('55th-iffi-festival',                    'iffiFestival')->name('55th-iffi-festival');
 
@@ -20,7 +20,7 @@ Route::controller(CommonController::class)->group(function () {
 
     Route::get('international-cinema',                  'internationalCinema')->name('international-cinema');
 
-    Route::get('international-competition-detail/{slug}','internationalCompetitionDetail')->name('international-competition-detail');
+    Route::get('international-cinema/competition/{slug}','internationalCompetitionDetail')->name('international-competition-detail');
 
     Route::get('director-debut-film',                   'directorDebutFilm')->name('director-debut-film');
 
@@ -30,38 +30,40 @@ Route::controller(CommonController::class)->group(function () {
 
     Route::get('technical-committee',                   'technicalCommittee')->name('technical-committee');
 
-    Route::get('about-us/faq',                          'faq')->name('faq');
+    Route::get('faq',                                   'faq')->name('faq');
 
     Route::get('media/gallery',                         'gallery')->name('gallery');
 
     Route::get('media/press-release',                   'pressRelease')->name('press-release');
 
     Route::get('media/news-and-update',                 'newsUpdate')->name('news-and-update');
+
+    // Route::get('news-and-update',                 'newsUpdate1')->name('news-and-update');
 });
 
 Route::controller(InternationalCinemaController::class)->group(function () {
 
-    Route::get('international-cinema/curated-section/international-competition', 'internationalCompetition')->name('international-competition');
+    Route::get('international-cinema/international-competition' , 'internationalCompetition')->name('international-competition');
 
-    Route::get('international-cinema/curated-section/award-for-best-debute', 'awardForBestDebute')->name('award-for-best-debute');
+    Route::get('international-cinema/award-for-best-debute'     , 'awardForBestDebute')->name('award-for-best-debute');
 
-    Route::get('international-cinema/curated-section/icft-unesco-medal', 'icftUnescoMedal')->name('icft-unesco-medal');
+    Route::get('international-cinema/icft-unesco-medal'         , 'icftUnescoMedal')->name('icft-unesco-medal');
 
-    Route::get('international-cinema/curated-section/festival-kaleloscope', 'festivalKaleloscope')->name('festival-kaleloscope');
+    Route::get('international-cinema/festival-kaleidoscope'      , 'festivalKaleloscope')->name('festival-kaleloscope');
 
-    Route::get('international-cinema/curated-section/docu-montage', 'docuMontage')->name('docu-montage');
+    Route::get('international-cinema/docu-montage'              , 'docuMontage')->name('docu-montage');
 
-    Route::get('international-cinema/curated-section/integrade', 'integrade')->name('integrade');
+    Route::get('international-cinema/integrade'                 , 'integrade')->name('integrade');
 
-    Route::get('international-cinema/curated-section/animation', 'animation')->name('animation');
+    Route::get('international-cinema/animation'                 , 'animation')->name('animation');
 
-    Route::get('international-cinema/curated-section/macabre-dreams', 'macabreDreams')->name('macabre-dreams');
+    Route::get('international-cinema/macabre-dreams'            , 'macabreDreams')->name('macabre-dreams');
 
-    Route::get('international-cinema/curated-section/cinema-world', 'cinemaWorld')->name('cinema-world');
+    Route::get('international-cinema/cinema-world'              , 'cinemaWorld')->name('cinema-world');
 
-    Route::get('international-cinema/curated-section/restored-classic', 'restoredClassic')->name('restored-classic');
+    Route::get('international-cinema/restored-classic'          , 'restoredClassic')->name('restored-classic');
 
-    Route::get('international-cinema/curated-section/uniceff', 'uniceff')->name('uniceff');
+    Route::get('international-cinema/uniceff'                   , 'uniceff')->name('uniceff');
 });
 
 //Indian Panorama
@@ -74,21 +76,21 @@ Route::controller(IndianPanoramaController::class)->group(function () {
 Route::get('get-all-ticker',        [TickerController::class,   'getAllTicker'])->name('get-all-ticker');
 
 //ABOUT-IFFI
-Route::get('about-us/about-iffi', function () {
+Route::get('about-iffi', function () {
     return view('about-us.about-iffi');
 })->name('about-iffi');
 
-Route::get('about-us/festival-venue', function () {
+Route::get('festival-venue', function () {
     return view('about-us.festival-venue');
 })->name('festival-venue');
 
-Route::get('about-us/about-goa/connectivity', function () {
+Route::get('goa-connectivity', function () {
     return view('about-us.about-goa.connectivity');
 })->name('connectivity');
 
 Route::controller(ContactUsController::class)->group(function () {
-    Route::get('about-us/contact-us',    'contactUsView')->name('contact-us');
-    Route::post('about-us/contact-us',   'contactUsStore')->name('contact-us');
+    Route::get('contact-us',    'contactUsView')->name('contact-us');
+    Route::post('contact-us',   'contactUsStore')->name('contact-us');
 });
 
 //FILM SELECTION / INTERNATIONAL CINEMA
@@ -101,7 +103,7 @@ Route::get('indian-panorama/indian-panorama-rules-regulations', function () {
     return view('indian-panorama.rules-regulations');
 })->name('indian-panorama-rules-regulations');
 
-Route::get('indian-panorama/about-indian-panorama', function () {
+Route::get('indian-panorama/about-IP', function () {
     return view('indian-panorama.about-indian-panorama');
 })->name('about-indian-panorama');
 

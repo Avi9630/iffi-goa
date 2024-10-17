@@ -1,4 +1,9 @@
 @extends('layouts.app')
+@section('site_title', 'ICFT-UNESCO Medal for Excellence in Film at IFFI Goa')
+@section('site_description',
+    'Discover the ICFT-UNESCO Medal awarded at IFFI Goa, celebrating outstanding films that
+    promote cultural diversity and social change in cinema.')
+    {{-- @section('site_keywords', 'About IFFI Goa, IFFI goa, IFFI goa registration, IFFI goa delegate registration, About us') --}}
 @section('content')
     <!-- Header start-->
     @include('layouts.header')
@@ -24,12 +29,12 @@
                         <div class="card shadow-sm">
                             <div class="card-image min-size-img">
                                 <img src="{{ asset('public/images/film-selection/international-cinema/' . $icft->img_src) }}"
-                                    class="img-fluid">
+                                    alt="image" class="img-fluid">
                             </div>
                             <div class="card-body text-start">
                                 <div class="card-text d-flex">
                                     <div class="iCinema-content">
-                                        <h4 class="title"><a href="#">{{ $icft->title }}</a></h4>
+                                        <h4 class="title">{{ $icft->title }}</h4>
                                         <h5>
                                             <span>Directed by</span>
                                             <span>:</span>

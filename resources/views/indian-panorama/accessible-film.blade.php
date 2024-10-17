@@ -24,12 +24,12 @@
                         <div class="card shadow-sm">
                             <div class="card-image min-size-img">
                                 <img src="{{ asset('public/images/film-selection/indian-panorama/' . $accessible->img_src) }}"
-                                    class="img-fluid">
+                                    alt="image" class="img-fluid">
                             </div>
                             <div class="card-body text-start">
                                 <div class="card-text d-flex">
                                     <div class="iCinema-content">
-                                        <h4 class="title"><a href="#">{{ $accessible->title }}</a></h4>
+                                        <h4 class="title">{{ $accessible->title }}</h4>
                                         <h5>
                                             <span>Directed by</span>
                                             <span>:</span>

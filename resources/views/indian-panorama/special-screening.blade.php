@@ -25,12 +25,12 @@
                     <div class="card shadow-sm">
                         <div class="card-image min-size-img">
                             <img src="{{ asset('public/images/film-selection/indian-panorama/special-screening.jpg') }}"
-                                class="img-fluid">
+                                alt="image" class="img-fluid">
                         </div>
                         <div class="card-body text-start">
                             <div class="card-text d-flex">
                                 <div class="iCinema-content">
-                                    <h4 class="title"><a href="#">Gond Janjati Ki Veerangana Rani Durgawati</a></h4>
+                                    <h4 class="title">Gond Janjati Ki Veerangana Rani Durgawati</h4>
                                     <h5>
                                         <span>Directed by</span>
                                         <span>:</span>

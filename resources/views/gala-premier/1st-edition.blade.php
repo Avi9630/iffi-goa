@@ -19,7 +19,7 @@
     <!-- Banner Section -->
     <div class="container-fluid page-header bannerBg-first_edition py-5">
         <div class="container text-center ">
-            <h1 class="page-title-header">53<sup>rd</sup>IFFI Film Festival</h1>
+            <h1 class="page-title-header">53rd IFFI Film Festival</h1>
         </div>
     </div>
 
@@ -47,7 +47,7 @@
                         <i>creativity and originality, relevance to the theme, visual contest and the visual impact</i>.
                     </p>
                     <div class="mt-4 mb-3 pb-4">
-                        <img src="{{ asset('public/images/gala-premier/1st-edition/image1.jpg') }}" alt=""
+                        <img src="{{ asset('public/images/gala-premier/1st-edition/image1.jpg') }}" alt="image"
                             class="img-fluid img-radius-5">
                     </div>
                     <p>The top three winners received monetary prizes, the winners were awarded with ₹ 1,00,000/- ,the First
@@ -65,13 +65,13 @@
                     <div class="row mt-4">
                         <div class="col-md-6">
                             <div class="redCarp">
-                                <img src="{{ asset('public/images/gala-premier/1st-edition/image4.jpg') }}" alt=""
+                                <img src="{{ asset('public/images/gala-premier/1st-edition/image4.jpg') }}" alt="image"
                                     class="img-fluid img-radius-5">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="redCarp">
-                                <img src="{{ asset('public/images/gala-premier/1st-edition/image3.jpg') }}" alt=""
+                                <img src="{{ asset('public/images/gala-premier/1st-edition/image3.jpg') }}" alt="image"
                                     class="img-fluid img-radius-5">
                             </div>
                         </div>
@@ -172,13 +172,13 @@
                     <div class="row mt-4">
                         <div class="col-md-6">
                             <div class="redCarp">
-                                <img src="{{ asset('public/images/gala-premier/1st-edition/image10.jpg') }}" alt=""
+                                <img src="{{ asset('public/images/gala-premier/1st-edition/image10.jpg') }}" alt="image"
                                     class="img-fluid img-radius-5">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="redCarp">
-                                <img src="{{ asset('public/images/gala-premier/1st-edition/image5.jpg') }}" alt=""
+                                <img src="{{ asset('public/images/gala-premier/1st-edition/image5.jpg') }}" alt="image"
                                     class="img-fluid img-radius-5">
                             </div>
                         </div>
@@ -191,13 +191,13 @@
                     <div class="row mt-4">
                         <div class="col-md-6">
                             <div class="redCarp">
-                                <img src="{{ asset('public/images/gala-premier/1st-edition/image6.jpg') }}" alt=""
+                                <img src="{{ asset('public/images/gala-premier/1st-edition/image6.jpg') }}" alt="image"
                                     class="img-fluid img-radius-5">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="redCarp">
-                                <img src="{{ asset('public/images/gala-premier/1st-edition/image7.jpg') }}" alt=""
+                                <img src="{{ asset('public/images/gala-premier/1st-edition/image7.jpg') }}" alt="image"
                                     class="img-fluid img-radius-5">
                             </div>
                         </div>
@@ -220,13 +220,13 @@
                     <div class="row mt-4">
                         <div class="col-md-6">
                             <div class="redCarp">
-                                <img src="{{ asset('public/images/gala-premier/1st-edition/image8.jpg') }}" alt=""
+                                <img src="{{ asset('public/images/gala-premier/1st-edition/image8.jpg') }}" alt="image"
                                     class="img-fluid img-radius-5">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="redCarp">
-                                <img src="{{ asset('public/images/gala-premier/1st-edition/image11.jpg') }}" alt=""
+                                <img src="{{ asset('public/images/gala-premier/1st-edition/image11.jpg') }}" alt="image"
                                     class="img-fluid img-radius-5">
                             </div>
                         </div>

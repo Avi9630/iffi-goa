@@ -11,7 +11,7 @@
     <!-- Inner Page Banner Section -->
     <div class="container-fluid page-header bannerBg-FAQ py-5">
         <div class="container text-center ">
-            <h1 class="page-title-header">Faqs</h1>
+            <h1 class="page-title-header">FAQ's</h1>
         </div>
     </div>
 

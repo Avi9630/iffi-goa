@@ -19,8 +19,8 @@
                 @foreach ($newsUpdates as $newsUpdate)
                     <div class="col-md-5 col-sm-6 col-12 mb-4">
                         <p class="newsupdatesView-block-img">
-                            <img src="{{ asset('public/images/desktop-image/' . $newsUpdate->img_src) }}" alt=""
-                                class="img-fluid">
+                            <img src="{{ asset('public/images/desktop-image/' . $newsUpdate->img_src) }}" alt="image"
+                                class="img-fluid img-radius">
                         </p>
                     </div>
                     <div class="col-md-7 col-sm-6 col-12 mb-4">
@@ -38,7 +38,7 @@
 
                 {{-- <div class="col-md-5 col-sm-12 col-12 mb-4">
                     <p class="newsupdatesView-block-img">
-                        <img src="{{ asset('public/images/desktop-image/delegate-registration-open.jpg') }}" alt=""
+                        <img src="{{ asset('public/images/desktop-image/delegate-registration-open.jpg') }}" alt="image"
                             class="img-fluid">
                     </p>
                 </div>
@@ -60,7 +60,7 @@
 
                 <div class="col-md-5 col-sm-12 col-12 mb-4">
                     <p class="newsupdatesView-block-img">
-                        <img src="{{ asset('public/images/desktop-image/producres-workshop-open.jpg') }}" alt=""
+                        <img src="{{ asset('public/images/desktop-image/producres-workshop-open.jpg') }}" alt="image"
                             class="img-fluid">
                     </p>
                 </div>
@@ -82,7 +82,7 @@
 
                 <div class="col-md-5 col-sm-12 col-12 mb-4">
                     <p class="newsupdatesView-block-img">
-                        <img src="{{ asset('public/images/desktop-image/Delegate-Registration-open.jpg') }}" alt=""
+                        <img src="{{ asset('public/images/desktop-image/Delegate-Registration-open.jpg') }}" alt="image"
                             class="img-fluid">
                     </p>
                 </div>
@@ -101,7 +101,7 @@
 
                 {{-- <div class="col-md-5 col-sm-12 col-12 mb-4">
                     <p class="newsupdatesView-block-img">
-                        <img src="{{ asset('public/images/desktop-image/Viewing-Room-Entries-closed.jpg') }}" alt=""
+                        <img src="{{ asset('public/images/desktop-image/Viewing-Room-Entries-closed.jpg') }}" alt="image"
                             class="img-fluid">
                     </p>
                 </div>
@@ -121,7 +121,7 @@
 
                 {{-- <div class="col-md-5 col-sm-12 col-12 mb-4">
                     <p class="newsupdatesView-block-img">
-                        <img src="{{ asset('public/images/desktop-image/dd-closed-now.jpg') }}" alt=""
+                        <img src="{{ asset('public/images/desktop-image/dd-closed-now.jpg') }}" alt="image"
                             class="img-fluid">
                     </p>
                 </div>
@@ -140,8 +140,8 @@
 
                 <div class="col-md-5 col-sm-12 col-12 mb-4">
                     <p class="newsupdatesView-block-img">
-                        <img src="{{ asset('public/images/desktop-image/strategizing.jpg') }}" alt=""
-                            class="img-fluid">
+                        <img src="{{ asset('public/images/desktop-image/strategizing.jpg') }}" alt="image"
+                            class="img-fluid img-radius">
                     </p>
                 </div>
                 <div class="col-md-7 col-sm-12 col-12 mb-4">
@@ -153,103 +153,100 @@
                         opportunity to gain greater access to the global platform. With the spotlight on the films of
                         debut directors, IFFI 2024 once again confirms its commitment to fostering youth creativity for
                         the Indian Cinema.
-                        <a style="font-weight: 600; color: blue; text-decoration: underline;" data-bs-toggle="modal"
+                        <a style="font-weight: 600; color: #0d6efd; text-decoration: underline;" data-bs-toggle="modal"
                             data-bs-target="#exampleModal">Read More</a>
                     </p>
-</div>
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog modal-lg">
-                            <div class="modal-content">
-                                <!-- Modal Header -->
-                                <div class="modal-header">
-                                    <h4 class="modal-title">Strategizing IFFI 2024 at NMIC Mumbai</h4>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                                </div>
-                                <!-- Modal body -->
-                                <div class="modal-body">
-                                    <p>
-                                        Catch a glimpse of NFDC productive meeting at the National Museum of Indian
-                                        Cinema(NMIC) in Mumbai,
-                                        where we strategized on enhancing awareness for IFFI 2024. The discussions
-                                        were centered on innovative approaches to engage audiences and planning
-                                        exciting ancillary activities that will elevate the festival experience,
-                                        making it more memorable and impactful for all participants.
-                                    </p>
-                                    <p>
-                                        In the below video, you will find the highlights of the productive meet
-                                        that happened in NMIC Mumbai.
-                                    </p>
+                </div>
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title">Strategizing IFFI 2024 at NMIC Mumbai</h4>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <p>
+                                    Catch a glimpse of NFDC productive meeting at the National Museum of Indian
+                                    Cinema(NMIC) in Mumbai,
+                                    where we strategized on enhancing awareness for IFFI 2024. The discussions
+                                    were centered on innovative approaches to engage audiences and planning
+                                    exciting ancillary activities that will elevate the festival experience,
+                                    making it more memorable and impactful for all participants.
+                                </p>
+                                <p>
+                                    In the below video, you will find the highlights of the productive meet
+                                    that happened in NMIC Mumbai.
+                                </p>
 
-                                    <div class="row mb-4">
-                                        <div class="col-md-6">
-                                            <video style="width:100%" loop="" autoplay="" muted=""
-                                                playsinline="">
-                                                <source src="{{ asset('public/images/news-update/nmic meet.mp4') }}"
-                                                    type="video/mp4">
-                                            </video>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <p>
-                                                IFFI Festival Director, Shri Shekhar Kapoor, delivered an inspiring keynote
-                                                address,
-                                                recounting his
-                                                journey in the film industry and his deep, enduring connection with the
-                                                festival.
-                                                NFDC
-                                                General
-                                                Manager, Shri D. Ramakrishnan, highlighted key initiatives and unveiled
-                                                exciting
-                                                highlights
-                                                for the
-                                                upcoming IFFI, including the much-anticipated Film Bazaar, designed to
-                                                foster
-                                                international
-                                                collaborations and celebrate outstanding film projects.
-                                            </p>
-                                        </div>
+                                <div class="row mb-4">
+                                    <div class="col-md-6">
+                                        <video style="width:100%" loop="" autoplay="" muted=""
+                                            playsinline="">
+                                            <source src="{{ asset('public/images/news-update/nmic meet.mp4') }}"
+                                                type="video/mp4">
+                                        </video>
                                     </div>
-
-                                    <div class="row mb-4">
-                                        <div class="col-md-6">
-                                            <p>The 55th edition is set to expand the festival's global presence, encouraging
-                                                international
-                                                partnerships and presenting the finest in Indian and world cinema.
-                                            </p>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <img class="img-fluid"
-                                                src="{{ asset('public/images/news-update/nmic-meet.jpg') }}"
-                                                alt="nmic meet ">
-                                        </div>
+                                    <div class="col-md-6">
+                                        <p>
+                                            IFFI Festival Director, Shri Shekhar Kapoor, delivered an inspiring keynote
+                                            address,
+                                            recounting his
+                                            journey in the film industry and his deep, enduring connection with the
+                                            festival.
+                                            NFDC
+                                            General
+                                            Manager, Shri D. Ramakrishnan, highlighted key initiatives and unveiled
+                                            exciting
+                                            highlights
+                                            for the
+                                            upcoming IFFI, including the much-anticipated Film Bazaar, designed to
+                                            foster
+                                            international
+                                            collaborations and celebrate outstanding film projects.
+                                        </p>
                                     </div>
+                                </div>
 
-                                    <div class="row mb-4">
-                                        <div class="col-md-6">
-                                            <img class="img-fluid"
-                                                src="{{ asset('public/images/news-update/nmic-meet2.jfif') }}"
-                                                alt="nmic meet ">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <img class="img-fluid"
-                                                src="{{ asset('public/images/news-update/nmic-meet1.jfif') }}"
-                                                alt="nmic meet ">
-                                        </div>
+                                <div class="row mb-4">
+                                    <div class="col-md-6">
+                                        <p>The 55th edition is set to expand the festival's global presence, encouraging
+                                            international
+                                            partnerships and presenting the finest in Indian and world cinema.
+                                        </p>
                                     </div>
+                                    <div class="col-md-6">
+                                        <img class="img-fluid" src="{{ asset('public/images/news-update/nmic-meet.jpg') }}"
+                                            alt="nmic meet ">
+                                    </div>
+                                </div>
 
+                                <div class="row mb-4">
+                                    <div class="col-md-6">
+                                        <img class="img-fluid"
+                                            src="{{ asset('public/images/news-update/nmic-meet2.jfif') }}" alt="nmic meet ">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img class="img-fluid"
+                                            src="{{ asset('public/images/news-update/nmic-meet1.jfif') }}" alt="nmic meet ">
+                                    </div>
                                 </div>
-                                <!-- Modal footer -->
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                                </div>
+
+                            </div>
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                {{-- <div class="col-md-6 col-sm-6 col-12 mb-4">
+            {{-- <div class="col-md-6 col-sm-6 col-12 mb-4">
                     <p class="newsupdatesView-block-img">
-                        <img src="{{ asset('public/images/desktop-image/CMOT_BANNER_CLOSE.png') }}" alt=""
+                        <img src="{{ asset('public/images/desktop-image/CMOT_BANNER_CLOSE.png') }}" alt="image"
                             class="img-fluid">
                     </p>
                 </div>
@@ -271,7 +268,7 @@
 
                 <div class="col-md-6 col-sm-6 col-12 mb-4">
                     <p class="newsupdatesView-block-img">
-                        <img src="{{ asset('public/images/desktop-image/INDIAN-PANORAMA-CLOSED-NOW.png') }}" alt=""
+                        <img src="{{ asset('public/images/desktop-image/INDIAN-PANORAMA-CLOSED-NOW.png') }}" alt="image"
                             class="img-fluid">
                     </p>
                 </div>
@@ -290,7 +287,7 @@
 
                 <div class="col-md-6 col-sm-6 col-12 mb-4">
                     <p class="newsupdatesView-block-img">
-                        <img src="{{ asset('public/images/desktop-image/OTT_CLOSED NOW.png') }}" alt=""
+                        <img src="{{ asset('public/images/desktop-image/OTT_CLOSED NOW.png') }}" alt="image"
                             class="img-fluid">
                     </p>
                 </div>
@@ -306,7 +303,7 @@
                     </p>
                 </div> --}}
 
-            </div>
         </div>
+    </div>
     </div>
 @endsection
