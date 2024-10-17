@@ -12,7 +12,7 @@
         {{-- <div class=""> --}}
         <div class="embed-responsive embed-responsive-16by9">
             <video loop="" autoplay="" muted="" playsinline="" preload="auto" class="embed-responsive-item">
-                <source src="https://www.iffigoa.org/public/new/assets/video/Banner-video.mp4" type="video/mp4">
+                <source src="{{ asset('public/video/banner-video.mp4') }}" type="video/mp4">
             </video>
         </div>
     </div>
