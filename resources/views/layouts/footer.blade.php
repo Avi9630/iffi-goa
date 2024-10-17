@@ -2,11 +2,15 @@
     <div class="col-lg-12 ">
         <div class="container">
             <div class="footer-logo">
-                <img src="{{ asset('public/images/f-logoOne.svg') }}" alt="image">
-                <img src="{{ asset('public/images/f-logoTwo.svg') }}" alt="image">
+                <img src="{{ asset('public/images/f-logoOne.svg') }}" alt="image" class="lap-view">
+                <img src="{{ asset('public/images/goa-govt-logo.png') }}" alt="image" class="lap-view">
+                <img src="{{ asset('public/images/mib.png') }}" alt="image" style="width: 20%; height: 88px;"
+                    class="Mobile-view">
                 <a href="https://filmbazaarindia.com/" target="_blank">
                     <img src="{{ asset('public/images/Film-Bazar.png') }}" alt="image">
                 </a>
+                <img src="{{ asset('public/images/esg-logo.png') }}" alt="image" class="Mobile-view">
+                <img src="{{ asset('public/images/GOG.png') }}" alt="image" style="width:10%" class="Mobile-view">
             </div>
             {{-- <div class=" ">
                 <div class=" text-center quick-link">

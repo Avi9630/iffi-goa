@@ -19,7 +19,7 @@
     <!-- Banner Section -->
     <div class="container-fluid page-header bannerBg-second_edition py-5">
         <div class="container text-center ">
-            <h1 class="page-title-header">54<sup>th</sup>IFFI Film Festival</h1>
+            <h1 class="page-title-header">54th IFFI Film Festival</h1>
         </div>
     </div>
 
