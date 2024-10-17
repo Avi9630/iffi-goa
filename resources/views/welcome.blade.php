@@ -29,7 +29,7 @@
                 <p>Why you should attend</p>
                 <h2>55<sup>th</sup> IFFI Festival?</h2>
             </div>
-            <div class="row card-same-height">
+            <div class="row festival-img">
                 @include('pages.55th-iffi-festival', [
                     'datas' => app(\App\Http\Controllers\CommonController::class)->iffiFestival(),
                 ])
@@ -38,7 +38,10 @@
     </div>
 
     <!-- News & Updates -->
-    @include('pages.news-and-update')
+    {{-- @include('pages.news-and-update') --}}
+    @include('pages.news-and-update', [
+        'datas' => app(\App\Http\Controllers\CommonController::class)->newsUpdate1(),
+    ])
 
 
     <!-- Highlights -->
