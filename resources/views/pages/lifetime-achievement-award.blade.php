@@ -1,4 +1,5 @@
-<div class="col-lg-12 mb-5">
+{{-- <div class="col-lg-12 mb-5"> --}}
+<section>
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-sm-6">
@@ -23,4 +24,5 @@
             </div>
         </div>
     </div>
-</div>
+</section>
+{{-- </div> --}}
