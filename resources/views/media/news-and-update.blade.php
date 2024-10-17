@@ -20,7 +20,7 @@
                     <div class="col-md-5 col-sm-6 col-12 mb-4">
                         <p class="newsupdatesView-block-img">
                             <img src="{{ asset('public/images/desktop-image/' . $newsUpdate->img_src) }}" alt="image"
-                                class="img-fluid">
+                                class="img-fluid img-radius">
                         </p>
                     </div>
                     <div class="col-md-7 col-sm-6 col-12 mb-4">
@@ -141,7 +141,7 @@
                 <div class="col-md-5 col-sm-12 col-12 mb-4">
                     <p class="newsupdatesView-block-img">
                         <img src="{{ asset('public/images/desktop-image/strategizing.jpg') }}" alt="image"
-                            class="img-fluid">
+                            class="img-fluid img-radius">
                     </p>
                 </div>
                 <div class="col-md-7 col-sm-12 col-12 mb-4">
