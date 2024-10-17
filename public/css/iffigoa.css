@@ -475,6 +475,7 @@ border: solid 1px #ddd !important;
 .festival-img .img-fluid{height: 200px;}
 .img-radius{ border-radius: 10px; }
 .lap-view{display: none;}
+.lap-view{display: none;}
 .accordion-button:focus{box-shadow: none;}
 
 @keyframes typing {
