@@ -1,4 +1,9 @@
 @extends('layouts.app')
+@section('site_title', 'Macabre Dreams: A Journey Through Horror Films | IFFI Goa')
+@section('site_description',
+    'Explore the haunting world of Macabre Dreams, showcasing chilling narratives and unique
+    storytelling in international cinema at IFFI Goa.')
+    {{-- @section('site_keywords', 'About IFFI Goa, IFFI goa, IFFI goa registration, IFFI goa delegate registration, About us') --}}
 @section('content')
     <!-- Header start-->
     @include('layouts.header')
@@ -25,12 +30,12 @@
                         <div class="card shadow-sm">
                             <div class="card-image min-size-img">
                                 <img src="{{ asset('public/images/film-selection/international-cinema/' . $macabreDream->img_src) }}"
-                                    class="img-fluid">
+                                    alt="image" class="img-fluid">
                             </div>
                             <div class="card-body text-start">
                                 <div class="card-text d-flex">
                                     <div class="iCinema-content">
-                                        <h4 class="title"><a href="#">{{ $macabreDream->title }}</a></h4>
+                                        <h4 class="title">{{ $macabreDream->title }}</h4>
                                         <h5>
                                             <span>Directed by</span>
                                             <span>:</span>

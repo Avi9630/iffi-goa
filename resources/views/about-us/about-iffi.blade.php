@@ -48,7 +48,11 @@
                     </p>
                 </div>
                 <div class="col-lg-12">
-                    <div class="section-heading  mt-5 ">
+                    {{-- <div class="section-heading  mt-5 ">
+                        <h2>Festival</h2>
+                        <h4 class="mb-2">Programmes In Brief</h4>
+                    </div> --}}
+                    <div class="section-heading mb-4">
                         <h2>Festival</h2>
                         <h4 class="mb-2">Programmes In Brief</h4>
                     </div>

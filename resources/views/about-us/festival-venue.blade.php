@@ -37,16 +37,17 @@
                         <div class="card shadow-sm">
                             <div class="card-image">
                                 <img src="{{ asset('public/images/festival-venue/8XXPG5_1662036972426_0.jpg') }}"
-                                    class="img-fluid">
+                                    alt="image" class="img-fluid">
                             </div>
                             <div class="card-body text-start">
                                 <h4 class="title">DR. SHYAMA PRASAD MUKHERJEE INDOOR STADIUM</h4>
                                 <p class="card-text d-flex">
                                     <span class="location-icon">
                                         <img src="{{ asset('public/images/festival-venue/location-icon.svg') }}"
-                                            alt="" srcset="">
+                                            alt="image" srcset="">
                                     </span>
-                                    <a href="#">Goa University, MDR3, Taleigao, Goa 403206</a>
+                                    <a href="https://www.unigoa.ac.in/" target="_blank">Goa University, MDR3, Taleigao, Goa
+                                        403206</a>
                                 </p>
                             </div>
                         </div>
@@ -65,7 +66,8 @@
                         <div class="col-md-4 col-sm-4 col-xs-12">
                             <div class="card shadow-sm">
                                 <div class="card-image">
-                                    <img src="{{ asset('public/images/festival-venue/goa.jpg') }}" class="img-fluid">
+                                    <img src="{{ asset('public/images/festival-venue/goa.jpg') }}" alt="image"
+                                        class="img-fluid">
                                 </div>
                                 <div class="card-body text-start">
                                     <h4 class="title">INOX PANJIM</h4>
@@ -77,7 +79,7 @@
                             <div class="card shadow-sm">
                                 <div class="card-image">
                                     <img src="{{ asset('public/images/festival-venue/INOX-PORVORIM.jpg') }}"
-                                        class="img-fluid">
+                                        class="img-fluid" alt="image">
                                 </div>
                                 <div class="card-body text-start">
                                     <h4 class="title">INOX PORVORIM</h4>
@@ -88,7 +90,8 @@
                         <div class="col-md-4 col-sm-4 col-xs-12">
                             <div class="card shadow-sm">
                                 <div class="card-image">
-                                    <img src="{{ asset('public/images/festival-venue/MAQUINEZ.jpg') }}" class="img-fluid">
+                                    <img src="{{ asset('public/images/festival-venue/MAQUINEZ.jpg') }}" alt="image"
+                                        class="img-fluid">
                                 </div>
                                 <div class="card-body text-start">
                                     <h4 class="title">MAQUINEZ PALACE, GOA</h4>
@@ -111,7 +114,7 @@
                         <div class="col-md-4 col-sm-4 col-xs-12">
                             <div class="card shadow-sm">
                                 <div class="card-image">
-                                    <img src="{{ asset('public/images/festival-venue/MIRAMAR-BEACH.jpg') }}"
+                                    <img src="{{ asset('public/images/festival-venue/MIRAMAR-BEACH.jpg') }}" alt="image"
                                         class="img-fluid">
                                 </div>
                                 <div class="card-body text-start">
@@ -124,7 +127,7 @@
                             <div class="card shadow-sm">
                                 <div class="card-image">
                                     <img src="{{ asset('public/images/festival-venue/RAVINDRA-BHAVAN.jpg') }}"
-                                        class="img-fluid">
+                                        alt="image" class="img-fluid">
                                 </div>
                                 <div class="card-body text-start">
                                     <h4 class="title">RAVINDRA BHAVAN FATORDA</h4>
@@ -135,7 +138,7 @@
                         <div class="col-md-4 col-sm-4 col-xs-12">
                             <div class="card shadow-sm">
                                 <div class="card-image">
-                                    <img src="{{ asset('public/images/festival-venue/ANJUNA-BEACH.jpg') }}"
+                                    <img src="{{ asset('public/images/festival-venue/ANJUNA-BEACH.jpg') }}" alt="image"
                                         class="img-fluid">
                                 </div>
                                 <div class="card-body text-start">
@@ -159,7 +162,7 @@
                         <div class="col-md-4 col-sm-4 col-xs-12">
                             <div class="card shadow-sm">
                                 <div class="card-image">
-                                    <img src="{{ asset('public/images/festival-venue/KALA-ACADEMY.jpg') }}"
+                                    <img src="{{ asset('public/images/festival-venue/KALA-ACADEMY.jpg') }}" alt="image"
                                         class="img-fluid">
                                 </div>
                                 <div class="card-body text-start">

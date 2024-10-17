@@ -1,4 +1,9 @@
 @extends('layouts.app')
+@section('site_title', 'Explore the Cinema World: Curated International Films')
+@section('site_description',
+    'Discover a curated selection of international films celebrating diverse cinema styles and
+    stories from around the globe. Join us in exploring the world of film!')
+    {{-- @section('site_keywords', 'About IFFI Goa, IFFI goa, IFFI goa registration, IFFI goa delegate registration, About us') --}}
 @section('content')
     <!-- Header start-->
     @include('layouts.header')
@@ -24,12 +29,12 @@
                         <div class="card shadow-sm">
                             <div class="card-image min-size-img">
                                 <img src="{{ asset('public/images/film-selection/international-cinema/' . $cinema->img_src) }}"
-                                    class="img-fluid">
+                                    alt="image" class="img-fluid">
                             </div>
                             <div class="card-body text-start">
                                 <div class="card-text d-flex">
                                     <div class="iCinema-content">
-                                        <h4 class="title"><a href="#">{{ $cinema->title }}</a></h4>
+                                        <h4 class="title">{{ $cinema->title }}</h4>
                                         <h5>
                                             <span>Directed by</span>
                                             <span>:</span>

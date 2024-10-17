@@ -23,22 +23,26 @@
     @include('pages.about-iffi')
 
     <!-- 55th IFFI Festival -->
-    <div class="col-lg-12 mb-5">
+    <section class="">
         <div class="container">
             <div class="section-heading mb-4">
-                <h4>Why you should attend</h4>
+                <p>Why you should attend</p>
                 <h2>55<sup>th</sup> IFFI Festival?</h2>
             </div>
-            <div class="row card-same-height">
+            <div class="row festival-img">
                 @include('pages.55th-iffi-festival', [
                     'datas' => app(\App\Http\Controllers\CommonController::class)->iffiFestival(),
                 ])
             </div>
         </div>
-    </div>
+    </section>
+
 
     <!-- News & Updates -->
-    @include('pages.news-and-update')
+    {{-- @include('pages.news-and-update') --}}
+    @include('pages.news-and-update', [
+        'datas' => app(\App\Http\Controllers\CommonController::class)->newsUpdate1(),
+    ])
 
 
     <!-- Highlights -->
@@ -52,10 +56,11 @@
     ])
 
     <!-- Director -->
-    <div class="col-lg-12 mb-5">
+    <section>
+        {{-- <div class="col-lg-12 mb-5"> --}}
         <div class="container">
             <div class="section-heading mb-4">
-                <h4>Best 54<sup>th</sup> debut feature film of a</h4>
+                <p>Best 54<sup>th</sup> debut feature film of a</p>
                 <h2>Director</h2>
             </div>
             <div class="owl-carousel international">
@@ -64,21 +69,24 @@
                 ])
             </div>
         </div>
-    </div>
+        {{-- </div> --}}
+    </section>
 
     <!-- Indian Panorama  -->
     {{-- <div class="col-lg-12 mb-5"> --}}
-    <div class="container mb-5">
-        <div class="section-heading mb-4">
-            <h4>A Kaleidoscope of Creativity and Culture of 54<sup>th</sup></h4>
-            <h2>Indian Panorama</h2>
+    <section>
+        <div class="container mb-5">
+            <div class="section-heading mb-4">
+                <p>A Kaleidoscope of Creativity and Culture of 54<sup>th</sup></p>
+                <h2>Indian Panorama</h2>
+            </div>
+            <div class="owl-carousel international">
+                @include('pages.indian-panorama', [
+                    'indianPanormas' => app(\App\Http\Controllers\CommonController::class)->indianPanorama(),
+                ])
+            </div>
         </div>
-        <div class="owl-carousel international">
-            @include('pages.indian-panorama', [
-                'indianPanormas' => app(\App\Http\Controllers\CommonController::class)->indianPanorama(),
-            ])
-        </div>
-    </div>
+    </section>
     {{-- </div> --}}
     <!-- Indian Panorama Ends-->
 
@@ -97,7 +105,7 @@
     <div class="col-lg-12 mb-5">
         <div class="container">
             <div class="section-heading mb-4 text-center mt-5 center-heading">
-                <h4 class="mb-2">Fuelling Success Together</h4>
+                <h4 class="mb-2" style="font-size: 20px">Fuelling Success Together</h4>
                 <h2>Sponsors & Partners</h2>
             </div>
             <div class=" owl-carousel-sponsor">
