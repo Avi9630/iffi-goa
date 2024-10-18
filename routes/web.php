@@ -12,31 +12,31 @@ Route::get('/', function () {
 
 Route::controller(CommonController::class)->group(function () {
 
-    Route::get('goa-tourist-places',                             'goaTouristPlace')->name('goa-tourist-places');
+    Route::get('goa-tourist-places',                        'goaTouristPlace')->name('goa-tourist-places');
 
-    Route::get('55th-iffi-festival',                    'iffiFestival')->name('55th-iffi-festival');
+    Route::get('55th-iffi-festival',                        'iffiFestival')->name('55th-iffi-festival');
 
-    Route::get('highlights',                            'highlights')->name('highlights');
+    Route::get('highlights',                                'highlights')->name('highlights');
 
-    Route::get('international-cinema',                  'internationalCinema')->name('international-cinema');
+    Route::get('international-cinema',                      'internationalCinema')->name('international-cinema');
 
-    Route::get('international-cinema/competition/{slug}','internationalCompetitionDetail')->name('international-competition-detail');
+    Route::get('international-cinema/competition/{slug}',   'internationalCompetitionDetail')->name('international-competition-detail');
 
-    Route::get('director-debut-film',                   'directorDebutFilm')->name('director-debut-film');
+    Route::get('director-debut-film',                       'directorDebutFilm')->name('director-debut-film');
 
-    Route::get('indian-panorama',                       'indianPanorama')->name('indian-panorama');
+    Route::get('indian-panorama',                           'indianPanorama')->name('indian-panorama');
 
-    Route::get('sponsors',                              'sponsors')->name('sponsors');
+    Route::get('sponsors',                                  'sponsors')->name('sponsors');
 
-    Route::get('technical-committee',                   'technicalCommittee')->name('technical-committee');
+    Route::get('technical-committee',                       'technicalCommittee')->name('technical-committee');
 
-    Route::get('faq',                                   'faq')->name('faq');
+    Route::get('faq',                                       'faq')->name('faq');
 
-    Route::get('media/gallery',                         'gallery')->name('gallery');
+    Route::get('media/gallery',                             'gallery')->name('gallery');
 
-    Route::get('media/press-release',                   'pressRelease')->name('press-release');
+    Route::get('media/press-release',                       'pressRelease')->name('press-release');
 
-    Route::get('media/news-and-update',                 'newsUpdate')->name('news-and-update');
+    Route::get('media/news-and-update',                     'newsUpdate')->name('news-and-update');
 
     // Route::get('news-and-update',                 'newsUpdate1')->name('news-and-update');
 });
