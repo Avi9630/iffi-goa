@@ -299,7 +299,7 @@
                                             Login</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="https://my.iffigoa.org/media-login" class="nav-link"
+                                        <a href="https://my.iffigoa.org/extranet/media" class="nav-link"
                                             target="_blank">Media Login</a>
                                     </li>
                                 </ul>
