@@ -30,7 +30,7 @@ Route::controller(CommonController::class)->group(function () {
 
     Route::get('technical-committee',                       'technicalCommittee')->name('technical-committee');
 
-    Route::get('faq',                                       'faq')->name('faq');
+    // Route::get('faq',                                       'faq')->name('faq');
 
     Route::get('media/gallery',                             'gallery')->name('gallery');
 
@@ -43,27 +43,27 @@ Route::controller(CommonController::class)->group(function () {
 
 Route::controller(InternationalCinemaController::class)->group(function () {
 
-    Route::get('international-cinema/international-competition' , 'internationalCompetition')->name('international-competition');
+    Route::get('international-cinema/international-competition', 'internationalCompetition')->name('international-competition');
 
-    Route::get('international-cinema/award-for-best-debute'     , 'awardForBestDebute')->name('award-for-best-debute');
+    Route::get('international-cinema/award-for-best-debute', 'awardForBestDebute')->name('award-for-best-debute');
 
-    Route::get('international-cinema/icft-unesco-medal'         , 'icftUnescoMedal')->name('icft-unesco-medal');
+    Route::get('international-cinema/icft-unesco-medal', 'icftUnescoMedal')->name('icft-unesco-medal');
 
-    Route::get('international-cinema/festival-kaleidoscope'      , 'festivalKaleloscope')->name('festival-kaleloscope');
+    Route::get('international-cinema/festival-kaleidoscope', 'festivalKaleloscope')->name('festival-kaleloscope');
 
-    Route::get('international-cinema/docu-montage'              , 'docuMontage')->name('docu-montage');
+    Route::get('international-cinema/docu-montage', 'docuMontage')->name('docu-montage');
 
-    Route::get('international-cinema/integrade'                 , 'integrade')->name('integrade');
+    Route::get('international-cinema/integrade', 'integrade')->name('integrade');
 
-    Route::get('international-cinema/animation'                 , 'animation')->name('animation');
+    Route::get('international-cinema/animation', 'animation')->name('animation');
 
-    Route::get('international-cinema/macabre-dreams'            , 'macabreDreams')->name('macabre-dreams');
+    Route::get('international-cinema/macabre-dreams', 'macabreDreams')->name('macabre-dreams');
 
-    Route::get('international-cinema/cinema-world'              , 'cinemaWorld')->name('cinema-world');
+    Route::get('international-cinema/cinema-world', 'cinemaWorld')->name('cinema-world');
 
-    Route::get('international-cinema/restored-classic'          , 'restoredClassic')->name('restored-classic');
+    Route::get('international-cinema/restored-classic', 'restoredClassic')->name('restored-classic');
 
-    Route::get('international-cinema/uniceff'                   , 'uniceff')->name('uniceff');
+    Route::get('international-cinema/uniceff', 'uniceff')->name('uniceff');
 });
 
 //Indian Panorama
@@ -87,6 +87,10 @@ Route::get('festival-venue', function () {
 Route::get('goa-connectivity', function () {
     return view('about-us.about-goa.connectivity');
 })->name('connectivity');
+
+Route::get('faq', function () {
+    return view('about-us.faq');
+})->name('faq');
 
 Route::controller(ContactUsController::class)->group(function () {
     Route::get('contact-us',    'contactUsView')->name('contact-us');
