@@ -320,6 +320,10 @@
                                         <a href="https://filmbazaarindia.com/participate/attend-as-a-delegate/"
                                             class="nav-link" target="_blank">Delegate Registration</a>
                                     </li>
+                                    <li class="nav-item">
+                                        <a href="https://filmbazaarindia.com/programme/market-screenings/"
+                                            class="nav-link" target="_blank">Market Screenings</a>
+                                    </li>
                                 </ul>
                             </div>
                             <!-- Film Bazaar Section End -->
