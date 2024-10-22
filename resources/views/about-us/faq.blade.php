@@ -102,7 +102,7 @@
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                            When it started ?
+                            When will Delegate Registration for IFFI started?
                         </button>
                     </h2>
                     <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -121,7 +121,7 @@
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-                            When it ends?
+                            What will Delegate Registration for IFFI ends?
                         </button>
                     </h2>
                     <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -138,7 +138,7 @@
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
-                            What are the categories ?
+                            What are the categories of Delegate Registration?
                         </button>
                     </h2>
                     <div id="collapse6" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -177,7 +177,7 @@
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
-                            What is the cost of pass?
+                            What is the cost of Delegate Registration Pass?
                         </button>
                     </h2>
                     <div id="collapse7" class="accordion-collapse collapse" data-bs-parent="#accordionExample">

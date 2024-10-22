@@ -37,13 +37,11 @@
         </div>
     </section>
 
-
     <!-- News & Updates -->
     {{-- @include('pages.news-and-update') --}}
     @include('pages.news-and-update', [
         'datas' => app(\App\Http\Controllers\CommonController::class)->newsUpdate1(),
     ])
-
 
     <!-- Highlights -->
     @include('pages.highlights', [
@@ -57,7 +55,6 @@
 
     <!-- Director -->
     <section>
-        {{-- <div class="col-lg-12 mb-5"> --}}
         <div class="container">
             <div class="section-heading mb-4">
                 <p>Best 54<sup>th</sup> debut feature film of a</p>
@@ -69,11 +66,9 @@
                 ])
             </div>
         </div>
-        {{-- </div> --}}
     </section>
 
     <!-- Indian Panorama  -->
-    {{-- <div class="col-lg-12 mb-5"> --}}
     <section>
         <div class="container mb-5">
             <div class="section-heading mb-4">
@@ -87,7 +82,6 @@
             </div>
         </div>
     </section>
-    {{-- </div> --}}
     <!-- Indian Panorama Ends-->
 
     <!-- Lifetime Achievement Award  -->
