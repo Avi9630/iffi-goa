@@ -121,7 +121,7 @@
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-                            What will Delegate Registration for IFFI ends?
+                            When will Delegate Registration for IFFI ends?
                         </button>
                     </h2>
                     <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
