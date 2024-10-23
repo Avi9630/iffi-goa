@@ -170,8 +170,8 @@ class ApiController extends Controller
             'title'         =>  'required',
             'description'   =>  'required',
             'img_src'       =>  'required|file|mimes:jpg,jpeg,png|max:2048',
-            'link'          =>  'required',
-            'link_title'    =>  'required',
+            'link'          =>  '', //required
+            'link_title'    =>  '', //required
         ];
         $messagesArray  =   [];
         $validator = Validator::make($payload, $validatorArray, $messagesArray);
@@ -249,7 +249,6 @@ class ApiController extends Controller
                 if ($request->hasFile('img_src')) {
                     $file = $request->file('img_src');
                     $destinationPath = 'images/desktop-image';
-                    // $fileName = time() . '_' . $file->getClientOriginalName();
                     $fileName = $file->getClientOriginalName();
                     $fullFilePath = public_path($destinationPath . '/' . $fileName);
                     if (File::exists($fullFilePath)) {
@@ -261,11 +260,11 @@ class ApiController extends Controller
                     }
                     $file->move(public_path($destinationPath), $fileName);
                     $data = [
-                        "title"         =>  isset($payload['title']) ? $payload['title'] : $newsUpdate['title'],
-                        "description"   =>  isset($payload['description']) ? $payload['description'] : $newsUpdate['description'],
+                        "title"         =>  isset($payload['title']) ? $payload['title'] : '',
+                        "description"   =>  isset($payload['description']) ? $payload['description'] : '',
                         "img_src"       =>  $fileName,
-                        "link"          =>  isset($payload['link']) ? $payload['link'] : $newsUpdate['link'],
-                        "link_title"    =>  isset($payload['link_title']) ? $payload['link_title'] : $newsUpdate['link_title'],
+                        "link"          =>  isset($payload['link']) ? $payload['link'] : '',
+                        "link_title"    =>  isset($payload['link_title']) ? $payload['link_title'] : '',
                         "status"        =>  isset($payload['status']) ? $payload['status'] : $newsUpdate['status'],
                     ];
                     $newsUpdate->update($data);
@@ -276,11 +275,11 @@ class ApiController extends Controller
                     return $this->response('success', $response);
                 } else {
                     $data = [
-                        "title"         =>  isset($payload['title']) ? $payload['title'] : $newsUpdate['title'],
-                        "description"   =>  isset($payload['description']) ? $payload['description'] : $newsUpdate['description'],
+                        "title"         =>  isset($payload['title']) ? $payload['title'] : '',
+                        "description"   =>  isset($payload['description']) ? $payload['description'] : '',
                         "img_src"       =>  $newsUpdate['img_src'],
-                        "link"          =>  isset($payload['link']) ? $payload['link'] : $newsUpdate['link'],
-                        "link_title"    =>  isset($payload['link_title']) ? $payload['link_title'] : $newsUpdate['link_title'],
+                        "link"          =>  isset($payload['link']) ? $payload['link'] : '',
+                        "link_title"    =>  isset($payload['link_title']) ? $payload['link_title'] : '',
                         "status"        =>  isset($payload['status']) ? $payload['status'] : $newsUpdate['status'],
                     ];
                     $newsUpdate->update($data);
