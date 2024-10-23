@@ -3,20 +3,21 @@
 namespace App\Http\Controllers;
 
 use App\Models\NewsUpdate;
-use Illuminate\Http\Request;
 use DB;
 
 class CommonController extends Controller
 {
     public function iffiFestival()
     {
-        $datas  =   DB::table('iffi_festival_programmes')->where(['status' => 1])->get();
+        $datas = DB::table('iffi_festival_programmes')->where(['status' => 1])->get();
+
         return $datas;
     }
 
     public function highlights()
     {
-        $datas  =   DB::table('highlights')->where(['status' => 1])->get();
+        $datas = DB::table('highlights')->where(['status' => 1])->get();
+
         return $datas;
     }
 
@@ -36,6 +37,7 @@ class CommonController extends Controller
             )
             ->limit(20)
             ->get();
+
         return $internationalCinemas;
     }
 
@@ -86,11 +88,11 @@ class CommonController extends Controller
         return view(
             'pages.international-competition-detail',
             [
-                'fetch_cinema_details'              =>  $fetch_cinema_details,
-                'fetch_cinema_basic_details'        =>  $fetch_cinema_basic_details,
-                'currentURL'                        =>  $currentURL,
-                'list_international_cinema_images'  =>  $list_international_cinema_images,
-                'list_international_cinema_videos'  =>  $list_international_cinema_videos,
+                'fetch_cinema_details' => $fetch_cinema_details,
+                'fetch_cinema_basic_details' => $fetch_cinema_basic_details,
+                'currentURL' => $currentURL,
+                'list_international_cinema_images' => $list_international_cinema_images,
+                'list_international_cinema_videos' => $list_international_cinema_videos,
             ]
         );
     }
@@ -101,6 +103,7 @@ class CommonController extends Controller
             ->where('curated_section_id', '=', 13)
             ->where('year', '=', 2023)
             ->get();
+
         return $directorDebutFilm;
     }
 
@@ -110,6 +113,7 @@ class CommonController extends Controller
             ->where('status', '=', '1')
             ->where('year', '=', '2023')
             ->get();
+
         return $indianPanormas;
     }
 
@@ -129,6 +133,7 @@ class CommonController extends Controller
             'unicef.png',
             'zee-media.png',
         ];
+
         return $sponsors;
     }
 
@@ -141,6 +146,7 @@ class CommonController extends Controller
             'Smpte.png',
             'qubewire.jpeg',
         ];
+
         return view('technical-committee', ['partners' => $partners]);
     }
 
@@ -165,26 +171,28 @@ class CommonController extends Controller
             ->get();
 
         return view('about-us.about-goa.goa-tourist-place', [
-            'gtp'       =>  $gtp,
-            'gtpu'      =>  $gtpu,
-            'gtpu11'    =>  $gtpu11,
-            'gtpp22'    =>  $gtpp22,
-            'gtpp33'    =>  $gtpp33,
+            'gtp' => $gtp,
+            'gtpu' => $gtpu,
+            'gtpu11' => $gtpu11,
+            'gtpp22' => $gtpp22,
+            'gtpp33' => $gtpp33,
         ]);
     }
 
     public function faq()
     {
-        $faqs  =   DB::table('iffi_faq')->where(['status' => 1])->get();
+        $faqs = DB::table('iffi_faq')->where(['status' => 1])->get();
+
         return view('about-us.faq', ['faqs' => $faqs]);
     }
 
     public function gallery()
     {
         $gallery = DB::table('mst_photos')->where('status', 1)->whereNull('deleted_at')->orderBy('id', 'DESC')->paginate(8)->onEachSide(1);
+
         // dd($gallery);
         return view('gallery.gallery', [
-            'gallery'           =>  $gallery,
+            'gallery' => $gallery,
         ]);
     }
 
@@ -194,19 +202,26 @@ class CommonController extends Controller
             ->where('status', '1')
             ->orderBy('id', 'desc')
             ->paginate(10);
+
         return view('media.press-release', ['press' => $press]);
     }
 
     public function newsUpdate()
     {
         $newsUpdates = NewsUpdate::where('status', 1)->orderBy('id', 'DESC')->get();
+
         return view('media.news-and-update', ['newsUpdates' => $newsUpdates]);
         // return view('pages.news-and-update', ['newsUpdates' => $newsUpdates]);
     }
 
     public function newsUpdate1()
     {
-        $datas = NewsUpdate::where('status', 1)->orderBy('id', 'DESC')->get();
+        $datas = NewsUpdate::where('status', 1)
+            // ->orderBy('id', 'DESC')
+            ->orderBy('updated_at', 'DESC')
+            ->limit(6)
+            ->get();
+
         return $datas;
     }
 }
