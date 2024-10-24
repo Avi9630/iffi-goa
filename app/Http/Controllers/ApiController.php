@@ -168,9 +168,9 @@ class ApiController extends Controller
         $validatorArray = [
             'title'         =>  'required',
             'description'   =>  'required',
-            'img_src'       =>  'required|file|mimes:jpg,jpeg,png|max:2048',
-            'link'          =>  'required',
-            'link_title'    =>  'required',
+            'img_src'       =>  'file|mimes:jpg,jpeg,png|max:2048',
+            'link'          =>  '',
+            'link_title'    =>  '',
         ];
         $messagesArray  =   [];
         $validator = Validator::make($payload, $validatorArray, $messagesArray);
@@ -184,7 +184,6 @@ class ApiController extends Controller
             if ($request->hasFile('img_src')) {
                 $file = $request->file('img_src');
                 $destinationPath = 'images/desktop-image';
-                // $fileName = time() . '_' . $file->getClientOriginalName();
                 $fileName = $file->getClientOriginalName();
                 $fullFilePath = public_path($destinationPath . '/' . $fileName);
                 if (File::exists($fullFilePath)) {
@@ -209,10 +208,25 @@ class ApiController extends Controller
                 ];
                 return $this->response('success', $response);
             } else {
-                $response = [
-                    'message'       =>  'File not uploaded.!',
+                $data = [
+                    "title"         =>  isset($payload['title']) ? $payload['title'] :'',
+                    "description"   =>  isset($payload['description']) ? $payload['description'] : '',
+                    "link"          =>  isset($payload['link']) ? $payload['link'] :'',
+                    "link_title"    =>  isset($payload['link_title']) ? $payload['link_title'] :'',
                 ];
-                return $this->response('exception', $response);
+                $stored = NewsUpdate::create($data);
+                if ($stored) {
+                    $response = [
+                        'message'       =>  'Not created.!',
+                    ];
+                    return $this->response('success', $response);
+                }else {
+
+                    $response = [
+                        'message'       =>  'Something went wrong!',
+                    ];
+                    return $this->response('exception', $response);
+                }
             }
         } catch (\Exception $e) {
             $response = [
