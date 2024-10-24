@@ -78,8 +78,8 @@ $(document).ready(function () {
         items: 3, // Number of items you want to display at once
         loop: true, // Loop through the items
         margin: 10, // Margin between items
-        nav: true, // Show navigation arrows
         dots: false, // Show pagination dots
+        nav: true, // Show navigation arrows
         responsive: {
             0: {
                 items: 1, // Number of items at viewport width 0px
@@ -101,6 +101,7 @@ $(document).ready(function () {
         margin: 10, // Margin between items
         dots: false,
         autoplay: true,
+        nav: true,
         responsive: {
             0: {
                 items: 1, // Number of items at viewport width 0px

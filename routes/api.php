@@ -28,3 +28,9 @@ Route::get('news-update-list',       [ApiController::class, 'newsUpdateList'])->
 Route::post('create-news-update',    [ApiController::class, 'createNewsUpdate'])->name('create-news-update');
 Route::post('update-news-update',    [ApiController::class, 'updateNewsUpdate'])->name('update-news-update');
 Route::post('delete-news-update',    [ApiController::class, 'deleteNewsUpdate'])->name('delete-news-update');
+
+//faqs
+Route::get('faqs-list',       [ApiController::class, 'faqsList'])->name('faqs-list');
+Route::post('create-faqs',    [ApiController::class, 'createFaqs'])->name('create-faqs');
+Route::post('update-faqs',    [ApiController::class, 'updateFaqs'])->name('update-faqs');
+Route::post('delete-faqs',    [ApiController::class, 'deleteFaqs'])->name('delete-faqs');
