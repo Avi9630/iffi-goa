@@ -169,14 +169,9 @@ class ApiController extends Controller
         $validatorArray = [
             'title'         =>  'required',
             'description'   =>  'required',
-<<<<<<< HEAD
             'img_src'       =>  'file|mimes:jpg,jpeg,png|max:2048',
             'link'          =>  '',
             'link_title'    =>  '',
-=======
-            'img_src'       =>  'required|file|mimes:jpg,jpeg,png|max:2048',
-            'link'          =>  '', //required
-            'link_title'    =>  '', //required
         ];
         $messagesArray  =   [];
         $validator = Validator::make($payload, $validatorArray, $messagesArray);
@@ -190,7 +185,6 @@ class ApiController extends Controller
             if ($request->hasFile('img_src')) {
                 $file = $request->file('img_src');
                 $destinationPath = 'images/desktop-image';
-                // $fileName = time() . '_' . $file->getClientOriginalName();
                 $fileName = $file->getClientOriginalName();
                 $fullFilePath = public_path($destinationPath . '/' . $fileName);
                 if (File::exists($fullFilePath)) {
@@ -374,7 +368,6 @@ class ApiController extends Controller
             'img_src'       =>  'required|file|mimes:jpg,jpeg,png|max:2048',
             'link'          =>  'required',
             'link_title'    =>  'required',
->>>>>>> 515e1c28a28383a6d246d0ef5d306b6cfa80fb43
         ];
         $messagesArray  =   [];
         $validator = Validator::make($payload, $validatorArray, $messagesArray);
