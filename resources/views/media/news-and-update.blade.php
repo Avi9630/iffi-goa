@@ -88,12 +88,12 @@
                         opportunity to gain greater access to the global platform. With the spotlight on the films of
                         debut directors, IFFI 2024 once again confirms its commitment to fostering youth creativity for
                         the Indian Cinema.
-                        <a style="font-weight: 600; color: #0d6efd; text-decoration: underline;" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal">Read More</a>
+                        <a style="font-weight: 600; color: #0d6efd; text-decoration: underline; cursor: pointer;"
+                            data-bs-toggle="modal" data-bs-target="#exampleModal">Read More</a>
                     </p>
                 </div>
 
-                {{-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
@@ -177,7 +177,7 @@
                             </div>
                         </div>
                     </div>
-                </div> --}}
+                </div>
 
             </div>
         </div>
