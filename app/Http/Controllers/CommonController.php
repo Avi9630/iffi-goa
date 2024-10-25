@@ -202,26 +202,21 @@ class CommonController extends Controller
             ->where('status', '1')
             ->orderBy('id', 'desc')
             ->paginate(10);
-
         return view('media.press-release', ['press' => $press]);
     }
 
     public function newsUpdate()
     {
         $newsUpdates = NewsUpdate::where('status', 1)->orderBy('id', 'DESC')->get();
-
         return view('media.news-and-update', ['newsUpdates' => $newsUpdates]);
-        // return view('pages.news-and-update', ['newsUpdates' => $newsUpdates]);
     }
 
     public function newsUpdate1()
     {
         $datas = NewsUpdate::where('status', 1)
-            // ->orderBy('id', 'DESC')
             ->orderBy('updated_at', 'DESC')
             ->limit(6)
             ->get();
-
         return $datas;
     }
 }
