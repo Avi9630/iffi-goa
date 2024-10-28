@@ -80,7 +80,7 @@
                     <div class="col-md-7">
                         <div class="international-jury-text">
                             <h2>Anthony Chen</h2>
-                            <h5>Writer Director & Producer </h5>
+                            <h5>Writer, Director & Producer </h5>
                             <p>A well renowned writer, director, and producer from Singapore. Chen's short film, Ah Ma
                                 (2007), made him the first Singaporean filmmaker to win at Cannes. His debut feature, Ilo
                                 Ilo won the Caméra d'Or. Wet Season, his second film was nominated for the Platform Prize at
