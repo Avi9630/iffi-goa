@@ -88,6 +88,10 @@ Route::get('goa-connectivity', function () {
     return view('about-us.about-goa.connectivity');
 })->name('connectivity');
 
+Route::get('international-jury', function () {
+    return view('about-us.international-jury');
+})->name('international-jury');
+
 Route::get('faq', function () {
     return view('about-us.faq');
 })->name('faq');
