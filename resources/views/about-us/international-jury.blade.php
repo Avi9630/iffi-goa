@@ -147,7 +147,7 @@
                     <div class="col-md-7 ">
                         <div class="international-jury-text">
                             <h2 class="mt-3">Jill Bilcock</h2>
-                            <h5>Film Producer </h5>
+                            <h5>Film Editor </h5>
                             <p>Jill Bilcock gained international attention with A Cry in the Dark and forged a lasting
                                 collaboration with Baz Luhrmann. Her influential editing in films like Strictly Ballroom,
                                 Romeo and Juliet, and Moulin Rouge introduced modern techniques to classic genres. She
