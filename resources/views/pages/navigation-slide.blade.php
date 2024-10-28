@@ -33,13 +33,13 @@
                                     <li class="nav-item dropdown">
 
                                         <a class="nav-link dropdown-toggle" href="#" role="button"
-                                            data-bs-toggle="dropdown" aria-expanded="false">JURY
+                                            data-bs-toggle="dropdown" aria-expanded="false">Jury
                                         </a>
                                         <ul class="dropdown-menu">
 
                                             <li>
                                                 <a href="{{ route('international-jury') }}" class="dropdown-item">
-                                                    Internation Jury
+                                                    International Jury
                                                 </a>
                                             </li>
 
