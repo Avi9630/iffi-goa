@@ -41,7 +41,7 @@
                                 patriarchy, religious tolerance, and women's empowerment. A member of the Director's Branch
                                 in the Academy in Los Angeles, he is known for both historical epics and contemporary
                                 stories with profound themes.
-                                <br>
+                                <br><br>
                                 Ashutosh Gowariker, an acclaimed Indian filmmaker and former actor, is best known for his
                                 monumental work in cinema, particularly with the cross-cultural period sports drama Lagaan.
                                 Released in 2001, this film earned worldwide acclaim and even received an Oscar nomination,
@@ -78,7 +78,7 @@
                         </div>
                     </div>
                     <div class="col-md-7">
-                        <div class="international-jury-text">
+                        <div class="international-jury-text" style="padding-right: 30px;">
                             <h2>Anthony Chen</h2>
                             <h5>Writer, Director & Producer </h5>
                             <p>A well renowned writer, director, and producer from Singapore. Chen's short film, Ah Ma
@@ -126,7 +126,7 @@
                         </div>
                     </div>
                     <div class="col-md-7">
-                        <div class="international-jury-text">
+                        <div class="international-jury-text" style="padding-right: 30px;">
                             <h2>Fran Borgia</h2>
                             <h5>Film Producer </h5>
                             <p>
