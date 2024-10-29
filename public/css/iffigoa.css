@@ -1121,6 +1121,10 @@ footer a:hover {
         font-size: 15px;
     }
 }
+.jury_img {
+    border-radius: 15px;
+    overflow: hidden;
+}
 @keyframes jump {
     0% {
         transform: translateY(0);
