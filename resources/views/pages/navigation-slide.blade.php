@@ -63,15 +63,10 @@
                                         <a href="{{ route('faq') }}" class="nav-link">FAQ's</a>
                                     </li>
 
-                                    <li class="nav-item dropdown">
+                                    {{-- <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" role="button"
-                                            data-bs-toggle="dropdown" aria-expanded="false">Best of IFFI</a>
+                                            data-bs-toggle="dropdown" aria-expanded="false">Best Of IFFI</a>
                                         <ul class="dropdown-menu">
-
-                                            {{-- <li>
-                                                <a href="{{ route('about-indian-panorama') }}"
-                                                    class="dropdown-item">About Indian Panorama</a>
-                                            </li> --}}
 
                                             <li class="nav-item dropend">
                                                 <a class="nav-link dropdown-toggle" href="#" role="button"
@@ -95,7 +90,8 @@
                                             </li>
 
                                         </ul>
-                                    </li>
+                                    </li> --}}
+
                                 </ul>
                             </div>
                             <!-- About Us Section End -->
