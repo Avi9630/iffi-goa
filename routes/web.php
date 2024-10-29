@@ -157,7 +157,6 @@ Route::get('master-classes', function () {
 })->name('master-classes');
 
 // Jury Route
-
 Route::get('international-jury', function () {
     return view('international-cinema.international-jury');
 })->name('international-jury');
