@@ -174,6 +174,7 @@
                                             </li>
                                         </ul>
                                     </li>
+
                                     <!-- Indian Debut Director Award menu Start-->
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" role="button"
@@ -192,6 +193,10 @@
                                             <li>
                                                 <a href="{{ route('dd-rules-regulations') }}"
                                                     class="dropdown-item">Rules & Regulations</a>
+                                            </li>
+                                            <li>
+                                                <a href="{{ route('debut-director-jury') }}"
+                                                    class="dropdown-item">Debut Director Jury - 2024</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -282,6 +287,11 @@
                                                 <a href="https://iffigoa.org/festival/web-series"
                                                     class="dropdown-item nav-link yelow-color-link"
                                                     target="_blank">View your entry</a>
+                                            </li>
+
+                                            <li>
+                                                <a href="{{ route('web-series-jury') }}" class="dropdown-item">
+                                                    Best Ott Jury - 2024</a>
                                             </li>
 
                                         </ul>
