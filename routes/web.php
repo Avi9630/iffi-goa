@@ -3,6 +3,7 @@
 use App\Http\Controllers\CommonController;
 use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\IndianPanoramaController;
+use App\Http\Controllers\TickerController;
 use App\Http\Controllers\InternationalCinemaController;
 use Illuminate\Support\Facades\Route;
 
@@ -88,14 +89,6 @@ Route::get('goa-connectivity', function () {
     return view('about-us.about-goa.connectivity');
 })->name('connectivity');
 
-Route::get('international-jury', function () {
-    return view('jury.international-jury');
-})->name('international-jury');
-
-Route::get('ip-jury', function () {
-    return view('jury.ip-jury');
-})->name('ip-jury');
-
 Route::get('faq', function () {
     return view('about-us.faq');
 })->name('faq');
@@ -160,8 +153,23 @@ Route::get('privacy-policy', function () {
 
 //Master Classes
 Route::get('master-classes', function () {
-    return view('master-class.master');
+    return view('master');
 })->name('master-classes');
+
+// Jury Route
+
+Route::get('international-jury', function () {
+    return view('international-cinema.international-jury');
+})->name('international-jury');
+
+Route::get('indian-panorama-jury-feature', function () {
+    return view('indian-panorama.indian-panorama-jury-feature');
+})->name('indian-panorama-jury-feature');
+
+Route::get('indian-panorama-jury-non-feature', function () {
+    return view('indian-panorama.indian-panorama-jury-non-feature');
+})->name('indian-panorama-jury-non-feature');
+
 
 Route::get('opening-film', function () {
     return view('screening.opening-film');
