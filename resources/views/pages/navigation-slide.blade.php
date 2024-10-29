@@ -42,6 +42,11 @@
                                                     International Jury
                                                 </a>
                                             </li>
+                                            <li>
+                                                <a href="{{ route('ip-jury') }}" class="dropdown-item">
+                                                    Indian Panorama Jury
+                                                </a>
+                                            </li>
 
                                             {{-- <li>
                                                 <a href="{{ route('connectivity') }}" class="dropdown-item">
@@ -85,6 +90,39 @@
                                         <a href="{{ route('faq') }}" class="nav-link">FAQ's</a>
                                     </li>
 
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">Best of IFFI</a>
+                                        <ul class="dropdown-menu">
+
+                                            {{-- <li>
+                                                <a href="{{ route('about-indian-panorama') }}"
+                                                    class="dropdown-item">About Indian Panorama</a>
+                                            </li> --}}
+
+                                            <li class="nav-item dropend">
+                                                <a class="nav-link dropdown-toggle" href="#" role="button"
+                                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                                    Screening
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('opening-film') }}">Opening
+                                                            Film</a>
+                                                    </li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('midfest-film') }}">Midfest
+                                                            Film</a>
+                                                    </li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('closing-film') }}">Closing
+                                                            Film</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                        </ul>
+                                    </li>
                                 </ul>
                             </div>
                             <!-- About Us Section End -->

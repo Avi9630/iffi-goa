@@ -2,8 +2,8 @@
 
 use App\Http\Controllers\CommonController;
 use App\Http\Controllers\ContactUsController;
-use App\Http\Controllers\InternationalCinemaController;
 use App\Http\Controllers\IndianPanoramaController;
+use App\Http\Controllers\InternationalCinemaController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -12,31 +12,31 @@ Route::get('/', function () {
 
 Route::controller(CommonController::class)->group(function () {
 
-    Route::get('goa-tourist-places',                        'goaTouristPlace')->name('goa-tourist-places');
+    Route::get('goa-tourist-places', 'goaTouristPlace')->name('goa-tourist-places');
 
-    Route::get('55th-iffi-festival',                        'iffiFestival')->name('55th-iffi-festival');
+    Route::get('55th-iffi-festival', 'iffiFestival')->name('55th-iffi-festival');
 
-    Route::get('highlights',                                'highlights')->name('highlights');
+    Route::get('highlights', 'highlights')->name('highlights');
 
-    Route::get('international-cinema',                      'internationalCinema')->name('international-cinema');
+    Route::get('international-cinema', 'internationalCinema')->name('international-cinema');
 
-    Route::get('international-cinema/competition/{slug}',   'internationalCompetitionDetail')->name('international-competition-detail');
+    Route::get('international-cinema/competition/{slug}', 'internationalCompetitionDetail')->name('international-competition-detail');
 
-    Route::get('director-debut-film',                       'directorDebutFilm')->name('director-debut-film');
+    Route::get('director-debut-film', 'directorDebutFilm')->name('director-debut-film');
 
-    Route::get('indian-panorama',                           'indianPanorama')->name('indian-panorama');
+    Route::get('indian-panorama', 'indianPanorama')->name('indian-panorama');
 
-    Route::get('sponsors',                                  'sponsors')->name('sponsors');
+    Route::get('sponsors', 'sponsors')->name('sponsors');
 
-    Route::get('technical-committee',                       'technicalCommittee')->name('technical-committee');
+    Route::get('technical-committee', 'technicalCommittee')->name('technical-committee');
 
     // Route::get('faq',                                       'faq')->name('faq');
 
-    Route::get('media/gallery',                             'gallery')->name('gallery');
+    Route::get('media/gallery', 'gallery')->name('gallery');
 
-    Route::get('media/press-release',                       'pressRelease')->name('press-release');
+    Route::get('media/press-release', 'pressRelease')->name('press-release');
 
-    Route::get('media/news-and-update',                     'newsUpdate')->name('news-and-update');
+    Route::get('media/news-and-update', 'newsUpdate')->name('news-and-update');
 
     // Route::get('news-and-update',                 'newsUpdate1')->name('news-and-update');
 });
@@ -68,12 +68,12 @@ Route::controller(InternationalCinemaController::class)->group(function () {
 
 //Indian Panorama
 Route::controller(IndianPanoramaController::class)->group(function () {
-    Route::get('indian-panorama/official-selection-feature',        'officialFeature')->name('official-selection-feature');
-    Route::get('indian-panorama/official-selection-non-feature',    'officialNonFeature')->name('official-selection-non-feature');
-    Route::get('indian-panorama/accessible-film',                   'accessibleFilm')->name('accessible-film');
+    Route::get('indian-panorama/official-selection-feature', 'officialFeature')->name('official-selection-feature');
+    Route::get('indian-panorama/official-selection-non-feature', 'officialNonFeature')->name('official-selection-non-feature');
+    Route::get('indian-panorama/accessible-film', 'accessibleFilm')->name('accessible-film');
 });
 
-Route::get('get-all-ticker',        [TickerController::class,   'getAllTicker'])->name('get-all-ticker');
+Route::get('get-all-ticker', [TickerController::class,   'getAllTicker'])->name('get-all-ticker');
 
 //ABOUT-IFFI
 Route::get('about-iffi', function () {
@@ -89,16 +89,20 @@ Route::get('goa-connectivity', function () {
 })->name('connectivity');
 
 Route::get('international-jury', function () {
-    return view('about-us.international-jury');
+    return view('jury.international-jury');
 })->name('international-jury');
+
+Route::get('ip-jury', function () {
+    return view('jury.ip-jury');
+})->name('ip-jury');
 
 Route::get('faq', function () {
     return view('about-us.faq');
 })->name('faq');
 
 Route::controller(ContactUsController::class)->group(function () {
-    Route::get('contact-us',    'contactUsView')->name('contact-us');
-    Route::post('contact-us',   'contactUsStore')->name('contact-us');
+    Route::get('contact-us', 'contactUsView')->name('contact-us');
+    Route::post('contact-us', 'contactUsStore')->name('contact-us');
 });
 
 //FILM SELECTION / INTERNATIONAL CINEMA
@@ -158,3 +162,15 @@ Route::get('privacy-policy', function () {
 Route::get('master-classes', function () {
     return view('master-class.master');
 })->name('master-classes');
+
+Route::get('opening-film', function () {
+    return view('screening.opening-film');
+})->name('opening-film');
+
+Route::get('midfest-film', function () {
+    return view('screening.midfest-film');
+})->name('midfest-film');
+
+Route::get('closing-film', function () {
+    return view('screening.closing-film');
+})->name('closing-film');
