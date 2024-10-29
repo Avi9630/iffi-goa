@@ -30,28 +30,6 @@
                                             target="_blank">Glimpses of IFFI 2023</a>
                                     </li>
 
-                                    <li class="nav-item dropdown">
-
-                                        <a class="nav-link dropdown-toggle" href="#" role="button"
-                                            data-bs-toggle="dropdown" aria-expanded="false">Jury
-                                        </a>
-                                        <ul class="dropdown-menu">
-
-                                            <li>
-                                                <a href="{{ route('international-jury') }}" class="dropdown-item">
-                                                    International Jury
-                                                </a>
-                                            </li>
-
-                                            {{-- <li>
-                                                <a href="{{ route('connectivity') }}" class="dropdown-item">
-                                                    Connectivity </a>
-                                            </li> --}}
-
-                                        </ul>
-
-                                    </li>
-
                                     <li class="nav-item">
                                         <a href="{{ route('festival-venue') }}" class="nav-link">Festival Venue</a>
                                     </li>
@@ -85,6 +63,35 @@
                                         <a href="{{ route('faq') }}" class="nav-link">FAQ's</a>
                                     </li>
 
+                                    {{-- <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">Best Of IFFI</a>
+                                        <ul class="dropdown-menu">
+
+                                            <li class="nav-item dropend">
+                                                <a class="nav-link dropdown-toggle" href="#" role="button"
+                                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                                    Screening
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('opening-film') }}">Opening
+                                                            Film</a>
+                                                    </li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('midfest-film') }}">Midfest
+                                                            Film</a>
+                                                    </li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('closing-film') }}">Closing
+                                                            Film</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                        </ul>
+                                    </li> --}}
+
                                 </ul>
                             </div>
                             <!-- About Us Section End -->
@@ -98,28 +105,40 @@
                                         <a class="nav-link dropdown-toggle" href="#" role="button"
                                             data-bs-toggle="dropdown" aria-expanded="false">International Cinema</a>
                                         <ul class="dropdown-menu">
-                                            <li>
+
+                                            {{-- <li>
                                                 <a href="https://filmfreeway.com/InternationalFilmFestivalofIndiaIFFI-Goa"
                                                     class="dropdown-item nav-link yelow-color-link"
                                                     target="_blank">Submit Your Entry</a>
+                                            </li> --}}
+
+                                            <li>
+                                                <a href="{{ route('international-jury') }}"
+                                                    class="dropdown-item">International Jury - 2024</a>
                                             </li>
+
                                             <li>
                                                 <a href="{{ route('icinema-rules-regulation') }}"
                                                     class="dropdown-item">Rules & Regulations</a>
                                             </li>
+
                                             <li class="nav-item dropend">
+
                                                 <a class="nav-link dropdown-toggle" href="#" role="button"
                                                     data-bs-toggle="dropdown" aria-expanded="false">
                                                     Curated Sections 2023
                                                 </a>
+
                                                 <ul class="dropdown-menu">
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('international-competition') }}">International
                                                             Competition</a></li>
+
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('award-for-best-debute') }}">Award For The
                                                             Best
                                                             Debut</a></li>
+
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('icft-unesco-medal') }}">ICFT-UNESCO Gandhi
                                                             Medal
@@ -228,6 +247,21 @@
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('special-screening') }}">Special
                                                             Screening</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="nav-item dropend">
+                                                <a class="nav-link dropdown-toggle" href="#" role="button"
+                                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                                    Indian Panorama Jury - 2024
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('indian-panorama-jury-feature') }}">Feature</a>
+                                                    </li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('indian-panorama-jury-non-feature') }}">Non-Feature</a>
                                                     </li>
                                                 </ul>
                                             </li>

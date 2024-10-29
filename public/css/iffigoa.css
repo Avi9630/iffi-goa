@@ -550,6 +550,8 @@ footer a:hover {
 .page-header {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
         url(../images/main-header/aboutbg.jpg) center center no-repeat;
+    /* background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url(../images/main-header/55-IFFI-Goa.png) center center no-repeat; */
     background-size: cover;
     /* padding: 150px 0!important; */
     /* height: 100%; */
@@ -1124,6 +1126,18 @@ footer a:hover {
 .jury_img {
     border-radius: 15px;
     overflow: hidden;
+}
+.screening-cont p {
+    margin: 0;
+}
+.screening-cont .open-content p {
+    color: #2400ff;
+    & span {
+        color: black;
+    }
+}
+.screening-img p {
+    color: gray;
 }
 @keyframes jump {
     0% {
