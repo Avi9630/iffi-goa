@@ -30,6 +30,28 @@
                                             target="_blank">Glimpses of IFFI 2023</a>
                                     </li>
 
+                                    <li class="nav-item dropdown">
+
+                                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">Jury
+                                        </a>
+                                        <ul class="dropdown-menu">
+
+                                            <li>
+                                                <a href="{{ route('international-jury') }}" class="dropdown-item">
+                                                    International Jury
+                                                </a>
+                                            </li>
+
+                                            {{-- <li>
+                                                <a href="{{ route('connectivity') }}" class="dropdown-item">
+                                                    Connectivity </a>
+                                            </li> --}}
+
+                                        </ul>
+
+                                    </li>
+
                                     <li class="nav-item">
                                         <a href="{{ route('festival-venue') }}" class="nav-link">Festival Venue</a>
                                     </li>
@@ -125,7 +147,8 @@
                                                             href="{{ route('restored-classic') }}">Restored
                                                             Classics</a>
                                                     </li>
-                                                    <li><a class="dropdown-item" href="{{ route('uniceff') }}">UNICEF X
+                                                    <li><a class="dropdown-item" href="{{ route('uniceff') }}">UNICEF
+                                                            X
                                                             IFFI</a>
                                                     </li>
                                                 </ul>
