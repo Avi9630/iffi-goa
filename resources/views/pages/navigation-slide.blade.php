@@ -291,7 +291,7 @@
 
                                             <li>
                                                 <a href="{{ route('web-series-jury') }}" class="dropdown-item">
-                                                    Best Ott Jury - 2024</a>
+                                                    Best OTT Jury - 2024</a>
                                             </li>
 
                                         </ul>
