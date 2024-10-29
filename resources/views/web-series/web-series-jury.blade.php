@@ -34,18 +34,28 @@
                                 <h2 class="mt-3">Mr. Madhur Bhandarkar </h2>
                                 <h5>Filmmaker</h5>
                                 <p>
-                                    Madhur Bhandarkar was born on August 26, 1966 in Bombay, Maharashtra, India. He is a
-                                    director and writer, known for Chandni Bar (2001), Babli Bouncer (2022) and Page 3
-                                    (2005). He has been married to Renu Namboodiri since December 15, 2003. They have one
-                                    child.<br>
-                                    Associated with International Film & TV Research Centre of the Asian Academy Of Film and
-                                    television, noida film city.<br>
+                                    Madhur Bhandarkar is an acclaimed Indian film director, producer, and screenwriter known
+                                    for his impactful storytelling in Hindi cinema. He gained prominence for his films that
+                                    delve into social issues, realism, and the darker aspects of life. Starting his career
+                                    in the late 1990s, Bhandarkar made a significant mark with his directorial debut, "Tanha
+                                    Dil," in 2000, but it was his later works that truly established him as a notable
+                                    filmmaker. Films like "Chandni Bar" (2001), which tells the harrowing story of a young
+                                    woman's struggles, and "Page 3" (2005), which offers a glimpse into the lives of
+                                    Mumbai's social elite, showcase his keen insight into urban complexities. His 2008 film
+                                    "Fashion" explores the challenges faced by aspiring models, while "Heroine" (2012)
+                                    highlights the tumultuous life of a Bollywood actress, both garnering critical acclaim
+                                    and several awards. Bhandarkar’s unique style often features strong female protagonists
+                                    and is marked by a documentary-like realism, supported by extensive research to
+                                    authentically portray the environments and characters in his narratives. With multiple
+                                    National Film Awards and Filmfare Awards to his name, Bhandarkar is celebrated for
+                                    blending entertainment with meaningful commentary, making him a prominent voice in
+                                    contemporary Indian cinema.
                                 </p>
                             </div>
                         </div>
                         <div class="col-md-5 ">
                             <div class="jury_img">
-                                <img src="{{ asset('public/images/jury/ott-jury/Madhur-Bhandarkar.avif') }}"
+                                <img src="{{ asset('public/images/jury/ott-jury/Madhur-Bhandarkar.png') }}"
                                     class="img-fluid" style="width:100%">
                             </div>
                         </div>
