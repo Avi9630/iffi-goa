@@ -114,7 +114,7 @@
 
                                             <li>
                                                 <a href="{{ route('international-jury') }}"
-                                                    class="dropdown-item">Internation Jury - 2024</a>
+                                                    class="dropdown-item">International Jury - 2024</a>
                                             </li>
 
                                             <li>
