@@ -51,7 +51,7 @@
                             </div>
                         </div>
                         <div class="col-md-5 ">
-                            <div class="jury-img">
+                            <div class="jury_img">
                                 <img src="{{ asset('public/images/jury/indian-panorama-jury/Shri. Subbiah Nallamuthu.jpg') }}"
                                     class="img-fluid" style="width:100%">
                             </div>

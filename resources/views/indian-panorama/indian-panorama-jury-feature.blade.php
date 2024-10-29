@@ -45,7 +45,7 @@
                             </div>
                         </div>
                         <div class="col-md-5 ">
-                            <div class="jury-img">
+                            <div class="jury_img">
                                 <img src="{{ asset('public/images/jury/indian-panorama-jury/Dr. Chandra Prakash Dwivedi.jfif') }}"
                                     class="img-fluid">
                             </div>
