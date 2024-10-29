@@ -32,15 +32,18 @@
                         <div class="col-md-7 ">
                             <div class="international-jury-text">
                                 <h2 class="mt-3">Dr. Chandra Prakash Dwivedi</h2>
-                                <h5>Chairperson</h5>
+                                <h5>Director and Screenwriter</h5>
                                 <p>
-                                    The Feature Film Jury was headed by acclaimed Film Director, Actor and Screenwriter
-                                    <b>Dr.
-                                        Chandra Prakash Dwivedi</b>. The Feature Jury constituted of twelve Members, who
-                                    individually
-                                    represent various acclaimed films and are well-known film professionals, while
-                                    collectively
-                                    representing the diverse Indian film fraternity.
+                                    Chandraprakash Dwivedi is an Indian actor, film director and screenwriter, who is best
+                                    known for directing the 1991 television epic Chanakya in which he also played the title
+                                    role of the political strategist Chanakya and an inspiration for millions. He has also
+                                    directed the 1996 television series Mrityunjay which is based on the life of Karna, one
+                                    of the main characters of the epic Mahabharata, for which he won a Screen Videocon Best
+                                    Director award. His other major work is the 2003 film Pinjar, a tragic love story set
+                                    amidst the Hindu-Muslim tensions during the Partition of India, based on Amrita Pritam's
+                                    novel of the same name. He also wrote and directed Akshay Kumar-starrer Samrat
+                                    Prithviraj (2022). He was honoured by the Government of India with the Padma Shri, the
+                                    fourth-highest civilian honour of the country, in 2022.
                                 </p>
                             </div>
                         </div>

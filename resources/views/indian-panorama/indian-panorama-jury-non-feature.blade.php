@@ -32,21 +32,27 @@
                         <div class="col-md-7 ">
                             <div class="international-jury-text">
                                 <h2 class="mt-3">Shri. Subbiah Nallamuthu</h2>
-                                <h5>Jury Chairperson</h5>
+                                <h5>Cinematographer</h5>
                                 <p>
-                                    Ashutosh Gowariker, an actor turned filmmaker from India, gained cinematic immortality
-                                    with
-                                    the cross-cultural period sports drama Lagaan, which earned worldwide acclaim and an
-                                    Oscar
-                                    nomination. He founded Ashutosh Gowariker Productions, producing acclaimed films like
-                                    Swades
-                                    and Jodhaa Akbar. His diverse repertoire includes romantic comedies, patriotic
-                                    thrillers,
-                                    and war epics like Mohenjo Daro and Panipat. Gowariker's films address nationalism,
-                                    patriarchy, religious tolerance, and women's empowerment. A member of the Director's
-                                    Branch
-                                    in the Academy in Los Angeles, he is known for both historical epics and contemporary
-                                    stories with profound themes.
+                                    Nallamuthu is a leading wildlife filmmaker from India. He specialized in cinematography
+                                    from FTIT, Chennai and later worked as a high-speed cameraman with Indian Space Research
+                                    Organization. He has worked with some of industry's best networks from National
+                                    Geographic Channel BBC, Channel 4, Discovery, Animal Planet, ZDF, and Doordarshan.
+                                    Nallamuthu has shot India's longest running Panda Award winning Environment series,
+                                    'Living on the Edge'. His oeuvre includes firsts of many: the travel show 'Off the
+                                    Beaten Track', automobile show 'Wheels and reality show 'Hospital' for BBC, 'Soul
+                                    Searching' & 'Body Shock Specials' for Channel 4, 'Life Force II' -India Section for
+                                    Discovery, Hindi feature film titled 'Dharm' in full HD for theatrical release, and one
+                                    of the first to use 4K resolution for wildlife filming in India. Since 1987, he has made
+                                    a range of films including 11 series and 55 documentaries, most centred on Indian
+                                    wildlife. His passion for the Royal Bengal Tiger has translated into five tiger-centric
+                                    international documentaries for National Geographic Channel and BBC which he has
+                                    produced, filmed and directed. His ability to add a theatrical touch to factual
+                                    story-telling and his technical skills combined with a poetic visual style have won him
+                                    several awards including four prestigious Indian National Film Awards for Best
+                                    Cinematography and Best Environment Films. Through his films, Nallamuthu hopes to bring
+                                    to life every second of the raging the struggle for survival that persists in the
+                                    unpredictable wild and gives conservation a fresh perspective.
                                 </p>
                             </div>
                         </div>
