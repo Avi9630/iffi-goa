@@ -16,11 +16,11 @@
     </div>
 
     <!-- Inner Page Banner Section -->
-    <div class="col-lg-12 mt-5 static-content">
-        <div class="container">
+    <div class="container mt-5 static-content">
+        {{-- <div class="container"> --}}
 
-            <!-- Nav tabs -->
-            <ul class="nav nav-tabs custom-tab-list nav-justified" id="myTab" role="tablist">
+        <!-- Nav tabs -->
+        {{-- <ul class="nav nav-tabs custom-tab-list nav-justified" id="myTab" role="tablist">
 
                 <li class="nav-item" role="presentation">
                     <a class="nav-link active" id="all-tab" data-bs-toggle="tab" href="#all" role="tab"
@@ -90,26 +90,43 @@
                     </a>
                 </li>
 
-            </ul>
-
-            <!-- Tab content -->
-            <div class="tab-content" id="myTabContent">
-
-                <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
-                    @foreach (['nov20', 'nov21', 'nov22', 'nov23', 'nov24', 'nov25', 'nov26', 'nov27', 'nov28'] as $date)
-                        @include("master-class.{$date}")
-                    @endforeach
+            </ul> --}}
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="master-nav-bar">
+                    <ul class="nav nav-tabs custom-tab-list nav-justified " id="myTabD" role="tablist">
+                        @foreach (['all' => 'All', 'nov20' => 'Nov 20', 'nov21' => 'Nov 21', 'nov22' => 'Nov 22', 'nov23' => 'Nov 23', 'nov24' => 'Nov 24', 'nov25' => 'Nov 25', 'nov26' => 'Nov 26', 'nov27' => 'Nov 27', 'nov28' => 'Nov 28'] as $date => $label)
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link {{ $date === 'all' ? 'active' : '' }}" id="{{ $date }}-tab"
+                                    data-bs-toggle="tab" href="#{{ $date }}" role="tab"
+                                    aria-controls="{{ $date }}"
+                                    aria-selected="{{ $date === 'all' ? 'true' : 'false' }}">{{ $label }}</a>
+                            </li>
+                        @endforeach
+                    </ul>
                 </div>
+            </div>
+        </div>
 
+
+        <!-- Tab content -->
+        <div class="tab-content" id="myTabContent">
+
+            <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
                 @foreach (['nov20', 'nov21', 'nov22', 'nov23', 'nov24', 'nov25', 'nov26', 'nov27', 'nov28'] as $date)
-                    <div class="tab-pane fade" id="{{ $date }}" role="tabpanel"
-                        aria-labelledby="{{ $date }}-tab">
-                        @include("master-class.{$date}")
-                    </div>
+                    @include("master-class.{$date}")
                 @endforeach
             </div>
 
+            @foreach (['nov20', 'nov21', 'nov22', 'nov23', 'nov24', 'nov25', 'nov26', 'nov27', 'nov28'] as $date)
+                <div class="tab-pane fade" id="{{ $date }}" role="tabpanel"
+                    aria-labelledby="{{ $date }}-tab">
+                    @include("master-class.{$date}")
+                </div>
+            @endforeach
         </div>
+
+        {{-- </div> --}}
     </div>
 
     {{-- POPUP --}}
@@ -162,56 +179,53 @@
 
     {{-- Script Start --}}
     <script>
-        const modalData = {
-            nov20: {
-                title: "Beyond The Lens : Funding and Monetization in Documentary Filmmaking",
-                date: "June 16, 2024, 4.30 Noon - 5.30 PM",
-                moderator: "Vani Tripathi Tikoo",
-                description: "Detailed description for Nov 20.",
-                speakers: [{
-                    name: "Svetlana Naudiyal",
-                    description: "Serving MUBI as the Programming Director of Asia-Pacific region.",
-                    image: "images/user1.jpg"
-                }]
-            },
+        // const modalData = {
+        //     nov20: {
+        //         title: "Beyond The Lens: Funding and Monetization in Documentary Filmmaking",
+        //         date: "June 16th, 2024, 04.30 PM TO 05.30 PM",
+        //         moderator: "Vani Tripathi Tikoo",
+        //         description: "Detailed description for Nov 20.",
+        //         speakers: [{
+        //             name: "Svetlana Naudiyal",
+        //             description: "Serving MUBI as the Programming Director of Asia-Pacific region.",
+        //             image: "images/user1.jpg"
+        //         }]
+        //     },
+        //     nov21: {
+        //         title: "Women Safety and Cinema",
+        //         date: "Nov 21st, 2024, 11.00 AM TO 12.00 PM",
+        //         moderator: "Vani Tripathi Tikoo",
+        //         description: "Explores the evolution of female characters and the impact of films on societal attitudes towards women's safety.",
+        //         speakers: [{
+        //                 name: "Imtiaz Ali",
+        //                 description: "Indian film director and screenwriter, known for films like Jab We Met.",
+        //                 image: "{{ asset('public/images/master-class/Imtiaz_Ali.avif') }}"
+        //             },
+        //             {
+        //                 name: "Suhasini Manirathnam",
+        //                 description: "Actress and director with notable films in Telugu, Tamil, and Malayalam cinema.",
+        //                 image: "{{ asset('public/images/master-class/Suhasini Manirathnam.jfif') }}"
+        //             },
+        //             {
+        //                 name: "Kushboo Sundar",
+        //                 description: "Actress and politician, prominent in Tamil cinema.",
+        //                 image: "{{ asset('public/images/master-class/Kushboo Sundar.jpg') }}"
+        //             }
+        //         ]
+        //     },
+        // };
 
-            nov21: {
-                title: "Women Safety and Cinema",
-                date: "Nov 21st, 2024, 11.00 AM TO 12.00 PM",
-                moderator: "Vani Tripathi Tikoo",
-                description: "The world of cinema should not be a distant entity when it comes to react and express itself with a conscience. It examines the evolution of female characters, the depiction of violence against women, and the impact of films on societal attitudes towards women's safety. Also, Implementation of policies and practices that promote a safe and inclusive workspace environment for women will be discussed by this panel.",
-                speakers: [{
-                        name: "Imtiaz Ali",
-                        description: "Imtiaz Ali is an Indian film director, producer, and screenwriter. He is best known for directing Jab We Met (2007), Love Aaj Kal (2009), Rockstar (2011), Highway (2014), Tamasha (2015) and Amar Singh Chamkila (2024).",
-                        image: "{{ asset('public/images/master-class/Imtiaz_Ali.avif') }}"
-                    },
-                    {
-                        name: "Suhasini Manirathnam",
-                        description: "Suhasini Maniratnam is an Indian actress who works in Telugu, Tamil, Malayalam and Kannada films. Suhasini made her film debut in 1980 with the Tamil movie Nenjathai Killathe. For her first movie, she won the Tamil Nadu State Film Award for Best Actress. She was introduced to Malayalam cinema through Padmarajan's Koodevide (1983). She won the National Film Award for Best Actress for her role in the 1985 Tamil film Sindhu Bhairavi.Suhasini directed the anthology mini - series Penn shown on Madras Doordarshan. Suhasini and her husband Mani Ratnam have been involved in the running of their production company Madras Talkies.",
-                        image: "{{ asset('public/images/master-class/Kushboo Sundar.jpg') }}"
-                    },
-                    {
-                        name: "Kushboo Sundar",
-                        description: "Khushbu Sundar is an Indian politician, actress, film producer and television personality. She is known for her work predominantly in Tamil language films and in a few Telugu, Malayalam, Kannada and Hindi films. She has appeared in over 185 films, and has won three Tamil Nadu State Film Awards, two Cinema Express Awards, a Kalaimamani Award and a Kerala State Film Award.",
-                        image: "{{ asset('public/images/master-class/Suhasini Manirathnam.jfif') }}"
-                    },
-                ]
-            },
 
-            // Add more sessions for nov22 to nov28 as needed
-        };
         document.querySelectorAll('.nav-link').forEach(tab => {
             tab.addEventListener('click', function() {
                 const dateId = this.id.split('-')[0]; // Get the ID part before '-tab'
                 const data = modalData[dateId];
-                console.log(data);
+                // console.log(data);
                 if (data) {
                     document.getElementById('exampleModalLabel').innerText = data.title;
                     document.getElementById('modalDate').innerText = data.date;
                     document.getElementById('modalModerator').innerText = data.moderator;
                     document.getElementById('modalDescription').innerText = data.description;
-
-                    // Clear previous speakers
                     const speakersList = document.getElementById('modalSpeakers');
                     speakersList.innerHTML = '';
                     data.speakers.forEach(speaker => {
