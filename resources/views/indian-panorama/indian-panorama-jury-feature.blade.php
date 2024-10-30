@@ -32,8 +32,8 @@
                         <div class="col-md-7 ">
                             <div class="international-jury-text">
                                 <h2 class="mt-3">Dr. Chandra Prakash Dwivedi</h2>
-                                <h5>Director and Screenwriter</h5>
-                                <p>
+                                <h5>Chairperson</h5>
+                                {{-- <p>
                                     Chandraprakash Dwivedi is an Indian actor, film director and screenwriter, who is best
                                     known for directing the 1991 television epic Chanakya in which he also played the title
                                     role of the political strategist Chanakya and an inspiration for millions. He has also
@@ -44,7 +44,7 @@
                                     novel of the same name. He also wrote and directed Akshay Kumar-starrer Samrat
                                     Prithviraj (2022). He was honoured by the Government of India with the Padma Shri, the
                                     fourth-highest civilian honour of the country, in 2022.
-                                </p>
+                                </p> --}}
                             </div>
                         </div>
                         <div class="col-md-5 ">
@@ -74,17 +74,13 @@
                 ];
             @endphp
 
-            <div class="card">
-                <div class="card-body">
-                    <ol>
-                        @foreach ($features as $key => $feature)
-                            <li>{{ $feature }}</li>
-                        @endforeach
-                    </ol>
-                    {{-- <div class="row  align-items-center ">
-                    </div> --}}
+            @foreach ($features as $key => $feature)
+                <div class="card">
+                    <div class="card-body">
+                        <h3>{{ $feature }}</h3>
+                    </div>
                 </div>
-            </div>
+            @endforeach
 
         </div>
     </div>
