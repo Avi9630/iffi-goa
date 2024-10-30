@@ -18,13 +18,32 @@
         </div>
         <div class="user-profile-icon">
             <ul>
-                <li><img src="{{ asset('public/images/master-class/user1.jpg') }}"></li>
-                <li><img src="{{ asset('public/images/master-class/user2.jpg') }}"></li>
-                <li><img src="{{ asset('public/images/master-class/user3.jpg') }}"></li>
-                <li><img src="{{ asset('public/images/master-class/user4.jpg') }}"></li>
-                <li><img src="{{ asset('public/images/master-class/user5.jpg') }}"></li>
+                <li><img src="{{ asset('public/images/master-class/Imtiaz_Ali.avif') }}"></li>
+                <li><img src="{{ asset('public/images/master-class/Suhasini Manirathnam.jfif') }}"></li>
+                <li><img src="{{ asset('public/images/master-class/Kushboo Sundar.jpg') }}"></li>
             </ul>
         </div>
     </div>
 
+    <div class="d-flex tab-content-box">
+        <h4 class="time-div">2.30 PM - 4.00 PM</h4>
+        <div class="callout">
+            <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab">
+                360° Cinema:Film Festival Directors' Round Table
+            </h4>
+            <p>
+                While it comes to showcase meaningful cinema and also to create a future for it, it is pertinent for
+                the Film Festival Directors to sit & talk on a round table! This roundtable discussion brings together
+                legendary festival directors to explore the vital role of film festivals in promoting global cinema.
+            </p>
+            {{-- <div><a href="#" class="btn cus-prim-btn">Speaker</a></div> --}}
+        </div>
+        <div class="user-profile-icon">
+            <ul>
+                <li><img src="{{ asset('public/images/master-class/Imtiaz_Ali.avif') }}"></li>
+                <li><img src="{{ asset('public/images/master-class/Suhasini Manirathnam.jfif') }}"></li>
+                <li><img src="{{ asset('public/images/master-class/Kushboo Sundar.jpg') }}"></li>
+            </ul>
+        </div>
+    </div>
 </div>
