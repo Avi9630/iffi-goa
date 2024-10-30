@@ -17,7 +17,7 @@
     <!-- Menu slide end -->
 
     <!-- Inner Page Banner Section -->
-    <div class="container-fluid page-header py-5">
+    <div class="container-fluid page-header bannerBg-IFFI-international py-5">
         <div class="container text-center ">
             <h1 class="page-title-header">Indian Panorama Jury Feature</h1>
         </div>
@@ -51,6 +51,8 @@
                             <div class="jury_img">
                                 <img src="{{ asset('public/images/jury/indian-panorama-jury/Dr. Chandra Prakash Dwivedi.jfif') }}"
                                     class="img-fluid">
+                                {{-- <img src="{{ asset('public/images/jury/indian-panorama-jury/Chandra Prakash Dwivedi.png') }}"
+                                    class="img-fluid"> --}}
                             </div>
                         </div>
                     </div>
