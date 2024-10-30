@@ -112,14 +112,15 @@
                                                     target="_blank">Submit Your Entry</a>
                                             </li> --}}
 
-                                            <li>
-                                                <a href="{{ route('international-jury') }}"
-                                                    class="dropdown-item">International Jury - 2024</a>
-                                            </li>
 
                                             <li>
                                                 <a href="{{ route('icinema-rules-regulation') }}"
                                                     class="dropdown-item">Rules & Regulations</a>
+                                            </li>
+
+                                            <li>
+                                                <a href="{{ route('international-jury') }}"
+                                                    class="dropdown-item">International Jury - 2024</a>
                                             </li>
 
                                             <li class="nav-item dropend">
@@ -186,6 +187,10 @@
                                                     class="dropdown-item">About Debut Director</a>
                                             </li>
                                             <li>
+                                                <a href="{{ route('debut-director-jury') }}"
+                                                    class="dropdown-item">Debut Director Jury - 2024</a>
+                                            </li>
+                                            <li>
                                                 <a href="https://iffigoa.org/festival/indian-debut-director"
                                                     class="dropdown-item nav-link yelow-color-link"
                                                     target="_blank">View your entry</a>
@@ -193,10 +198,6 @@
                                             <li>
                                                 <a href="{{ route('dd-rules-regulations') }}"
                                                     class="dropdown-item">Rules & Regulations</a>
-                                            </li>
-                                            <li>
-                                                <a href="{{ route('debut-director-jury') }}"
-                                                    class="dropdown-item">Debut Director Jury - 2024</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -209,6 +210,20 @@
                                             <li>
                                                 <a href="{{ route('about-indian-panorama') }}"
                                                     class="dropdown-item">About Indian Panorama</a>
+                                            </li>
+                                            <li class="nav-item dropend">
+                                                <a class="nav-link dropdown-toggle" href="#" role="button"
+                                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                                    Indian Panorama Jury - 2024
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('indian-panorama-jury-feature') }}">Featured</a>
+                                                    </li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('indian-panorama-jury-non-feature') }}">Non-Featured</a>
+                                                    </li>
+                                                </ul>
                                             </li>
 
                                             <li>
@@ -256,20 +271,7 @@
                                                 </ul>
                                             </li>
 
-                                            <li class="nav-item dropend">
-                                                <a class="nav-link dropdown-toggle" href="#" role="button"
-                                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                                    Indian Panorama Jury - 2024
-                                                </a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a class="dropdown-item"
-                                                            href="{{ route('indian-panorama-jury-feature') }}">Feature</a>
-                                                    </li>
-                                                    <li><a class="dropdown-item"
-                                                            href="{{ route('indian-panorama-jury-non-feature') }}">Non-Feature</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
+
                                         </ul>
                                     </li>
                                     <!-- Best Web Series menu Start-->
@@ -284,15 +286,15 @@
                                             </li>
 
                                             <li>
+                                                <a href="{{ route('web-series-jury') }}" class="dropdown-item">
+                                                    Best Web Series Jury - 2024</a>
+                                            </li>
+                                            <li>
                                                 <a href="https://iffigoa.org/festival/web-series"
                                                     class="dropdown-item nav-link yelow-color-link"
                                                     target="_blank">View your entry</a>
                                             </li>
 
-                                            <li>
-                                                <a href="{{ route('web-series-jury') }}" class="dropdown-item">
-                                                    Best OTT Jury - 2024</a>
-                                            </li>
 
                                         </ul>
                                     </li>

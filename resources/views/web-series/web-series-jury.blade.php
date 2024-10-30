@@ -19,7 +19,7 @@
     <!-- Inner Page Banner Section -->
     <div class="container-fluid page-header bannerBg-IFFI-international py-5">
         <div class="container text-center ">
-            <h1 class="page-title-header">Best OTT Jury - 2024</h1>
+            <h1 class="page-title-header">Best Web Series Jury</h1>
         </div>
     </div>
     <!-- Inner Page Banner Section -->
