@@ -17,7 +17,7 @@
     <!-- Menu slide end -->
 
     <!-- Inner Page Banner Section -->
-    <div class="container-fluid page-header py-5">
+    <div class="container-fluid page-header bannerBg-IFFI-international py-5">
         <div class="container text-center ">
             <h1 class="page-title-header">International Jury</h1>
         </div>
@@ -32,8 +32,15 @@
                         <div class="col-md-7 ">
                             <div class="international-jury-text">
                                 <h2 class="mt-3">Ashutosh Gowariker</h2>
-                                <h5>Film maker</h5>
-                                <p>
+                                <h5>Chairperson</h5>
+                                <p>Ashutosh Gowariker, an acclaimed Indian filmmaker and former actor, gained global
+                                    recognition with Lagaan, an Oscar-nominated period drama. He founded Ashutosh Gowariker
+                                    Productions, creating notable films like Swades and Jodhaa Akbar. His diverse
+                                    filmography spans romantic comedies, patriotic thrillers, and historical epics (Mohenjo
+                                    Daro, Panipat), often tackling themes of nationalism, patriarchy, and women's
+                                    empowerment. A member of the Director's Branch of the Academy, Gowariker is known for
+                                    his impactful blend of historical and contemporary narratives.</p>
+                                {{-- <p>
                                     Ashutosh Gowariker, an actor turned filmmaker from India, gained cinematic immortality
                                     with
                                     the cross-cultural period sports drama Lagaan, which earned worldwide acclaim and an
@@ -74,12 +81,14 @@
                                     stories,
                                     he continues to leave a lasting impact on audiences worldwide.
 
-                                </p>
+                                </p> --}}
                             </div>
                         </div>
                         <div class="col-md-5 ">
                             <div class="jury_img">
-                                <img src="{{ asset('public/images/jury/international-jury/Ashutosh Gowariker.jpg') }}"
+                                {{-- <img src="{{ asset('public/images/jury/international-jury/Ashutosh Gowariker.jpg') }}"
+                                    class="img-fluid"> --}}
+                                <img src="{{ asset('public/images/jury/international-jury/Ashutosh.png') }}"
                                     class="img-fluid">
                             </div>
                         </div>

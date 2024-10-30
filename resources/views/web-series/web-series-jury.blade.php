@@ -17,7 +17,7 @@
     <!-- Menu slide end -->
 
     <!-- Inner Page Banner Section -->
-    <div class="container-fluid page-header py-5">
+    <div class="container-fluid page-header bannerBg-IFFI-international py-5">
         <div class="container text-center ">
             <h1 class="page-title-header">Best OTT Jury - 2024</h1>
         </div>
@@ -31,9 +31,9 @@
                     <div class="row  align-items-center ">
                         <div class="col-md-7 ">
                             <div class="international-jury-text">
-                                <h2 class="mt-3">Mr. Madhur Bhandarkar </h2>
-                                <h5>Filmmaker</h5>
-                                <p>
+                                <h2 class="mt-3">Shri. Madhur Bhandarkar </h2>
+                                <h5>Chairperson</h5>
+                                {{-- <p>
                                     Madhur Bhandarkar is an acclaimed Indian film director, producer, and screenwriter known
                                     for his impactful storytelling in Hindi cinema. He gained prominence for his films that
                                     delve into social issues, realism, and the darker aspects of life. Starting his career
@@ -50,12 +50,12 @@
                                     National Film Awards and Filmfare Awards to his name, Bhandarkar is celebrated for
                                     blending entertainment with meaningful commentary, making him a prominent voice in
                                     contemporary Indian cinema.
-                                </p>
+                                </p> --}}
                             </div>
                         </div>
                         <div class="col-md-5 ">
                             <div class="jury_img">
-                                <img src="{{ asset('public/images/jury/ott-jury/Madhur-Bhandarkar.png') }}"
+                                <img src="{{ asset('public/images/jury/ott-jury/Shri. Madhur Bhandarkar.webp') }}"
                                     class="img-fluid" style="width:100%">
                             </div>
                         </div>
@@ -64,18 +64,18 @@
             </div>
 
             @php
-                $features = ['Mr. Krishna Hebbale', 'Ms. Rupali Ganguli', 'Mr. Harish Shankar'];
+                $features = ['Shri. Krishna Hebbale', 'Shri. Rupali Ganguli', 'Shri. Harish Shankar'];
             @endphp
 
-            <div class="card">
-                <div class="card-body">
-                    <ol>
-                        @foreach ($features as $key => $feature)
-                            <li>{{ $feature }}</li>
-                        @endforeach
-                    </ol>
+            @foreach ($features as $key => $feature)
+                <div class="card">
+                    <div class="card-body">
+                        {{-- <ol> --}}
+                        <h4>{{ $feature }}</h4>
+                        {{-- </ol> --}}
+                    </div>
                 </div>
-            </div>
+            @endforeach
 
 
         </div>
