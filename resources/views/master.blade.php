@@ -112,6 +112,8 @@
         </div>
     </div>
 
+    {{-- POPUP --}}
+
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -135,7 +137,7 @@
     </div>
 
     <!-- Popup for Speaker Details -->
-    <div class="modal fade" id="details-info" tabindex="-1" aria-labelledby="details-infoModalLabel"
+    {{-- <div class="modal fade" id="details-info" tabindex="-1" aria-labelledby="details-infoModalLabel"
         aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -155,7 +157,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- Popup End -->
 
     {{-- Script Start --}}
@@ -177,21 +179,21 @@
                 title: "Women Safety and Cinema",
                 date: "Nov 21st, 2024, 11.00 AM TO 12.00 PM",
                 moderator: "Vani Tripathi Tikoo",
-                description: "Detailed description for Nov 21.",
+                description: "The world of cinema should not be a distant entity when it comes to react and express itself with a conscience. It examines the evolution of female characters, the depiction of violence against women, and the impact of films on societal attitudes towards women's safety. Also, Implementation of policies and practices that promote a safe and inclusive workspace environment for women will be discussed by this panel.",
                 speakers: [{
                         name: "Imtiaz Ali",
                         description: "Imtiaz Ali is an Indian film director, producer, and screenwriter. He is best known for directing Jab We Met (2007), Love Aaj Kal (2009), Rockstar (2011), Highway (2014), Tamasha (2015) and Amar Singh Chamkila (2024).",
-                        image: "{{ asset('public/images/master-class/user1.jpg') }}"
+                        image: "{{ asset('public/images/master-class/Imtiaz_Ali.avif') }}"
                     },
                     {
                         name: "Suhasini Manirathnam",
                         description: "Suhasini Maniratnam is an Indian actress who works in Telugu, Tamil, Malayalam and Kannada films. Suhasini made her film debut in 1980 with the Tamil movie Nenjathai Killathe. For her first movie, she won the Tamil Nadu State Film Award for Best Actress. She was introduced to Malayalam cinema through Padmarajan's Koodevide (1983). She won the National Film Award for Best Actress for her role in the 1985 Tamil film Sindhu Bhairavi.Suhasini directed the anthology mini - series Penn shown on Madras Doordarshan. Suhasini and her husband Mani Ratnam have been involved in the running of their production company Madras Talkies.",
-                        image: "{{ asset('public/images/master-class/user1.jpg') }}"
+                        image: "{{ asset('public/images/master-class/Kushboo Sundar.jpg') }}"
                     },
                     {
                         name: "Kushboo Sundar",
                         description: "Khushbu Sundar is an Indian politician, actress, film producer and television personality. She is known for her work predominantly in Tamil language films and in a few Telugu, Malayalam, Kannada and Hindi films. She has appeared in over 185 films, and has won three Tamil Nadu State Film Awards, two Cinema Express Awards, a Kalaimamani Award and a Kerala State Film Award.",
-                        image: "{{ asset('public/images/master-class/user1.jpg') }}"
+                        image: "{{ asset('public/images/master-class/Suhasini Manirathnam.jfif') }}"
                     },
                 ]
             },
@@ -202,6 +204,7 @@
             tab.addEventListener('click', function() {
                 const dateId = this.id.split('-')[0]; // Get the ID part before '-tab'
                 const data = modalData[dateId];
+                console.log(data);
                 if (data) {
                     document.getElementById('exampleModalLabel').innerText = data.title;
                     document.getElementById('modalDate').innerText = data.date;
@@ -230,14 +233,14 @@
             });
         });
 
-        function showSpeakerDetails(name, description, image) {
-            document.getElementById('speakerName').innerText = name;
-            document.getElementById('speakerDescription').innerText = description;
-            document.getElementById('speakerImage').src = image;
-            // Show the speaker details modal
-            const speakerDetailsModal = new bootstrap.Modal(document.getElementById('details-info'));
-            speakerDetailsModal.show();
-        }
+        // function showSpeakerDetails(name, description, image) {
+        //     document.getElementById('speakerName').innerText = name;
+        //     document.getElementById('speakerDescription').innerText = description;
+        //     document.getElementById('speakerImage').src = image;
+        //     // Show the speaker details modal
+        //     const speakerDetailsModal = new bootstrap.Modal(document.getElementById('details-info'));
+        //     speakerDetailsModal.show();
+        // }
     </script>
     {{-- Script End --}}
 
