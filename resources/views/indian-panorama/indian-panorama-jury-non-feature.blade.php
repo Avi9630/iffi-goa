@@ -19,13 +19,17 @@
     <!-- Inner Page Banner Section -->
     <div class="container-fluid page-header bannerBg-IFFI-international py-5">
         <div class="container text-center ">
-            <h1 class="page-title-header">Indian Panorama Jury <br>Non-Feature</h1>
+            <h1 class="page-title-header">Indian Panorama Jury </h1>
         </div>
     </div>
     <!-- Inner Page Banner Section -->
     <div class="col-lg-12 mt-5 static-content">
         <div class="container">
 
+            <div class="international-jury-text mb-4">
+                <h2 class="mt-3">Indian Panorama Jury - Non-Featured</h2>
+                {{-- <h5>Chairperson</h5> --}}
+            </div>
             <div class="card">
                 <div class="card-body">
                     <div class="row  align-items-center ">
