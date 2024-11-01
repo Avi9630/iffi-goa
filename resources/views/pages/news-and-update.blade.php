@@ -8,6 +8,26 @@
             <div class="newsUpdate1">
                 <div class="card shadow-sm">
                     <a href="{{ route('news-and-update') }}">
+                        <img src="{{ asset('public/images/desktop-image/Co-Production.jpg') }}"alt="image"
+                            class="img-fluid">
+                        <div class="card-body text-start">
+                            <h3>Films List Revealed for Co-Production Market</h3>
+                            <p class="card-text">
+                                The 18th edition of NFDC's Film Bazaar has revealed its official selection for the
+                                Co-Production Market, showcasing 21 feature films and 8 web series from seven countries.
+                                Held annually in the International Film Festival of India (IFFI), this year’s Film
+                                Bazaar will run from November 20 to 24, at the Marriott Resort in Goa, while IFFI will
+                                take place from November 20 to 28, 2024.
+                            </p>
+                            <p>
+                                <a href="{{ route('news-and-update') }}" target="_blank">Read more </a>
+                            </p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card shadow-sm">
+                    <a href="{{ route('news-and-update') }}">
                         <img src="{{ asset('public/images/desktop-image/Indian-Panorama-Films.jpg') }}"alt="image"
                             class="img-fluid">
                         <div class="card-body text-start">
@@ -25,6 +45,7 @@
                         </div>
                     </a>
                 </div>
+
                 @foreach ($datas as $news)
                     <div class="card shadow-sm">
                         <a href="{{ route('news-and-update') }}">
