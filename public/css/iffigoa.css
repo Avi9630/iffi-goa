@@ -759,6 +759,11 @@ footer a:hover {
             no-repeat;
     background-size: cover;
 }
+.bannerBg-IFFI-international {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url(../images/main-header/jury-callarge.jpg) center center no-repeat;
+    background-size: cover;
+}
 
 .iCinema-content h5 {
     font-size: 14px;
@@ -970,6 +975,7 @@ footer a:hover {
     padding: 0;
     margin: 0;
     display: inline-flex;
+    gap: 5px;
 }
 .user-profile-icon ul li {
     list-style: none;
@@ -989,7 +995,8 @@ footer a:hover {
     white-space: nowrap;
 }
 .user-profile-icon {
-    width: 320px;
+    /* width: 320px; */
+    text-align: center;
 }
 .custom-tab-list {
     padding: 0;
@@ -1170,7 +1177,7 @@ footer a:hover {
         height: auto !important;
     }
 }
-@media only screen and (min-width: 320px) and (max-width: 767px) {
+@media only screen and (min-width: 320px) and (max-width: 768px) {
     .connectivity-block {
         flex-direction: column;
         gap: 0;
@@ -1293,6 +1300,21 @@ footer a:hover {
     }
     .redCarp {
         margin: 10px;
+    }
+    .master-nav-bar {
+        overflow: scroll;
+        & .nav.nav-tabs {
+            /* display: ruby-text !important; */
+            display: inline !important;
+        }
+    }
+    .callout {
+        /* padding: 15px; */
+        border-left: none;
+        border-top: solid 4px #1b809e;
+    }
+    .user-profile-icon {
+        text-align: center;
     }
 }
 

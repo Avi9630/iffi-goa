@@ -157,7 +157,6 @@ Route::get('master-classes', function () {
 })->name('master-classes');
 
 // Jury Route
-
 Route::get('international-jury', function () {
     return view('international-cinema.international-jury');
 })->name('international-jury');
@@ -170,6 +169,13 @@ Route::get('indian-panorama-jury-non-feature', function () {
     return view('indian-panorama.indian-panorama-jury-non-feature');
 })->name('indian-panorama-jury-non-feature');
 
+Route::get('debut-director-jury', function () {
+    return view('indian-debut-director-awards.debut-director-jury');
+})->name('debut-director-jury');
+
+Route::get('web-series-jury', function () {
+    return view('web-series.web-series-jury');
+})->name('web-series-jury');
 
 Route::get('opening-film', function () {
     return view('screening.opening-film');
