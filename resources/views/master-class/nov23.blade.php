@@ -27,7 +27,7 @@
         <div class="col-md-3 col-12">
             <div class="user-profile-icon">
                 <ul>
-                    <li><img src="{{ asset('public/images/master-class/Imtiaz_Ali.avif') }}" alt="image"
+                    <li><img src="{{ asset('public/images/master-class/Sivakarthikeyan.jpg') }}" alt="image"
                             class="img-fluid">
                     </li>
                 </ul>
@@ -64,7 +64,24 @@
         <div class="col-md-3 col-12">
             <div class="user-profile-icon">
                 <ul>
-                    <li><img src="{{ asset('public/images/master-class/Imtiaz_Ali.avif') }}" alt="image"
+                    <li>
+                        <img src="{{ asset('public/images/master-class/Farrukh Dhondy.jpg') }}" alt="image"
+                            class="img-fluid">
+                    </li>
+                    <li>
+                        <img src="{{ asset('public/images/master-class/Anna Saura.jpg') }}" alt="image"
+                            class="img-fluid">
+                    </li>
+                    <li>
+                        <img src="{{ asset('public/images/master-class/Tannishtha Chatterjee.jpg') }}" alt="image"
+                            class="img-fluid">
+                    </li>
+                    <li>
+                        <img src="{{ asset('public/images/master-class/Vani Tripathi Tikoo.jpg') }}" alt="image"
+                            class="img-fluid">
+                    </li>
+                    <li>
+                        <img src="{{ asset('public/images/master-class/Lucy Walker.jpg') }}" alt="image"
                             class="img-fluid">
                     </li>
                 </ul>
@@ -101,7 +118,7 @@
         <div class="col-md-3 col-12">
             <div class="user-profile-icon">
                 <ul>
-                    <li><img src="{{ asset('public/images/master-class/Imtiaz_Ali.avif') }}" alt="image"
+                    <li><img src="{{ asset('public/images/master-class/Anupam Kher.jpg') }}" alt="image"
                             class="img-fluid">
                     </li>
                 </ul>

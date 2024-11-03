@@ -1,4 +1,4 @@
-<div class="mt-4 mb-4">
+{{-- <div class="mt-4 mb-4">
     <h2 class="pb-3">November 27th, 2024</h2>
     <div class="row">
 
@@ -32,7 +32,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 
 {{-- <div class="mt-4 mb-4">
     <h2 class="pb-3">November 27th, 2024</h2>
@@ -85,7 +85,7 @@
 
         <div class="col-md-7 col-12">
             <div class="callout">
-                <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov27-1-trigger">
+                <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov27-0-trigger">
                     Lata Mangeshkar Memorial Talk: Musical Theatre in India
                 </h4>
                 <p>
@@ -103,7 +103,7 @@
         <div class="col-md-3 col-12">
             <div class="user-profile-icon">
                 <ul>
-                    <li><img src="{{ asset('public/images/master-class/Imtiaz_Ali.avif') }}" alt="image"
+                    <li><img src="{{ asset('public/images/master-class/A R Rahman.jpg') }}" alt="image"
                             class="img-fluid">
                     </li>
                 </ul>
