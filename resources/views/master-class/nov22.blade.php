@@ -27,7 +27,7 @@
         <div class="col-md-3 col-12">
             <div class="user-profile-icon">
                 <ul>
-                    <li><img src="{{ asset('public/images/master-class/Imtiaz_Ali.avif') }}" alt="image"
+                    <li><img src="{{ asset('public/images/master-class/Akkineni Nagarjuna Rao.jpg') }}" alt="image"
                             class="img-fluid">
                     </li>
                 </ul>
@@ -65,7 +65,7 @@
         <div class="col-md-3 col-12">
             <div class="user-profile-icon">
                 <ul>
-                    <li><img src="{{ asset('public/images/master-class/Imtiaz_Ali.avif') }}" alt="image"
+                    <li><img src="{{ asset('public/images/master-class/Vidhu Vinod Chopra.jpg') }}" alt="image"
                             class="img-fluid">
                     </li>
                 </ul>
@@ -102,7 +102,12 @@
         <div class="col-md-3 col-12">
             <div class="user-profile-icon">
                 <ul>
-                    <li><img src="{{ asset('public/images/master-class/Imtiaz_Ali.avif') }}" alt="image"
+                    <li>
+                        <img src="{{ asset('public/images/master-class/Nakul Kamte.jpg') }}" alt="image"
+                            class="img-fluid">
+                    </li>
+                    <li>
+                        <img src="{{ asset('public/images/master-class/Eric Hoehn.jpg') }}" alt="image"
                             class="img-fluid">
                     </li>
                 </ul>
@@ -142,7 +147,10 @@
         <div class="col-md-3 col-12">
             <div class="user-profile-icon">
                 <ul>
-                    <li><img src="{{ asset('public/images/master-class/Imtiaz_Ali.avif') }}" alt="image"
+                    <li><img src="{{ asset('public/images/master-class/Mani Ratnam.jpg') }}" alt="image"
+                            class="img-fluid">
+                    </li>
+                    <li><img src="{{ asset('public/images/master-class/Gautham Vasudev Menon.jpg') }}" alt="image"
                             class="img-fluid">
                     </li>
                 </ul>

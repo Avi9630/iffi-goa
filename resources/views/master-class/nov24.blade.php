@@ -27,7 +27,7 @@
         <div class="col-md-3 col-12">
             <div class="user-profile-icon">
                 <ul>
-                    <li><img src="{{ asset('public/images/master-class/Imtiaz_Ali.avif') }}" alt="image"
+                    <li><img src="{{ asset('public/images/master-class/Anthon Muller.jpg') }}" alt="image"
                             class="img-fluid">
                     </li>
                 </ul>
@@ -66,7 +66,7 @@
         <div class="col-md-3 col-12">
             <div class="user-profile-icon">
                 <ul>
-                    <li><img src="{{ asset('public/images/master-class/Imtiaz_Ali.avif') }}" alt="image"
+                    <li><img src="{{ asset('public/images/master-class/Ranbir Kapoor.jpg') }}" alt="image"
                             class="img-fluid">
                     </li>
                 </ul>
@@ -102,7 +102,13 @@
         <div class="col-md-3 col-12">
             <div class="user-profile-icon">
                 <ul>
-                    <li><img src="{{ asset('public/images/master-class/Imtiaz_Ali.avif') }}" alt="image"
+                    <li><img src="{{ asset('public/images/master-class/Dr. Sachchidanand Joshi.jpg') }}" alt="image"
+                            class="img-fluid">
+                    </li>
+                    <li><img src="{{ asset('public/images/master-class/Amish Tripathi.jpg') }}" alt="image"
+                            class="img-fluid">
+                    </li>
+                    <li><img src="{{ asset('public/images/master-class/Bharath Bala.jpg') }}" alt="image"
                             class="img-fluid">
                     </li>
                 </ul>
