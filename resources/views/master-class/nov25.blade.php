@@ -25,7 +25,10 @@
         <div class="col-md-3 col-12">
             <div class="user-profile-icon">
                 <ul>
-                    <li><img src="{{ asset('public/images/master-class/Imtiaz_Ali.avif') }}" alt="image"
+                    <li><img src="{{ asset('public/images/master-class/Pragya Misra.jpg') }}" alt="image"
+                            class="img-fluid">
+                    </li>
+                    <li><img src="{{ asset('public/images/master-class/Anand Gandhi.jpg') }}" alt="image"
                             class="img-fluid">
                     </li>
                 </ul>
@@ -60,7 +63,7 @@
         <div class="col-md-3 col-12">
             <div class="user-profile-icon">
                 <ul>
-                    <li><img src="{{ asset('public/images/master-class/Imtiaz_Ali.avif') }}" alt="image"
+                    <li><img src="{{ asset('public/images/master-class/John Seale.jpg') }}" alt="image"
                             class="img-fluid">
                     </li>
                 </ul>
@@ -100,7 +103,10 @@
         <div class="col-md-3 col-12">
             <div class="user-profile-icon">
                 <ul>
-                    <li><img src="{{ asset('public/images/master-class/Imtiaz_Ali.avif') }}" alt="image"
+                    <li><img src="{{ asset('public/images/master-class/Shekhar Kapur.jpg') }}" alt="image"
+                            class="img-fluid">
+                    </li>
+                    <li><img src="{{ asset('public/images/master-class/Shabana Azmi.jpg') }}" alt="image"
                             class="img-fluid">
                     </li>
                 </ul>
@@ -135,7 +141,7 @@
         <div class="col-md-3 col-12">
             <div class="user-profile-icon">
                 <ul>
-                    <li><img src="{{ asset('public/images/master-class/Imtiaz_Ali.avif') }}" alt="image"
+                    <li><img src="{{ asset('public/images/master-class/Phillip Noyce.jpg') }}" alt="image"
                             class="img-fluid">
                     </li>
                 </ul>
