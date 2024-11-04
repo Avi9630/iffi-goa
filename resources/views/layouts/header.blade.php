@@ -15,3 +15,4 @@
 </div> --}}
 @include('layouts.logo')
 <!-- Top Logo Section Ends-->
+{{-- @include('layouts.notis') --}}

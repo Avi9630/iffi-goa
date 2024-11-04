@@ -3,8 +3,8 @@
 use App\Http\Controllers\CommonController;
 use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\IndianPanoramaController;
-use App\Http\Controllers\TickerController;
 use App\Http\Controllers\InternationalCinemaController;
+use App\Http\Controllers\TickerController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -176,6 +176,10 @@ Route::get('debut-director-jury', function () {
 Route::get('web-series-jury', function () {
     return view('web-series.web-series-jury');
 })->name('web-series-jury');
+
+Route::get('cmot-jury', function () {
+    return view('cmot.cmot-jury');
+})->name('cmot-jury');
 
 Route::get('opening-film', function () {
     return view('screening.opening-film');
