@@ -48,8 +48,8 @@
 
         <div class="col-md-2 col-12">
             <div class="master-time">
-                <h4 class="time-div">12:30 PM</h4>
-                <h5 class="time-div">01:30 PM</h5>
+                <h4 class="time-div">02:30 PM</h4>
+                <h5 class="time-div">04:00 PM</h5>
             </div>
         </div>
 

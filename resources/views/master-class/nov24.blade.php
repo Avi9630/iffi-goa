@@ -37,7 +37,7 @@
 </div>
 
 <div class="mt-4 mb-4">
-    <h2 class="pb-3">November 23rd, 2024</h2>
+    <h2 class="pb-3">November 24th, 2024</h2>
     <div class="row">
 
         <div class="col-md-2 col-12">
@@ -76,7 +76,7 @@
 </div>
 
 <div class="mt-4 mb-4">
-    <h2 class="pb-3">November 23rd, 2024</h2>
+    <h2 class="pb-3">November 24th, 2024</h2>
     <div class="row">
 
         <div class="col-md-2 col-12">
