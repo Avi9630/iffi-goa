@@ -929,6 +929,7 @@ footer a:hover {
     max-height: 180px;
     transition: transform 0.2s;
     max-width: 270px;
+    border-radius: 10px;
 }
 /*7/10-2024 css*/
 
@@ -1146,17 +1147,182 @@ footer a:hover {
 .screening-img p {
     color: gray;
 }
-@keyframes jump {
-    0% {
-        transform: translateY(0);
+.pointer-btn {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    border-radius: 20px;
+    z-index: 999;
+    /* box-shadow: 0px 0px 6px rgb(4 7 125 / 88%), 0 0px 6px 0px rgb(0 0 0 / 47%); */
+    /* animation: bounce 1s ease-in-out infinite; */
+    /* animation: shake 0.5s ease-in-out infinite; */
+    /* animation: pulse 1s ease-in-out infinite; */
+    & .notif {
+        display: none;
     }
-    50% {
-        transform: translateY(-30px);
+    & .notif-content {
+        display: none;
     }
-    100% {
-        transform: translateY(0);
+    & img {
+        width: 70%;
     }
 }
+.pointer-btn:hover {
+    /* overflow-y: scroll; */
+    width: 90vw;
+    height: 80vh;
+    animation: none;
+    right: 4%;
+    background-color: #5094b4;
+    /* background-color: #ffff; */
+    /* background-color: #ffffffa3; */
+    & a img {
+        display: none;
+    }
+    & .notif-content {
+        display: block;
+        /* overflow: scroll; */
+        & a img {
+            display: block;
+        }
+        & .heading {
+            margin-top: 10px;
+            color: #ffff;
+            font-size: 31px;
+            /* & p:nth-child(1) {
+            } */
+            & p:nth-child(2) {
+                text-decoration: underline;
+            }
+            & p:nth-child(3) {
+                color: #ffff;
+                font-size: 50px !important;
+            }
+        }
+    }
+}
+
+/* .pointer-btn {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    border-radius: 20px;
+    z-index: 999;
+    width: 10%;
+    & .card {
+        background-color: #efebeb69 !important;
+        & a {
+            text-decoration: none;
+        }
+    }
+    & p {
+        font-size: 12px;
+        color: black;
+    }
+} */
+
+/* .pointer-btn {
+    right: 28px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+} */
+
+/* Positioning each card in the bottom-right corner */
+/* #notifications-container {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 9999;
+}
+
+.notification-card {
+    position: relative;
+    padding: 0;
+    background: #efebebbd;
+    border-radius: 8px;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    & a {
+        text-decoration: none;
+        color: black;
+        & p {
+            margin: 0;
+            text-align: left;
+        }
+    }
+}
+
+.notification-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: transparent;
+    border: none;
+    font-size: 10px;
+    cursor: pointer;
+    color: white;
+    background-color: red;
+    border-radius: 58%;
+} */
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes jump {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+    25%,
+    75% {
+        transform: translateX(-50px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+}
+@keyframes shake {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+    25%,
+    75% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+}
+@keyframes pulse {
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+}
+
 @keyframes typing {
     from {
         width: 0;

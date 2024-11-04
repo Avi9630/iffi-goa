@@ -12,15 +12,11 @@
         <div class="col-md-7 col-12">
             <div class="callout">
                 <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov26-0-trigger">
-                    The Thrill of Victory
+                    The Thrill of Victory : How Analyzing Sports Can Help Animators Get Better Performances
                 </h4>
                 <p>
-                    Join Animation Director, Chris Kirshbaum, from DNEG Animation as he delves into the often overlooked
-                    world of sports as a rich reference for understanding human emotion and behavior in animation. While
-                    animators typically draw inspiration from movies, TV, and real life, sports offer a unique
-                    advantage: the performances are unscripted and authentic, providing invaluable insights into genuine
-                    reactions. Discover how to harness this powerful resource to enhance your animation skills and gain
-                    a fresh perspective on portraying emotion. Don't miss this opportunity to elevate your craft!.
+                    The session will analyze how sports can help animators get better performances. The discussion will
+                    also have insights into the “world famous Avengers.
                 </p>
             </div>
         </div>
@@ -51,7 +47,7 @@
         <div class="col-md-7 col-12">
             <div class="callout">
                 <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov26-1-trigger">
-                    Who is a film producer? Five important stages of production
+                    Film Production and it’s Stages
                 </h4>
                 <p>
                     Stephen Woolley will delve into the intricate process of

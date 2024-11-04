@@ -326,6 +326,10 @@
                                                     CMOT</a>
                                             </li>
                                             <li>
+                                                <a href="{{ route('cmot-jury') }}" class="dropdown-item">CMOT
+                                                    Jury-2024</a>
+                                            </li>
+                                            <li>
                                                 <a href="https://iffigoa.org/festival/creative-mind-tomorrow"
                                                     class="nav-link yelow-color-link" target="_blank">View your
                                                     entry</a>

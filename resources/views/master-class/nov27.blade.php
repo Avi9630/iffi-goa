@@ -1,10 +1,10 @@
-{{-- <div class="mt-4 mb-4">
+<div class="mt-4 mb-4">
     <h2 class="pb-3">November 27th, 2024</h2>
     <div class="row">
 
         <div class="col-md-2 col-12">
             <div class="master-time">
-                <h4 class="time-div">11:00 PM</h4>
+                <h4 class="time-div">11:00 AM</h4>
                 <h5 class="time-div">12:00 PM</h5>
             </div>
         </div>
@@ -32,7 +32,7 @@
             </div>
         </div>
     </div>
-</div> --}}
+</div>
 
 {{-- <div class="mt-4 mb-4">
     <h2 class="pb-3">November 27th, 2024</h2>
