@@ -27,13 +27,13 @@
         <div class="col-md-3 col-12">
             <div class="user-profile-icon">
                 <ul>
-                    <li><img src="{{ asset('public/images/master-class/Imtiaz_Ali.avif') }}" alt="image"
+                    <li><img src="{{ asset('public/images/master-class/Imtiaz Ali.jpg') }}" alt="image"
                             class="img-fluid">
                     </li>
-                    <li><img src="{{ asset('public/images/master-class/Kushboo Sundar.jpg') }}" alt="image"
+                    <li><img src="{{ asset('public/images/master-class/Suhasini Maniratnam.jpg') }}" alt="image"
                             class="img-fluid">
                     </li>
-                    <li><img src="{{ asset('public/images/master-class/Suhasini Manirathnam.jfif') }}" alt="image"
+                    <li><img src="{{ asset('public/images/master-class/Khushbu Sundar.jpg') }}" alt="image"
                             class="img-fluid">
                     </li>
                 </ul>
@@ -48,8 +48,8 @@
 
         <div class="col-md-2 col-12">
             <div class="master-time">
-                <h4 class="time-div">02:30 PM</h4>
-                <h5 class="time-div">04:00 PM</h5>
+                <h4 class="time-div">12:30 PM</h4>
+                <h5 class="time-div">01:30 PM</h5>
             </div>
         </div>
 
@@ -70,12 +70,22 @@
         <div class="col-md-3 col-12">
             <div class="user-profile-icon">
                 <ul>
-                    <li><img src="{{ asset('public/images/master-class/Imtiaz_Ali.avif') }}" alt="image"
+                    <li><img src="{{ asset('public/images/master-class/Cameron Bailey.jpg') }}" alt="image"
                             class="img-fluid">
                     </li>
-                    <li><img src="{{ asset('public/images/master-class/Kushboo Sundar.jpg') }}" alt="image"
+                    <li><img src="{{ asset('public/images/master-class/Christian Jeune.jpg') }}" alt="image"
                             class="img-fluid">
                     </li>
+                    <li><img src="{{ asset('public/images/master-class/Giona A. Nazzaro.jpg') }}" alt="image"
+                            class="img-fluid">
+                    </li>
+                    <li><img src="{{ asset('public/images/master-class/Shekhar Kapur.jpg') }}" alt="image"
+                            class="img-fluid">
+                    </li>
+                    <li><img src="{{ asset('public/images/master-class/Jérôme Paillard.jpg') }}" alt="image"
+                            class="img-fluid">
+                    </li>
+
                 </ul>
             </div>
         </div>
@@ -111,10 +121,7 @@
         <div class="col-md-3 col-12">
             <div class="user-profile-icon">
                 <ul>
-                    <li><img src="{{ asset('public/images/master-class/Imtiaz_Ali.avif') }}" alt="image"
-                            class="img-fluid">
-                    </li>
-                    <li><img src="{{ asset('public/images/master-class/Kushboo Sundar.jpg') }}" alt="image"
+                    <li><img src="{{ asset('public/images/master-class/Manisha Koirala.jpg') }}" alt="image"
                             class="img-fluid">
                     </li>
                 </ul>
