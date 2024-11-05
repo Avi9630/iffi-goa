@@ -1,3 +1,4 @@
+{{-- Top Logo Menu Btn --}}
 <div class="col-lg-12">
     <div class="logo-section "id="menu">
         <div class="container">
@@ -23,8 +24,9 @@
                 <a href="https://mib.gov.in/ " target="_blank">
                     <img src="{{ asset('public/images/mib-logo.svg') }}" alt="mib-logo">
                 </a>
-                @include('common.menu-logo')
+                @include('common.menu-btn')
             </div>
         </div>
     </div>
 </div>
+{{-- Top Logo Menu Btn --}}

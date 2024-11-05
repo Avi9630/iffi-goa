@@ -22,6 +22,149 @@
                 <div class="row">
                     <div class="col-md-5 col-sm-12 col-12 mb-4">
                         <p class="newsupdatesView-block-img">
+                            <img src="{{ asset('public/images/desktop-image/Raj-Kapoor.jpg') }}" alt="Raj Kapoor image"
+                                class="img-fluid img-radius">
+                        </p>
+                    </div>
+                    <div class="col-md-7 col-sm-12 col-12 mb-4">
+                        <h3>Raj Kapoor, ANR, Rafi, and Tapan Sinha will be Honoured with IFFI Centenary Tribute</h3>
+                        <p class="mb-0">
+                            Our film industry legendary icons Raj Kapoor, ANR, Mohammed Rafi and Tapan Sinha will be
+                            honoured with the centenary tribute at 55th IFFI. The IFFI gala in Goa will celebrate cinematic
+                            legends by presenting restored versions of their classic films throughout its nine-day event.
+                            The festival’s opening ceremony on November 20 will pay tribute to these icons with a special
+                            audio-visual presentation that captures their impactful journeys in cinema.
+                            <a style="font-weight: 600; color: #0d6efd; text-decoration: underline; cursor: pointer;"
+                                data-bs-toggle="modal" data-bs-target="#exampleModal3">Read More</a>
+                        </p>
+                    </div>
+
+                    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Raj Kapoor, ANR, Rafi, and Tapan Sinha will be Honoured with
+                                        IFFI Centenary Tribute</h4>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    <p>
+                                        Our film industry legendary icons Raj Kapoor, ANR, Mohammed Rafi and Tapan Sinha
+                                        will be honoured with the centenary tribute at 55th IFFI. The IFFI gala in Goa will
+                                        celebrate cinematic legends by presenting restored versions of their classic films
+                                        throughout its nine-day event. The festival’s opening ceremony on November 20 will
+                                        pay tribute to these icons with a special audio-visual presentation that captures
+                                        their impactful journeys in cinema.
+                                    </p>
+                                    <p>A variety of organizers have arranged a tribute program to honor the 100th birth
+                                        anniversaries of four Indian cinema legends: actor and filmmaker Raj Kapoor,
+                                        director Tapan Sinha, Telugu cinema icon Akkineni Nageswara Rao (ANR), and iconic
+                                        singer Mohammed Rafi.
+                                    </p>
+                                    <p>The National Film Development Corporation (NFDC) have taken the restoration work to
+                                        bring these classics back to their visual quality. Get ready to witness the
+                                        centenary celebrations that will be held at November 20, at GOA. </p>
+                                    {{-- <div class="modal-content-inn">
+                                        <h6>Here are the 5 debut directors of Indian Feature Film Selection:</h6>
+                                        <ul>
+                                            <li>Lakshmipriya Devi for Boong Film</li>
+                                            <li>Navjyot Bandiwadekar for Gharat Ganpati Film</li>
+                                            <li>Manohara K for Mikka Bannada Hakki (Bird of a Different Feather) film</li>
+                                            <li>Razakar (Silent Genocide of Hyderabad) for Yata Satyanarayana Film</li>
+                                            <li>Thanupp (The Cold) for Ragesh Narayanan Film</li>
+                                        </ul>
+                                        <p>Each of these films brings unique narratives and regional perspectives,
+                                            highlighting India’s cultural and linguistic diversity.</p>
+                                    </div> --}}
+
+                                </div>
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="startic-new-update">
+                <div class="row">
+                    <div class="col-md-5 col-sm-12 col-12 mb-4">
+                        <p class="newsupdatesView-block-img">
+                            <img src="{{ asset('public/images/desktop-image/Best-Debut-Directors-of-Indian-Feature-Films.jpg') }}"
+                                alt="image" class="img-fluid img-radius">
+                        </p>
+                    </div>
+                    <div class="col-md-7 col-sm-12 col-12 mb-4">
+                        <h3>5 Debut Directors Selected for Indian Feature Films</h3>
+                        <p class="mb-0">
+                            The 55th International Film Festival of India (IFFI) is launching a fresh award category, “Best
+                            Debut Director of Indian Feature Film,” spotlighting the work of five debut directors who bring
+                            unique perspectives and innovative storytelling to Indian cinema. This initiative aims to
+                            encourage emerging filmmakers, showcasing their contributions to the industry with compelling
+                            narratives and diverse themes. Taking place from November 20-28, 2024, IFFI will celebrate these
+                            new voices in Indian film, underscoring the festival's commitment to fostering creative talent
+                            across the nation.
+                            <a style="font-weight: 600; color: #0d6efd; text-decoration: underline; cursor: pointer;"
+                                data-bs-toggle="modal" data-bs-target="#exampleModal3">Read More</a>
+                        </p>
+                    </div>
+
+                    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h4 class="modal-title">5 Debut Directors Selected for Indian Feature Films</h4>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    <p>
+                                        The 55th International Film Festival of India (IFFI) is launching a fresh award
+                                        category, “Best Debut Director of Indian Feature Film,” spotlighting the work of
+                                        five debut directors who bring unique perspectives and innovative storytelling to
+                                        Indian cinema. This initiative aims to encourage emerging filmmakers, showcasing
+                                        their contributions to the industry with compelling narratives and diverse themes.
+                                        Taking place from November 20-28, 2024, IFFI will celebrate these new voices in
+                                        Indian film, underscoring the festival's commitment to fostering creative talent
+                                        across the nation.
+                                    </p>
+                                    <div class="modal-content-inn">
+                                        <h6>Here are the 5 debut directors of Indian Feature Film Selection:</h6>
+                                        <ul>
+                                            <li>Lakshmipriya Devi for Boong Film</li>
+                                            <li>Navjyot Bandiwadekar for Gharat Ganpati Film</li>
+                                            <li>Manohara K for Mikka Bannada Hakki (Bird of a Different Feather) film</li>
+                                            <li>Razakar (Silent Genocide of Hyderabad) for Yata Satyanarayana Film</li>
+                                            <li>Thanupp (The Cold) for Ragesh Narayanan Film</li>
+                                        </ul>
+                                        <p>Each of these films brings unique narratives and regional perspectives,
+                                            highlighting India’s cultural and linguistic diversity.</p>
+                                    </div>
+
+                                </div>
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="startic-new-update">
+                <div class="row">
+                    <div class="col-md-5 col-sm-12 col-12 mb-4">
+                        <p class="newsupdatesView-block-img">
                             <img src="{{ asset('public/images/desktop-image/Co-Production.jpg') }}" alt="image"
                                 class="img-fluid img-radius">
                         </p>
@@ -68,16 +211,16 @@
                                         <h6>Here is the list of Films / Web Series that are selected for co-production
                                             market this year:</h6>
                                         <ul>
-                                            <li>A Night's Whispers and the Winds
-                                            <li>Aadu Ki Kasam (Destiny's Dance)
-                                            <li>Aanaikatti Blues
-                                            <li>Absent
-                                            <li>All Ten Heads Of Ravanna
-                                            <li>Chetak
-                                            <li>Divine Chords
-                                            <li>Feral
-                                            <li>Gulistaan (Year of the Weeds)
-                                            <li>Guptam (The Last of Them Plagues
+                                            <li>A Night's Whispers and the Winds</li>
+                                            <li>Aadu Ki Kasam (Destiny's Dance)</li>
+                                            <li>Aanaikatti Blues</li>
+                                            <li>Absent</li>
+                                            <li>All Ten Heads Of Ravanna</li>
+                                            <li>Chetak</li>
+                                            <li>Divine Chords</li>
+                                            <li>Feral</li>
+                                            <li>Gulistaan (Year of the Weeds)</li>
+                                            <li>Guptam (The Last of Them Plagues)</li>
                                             <li>Harbir</li>
                                             <li>Home Before Night</li>
                                             <li>Kabootar</li>
