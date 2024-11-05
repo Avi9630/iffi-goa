@@ -19,6 +19,12 @@
         'tickers' => app(\App\Http\Controllers\TickerController::class)->getAllTicker(),
     ])
 
+    {{-- <section class="pointer-btn">
+        <a href="{{ route('news-and-update') }}">
+            <img src="{{ asset('public/images/Peacock-fill.png') }}" alt=" Peacock-fill">
+        </a>
+    </section> --}}
+
     <!-- About IFFI -->
     @include('pages.about-iffi')
 

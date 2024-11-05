@@ -326,6 +326,10 @@
                                                     CMOT</a>
                                             </li>
                                             <li>
+                                                <a href="{{ route('cmot-jury') }}" class="dropdown-item">CMOT
+                                                    Jury-2024</a>
+                                            </li>
+                                            <li>
                                                 <a href="https://iffigoa.org/festival/creative-mind-tomorrow"
                                                     class="nav-link yelow-color-link" target="_blank">View your
                                                     entry</a>
@@ -398,13 +402,13 @@
                             <!-- Film Bazaar Section End -->
 
                             <!-- Master class Section Start -->
-                            {{-- <div class="col-md-3 col-sm-12 ">
+                            <div class="col-md-3 col-sm-12 ">
                                 <h4 class="menu-title ">
                                     <a href="{{ route('master-classes') }}" class="nav-link">
                                         Master Classes
                                     </a>
                                 </h4>
-                            </div> --}}
+                            </div>
                             <!-- Masterclass Section End -->
                         </div>
                     </div>
