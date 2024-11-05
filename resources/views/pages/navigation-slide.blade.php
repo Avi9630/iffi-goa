@@ -1,4 +1,4 @@
-<!-- Navigation slide -->
+<!-- Menu Itens Start -->
 <style>
     .offcanvas {
         overflow: scroll;
@@ -7,9 +7,11 @@
 
 <div class="offcanvas offcanvas-top top-navigation" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
     <div class="container">
+        {{-- close btn --}}
         <div class="offcanvas-header">
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
+        {{-- Menu Item's --}}
         <div class="offcanvas-body1">
             <nav class="navbar navbar-expand-lg navbar-dark">
                 <div class="container pl-0">
@@ -111,30 +113,40 @@
                                                     class="dropdown-item nav-link yelow-color-link"
                                                     target="_blank">Submit Your Entry</a>
                                             </li> --}}
-
-
+                                            {{-- Rules & regulation --}}
                                             <li>
                                                 <a href="{{ route('icinema-rules-regulation') }}"
                                                     class="dropdown-item">Rules & Regulations</a>
                                             </li>
-
+                                            {{-- International Jury --}}
                                             <li>
                                                 <a href="{{ route('international-jury') }}"
                                                     class="dropdown-item">International Jury - 2024</a>
                                             </li>
-
+                                            {{-- Curated Sections 2024 --}}
                                             <li class="nav-item dropend">
+                                                <a class="nav-link dropdown-toggle" href="#" role="button"
+                                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                                    Curated Sections 2024
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('international-competition-2024') }}">International
+                                                            Competition</a></li>
 
+                                                </ul>
+                                            </li>
+                                            {{-- Curated Sections 2023 --}}
+                                            <li class="nav-item dropend">
                                                 <a class="nav-link dropdown-toggle" href="#" role="button"
                                                     data-bs-toggle="dropdown" aria-expanded="false">
                                                     Curated Sections 2023
                                                 </a>
-
                                                 <ul class="dropdown-menu">
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('international-competition') }}">International
-                                                            Competition</a></li>
-
+                                                            Competition</a>
+                                                    </li>
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('award-for-best-debute') }}">Award For The
                                                             Best
@@ -146,8 +158,7 @@
                                                             2023</a></li>
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('festival-kaleloscope') }}">Festival
-                                                            Kaleloscope</a>
-                                                    </li>
+                                                            Kaleloscope</a></li>
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('docu-montage') }}">Docu - Montage</a>
                                                     </li>
@@ -175,7 +186,6 @@
                                             </li>
                                         </ul>
                                     </li>
-
                                     <!-- Indian Debut Director Award menu Start-->
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" role="button"
@@ -325,9 +335,19 @@
                                                 <a href="{{ route('about-cmot') }}" class="dropdown-item">About
                                                     CMOT</a>
                                             </li>
-                                            <li>
-                                                <a href="{{ route('cmot-jury') }}" class="dropdown-item">CMOT
-                                                    Jury-2024</a>
+                                            {{-- Curated Sections 2024 --}}
+                                            <li class="nav-item dropend">
+                                                <a class="nav-link dropdown-toggle" href="#" role="button"
+                                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                                    CMOT Jury-2024
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="{{ route('cmot-jury') }}"
+                                                            class="dropdown-item">
+                                                            Selection Jury</a>
+                                                    </li>
+
+                                                </ul>
                                             </li>
                                             <li>
                                                 <a href="https://iffigoa.org/festival/creative-mind-tomorrow"
@@ -336,7 +356,6 @@
                                             </li>
                                         </ul>
                                     </li>
-                                    <!-- CMOT Section End-->
                                     <!-- Technical Committee Start-->
                                     <li class="nav-item dropdown">
                                         <a href="{{ route('technical-committee') }}" class="nav-link">Technical
@@ -417,3 +436,4 @@
         </div>
     </div>
 </div>
+<!-- Menu Itens End -->
