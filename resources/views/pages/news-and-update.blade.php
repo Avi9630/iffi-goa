@@ -9,6 +9,31 @@
 
                 <div class="card shadow-sm">
                     <a href="{{ route('news-and-update') }}">
+                        <img src="{{ asset('public/images/desktop-image/208-Films-to-Feature-in-Film-Bazaar-Viewing-Room-at-IFFI-2024.jpg') }}"alt=" image"
+                            class="img-fluid">
+                        <div class="card-body text-start">
+                            <h3>208 Films to Feature in Film Bazaar Viewing Room at IFFI 2024</h3>
+                            <p class="card-text">
+                                The 55th International Film Festival of India is set to illuminate the cultural
+                                landscape of Goa
+                                from 20th to 28th this November. Concurrently, the 18th edition of Film Bazaar will run
+                                from
+                                November 20 to 24, offering a dynamic platform for filmmakers and industry professionals
+                                to
+                                connect, collaborate and showcase their work.
+                                This year, the Viewing Room returns to the Marriott Resort, featuring an enriched line
+                                up of
+                                good quality films from India and South Asia.
+                            </p>
+                            <p>
+                                <a href="{{ route('news-and-update') }}">Read more </a>
+                            </p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card shadow-sm">
+                    <a href="{{ route('news-and-update') }}">
                         <img src="{{ asset('public/images/desktop-image/Work-in-Progress-Lab-Film-Selection-List-Revealed.jpg') }}"alt=" image"
                             class="img-fluid">
                         <div class="card-body text-start">

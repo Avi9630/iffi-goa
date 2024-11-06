@@ -37,6 +37,8 @@ Route::controller(CommonController::class)->group(function () {
 
     Route::get('media/press-release', 'pressRelease')->name('press-release');
 
+    // Route::get('media/the-peacock', 'thepeacock')->name('the-peacock');
+
     Route::get('media/news-and-update', 'newsUpdate')->name('news-and-update');
 
     // Route::get('news-and-update',                 'newsUpdate1')->name('news-and-update');
@@ -157,6 +159,10 @@ Route::get('privacy-policy', function () {
 Route::get('master-classes', function () {
     return view('master');
 })->name('master-classes');
+
+Route::get('knowledge-series', function () {
+    return view('knowledge-series');
+})->name('knowledge-series');
 
 // Jury Route
 Route::get('international-jury', function () {

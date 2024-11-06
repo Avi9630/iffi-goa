@@ -249,7 +249,7 @@
                                             <li class="nav-item dropend">
                                                 <a class="nav-link dropdown-toggle" href="#" role="button"
                                                     data-bs-toggle="dropdown" aria-expanded="false">
-                                                    Indian Panorama - IFFI 2023
+                                                    Indian Panorama IFFI 2023
                                                 </a>
                                                 <ul class="dropdown-menu">
                                                     <li><a class="dropdown-item"
@@ -371,13 +371,46 @@
                                 <h4 class="menu-title ">Media</h4>
                                 <ul class="navbar-nav vertical-menu-custom">
                                     <li class="nav-item"><a href="{{ route('press-release') }}"
-                                            class="nav-link">Press Release</a></li>
+                                            class="nav-link">Press Release</a>
+                                    </li>
+
                                     <li class="nav-item">
                                         <a href="{{ route('gallery') }}" class="nav-link">Gallery
                                             of 2023 IFFI Festival</a>
                                     </li>
+
                                     <li class="nav-item"><a href="{{ route('news-and-update') }}"
-                                            class="nav-link">News and Updates</a></li>
+                                            class="nav-link">News and Updates</a>
+                                    </li>
+
+                                    {{-- <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            The Peacock
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="nav-item dropend">
+                                                <a class="nav-link dropdown-toggle" href="#" role="button"
+                                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                                    Old Versions
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('the-peacock', ['year' => 2023]) }}">2023</a>
+                                                    </li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('the-peacock', ['year' => 2022]) }}">2022</a>
+                                                    </li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('the-peacock', ['year' => 2021]) }}">2021</a>
+                                                    </li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('the-peacock', ['year' => 2020]) }}">2020</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li> --}}
                                 </ul>
                             </div>
                             <!-- Media Section End -->
@@ -416,6 +449,11 @@
                                         <a href="https://filmbazaarindia.com/programme/market-screenings/"
                                             class="nav-link" target="_blank">Market Screenings</a>
                                     </li>
+                                    {{-- <li class="nav-item">
+                                        <a href="{{ route('knowledge-series') }}" class="nav-link">
+                                            Knowledge series
+                                        </a>
+                                    </li> --}}
                                 </ul>
                             </div>
                             <!-- Film Bazaar Section End -->

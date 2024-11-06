@@ -240,7 +240,8 @@ body p {
     );
     left: 95%;
     top: 0px;
-    width: 100%;
+    /* width: 100%; */
+    width: fit-content;
 }
 .dropdown:hover > .dropdown-menu,
 .dropend:hover > .dropdown-menu {
@@ -612,6 +613,12 @@ footer a:hover {
         url(../images/main-header/Venuebg.jpg) center center no-repeat;
     background-size: cover;
 }
+
+.bannerBg-knowledge-series {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url(../images/main-header/knowledge-series.webp) center center no-repeat;
+    background-size: cover;
+}
 .bannerBg-goa-tourist-places {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
         url(../images/main-header/IFFI-GoaTour-banner.jpg) center center
@@ -761,7 +768,38 @@ footer a:hover {
 }
 .bannerBg-IFFI-international {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-        url(../images/main-header/jury-callarge.jpg) center center no-repeat;
+        url(../images/main-header/international-jury.jpg) center center
+            no-repeat;
+    background-size: cover;
+}
+.bannerBg-debut-director {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url(../images/main-header/Debut-Director-Jury.jpg) center center
+            no-repeat;
+    background-size: cover;
+}
+.bannerBg-ott {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url(../images/main-header/Best-Web-Series-Jury.jpg) center center
+            no-repeat;
+    background-size: cover;
+}
+.bannerBg-non-feature {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url(../images/main-header/Indian-Panorama-Jury-non-feature.jpg) center
+            center no-repeat;
+    background-size: cover;
+}
+.bannerBg-feature {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url(../images/main-header/indian-panorama-jury-feature.jpg) center
+            center no-repeat;
+    background-size: cover;
+}
+.bannerBg-International-competition {
+    background: linear-gradient(rgb(0 0 0 / 89%), rgb(0 0 0 / 74%)),
+        url(../images/main-header/International-competition-2024.jpg) center
+            center no-repeat;
     background-size: cover;
 }
 
