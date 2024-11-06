@@ -14,7 +14,7 @@
     <!-- Menu slide end -->
 
     <!-- Inner Page Banner Section -->
-    <div class="container-fluid page-header bannerBg-InternationalCompetition py-5">
+    <div class="container-fluid page-header bannerBg-International-competition py-5">
         <div class="container text-center ">
             <h1 class="page-title-header">International Competition 2024</h1>
         </div>
