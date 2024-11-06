@@ -19,7 +19,7 @@
     <!-- Inner Page Banner Section -->
     <div class="container-fluid page-header bannerBg-IFFI-international py-5">
         <div class="container text-center ">
-            <h1 class="page-title-header">International Jury</h1>
+            <h1 class="page-title-header">Jury for International Competition</h1>
         </div>
     </div>
     <!-- Inner Page Banner Section -->
