@@ -1,36 +1,22 @@
 <div class="mt-4 mb-4">
     <h2 class="pb-3">November 24th, 2024</h2>
     <div class="row">
-
         <div class="col-md-2 col-12">
             <div class="master-time">
-                <h4 class="time-div">11:00 AM</h4>
-                <h5 class="time-div">12:30 PM</h5>
+                <h4 class="time-div">9:45 AM</h4>
+                <h5 class="time-div">10:30 AM</h5>
             </div>
         </div>
-
         <div class="col-md-7 col-12">
             <div class="callout">
                 <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov24-0-trigger">
-                    Laser for Post Production and Evolution to HDR
+                    Film Facilitation: Spain & India's Co Production Journey
                 </h4>
                 <p>
-                    As technology continues to revolutionize the filmmaking process,Anton Muller, Strategic Director at
-                    Barco Cinema,will take us on a journey through the cutting-edge advancements in laser projection and
-                    the evolution to High Dynamic Range (HDR) in this session. He will dig into how these technologies
-                    enhance image quality creating sharper and more immersive cinematic experiences reshaping the future
-                    of post production and the way films are mastered and presented.
+                    This session is dedicated to exploring the Audio-Visual Co-
+                    Production Agreement between India and Australia, including a
+                    presentation and case study discussion..
                 </p>
-            </div>
-        </div>
-
-        <div class="col-md-3 col-12">
-            <div class="user-profile-icon">
-                <ul>
-                    <li><img src="{{ asset('public/images/master-class/Anthon Muller.jpg') }}" alt="image"
-                            class="img-fluid">
-                    </li>
-                </ul>
             </div>
         </div>
     </div>
@@ -39,37 +25,26 @@
 <div class="mt-4 mb-4">
     <h2 class="pb-3">November 24th, 2024</h2>
     <div class="row">
-
         <div class="col-md-2 col-12">
             <div class="master-time">
-                <h4 class="time-div">02:30 PM</h4>
-                <h5 class="time-div">04:0 PM</h5>
+                <h4 class="time-div">10:45 AM</h4>
+                <h5 class="time-div">11:30 PM</h5>
             </div>
         </div>
-
         <div class="col-md-7 col-12">
             <div class="callout">
                 <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov24-1-trigger">
-                    Centenary Special: Celebrating the Life and Works of Raj Kapoor - 'The Greatest Showman'
+                    SPOTLIGHT: SHORT FORMATS
                 </h4>
                 <p>
-                    Raj Kapoor, often hailed as The Greatest Showman of Indian Cinema, left behind an indelible legacy
-                    through his visionary films and larger-than-life persona will be discussed in this special centenary
-                    tribute by his grandson actor Ranbir Kapoor and director, editor Rahul Rawail to celebrate the
-                    legacy of the most influential figures in Indian cinema.This session will reflect on Raj Kapoor's
-                    artistic brilliance, his pioneering contributions to Indian cinema, and the timeless appeal of his
-                    films, which continue to awe filmmakers and audiences alike.
+                    A Short Film is still considered a very viable medium for
+                    emerging filmmakers to showcase their talent and
+                    breakthrough the system. With not much funding available for
+                    this format, filmmakers are still experimenting with this medium
+                    and making shorts. This panel looks into what makes for a
+                    great short film and how can a filmmaker monetize on the
+                    investment.
                 </p>
-            </div>
-        </div>
-
-        <div class="col-md-3 col-12">
-            <div class="user-profile-icon">
-                <ul>
-                    <li><img src="{{ asset('public/images/master-class/Ranbir Kapoor.jpg') }}" alt="image"
-                            class="img-fluid">
-                    </li>
-                </ul>
             </div>
         </div>
     </div>
@@ -78,40 +53,143 @@
 <div class="mt-4 mb-4">
     <h2 class="pb-3">November 24th, 2024</h2>
     <div class="row">
-
         <div class="col-md-2 col-12">
             <div class="master-time">
-                <h4 class="time-div">04:30 PM</h4>
-                <h5 class="time-div">06:00 PM</h5>
+                <h4 class="time-div">11:45 AM</h4>
+                <h5 class="time-div">12:30 PM</h5>
             </div>
         </div>
-
         <div class="col-md-7 col-12">
             <div class="callout">
                 <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov24-2-trigger">
-                    Culture As Context for Cinematic Storytelling
+                    Claiming your creativity: A guide to intellectual property rights
                 </h4>
                 <p>
-                    This session discusses how cultural contexts shape the stories we tell on screen. Renowned writers
-                    will explore how cultural influences, traditions, and values are reflected in films and how they
-                    contribute to the storytelling process.
+                    Discover how to protect your creative ideas and innovations
+                    through intellectual property rights, empowering creators to
+                    secure their work and maximize its value.
                 </p>
             </div>
         </div>
+    </div>
+</div>
 
-        <div class="col-md-3 col-12">
-            <div class="user-profile-icon">
-                <ul>
-                    <li><img src="{{ asset('public/images/master-class/Dr. Sachchidanand Joshi.jpg') }}" alt="image"
-                            class="img-fluid">
-                    </li>
-                    <li><img src="{{ asset('public/images/master-class/Amish Tripathi.jpg') }}" alt="image"
-                            class="img-fluid">
-                    </li>
-                    <li><img src="{{ asset('public/images/master-class/Bharath Bala.jpg') }}" alt="image"
-                            class="img-fluid">
-                    </li>
-                </ul>
+<div class="mt-4 mb-4">
+    <h2 class="pb-3">November 24th, 2024</h2>
+    <div class="row">
+        <div class="col-md-2 col-12">
+            <div class="master-time">
+                <h4 class="time-div">2:00 PM</h4>
+                <h5 class="time-div">2:45 PM</h5>
+            </div>
+        </div>
+        <div class="col-md-7 col-12">
+            <div class="callout">
+                <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov24-3-trigger">
+                    State Focus Bihar: Emerging as a Film-Friendly Destination
+                </h4>
+                <p></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mt-4 mb-4">
+    <h2 class="pb-3">November 24th, 2024</h2>
+    <div class="row">
+        <div class="col-md-2 col-12">
+            <div class="master-time">
+                <h4 class="time-div">3:00 PM</h4>
+                <h5 class="time-div">3:45 PM</h5>
+            </div>
+        </div>
+        <div class="col-md-7 col-12">
+            <div class="callout">
+                <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov24-4-trigger">
+                    Filming in India: A Land of Cinematic Opportunities
+                </h4>
+                <p>
+                    A panel discussion highlighting the vast filming opportunities in
+                    India, inviting international producers and production
+                    companies to bring their upcoming projects to Incredible India.
+                    The session will explore how to leverage the benefits of India's
+                    revitalized film policy and attractive incentives.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mt-4 mb-4">
+    <h2 class="pb-3">November 24th, 2024</h2>
+    <div class="row">
+        <div class="col-md-2 col-12">
+            <div class="master-time">
+                <h4 class="time-div">4:00 PM</h4>
+                <h5 class="time-div">4:45 PM</h5>
+            </div>
+        </div>
+        <div class="col-md-7 col-12">
+            <div class="callout">
+                <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov24-5-trigger">
+                    Sales Vs Distribution: Key Differences
+                </h4>
+                <p>
+                    To sell an independent film successively, a filmmaker has to
+                    collaborate with multiple distributors and sales agents. The task
+                    is daunting as the roles are overlapping. Let’s take a closer
+                    look at the unique functions of sales and distribution and how
+                    they operate within a market.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mt-4 mb-4">
+    <h2 class="pb-3">November 24th, 2024</h2>
+    <div class="row">
+        <div class="col-md-2 col-12">
+            <div class="master-time">
+                <h4 class="time-div">5:00 PM</h4>
+                <h5 class="time-div">5:45 PM</h5>
+            </div>
+        </div>
+        <div class="col-md-7 col-12">
+            <div class="callout">
+                <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov24-6-trigger">
+                    Nostalgia meets Opportunity: The Power of Re-Releasing Films
+                </h4>
+                <p>
+                    India is witnessing the emergence of the re-release era.
+                    Yesteryear's blockbusters are making a comeback on the big
+                    screen, drawing a new generation of audiences to the cinema
+                    halls. The panel explores what is the key takeaway from this
+                    trend, how will this impact the industry and the art of filmmaking
+                    in India.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mt-4 mb-4">
+    <h2 class="pb-3">November 24th, 2024</h2>
+    <div class="row">
+        <div class="col-md-2 col-12">
+            <div class="master-time">
+                <h4 class="time-div">6:00 PM</h4>
+                <h5 class="time-div">7:00 PM</h5>
+            </div>
+        </div>
+        <div class="col-md-7 col-12">
+            <div class="callout">
+                <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov24-7-trigger">
+                    Closing & Award Ceremony
+                </h4>
+                <p>
+
+                </p>
             </div>
         </div>
     </div>
