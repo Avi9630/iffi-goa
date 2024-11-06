@@ -17,7 +17,7 @@
     <!-- Menu slide end -->
 
     <!-- Inner Page Banner Section -->
-    <div class="container-fluid page-header bannerBg-IFFI-international py-5">
+    <div class="container-fluid page-header bannerBg-debut-director py-5">
         <div class="container text-center ">
             <h1 class="page-title-header">Debut Director Jury</h1>
         </div>

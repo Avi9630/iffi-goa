@@ -22,6 +22,100 @@
                 <div class="row">
                     <div class="col-md-5 col-sm-12 col-12 mb-4">
                         <p class="newsupdatesView-block-img">
+                            <img src="{{ asset('public/images/desktop-image/208-Films-to-Feature-in-Film-Bazaar-Viewing-Room-at-IFFI-2024.jpg') }}"
+                                alt="image" class="img-fluid img-radius">
+                        </p>
+                    </div>
+                    <div class="col-md-7 col-sm-12 col-12 mb-4">
+                        <h3>208 Films to Feature in Film Bazaar Viewing Room at IFFI 2024</h3>
+                        <p class="mb-0">
+                            The 55th International Film Festival of India is set to illuminate the cultural landscape of Goa
+                            from 20th to 28th this November. Concurrently, the 18th edition of Film Bazaar will run from
+                            November 20 to 24, offering a dynamic platform for filmmakers and industry professionals to
+                            connect, collaborate and showcase their work.
+                            This year, the Viewing Room returns to the Marriott Resort, featuring an enriched line up of
+                            good quality films from India and South Asia.
+                            <a style="font-weight: 600; color: #0d6efd; text-decoration: underline; cursor: pointer;"
+                                data-bs-toggle="modal" data-bs-target="#exampleModal5">Read More</a>
+                        </p>
+                    </div>
+
+                    <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h4 class="modal-title">208 Films to Feature in Film Bazaar Viewing Room at IFFI 2024
+                                    </h4>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    <p>
+                                        The 55th International Film Festival of India is set to illuminate the cultural
+                                        landscape of Goa from 20th to 28th this November. Concurrently, the 18th edition of
+                                        Film Bazaar will run from November 20 to 24, offering a dynamic platform for
+                                        filmmakers and industry professionals to connect, collaborate and showcase their
+                                        work.
+                                    </p>
+                                    <p>This year, the Viewing Room returns to the Marriott Resort, featuring an enriched
+                                        line up of good quality films from India and South Asia. Designed as a crucial hub
+                                        for filmmakers seeking distribution and funding, the Viewing Room will showcase
+                                        films that are complete or in post-production stage, allowing them to connect with
+                                        global film programmers, distributors, sales agents, and investors. The Viewing Room
+                                        will be accessible from November 21 to 24.
+                                    </p>
+                                    <p>208 films will be available for viewing at this year’s edition of the Viewing Room
+                                        Library of which 145 are feature films, 23 are mid-length films, 30 are short films.
+                                        The overall line up of features and mid-length also include twelve titles of NFDC
+                                        produced and co-produced films, and adds 10 restored classics from the bouquet of
+                                        NFDC-NFAI. The films with a running time between 30-70 minutes that are submitted to
+                                        the Viewing Room are showcased in a category called Mid-Length Films. Those with a
+                                        running time of less than 30 minutes will be in the Short Films category.
+                                    </p>
+                                    <h6>The Film Bazaar Recommends (FBR)</h6>
+                                    <p>The Film Bazaar Recommends (FBR) list curates and highlights 27 projects consisting
+                                        of 19 feature films, 3 mid-length films, 2 short films and 3 restored classics out
+                                        of the entire mix.
+                                    </p>
+                                    <p>The Film Bazaar Recommends (FBR) list curates and highlights 27 projects consisting
+                                        of 19 feature films, 3 mid-length films, 2 short films and 3 restored classics out
+                                        of the entire mix.
+                                    </p>
+                                    <p>Prithul Kumar, Managing Director of NFDC, says “we are thrilled to announce the
+                                        selections for the FBR, which celebrate the creativity and passion of filmmakers.
+                                        This initiative is not just about recognition; it’s about empowering storytellers to
+                                        share their visions with the world. We believe in the transformative power of film
+                                        and are committed to supporting the next generation of artists as they inspire and
+                                        entertain.”
+                                    </p>
+                                    <p>Selected projects from the FBR will have the opportunity to pitch their films to
+                                        industry leaders, including producers, sales agents, distributors, festival
+                                        programmers, and potential investors during an open pitching session at Film Bazaar.
+                                        These Projects selected for the FBR section of feature, mid-length and short
+                                        filmmakers from the Viewing Room will pitch their films to producers, sales agents,
+                                        distributors, festival programmers and potential investors in an open pitching
+                                        session during Film Bazaar in Goa. Find the entire list of films here.
+                                    </p>
+                                    <p>* It is important to note that films in the FBR list or the Viewing Room are not
+                                        permitted to use the Film Bazaar logo in their credits or promotional materials.
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="startic-new-update">
+                <div class="row">
+                    <div class="col-md-5 col-sm-12 col-12 mb-4">
+                        <p class="newsupdatesView-block-img">
                             <img src="{{ asset('public/images/desktop-image/Work-in-Progress-Lab-Film-Selection-List-Revealed.jpg') }}"
                                 alt="image" class="img-fluid img-radius">
                         </p>
