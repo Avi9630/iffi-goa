@@ -22,6 +22,114 @@
                 <div class="row">
                     <div class="col-md-5 col-sm-12 col-12 mb-4">
                         <p class="newsupdatesView-block-img">
+                            <img src="{{ asset('public/images/desktop-image/Work-in-Progress-Lab-Film-Selection-List-Revealed.jpg') }}"
+                                alt="image" class="img-fluid img-radius">
+                        </p>
+                    </div>
+                    <div class="col-md-7 col-sm-12 col-12 mb-4">
+                        <h3>Work in Progress Lab Film Selection List Revealed </h3>
+                        <p class="mb-0">
+                            We are excited to confirm the line-up of films selected for the <b> WIP (Work-in-Progress) Lab
+                                at
+                                Film Bazaar 2024! </b> The prestigious lab, based in South Asia's largest film market, has
+                            historically aimed to nurture emerging filmmakers with developed projects before they go in
+                            front of audiences.
+                            <br>
+                            For selected filmmakers, the WIP Lab is a unique opportunity to benefit from the expert guidance
+                            and constructive criticism on their projects in the necessarily final stages of the work.
+                            <a style="font-weight: 600; color: #0d6efd; text-decoration: underline; cursor: pointer;"
+                                data-bs-toggle="modal" data-bs-target="#exampleModal4">Read More</a>
+                        </p>
+                    </div>
+
+                    <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Work in Progress Lab Film Selection List Revealed </h4>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    <p>
+                                        We are excited to confirm the line-up of films selected for the <b>WIP
+                                            (Work-in-Progress) Lab at Film Bazaar 2024!</b> The prestigious lab, based in
+                                        South
+                                        Asia's largest film market, has historically aimed to nurture emerging filmmakers
+                                        with developed projects before they go in front of audiences.
+                                    </p>
+                                    <p>For selected filmmakers, the WIP Lab is a unique opportunity to benefit from the
+                                        expert guidance and constructive criticism on their projects in the necessarily
+                                        final stages of the work.
+                                    </p>
+                                    <p>Continuing to build upon this formula for success that has been honed over the years,
+                                        the lab will once again include a mix of online and in-person opportunities. This
+                                        hybrid dynamic has been key to enabling real-time, flexible communication amongst
+                                        filmmakers and mentors, enabling in-depth discussions that help projects evolve in
+                                        unique and meaningful ways.
+                                    </p>
+                                    <p>By offering both online and offline engagement, the WIP Lab provides a collaborative
+                                        environment where participants can gain diverse perspectives and insights, all while
+                                        preserving the benefits of face-to-face brainstorming and interaction.
+                                    </p>
+                                    <p>Add to that the variety in formats forming an additional layer in the creative
+                                        process (the fact that people can join from all over the world, but at the same
+                                        time, everyone engages in a face-to-face conversation) and it is hard to imagine a
+                                        way to host an interaction of this nature better than this. The intent behind the
+                                        initiative is to strategize fresh approaches towards post-production assistance —
+                                        encompassing everything from editorial, VFX, sound design, and distribution
+                                        strategies.
+                                    </p>
+                                    <p>Under the mentorship of industry professionals, each filmmaker will refine their
+                                        stories to be fully-developed and ripe for the international market.
+                                    </p>
+                                    <p>
+                                        More than just a support structure, the WIP Lab serves as a bridge between
+                                        filmmakers and audiences.
+                                    </p>
+                                    <p>
+                                        The lab invites viewers into the process, fostering deeper connections to stories
+                                        that resonate across cultures and generations. By showcasing diverse narratives that
+                                        reflect the challenges, dreams, and complexities of contemporary life, the WIP Lab
+                                        provides a platform for emerging filmmakers to tell bold and powerful stories,
+                                        resonating with audiences on multiple levels.
+                                    </p>
+                                    <p>
+                                        This year’s selected films bring fresh perspectives and unique voices to the table,
+                                        capturing the spirit of a new generation of artists.
+                                    </p>
+                                    <div class="modal-content-inn">
+                                        <h6>Here is the official list of films selected for Film Bazaar 2024’s
+                                            Work-in-Progress Lab:</h6>
+                                        <ol>
+                                            <li>Shape of Momos by Tribeny Rai (Nepali) </li>
+                                            <li>Gaangshalik (Gaangshalik - River Bird) by Shakteedhar Bir (Bengali) </li>
+                                            <li>Yerra Mandaram (The Red Hibiscus) by Mohan Kumar Valasala (Telugu) </li>
+                                            <li>Kaatti Ri Raatti (Hunters Moon) by Ridham Janve (Gaddi, Nepali) </li>
+                                            <li>Umal by Siddharth Badi (Marathi)</li>
+                                            <li>The Good The Bad The Hungry by Vivek Kumar (Hindi)</li>
+                                        </ol>
+                                        <p>Each of these selected projects represents an important voice in today’s film
+                                            landscape, tackling themes that resonate across cultures.</p>
+                                    </div>
+                                </div>
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="startic-new-update">
+                <div class="row">
+                    <div class="col-md-5 col-sm-12 col-12 mb-4">
+                        <p class="newsupdatesView-block-img">
                             <img src="{{ asset('public/images/desktop-image/Raj-Kapoor.jpg') }}" alt="Raj Kapoor image"
                                 class="img-fluid img-radius">
                         </p>

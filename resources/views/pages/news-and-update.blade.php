@@ -9,6 +9,29 @@
 
                 <div class="card shadow-sm">
                     <a href="{{ route('news-and-update') }}">
+                        <img src="{{ asset('public/images/desktop-image/Work-in-Progress-Lab-Film-Selection-List-Revealed.jpg') }}"alt=" image"
+                            class="img-fluid">
+                        <div class="card-body text-start">
+                            <h3>Work in Progress Lab Film Selection List Revealed </h3>
+                            <p class="card-text">
+                                We are excited to confirm the line-up of films selected for the <b> WIP
+                                    (Work-in-Progress) Lab at Film Bazaar 2024! </b> The prestigious lab, based in South
+                                Asia's largest film market, has historically aimed to nurture emerging filmmakers with
+                                developed projects before they go in front of audiences.
+                                <br>
+                                For selected filmmakers, the WIP Lab is a unique opportunity to benefit from the expert
+                                guidance and constructive criticism on their projects in the necessarily final stages of
+                                the work.
+                            </p>
+                            <p>
+                                <a href="{{ route('news-and-update') }}">Read more </a>
+                            </p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card shadow-sm">
+                    <a href="{{ route('news-and-update') }}">
                         <img src="{{ asset('public/images/desktop-image/Raj-Kapoor.jpg') }}"alt="Raj Kapoor image"
                             class="img-fluid">
                         <div class="card-body text-start">
