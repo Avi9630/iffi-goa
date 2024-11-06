@@ -429,6 +429,11 @@
                                             Schedule
                                         </a>
                                     </li>
+                                    <li class="nav-item">
+                                        <a href="{{ route('knowledge-series') }}" class="nav-link">
+                                            Knowledge series
+                                        </a>
+                                    </li>
 
                                     {{-- <li class="nav-item dropdown">
 
