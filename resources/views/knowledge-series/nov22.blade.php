@@ -4,33 +4,23 @@
 
         <div class="col-md-2 col-12">
             <div class="master-time">
-                <h4 class="time-div">11:00 AM</h4>
-                <h5 class="time-div">12:00 PM</h5>
+                <h4 class="time-div">12:45 PM</h4>
+                <h5 class="time-div">1:30 PM</h5>
             </div>
         </div>
 
         <div class="col-md-7 col-12">
             <div class="callout">
                 <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov22-0-trigger">
-                    Centenary Special ANR: Celebrating the Life and Works of Akkineni Nageswara Rao
+                    Greenlighting Your Project: Strategies for Film & Series Creators
                 </h4>
                 <p>
-                    This centenary special celebrates the legendary actor & producer Akkineni Nageswara Rao (ANR), whose
-                    contributions to Indian cinema remain unparalleled. In this special session, ANR's son and the
-                    renowned actor Nagarjuna will discuss how ANR influenced him as a father and as an actor,his
-                    illustrious career, iconic roles, and his immeasurable impact on the film industry, as a tribute
-                    alongside the renowned actress kushboo sundar.
+                    After 8 years of the OTT boom in India, the competition to get a
+                    series or film greenlit is tougher than ever. Emerging creators
+                    can look to the masters of content for key lessons on how to
+                    transform their ideas from the concept stage to a successful
+                    platform release.
                 </p>
-            </div>
-        </div>
-
-        <div class="col-md-3 col-12">
-            <div class="user-profile-icon">
-                <ul>
-                    <li><img src="{{ asset('public/images/master-class/Akkineni Nagarjuna Rao.jpg') }}" alt="image"
-                            class="img-fluid">
-                    </li>
-                </ul>
             </div>
         </div>
     </div>
@@ -42,33 +32,24 @@
 
         <div class="col-md-2 col-12">
             <div class="master-time">
-                <h4 class="time-div">12:30 PM</h4>
-                <h5 class="time-div">01:30 PM</h5>
+                <h4 class="time-div">2:45 PM</h4>
+                <h5 class="time-div">3:30 PM</h5>
             </div>
         </div>
 
         <div class="col-md-7 col-12">
             <div class="callout">
                 <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov22-1-trigger">
-                    Living Movies: Filmmaking and the Creative Life
+                    State Focus: "Building a Film-Friendly Uttarakhand: Initiatives, Incentives, and the Role of
+                    Stakeholders"
                 </h4>
                 <p>
-                    In this session, the acclaimed filmmaker Vidhu Vinod Chopra takes us on a journey through the
-                    creative process, sharing his experiences, challenges, and the philosophy behind living through
-                    cinema.With decades of storytelling mastery,Mr.
-                    Chopra will bring us the insights into how films not only reflect life but become a living entity of
-                    their own, inspiring generations
+                    After 8 years of the OTT boom in India, the competition to get a
+                    series or film greenlit is tougher than ever. Emerging creators
+                    can look to the masters of content for key lessons on how to
+                    transform their ideas from the concept stage to a successful
+                    platform release.
                 </p>
-            </div>
-        </div>
-
-        <div class="col-md-3 col-12">
-            <div class="user-profile-icon">
-                <ul>
-                    <li><img src="{{ asset('public/images/master-class/Vidhu Vinod Chopra.jpg') }}" alt="image"
-                            class="img-fluid">
-                    </li>
-                </ul>
             </div>
         </div>
     </div>
@@ -77,40 +58,26 @@
 <div class="mt-4 mb-4">
     <h2 class="pb-3">November 22nd, 2024</h2>
     <div class="row">
-
         <div class="col-md-2 col-12">
             <div class="master-time">
-                <h4 class="time-div">2.30 PM</h4>
-                <h5 class="time-div">04:00 PM</h5>
+                <h4 class="time-div">3:45 PM</h4>
+                <h5 class="time-div">4:30 PM</h5>
             </div>
         </div>
-
         <div class="col-md-7 col-12">
             <div class="callout">
                 <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov22-2-trigger">
-                    Sound Design : The Aural Universe of cinematic Storytelling
+                    Understanding AI: How AI shapes the future of storytelling
                 </h4>
                 <p>
-                    This session brings together renowned sound designers Nakul Kamte and Eric Hoehn, who will explore
-                    the power of sound design in shaping the emotional and narrative depth of films. From subtle ambient
-                    layers to impactful soundscapes, they will share their craft in building the aural dimension that
-                    completes the cinematic experience.
+                    Creators have started using AI to revolutionize storytelling
+                    across diverse media platforms. From generating plot ideas
+                    and developing characters, AI is reshaping how stories can be
+                    created and consumed. Experts from AI, media, and
+                    entertainment sectors will explore the evolving landscape,
+                    future trends, and the potential impact of AI on the creative
+                    process of filmmaking.
                 </p>
-            </div>
-        </div>
-
-        <div class="col-md-3 col-12">
-            <div class="user-profile-icon">
-                <ul>
-                    <li>
-                        <img src="{{ asset('public/images/master-class/Nakul Kamte.jpg') }}" alt="image"
-                            class="img-fluid">
-                    </li>
-                    <li>
-                        <img src="{{ asset('public/images/master-class/Eric Hoehn.jpg') }}" alt="image"
-                            class="img-fluid">
-                    </li>
-                </ul>
             </div>
         </div>
     </div>
@@ -119,41 +86,46 @@
 <div class="mt-4 mb-4">
     <h2 class="pb-3">November 22nd, 2024</h2>
     <div class="row">
-
         <div class="col-md-2 col-12">
             <div class="master-time">
-                <h4 class="time-div">04.30 PM</h4>
-                <h5 class="time-div">06:00 PM</h5>
+                <h4 class="time-div">4:45 PM</h4>
+                <h5 class="time-div">5:30 PM</h5>
             </div>
         </div>
-
         <div class="col-md-7 col-12">
             <div class="callout">
                 <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov22-3-trigger">
-                    Transforming Literary Masterpieces into Engaging Films
+                    Women in Film LA: An Insightful discussion
                 </h4>
                 <p>
-                    Adapting literary classics into films is an art that requires maintaining the essence of the
-                    original work and balancing it with the demands of visual storytelling which maniratnam has
-                    beautifully did with approach to ‘Ponniyin Selvan’, focusing on his ability to capture the essence
-                    of the original text while infusing his unique vision.With his expertise, Mr. Mani Ratnam will
-                    reveal the challenges of working on one of the greatest historical masterpieces of Tamil literature
-                    and the intricacies of bringing complex characters and plots from page to screen, making them
-                    resonate with the contemporary audience.
+                    An expert panel delves into strategies for enhancing visibility
+                    and expanding opportunities for female filmmakers, writers,
+                    and producers.
                 </p>
             </div>
         </div>
+    </div>
+</div>
 
-        <div class="col-md-3 col-12">
-            <div class="user-profile-icon">
-                <ul>
-                    <li><img src="{{ asset('public/images/master-class/Mani Ratnam.jpg') }}" alt="image"
-                            class="img-fluid">
-                    </li>
-                    <li><img src="{{ asset('public/images/master-class/Gautham Vasudev Menon.jpg') }}" alt="image"
-                            class="img-fluid">
-                    </li>
-                </ul>
+<div class="mt-4 mb-4">
+    <h2 class="pb-3">November 22nd, 2024</h2>
+    <div class="row">
+        <div class="col-md-2 col-12">
+            <div class="master-time">
+                <h4 class="time-div">5:45 PM</h4>
+                <h5 class="time-div">6:30 PM</h5>
+            </div>
+        </div>
+        <div class="col-md-7 col-12">
+            <div class="callout">
+                <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov22-4-trigger">
+                    Unlocking Global Funds for Aspiring Filmmakers
+                </h4>
+                <p>
+                    A comprehensive guide to accessing international funding
+                    opportunities for aspiring filmmakers, providing them with the
+                    tools and knowledge to bring their film projects to life.
+                </p>
             </div>
         </div>
     </div>
