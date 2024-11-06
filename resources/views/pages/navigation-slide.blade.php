@@ -249,7 +249,7 @@
                                             <li class="nav-item dropend">
                                                 <a class="nav-link dropdown-toggle" href="#" role="button"
                                                     data-bs-toggle="dropdown" aria-expanded="false">
-                                                    Indian Panorama - IFFI 2023
+                                                    Indian Panorama IFFI 2023
                                                 </a>
                                                 <ul class="dropdown-menu">
                                                     <li><a class="dropdown-item"
@@ -449,11 +449,11 @@
                                         <a href="https://filmbazaarindia.com/programme/market-screenings/"
                                             class="nav-link" target="_blank">Market Screenings</a>
                                     </li>
-                                    <li class="nav-item">
+                                    {{-- <li class="nav-item">
                                         <a href="{{ route('knowledge-series') }}" class="nav-link">
                                             Knowledge series
                                         </a>
-                                    </li>
+                                    </li> --}}
                                 </ul>
                             </div>
                             <!-- Film Bazaar Section End -->
