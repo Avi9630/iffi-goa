@@ -451,7 +451,7 @@
                                     </li>
                                     {{-- <li class="nav-item">
                                         <a href="{{ route('knowledge-series') }}" class="nav-link">
-                                            Knowledge series
+                                            Knowledge series.
                                         </a>
                                     </li> --}}
                                 </ul>
