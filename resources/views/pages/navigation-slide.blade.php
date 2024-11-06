@@ -416,6 +416,11 @@
                                         <a href="https://filmbazaarindia.com/programme/market-screenings/"
                                             class="nav-link" target="_blank">Market Screenings</a>
                                     </li>
+                                    <li class="nav-item">
+                                        <a href="{{ route('knowledge-series') }}" class="nav-link">
+                                            Knowledge series
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
                             <!-- Film Bazaar Section End -->
@@ -427,11 +432,6 @@
                                     <li class="nav-item">
                                         <a href="{{ route('master-classes') }}" class="nav-link">
                                             Schedule
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="{{ route('knowledge-series') }}" class="nav-link">
-                                            Knowledge series
                                         </a>
                                     </li>
 
