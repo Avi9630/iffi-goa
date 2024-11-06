@@ -6,6 +6,73 @@
         </div>
         <div class="row card-same-height">
             <div class="newsUpdate1">
+
+                <div class="card shadow-sm">
+                    <a href="{{ route('news-and-update') }}">
+                        <img src="{{ asset('public/images/desktop-image/Work-in-Progress-Lab-Film-Selection-List-Revealed.jpg') }}"alt=" image"
+                            class="img-fluid">
+                        <div class="card-body text-start">
+                            <h3>Work in Progress Lab Film Selection List Revealed </h3>
+                            <p class="card-text">
+                                We are excited to confirm the line-up of films selected for the <b> WIP
+                                    (Work-in-Progress) Lab at Film Bazaar 2024! </b> The prestigious lab, based in South
+                                Asia's largest film market, has historically aimed to nurture emerging filmmakers with
+                                developed projects before they go in front of audiences.
+                                <br>
+                                For selected filmmakers, the WIP Lab is a unique opportunity to benefit from the expert
+                                guidance and constructive criticism on their projects in the necessarily final stages of
+                                the work.
+                            </p>
+                            <p>
+                                <a href="{{ route('news-and-update') }}">Read more </a>
+                            </p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card shadow-sm">
+                    <a href="{{ route('news-and-update') }}">
+                        <img src="{{ asset('public/images/desktop-image/Raj-Kapoor.jpg') }}"alt="Raj Kapoor image"
+                            class="img-fluid">
+                        <div class="card-body text-start">
+                            <h3>Raj Kapoor, ANR, Rafi, and Tapan Sinha will be Honoured with IFFI Centenary Tribute</h3>
+                            <p class="card-text">
+                                Our film industry legendary icons Raj Kapoor, ANR, Mohammed Rafi and Tapan Sinha will be
+                                honoured with the centenary tribute at 55th IFFI. The IFFI gala in Goa will celebrate
+                                cinematic legends by presenting restored versions of their classic films throughout its
+                                nine-day event. The festival’s opening ceremony on November 20 will pay tribute to these
+                                icons with a special audio-visual presentation that captures their impactful journeys in
+                                cinema.
+                            </p>
+                            <p>
+                                <a href="{{ route('news-and-update') }}">Read more </a>
+                            </p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card shadow-sm">
+                    <a href="{{ route('news-and-update') }}">
+                        <img src="{{ asset('public/images/desktop-image/Best-Debut-Directors-of-Indian-Feature-Films.jpg') }}"alt="image"
+                            class="img-fluid">
+                        <div class="card-body text-start">
+                            <h3>5 Debut Directors Selected for Indian Feature Films</h3>
+                            <p class="card-text">
+                                The 55th International Film Festival of India (IFFI) is launching a fresh award
+                                category, “Best Debut Director of Indian Feature Film,” spotlighting the work of five
+                                debut directors who bring unique perspectives and innovative storytelling to Indian
+                                cinema. This initiative aims to encourage emerging filmmakers, showcasing their
+                                contributions to the industry with compelling narratives and diverse themes. Taking
+                                place from November 20-28, 2024, IFFI will celebrate these new voices in Indian film,
+                                underscoring the festival's commitment to fostering creative talent across the nation.
+                            </p>
+                            <p>
+                                <a href="{{ route('news-and-update') }}">Read more </a>
+                            </p>
+                        </div>
+                    </a>
+                </div>
+
                 <div class="card shadow-sm">
                     <a href="{{ route('news-and-update') }}">
                         <img src="{{ asset('public/images/desktop-image/Co-Production.jpg') }}"alt="image"
@@ -20,7 +87,7 @@
                                 take place from November 20 to 28, 2024.
                             </p>
                             <p>
-                                <a href="{{ route('news-and-update') }}" target="_blank">Read more </a>
+                                <a href="{{ route('news-and-update') }}">Read more </a>
                             </p>
                         </div>
                     </a>
@@ -40,7 +107,7 @@
                                 Panorama.
                             </p>
                             <p>
-                                <a href="{{ route('news-and-update') }}" target="_blank">Read more </a>
+                                <a href="{{ route('news-and-update') }}">Read more </a>
                             </p>
                         </div>
                     </a>

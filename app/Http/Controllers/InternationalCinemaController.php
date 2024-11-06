@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use DB;
 
 class InternationalCinemaController extends Controller
@@ -23,11 +22,41 @@ class InternationalCinemaController extends Controller
                 'international_cinema.*',
                 'international_curated_sections.title AS curated_section_title',
             )
+            // ->orderBy('international_cinema.id', 'DESC')
             ->limit(8)
             ->get();
+
         // dd($internationalCinemas);
         return view('international-cinema.international-competition', [
-            'internationalCinemas'              =>  $internationalCinemas,
+            'internationalCinemas' => $internationalCinemas,
+        ]);
+    }
+
+    public function internationalCompetition2024()
+    {
+        $internationalCinemas = DB::table('international_cinema')
+            ->join(
+                'international_curated_sections',
+                'international_cinema.curated_section_id',
+                '=',
+                'international_curated_sections.id',
+            )
+            // ->where('international_cinema.status', '=', '1')
+            // ->where('international_curated_sections.id', '=', '1')
+            // ->where('international_cinema.curated_section_id', '=', '1')
+            ->where(['international_cinema.curated_section_id' => 1,
+                'year' => 2024])
+            ->select(
+                'international_cinema.*',
+                'international_curated_sections.title AS curated_section_title',
+            )
+            // ->orderBy('international_cinema.id', 'DESC')
+            // ->limit(8)
+            ->get();
+
+        // dd($internationalCinemas);
+        return view('international-cinema.2024.international-competition', [
+            'internationalCinemas' => $internationalCinemas,
         ]);
     }
 
@@ -47,9 +76,10 @@ class InternationalCinemaController extends Controller
             )
             ->limit(8)
             ->get();
+
         // dd($awardBestDebute);
         return view('international-cinema.award-for-best-debute', [
-            'awardBestDebute'              =>  $awardBestDebute,
+            'awardBestDebute' => $awardBestDebute,
         ]);
     }
 
@@ -69,9 +99,10 @@ class InternationalCinemaController extends Controller
             )
             ->limit(8)
             ->get();
+
         // dd($icft_unesco_medal);
         return view('international-cinema.icft-unesco-medal', [
-            'icfts'              =>  $icft_unesco_medal,
+            'icfts' => $icft_unesco_medal,
         ]);
     }
 
@@ -91,9 +122,10 @@ class InternationalCinemaController extends Controller
             )
             ->limit(8)
             ->get();
+
         // dd($festival_kaleloscope);
         return view('international-cinema.festival-kaleloscope', [
-            'kaleloscopes'              =>  $festival_kaleloscope,
+            'kaleloscopes' => $festival_kaleloscope,
         ]);
     }
 
@@ -113,9 +145,10 @@ class InternationalCinemaController extends Controller
             )
             ->limit(8)
             ->get();
+
         // dd($docu_montage);
         return view('international-cinema.docu-montage', [
-            'montages'              =>  $docu_montage,
+            'montages' => $docu_montage,
         ]);
     }
 
@@ -135,9 +168,10 @@ class InternationalCinemaController extends Controller
             )
             ->limit(8)
             ->get();
+
         // dd($integrade);
         return view('international-cinema.integrade', [
-            'integrades' =>  $integrade,
+            'integrades' => $integrade,
         ]);
     }
 
@@ -157,9 +191,10 @@ class InternationalCinemaController extends Controller
             )
             ->limit(8)
             ->get();
+
         // dd($animation);
         return view('international-cinema.animation', [
-            'animations'              =>  $animation,
+            'animations' => $animation,
         ]);
     }
 
@@ -179,9 +214,10 @@ class InternationalCinemaController extends Controller
             )
             ->limit(8)
             ->get();
+
         // dd($macabreDreams);
         return view('international-cinema.macabre-dreams', [
-            'macabreDreams' =>  $macabreDreams,
+            'macabreDreams' => $macabreDreams,
         ]);
     }
 
@@ -201,9 +237,10 @@ class InternationalCinemaController extends Controller
             )
             ->limit(8)
             ->get();
+
         // dd($cinemaWorld);
         return view('international-cinema.cinema-world', [
-            'cinemaWorld' =>  $cinemaWorld,
+            'cinemaWorld' => $cinemaWorld,
         ]);
     }
 
@@ -223,9 +260,10 @@ class InternationalCinemaController extends Controller
             )
             ->limit(8)
             ->get();
+
         // dd($restoredClassic);
         return view('international-cinema.restored-classic', [
-            'restoredClassic' =>  $restoredClassic,
+            'restoredClassic' => $restoredClassic,
         ]);
     }
 
@@ -245,9 +283,10 @@ class InternationalCinemaController extends Controller
             )
             ->limit(8)
             ->get();
+
         // dd($uniceff);
         return view('international-cinema.uniceff', [
-            'uniceffs' =>  $uniceff,
+            'uniceffs' => $uniceff,
         ]);
     }
 }

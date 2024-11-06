@@ -22,6 +22,257 @@
                 <div class="row">
                     <div class="col-md-5 col-sm-12 col-12 mb-4">
                         <p class="newsupdatesView-block-img">
+                            <img src="{{ asset('public/images/desktop-image/Work-in-Progress-Lab-Film-Selection-List-Revealed.jpg') }}"
+                                alt="image" class="img-fluid img-radius">
+                        </p>
+                    </div>
+                    <div class="col-md-7 col-sm-12 col-12 mb-4">
+                        <h3>Work in Progress Lab Film Selection List Revealed </h3>
+                        <p class="mb-0">
+                            We are excited to confirm the line-up of films selected for the <b> WIP (Work-in-Progress) Lab
+                                at
+                                Film Bazaar 2024! </b> The prestigious lab, based in South Asia's largest film market, has
+                            historically aimed to nurture emerging filmmakers with developed projects before they go in
+                            front of audiences.
+                            <br>
+                            For selected filmmakers, the WIP Lab is a unique opportunity to benefit from the expert guidance
+                            and constructive criticism on their projects in the necessarily final stages of the work.
+                            <a style="font-weight: 600; color: #0d6efd; text-decoration: underline; cursor: pointer;"
+                                data-bs-toggle="modal" data-bs-target="#exampleModal4">Read More</a>
+                        </p>
+                    </div>
+
+                    <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Work in Progress Lab Film Selection List Revealed </h4>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    <p>
+                                        We are excited to confirm the line-up of films selected for the <b>WIP
+                                            (Work-in-Progress) Lab at Film Bazaar 2024!</b> The prestigious lab, based in
+                                        South
+                                        Asia's largest film market, has historically aimed to nurture emerging filmmakers
+                                        with developed projects before they go in front of audiences.
+                                    </p>
+                                    <p>For selected filmmakers, the WIP Lab is a unique opportunity to benefit from the
+                                        expert guidance and constructive criticism on their projects in the necessarily
+                                        final stages of the work.
+                                    </p>
+                                    <p>Continuing to build upon this formula for success that has been honed over the years,
+                                        the lab will once again include a mix of online and in-person opportunities. This
+                                        hybrid dynamic has been key to enabling real-time, flexible communication amongst
+                                        filmmakers and mentors, enabling in-depth discussions that help projects evolve in
+                                        unique and meaningful ways.
+                                    </p>
+                                    <p>By offering both online and offline engagement, the WIP Lab provides a collaborative
+                                        environment where participants can gain diverse perspectives and insights, all while
+                                        preserving the benefits of face-to-face brainstorming and interaction.
+                                    </p>
+                                    <p>Add to that the variety in formats forming an additional layer in the creative
+                                        process (the fact that people can join from all over the world, but at the same
+                                        time, everyone engages in a face-to-face conversation) and it is hard to imagine a
+                                        way to host an interaction of this nature better than this. The intent behind the
+                                        initiative is to strategize fresh approaches towards post-production assistance —
+                                        encompassing everything from editorial, VFX, sound design, and distribution
+                                        strategies.
+                                    </p>
+                                    <p>Under the mentorship of industry professionals, each filmmaker will refine their
+                                        stories to be fully-developed and ripe for the international market.
+                                    </p>
+                                    <p>
+                                        More than just a support structure, the WIP Lab serves as a bridge between
+                                        filmmakers and audiences.
+                                    </p>
+                                    <p>
+                                        The lab invites viewers into the process, fostering deeper connections to stories
+                                        that resonate across cultures and generations. By showcasing diverse narratives that
+                                        reflect the challenges, dreams, and complexities of contemporary life, the WIP Lab
+                                        provides a platform for emerging filmmakers to tell bold and powerful stories,
+                                        resonating with audiences on multiple levels.
+                                    </p>
+                                    <p>
+                                        This year’s selected films bring fresh perspectives and unique voices to the table,
+                                        capturing the spirit of a new generation of artists.
+                                    </p>
+                                    <div class="modal-content-inn">
+                                        <h6>Here is the official list of films selected for Film Bazaar 2024’s
+                                            Work-in-Progress Lab:</h6>
+                                        <ol>
+                                            <li>Shape of Momos by Tribeny Rai (Nepali) </li>
+                                            <li>Gaangshalik (Gaangshalik - River Bird) by Shakteedhar Bir (Bengali) </li>
+                                            <li>Yerra Mandaram (The Red Hibiscus) by Mohan Kumar Valasala (Telugu) </li>
+                                            <li>Kaatti Ri Raatti (Hunters Moon) by Ridham Janve (Gaddi, Nepali) </li>
+                                            <li>Umal by Siddharth Badi (Marathi)</li>
+                                            <li>The Good The Bad The Hungry by Vivek Kumar (Hindi)</li>
+                                        </ol>
+                                        <p>Each of these selected projects represents an important voice in today’s film
+                                            landscape, tackling themes that resonate across cultures.</p>
+                                    </div>
+                                </div>
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="startic-new-update">
+                <div class="row">
+                    <div class="col-md-5 col-sm-12 col-12 mb-4">
+                        <p class="newsupdatesView-block-img">
+                            <img src="{{ asset('public/images/desktop-image/Raj-Kapoor.jpg') }}" alt="Raj Kapoor image"
+                                class="img-fluid img-radius">
+                        </p>
+                    </div>
+                    <div class="col-md-7 col-sm-12 col-12 mb-4">
+                        <h3>Raj Kapoor, ANR, Rafi, and Tapan Sinha will be Honoured with IFFI Centenary Tribute</h3>
+                        <p class="mb-0">
+                            Our film industry legendary icons Raj Kapoor, ANR, Mohammed Rafi and Tapan Sinha will be
+                            honoured with the centenary tribute at 55th IFFI. The IFFI gala in Goa will celebrate cinematic
+                            legends by presenting restored versions of their classic films throughout its nine-day event.
+                            The festival’s opening ceremony on November 20 will pay tribute to these icons with a special
+                            audio-visual presentation that captures their impactful journeys in cinema.
+                            <a style="font-weight: 600; color: #0d6efd; text-decoration: underline; cursor: pointer;"
+                                data-bs-toggle="modal" data-bs-target="#exampleModal3">Read More</a>
+                        </p>
+                    </div>
+
+                    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Raj Kapoor, ANR, Rafi, and Tapan Sinha will be Honoured with
+                                        IFFI Centenary Tribute</h4>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    <p>
+                                        Our film industry legendary icons Raj Kapoor, ANR, Mohammed Rafi and Tapan Sinha
+                                        will be honoured with the centenary tribute at 55th IFFI. The IFFI gala in Goa will
+                                        celebrate cinematic legends by presenting restored versions of their classic films
+                                        throughout its nine-day event. The festival’s opening ceremony on November 20 will
+                                        pay tribute to these icons with a special audio-visual presentation that captures
+                                        their impactful journeys in cinema.
+                                    </p>
+                                    <p>A variety of organizers have arranged a tribute program to honor the 100th birth
+                                        anniversaries of four Indian cinema legends: actor and filmmaker Raj Kapoor,
+                                        director Tapan Sinha, Telugu cinema icon Akkineni Nageswara Rao (ANR), and iconic
+                                        singer Mohammed Rafi.
+                                    </p>
+                                    <p>The National Film Development Corporation (NFDC) have taken the restoration work to
+                                        bring these classics back to their visual quality. Get ready to witness the
+                                        centenary celebrations that will be held at November 20, at GOA. </p>
+                                    {{-- <div class="modal-content-inn">
+                                        <h6>Here are the 5 debut directors of Indian Feature Film Selection:</h6>
+                                        <ul>
+                                            <li>Lakshmipriya Devi for Boong Film</li>
+                                            <li>Navjyot Bandiwadekar for Gharat Ganpati Film</li>
+                                            <li>Manohara K for Mikka Bannada Hakki (Bird of a Different Feather) film</li>
+                                            <li>Razakar (Silent Genocide of Hyderabad) for Yata Satyanarayana Film</li>
+                                            <li>Thanupp (The Cold) for Ragesh Narayanan Film</li>
+                                        </ul>
+                                        <p>Each of these films brings unique narratives and regional perspectives,
+                                            highlighting India’s cultural and linguistic diversity.</p>
+                                    </div> --}}
+
+                                </div>
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="startic-new-update">
+                <div class="row">
+                    <div class="col-md-5 col-sm-12 col-12 mb-4">
+                        <p class="newsupdatesView-block-img">
+                            <img src="{{ asset('public/images/desktop-image/Best-Debut-Directors-of-Indian-Feature-Films.jpg') }}"
+                                alt="image" class="img-fluid img-radius">
+                        </p>
+                    </div>
+                    <div class="col-md-7 col-sm-12 col-12 mb-4">
+                        <h3>5 Debut Directors Selected for Indian Feature Films</h3>
+                        <p class="mb-0">
+                            The 55th International Film Festival of India (IFFI) is launching a fresh award category, “Best
+                            Debut Director of Indian Feature Film,” spotlighting the work of five debut directors who bring
+                            unique perspectives and innovative storytelling to Indian cinema. This initiative aims to
+                            encourage emerging filmmakers, showcasing their contributions to the industry with compelling
+                            narratives and diverse themes. Taking place from November 20-28, 2024, IFFI will celebrate these
+                            new voices in Indian film, underscoring the festival's commitment to fostering creative talent
+                            across the nation.
+                            <a style="font-weight: 600; color: #0d6efd; text-decoration: underline; cursor: pointer;"
+                                data-bs-toggle="modal" data-bs-target="#exampleModal3">Read More</a>
+                        </p>
+                    </div>
+
+                    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h4 class="modal-title">5 Debut Directors Selected for Indian Feature Films</h4>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    <p>
+                                        The 55th International Film Festival of India (IFFI) is launching a fresh award
+                                        category, “Best Debut Director of Indian Feature Film,” spotlighting the work of
+                                        five debut directors who bring unique perspectives and innovative storytelling to
+                                        Indian cinema. This initiative aims to encourage emerging filmmakers, showcasing
+                                        their contributions to the industry with compelling narratives and diverse themes.
+                                        Taking place from November 20-28, 2024, IFFI will celebrate these new voices in
+                                        Indian film, underscoring the festival's commitment to fostering creative talent
+                                        across the nation.
+                                    </p>
+                                    <div class="modal-content-inn">
+                                        <h6>Here are the 5 debut directors of Indian Feature Film Selection:</h6>
+                                        <ul>
+                                            <li>Lakshmipriya Devi for Boong Film</li>
+                                            <li>Navjyot Bandiwadekar for Gharat Ganpati Film</li>
+                                            <li>Manohara K for Mikka Bannada Hakki (Bird of a Different Feather) film</li>
+                                            <li>Razakar (Silent Genocide of Hyderabad) for Yata Satyanarayana Film</li>
+                                            <li>Thanupp (The Cold) for Ragesh Narayanan Film</li>
+                                        </ul>
+                                        <p>Each of these films brings unique narratives and regional perspectives,
+                                            highlighting India’s cultural and linguistic diversity.</p>
+                                    </div>
+
+                                </div>
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="startic-new-update">
+                <div class="row">
+                    <div class="col-md-5 col-sm-12 col-12 mb-4">
+                        <p class="newsupdatesView-block-img">
                             <img src="{{ asset('public/images/desktop-image/Co-Production.jpg') }}" alt="image"
                                 class="img-fluid img-radius">
                         </p>
@@ -68,16 +319,16 @@
                                         <h6>Here is the list of Films / Web Series that are selected for co-production
                                             market this year:</h6>
                                         <ul>
-                                            <li>A Night's Whispers and the Winds
-                                            <li>Aadu Ki Kasam (Destiny's Dance)
-                                            <li>Aanaikatti Blues
-                                            <li>Absent
-                                            <li>All Ten Heads Of Ravanna
-                                            <li>Chetak
-                                            <li>Divine Chords
-                                            <li>Feral
-                                            <li>Gulistaan (Year of the Weeds)
-                                            <li>Guptam (The Last of Them Plagues
+                                            <li>A Night's Whispers and the Winds</li>
+                                            <li>Aadu Ki Kasam (Destiny's Dance)</li>
+                                            <li>Aanaikatti Blues</li>
+                                            <li>Absent</li>
+                                            <li>All Ten Heads Of Ravanna</li>
+                                            <li>Chetak</li>
+                                            <li>Divine Chords</li>
+                                            <li>Feral</li>
+                                            <li>Gulistaan (Year of the Weeds)</li>
+                                            <li>Guptam (The Last of Them Plagues)</li>
                                             <li>Harbir</li>
                                             <li>Home Before Night</li>
                                             <li>Kabootar</li>
