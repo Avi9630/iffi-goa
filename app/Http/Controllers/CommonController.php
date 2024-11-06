@@ -207,6 +207,23 @@ class CommonController extends Controller
         return view('media.press-release', ['press' => $press]);
     }
 
+    // public function thepeacock(Request $request)
+    // {
+    //     $year = $request->input('year');
+
+    //     $peacock = DB::table('the_peacock')
+    //         ->where('status', '1')
+    //         ->orderBy('id', 'desc');
+
+    //     if ($year) {
+    //         $peacock->whereYear('publish_date', $year);
+    //     }
+
+    //     $thepeacock = $peacock->paginate(10);
+
+    //     return view('media.the-peacock', ['press' => $thepeacock]);
+    // }
+
     public function newsUpdate()
     {
         $newsUpdates = NewsUpdate::where('status', 1)->orderBy('id', 'DESC')->get();
@@ -218,7 +235,7 @@ class CommonController extends Controller
     {
         $datas = NewsUpdate::where('status', 1)
             ->orderBy('updated_at', 'DESC')
-            ->limit(6)
+            ->limit(3)
             ->get();
 
         return $datas;

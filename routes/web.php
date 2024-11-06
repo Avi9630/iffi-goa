@@ -37,6 +37,8 @@ Route::controller(CommonController::class)->group(function () {
 
     Route::get('media/press-release', 'pressRelease')->name('press-release');
 
+    // Route::get('media/the-peacock', 'thepeacock')->name('the-peacock');
+
     Route::get('media/news-and-update', 'newsUpdate')->name('news-and-update');
 
     // Route::get('news-and-update',                 'newsUpdate1')->name('news-and-update');
