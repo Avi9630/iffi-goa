@@ -613,6 +613,12 @@ footer a:hover {
         url(../images/main-header/Venuebg.jpg) center center no-repeat;
     background-size: cover;
 }
+
+.bannerBg-knowledge-series {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url(../images/main-header/knowledge-series.webp) center center no-repeat;
+    background-size: cover;
+}
 .bannerBg-goa-tourist-places {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
         url(../images/main-header/IFFI-GoaTour-banner.jpg) center center

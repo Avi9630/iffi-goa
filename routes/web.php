@@ -160,6 +160,10 @@ Route::get('master-classes', function () {
     return view('master');
 })->name('master-classes');
 
+Route::get('knowledge-series', function () {
+    return view('knowledge-series');
+})->name('knowledge-series');
+
 // Jury Route
 Route::get('international-jury', function () {
     return view('international-cinema.international-jury');
