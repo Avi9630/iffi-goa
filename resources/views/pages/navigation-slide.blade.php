@@ -123,19 +123,21 @@
                                                 <a href="{{ route('international-jury') }}"
                                                     class="dropdown-item">International Jury - 2024</a>
                                             </li>
+
                                             {{-- Curated Sections 2024 --}}
-                                            <li class="nav-item dropend">
-                                                {{-- <a class="nav-link dropdown-toggle" href="#" role="button"
+                                            {{-- <li class="nav-item dropend">
+                                                <a class="nav-link dropdown-toggle" href="#" role="button"
                                                     data-bs-toggle="dropdown" aria-expanded="false">
                                                     Curated Sections 2024
-                                                </a> --}} 
-                                                {{-- <ul class="dropdown-menu">
+                                                </a>
+                                                <ul class="dropdown-menu">
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('international-competition-2024') }}">International
-                                                            Competition</a></li>
+                                                            Competition</a>
+                                                    </li>
+                                                </ul>
+                                            </li> --}}
 
-                                                </ul>-- }}
-                                            </li>
                                             {{-- Curated Sections 2023 --}}
                                             <li class="nav-item dropend">
                                                 <a class="nav-link dropdown-toggle" href="#" role="button"
@@ -374,14 +376,36 @@
                                             class="nav-link">Press Release</a>
                                     </li>
 
-                                    <li class="nav-item">
+                                    {{-- <li class="nav-item">
                                         <a href="{{ route('gallery') }}" class="nav-link">Gallery
                                             of 2023 IFFI Festival</a>
+                                    </li> --}}
+
+                                    <li class="nav-item dropdown">
+
+                                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">Gallery
+                                        </a>
+                                        <ul class="dropdown-menu">
+
+                                            {{-- <li>
+                                                <a href="{{ route('gallery-2024') }}" class="dropdown-item">
+                                                    IFFI festival 2024</a>
+                                            </li> --}}
+
+                                            <li>
+                                                <a href="{{ route('gallery') }}" class="dropdown-item">
+                                                    IFFI festival 2023 </a>
+                                            </li>
+
+                                        </ul>
+
                                     </li>
 
                                     <li class="nav-item"><a href="{{ route('news-and-update') }}"
                                             class="nav-link">News and Updates</a>
                                     </li>
+
 
                                     {{-- <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" role="button"
@@ -449,11 +473,11 @@
                                         <a href="https://filmbazaarindia.com/programme/market-screenings/"
                                             class="nav-link" target="_blank">Market Screenings</a>
                                     </li>
-                                    <li class="nav-item">
+                                    {{-- <li class="nav-item">
                                         <a href="{{ route('knowledge-series') }}" class="nav-link">
                                             Knowledge series
                                         </a>
-                                    </li>
+                                    </li> --}}
                                 </ul>
                             </div>
                             <!-- Film Bazaar Section End -->

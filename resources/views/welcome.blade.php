@@ -8,6 +8,7 @@
     in india, information, film festival, film producer, broadcasting')
 @section('content')
 
+    {{-- @include('layouts.timer') --}}
     <!-- Menu Item's -->
     @include('pages.navigation-slide')
 
@@ -48,7 +49,7 @@
     ])
 
     <!-- International competition Section-->
-{{--    @include('pages.international-competition', [
+    {{--    @include('pages.international-competition', [
         'internationalCinemas' => app(\App\Http\Controllers\CommonController::class)->internationalCinema(),
     ]) --}}
 

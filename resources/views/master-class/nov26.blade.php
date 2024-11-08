@@ -15,8 +15,12 @@
                     The Thrill of Victory : How Analyzing Sports Can Help Animators Get Better Performances
                 </h4>
                 <p>
-                    The session will analyze how sports can help animators get better performances. The discussion will
-                    also have insights into the “world famous Avengers.
+                    Animation Director, Chris Kirshbaum, from DNEG Animation delves into the often overlooked world of
+                    sports as a rich reference for understanding human emotion and behavior in animation. While
+                    animators typically draw inspiration from movies, TV, and real life, sports offer a unique
+                    advantage: the performances are unscripted and authentic, providing invaluable insights into genuine
+                    reactions. Discover how to harness this powerful resource to enhance your animation skills and gain
+                    a fresh perspective on portraying emotion. Don't miss this opportunity to elevate your craft!
                 </p>
             </div>
         </div>
