@@ -1,5 +1,5 @@
 {{-- Latest Update Content --}}
-<section class="">
+<section>
     <div class="pointer-btn">
         {{-- <button type="button" class="btn btn-success">Today Update</button> --}}
         <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -48,7 +48,7 @@
     <div class="modal update" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-slide">
             {{-- <div class="modal-dialog modal-dialog-slide"> --}}
-            <div class="modal-content">
+            <div class="modal-content update-btn-content">
                 <div class="modal-header">
                     <p>55th International Film Festival of India, Goa</p>
                     {{-- <h1 class="modal-title fs-5" id="exampleModalLabel">Latest Update</h1> --}}
