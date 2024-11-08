@@ -172,17 +172,6 @@
         }
     });
 </script>
-{{-- <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const notifications = document.querySelectorAll(".notification-card");
-
-        notifications.forEach((card, index) => {
-            setTimeout(() => {
-                card.classList.add("show");
-            }, index * 1000); // Adjust the delay as needed
-        });
-    });
-</script> --}}
 
 </body>
 

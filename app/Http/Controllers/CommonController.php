@@ -197,6 +197,34 @@ class CommonController extends Controller
         ]);
     }
 
+    public function gallery2024()
+    {
+        // Retrieve all active gallery photos
+        $gallery = DB::table('mst_gallery_2024')
+            ->where('status', 1)
+            ->orderBy('id', 'DESC')
+            ->get();
+
+        // Get distinct dates and categories
+        $dates = DB::table('mst_gallery_2024')
+            ->select(DB::raw("DATE_FORMAT(created_dt, '%b %d') as date_alias"), 'created_dt')
+            ->where('status', 1)
+            ->distinct()
+            ->orderBy('created_dt', 'asc')
+            ->get();
+
+        $categories = DB::table('mst_gallery_2024')
+            ->where('status', 1)
+            ->distinct()
+            ->pluck('category');
+
+        return view('gallery.new-gallery', [
+            'gallery' => $gallery,
+            'dates' => $dates,
+            'categories' => $categories,
+        ]);
+    }
+
     public function pressRelease()
     {
         $press = DB::table('mst_press_release')
