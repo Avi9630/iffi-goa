@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sora:wght@100..800&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css");
+/* @import url("https://fonts.googleapis.com/css2?family=Sanchez:ital@0;1&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Sanchez:ital@0;1&display=swap");
 
 /* h1, h2, h3, h4, h5, h6{ font-family: "Sora", sans-serif; } */
 h2 {
@@ -784,6 +786,11 @@ footer a:hover {
             no-repeat;
     background-size: cover;
 }
+.bannerBg-cmot {
+    background: linear-gradient(rgb(0 0 0 / 89%), rgb(0 0 0 / 74%)),
+        url(../images/main-header/cmot-Jury.jpg) center center no-repeat;
+    background-size: cover;
+}
 .bannerBg-non-feature {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
         url(../images/main-header/Indian-Panorama-Jury-non-feature.jpg) center
@@ -1187,57 +1194,146 @@ footer a:hover {
 }
 .pointer-btn {
     position: fixed;
-    bottom: 40%;
-    right: -20px;
-    border-radius: 10px;
+    bottom: 50%;
+    right: -3.5%;
+    border-radius: 10px 10px 0px 0px;
     z-index: 999;
-    box-shadow: 0px 0px 6px rgb(4 7 125 / 88%), 0 0px 6px 0px rgb(0 0 0 / 47%);
-    /* animation: bounce 1s ease-in-out infinite; */
+    /* background-color: green; */
+    color: white;
+    /* box-shadow: 0px 0px 6px rgb(4 7 125 / 88%), 0 0px 6px 0px rgb(0 0 0 / 47%); */
     /* animation: shake 0.5s ease-in-out infinite; */
-    /* animation: pulse 1s ease-in-out infinite; */
-    transform: rotate(-90deg);
-    & .notif {
-        display: none;
-    }
-    & .notif-content {
-        display: none;
-    }
-    & img {
-        width: 70%;
+    animation: pulse 1s ease-in-out infinite;
+    /* animation: bounce 1s ease-in-out infinite; */
+    & button {
+        transform: rotate(-90deg);
     }
 }
-.pointer-btn:hover {
-    /* overflow-y: scroll; */
-    width: 90vw;
-    height: 80vh;
-    animation: none;
-    right: 4%;
-    background-color: #5094b4;
-    /* background-color: #ffff; */
-    /* background-color: #ffffffa3; */
+
+.modal-dialog-slide .modal-content {
+    animation: slideInRight 0.5s ease forwards;
+    /* background-color: gray; */
+    /* background-color: #455165e3; */
+    background-color: #511451;
+    padding: 30px;
+    border: none;
+}
+
+/* .modal.show.update { */
+/* background-color: #010101a8; */
+/* animation: bounce 1s ease-in-out infinite; */
+/* animation: pulse 1s ease-in-out infinite; */
+/* } */
+
+.modal-header {
+    justify-content: space-between;
     & p {
-        display: none;
+        font-family: "Merriweather", serif;
+        font-size: 28px;
+        color: white;
+        margin: 0;
+        font-weight: 500;
     }
-    & .notif-content {
-        display: block;
-        /* overflow: scroll; */
-        & a img {
-            display: block;
-        }
-        & .heading {
-            margin-top: 10px;
-            color: #ffff;
-            font-size: 31px;
-            /* & p:nth-child(1) {
-            } */
-            & p:nth-child(2) {
-                text-decoration: underline;
-            }
-            & p:nth-child(3) {
-                color: #ffff;
-                font-size: 50px !important;
-            }
-        }
+    & img {
+        width: 4vw;
+    }
+    & .btn-close {
+        margin: 0;
+        /* background-color: #ff0000; */
+        background-color: white;
+        border-radius: 50%;
+    }
+}
+/* .modal-header {
+    justify-content: space-between;
+    & img {
+        width: 4vw;
+    }
+    & .btn-close {
+        margin: 0;
+        background-color: white;
+        border-radius: 50%;
+    }
+} */
+.modal-content {
+    /* background: linear-gradient(rgb(0 0 0 / 89%), rgb(0 0 0 / 74%)),
+        url(../images/peacock.png) bottom no-repeat; */
+    /* background: linear-gradient(rgb(0 0 0 / 70%), rgb(0 0 0 / 70%)),
+        url(../images/peacock.png) bottom no-repeat; */
+    background: linear-gradient(rgb(88 65 85 / 70%), rgb(0 0 0 / 70%)),
+        url(../images/peacock.png) bottom no-repeat;
+}
+.update-heading {
+    color: white;
+    /* color: yellow; */
+    font-weight: 600;
+    /* text-shadow: 0px 0px 20px #000000; */
+    & p:nth-child(3) {
+        font-size: 30px;
+    }
+    & p:nth-child(1) {
+        font-size: 25px;
+        text-decoration: underline;
+    }
+    & p:nth-child(2) {
+        font-size: 40px;
+        /* color: yellow; */
+    }
+    /* & p:nth-child(4) {
+        color: #03ff03;
+    } */
+    & .link a {
+        text-decoration: none;
+        /* background: #ffffff; */
+        background: yellow;
+        padding: 6px 30px;
+        border-radius: 20px;
+        color: #000000;
+        font-size: 21px;
+    }
+    & p {
+        /* font-family: "Sanchez", serif !important; */
+        font-family: "Merriweather", serif;
+    }
+}
+
+/* .modal.fade .modal-dialog {
+    animation: slideOutRight 0.5s ease forwards;
+} */
+
+.countdown-bg {
+    /* animation: pulse 1s ease-in-out infinite; */
+    position: fixed;
+    bottom: 11px;
+    z-index: 999;
+    background: #20922cdb;
+    color: wheat;
+    border-radius: 0px 10px 10px 0px;
+    & p {
+        margin: 0;
+        padding: 10px 10px 10px 20px;
+        font-family: "Merriweather", serif;
+    }
+}
+/* Custom animation for slide-in from the right */
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutRight {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
     }
 }
 
@@ -1310,8 +1406,18 @@ footer a:hover {
     .newsupdatesView-block-img img {
         height: auto !important;
     }
+    .pointer-btn {
+        right: -6%;
+    }
 }
-@media only screen and (min-width: 320px) and (max-width: 768px) {
+@media only screen and (min-width: 320px) and (max-width: 765px) {
+    .modal-header img {
+        width: 8vw;
+    }
+
+    .pointer-btn {
+        right: -12%;
+    }
     .connectivity-block {
         flex-direction: column;
         gap: 0;

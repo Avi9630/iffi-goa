@@ -35,6 +35,8 @@ Route::controller(CommonController::class)->group(function () {
 
     Route::get('media/gallery', 'gallery')->name('gallery');
 
+    // Route::get('media/gallery-2024', 'gallery2024')->name('gallery-2024');
+
     Route::get('media/press-release', 'pressRelease')->name('press-release');
 
     // Route::get('media/the-peacock', 'thepeacock')->name('the-peacock');
@@ -160,9 +162,9 @@ Route::get('master-classes', function () {
     return view('master');
 })->name('master-classes');
 
-Route::get('knowledge-series', function () {
-    return view('knowledge-series');
-})->name('knowledge-series');
+// Route::get('knowledge-series', function () {
+//     return view('knowledge-series');
+// })->name('knowledge-series');
 
 // Jury Route
 Route::get('international-jury', function () {
