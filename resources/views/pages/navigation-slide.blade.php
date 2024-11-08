@@ -123,6 +123,7 @@
                                                 <a href="{{ route('international-jury') }}"
                                                     class="dropdown-item">International Jury - 2024</a>
                                             </li>
+
                                             {{-- Curated Sections 2024 --}}
                                             {{-- <li class="nav-item dropend">
                                                 <a class="nav-link dropdown-toggle" href="#" role="button"
@@ -132,10 +133,11 @@
                                                 <ul class="dropdown-menu">
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('international-competition-2024') }}">International
-                                                            Competition</a></li>
-
+                                                            Competition</a>
+                                                    </li>
                                                 </ul>
                                             </li> --}}
+
                                             {{-- Curated Sections 2023 --}}
                                             <li class="nav-item dropend">
                                                 <a class="nav-link dropdown-toggle" href="#" role="button"
