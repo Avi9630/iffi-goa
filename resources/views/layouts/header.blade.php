@@ -6,3 +6,6 @@
 
 {{-- Right Side Latest Update Btn --}}
 {{-- @include('layouts.update-btn') --}}
+
+{{-- coundown --}}
+{{-- @include('layouts.timer') --}}
