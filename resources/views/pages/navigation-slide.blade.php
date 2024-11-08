@@ -125,16 +125,16 @@
                                             </li>
                                             {{-- Curated Sections 2024 --}}
                                             <li class="nav-item dropend">
-                                                <a class="nav-link dropdown-toggle" href="#" role="button"
+                                                {{-- <a class="nav-link dropdown-toggle" href="#" role="button"
                                                     data-bs-toggle="dropdown" aria-expanded="false">
                                                     Curated Sections 2024
-                                                </a>
-                                                <ul class="dropdown-menu">
+                                                </a> --}} 
+                                                {{-- <ul class="dropdown-menu">
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('international-competition-2024') }}">International
                                                             Competition</a></li>
 
-                                                </ul>
+                                                </ul>-- }}
                                             </li>
                                             {{-- Curated Sections 2023 --}}
                                             <li class="nav-item dropend">

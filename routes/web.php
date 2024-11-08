@@ -48,7 +48,7 @@ Route::controller(InternationalCinemaController::class)->group(function () {
 
     Route::get('international-cinema/international-competition', 'internationalCompetition')->name('international-competition');
 
-    Route::get('international-cinema/international-competition-2024', 'internationalCompetition2024')->name('international-competition-2024');
+//    Route::get('international-cinema/international-competition-2024', 'internationalCompetition2024')->name('international-competition-2024');
 
     Route::get('international-cinema/award-for-best-debute', 'awardForBestDebute')->name('award-for-best-debute');
 
