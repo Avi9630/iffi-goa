@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\NewsUpdate;
 use DB;
+use Illuminate\Http\Request;
 
 class CommonController extends Controller
 {
@@ -197,6 +198,16 @@ class CommonController extends Controller
         ]);
     }
 
+    public function getGalleryByDate(Request $request)
+    {
+        $date = $request->input('date');
+        $gallery = DB::table('mst_gallery_2024')
+            ->where('date', $date)
+            ->get();
+
+        return response()->json($gallery);
+    }
+
     public function gallery2024()
     {
         // Retrieve all active gallery photos
@@ -207,10 +218,10 @@ class CommonController extends Controller
 
         // Get distinct dates and categories
         $dates = DB::table('mst_gallery_2024')
-            ->select(DB::raw("DATE_FORMAT(created_dt, '%b %d') as date_alias"), 'created_dt')
+            ->select(DB::raw("DATE_FORMAT(date, '%b %d') as date_alias"), 'date')
             ->where('status', 1)
             ->distinct()
-            ->orderBy('created_dt', 'asc')
+            ->orderBy('date', 'asc')
             ->get();
 
         $categories = DB::table('mst_gallery_2024')
@@ -218,10 +229,16 @@ class CommonController extends Controller
             ->distinct()
             ->pluck('category');
 
+        $titles = DB::table('mst_gallery_2024')
+            ->where('status', 1)
+            ->distinct()
+            ->pluck('title');
+
         return view('gallery.new-gallery', [
             'gallery' => $gallery,
             'dates' => $dates,
             'categories' => $categories,
+            'titles' => $titles,
         ]);
     }
 
@@ -235,22 +252,28 @@ class CommonController extends Controller
         return view('media.press-release', ['press' => $press]);
     }
 
-    // public function thepeacock(Request $request)
-    // {
-    //     $year = $request->input('year');
+    public function thepeacock(Request $request)
+    {
+        $year = $request->input('year');
 
-    //     $peacock = DB::table('the_peacock')
-    //         ->where('status', '1')
-    //         ->orderBy('id', 'desc');
+        $peacock = DB::table('the_peacock')
+            ->where('status', '1')
+            ->orderBy('id', 'desc');
 
-    //     if ($year) {
-    //         $peacock->whereYear('publish_date', $year);
-    //     }
+        if ($year) {
+            $peacock->where('year', $year);
+        }
 
-    //     $thepeacock = $peacock->paginate(10);
+        $thepeacock = $peacock->paginate(10);
+        //  echo '<pre>';
+        // print_r($thepeacock);
+        // exit();
 
-    //     return view('media.the-peacock', ['press' => $thepeacock]);
-    // }
+        return view('media.the-peacock', [
+            'thepeacock' => $thepeacock, // Pass the paginated results correctly
+            'year' => $year, // Also pass the year as intended for the header display
+        ]);
+    }
 
     public function newsUpdate()
     {

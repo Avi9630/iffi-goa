@@ -1255,12 +1255,9 @@ footer a:hover {
     }
 } */
 .update-btn-content.modal-content {
-    /* background: linear-gradient(rgb(0 0 0 / 89%), rgb(0 0 0 / 74%)),
+    background: #3c063c url(../images/peacock.png) center no-repeat;
+    /* background: linear-gradient(rgb(88 65 85 / 70%), rgb(0 0 0 / 70%)),
         url(../images/peacock.png) bottom no-repeat; */
-    /* background: linear-gradient(rgb(0 0 0 / 70%), rgb(0 0 0 / 70%)),
-        url(../images/peacock.png) bottom no-repeat; */
-    background: linear-gradient(rgb(88 65 85 / 70%), rgb(0 0 0 / 70%)),
-        url(../images/peacock.png) bottom no-repeat;
 }
 .update-heading {
     color: white;
@@ -1314,6 +1311,11 @@ footer a:hover {
         font-family: "Merriweather", serif;
     }
 }
+.gallery-container .grid-item {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
 /* Custom animation for slide-in from the right */
 @keyframes slideInRight {
     from {
