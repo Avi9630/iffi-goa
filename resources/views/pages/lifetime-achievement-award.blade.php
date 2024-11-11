@@ -1,6 +1,6 @@
 {{-- <div class="col-lg-12 mb-5"> --}}
 <section>
-    <div class="container">
+    <div class="container mb-4">
         <div class="row">
             <div class="col-md-6 col-sm-6">
                 <img src="{{ asset('public/images/satyjeet-winner.jpg') }}" alt="image"

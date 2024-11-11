@@ -26,11 +26,8 @@
             <div class="row">
                 <div class="col-md-5">
                     <div class="international-img">
-                        {{-- <p class=""> --}}
-                        <img src="{{ asset('public/images/international-competition/' . $fetch_cinema_details->img_src . '') }}"
-                            alt="image" class="img-fluid">
-                        {{-- <img src="images/When-the-Seedlings-Grow.jpg" alt="images" class="img-fluid"> --}}
-                        {{-- </p> --}}
+                        <img src="{{ asset('public/images/international-competition/2024/' . $fetch_cinema_details->img_src . '') }}"
+                            alt="{{ $fetch_cinema_details->title }} image" class="img-fluid">
                     </div>
                 </div>
                 <div class="col-md-7">
@@ -125,7 +122,8 @@
                     </p>
                     <hr>
                     <h2>Sales Agent: </h2>
-                    <p>True Colours</p>
+                    <p>{!! $fetch_cinema_basic_details->sales_agent !!}</p>
+                    {{-- <p>True Colours</p> --}}
                     {{-- <p>{!! $fetch_cinema_basic_details->drama !!} | Adaptation | Political | Period Drama<br>
                                 Asia Premiere</p> --}}
                 </div>

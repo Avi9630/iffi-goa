@@ -8,21 +8,22 @@
     in india, information, film festival, film producer, broadcasting')
 @section('content')
 
-    <!-- Navigation slide -->
+    {{-- @include('layouts.timer') --}}
+    <!-- Menu Item's -->
     @include('pages.navigation-slide')
 
     <!-- Video Section -->
     @include('pages.video-section')
 
-    <!-- Ticker -->
+    <!-- Ticker Content-->
     @include('pages.ticker', [
         'tickers' => app(\App\Http\Controllers\TickerController::class)->getAllTicker(),
     ])
 
-    <!-- About IFFI -->
+    <!-- About IFFI Section-->
     @include('pages.about-iffi')
 
-    <!-- 55th IFFI Festival -->
+    <!-- 55th IFFI Festival Section-->
     <section class="">
         <div class="container">
             <div class="section-heading mb-4">
@@ -37,27 +38,23 @@
         </div>
     </section>
 
-
-    <!-- News & Updates -->
-    {{-- @include('pages.news-and-update') --}}
+    <!-- News & Updates Section-->
     @include('pages.news-and-update', [
         'datas' => app(\App\Http\Controllers\CommonController::class)->newsUpdate1(),
     ])
 
-
-    <!-- Highlights -->
+    <!-- Highlights Section-->
     @include('pages.highlights', [
         'datas' => app(\App\Http\Controllers\CommonController::class)->highlights(),
     ])
 
-    <!-- International competition -->
-    @include('pages.international-competition', [
+    <!-- International competition Section-->
+    {{--    @include('pages.international-competition', [
         'internationalCinemas' => app(\App\Http\Controllers\CommonController::class)->internationalCinema(),
-    ])
+    ]) --}}
 
-    <!-- Director -->
+    <!-- Director Section-->
     <section>
-        {{-- <div class="col-lg-12 mb-5"> --}}
         <div class="container">
             <div class="section-heading mb-4">
                 <p>Best 54<sup>th</sup> debut feature film of a</p>
@@ -69,11 +66,9 @@
                 ])
             </div>
         </div>
-        {{-- </div> --}}
     </section>
 
-    <!-- Indian Panorama  -->
-    {{-- <div class="col-lg-12 mb-5"> --}}
+    <!-- Indian Panorama  Section-->
     <section>
         <div class="container mb-5">
             <div class="section-heading mb-4">
@@ -87,12 +82,9 @@
             </div>
         </div>
     </section>
-    {{-- </div> --}}
-    <!-- Indian Panorama Ends-->
 
-    <!-- Lifetime Achievement Award  -->
+    <!-- Life Time Achievement Award  Section-->
     @include('pages.lifetime-achievement-award')
-    <!-- Lifetime Achievement Award  -->
 
     <!-- Social Media Corner  -->
     @include('pages.social-media-cornor')
@@ -101,19 +93,7 @@
     <!-- Message -->
     @include('pages.message')
 
-    <!-- Sponsors  -->
-    <div class="col-lg-12 mb-5">
-        <div class="container">
-            <div class="section-heading mb-4 text-center mt-5 center-heading">
-                <h4 class="mb-2" style="font-size: 20px">Fuelling Success Together</h4>
-                <h2>Sponsors & Partners</h2>
-            </div>
-            <div class=" owl-carousel-sponsor">
-                @include('pages.sponsor', [
-                    'sponsors' => app(\App\Http\Controllers\CommonController::class)->sponsors(),
-                ])
-            </div>
-        </div>
-    </div>
+    <!-- Sponsors  Section-->
+    @include('pages.sponsors_partners')
 
 @endsection
