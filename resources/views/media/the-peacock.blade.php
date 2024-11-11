@@ -6,14 +6,6 @@
 @section('site_keywords',
     'IFFI GOA Press Release, IFFI news update, IFFI announcements, official IFFI statements,
     Latest IFFI news, IFFI press coverage, IFFI media releases, IFFI event news')
-
-    {{-- <style>
-        .table-responsive table p {
-            font-weight: 500;
-            margin: 0;
-            margin-top: 6px;
-        }
-    </style> --}}
 @section('content')
     <!-- Header start-->
     @include('layouts.header')
@@ -35,14 +27,14 @@
         <div class="table-responsive">
             <table id="example" class="table table-hover mt-3">
                 <tbody>
-                    @foreach ($thepeacock as $key => $value)
-                        @if (isset($value->link) && !empty($value->link) && $value->link != '')
+                    @foreach ($thepeacock as $value)
+                        @if (!empty($value->link))
                             <tr>
                                 <td>
                                     <p>{{ $value->title }}</p>
                                 </td>
                                 <td>
-                                    <a href="{{ $value->link }}" class="btn  btn-primary" target="_blank">View</a>
+                                    <a href="{{ $value->link }}" class="btn btn-primary" target="_blank">View</a>
                                 </td>
                             </tr>
                         @endif
@@ -50,13 +42,12 @@
                 </tbody>
             </table>
         </div>
-        {{-- <div class="pull-right d-flex justify-content-center">
-            {{ $press->withQueryString()->links() }}
-        </div> --}}
+
+        <!-- Pagination -->
         <div class="container">
             <nav aria-label="Page navigation pb-4">
                 <ul class="pagination overflow-hidden">
-                    {{ $press->withQueryString()->links() }}
+                    {{ $thepeacock->withQueryString()->links() }}
                 </ul>
             </nav>
         </div>
