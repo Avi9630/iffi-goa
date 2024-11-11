@@ -2,7 +2,7 @@
 <section>
     <div class="pointer-btn">
         {{-- <button type="button" class="btn btn-success">Today Update</button> --}}
-        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#update_btn">
             Latest Update
         </button>
         {{-- <div class="notif-content">
@@ -45,12 +45,12 @@
         </div> --}}
     </div>
     <!-- Modal -->
-    <div class="modal update" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal update" id="update_btn" tabindex="-1" aria-labelledby="exampleupdate_btn" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-slide">
             {{-- <div class="modal-dialog modal-dialog-slide"> --}}
             <div class="modal-content update-btn-content">
                 <div class="modal-header">
-                    <p>55th International Film Festival of India, Goa</p>
+                    <p>55th International Film Festival of India, Goa </p>
                     {{-- <h1 class="modal-title fs-5" id="exampleModalLabel">Latest Update</h1> --}}
                     {{-- <div class="top-logo "> --}}
                     {{-- <a href="{{ route('/') }}">
@@ -81,11 +81,11 @@
                     <div class="update-heading text-center">
                         {{-- <p>55th International Film Festival of India, Goa</p> --}}
                         <p>20-28th November-2024</p>
-                        <p>DELEGATE <br> REGISTRATIONS </p>
+                        <p>DELEGATE REGISTRATIONS </p>
                         <p> ARE NOW OPEN!</p>
-                        <div class="link">
+                        {{-- <div class="link">
                             <a href="https://iffigoa.org/">Visit:www.iffigoa.org</a>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>

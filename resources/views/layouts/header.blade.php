@@ -5,7 +5,7 @@
 @include('layouts.logo')
 
 {{-- Right Side Latest Update Btn --}}
-{{-- @include('layouts.update-btn') --}}
+@include('layouts.update-btn')
 
 {{-- coundown --}}
 {{-- @include('layouts.timer') --}}
