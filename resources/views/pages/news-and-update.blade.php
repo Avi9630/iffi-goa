@@ -7,7 +7,7 @@
         <div class="row card-same-height">
             <div class="newsUpdate1">
 
-                <div class="card shadow-sm">
+                {{-- <div class="card shadow-sm">
                     <a href="{{ route('news-and-update') }}">
                         <img src="{{ asset('public/images/desktop-image/208-Films-to-Feature-in-Film-Bazaar-Viewing-Room-at-IFFI-2024.jpg') }}"alt=" image"
                             class="img-fluid">
@@ -116,9 +116,9 @@
                             </p>
                         </div>
                     </a>
-                </div>
+                </div> --}}
 
-                <div class="card shadow-sm">
+                {{-- <div class="card shadow-sm">
                     <a href="{{ route('news-and-update') }}">
                         <img src="{{ asset('public/images/desktop-image/Indian-Panorama-Films.jpg') }}"alt="image"
                             class="img-fluid">
@@ -136,7 +136,7 @@
                             </p>
                         </div>
                     </a>
-                </div>
+                </div> --}}
 
                 @foreach ($datas as $news)
                     <div class="card shadow-sm">

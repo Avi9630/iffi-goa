@@ -277,7 +277,7 @@ class CommonController extends Controller
 
     public function newsUpdate()
     {
-        $newsUpdates = NewsUpdate::where('status', 1)->orderBy('id', 'DESC')->get();
+        $newsUpdates = NewsUpdate::where('status', 1)->orderBy('sort_num', 'DESC')->get();
 
         return view('media.news-and-update', ['newsUpdates' => $newsUpdates]);
     }
