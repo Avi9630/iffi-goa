@@ -870,7 +870,7 @@
                                 {{ $newsUpdate->link_title }}
                             </a><span>Date :- {{ \Carbon\Carbon::parse($newsUpdate->updated_at)->format('d F Y') }}</p>
 
-                        <a style="font-weight: 600; color: #0d6efd; text-decoration: underline; cursor: pointer;"
+                        {{-- <a style="font-weight: 600; color: #0d6efd; text-decoration: underline; cursor: pointer;"
                             data-bs-toggle="modal" data-bs-target="#modal_{{ $newsUpdate->id }}">Read More</a>
                         <div class="modal fade" id="modal_{{ $newsUpdate->id }}" tabindex="-1"
                             aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -899,7 +899,7 @@
                                 </div>
 
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 @endforeach
                 {{-- @foreach ($newsUpdates as $newsUpdate)
