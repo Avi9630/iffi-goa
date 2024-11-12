@@ -42,10 +42,14 @@ class ApiNewController extends Controller
             $fileName = null;
             if ($request->hasFile('img_src_file')) {
                 $file = $request->file('img_src_file');
-                $destinationPath = 'images/desktop-image';
+                $destinationPath = 'images/news-update';
                 $fileName = time().'_'.$file->getClientOriginalName(); // Adding timestamp to prevent name collision
                 $file->move(public_path($destinationPath), $fileName);
             }
+
+            // Clean the 'pop_up_content' field before saving it
+            $popUpContent = isset($payload['pop_up_content']) ? $payload['pop_up_content'] : null;
+            $popUpContent = $this->cleanPopUpContent($popUpContent);
 
             // Prepare data for new entry
             $data = [
@@ -54,7 +58,7 @@ class ApiNewController extends Controller
                 'img_src' => $fileName, // Add the file name if file was uploaded
                 'link' => $payload['link'] ?? null, // Use null if not provided
                 'link_title' => $payload['link_title'] ?? null, // Use null if not provided
-                'pop_up_content' => $payload['pop_up_content'] ?? null, // Optional
+                'pop_up_content' => $popUpContent, // Cleaned content
                 'have_popup' => $payload['have_popup'] ?? null, // Optional
                 'pop_up_header' => $payload['pop_up_header'] ?? null, // Optional
                 'sort_num' => $payload['sort_num'] ?? null, // Optional
@@ -128,10 +132,14 @@ class ApiNewController extends Controller
                 // Check if there's a new file to upload
                 if ($request->hasFile('img_src_file')) {
                     $file = $request->file('img_src_file');
-                    $destinationPath = 'images/desktop-image';
+                    $destinationPath = 'images/news-update';
                     $fileName = $file->getClientOriginalName();
                     $file->move(public_path($destinationPath), $fileName);
                 }
+
+                // Clean the 'pop_up_content' field before saving it
+                $popUpContent = isset($payload['pop_up_content']) ? $payload['pop_up_content'] : $newsUpdate->pop_up_content;
+                $popUpContent = $this->cleanPopUpContent($popUpContent);
 
                 // Prepare data to update
                 $data = [
@@ -141,7 +149,7 @@ class ApiNewController extends Controller
                     'link' => isset($payload['link']) ? $payload['link'] : $newsUpdate->link,
                     'link_title' => isset($payload['link_title']) ? $payload['link_title'] : $newsUpdate->link_title,
                     'status' => isset($payload['status']) ? $payload['status'] : $newsUpdate->status,
-                    'pop_up_content' => isset($payload['pop_up_content']) ? $payload['pop_up_content'] : $newsUpdate->pop_up_content,
+                    'pop_up_content' => $popUpContent,
                     'have_popup' => isset($payload['have_popup']) ? $payload['have_popup'] : 0,
                     'pop_up_header' => isset($payload['pop_up_header']) ? $payload['pop_up_header'] : $newsUpdate->pop_up_header,
                     'sort_num' => isset($payload['sort_num']) ? $payload['sort_num'] : $newsUpdate->sort_num,
@@ -171,6 +179,21 @@ class ApiNewController extends Controller
 
             return $this->response('exception', $response);
         }
+    }
+
+    /**
+     * Clean the 'pop_up_content' by removing unnecessary empty <p> tags.
+     */
+    private function cleanPopUpContent($content)
+    {
+        // Decode HTML entities to get raw HTML
+        $content = html_entity_decode($content);
+
+        // Remove any empty <p> tags
+        $content = preg_replace('/<p>\s*<\/p>/', '', $content);
+
+        // Optional: Trim leading/trailing spaces or any other cleaning logic
+        return trim($content);
     }
 
     // Ticker
