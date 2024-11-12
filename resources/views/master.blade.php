@@ -1,4 +1,8 @@
 @extends('layouts.app')
+@section('site_title', 'Master Classes at IFFI Goa - Learn from Cinema Experts')
+@section('site_description',
+    'Join exclusive master classes at IFFI Goa, where renowned filmmakers and industry experts
+    share insights, techniques, and the art of cinematic storytelling.')
 @section('content')
     <!-- Header start-->
     @include('layouts.header')
@@ -544,13 +548,13 @@
                     };
                     li.innerHTML =
                         `
-                                                                                                                                                                                                                                                                                                    <div class="ms-2 me-auto">
-                                                                                                                                                                                                                                                                                                        <div class="fw-bold">${speaker.name}</div>
-                                                                                                                                                                                                                                                                                                    </div>
-                                                                                                                                                                                                                                                                                                    <span>
-                                                                                                                                                                                                                                                                                                        <img src="${speaker.image}" class="img-circle">
-                                                                                                                                                                                                                                                                                                    </span>
-                                                                                                                                                                                                                                                                                                `;
+                                                                                                                                                                                                                                                                                                                                    <div class="ms-2 me-auto">
+                                                                                                                                                                                                                                                                                                                                        <div class="fw-bold">${speaker.name}</div>
+                                                                                                                                                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                                                                                                                                                    <span>
+                                                                                                                                                                                                                                                                                                                                        <img src="${speaker.image}" class="img-circle">
+                                                                                                                                                                                                                                                                                                                                    </span>
+                                                                                                                                                                                                                                                                                                                                `;
                         speakersList.appendChild(li);
                     });
 

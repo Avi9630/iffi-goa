@@ -1,11 +1,8 @@
 @extends('layouts.app')
-@section('site_title', 'Explore IFFI Goa 2024 International Festival Venues')
+@section('site_title', 'Indian Panorama Non-Feature Jury | IFFI Goa')
 @section('site_description',
-    'Discover the vibrant festival venues of IFFI Goa 2024. Get detailed information on
-    locations, facilities, and events happening at each venue.')
-@section('site_keywords',
-    'IFFI Goa information, IFFI event venue, About IFFI venue, Festival location details, IFFI
-    history and venue, Film festival India, Film festival venue, IFFI international film festival')
+    'Meet the esteemed Indian Panorama Non-Feature Jury at IFFI Goa, showcasing excellence in
+    short and documentary cinema from across India.')
 @section('content')
 
     <!-- Header start-->
