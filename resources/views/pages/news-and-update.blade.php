@@ -9,6 +9,66 @@
 
                 <div class="card shadow-sm">
                     <a href="{{ route('news-and-update') }}">
+                        <img src="{{ asset('public/images/desktop-image/iffi roadshow.jpg') }}"alt=" image"
+                            class="img-fluid">
+                        <div class="card-body text-start">
+                            <h3>South Film Fraternities Extend Warm Invitation to IFFI and WAVES Summit</h3>
+                            <p class="card-text">
+                                In a grand roadshow, celebrated members from Tamil, Telugu, Kannada, and Malayalam film
+                                industries gathered to extend a heartfelt invitation to the upcoming 55th International
+                                Film Festival of India (IFFI) in Goa and the WAVES Summit in Delhi. Organized by the
+                                Ministry of Information and Broadcasting and NFDC India, this event was held in the
+                                esteemed presence of Hon'ble Minister of State for Information and Broadcasting, Shri L.
+                                Murugan. The roadshow showcased the strength and unity of Indian cinema.
+                            </p>
+                            {{-- <p>
+                                <a href="{{ route('news-and-update') }}">Read more </a>
+                            </p> --}}
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card shadow-sm">
+                    <a href="{{ route('news-and-update') }}">
+                        <img src="{{ asset('public/images/desktop-image/Enjoy-films,-culture-and-art-at-IFFESTA-2024.jpg') }}"alt=" image"
+                            class="img-fluid">
+                        <div class="card-body text-start">
+                            <h3>Enjoy films, culture and art at IFFESTA 2024</h3>
+                            <p class="card-text">
+                                The International Film Festival of India (IFFI) 2024, hosted at the Kala Academy in
+                                Panjim, Goa, will bring the newly introduced IFFIESTA powered by District by Zomato, a
+                                cultural celebration. Visitors can look forward to traditional dance performances, a
+                                curated food zone featuring diverse Indian cuisines, and a National Institute of Fashion
+                                Technology (NIFT) fashion show inspired by six decades of Indian cinema.
+                            </p>
+                            <p>
+                                <a href="{{ route('news-and-update') }}">Read more </a>
+                            </p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card shadow-sm">
+                    <a href="{{ route('news-and-update') }}">
+                        <img src="{{ asset('public/images/desktop-image/6 Films To Be Shine .jpg') }}"alt=" image"
+                            class="img-fluid">
+                        <div class="card-body text-start">
+                            <h3>6 Films To Be Shine At Work-In-Progress Lab At IFFI 2024</h3>
+                            <p class="card-text">
+                                Film Bazaar has recently announced the selection of six exceptional fiction films
+                                that will be showcased at Work-In-Progress Lab at IFFI 2024. Five of these films are
+                                debut features from young, emerging filmmakers, showcasing a wealth of unique
+                                narratives and offering a vibrant tapestry of cultural perspectives.
+                            </p>
+                            <p>
+                                <a href="{{ route('news-and-update') }}">Read more </a>
+                            </p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card shadow-sm">
+                    <a href="{{ route('news-and-update') }}">
                         <img src="{{ asset('public/images/desktop-image/208-Films-to-Feature-in-Film-Bazaar-Viewing-Room-at-IFFI-2024.jpg') }}"alt=" image"
                             class="img-fluid">
                         <div class="card-body text-start">
@@ -76,7 +136,7 @@
                     </a>
                 </div>
 
-                <div class="card shadow-sm">
+                {{-- <div class="card shadow-sm">
                     <a href="{{ route('news-and-update') }}">
                         <img src="{{ asset('public/images/desktop-image/Best-Debut-Directors-of-Indian-Feature-Films.jpg') }}"alt="image"
                             class="img-fluid">
@@ -96,9 +156,9 @@
                             </p>
                         </div>
                     </a>
-                </div>
+                </div> --}}
 
-                <div class="card shadow-sm">
+                {{-- <div class="card shadow-sm">
                     <a href="{{ route('news-and-update') }}">
                         <img src="{{ asset('public/images/desktop-image/Co-Production.jpg') }}"alt="image"
                             class="img-fluid">
@@ -116,9 +176,9 @@
                             </p>
                         </div>
                     </a>
-                </div>
+                </div> --}}
 
-                <div class="card shadow-sm">
+                {{-- <div class="card shadow-sm">
                     <a href="{{ route('news-and-update') }}">
                         <img src="{{ asset('public/images/desktop-image/Indian-Panorama-Films.jpg') }}"alt="image"
                             class="img-fluid">
@@ -136,9 +196,9 @@
                             </p>
                         </div>
                     </a>
-                </div>
+                </div> --}}
 
-                @foreach ($datas as $news)
+                {{-- @foreach ($datas as $news)
                     <div class="card shadow-sm">
                         <a href="{{ route('news-and-update') }}">
                             <img src="{{ asset('public/images/desktop-image/' . $news->img_src) }}"alt="image"
@@ -154,7 +214,7 @@
                             </div>
                         </a>
                     </div>
-                @endforeach
+                @endforeach --}}
             </div>
         </div>
     </div>
