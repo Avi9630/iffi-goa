@@ -125,7 +125,7 @@
                                             </li>
 
                                             {{-- Curated Sections 2024 --}}
-                                            {{-- <li class="nav-item dropend">
+                                            <li class="nav-item dropend">
                                                 <a class="nav-link dropdown-toggle" href="#" role="button"
                                                     data-bs-toggle="dropdown" aria-expanded="false">
                                                     Curated Sections 2024
@@ -136,7 +136,7 @@
                                                             Competition</a>
                                                     </li>
                                                 </ul>
-                                            </li> --}}
+                                            </li>
 
                                             {{-- Curated Sections 2023 --}}
                                             <li class="nav-item dropend">
