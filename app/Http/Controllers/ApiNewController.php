@@ -40,11 +40,17 @@ class ApiNewController extends Controller
         try {
             // Handle file upload if exists
             $fileName = null;
+            $fileNameOriginal = null;
             if ($request->hasFile('img_src_file')) {
                 $file = $request->file('img_src_file');
                 $destinationPath = 'images/news-update';
-                $fileName = time().'_'.$file->getClientOriginalName(); // Adding timestamp to prevent name collision
-                $file->move(public_path($destinationPath), $fileName);
+                $fileNameOriginal = $file->getClientOriginalName(); // Adding timestamp to prevent name collision
+
+                $extension = strtolower($request->file('img_src_file')->getClientOriginalExtension());
+                $modifiedName = (rand(100000, 999999)).'_'.time().'.'.$extension;
+
+                $file->move(public_path($destinationPath), $modifiedName);
+                $fileName = $modifiedName;
             }
 
             // Clean the 'pop_up_content' field before saving it
@@ -53,6 +59,7 @@ class ApiNewController extends Controller
 
             // Prepare data for new entry
             $data = [
+                'image_name' => $fileNameOriginal,
                 'title' => $payload['title'],
                 'description' => $payload['description'],
                 'img_src' => $fileName, // Add the file name if file was uploaded
@@ -128,13 +135,19 @@ class ApiNewController extends Controller
 
             if ($newsUpdate) {
                 $fileName = $newsUpdate->img_src; // Retain the previous file name if no new file is uploaded
+                $fileNameOriginal = $newsUpdate->image_name; // Retain the previous file name if no new file is uploaded
 
                 // Check if there's a new file to upload
                 if ($request->hasFile('img_src_file')) {
                     $file = $request->file('img_src_file');
                     $destinationPath = 'images/news-update';
                     $fileName = $file->getClientOriginalName();
-                    $file->move(public_path($destinationPath), $fileName);
+                    $fileNameOriginal = $file->getClientOriginalName();
+                    $extension = strtolower($request->file('img_src_file')->getClientOriginalExtension());
+                    $modifiedName = (rand(100000, 999999)).'_'.time().'.'.$extension;
+
+                    $file->move(public_path($destinationPath), $modifiedName);
+                    $fileName = $modifiedName;
                 }
 
                 // Clean the 'pop_up_content' field before saving it
@@ -143,6 +156,7 @@ class ApiNewController extends Controller
 
                 // Prepare data to update
                 $data = [
+                    'image_name' => $fileNameOriginal,
                     'title' => isset($payload['title']) ? $payload['title'] : $newsUpdate->title,
                     'description' => isset($payload['description']) ? $payload['description'] : $newsUpdate->description,
                     'img_src' => $fileName, // Use the old or new file name
