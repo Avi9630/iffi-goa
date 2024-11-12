@@ -160,9 +160,6 @@
                             <span>Date: {{ \Carbon\Carbon::parse($newsUpdate->updated_at)->format('d F Y') }}</span>
                         </p>
 
-
-
-
                         <div class="modal fade" id="modal_{{ $newsUpdate->id }}" tabindex="-1"
                             aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-lg">
@@ -195,7 +192,7 @@
                                 </div>
 
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 @endforeach
                 {{-- News Close After 3 month --}}
