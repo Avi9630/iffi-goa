@@ -1,17 +1,11 @@
+{{-- Top grid resizing  --}}
 @include('layouts.gig')
 
-<!-- Top Logo Section -->
-{{-- <div class="col-lg-12">
-    <div class="logo-section">
-        <div class="container">
-            <div class="top-logo">
-                <a href="{{ route('/') }}">
-                    <img src="{{ asset('public/images/iffi.svg') }}" alt="iffi-logo">
-                </a>
-                @include('common.menu-logo')
-            </div>
-        </div>
-    </div>
-</div> --}}
+{{-- Top Logo & Menu btn --}}
 @include('layouts.logo')
-<!-- Top Logo Section Ends-->
+
+{{-- Right Side Latest Update Btn --}}
+@include('layouts.update-btn')
+
+{{-- coundown --}}
+{{-- @include('layouts.timer') --}}

@@ -5,9 +5,9 @@ namespace App\Http\Controllers;
 use App\Http\Traits\RESPONSETrait;
 use App\Models\NewsUpdate;
 use App\Models\Ticker;
-use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Validator;
 
 class ApiController extends Controller
 {
@@ -20,13 +20,15 @@ class ApiController extends Controller
             $tickerList = Ticker::select('id', 'content', 'status')->where('status', 1)->get();
             $response = [
                 'message' => 'Details fetched successfully.!',
-                'data'  =>  $tickerList
+                'data' => $tickerList,
             ];
+
             return $this->response('success', $response);
         } catch (\Exception $e) {
             $response = [
                 'message' => $e->getMessage(),
             ];
+
             return $this->response('exception', $response);
         }
     }
@@ -34,30 +36,33 @@ class ApiController extends Controller
     public function createTicker(Request $request)
     {
         $payload = $request->all();
-        $payload    =   $request->all();
+        $payload = $request->all();
         $validatorArray = [
-            'content'   =>  'required',
-            'status'    =>  'required|in:1,0',
+            'content' => 'required',
+            'status' => 'required|in:1,0',
         ];
-        $messagesArray  =   [];
+        $messagesArray = [];
         $validator = Validator::make($payload, $validatorArray, $messagesArray);
         if ($validator->fails()) {
             $output = [
                 'message' => $validator->errors()->first(),
             ];
+
             return $this->response('validatorerrors', $output);
         }
         try {
             Ticker::create($payload);
             $response = [
                 'message' => 'Ticker created successfully.!',
-                'data'  =>  $payload
+                'data' => $payload,
             ];
+
             return $this->response('success', $response);
         } catch (\Exception $e) {
             $response = [
                 'message' => $e->getMessage(),
             ];
+
             return $this->response('exception', $response);
         }
     }
@@ -65,23 +70,24 @@ class ApiController extends Controller
     public function updateTicker(Request $request)
     {
         $payload = $request->all();
-        $payload    =   $request->all();
+        $payload = $request->all();
         $validatorArray = [
-            'id'        =>  'required|numeric',
-            'content'   =>  '',
-            'status'    =>  'in:1,0',
+            'id' => 'required|numeric',
+            'content' => '',
+            'status' => 'in:1,0',
         ];
-        $messagesArray  =   [];
+        $messagesArray = [];
         $validator = Validator::make($payload, $validatorArray, $messagesArray);
         if ($validator->fails()) {
             $output = [
                 'message' => $validator->errors()->first(),
             ];
+
             return $this->response('validatorerrors', $output);
         }
         try {
             $getTicker = Ticker::where('id', $payload['id'])->first();
-            if (!is_null($getTicker)) {
+            if (! is_null($getTicker)) {
 
                 $getTicker->update([
                     'content' => isset($payload['content']) ? $payload['content'] : $getTicker['content'],
@@ -89,19 +95,22 @@ class ApiController extends Controller
                 ]);
                 $response = [
                     'message' => 'Ticker updated successfully.!',
-                    'data'  =>  $getTicker
+                    'data' => $getTicker,
                 ];
+
                 return $this->response('success', $response);
             } else {
                 $response = [
                     'message' => 'Ticker not found.!',
                 ];
+
                 return $this->response('exception', $response);
             }
         } catch (\Exception $e) {
             $response = [
                 'message' => $e->getMessage(),
             ];
+
             return $this->response('exception', $response);
         }
     }
@@ -109,37 +118,41 @@ class ApiController extends Controller
     public function deleteTicker(Request $request)
     {
         $payload = $request->all();
-        $payload    =   $request->all();
+        $payload = $request->all();
         $validatorArray = [
-            'id'        =>  'required|numeric',
+            'id' => 'required|numeric',
         ];
-        $messagesArray  =   [];
+        $messagesArray = [];
         $validator = Validator::make($payload, $validatorArray, $messagesArray);
         if ($validator->fails()) {
             $output = [
                 'message' => $validator->errors()->first(),
             ];
+
             return $this->response('validatorerrors', $output);
         }
         try {
             $getTicker = Ticker::where('id', $payload['id'])->first();
-            if (!is_null($getTicker)) {
+            if (! is_null($getTicker)) {
 
                 $getTicker->delete();
                 $response = [
                     'message' => 'Ticker deleted successfully.!',
                 ];
+
                 return $this->response('success', $response);
             } else {
                 $response = [
                     'message' => 'Ticker not found.!',
                 ];
+
                 return $this->response('exception', $response);
             }
         } catch (\Exception $e) {
             $response = [
                 'message' => $e->getMessage(),
             ];
+
             return $this->response('exception', $response);
         }
     }
@@ -149,16 +162,19 @@ class ApiController extends Controller
     public function newsUpdateList()
     {
         try {
-            $newsUpdateList = NewsUpdate::where('status', 1)->get();
+            $newsUpdateList = NewsUpdate::all();
+            // $newsUpdateList = NewsUpdate::where('id')->get();
             $response = [
                 'message' => 'Details fetched successfully.!',
-                'data'  =>  $newsUpdateList
+                'data' => $newsUpdateList,
             ];
+
             return $this->response('success', $response);
         } catch (\Exception $e) {
             $response = [
                 'message' => $e->getMessage(),
             ];
+
             return $this->response('exception', $response);
         }
     }
@@ -167,138 +183,148 @@ class ApiController extends Controller
     {
         $payload = $request->all();
         $validatorArray = [
-            'title'         =>  'required',
-            'description'   =>  'required',
-            'img_src'       =>  'required|file|mimes:jpg,jpeg,png|max:2048',
-            'link'          =>  '', //required
-            'link_title'    =>  '', //required
+            'title' => 'required',
+            'description' => 'required',
+            'img_src' => 'file|mimes:jpg,jpeg,png|max:2048',
+            'link' => '',
+            'link_title' => '',
         ];
-        $messagesArray  =   [];
+        $messagesArray = [];
         $validator = Validator::make($payload, $validatorArray, $messagesArray);
         if ($validator->fails()) {
             $output = [
                 'message' => $validator->errors()->first(),
             ];
+
             return $this->response('validatorerrors', $output);
         }
         try {
             if ($request->hasFile('img_src')) {
                 $file = $request->file('img_src');
                 $destinationPath = 'images/desktop-image';
-                // $fileName = time() . '_' . $file->getClientOriginalName();
                 $fileName = $file->getClientOriginalName();
-                $fullFilePath = public_path($destinationPath . '/' . $fileName);
+                $fullFilePath = public_path($destinationPath.'/'.$fileName);
                 if (File::exists($fullFilePath)) {
                     $response = [
-                        'message'       =>  'File with the same name already exists.',
-                        'existing_file' =>  $fileName
+                        'message' => 'File with the same name already exists.',
+                        'existing_file' => $fileName,
                     ];
+
                     return $this->response('conflict', $response);
                 }
                 $file->move(public_path($destinationPath), $fileName);
                 $data = [
-                    "title"         =>  $payload['title'],
-                    "description"   =>  $payload['description'],
-                    "img_src"       =>  $fileName,
-                    "link"          =>  $payload['link'],
-                    "link_title"    =>  $payload['link_title'],
+                    'title' => $payload['title'],
+                    'description' => $payload['description'],
+                    'img_src' => $fileName,
+                    'link' => $payload['link'],
+                    'link_title' => $payload['link_title'],
                 ];
                 NewsUpdate::create($data);
                 $response = [
                     'message' => 'Created successfully.!',
-                    'data'  =>  $data
+                    'data' => $data,
                 ];
+
                 return $this->response('success', $response);
             } else {
                 $response = [
-                    'message'       =>  'File not uploaded.!',
+                    'message' => 'File not uploaded.!',
                 ];
+
                 return $this->response('exception', $response);
             }
         } catch (\Exception $e) {
             $response = [
                 'message' => $e->getMessage(),
             ];
+
             return $this->response('exception', $response);
         }
     }
 
     public function updateNewsUpdate(Request $request)
     {
-        $payload    =   $request->all();
+        $payload = $request->all();
         $validatorArray = [
-            'id'            =>  'required|numeric',
-            'title'         =>  '',
-            'description'   =>  '',
-            'img_src'       =>  'file|mimes:jpg,jpeg,png|max:2048',
-            'link'          =>  '',
-            'link_title'    =>  '',
-            'status'        =>  'in:1,0',
+            'id' => 'required|numeric',
+            'title' => '',
+            'description' => '',
+            'img_src' => 'file|mimes:jpg,jpeg,png|max:2048',
+            'link' => '',
+            'link_title' => '',
+            'status' => 'in:1,0',
         ];
-        $messagesArray  =   [];
+        $messagesArray = [];
         $validator = Validator::make($payload, $validatorArray, $messagesArray);
         if ($validator->fails()) {
             $output = [
                 'message' => $validator->errors()->first(),
             ];
+
             return $this->response('validatorerrors', $output);
         }
         try {
-            $newsUpdate =   NewsUpdate::find($payload['id']);
+            $newsUpdate = NewsUpdate::find($payload['id']);
             if ($newsUpdate) {
                 if ($request->hasFile('img_src')) {
                     $file = $request->file('img_src');
                     $destinationPath = 'images/desktop-image';
                     $fileName = $file->getClientOriginalName();
-                    $fullFilePath = public_path($destinationPath . '/' . $fileName);
+                    $fullFilePath = public_path($destinationPath.'/'.$fileName);
                     if (File::exists($fullFilePath)) {
                         $response = [
-                            'message'       =>  'File with the same name already exists.',
-                            'existing_file' =>  $fileName
+                            'message' => 'File with the same name already exists.',
+                            'existing_file' => $fileName,
                         ];
+
                         return $this->response('conflict', $response);
                     }
                     $file->move(public_path($destinationPath), $fileName);
                     $data = [
-                        "title"         =>  isset($payload['title']) ? $payload['title'] : '',
-                        "description"   =>  isset($payload['description']) ? $payload['description'] : '',
-                        "img_src"       =>  $fileName,
-                        "link"          =>  isset($payload['link']) ? $payload['link'] : '',
-                        "link_title"    =>  isset($payload['link_title']) ? $payload['link_title'] : '',
-                        "status"        =>  isset($payload['status']) ? $payload['status'] : $newsUpdate['status'],
+                        'title' => isset($payload['title']) ? $payload['title'] : '',
+                        'description' => isset($payload['description']) ? $payload['description'] : '',
+                        'img_src' => $fileName,
+                        'link' => isset($payload['link']) ? $payload['link'] : '',
+                        'link_title' => isset($payload['link_title']) ? $payload['link_title'] : '',
+                        'status' => isset($payload['status']) ? $payload['status'] : $newsUpdate['status'],
                     ];
                     $newsUpdate->update($data);
                     $response = [
                         'message' => 'Updated successfully.!',
-                        'data'  =>  $data
+                        'data' => $data,
                     ];
+
                     return $this->response('success', $response);
                 } else {
                     $data = [
-                        "title"         =>  isset($payload['title']) ? $payload['title'] : '',
-                        "description"   =>  isset($payload['description']) ? $payload['description'] : '',
-                        "img_src"       =>  $newsUpdate['img_src'],
-                        "link"          =>  isset($payload['link']) ? $payload['link'] : '',
-                        "link_title"    =>  isset($payload['link_title']) ? $payload['link_title'] : '',
-                        "status"        =>  isset($payload['status']) ? $payload['status'] : $newsUpdate['status'],
+                        'title' => isset($payload['title']) ? $payload['title'] : '',
+                        'description' => isset($payload['description']) ? $payload['description'] : '',
+                        'img_src' => $newsUpdate['img_src'],
+                        'link' => isset($payload['link']) ? $payload['link'] : '',
+                        'link_title' => isset($payload['link_title']) ? $payload['link_title'] : '',
+                        'status' => isset($payload['status']) ? $payload['status'] : $newsUpdate['status'],
                     ];
                     $newsUpdate->update($data);
                     $response = [
                         'message' => 'Updated successfully.!',
-                        'data'  =>  $data
+                        'data' => $data,
                     ];
+
                     return $this->response('success', $response);
                 }
             } else {
                 $response = [
-                    'message'       =>  'Record not found!',
+                    'message' => 'Record not found!',
                 ];
+
                 return $this->response('exception', $response);
             }
         } catch (\Exception $e) {
             $response = [
                 'message' => $e->getMessage(),
             ];
+
             return $this->response('exception', $response);
         }
     }
@@ -306,37 +332,41 @@ class ApiController extends Controller
     public function deleteNewsUpdate(Request $request)
     {
         $payload = $request->all();
-        $payload    =   $request->all();
+        $payload = $request->all();
         $validatorArray = [
-            'id'        =>  'required|numeric',
+            'id' => 'required|numeric',
         ];
-        $messagesArray  =   [];
+        $messagesArray = [];
         $validator = Validator::make($payload, $validatorArray, $messagesArray);
         if ($validator->fails()) {
             $output = [
                 'message' => $validator->errors()->first(),
             ];
+
             return $this->response('validatorerrors', $output);
         }
         try {
-            $newsUpdate =   NewsUpdate::find($payload['id']);
-            if (!is_null($newsUpdate)) {
+            $newsUpdate = NewsUpdate::find($payload['id']);
+            if (! is_null($newsUpdate)) {
 
                 $newsUpdate->delete();
                 $response = [
                     'message' => 'Deleted successfully!',
                 ];
+
                 return $this->response('success', $response);
             } else {
                 $response = [
                     'message' => 'Records not found.!',
                 ];
+
                 return $this->response('exception', $response);
             }
         } catch (\Exception $e) {
             $response = [
                 'message' => $e->getMessage(),
             ];
+
             return $this->response('exception', $response);
         }
     }
@@ -349,13 +379,15 @@ class ApiController extends Controller
             $newsUpdateList = NewsUpdate::where('status', 1)->get();
             $response = [
                 'message' => 'Details fetched successfully.!',
-                'data'  =>  $newsUpdateList
+                'data' => $newsUpdateList,
             ];
+
             return $this->response('success', $response);
         } catch (\Exception $e) {
             $response = [
                 'message' => $e->getMessage(),
             ];
+
             return $this->response('exception', $response);
         }
     }
@@ -364,139 +396,165 @@ class ApiController extends Controller
     {
         $payload = $request->all();
         $validatorArray = [
-            'title'         =>  'required',
-            'description'   =>  'required',
-            'img_src'       =>  'required|file|mimes:jpg,jpeg,png|max:2048',
-            'link'          =>  'required',
-            'link_title'    =>  'required',
+            'title' => 'required',
+            'description' => 'required',
+            'img_src' => 'required|file|mimes:jpg,jpeg,png|max:2048',
+            'link' => 'required',
+            'link_title' => 'required',
         ];
-        $messagesArray  =   [];
+        $messagesArray = [];
         $validator = Validator::make($payload, $validatorArray, $messagesArray);
         if ($validator->fails()) {
             $output = [
                 'message' => $validator->errors()->first(),
             ];
+
             return $this->response('validatorerrors', $output);
         }
         try {
             if ($request->hasFile('img_src')) {
                 $file = $request->file('img_src');
                 $destinationPath = 'images/desktop-image';
-                // $fileName = time() . '_' . $file->getClientOriginalName();
                 $fileName = $file->getClientOriginalName();
-                $fullFilePath = public_path($destinationPath . '/' . $fileName);
+                $fullFilePath = public_path($destinationPath.'/'.$fileName);
                 if (File::exists($fullFilePath)) {
                     $response = [
-                        'message'       =>  'File with the same name already exists.',
-                        'existing_file' =>  $fileName
+                        'message' => 'File with the same name already exists.',
+                        'existing_file' => $fileName,
                     ];
+
                     return $this->response('conflict', $response);
                 }
                 $file->move(public_path($destinationPath), $fileName);
                 $data = [
-                    "title"         =>  $payload['title'],
-                    "description"   =>  $payload['description'],
-                    "img_src"       =>  $fileName,
-                    "link"          =>  $payload['link'],
-                    "link_title"    =>  $payload['link_title'],
+                    'title' => $payload['title'],
+                    'description' => $payload['description'],
+                    'img_src' => $fileName,
+                    'link' => $payload['link'],
+                    'link_title' => $payload['link_title'],
                 ];
                 NewsUpdate::create($data);
                 $response = [
                     'message' => 'Created successfully.!',
-                    'data'  =>  $data
+                    'data' => $data,
                 ];
+
                 return $this->response('success', $response);
             } else {
-                $response = [
-                    'message'       =>  'File not uploaded.!',
+                $data = [
+                    'title' => isset($payload['title']) ? $payload['title'] : '',
+                    'description' => isset($payload['description']) ? $payload['description'] : '',
+                    'link' => isset($payload['link']) ? $payload['link'] : '',
+                    'link_title' => isset($payload['link_title']) ? $payload['link_title'] : '',
                 ];
-                return $this->response('exception', $response);
+                $stored = NewsUpdate::create($data);
+                if ($stored) {
+                    $response = [
+                        'message' => 'Not created.!',
+                    ];
+
+                    return $this->response('success', $response);
+                } else {
+
+                    $response = [
+                        'message' => 'Something went wrong!',
+                    ];
+
+                    return $this->response('exception', $response);
+                }
             }
         } catch (\Exception $e) {
             $response = [
                 'message' => $e->getMessage(),
             ];
+
             return $this->response('exception', $response);
         }
     }
 
     public function updateFaqs(Request $request)
     {
-        $payload    =   $request->all();
+        $payload = $request->all();
         $validatorArray = [
-            'id'            =>  'required|numeric',
-            'title'         =>  '',
-            'description'   =>  '',
-            'img_src'       =>  'file|mimes:jpg,jpeg,png|max:2048',
-            'link'          =>  '',
-            'link_title'    =>  '',
-            'status'        =>  'in:1,0',
+            'id' => 'required|numeric',
+            'title' => '',
+            'description' => '',
+            'img_src' => 'file|mimes:jpg,jpeg,png|max:2048',
+            'link' => '',
+            'link_title' => '',
+            'status' => 'in:1,0',
         ];
-        $messagesArray  =   [];
+        $messagesArray = [];
         $validator = Validator::make($payload, $validatorArray, $messagesArray);
         if ($validator->fails()) {
             $output = [
                 'message' => $validator->errors()->first(),
             ];
+
             return $this->response('validatorerrors', $output);
         }
         try {
-            $newsUpdate =   NewsUpdate::find($payload['id']);
+            $newsUpdate = NewsUpdate::find($payload['id']);
             if ($newsUpdate) {
                 if ($request->hasFile('img_src')) {
                     $file = $request->file('img_src');
                     $destinationPath = 'images/desktop-image';
                     // $fileName = time() . '_' . $file->getClientOriginalName();
                     $fileName = $file->getClientOriginalName();
-                    $fullFilePath = public_path($destinationPath . '/' . $fileName);
+                    $fullFilePath = public_path($destinationPath.'/'.$fileName);
                     if (File::exists($fullFilePath)) {
                         $response = [
-                            'message'       =>  'File with the same name already exists.',
-                            'existing_file' =>  $fileName
+                            'message' => 'File with the same name already exists.',
+                            'existing_file' => $fileName,
                         ];
+
                         return $this->response('conflict', $response);
                     }
                     $file->move(public_path($destinationPath), $fileName);
                     $data = [
-                        "title"         =>  isset($payload['title']) ? $payload['title'] : $newsUpdate['title'],
-                        "description"   =>  isset($payload['description']) ? $payload['description'] : $newsUpdate['description'],
-                        "img_src"       =>  $fileName,
-                        "link"          =>  isset($payload['link']) ? $payload['link'] : $newsUpdate['link'],
-                        "link_title"    =>  isset($payload['link_title']) ? $payload['link_title'] : $newsUpdate['link_title'],
-                        "status"        =>  isset($payload['status']) ? $payload['status'] : $newsUpdate['status'],
+                        'title' => isset($payload['title']) ? $payload['title'] : $newsUpdate['title'],
+                        'description' => isset($payload['description']) ? $payload['description'] : $newsUpdate['description'],
+                        'img_src' => $fileName,
+                        'link' => isset($payload['link']) ? $payload['link'] : $newsUpdate['link'],
+                        'link_title' => isset($payload['link_title']) ? $payload['link_title'] : $newsUpdate['link_title'],
+                        'status' => isset($payload['status']) ? $payload['status'] : $newsUpdate['status'],
                     ];
                     $newsUpdate->update($data);
                     $response = [
                         'message' => 'Updated successfully.!',
-                        'data'  =>  $data
+                        'data' => $data,
                     ];
+
                     return $this->response('success', $response);
                 } else {
                     $data = [
-                        "title"         =>  isset($payload['title']) ? $payload['title'] : $newsUpdate['title'],
-                        "description"   =>  isset($payload['description']) ? $payload['description'] : $newsUpdate['description'],
-                        "img_src"       =>  $newsUpdate['img_src'],
-                        "link"          =>  isset($payload['link']) ? $payload['link'] : $newsUpdate['link'],
-                        "link_title"    =>  isset($payload['link_title']) ? $payload['link_title'] : $newsUpdate['link_title'],
-                        "status"        =>  isset($payload['status']) ? $payload['status'] : $newsUpdate['status'],
+                        'title' => isset($payload['title']) ? $payload['title'] : $newsUpdate['title'],
+                        'description' => isset($payload['description']) ? $payload['description'] : $newsUpdate['description'],
+                        'img_src' => $newsUpdate['img_src'],
+                        'link' => isset($payload['link']) ? $payload['link'] : $newsUpdate['link'],
+                        'link_title' => isset($payload['link_title']) ? $payload['link_title'] : $newsUpdate['link_title'],
+                        'status' => isset($payload['status']) ? $payload['status'] : $newsUpdate['status'],
                     ];
                     $newsUpdate->update($data);
                     $response = [
                         'message' => 'Updated successfully.!',
-                        'data'  =>  $data
+                        'data' => $data,
                     ];
+
                     return $this->response('success', $response);
                 }
             } else {
                 $response = [
-                    'message'       =>  'Record not found!',
+                    'message' => 'Record not found!',
                 ];
+
                 return $this->response('exception', $response);
             }
         } catch (\Exception $e) {
             $response = [
                 'message' => $e->getMessage(),
             ];
+
             return $this->response('exception', $response);
         }
     }
@@ -504,37 +562,41 @@ class ApiController extends Controller
     public function deleteFaqs(Request $request)
     {
         $payload = $request->all();
-        $payload    =   $request->all();
+        $payload = $request->all();
         $validatorArray = [
-            'id'        =>  'required|numeric',
+            'id' => 'required|numeric',
         ];
-        $messagesArray  =   [];
+        $messagesArray = [];
         $validator = Validator::make($payload, $validatorArray, $messagesArray);
         if ($validator->fails()) {
             $output = [
                 'message' => $validator->errors()->first(),
             ];
+
             return $this->response('validatorerrors', $output);
         }
         try {
-            $newsUpdate =   NewsUpdate::find($payload['id']);
-            if (!is_null($newsUpdate)) {
+            $newsUpdate = NewsUpdate::find($payload['id']);
+            if (! is_null($newsUpdate)) {
 
                 $newsUpdate->delete();
                 $response = [
                     'message' => 'Deleted successfully!',
                 ];
+
                 return $this->response('success', $response);
             } else {
                 $response = [
                     'message' => 'Records not found.!',
                 ];
+
                 return $this->response('exception', $response);
             }
         } catch (\Exception $e) {
             $response = [
                 'message' => $e->getMessage(),
             ];
+
             return $this->response('exception', $response);
         }
     }
