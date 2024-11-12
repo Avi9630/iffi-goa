@@ -44,7 +44,12 @@ class ApiNewController extends Controller
                 $file = $request->file('img_src_file');
                 $destinationPath = 'images/news-update';
                 $fileName = time().'_'.$file->getClientOriginalName(); // Adding timestamp to prevent name collision
-                $file->move(public_path($destinationPath), $fileName);
+
+                $extension = strtolower($request->file('img_src_file')->getClientOriginalExtension());
+                $modifiedName = (rand(100000, 999999)).'_'.time().'.'.$extension;
+
+                $file->move(public_path($destinationPath), $modifiedName);
+                $fileName = $modifiedName;
             }
 
             // Clean the 'pop_up_content' field before saving it
@@ -134,7 +139,11 @@ class ApiNewController extends Controller
                     $file = $request->file('img_src_file');
                     $destinationPath = 'images/news-update';
                     $fileName = $file->getClientOriginalName();
-                    $file->move(public_path($destinationPath), $fileName);
+                    $extension = strtolower($request->file('img_src_file')->getClientOriginalExtension());
+                    $modifiedName = (rand(100000, 999999)).'_'.time().'.'.$extension;
+
+                    $file->move(public_path($destinationPath), $modifiedName);
+                    $fileName = $modifiedName;
                 }
 
                 // Clean the 'pop_up_content' field before saving it
