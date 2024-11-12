@@ -869,4 +869,33 @@ class ApiNewController extends Controller
             ], 500);
         }
     }
+
+    // The Peacock
+    public function CuretedSection2024()
+    {
+        try {
+            // Step 1: Retrieve all tickers with specific fields
+            $tickerList = Ticker::select('id', 'content', 'status')->get();
+
+            // Step 2: Check if any tickers are found
+            if ($tickerList->isEmpty()) {
+                return $this->response('no_content', [
+                    'message' => 'No tickers found.',
+                    'data' => [],
+                ], 204); // 204 status for no content
+            }
+
+            // Step 3: Return a success response with the retrieved ticker data
+            return $this->response('success', [
+                'message' => 'All tickers fetched successfully!',
+                'data' => $tickerList,
+            ], 200); // 200 status for success
+
+        } catch (\Exception $e) {
+            // Step 4: Handle any unexpected errors
+            return $this->response('exception', [
+                'message' => 'An error occurred: '.$e->getMessage(),
+            ], 500); // 500 status for internal server error
+        }
+    }
 }
