@@ -49,9 +49,9 @@
     ])
 
     <!-- International competition Section-->
-    {{--    @include('pages.international-competition', [
+    @include('pages.international-competition', [
         'internationalCinemas' => app(\App\Http\Controllers\CommonController::class)->internationalCinema(),
-    ]) --}}
+    ])
 
     <!-- Director Section-->
     <section>
