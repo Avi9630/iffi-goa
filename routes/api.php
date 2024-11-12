@@ -65,3 +65,6 @@ Route::get('get-thePeacock/{id}', [ApiNewController::class, 'getthePeacockById']
 Route::post('update-thePeacock/{id}', [ApiNewController::class, 'updateThePeacock'])->name('update-thePeacock');
 Route::post('create-thePeacock', [ApiNewController::class, 'createThePeacock'])->name('create-thePeacock');
 Route::delete('delete-thePeacock/{id}', [ApiNewController::class, 'deleteThePeacock'])->name('delete-thePeacock');
+
+// Cureted Section 2024
+Route::get('get-CuretedSection2024', [ApiNewController::class, 'CuretedSection2024'])->name('get-CuretedSection2024');
