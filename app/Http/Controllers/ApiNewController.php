@@ -1069,7 +1069,7 @@ class ApiNewController extends Controller
         try {
             // Fetch all curetedsection records from the database
             // $curetedsectionData = curetedsection2024::all();
-            $curetedsectionData = curetedsection2024::where('international_cinema.award_year', 2024)->get();
+            $curetedsectionData = curetedsection2024::where('international_cinema.year', 2024)->get();
 
             // Check if data exists
             if ($curetedsectionData->isEmpty()) {
@@ -1102,9 +1102,9 @@ class ApiNewController extends Controller
         $payload = $request->all();
         $validatorArray = [
             'curated_section_id' => 'required|string|max:255',
-            'award_year' => 'required|string|max:255',
+            // 'award_year' => 'required|string|max:255',
             'title' => 'required|string|max:255',
-            'award' => 'required|string|max:255',
+            'award' => 'string|max:255',
             'directed_by' => 'required|string|max:255',
             'country_of_origin' => 'required|string|max:255',
             'language' => 'required|string|max:255',
@@ -1147,7 +1147,7 @@ class ApiNewController extends Controller
                     'img_src' => $modifiedName,
                     'image_name' => $fileNameOriginal,
                     'curated_section_id' => $payload['curated_section_id'],
-                    'award_year' => $payload['award_year'],
+                    // 'award_year' => $payload['award_year'],
                     'title' => $payload['title'],
                     'award' => $payload['award'],
                     'directed_by' => $payload['directed_by'],
@@ -1210,9 +1210,9 @@ class ApiNewController extends Controller
         // Validation rules
         $validatorArray = [
             'curated_section_id' => 'required|string|max:255',
-            'award_year' => 'required|string|max:255',
+            // 'award_year' => 'required|string|max:255',
             'title' => 'required|string|max:255',
-            'award' => 'required|string|max:255',
+            'award' => 'string|max:255',
             'directed_by' => 'required|string|max:255',
             'country_of_origin' => 'required|string|max:255',
             'language' => 'required|string|max:255',
@@ -1238,7 +1238,7 @@ class ApiNewController extends Controller
             // echo $formattedDate;
             $data = [
                 'curated_section_id' => $payload['curated_section_id'],
-                'award_year' => $payload['award_year'],
+                // 'award_year' => $payload['award_year'],
                 'title' => $payload['title'],
                 'award' => $payload['award'],
                 'directed_by' => $payload['directed_by'],
