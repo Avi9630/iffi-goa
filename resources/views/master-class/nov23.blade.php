@@ -53,10 +53,10 @@
                     Stories that Travel
                 </h4>
                 <p>
-                    In this session an esteemed panel will go into the art of storytelling that travels beyond its
+                    In this session an esteemed panel will explore the art of storytelling that travels beyond its
                     origins, addressing the themes, techniques, and emotional core that allow films to reach and impact
-                    diverse audiences worldwide. These panelist and their stories have the power to transcend borders,
-                    languages, and cultures keep connected.
+                    diverse audiences worldwide. These panelists and their stories have the power to transcend borders,
+                    languages and cultures, connecting audiences across the globe.
                 </p>
             </div>
         </div>

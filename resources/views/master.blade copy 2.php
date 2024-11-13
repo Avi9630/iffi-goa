@@ -629,55 +629,66 @@
     };
 
     document.querySelectorAll('.title-tab').forEach(tab => {
-        tab.addEventListener('click', function() {
-            const [dateId, sessionIndex] = this.id.split('-');
-            const data = modalData[dateId][sessionIndex];
-            if (data) {
-                document.getElementById('exampleModalLabel').innerText = data.title;
-                document.getElementById('modalDate').innerText = data.date;
-                document.getElementById('modalModerator').innerText = data.moderator;
-                document.getElementById('panel').innerText = data.panel;
+                tab.addEventListener('click', function() {
+                            const [dateId, sessionIndex] = this.id.split('-');
+                            const data = modalData[dateId][sessionIndex];
+                            if (data) {
+                                document.getElementById('exampleModalLabel').innerText = data.title;
+                                document.getElementById('modalDate').innerText = data.date;
+                                document.getElementById('modalModerator').innerText = data.moderator;
+                                document.getElementById('panel').innerText = data.panel;
 
-                // Clear existing speakers and add new ones
-                const speakersList = document.getElementById('modalSpeakers');
-                speakersList.innerHTML = '';
-                data.speakers.forEach(speaker => {
-                    const li = document.createElement('li');
-                    li.className =
-                        'list-group-item d-flex justify-content-between align-items-start title-tab';
-                    li.style.cursor = 'pointer';
+                                //This is for Speakers
+                                const speakersList = document.getElementById('modalSpeakers');
+                                speakersList.innerHTML = '';
+                                data.speakers.forEach(speaker => {
+                                            const li = document.createElement('li');
+                                            li.className =
+                                                'list-group-item d-flex justify-content-between align-items-start title-tab';
+                                            li.style.cursor = 'pointer'; // Set cursor to pointer for entire li
 
-                    // Add onclick event to li for opening the modal
-                    li.onclick = function() {
-                        showSpeakerDetails(
-                            speaker.name.replace(/'/g, "\\'"),
-                            speaker.description.replace(/'/g, "\\'"),
-                            speaker.image.replace(/'/g, "\\'")
-                        );
-                    };
+                                            // Add onclick event to li for opening the modal
+                                            li.onclick = function() {
+                                                showSpeakerDetails(
+                                                    speaker.name.replace(/'/g, "\\'"),
+                                                    speaker.description.replace(/'/g, "\\'"),
+                                                    speaker.image.replace(/'/g, "\\'")
+                                                );
+                                            };
+                                            li.innerHTML = `
+                                                                        <div class="ms-2 me-auto">
+                                                                        <div class="fw-bold">${speaker.name}</div>
+                                                                        </div>
+                                                                        <span>
+                                                                            <img src="${speaker.image}" class="img-circle">
+                                                                        </span>
+                                                                     `; <
+                                            div class = "ms-2 me-auto" >
+                                            <
+                                            div class = "fw-bold" > $ {
+                                                speaker.name
+                                            } < /div> < /
+                                            div > <
+                                                span >
+                                                <
+                                                img src = "${speaker.image}"
+                                            class = "img-circle" >
+                                            <
+                                            /span>
+                                            `;
+                                                            speakersList.appendChild(li);
+                                                        });
+                                                    }
+                                                });
+                                            });
 
-                    // Populate the speaker list item
-                    li.innerHTML = `
-                                        <div class="ms-2 me-auto">
-                                            <div class="fw-bold">${speaker.name}</div>
-                                        </div>
-                                        <span>
-                                            <img src="${speaker.image}" class="img-circle" alt="${speaker.name}">
-                                        </span>
-                                    `;
-                        speakersList.appendChild(li);
-                    });
-                }
-            });
-        });
-
-        function showSpeakerDetails(name, description, image) {
-            document.getElementById('speakerDetailsLabel').innerText = name;
-            document.getElementById('speakerDescription').innerText = description;
-            document.getElementById('speakerImage').src = image;
-            const speakerDetailsModal = new bootstrap.Modal(document.getElementById('speakerDetailsModal'));
-            speakerDetailsModal.show();
-        }
+                                            function showSpeakerDetails(name, description, image) {
+                                                document.getElementById('speakerDetailsLabel').innerText = name;
+                                                document.getElementById('speakerDescription').innerText = description;
+                                                document.getElementById('speakerImage').src = image;
+                                                const speakerDetailsModal = new bootstrap.Modal(document.getElementById('speakerDetailsModal'));
+                                                speakerDetailsModal.show();
+                                            }
     </script>
 
     <style type="text/css">
