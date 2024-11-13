@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\MasterClass;
 use App\Models\NewsUpdate;
 use DB;
 use Illuminate\Http\Request;
@@ -22,6 +23,13 @@ class CommonController extends Controller
         return $datas;
     }
 
+    public function getLatestUpdate()
+    {
+        $latestUpdates = DB::table('latest_update')->where(['status' => 1])->get();
+
+        return $latestUpdates;
+    }
+
     public function internationalCinema()
     {
         $internationalCinemas = DB::table('international_cinema')
@@ -33,7 +41,7 @@ class CommonController extends Controller
             )
             ->where([
                 'international_cinema.curated_section_id' => 1,
-                'year' => 2024
+                'year' => 2024,
             ])
             ->select(
                 'international_cinema.*',
@@ -43,6 +51,47 @@ class CommonController extends Controller
             ->get();
 
         return $internationalCinemas;
+    }
+
+    public function curetedsection2024(Request $request)
+    {
+        // exit('tets');
+        $curatedSectionId = $request->input('curated_section_id');
+
+        $year = $request->input('year');
+        $curatedSections = [
+            1 => 'International Competition',
+            13 => 'Award For The Best Debut',
+            4 => 'ICFT Unesco Medal',
+            3 => 'Festival Kaleidoscope',
+            14 => 'DocuMontage',
+            9 => 'Integrate',
+            8 => 'Animation',
+            10 => 'Macabre Dreams',
+            15 => 'Cinema World',
+            16 => 'Restored Classic',
+            11 => 'UNICEF',
+        ];
+
+        $internationalCinemas = DB::table('international_cinema')
+            ->join(
+                'international_curated_sections',
+                'international_cinema.curated_section_id',
+                '=',
+                'international_curated_sections.id'
+            )
+            ->where([
+                'international_cinema.curated_section_id' => $curatedSectionId,
+                'international_cinema.year' => 2024,
+            ])
+            ->select(
+                'international_cinema.*',
+                'international_curated_sections.title AS curated_section_title'
+            )
+            ->limit(20)
+            ->get();
+
+        return view('international-cinema.2024.curated-section-2024', compact('internationalCinemas', 'curatedSections', 'curatedSectionId'));
     }
 
     // public function internationalCompetitionDetail($id)
@@ -280,6 +329,7 @@ class CommonController extends Controller
     public function newsUpdate()
     {
         $newsUpdates = NewsUpdate::where('status', 1)->orderBy('id', 'DESC')->get();
+
         return view('media.news-and-update', ['newsUpdates' => $newsUpdates]);
     }
 
@@ -293,4 +343,18 @@ class CommonController extends Controller
 
         return $datas;
     }
+
+    // public function masterClass($id)
+    // {
+    //     $masterClass = MasterClass::with('speakers')->findOrFail($id);
+
+    //     return view('master-class.master', compact('masterClass'));
+
+    public function masterClass()
+    {
+        $masterClasses = MasterClass::all(); // or any other query to get your data
+
+        return view('master-class.master', compact('masterClasses'));
+    }
+    // }
 }
