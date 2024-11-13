@@ -389,24 +389,24 @@
                     image: "{{ asset('public/images/master-class/John Seale.jpg') }}"
                 }]
             },
-            {
-                title: "Beyond Cinematic Endeavors:Celebrating 50 Years of Shabana Azmi",
-                moderator: "",
-                panel: "InConversation",
-                date: "Nov-25th, 2024, 04.30 AM TO 06.00 PM",
-                // description: "This session brings together renowned sound designers Nakul Kamte and Eric Hoehn, who will explore the power of sound design in shaping the emotional and narrative depth of films. From subtle  ambient layers to impactful soundscapes, they will share their craft in building the aural  dimension that completes the cinematic experience.",
-                speakers: [{
-                        name: "Shekhar Kapur",
-                        description: "Shekhar Kapur is an esteemed Indian filmmaker and actor who has received several accolades, including a BAFTA Award, a National Film Award, a National Board of Review Award, and three Filmfare Awards, along with a nomination for a Golden Globe Award; he currently serves as the Festival Director of the International Film Festival of India (IFFI).",
-                        image: "{{ asset('public/images/master-class/Shekhar Kapur.jpg') }}"
-                    },
-                    {
-                        name: "Shabana Azmi",
-                        description: "Over five decades, Shabana Azmi has showcased exceptional talent and versatility across the silver screen, starring in over 140 Hindi films and 12 international productions, including Deepa Mehta’s Midnight’s Children and Fire, Mira Nair’s The Reluctant Fundamentalist, Gurinder Chadha’s It’s A Wonderful Afterlife, and Ismail Merchant’s In Custody; her gripping performances range from Ankur to recent roles in Rocky aur Rani Ki Prem Kahani and Ghoomer, and she is the only actress in India to have won five National Awards for Best Actress, alongside numerous global accolades from film festivals such as the Los Angeles Film Festival and Toronto ReelWorld International Film Festival for Excellence.",
-                        image: "{{ asset('public/images/master-class/Shabana Azmi.jpg') }}"
-                    },
-                ]
-            },
+            // {
+            //     title: "Beyond Cinematic Endeavors:Celebrating 50 Years of Shabana Azmi",
+            //     moderator: "",
+            //     panel: "InConversation",
+            //     date: "Nov-25th, 2024, 04.30 AM TO 06.00 PM",
+            //     // description: "This session brings together renowned sound designers Nakul Kamte and Eric Hoehn, who will explore the power of sound design in shaping the emotional and narrative depth of films. From subtle  ambient layers to impactful soundscapes, they will share their craft in building the aural  dimension that completes the cinematic experience.",
+            //     speakers: [{
+            //             name: "Shekhar Kapur",
+            //             description: "Shekhar Kapur is an esteemed Indian filmmaker and actor who has received several accolades, including a BAFTA Award, a National Film Award, a National Board of Review Award, and three Filmfare Awards, along with a nomination for a Golden Globe Award; he currently serves as the Festival Director of the International Film Festival of India (IFFI).",
+            //             image: "{{ asset('public/images/master-class/Shekhar Kapur.jpg') }}"
+            //         },
+            //         {
+            //             name: "Shabana Azmi",
+            //             description: "Over five decades, Shabana Azmi has showcased exceptional talent and versatility across the silver screen, starring in over 140 Hindi films and 12 international productions, including Deepa Mehta’s Midnight’s Children and Fire, Mira Nair’s The Reluctant Fundamentalist, Gurinder Chadha’s It’s A Wonderful Afterlife, and Ismail Merchant’s In Custody; her gripping performances range from Ankur to recent roles in Rocky aur Rani Ki Prem Kahani and Ghoomer, and she is the only actress in India to have won five National Awards for Best Actress, alongside numerous global accolades from film festivals such as the Los Angeles Film Festival and Toronto ReelWorld International Film Festival for Excellence.",
+            //             image: "{{ asset('public/images/master-class/Shabana Azmi.jpg') }}"
+            //         },
+            //     ]
+            // },
             {
                 title: "How to Succeed in New Hollywood",
                 moderator: "",
@@ -548,13 +548,13 @@
                     };
                     li.innerHTML =
                         `
-                                                                                                                                                                                                                                                                                                                                        <div class="ms-2 me-auto">
-                                                                                                                                                                                                                                                                                                                                            <div class="fw-bold">${speaker.name}</div>
-                                                                                                                                                                                                                                                                                                                                        </div>
-                                                                                                                                                                                                                                                                                                                                        <span>
-                                                                                                                                                                                                                                                                                                                                            <img src="${speaker.image}" class="img-circle">
-                                                                                                                                                                                                                                                                                                                                        </span>
-                                                                                                                                                                                                                                                                                                                                    `;
+                                                                                                                                                                                                                                                                                                                                                <div class="ms-2 me-auto">
+                                                                                                                                                                                                                                                                                                                                                    <div class="fw-bold">${speaker.name}</div>
+                                                                                                                                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                                                                                                                                                <span>
+                                                                                                                                                                                                                                                                                                                                                    <img src="${speaker.image}" class="img-circle">
+                                                                                                                                                                                                                                                                                                                                                </span>
+                                                                                                                                                                                                                                                                                                                                            `;
                         speakersList.appendChild(li);
                     });
 
