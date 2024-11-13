@@ -10,40 +10,9 @@
                     <img src="{{ asset('public/images/Film-Bazar.png') }}" alt="image">
                 </a>
                 <img src="{{ asset('public/images/esg-logo.png') }}" alt="image" class="Mobile-view">
-                <img src="{{ asset('public/images/GOG.png') }}" alt="image" style="width:10%" class="Mobile-view">
+                <img src="{{ asset('public/images/GOG.png') }}" alt="image" style="width:9%" class="Mobile-view">
+                <img src="{{ asset('public/images/Svayam.png') }}" alt="image" style="width:20%" class="Mobile-view">
             </div>
-            {{-- <div class=" ">
-                <div class=" text-center quick-link">
-                    <ul>
-                        <li>
-                            <a href="{{ route('about-iffi') }}" class="cus-menuP-link">About IFFI</a>
-                        </li>
-                        <li>
-                            <a href="https://www.youtube.com/watch?v=lsjuObbzDyM" target="_blank"
-                                class="cus-menuP-link">
-                                Glimpses of IFFI 2023
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ route('festival-venue') }}" target="_blank" class="cus-menuP-link">Festival
-                                Venue</a>
-                        </li>
-                        <li>
-                            <a href="{{ route('goa-tourist-places') }}" target="_blank" class="cus-menuP-link">
-                                Goa Tourist Places
-                            </a>
-                        </li>
-                        <li> <a href="{{ route('connectivity') }}" class="cus-menuP-link">Connectivity</a></li>
-                        <li>
-                            <a href="{{ route('contact-us') }}" class="cus-menuP-link">Contact Us</a>
-                        </li>
-                        <li> <a href="{{ route('faq') }}" class="cus-menuP-link">FAQ's</a></li>
-                        <li><a href="{{ route('press-release') }}" target="_blank">Press Release</a></li>
-                        <li> <a href="{{ route('gallery') }}" target="_blank">Gallary</a></li>
-                        <li> <a href="https://www.iffigoa.org/privacy-policy">Privacy Policy</a></li>
-                    </ul>
-                </div>
-            </div> --}}
             <div class="row mt-4 phone-text">
                 <div class="col-md-3 col-sm-3">
                     <h4>Indian Panorama</h4>
