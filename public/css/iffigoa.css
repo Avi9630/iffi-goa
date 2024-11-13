@@ -666,6 +666,12 @@ footer a:hover {
         url(../images/main-header/second_edition.jpg) center center no-repeat;
     background-size: cover;
 }
+.bannerBg-th_edition {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url(../images/main-header/55th-IFFI-Gala-Head-Banner.jpg) center center
+            no-repeat !important;
+    background-size: cover;
+}
 
 .bannerBg-Gallery-banner {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
@@ -1258,6 +1264,9 @@ footer a:hover {
     background: #3c063c url(../images/peacock.png) center no-repeat;
     /* background: linear-gradient(rgb(88 65 85 / 70%), rgb(0 0 0 / 70%)),
         url(../images/peacock.png) bottom no-repeat; */
+    & a {
+        text-decoration: none;
+    }
 }
 .update-heading {
     color: white;

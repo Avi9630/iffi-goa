@@ -78,15 +78,22 @@
                     {{-- </div> --}}
                 </div>
                 <div class="modal-body">
-                    <div class="update-heading text-center">
-                        {{-- <p>55th International Film Festival of India, Goa</p> --}}
-                        <p>20-28th November-2024</p>
-                        <p>DELEGATE REGISTRATIONS </p>
-                        <p> ARE NOW OPEN!</p>
-                        {{-- <div class="link">
+                    @foreach ($latestUpdates as $latestUpdate)
+                        <a href={{ $latestUpdate->link }} target="_blank">
+                            <div class="update-heading text-center">
+                                {{-- <p>55th International Film Festival of India, Goa</p> --}}
+                                <p>20-28th November-2024</p>
+                                {{-- <p>DELEGATE REGISTRATIONS </p> --}}
+                                {{-- <p> ARE NOW OPEN!</p> --}}
+                                {{-- <div class="link">
                             <a href="https://iffigoa.org/">Visit:www.iffigoa.org</a>
                         </div> --}}
-                    </div>
+                                <p>{!! html_entity_decode($latestUpdate->title) !!}</p>
+                                {{-- <p>{{ $latestUpdate->content }}</p> --}}
+                                <p>{!! html_entity_decode($latestUpdate->content) !!}</p>
+                            </div>
+                        </a>
+                    @endforeach
                 </div>
             </div>
         </div>

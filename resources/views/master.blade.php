@@ -95,6 +95,7 @@
     <!-- Speakers Popup End -->
 
     {{-- Script Start --}}
+
     <script>
         const modalData = {
 
@@ -637,14 +638,14 @@
                 document.getElementById('modalModerator').innerText = data.moderator;
                 document.getElementById('panel').innerText = data.panel;
 
-                //This is for Speakers
+                // Clear existing speakers and add new ones
                 const speakersList = document.getElementById('modalSpeakers');
                 speakersList.innerHTML = '';
                 data.speakers.forEach(speaker => {
                     const li = document.createElement('li');
                     li.className =
                         'list-group-item d-flex justify-content-between align-items-start title-tab';
-                    li.style.cursor = 'pointer'; // Set cursor to pointer for entire li
+                    li.style.cursor = 'pointer';
 
                     // Add onclick event to li for opening the modal
                     li.onclick = function() {
@@ -654,19 +655,18 @@
                             speaker.image.replace(/'/g, "\\'")
                         );
                     };
-                    li.innerHTML =
-                        `
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div class="ms-2 me-auto">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <div class="fw-bold">${speaker.name}</div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <span>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <img src="${speaker.image}" class="img-circle">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </span>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            `;
+
+                    // Populate the speaker list item
+                    li.innerHTML = `
+                                        <div class="ms-2 me-auto">
+                                            <div class="fw-bold">${speaker.name}</div>
+                                        </div>
+                                        <span>
+                                            <img src="${speaker.image}" class="img-circle" alt="${speaker.name}">
+                                        </span>
+                                    `;
                         speakersList.appendChild(li);
                     });
-
-
                 }
             });
         });
@@ -679,7 +679,7 @@
             speakerDetailsModal.show();
         }
     </script>
-    {{-- Script End --}}
+
     <style type="text/css">
         .title-tab {
             cursor: pointer;

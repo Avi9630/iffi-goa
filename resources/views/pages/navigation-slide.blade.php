@@ -131,10 +131,79 @@
                                                     Curated Sections 2024
                                                 </a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a class="dropdown-item"
+                                                    {{-- <li><a class="dropdown-item"
                                                             href="{{ route('international-competition-2024') }}">International
                                                             Competition</a>
+                                                    </li> --}}
+
+                                                    <li>
+                                                        <a class="dropdown-item"
+                                                            href="{{ route('cureted-section-2024', ['curated_section_id' => 1, 'year' => 2024]) }}">
+                                                            International Competition
+                                                        </a>
                                                     </li>
+                                                    <li>
+                                                        <a class="dropdown-item"
+                                                            href="{{ route('cureted-section-2024', ['curated_section_id' => 13, 'year' => 2024]) }}">
+                                                            Award Best Debut
+                                                        </a>
+                                                    </li>
+                                                    {{-- <li>
+                                                        <a class="dropdown-item"
+                                                            href="{{ route('cureted-section-2024', ['curated_section_id' => 4, 'year' => 2024]) }}">
+                                                            ICFT Unesco Medal
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item"
+                                                            href="{{ route('cureted-section-2024', ['curated_section_id' => 3, 'year' => 2024]) }}">
+                                                            Festival Kaleidoscope
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item"
+                                                            href="{{ route('cureted-section-2024', ['curated_section_id' => 14, 'year' => 2024]) }}">
+                                                            DocuMontage
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item"
+                                                            href="{{ route('cureted-section-2024', ['curated_section_id' => 9, 'year' => 2024]) }}">
+                                                            Integrate
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item"
+                                                            href="{{ route('cureted-section-2024', ['curated_section_id' => 8, 'year' => 2024]) }}">
+                                                            Animation
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item"
+                                                            href="{{ route('cureted-section-2024', ['curated_section_id' => 10, 'year' => 2024]) }}">
+                                                            Macabre Dreams
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item"
+                                                            href="{{ route('cureted-section-2024', ['curated_section_id' => 15, 'year' => 2024]) }}">
+                                                            Cinema World
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item"
+                                                            href="{{ route('cureted-section-2024', ['curated_section_id' => 16, 'year' => 2024]) }}">
+                                                            Restored Classic
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item"
+                                                            href="{{ route('cureted-section-2024', ['curated_section_id' => 11, 'year' => 2024]) }}">
+                                                            UNICEF
+                                                        </a>
+                                                    </li> --}}
+
+
                                                 </ul>
                                             </li>
 
@@ -324,6 +393,10 @@
                                                 <a href="{{ route('2nd-edition') }}" class="dropdown-item">2nd
                                                     Edition (54th IFFI)</a>
                                             </li>
+                                            <li>
+                                                <a href="{{ route('3nd-edition') }}" class="dropdown-item">3nd
+                                                    Edition (55th IFFI)</a>
+                                            </li>
                                         </ul>
                                     </li>
                                     <!-- CMOT Section Start-->
@@ -407,7 +480,7 @@
                                     </li>
 
 
-                                    {{-- <li class="nav-item dropdown">
+                                    <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" role="button"
                                             data-bs-toggle="dropdown" aria-expanded="false">
                                             The Peacock
@@ -418,7 +491,8 @@
                                                     data-bs-toggle="dropdown" aria-expanded="false">
                                                     Old Versions
                                                 </a>
-                                                <ul class="dropdown-menu">
+
+                                                {{-- <ul class="dropdown-menu">
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('the-peacock', ['year' => 2023]) }}">2023</a>
                                                     </li>
@@ -431,10 +505,11 @@
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('the-peacock', ['year' => 2020]) }}">2020</a>
                                                     </li>
-                                                </ul>
+                                                </ul> --}}
                                             </li>
                                         </ul>
-                                    </li> --}}
+                                    </li>
+
                                 </ul>
                             </div>
                             <!-- Media Section End -->
@@ -491,6 +566,11 @@
                                             Schedule
                                         </a>
                                     </li>
+                                    {{-- <li class="nav-item">
+                                        <a href="{{ route('master-class', ['id' => 1]) }}" class="nav-link">
+                                            Aditya
+                                        </a>
+                                    </li> --}}
 
                                     {{-- <li class="nav-item dropdown">
 
