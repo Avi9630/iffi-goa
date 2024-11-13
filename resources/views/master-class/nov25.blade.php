@@ -72,7 +72,7 @@
     </div>
 </div>
 
-<div class="mt-4 mb-4">
+{{-- <div class="mt-4 mb-4">
     <h2 class="pb-3">November 25th, 2024</h2>
     <div class="row">
 
@@ -113,7 +113,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 
 <div class="mt-4 mb-4">
     <h2 class="pb-3">November 25th, 2024</h2>
@@ -128,7 +128,7 @@
 
         <div class="col-md-7 col-12">
             <div class="callout">
-                <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov25-3-trigger">
+                <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov25-2-trigger">
                     How to Succeed in New Hollywood
                 </h4>
                 <p>
