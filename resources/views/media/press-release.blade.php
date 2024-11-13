@@ -6,22 +6,9 @@
 @section('site_keywords',
     'IFFI GOA Press Release, IFFI news update, IFFI announcements, official IFFI statements,
     Latest IFFI news, IFFI press coverage, IFFI media releases, IFFI event news')
-
-    {{-- <style>
-        .table-responsive table p {
-            font-weight: 500;
-            margin: 0;
-            margin-top: 6px;
-        }
-    </style> --}}
 @section('content')
-    <!-- Header start-->
     @include('layouts.header')
-    <!-- Header end-->
-
-    <!-- Menu slide start-->
     @include('pages.navigation-slide')
-    <!-- Menu slide end -->
 
     <!-- Inner Page Banner Section -->
     <div class="container-fluid page-header bannerBg-news py-5">
@@ -29,12 +16,21 @@
             <h1 class="page-title-header">Press Release</h1>
         </div>
     </div>
-
     <!-- Inner Page Banner Section -->
     <div class="container press">
         <div class="table-responsive">
             <table id="example" class="table table-hover mt-3">
                 <tbody>
+
+                    <tr>
+                        <td>
+                            <p>Lights, Camera, Goa! Dive into IFFI 2024</p>
+                        </td>
+                        <td>
+                            <a href="https://www.iffigoa.org/public/press_release/Lights, Camera, Goa! Dive into IFFI 2024.pdf"
+                                class="btn  btn-primary" target="_blank">View</a>
+                        </td>
+                    </tr>
                     @foreach ($press as $key => $value)
                         @if (isset($value->link) && !empty($value->link) && $value->link != '')
                             <tr>
@@ -50,9 +46,7 @@
                 </tbody>
             </table>
         </div>
-        {{-- <div class="pull-right d-flex justify-content-center">
-            {{ $press->withQueryString()->links() }}
-        </div> --}}
+        {{-- Paginations --}}
         <div class="container">
             <nav aria-label="Page navigation pb-4">
                 <ul class="pagination overflow-hidden">
