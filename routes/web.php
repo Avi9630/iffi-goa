@@ -19,7 +19,9 @@ Route::controller(CommonController::class)->group(function () {
 
     Route::get('highlights', 'highlights')->name('highlights');
 
-    Route::get('international-cinema', 'internationalCinema')->name('international-cinema');
+    // Route::get('international-cinema', 'internationalCinema')->name('international-cinema');
+
+    Route::get('cureted-section-2024', 'curetedsection2024')->name('cureted-section-2024');
 
     Route::get('international-cinema/competition/{slug}', 'internationalCompetitionDetail')->name('international-competition-detail');
 
@@ -44,6 +46,8 @@ Route::controller(CommonController::class)->group(function () {
     Route::get('media/news-and-update', 'newsUpdate')->name('news-and-update');
 
     Route::get('/gallery/date', 'getGalleryByDate')->name('gallery.byDate');
+
+    // Route::get('master-class/{id}', 'masterClass')->name('master-class');
 
     // Route::get('news-and-update',                 'newsUpdate1')->name('news-and-update');
 });
