@@ -1,12 +1,7 @@
 @extends('layouts.app')
 @section('content')
-    <!-- Header start-->
     @include('layouts.header')
-    <!-- Header end-->
-
-    <!-- Menu slide start-->
     @include('pages.navigation-slide')
-    <!-- Menu slide end -->
 
     <!-- Inner Page Banner Section -->
     <div class="container-fluid page-header bannerBg-news py-5">
@@ -25,12 +20,12 @@
                                 <img src="{{ asset('public/images/news-update/' . $newsUpdate->img_src) }}" alt="news image"
                                     class="img-fluid img-radius">
                             @else
-                                {{-- <img src="{{ asset('public/images/media/default-image.webp') }}" alt="default image" --}}
                                 <img src="{{ asset('public/images/news-update/default-image.webp') }}" alt="default image"
                                     class="img-fluid img-radius">
                             @endif
                         </p>
                     </div>
+
                     <div class="col-md-7 col-sm-6 col-12 mb-4">
                         <h3>{!! $newsUpdate->title !!}</h3>
                         <p class="mb-0">
@@ -72,9 +67,6 @@
                                                 ),
                                             ) !!}
                                         </div>
-
-
-
                                     </div>
                                     <!-- Modal footer -->
                                     <div class="modal-footer">
@@ -86,39 +78,6 @@
                         </div>
                     </div>
                 @endforeach
-                {{-- News Close After 3 month --}}
-                {{-- @foreach ($newsUpdates as $newsUpdate)
-                    @php
-                        $updatedAt = \Carbon\Carbon::parse($newsUpdate->updated_at);
-                        $sixMonthsAgo = \Carbon\Carbon::now()->subMonths(6);
-                    @endphp
-
-                    @if ($updatedAt->greaterThanOrEqualTo($sixMonthsAgo))
-                        <div class="col-md-5 col-sm-6 col-12 mb-4">
-                            <p class="newsupdatesView-block-img">
-                                <img src="{{ asset('public/images/news-update/' . $newsUpdate->img_src) }}"
-                                    alt="image" class="img-fluid img-radius">
-                            </p>
-
-                        </div>
-                        <div class="col-md-7 col-sm-6 col-12 mb-4">
-                            <h3>{!! $newsUpdate->title !!}</h3>
-                            <p class="mb-0">
-                                {!! $newsUpdate->description !!}
-                            </p>
-                            <p class="news-update-date">
-                                <a class="text-underline" style="font-weight: 600; text-decoration: underline;"
-                                    href="{{ $newsUpdate->link }}" target="_blank">
-                                    {{ $newsUpdate->link_title }}
-                                </a>
-                                <span>Date :- {{ $updatedAt->format('d F Y') }}</span>
-                            </p>
-                        </div>
-                    @else
-                        <p></p>
-                    @endif
-                @endforeach --}}
-                {{-- News Close After 3 month --}}
             </div>
         </div>
     </div>

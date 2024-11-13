@@ -201,9 +201,9 @@ class ApiController extends Controller
         try {
             if ($request->hasFile('img_src')) {
                 $file = $request->file('img_src');
-                $destinationPath = 'images/desktop-image';
+                $destinationPath = 'images/news-update';
                 $fileName = $file->getClientOriginalName();
-                $fullFilePath = public_path($destinationPath.'/'.$fileName);
+                $fullFilePath = public_path($destinationPath . '/' . $fileName);
                 if (File::exists($fullFilePath)) {
                     $response = [
                         'message' => 'File with the same name already exists.',
@@ -269,15 +269,14 @@ class ApiController extends Controller
             if ($newsUpdate) {
                 if ($request->hasFile('img_src')) {
                     $file = $request->file('img_src');
-                    $destinationPath = 'images/desktop-image';
+                    $destinationPath = 'images/news-update';
                     $fileName = $file->getClientOriginalName();
-                    $fullFilePath = public_path($destinationPath.'/'.$fileName);
+                    $fullFilePath = public_path($destinationPath . '/' . $fileName);
                     if (File::exists($fullFilePath)) {
                         $response = [
                             'message' => 'File with the same name already exists.',
                             'existing_file' => $fileName,
                         ];
-
                         return $this->response('conflict', $response);
                     }
                     $file->move(public_path($destinationPath), $fileName);
@@ -294,7 +293,6 @@ class ApiController extends Controller
                         'message' => 'Updated successfully.!',
                         'data' => $data,
                     ];
-
                     return $this->response('success', $response);
                 } else {
                     $data = [
@@ -372,7 +370,6 @@ class ApiController extends Controller
     }
 
     //FAQS
-
     public function faqsList()
     {
         try {
@@ -416,7 +413,7 @@ class ApiController extends Controller
                 $file = $request->file('img_src');
                 $destinationPath = 'images/desktop-image';
                 $fileName = $file->getClientOriginalName();
-                $fullFilePath = public_path($destinationPath.'/'.$fileName);
+                $fullFilePath = public_path($destinationPath . '/' . $fileName);
                 if (File::exists($fullFilePath)) {
                     $response = [
                         'message' => 'File with the same name already exists.',
@@ -501,7 +498,7 @@ class ApiController extends Controller
                     $destinationPath = 'images/desktop-image';
                     // $fileName = time() . '_' . $file->getClientOriginalName();
                     $fileName = $file->getClientOriginalName();
-                    $fullFilePath = public_path($destinationPath.'/'.$fileName);
+                    $fullFilePath = public_path($destinationPath . '/' . $fileName);
                     if (File::exists($fullFilePath)) {
                         $response = [
                             'message' => 'File with the same name already exists.',
