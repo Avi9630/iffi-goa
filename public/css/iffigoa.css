@@ -666,6 +666,12 @@ footer a:hover {
         url(../images/main-header/second_edition.jpg) center center no-repeat;
     background-size: cover;
 }
+.bannerBg-th_edition {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url(../images/main-header/55th-IFFI-Gala-Head-Banner.jpg) center center
+            no-repeat !important;
+    background-size: cover;
+}
 
 .bannerBg-Gallery-banner {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),

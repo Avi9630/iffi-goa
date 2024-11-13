@@ -41,7 +41,7 @@ class CommonController extends Controller
             )
             ->where([
                 'international_cinema.curated_section_id' => 1,
-                'year' => 2024
+                'year' => 2024,
             ])
             ->select(
                 'international_cinema.*',
@@ -61,7 +61,7 @@ class CommonController extends Controller
         $year = $request->input('year');
         $curatedSections = [
             1 => 'International Competition',
-            13 => 'Award Best Debut',
+            13 => 'Award For The Best Debut',
             4 => 'ICFT Unesco Medal',
             3 => 'Festival Kaleidoscope',
             14 => 'DocuMontage',
@@ -329,6 +329,7 @@ class CommonController extends Controller
     public function newsUpdate()
     {
         $newsUpdates = NewsUpdate::where('status', 1)->orderBy('id', 'DESC')->get();
+
         return view('media.news-and-update', ['newsUpdates' => $newsUpdates]);
     }
 

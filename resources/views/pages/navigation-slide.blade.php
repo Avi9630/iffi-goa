@@ -148,7 +148,7 @@
                                                             Award Best Debut
                                                         </a>
                                                     </li>
-                                                    <li>
+                                                    {{-- <li>
                                                         <a class="dropdown-item"
                                                             href="{{ route('cureted-section-2024', ['curated_section_id' => 4, 'year' => 2024]) }}">
                                                             ICFT Unesco Medal
@@ -201,7 +201,7 @@
                                                             href="{{ route('cureted-section-2024', ['curated_section_id' => 11, 'year' => 2024]) }}">
                                                             UNICEF
                                                         </a>
-                                                    </li>
+                                                    </li> --}}
 
 
                                                 </ul>
@@ -392,6 +392,10 @@
                                             <li>
                                                 <a href="{{ route('2nd-edition') }}" class="dropdown-item">2nd
                                                     Edition (54th IFFI)</a>
+                                            </li>
+                                            <li>
+                                                <a href="{{ route('3nd-edition') }}" class="dropdown-item">3nd
+                                                    Edition (55th IFFI)</a>
                                             </li>
                                         </ul>
                                     </li>
