@@ -31,8 +31,10 @@ class CommonController extends Controller
                 '=',
                 'international_curated_sections.id',
             )
-            ->where(['international_cinema.curated_section_id' => 1,
-                'year' => 2024])
+            ->where([
+                'international_cinema.curated_section_id' => 1,
+                'year' => 2024
+            ])
             ->select(
                 'international_cinema.*',
                 'international_curated_sections.title AS curated_section_title',
@@ -278,7 +280,6 @@ class CommonController extends Controller
     public function newsUpdate()
     {
         $newsUpdates = NewsUpdate::where('status', 1)->orderBy('id', 'DESC')->get();
-
         return view('media.news-and-update', ['newsUpdates' => $newsUpdates]);
     }
 
