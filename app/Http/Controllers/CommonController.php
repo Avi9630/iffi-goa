@@ -63,12 +63,20 @@ class CommonController extends Controller
             'icft-unesco-medal' => 4,
             'festival-kaleidoscope' => 3,
             'documontage' => 14,
-            'integrate' => 9,
-            'animation' => 8,
             'macabre-dreams' => 10,
             'cinema-world' => 15,
             'restored-classic' => 16,
             'unicef' => 11,
+            'from-the-festivals' => 3,
+            'experimental-films' => 9,
+            'rising-stars' => 17,
+            'mission-life' => 18,
+            'treaty-country-uk' => 19,
+            'country-focus-australia' => 20,
+            'accolades' => 21,
+            'from-the-consulate' => 22,
+            'opening-film' => 23,
+            'closing-film' => 24,
         ];
         //  echo '<pre>';
         // print_r($array);
@@ -79,16 +87,23 @@ class CommonController extends Controller
         $year = $request->input('year');
         $curatedSections = [
             1 => 'International Competition',
-            13 => 'Best Debut Feature Film of a Director',
+            3 => 'From The Festivals',
             4 => 'ICFT Unesco Medal',
-            3 => 'Festival Kaleidoscope',
-            14 => 'DocuMontage',
-            9 => 'Integrate',
-            8 => 'Animation',
+            9 => 'Experimental Films',
             10 => 'Macabre Dreams',
-            15 => 'Cinema World',
-            16 => 'Restored Classic',
             11 => 'UNICEF',
+            13 => 'Best Debut Feature Film of a Director',
+            14 => 'DocuMontage',
+            15 => 'Cinema of the World',
+            16 => 'Restored Classics',
+            17 => 'Rising Stars',
+            18 => 'Mission Life',
+            19 => 'Treaty Country-UK',
+            20 => 'Country Focus: Australia',
+            21 => 'Accolades',
+            22 => 'From The Consulate',
+            23 => 'Opening Film',
+            24 => 'Closing Film',
         ];
 
         $internationalCinemas = DB::table('international_cinema')
@@ -186,6 +201,7 @@ class CommonController extends Controller
             ->where('status', '=', '1')
             ->where('year', '=', $year)
             ->get();
+
         return $indianPanormas;
     }
 
