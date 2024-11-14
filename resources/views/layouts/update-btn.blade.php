@@ -79,7 +79,7 @@
                 </div>
                 <div class="modal-body">
                     @foreach ($latestUpdates as $latestUpdate)
-                        <a href={{ $latestUpdate->link }} target="_blank">
+                        <a href={{ $latestUpdate->link }} class="text-decoration-none" target="_blank">
                             <div class="update-heading text-center">
                                 {{-- <p>55th International Film Festival of India, Goa</p> --}}
                                 <p>20-28th November-2024</p>
