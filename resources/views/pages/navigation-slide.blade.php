@@ -277,7 +277,8 @@
                                             </li>
                                         </ul>
                                     </li>
-                                    <!-- Indian Panorama menu Start-->
+
+                                    <!-- Indian Panorama-2023 menu Start-->
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" role="button"
                                             data-bs-toggle="dropdown" aria-expanded="false">Indian
@@ -288,6 +289,7 @@
                                                 <a href="{{ route('about-indian-panorama') }}"
                                                     class="dropdown-item">About Indian Panorama</a>
                                             </li>
+
                                             <li class="nav-item dropend">
                                                 <a class="nav-link dropdown-toggle" href="#" role="button"
                                                     data-bs-toggle="dropdown" aria-expanded="false">
@@ -308,6 +310,7 @@
                                                     class="dropdown-item nav-link yelow-color-link"
                                                     target="_blank">View your entry</a>
                                             </li>
+
                                             <li>
                                                 <a href="{{ route('indian-panorama-rules-regulations') }}"
                                                     class="dropdown-item">Rules & Regulations</a>
@@ -334,6 +337,27 @@
                                             <li class="nav-item dropend">
                                                 <a class="nav-link dropdown-toggle" href="#" role="button"
                                                     data-bs-toggle="dropdown" aria-expanded="false">
+                                                    Indian Panorama IFFI 2024
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li>
+                                                        <a class="dropdown-item"
+                                                            href="{{ route('official-selection-feature', ['year' => 2024]) }}">
+                                                            Official Selection : Feature
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item"
+                                                            href="{{ route('official-selection-non-feature', ['year' => 2024]) }}">
+                                                            Official Selection : Non-Feature
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="nav-item dropend">
+                                                <a class="nav-link dropdown-toggle" href="#" role="button"
+                                                    data-bs-toggle="dropdown" aria-expanded="false">
                                                     Indian Cinema - IFFI 2023
                                                 </a>
                                                 <ul class="dropdown-menu">
@@ -348,9 +372,9 @@
                                                 </ul>
                                             </li>
 
-
                                         </ul>
                                     </li>
+
                                     <!-- Best Web Series menu Start-->
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" role="button"
