@@ -5,6 +5,7 @@
 /public/storage
 /public/images/news-update
 /public/images/cureted-section
+/public/images/thePeacock
 /storage/*.key
 /vendor
 .env
