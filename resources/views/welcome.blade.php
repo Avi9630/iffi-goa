@@ -69,10 +69,25 @@
     </section>
 
     <!-- Indian Panorama  Section-->
-    <section>
+    {{-- 54th --}}
+    {{-- <section>
         <div class="container mb-5">
             <div class="section-heading mb-4">
                 <p>A Kaleidoscope of Creativity and Culture of 54<sup>th</sup></p>
+                <h2>Indian Panorama</h2>
+            </div>
+            <div class="owl-carousel international">
+                @include('pages.indian-panorama', [
+                    'indianPanormas' => app(\App\Http\Controllers\CommonController::class)->indianPanorama(),
+                ])
+            </div>
+        </div>
+    </section> --}}
+    {{-- 55th --}}
+    <section>
+        <div class="container mb-5">
+            <div class="section-heading mb-4">
+                <p>A Kaleidoscope of Creativity and Culture of 55<sup>th</sup></p>
                 <h2>Indian Panorama</h2>
             </div>
             <div class="owl-carousel international">

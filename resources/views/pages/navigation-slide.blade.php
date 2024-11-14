@@ -391,16 +391,16 @@
                                             Carpet</a>
                                         <ul class="dropdown-menu">
                                             <li>
-                                                <a href="{{ route('1st-edition') }}" class="dropdown-item">
-                                                    1st Edition (53rd IFFI)</a>
+                                                <a href="{{ route('3rd-edition') }}" class="dropdown-item">3rd
+                                                    Edition (55th IFFI)</a>
                                             </li>
                                             <li>
                                                 <a href="{{ route('2nd-edition') }}" class="dropdown-item">2nd
                                                     Edition (54th IFFI)</a>
                                             </li>
                                             <li>
-                                                <a href="{{ route('3nd-edition') }}" class="dropdown-item">3nd
-                                                    Edition (55th IFFI)</a>
+                                                <a href="{{ route('1st-edition') }}" class="dropdown-item">
+                                                    1st Edition (53rd IFFI)</a>
                                             </li>
                                         </ul>
                                     </li>
