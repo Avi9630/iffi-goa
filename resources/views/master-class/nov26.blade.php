@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-md-2 col-12">
             <div class="master-time">
-                <h4 class="time-div">11:00 PM</h4>
+                <h4 class="time-div">11:00 AM</h4>
                 <h5 class="time-div">12:00 PM</h5>
             </div>
         </div>
