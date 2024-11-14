@@ -28,16 +28,15 @@
             <table id="example" class="table table-hover mt-3">
                 <tbody>
                     @foreach ($thepeacock as $value)
-                        @if (!empty($value->link))
-                            <tr>
-                                <td>
-                                    <p>{{ $value->title }}</p>
-                                </td>
-                                <td>
-                                    <a href="{{ $value->link }}" class="btn btn-primary" target="_blank">View</a>
-                                </td>
-                            </tr>
-                        @endif
+                        <tr>
+                            <td>
+                                <p>{{ $value->title }}</p>
+                            </td>
+                            <td class="text-end">
+                                <a href="{{ asset('public/images/thePeacock/' . $value->img_src) }}" class="btn btn-primary"
+                                    target="_blank">View</a>
+                            </td>
+                        </tr>
                     @endforeach
                 </tbody>
             </table>
@@ -47,7 +46,7 @@
         <div class="container">
             <nav aria-label="Page navigation pb-4">
                 <ul class="pagination overflow-hidden">
-                    {{ $thepeacock->withQueryString()->links() }}
+                    {{-- {{ $thepeacock->withQueryString()->links() }} --}}
                 </ul>
             </nav>
         </div>
