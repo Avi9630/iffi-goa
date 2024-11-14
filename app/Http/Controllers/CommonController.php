@@ -53,15 +53,33 @@ class CommonController extends Controller
         return $internationalCinemas;
     }
 
-    public function curetedsection2024(Request $request)
+    public function curetedsection2024(Request $request, $slug)
     {
-        // exit('tets');
-        $curatedSectionId = $request->input('curated_section_id');
+        //  exit($slug);
+
+        $array = [
+            'international-competition' => 1,
+            'best-debut-feature-film-of-a-director' => 13,
+            'icft-unesco-medal' => 4,
+            'festival-kaleidoscope' => 3,
+            'documontage' => 14,
+            'integrate' => 9,
+            'animation' => 8,
+            'macabre-dreams' => 10,
+            'cinema-world' => 15,
+            'restored-classic' => 16,
+            'unicef' => 11,
+        ];
+        //  echo '<pre>';
+        // print_r($array);
+        // print_r($slug);
+
+        $curatedSectionId = $array[$slug];
 
         $year = $request->input('year');
         $curatedSections = [
             1 => 'International Competition',
-            13 => 'Award For The Best Debut',
+            13 => 'Best Debut Feature Film of a Director',
             4 => 'ICFT Unesco Medal',
             3 => 'Festival Kaleidoscope',
             14 => 'DocuMontage',
@@ -90,6 +108,7 @@ class CommonController extends Controller
             )
             ->limit(20)
             ->get();
+        //   exit('sada');
 
         return view('international-cinema.2024.curated-section-2024', compact('internationalCinemas', 'curatedSections', 'curatedSectionId'));
     }
