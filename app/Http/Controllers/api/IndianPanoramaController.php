@@ -45,7 +45,7 @@ class IndianPanoramaController extends Controller
             'directed_by'           =>  'required',
             'country_of_origin'     =>  'required',
             'language'              =>  'required',
-            'img_src'               =>  'file|mimes:jpg,jpeg,png|max:2048',
+            'img_src'               =>  'file|mimes:jpg,jpeg,png|max:10240',
             'year'                  =>  'required',
             'created_by'            =>  '',
         ];
@@ -123,7 +123,7 @@ class IndianPanoramaController extends Controller
             'directed_by'           =>  '',
             'country_of_origin'     =>  '',
             'language'              =>  '',
-            'img_src'               =>  'file|mimes:jpg,jpeg,png|max:2048',
+            'img_src'               =>  'file|mimes:jpg,jpeg,png|max:10240',
             'year'                  =>  '',
         ];
 
