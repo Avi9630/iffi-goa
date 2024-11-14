@@ -181,7 +181,7 @@
     </div>
 </div>
 
-<div class="mt-4 mb-4">
+{{-- <div class="mt-4 mb-4">
     <h2 class="pb-3">November 21st, 2024</h2>
     <div class="row">
 
@@ -223,7 +223,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 
 <div class="mt-4 mb-4">
     <h2 class="pb-3">November 21st, 2024</h2>
@@ -238,7 +238,7 @@
 
         <div class="col-md-7 col-12">
             <div class="callout">
-                <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov21-5-trigger">
+                <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov21-4-trigger">
                     The Journey from Script to Screen: Writing for Film and Beyond
                 </h4>
                 <p>
