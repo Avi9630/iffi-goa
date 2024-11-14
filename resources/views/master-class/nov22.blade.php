@@ -66,10 +66,10 @@
                         <img src="{{ asset('public/images/master-class/Vidhu Vinod Chopra.jpg') }}" alt="image"
                             class="img-fluid">
                     </li>
-                    <li>
+                    {{-- <li>
                         <img src="{{ asset('public/images/master-class/Shantanu Moitra.jpg') }}" alt="image"
                             class="img-fluid">
-                    </li>
+                    </li> --}}
                 </ul>
             </div>
         </div>

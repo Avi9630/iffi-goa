@@ -128,10 +128,10 @@
                         <img src="{{ asset('public/images/master-class/Nithya Menen.jpg') }}" alt="image"
                             class="img-fluid">
                     </li>
-                    <li>
+                    {{-- <li>
                         <img src="{{ asset('public/images/master-class/Dhanya Varma.jpg') }}" alt="image"
                             class="img-fluid">
-                    </li>
+                    </li> --}}
                 </ul>
             </div>
         </div>
@@ -169,12 +169,10 @@
                         <img src="{{ asset('public/images/master-class/Manoj Bajpayee.jpg') }}" alt="image"
                             class="img-fluid">
                     </li>
-
-
-                    <li>
+                    {{-- <li>
                         <img src="{{ asset('public/images/master-class/Sudhir Srinivasan.jpg') }}" alt="image"
                             class="img-fluid">
-                    </li>
+                    </li> --}}
                 </ul>
             </div>
         </div>
