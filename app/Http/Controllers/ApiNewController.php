@@ -655,17 +655,15 @@ class ApiNewController extends Controller
 
     public function updateThePeacock(Request $request, $id)
     {
-
+        //  exit('Aditya');
         $payload = $request->all();
         try {
             // Validate the request data (fields are now optional)
             $validator = Validator::make($payload, [
                 'title' => 'nullable|string|max:255',
-                'img_src' => 'nullable|string|max:255', // Assuming image is a URL or file path
+                'img_src_file' => 'nullable', // Assuming image is a URL or file path
                 'year' => 'nullable',
                 'status' => 'nullable|in:0,1', // Assuming status can be 'active' or 'inactive'
-                'link' => 'nullable|string|max:255',
-                'publish_date' => 'nullable',  // 'status' is required, must be 1 or 0
             ]);
 
             if ($validator->fails()) {
@@ -678,42 +676,27 @@ class ApiNewController extends Controller
 
             }
             $thePeacock = ThePeacock::findOrFail($id);
-
-            // Handle image upload
+            $fileNameOriginal = $thePeacock->image_name;
+            $modifiedName = $thePeacock->img_src;
+            // Check if a new file is uploaded
             if ($request->hasFile('img_src_file')) {
                 $file = $request->file('img_src_file');
                 $destinationPath = 'images/thePeacock';
-                $fileName = $file->getClientOriginalName();
-                $fullFilePath = public_path("{$destinationPath}/{$fileName}");
-                $extension = strtolower($request->file('img_src_file')->getClientOriginalExtension());
-                $modifiedName = (rand(100000, 999999)).'_'.time().'.'.$extension;
-                // Move file to the destination and set image path in data
+                $fileNameOriginal = $file->getClientOriginalName();
+                $extension = strtolower($file->getClientOriginalExtension());
+                $modifiedName = rand(100000, 999999).'_'.time().'.'.$extension;
                 $file->move(public_path($destinationPath), $modifiedName);
-                $thePeacock->img_src = "{$modifiedName}";
-                $thePeacock->image_name = "{$fileName}";
+                $fileName = $modifiedName;
             }
 
             // Find the thePeacock by ID
 
             // Update the thePeacock with new data if provided
-            if (isset($validated['title'])) {
-                $thePeacock->title = $validated['title'];
-            }
-            if (isset($validated['image'])) {
-                $thePeacock->image = $validated['image'];
-            }
-            if (isset($validated['year'])) {
-                $thePeacock->year = $validated['year'];
-            }
-            if (isset($validated['status'])) {
-                $thePeacock->status = $validated['status'];
-            }
-            if (isset($validated['link'])) {
-                $thePeacock->link = $validated['link'];
-            }
-            if (isset($validated['publish_date'])) {
-                $thePeacock->publish_date = $validated['publish_date'];
-            }
+            $thePeacock->title = $payload['title'];
+            $thePeacock->year = $payload['year'];
+            $thePeacock->status = $payload['status'];
+            $thePeacock->image_name = $fileNameOriginal;
+            $thePeacock->img_src = $modifiedName;
 
             // Save the changes to the database
             $thePeacock->save();
@@ -781,11 +764,9 @@ class ApiNewController extends Controller
         // Validation rules
         $validatorArray = [
             'title' => 'required|string|max:255',
-            'img_src' => 'nullable|string|max:255',
+            'img_src_file' => 'nullable|mimes:pdf|max:10000',
             'year' => 'required|integer', // Ensure year is an integer
             'status' => 'required|in:0,1', // Assuming status can be 'active' or 'inactive'
-            'link' => 'required|string|max:255', // Corrected spelling here
-            'publish_date' => 'nullable|date',  // Corrected validation rule for date
         ];
 
         $validator = Validator::make($payload, $validatorArray);
@@ -808,22 +789,21 @@ class ApiNewController extends Controller
                 'title' => $payload['title'] ?? '',
                 'year' => isset($payload['year']) && $payload['year'] !== '' ? (int) $payload['year'] : null, // Handle year as integer or null
                 'status' => $payload['status'] ?? '0',
-                'link' => $payload['link'] ?? '',
-                'publish_date' => $formattedDate,
-                'img_src' => '',
+                // 'img_src' => '',
             ];
 
             // Handle image upload
             if ($request->hasFile('img_src_file')) {
                 $file = $request->file('img_src_file');
-                $destinationPath = 'images/gallery_images';
-                $extension = strtolower($file->getClientOriginalExtension());
-                $modifiedName = rand(100000, 999999).'_'.time().'.'.$extension;
-
+                $destinationPath = 'images/thePeacock';
+                $fileName = $file->getClientOriginalName();
+                $fullFilePath = public_path("{$destinationPath}/{$fileName}");
+                $extension = strtolower($request->file('img_src_file')->getClientOriginalExtension());
+                $modifiedName = (rand(100000, 999999)).'_'.time().'.'.$extension;
                 // Move file to the destination and set image path in data
                 $file->move(public_path($destinationPath), $modifiedName);
-                $data['img_src'] = $modifiedName;
-                $data['image_name'] = $file->getClientOriginalName();
+                $data['img_src'] = "{$modifiedName}";
+                $data['image_name'] = "{$fileName}";
             }
 
             // Create ThePeacock record
