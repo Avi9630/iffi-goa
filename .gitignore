@@ -5,7 +5,7 @@
 /public/storage
 /public/images/news-update
 /public/images/cureted-section
-# /public/images/indian-panorama-cinema
+/public/images/indian-panorama-cinema
 /public/images/thePeacock
 /storage/*.key
 /vendor
