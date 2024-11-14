@@ -1,11 +1,9 @@
 @extends('layouts.app')
-@section('site_title', '2nd Edition of 54th Iffi film festival')
+@section('site_title', '3rd Edition Gala Premier | IFFI Goa - Celebrating Excellence in Global Cinema')
 @section('site_description',
-    'Discover the Creative Minds of Tomorrow at IFFI, showcasing young Indian talent across 13
-    film crafts. Apply now to be part of this prestigious program.')
-@section('site_keywords',
-    'IFFI Goa rules, IFFI guidelines, Film Submission Rules, IFFI entry requirements, IFFI Goa
-    policies, Film Festival Regulations, Event Rules IFFI')
+    'Experience the 3rd Edition of the Gala Premier at IFFI Goa, showcasing the best of
+    international and Indian cinema. Join us for exclusive screenings, star-studded events, and celebrate cinematic
+    excellence in a vibrant festival atmosphere.')
 @section('content')
 
     <!-- Header start-->

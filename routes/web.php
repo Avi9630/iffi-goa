@@ -140,9 +140,9 @@ Route::get('gala-premier/2nd-edition', function () {
     return view('gala-premier.2nd-edition');
 })->name('2nd-edition');
 
-Route::get('gala-premier/3nd-edition', function () {
-    return view('gala-premier.3nd-edition');
-})->name('3nd-edition');
+Route::get('gala-premier/3rd-edition', function () {
+    return view('gala-premier.3rd-edition');
+})->name('3rd-edition');
 
 //CMOT
 Route::get('cmot/about-cmot', function () {
