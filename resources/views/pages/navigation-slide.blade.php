@@ -508,7 +508,10 @@
                                                             href="{{ route('the-peacock', ['year' => 2021]) }}">2021</a>
                                                     </li>
                                                     <li><a class="dropdown-item"
-                                                            href="{{ route('the-peacock', ['year' => 2020]) }}">2020</a>
+                                                            href="{{ route('the-peacock', ['year' => 2018]) }}">2018</a>
+                                                    </li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('the-peacock', ['year' => 2017]) }}">2017</a>
                                                     </li>
                                                 </ul>
                                             </li>
