@@ -67,10 +67,10 @@
         <div class="col-md-3 col-12">
             <div class="user-profile-icon">
                 <ul>
-                    <li>
+                    {{-- <li>
                         <img src="{{ asset('public/images/master-class/Kshitij Mehta.png') }}" alt="image"
                             class="img-fluid">
-                    </li>
+                    </li> --}}
                     <li>
                         <img src="{{ asset('public/images/master-class/Himesh Mankad.jpg') }}" alt="image"
                             class="img-fluid">
