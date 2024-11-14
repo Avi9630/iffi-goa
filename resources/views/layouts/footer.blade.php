@@ -140,6 +140,14 @@
             menu.classList.remove('nav-scrolled');
         }
     });
+    $(document).ready(function() {
+
+
+        $("#update_btn").modal("show");
+        setTimeout(() => {
+            $("#update_btn").modal("hide");
+        }, 10000);
+    });
 </script>
 
 </body>
