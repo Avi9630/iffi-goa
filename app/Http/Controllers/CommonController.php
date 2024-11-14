@@ -201,7 +201,6 @@ class CommonController extends Controller
             ->where('status', '=', '1')
             ->where('year', '=', $year)
             ->get();
-
         return $indianPanormas;
     }
 
