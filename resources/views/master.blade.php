@@ -403,7 +403,7 @@
                     // description: "In this session, the acclaimed filmmaker Vidhu Vinod Chopra takes us on a journey through the creative process, sharing his experiences, challenges, and the philosophy behind living through cinema.With decades of storytelling mastery,Mr. Chopra will bring us the insights into how films not only reflect life but become a living entity of their own, inspiring generations ",
                     speakers: [{
                         name: "Ranbir Kapoor",
-                        description: "Ranbir Kapoor is an Indian actor known for his work in Hindi-language films, making his acting debut with Bhansali\'s tragic romance Saawariya (2007) and rising to prominence with the coming-of-age film Wake Up Sid, the romantic comedy Ajab Prem Ki Ghazab Kahani, and the political drama Raajneeti (2010); his performances as a troubled musician in Rockstar and a cheerful deaf-and-mute man in Barfi! earned him two consecutive Filmfare Awards for Best Actor, while the romantic comedy Yeh Jawaani Hai Deewani (2013) further established him as a star, despite a series of commercial failures, with Ae Dil Hai Mushkil (2016) and Sanju (2018) being notable exceptions.",
+                        description: "Ranbir Kapoor is an Indian actor known for his work in Hindi-language films. He is one of the highest-paid actors of Hindi cinema and has featured in Forbes India's Celebrity 100 list since 2012. He made his acting debut with Sanjay Leela Bhansali's tragic romance Saawariya and rose to prominence with the coming-of-age film Wake Up Sid, the romantic comedy Ajab Prem Ki Ghazab Kahani, and the political drama Raajneeti. Kapoor's performances as a troubled musician in Rockstar and a cheerful deaf-and-mute man in Barfi! earned him two consecutive Filmfare Awards for Best Actor.",
                         image: "{{ asset('public/images/master-class/Ranbir Kapoor.jpg') }}"
                     }]
                 },
@@ -462,19 +462,20 @@
             },
             {
                 title: "Empowering Change: Women Leading the Way in Cinema",
-                moderator: "",
+                moderator: "Rudrani Chattoraj",
                 panel: "In Conversation",
                 date: "Nov-25th, 2024, 06.15 PM TO 07.00 PM",
                 speakers: [{
                         name: "Kriti Sanon",
                         description: "Kriti Sanon is an Indian actress who works in Hindi and Telugu-language films. Sanon briefly worked as a fashion model. She began her acting career by playing the leading lady in the 2014 action films 1: Nenokkadine and Heropanti, romantic comedies Bareilly Ki Barfi (2017) and Luka Chuppi (2019), and her highest-grossing releases came with Dilwale (2015) and Housefull 4 (2019).She won the National Film Award and the Filmfare Award for Best Actress for playing the title role of a surrogate mother in the comedy-drama Mimi (2021).",
                         image: "{{ asset('public/images/master-class/Kriti Sanon.jpg') }}"
-                    },
-                    {
-                        name: "Rudrani Chattoraj",
-                        description: "Rudrani Chattoraj  is a well-known journalist and Anchor , who is known for insightful and authentic conversations . She has recently been honored with the prestigious ‘Dadasaheb Phalke Film Foundation Award’ and the ‘Maharashtra Gaurav Puraskar’ for her impactful contribution in the fields of entertainment and journalism . She has conducted interviews of the who’s and who of the film industries ( globally ) , and engaged in meaningful conversations around cinema and their personal film journeys , for more than a decade . Right now is leading the entertainment news content for ZoomTV which is a part of Times Network . She also writes thought-provoking opinion pieces on various topics and actively voices her opinions on social media and stands up for what she believes in.",
-                        image: "{{ asset('public/images/master-class/Rudrani Chattoraj.jpg') }}"
                     }
+                    // ,
+                    // {
+                    //     name: "Rudrani Chattoraj",
+                    //     description: "Rudrani Chattoraj  is a well-known journalist and Anchor , who is known for insightful and authentic conversations . She has recently been honored with the prestigious ‘Dadasaheb Phalke Film Foundation Award’ and the ‘Maharashtra Gaurav Puraskar’ for her impactful contribution in the fields of entertainment and journalism . She has conducted interviews of the who’s and who of the film industries ( globally ) , and engaged in meaningful conversations around cinema and their personal film journeys , for more than a decade . Right now is leading the entertainment news content for ZoomTV which is a part of Times Network . She also writes thought-provoking opinion pieces on various topics and actively voices her opinions on social media and stands up for what she believes in.",
+                    //     image: "{{ asset('public/images/master-class/Rudrani Chattoraj.jpg') }}"
+                    // }
                 ]
             }
         ],
@@ -655,13 +656,13 @@
                     // Populate the speaker list item
                     li.innerHTML =
                         `
-                                                                                                                                                                                                                                                                                                                                                                            <div class="ms-2 me-auto">
-                                                                                                                                                                                                                                                                                                                                                                                <div class="fw-bold">${speaker.name}</div>
-                                                                                                                                                                                                                                                                                                                                                                            </div>
-                                                                                                                                                                                                                                                                                                                                                                            <span>
-                                                                                                                                                                                                                                                                                                                                                                                <img src="${speaker.image}" class="img-circle" alt="${speaker.name}">
-                                                                                                                                                                                                                                                                                                                                                                            </span>
-                                                                                                                                                                                                                                                                                                                                                                        `;
+                                                                                                                                                                                                                                                                                                                                                                                                <div class="ms-2 me-auto">
+                                                                                                                                                                                                                                                                                                                                                                                                    <div class="fw-bold">${speaker.name}</div>
+                                                                                                                                                                                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                                                                                                                                                                                                <span>
+                                                                                                                                                                                                                                                                                                                                                                                                    <img src="${speaker.image}" class="img-circle" alt="${speaker.name}">
+                                                                                                                                                                                                                                                                                                                                                                                                </span>
+                                                                                                                                                                                                                                                                                                                                                                                            `;
                         speakersList.appendChild(li);
                     });
                 }
