@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\api\IndianPanoramaController;
 use App\Http\Controllers\ApiController;
 use App\Http\Controllers\ApiNewController;
 use App\Models\Ticker;
@@ -32,30 +33,30 @@ Route::post('update-news-update', [ApiController::class, 'updateNewsUpdate'])->n
 Route::post('delete-news-update', [ApiController::class, 'deleteNewsUpdate'])->name('delete-news-update');
 
 //faqs
-Route::get('faqs-list', [ApiController::class, 'faqsList'])->name('faqs-list');
-Route::post('create-faqs', [ApiController::class, 'createFaqs'])->name('create-faqs');
-Route::post('update-faqs', [ApiController::class, 'updateFaqs'])->name('update-faqs');
-Route::post('delete-faqs', [ApiController::class, 'deleteFaqs'])->name('delete-faqs');
+Route::get('faqs-list',             [ApiController::class, 'faqsList'])->name('faqs-list');
+Route::post('create-faqs',          [ApiController::class, 'createFaqs'])->name('create-faqs');
+Route::post('update-faqs',          [ApiController::class, 'updateFaqs'])->name('update-faqs');
+Route::post('delete-faqs',          [ApiController::class, 'deleteFaqs'])->name('delete-faqs');
 
 // Abhishek's API .. dont delete
 // News & Update
-Route::post('news-update/{id}', [ApiNewController::class, 'updateNewsUpdate'])->name('update-news');
-Route::get('news-details/{id}', [ApiNewController::class, 'newsUpdateDetails'])->name('details-news');
-Route::post('news-create', [ApiNewController::class, 'createNewsUpdate'])->name('create-news');
+Route::post('news-update/{id}',             [ApiNewController::class, 'updateNewsUpdate'])->name('update-news');
+Route::get('news-details/{id}',             [ApiNewController::class, 'newsUpdateDetails'])->name('details-news');
+Route::post('news-create',                  [ApiNewController::class, 'createNewsUpdate'])->name('create-news');
 
 // Ticker
-Route::get('list-ticker', [ApiNewController::class, 'tickerList'])->name('list-ticker');
-Route::post('ticker-update/{id}', [ApiNewController::class, 'updateTicker'])->name('update-ticker');
-Route::get('ticker-details/{id}', [ApiNewController::class, 'tickerDetails'])->name('ticker-details');
-Route::post('ticker-create', [ApiNewController::class, 'tickerCreate'])->name('ticker-create');
-Route::delete('ticker-delete/{id}', [ApiNewController::class, 'tickerDelete'])->name('ticker-delete');
+Route::get('list-ticker',                   [ApiNewController::class, 'tickerList'])->name('list-ticker');
+Route::post('ticker-update/{id}',           [ApiNewController::class, 'updateTicker'])->name('update-ticker');
+Route::get('ticker-details/{id}',           [ApiNewController::class, 'tickerDetails'])->name('ticker-details');
+Route::post('ticker-create',                [ApiNewController::class, 'tickerCreate'])->name('ticker-create');
+Route::delete('ticker-delete/{id}',         [ApiNewController::class, 'tickerDelete'])->name('ticker-delete');
 
 // LatestUpdate
-Route::get('latest-Update', [ApiNewController::class, 'latestUpdate'])->name('list-LatestUpdate');
-Route::post('latest-Update/{id}', [ApiNewController::class, 'updatelatestUpdate'])->name('latest-Update');
-Route::get('latestUpdate-details/{id}', [ApiNewController::class, 'latestUpdateDetails'])->name('latestUpdate-details');
-Route::post('latestUpdate-create', [ApiNewController::class, 'latestUpdateCreate'])->name('latestUpdate-create');
-Route::delete('latestUpdate-delete/{id}', [ApiNewController::class, 'latestUpdateDelete'])->name('latestUpdate-delete');
+Route::get('latest-Update',                 [ApiNewController::class, 'latestUpdate'])->name('list-LatestUpdate');
+Route::post('latest-Update/{id}',           [ApiNewController::class, 'updatelatestUpdate'])->name('latest-Update');
+Route::get('latestUpdate-details/{id}',     [ApiNewController::class, 'latestUpdateDetails'])->name('latestUpdate-details');
+Route::post('latestUpdate-create',          [ApiNewController::class, 'latestUpdateCreate'])->name('latestUpdate-create');
+Route::delete('latestUpdate-delete/{id}',   [ApiNewController::class, 'latestUpdateDelete'])->name('latestUpdate-delete');
 
 // PressRelese
 Route::get('press-relese-list', [ApiNewController::class, 'pressReleseList'])->name('press-relese-list');
@@ -81,8 +82,16 @@ Route::post('master_classes_create', [ApiNewController::class, 'createMasterClas
 // Route::delete('master_classes_delete/{id}', [ApiNewController::class, 'master_classes Delete'])->name('master_classes -delete');
 
 // Cureted Section 2024
-Route::get('get-CuretedSection2024', [ApiNewController::class, 'CuretedSection2024'])->name('get-CuretedSection2024');
-Route::post('update-curetedsection2024/{id}', [ApiNewController::class, 'updateCuretedsection2024'])->name('update-curetedsection2024');
-Route::post('create-Curetedsection2024', [ApiNewController::class, 'createCuretedsection2024'])->name('create-Curetedsection2024');
-Route::get('get-curetedsection2024-ById/{id}', [ApiNewController::class, 'curetedsection2024ById'])->name('get-curetedsection2024-ById');
-Route::get('get-CuretedSection2024', [ApiNewController::class, 'CuretedSection2024'])->name('get-CuretedSection2024');
+Route::get('get-CuretedSection2024',            [ApiNewController::class, 'CuretedSection2024'])->name('get-CuretedSection2024');
+Route::post('update-curetedsection2024/{id}',   [ApiNewController::class, 'updateCuretedsection2024'])->name('update-curetedsection2024');
+Route::post('create-Curetedsection2024',        [ApiNewController::class, 'createCuretedsection2024'])->name('create-Curetedsection2024');
+Route::get('get-curetedsection2024-ById/{id}',  [ApiNewController::class, 'curetedsection2024ById'])->name('get-curetedsection2024-ById');
+Route::get('get-CuretedSection2024',            [ApiNewController::class, 'CuretedSection2024'])->name('get-CuretedSection2024');
+
+
+// Indian Panorama
+
+Route::get('indian-panorama-list/{year}',   [IndianPanoramaController::class, 'indianPanoramaList'])->name('indian-panorama-list');
+Route::post('create-indian-panorama',       [IndianPanoramaController::class, 'createIndianPanorama'])->name('create-indian-panorama');
+Route::post('update-indian-panorama',       [IndianPanoramaController::class, 'updateIndianPanorama'])->name('update-indian-panorama');
+Route::post('delete-indian-panorama',       [IndianPanoramaController::class, 'deleteIndianPanorama'])->name('delete-indian-panorama');
