@@ -13,11 +13,11 @@
                     Laser for Post Production and Evolution to HDR
                 </h4>
                 <p>
-                    As technology continues to revolutionize the filmmaking process, Anton Muller, Strategic Director at
-                    Barco Cinema, will take us on a journey through the cutting-edge advancements in laser projection
-                    and the evolution to High Dynamic Range (HDR) in this session. He will dig into how these
-                    technologies enhance image quality, creating sharper and more immersive cinematic experiences,
-                    reshaping the future of post production workflows.
+                    As technology continues to revolutionize the filmmaking process, Anthon Muller, Global Director of
+                    Strategic Marketing at Barco Cinema, will take us on a journey through the cutting-edge advancements
+                    in laser projection and the evolution to High Dynamic Range (HDR) in this session. He will dig into
+                    how these technologies enhance image quality, creating sharper and more immersive cinematic
+                    experiences, reshaping the future of post production workflows.
                 </p>
             </div>
         </div>
@@ -64,10 +64,10 @@
                         <img src="{{ asset('public/images/master-class/Manisha Koirala.jpg') }}" alt="image"
                             class="img-fluid">
                     </li>
-                    <li>
+                    {{-- <li>
                         <img src="{{ asset('public/images/master-class/Vikramaditya Motwane.jpg') }}" alt="image"
                             class="img-fluid">
-                    </li>
+                    </li> --}}
                 </ul>
             </div>
         </div>
@@ -110,7 +110,6 @@
         </div>
     </div>
 </div>
-
 
 <div class="mt-4 mb-4">
     <h2 class="pb-3">November 24th, 2024</h2>

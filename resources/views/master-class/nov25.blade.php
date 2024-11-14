@@ -84,10 +84,11 @@
                     Empowering Change: Women Leading the Way in Cinema
                 </h4>
                 <p>
-                    A conversation on how Kriti sees her role and influence as a woman in today's film industry, the
-                    rise of strong female protagonists, and how streaming platforms are creating more opportunities for
-                    diverse female-led stories. She will also discuss her commitment to selecting roles that inspire and
-                    resonate with women and how she dawns the many hats of an actor, producer and entrepreneur.
+                    A conversation on how Kriti Sanon sees her role and influence as a woman in today's film industry,
+                    the rise of strong female protagonists, and how streaming platforms such as Netflix are creating
+                    more opportunities to bring authentic and diverse stories. She will also discuss her commitment to
+                    selecting roles that inspire and resonate with women and how she dawns the many hats of an actor,
+                    producer, and entrepreneur.
                 </p>
             </div>
         </div>
