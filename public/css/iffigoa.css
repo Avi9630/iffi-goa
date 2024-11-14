@@ -1580,3 +1580,12 @@ footer a:hover {
         bottom: 17vh;
     }
 }
+
+@media screen and (min-width: 320px) and (max-width: 900px) {
+    #myTabD {
+        display: inline-flex !important;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+    }
+}
