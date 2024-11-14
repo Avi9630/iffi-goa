@@ -92,7 +92,7 @@
             </div>
             <div class="owl-carousel international">
                 @include('pages.indian-panorama', [
-                    'indianPanormas' => app(\App\Http\Controllers\CommonController::class)->indianPanorama('2023'),
+                    'indianPanormas' => app(\App\Http\Controllers\CommonController::class)->indianPanorama('2024'),
                 ])
             </div>
         </div>
