@@ -257,7 +257,6 @@
                             class="img-fluid">
                     </li>
 
-
                     <li>
                         <img src="{{ asset('public/images/master-class/Anant Vijay.jpg') }}" alt="image"
                             class="img-fluid">
