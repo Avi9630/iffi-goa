@@ -9,5 +9,9 @@
                 'sponsors' => app(\App\Http\Controllers\CommonController::class)->sponsors(),
             ])
         </div>
+        <div class="all-sponstr text-center m-3">
+            <a href="{{ asset('public/images/sponsor/IFFI-55-Sponsers-Page.pdf') }}" class="btn cus-prim-btn text-center"
+                target="_blank">View All</a>
+        </div>
     </div>
 </div>

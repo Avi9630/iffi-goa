@@ -65,6 +65,11 @@
                                         <a href="{{ route('faq') }}" class="nav-link">FAQ's</a>
                                     </li>
 
+                                    <li class="nav-item">
+                                        <a href="{{ asset('public/images/sponsor/IFFI-55-Sponsers-Page.pdf') }}"
+                                            class="nav-link" target="_blank">Our Sponsors & Partners</a>
+                                    </li>
+
                                     {{-- <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" role="button"
                                             data-bs-toggle="dropdown" aria-expanded="false">Best Of IFFI</a>
