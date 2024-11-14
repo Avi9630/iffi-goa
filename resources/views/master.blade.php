@@ -95,9 +95,9 @@
     <!-- Speakers Popup End -->
 
     {{-- Script Start --}}
+
     <script>
         const modalData = {
-
             // 20 November Modal Data Start
             nov20: [{}],
             // 20 November Modal Data End
@@ -114,9 +114,9 @@
                             image: "{{ asset('public/images/master-class/Imtiaz Ali.jpg') }}"
                         },
                         {
-                            name: "Suhasini Manirathnam",
-                            description: "Suhasini Maniratnam is an Indian actress who works in Telugu, Tamil, Malayalam and Kannada films. Suhasini made her film debut in 1980 with the Tamil movie Nenjathai Killathe. For her first movie, she won the Tamil Nadu State Film Award for Best Actress. She was introduced to Malayalam cinema through Padmarajan's 'Koodevide'. She won the National Film Award for Best Actress for her role in the Tamil film ‘Sindhu Bhairavi’. Suhasini directed the anthology mini-series ‘Penn’ shown on Madras Doordarshan. Suhasini and her husband Mani Ratnam have been involved in the running of their production company Madras Talkies.",
-                            image: "{{ asset('public/images/master-class/Suhasini Maniratnam.jpg') }}"
+                            "name": "Suhasini Manirathnam",
+                            "description": "Suhasini Maniratnam is an Indian actress who works in Telugu, Tamil, Malayalam, and Kannada films. Suhasini made her film debut in 1980 with the Tamil movie Nenjathai Killathe. For her first movie, she won the Tamil Nadu State Film Award for Best Actress. She was introduced to Malayalam cinema through Padmarajan's 'Koodevide'. She won the National Film Award for Best Actress for her role in the Tamil film ‘Sindhu Bhairavi’. Suhasini directed the anthology mini-series ‘Penn’ shown on Madras Doordarshan. Suhasini and her husband Mani Ratnam have been involved in the running of their production company Madras Talkies.",
+                            "image": "{{ asset('public/images/master-class/Suhasini Maniratnam.jpg') }}"
                         },
                         {
                             name: "Kushboo Sundar",
@@ -280,12 +280,12 @@
                     // description: "This session brings together renowned sound designers Nakul Kamte and Eric Hoehn, who will explore the power of sound design in shaping the emotional and narrative depth of films. From subtle  ambient layers to impactful soundscapes, they will share their craft in building the aural  dimension that completes the cinematic experience.",
                     speakers: [{
                             name: "Mani Ratnam",
-                            description: "Mani Ratnam, a synonym for cinematic brilliance, is a renowned Indian film director, producer, and screenwriter. His illustrious career spans multiple languages, including Tamil, Hindi, Telugu, Malayalam, and Kannada. Recognized as one of India's most acclaimed and commercially successful filmmakers, his contributions to the world of cinema have earned him numerous accolades, including seven National Film Awards and the prestigious Padma Shri.",
+                            description: "Mani Ratnam, a synonym for cinematic brilliance, is a renowned Indian film director, producer, and screenwriter. His illustrious career spans multiple languages, including Tamil, Hindi, Telugu, Malayalam, and Kannada. Recognized as one of India's most acclaimed and commercially successful filmmakers, his contributions to the world of cinema have earned him numerous accolades, including seven National Film Awards and the prestigious Padma Shri. Renowned for his unique storytelling, captivating visuals, and powerful music, he has consistently pushed the boundaries of Indian cinema. His filmography includes Roja, Bombay, Dil Se.., Iruvar, Kannathil Muthamittal, AlaiPayuthey, Guru, Raavan, OK Kanmani, Kaatru Veliyidai, and Ponniyin Selvan Part 1 & 2.",
                             image: "{{ asset('public/images/master-class/Mani Ratnam.jpg') }}"
                         },
                         {
                             name: "Gautham Vasudev Menon ",
-                            description: "Gautham Vasudev Menon is an Indian film director, screenwriter, film producer and actor who predominantly works in Tamil film industry. He has also directed Telugu and Hindi films that are either simultaneously shot with or remakes of his own Tamil films. He has won two National Film Awards, three Nandi Awards and one Tamil Nadu State Film Award. Many of his films have been both critically acclaimed and commercially successful, most notably his romantic films Minnale (2001), Vaaranam Aayiram (2008), Vinnaithaandi Varuvaayaa (2010), his cop action thrillers Kaakha Kaakha (2003), Vettaiyaadu Vilaiyaadu (2006), Yennai Arindhaal (2015) and his gangster drama Vendhu Thanindhathu Kaadu (2022). His 2008 Tamil film, ‘Vaaranam Aayiram’ won the National Film Award for Best Feature Film in Tamil. Menon produces films through his film production company named Photon Kathaas. His production Thanga Meengal (2013) won the National Film Award for Best Feature Film in Tamil.The 2010 romantic blockbuster Vinnaithaandi Varuvaayaa, was re-released and it completed its 1000th day in theaters.",
+                            description: "Gautham Vasudev Menon is an Indian film director, screenwriter, film producer and actor who predominantly works in Tamil film industry. He has also directed Telugu and Hindi films that are either simultaneously shot with or remakes of his own Tamil films. He has won two National Film Awards, three Nandi Awards and one Tamil Nadu State Film Award. Many of his films have been both critically acclaimed and commercially successful, most notably his romantic films Minnale (2001), Vaaranam Aayiram (2008), Vinnaithaandi Varuvaayaa (2010), his cop action thrillers Kaakha Kaakha (2003), Vettaiyaadu Vilaiyaadu (2006), Yennai Arindhaal (2015) and his gangster drama Vendhu Thanindhathu Kaadu (2022). His 2008 Tamil film, ‘Vaaranam Aayiram’ won the National Film Award for Best Feature Film in Tamil. Menon produces films through his film production company named Photon Kathaas. His production Thanga Meengal (2013) won the National Film Award for Best Feature Film in Tamil.The 2010 romantic blockbuster Vinnaithaandi Varuvaayaa, was re-released and it completed its 1000th day in theaters recentrly.",
                             image: "{{ asset('public/images/master-class/Gautham Vasudev Menon.jpg') }}"
                         }
                     ]
@@ -310,7 +310,7 @@
                     title: "Stories that Travel",
                     moderator: "Bobby Bedi",
                     panel: "Panel Discussion",
-                    date: "Nov-23rd, 2024, 12.30 AM TO 01.30 PM",
+                    date: "Nov-23rd, 2024, 12.30 PM TO 01.30 PM",
                     // description: "In this session, the acclaimed filmmaker Vidhu Vinod Chopra takes us on a journey through the creative process, sharing his experiences, challenges, and the philosophy behind living through cinema.With decades of storytelling mastery,Mr. Chopra will bring us the insights into how films not only reflect life but become a living entity of their own, inspiring generations ",
                     speakers: [{
                             name: "Farrukh Dhondy",
@@ -329,7 +329,7 @@
                         },
                         {
                             name: "Vani Tripathi Tikoo",
-                            description: "Vani Tripathi Tikoo, a renowned actor and producer, is a Central Board of Film Certification (CBFC) member with credits in 50 plays, 40+ TV serials, and six films, having worked with notable playwrights like Anton Chekov and Arthur Miller. She founded Madhya Pradesh Natya Vidyalaya, India's first state-run drama school, and her recent book 'Why Can't Elephants Be Red?' has received global acclaim.",
+                            description: "Vani Tripathi Tikoo, an Actor and a producer by profession is one of the youngest ever member of the Central Board of Film certification popularly known as 'censor board'. She's been a socio-political activist and her campaigns and outreach programmes have focused on encouraging women's participation in politics and bringing the youth to a universal platform that addresses issues including education, empowerment and employment. She has been closely involved in theatre, films and television, having worked in projects in India as well as abroad. As an actor, she has about 50 plays, 40-odd TV serials and six films to her credit. She has worked in plays by legends like Anton Chekov, Peter Shaffer, Arthur Miller, Tennessee Williams and several Indian playwrights. After graduating in political science from the Delhi University, she went to the Living theatre academy of drama and learnt acting under the guidance of the legendary theatre guru Ebrahim Alkazi. Her close links with theatre further manifesting in her founding country's first state run drama school in bhopal– MADHYA PRADESH NATYA VIDYALAYA – in Madhya Pradesh in 2011.An extremely talented individual, Vani was also attached to journalism and broadcasting in India – she continues to contribute to Indian newspapers from time to time. She currently writes on issues related to broadcasting and content creation and was a part of the Core steering committee for the International Film festival of India,goa(IFFI) since the past eight years.She represented India as a focus country at the Cannes film festival 2022 with the likes of AR RAHMAN, SHEKHAR KAPUR, NAWAZUDDIN SIDDIQUI and the Union minister for information and broadcasting Shri Anurag Singh thakur.And she recently authored her first book 'Why can't elephants be red?' which is making waves globally.",
                             image: "{{ asset('public/images/master-class/Vani Tripathi Tikoo.jpg') }}"
                         },
                         {
@@ -372,19 +372,17 @@
                     moderator: "",
                     panel: "Master Class",
                     date: "Nov-24th, 2024, 11.00 AM TO 12.30 PM",
-                    // description: "This centenary special celebrates the legendary actor & producer Akkineni Nageswara Rao (ANR).",
                     speakers: [{
-                        name: "Anthon Muller, Strategic Director, Barco Cinema",
+                        name: "Anthon Muller, Strategic Director - Barco Cinema",
                         description: "With over 20 years of experience in strategic marketing, product development, and digital innovation, Anthon Muller is a senior executive from Belgium known for leading high-performing teams across industries such as telecommunications, media, technology, cloud, and IoT. He is currently serving as the Global Director of Strategic Marketing: Post Production, Services & Innovation at Barco.",
                         image: "{{ asset('public/images/master-class/Anthon Muller.jpg') }}"
                     }]
                 },
                 {
                     title: "From Big Screen to Streaming",
-                    moderator: "Rahul Rawail",
-                    panel: "InConversation",
-                    date: "Nov-24th, 2024, 12.45 AM TO 01.30 PM",
-                    // description: "In this session, the acclaimed filmmaker Vidhu Vinod Chopra takes us on a journey through the creative process, sharing his experiences, challenges, and the philosophy behind living through cinema.With decades of storytelling mastery,Mr. Chopra will bring us the insights into how films not only reflect life but become a living entity of their own, inspiring generations ",
+                    moderator: "",
+                    panel: "In Conversation",
+                    date: "Nov-24th, 2024, 12.45 PM TO 01.30 PM",
                     speakers: [{
                             name: "Manisha Koirala",
                             description: "Manisha Koirala is an actress who works in Indian films, predominantly in Hindi and Tamil. Known for her work in both commercial and independent cinema, she is the recipient of several accolades, including three Filmfare Awards and one Filmfare Awards South. In 2001, the Government of Nepal awarded her with the Order of Gorkha Dakshina Bahu. Later, she featured in the Netflix production 'Lust Stories' and portrayed Nargis in Sanju. She has since starred in the period drama series Heeramandi.",
@@ -392,7 +390,7 @@
                         },
                         {
                             name: "Vikramaditya Motwane",
-                            description: "Manisha Koirala is an actress who works in Indian films, predominantly in Hindi and Tamil. Known for her work in both commercial and independent cinema, she is the recipient of several accolades, including three Filmfare Awards and one Filmfare Awards South. In 2001, the Government of Nepal awarded her with the Order of Gorkha Dakshina Bahu. Later, she featured in the Netflix production 'Lust Stories' and portrayed Nargis in Sanju. She has since starred in the period drama series Heeramandi.",
+                            description: "Vikramaditya Motwane is an Indian film director, producer and screenwriter who works in Hindi cinema. He is known for films like Udaan, Lootera, Trapped, and Bhavesh Joshi Superhero.His directorial debut Udaan was selected to compete in the Un Certain Regard category at the 2010 Cannes Film Festival and also won seven Filmfare awards. Motwane is the creator of Netflix's first Indian series Sacred Games.",
                             image: "{{ asset('public/images/master-class/Vikramaditya Motwane.jpg') }}"
                         }
                     ]
@@ -401,11 +399,11 @@
                     title: "Centenary Special: Celebrating the Life and Works of Raj Kapoor - 'The Greatest Showman'",
                     moderator: "Rahul Rawail",
                     panel: "In Conversation",
-                    date: "Nov-24th, 2024, 02.30 AM TO 04.00 PM",
+                    date: "Nov-24th, 2024, 02.30 PM TO 04.00 PM",
                     // description: "In this session, the acclaimed filmmaker Vidhu Vinod Chopra takes us on a journey through the creative process, sharing his experiences, challenges, and the philosophy behind living through cinema.With decades of storytelling mastery,Mr. Chopra will bring us the insights into how films not only reflect life but become a living entity of their own, inspiring generations ",
                     speakers: [{
                         name: "Ranbir Kapoor",
-                        description: "Ranbir Kapoor is an Indian actor known for his work in Hindi-language films, making his acting debut with Bhansali's tragic romance Saawariya (2007) and rising to prominence with the coming-of-age film Wake Up Sid, the romantic comedy Ajab Prem Ki Ghazab Kahani, and the political drama Raajneeti (2010); his performances as a troubled musician in Rockstar and a cheerful deaf-and-mute man in Barfi! earned him two consecutive Filmfare Awards for Best Actor, while the romantic comedy Yeh Jawaani Hai Deewani (2013) further established him as a star, despite a series of commercial failures, with Ae Dil Hai Mushkil (2016) and Sanju (2018) being notable exceptions.",
+                        description: "Ranbir Kapoor is an Indian actor known for his work in Hindi-language films, making his acting debut with Bhansali\'s tragic romance Saawariya (2007) and rising to prominence with the coming-of-age film Wake Up Sid, the romantic comedy Ajab Prem Ki Ghazab Kahani, and the political drama Raajneeti (2010); his performances as a troubled musician in Rockstar and a cheerful deaf-and-mute man in Barfi! earned him two consecutive Filmfare Awards for Best Actor, while the romantic comedy Yeh Jawaani Hai Deewani (2013) further established him as a star, despite a series of commercial failures, with Ae Dil Hai Mushkil (2016) and Sanju (2018) being notable exceptions.",
                         image: "{{ asset('public/images/master-class/Ranbir Kapoor.jpg') }}"
                     }]
                 },
@@ -414,10 +412,9 @@
                     moderator: "Dr. Makrand Paranjapae",
                     panel: "Panel Discussion",
                     date: "Nov-24th, 2024, 04.30 PM TO 06.00 PM",
-                    // description: "This session brings together renowned sound designers Nakul Kamte and Eric Hoehn, who will explore the power of sound design in shaping the emotional and narrative depth of films. From subtle  ambient layers to impactful soundscapes, they will share their craft in building the aural  dimension that completes the cinematic experience.",
                     speakers: [{
                             name: "Dr. Sacchidanad Joshi",
-                            description: "Dr. Sachchidanand Joshi is the Member Secretary and Executive and Academic Head of the Indira Gandhi National Centre for the Arts (IGNCA) and a noted writer, poet, and actor, who has published extensively on topics including media, communication, history, culture, education, and policy; he notably edited speeches of Prime Minister Shri Narendra Modi for the Publication Division and co-edited Connecting through Culture: An Overview of India`s Soft Power Strengths with Dr. Vinay Sahastrabuddhe, and his recent publications include Sachchidanand Joshi ki Lokpriya Kahaniya (2017), Putrikameshti (2021), and Low Hanging Fruits (2024), along with four collections of short stories and three poetry books, with his speeches compiled in Mera Desh Mera Dharm (2 volumes).",
+                            description: "Dr. Sachchidanand Joshi is the Member Secretary and Executive and Academic Head of the Indira Gandhi National Centre for the Arts (IGNCA) and a noted writer, poet, and actor, who has published extensively on topics including media, communication, history, culture, education, and policy; he notably edited speeches of Prime Minister Shri Narendra Modi for the Publication Division and co-edited Connecting through Culture: An Overview of India`s Soft Power Strengths with Dr. Vinay Sahastrabuddhe, and his recent publications include Sachchidanand Joshi ki Lokpriya Kahaniya (2017), Putrikameshti (2021), and Low Hanging Fruits (2024), along with four collections of short stories and three poetry books, with his speeches compiled in Mera Desh Mera Dharm (2 volumes). Dr. Joshi has played a pivotal role in cultural and educational policymaking and led significant projects, including artwork for the New Parliament Building, Bharat Mandapam, and Prerana School, from curation to execution. He is currently leading the installation of the Indian Pavilion exhibit at the Osaka Expo 2025.",
                         image: "{{ asset('public/images/master-class/Dr. Sachchidanand Joshi.jpg') }}"
                     },
                     {
@@ -447,7 +444,7 @@
                     },
                     {
                         name: "Anand Gandhi",
-                        description: "Anand began writing and directing plays at the age of 12, and by 19, he had written a total of a hundred episodes for two television soap operas that became some of the most popular shows in the history of Indian television; that same year, his play 'Sugandhi' was honored with the prestigious National Award.",
+                        description: "Anand started writing and directing plays in school at the age of 12. At 19, he wrote a total of hundred episodes of two television soap operas, which went on to become the most popular shows in the history of Indian Television. The same year his play 'Sugandhi' was awarded the prestigious National Award. Beyond these early achievements, Anand went on to direct the groundbreaking film Ship of Theseus, a thought-provoking exploration of identity and ethics that became an international success and is widely regarded as a landmark in Indian independent cinema. He also founded Memesys Culture Lab, a pioneering media studio and think tank dedicated to creating innovative and thought-provoking content that challenges traditional cinematic boundaries, pushing the envelope in both form and substance.",
                         image: "{{ asset('public/images/master-class/Anand Gandhi.jpg') }}"
                     }
                 ]
@@ -456,7 +453,7 @@
                 title: "How to Succeed in New Hollywood",
                 moderator: "",
                 panel: "Master Class",
-                date: "Nov-25th, 2024, 04.30 AM TO 06.00 PM",
+                date: "Nov-25th, 2024, 04.30 PM TO 06.00 PM",
                 speakers: [{
                     name: "Philip Noyce",
                     description: "Phillip Noyce is an Australian film and television director who has directed over 19 feature films since 1977 across various genres, including historical dramas like Newsfront, Rabbit-Proof Fence, and The Quiet American; thrillers such as Dead Calm, Sliver, and The Bone Collector; and action films including Blind Fury, The Saint, and Salt; he is also known for directing the Jack Ryan adaptations Patriot Games (1992) and Clear and Present Danger (1994), as well as the 2014 adaptation of Lois Lowry’s The Giver.",
@@ -467,10 +464,10 @@
                 title: "Empowering Change: Women Leading the Way in Cinema",
                 moderator: "",
                 panel: "In Conversation",
-                date: "Nov-25th, 2024, 06.15 AM TO 07.00 PM",
+                date: "Nov-25th, 2024, 06.15 PM TO 07.00 PM",
                 speakers: [{
                         name: "Kriti Sanon",
-                        description: "Phillip Noyce is an Australian film and television director who has directed over 19 feature films since 1977 across various genres, including historical dramas like Newsfront, Rabbit-Proof Fence, and The Quiet American; thrillers such as Dead Calm, Sliver, and The Bone Collector; and action films including Blind Fury, The Saint, and Salt; he is also known for directing the Jack Ryan adaptations Patriot Games (1992) and Clear and Present Danger (1994), as well as the 2014 adaptation of Lois Lowry’s The Giver.",
+                        description: "Kriti Sanon is an Indian actress who works in Hindi and Telugu-language films. Sanon briefly worked as a fashion model. She began her acting career by playing the leading lady in the 2014 action films 1: Nenokkadine and Heropanti, romantic comedies Bareilly Ki Barfi (2017) and Luka Chuppi (2019), and her highest-grossing releases came with Dilwale (2015) and Housefull 4 (2019).She won the National Film Award and the Filmfare Award for Best Actress for playing the title role of a surrogate mother in the comedy-drama Mimi (2021).",
                         image: "{{ asset('public/images/master-class/Kriti Sanon.jpg') }}"
                     },
                     {
@@ -490,7 +487,7 @@
                 date: "Nov-26th, 2024, 11.00 AM TO 12.00 PM",
                 speakers: [{
                     name: "Chris Kirschbaum",
-                    description: "Chris Kirschbaum is an animator, teacher, and public speaker whose work has appeared in numerous feature films, shorts, DVD extras, and holiday TV specials; he has worked in 2D animation as a special effects artist and in 3D animation as a character animator, lead, supervisor, and art director, while also teaching and mentoring since 2007, and performing as a musician in the studio, on stage, in theater, and on television.",
+                    description: "Chris Kirshbaum is an animator, teacher, and public speaker whose work has appeared in numerous feature films, shorts, DVD extras and holiday TV specials. He has worked in 2D animation as a special effects artist, and in 3D animation as a character animator, lead, supervisor, and AD. He has also been involved in teaching and mentoring aspiring animators since 2007, and has a background in music performance across different platforms.",
                     image: "{{ asset('public/images/master-class/Chris Kirschbaum.jpg') }}"
                 }]
             },
@@ -499,7 +496,6 @@
                 moderator: "",
                 panel: "Master Class",
                 date: "Nov-26th, 2024, 12.30 PM TO 01.30 PM",
-                // description: "In this session, the acclaimed filmmaker Vidhu Vinod Chopra takes us on a journey through the creative process, sharing his experiences, challenges, and the philosophy behind living through cinema.With decades of storytelling mastery,Mr. Chopra will bring us the insights into how films not only reflect life but become a living entity of their own, inspiring generations ",
                 speakers: [{
                     name: "Stephen Woolley",
                     description: "Stephen Woolley is an English filmmaker and actor whose career has spanned over three and a half decades, during which he was awarded the BAFTA award for Outstanding British Contribution to Cinema in February 2019; as a producer, he has been Oscar-nominated for The Crying Game (1992) and has produced multi-Academy Award nominated films including Mona Lisa (1986), Little Voice (1998), Michael Collins (1996), The End of the Affair (1999), Interview with the Vampire (1994), and Carol (2016), and he runs the production company Number 9 Films with his partner Elizabeth Karlsen.",
@@ -510,7 +506,7 @@
                 title: "Exhibition of Feature Films in Cinema Theaters : The Question of Accessibility",
                 moderator: "",
                 panel: "Master Class",
-                date: "Nov-26th, 2024, 02.30 AM TO 04.00 PM",
+                date: "Nov-26th, 2024, 02.30 PM TO 04.00 PM",
                 // description: "This session brings together renowned sound designers Nakul Kamte and Eric Hoehn, who will explore the power of sound design in shaping the emotional and narrative depth of films. From subtle  ambient layers to impactful soundscapes, they will share their craft in building the aural  dimension that completes the cinematic experience.",
                 speakers: [{
                     name: "Senthil Kumar-Co-Founder, Qube Cinema Technologies",
@@ -522,7 +518,7 @@
                 title: "Centenary session : 'Azmaan se aaya farishta' - Mohammad Rafi - The king of melody",
                 moderator: "Yatindra Mishra",
                 panel: "Panel Discussion",
-                date: "Nov-26th, 2024, 04.30 AM TO 06.00 PM",
+                date: "Nov-26th, 2024, 04.30 PM TO 06.00 PM",
                 // description: "This session brings together renowned sound designers Nakul Kamte and Eric Hoehn, who will explore the power of sound design in shaping the emotional and narrative depth of films. From subtle  ambient layers to impactful soundscapes, they will share their craft in building the aural  dimension that completes the cinematic experience.",
                 speakers: [{
                         name: "Sonu Nigam",
@@ -531,7 +527,7 @@
                     },
                     {
                         name: "Shahid Rafi",
-                        description: "Shahid Rafi is the youngest son of the Legend Mohammed Rafi Sahab.He carries the legacy of Mohammed Rafi Sahab.",
+                        description: "Shahid Rafi is the youngest son of the legendary playback singer Mohammad Rafi. He has proudly established the Mohammed Rafi Academy in Mumbai, a renowned institution nurturing Indian classical and contemporary music. His performances often carry the same melodious and heartfelt essence that defined Mohammad Rafi's songs, preserving the legacy of one of India’s most cherished voices.",
                         image: "{{ asset('public/images/master-class/Shahid Rafi.jpg') }}"
                     },
                     {
@@ -575,7 +571,7 @@
                 title: "Blurring Lines between the Truth & Perception: PR & Perception of Stars and their Films",
                 moderator: "Jayprad Desai",
                 panel: "Panel Discussion",
-                date: "Nov-27th, 2024, 12.30 AM TO 01.30 PM",
+                date: "Nov-27th, 2024, 12.30 PM TO 01.30 PM",
                 speakers: [{
                         name: "Kshitij Mehta (Collective Artists Network)",
                         description: "Kshitij Mehta is the co-founder of Collective Artists Network, which is a multi-faceted content powerhouse with unparalleled access to India’s leading talent across categories. He is an alma mater of Welingkar Institute of Management with specialisation in E-biz & Marketing. He has also been a film critic with DesiMartini and Jam Magazine.",
@@ -597,10 +593,10 @@
                 title: "Lata Mangeshkar Memorial Talk: Musical Theatre in India",
                 moderator: "Naman Ramachandran",
                 panel: "In Conversation",
-                date: "Nov-27th, 2024, 02.30 AM TO 04.00 PM",
+                date: "Nov-27th, 2024, 02.30 PM TO 04.00 PM",
                 speakers: [{
                     name: "A R Rahman",
-                    description: "A R Rahman is an acclaimed Indian music composer, record producer, singer, songwriter, musician, and philanthropist, renowned for his contributions to Indian cinema, particularly in Tamil and Hindi films, while also making occasional appearances in international cinema; he has received numerous accolades including six National Film Awards, two Academy Awards, two Grammy Awards, a BAFTA Award, a Golden Globe Award, six Tamil Nadu State Film Awards, fifteen Filmfare Awards, and eighteen Filmfare Awards South, and was honored with the Padma Bhushan by the Government of India in 2010.",
+                    description: "A R Rahman is an Indian music composer, record producer, singer, songwriter, musician, multi-instrumentalist, and philanthropist known for his works in Indian cinema; predominantly in Tamil and Hindi films, with occasional forays in international cinema. He is a recipient of six National Film Awards, two Academy Awards, two Grammy Awards, a BAFTA Award, a Golden Globe Award, six Tamil Nadu State Film Awards, fifteen Filmfare Awards, and eighteen Filmfare Awards South. In 2010, the Government of India conferred him with the Padma Bhushan.",
                     image: "{{ asset('public/images/master-class/A R Rahman.jpg') }}"
                 }]
             },
@@ -608,7 +604,7 @@
                 title: "From Local to Global - What's the Roadmap for International Box Office Success? ",
                 moderator: "Taran Adarsh",
                 panel: "Panel Discussion",
-                date: "Nov-27th, 2024, 04.30 AM TO 06.00 PM",
+                date: "Nov-27th, 2024, 04.30 PM TO 06.00 PM",
                 speakers: [{
                         name: "Ali Abbas Zafar",
                         description: "Ali Abbas Zafar is an Indian filmmaker and screenwriter known for directing blockbuster films like Sultan, Tiger Zinda Hai, and Bharat. His works are celebrated for their dynamic action sequences and larger-than-life storytelling. Zafar’s films often explore intense emotional journeys and complex relationships, making him one of Bollywood’s most commercially successful directors. His vision has helped elevate Indian cinema on the global stage, further expanding its international audience.",
@@ -639,36 +635,35 @@
                 document.getElementById('modalModerator').innerText = data.moderator;
                 document.getElementById('panel').innerText = data.panel;
 
-                //This is for Speakers
+                // Clear existing speakers and add new ones
                 const speakersList = document.getElementById('modalSpeakers');
                 speakersList.innerHTML = '';
                 data.speakers.forEach(speaker => {
                     const li = document.createElement('li');
                     li.className =
                         'list-group-item d-flex justify-content-between align-items-start title-tab';
-                    li.style.cursor = 'pointer'; // Set cursor to pointer for entire li
+                    li.style.cursor = 'pointer';
 
                     // Add onclick event to li for opening the modal
                     li.onclick = function() {
                         showSpeakerDetails(
                             speaker.name.replace(/'/g, "\\'"),
-                            speaker.description.replace(/'/g, "\\'"),
+                            speaker.description.replace(/\\/g, ''),
                             speaker.image.replace(/'/g, "\\'")
                         );
                     };
+                    // Populate the speaker list item
                     li.innerHTML =
                         `
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <div class="ms-2 me-auto">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <div class="fw-bold">${speaker.name}</div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <span>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <img src="${speaker.image}" class="img-circle">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </span>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    `;
+                                                                                                                                                                                                                                                                                                                                                                    <div class="ms-2 me-auto">
+                                                                                                                                                                                                                                                                                                                                                                        <div class="fw-bold">${speaker.name}</div>
+                                                                                                                                                                                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                                                                                                                                                                                    <span>
+                                                                                                                                                                                                                                                                                                                                                                        <img src="${speaker.image}" class="img-circle" alt="${speaker.name}">
+                                                                                                                                                                                                                                                                                                                                                                    </span>
+                                                                                                                                                                                                                                                                                                                                                                `;
                         speakersList.appendChild(li);
                     });
-
-
                 }
             });
         });
@@ -681,7 +676,7 @@
             speakerDetailsModal.show();
         }
     </script>
-    {{-- Script End --}}
+
     <style type="text/css">
         .title-tab {
             cursor: pointer;

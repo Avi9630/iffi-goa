@@ -65,6 +65,11 @@
                                         <a href="{{ route('faq') }}" class="nav-link">FAQ's</a>
                                     </li>
 
+                                    <li class="nav-item">
+                                        <a href="{{ asset('public/images/sponsor/IFFI-55-Sponsers-Page.pdf') }}"
+                                            class="nav-link" target="_blank">Our Sponsors & Partners</a>
+                                    </li>
+
                                     {{-- <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" role="button"
                                             data-bs-toggle="dropdown" aria-expanded="false">Best Of IFFI</a>
@@ -480,7 +485,7 @@
                                     </li>
 
 
-                                    <li class="nav-item dropdown">
+                                    {{-- <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" role="button"
                                             data-bs-toggle="dropdown" aria-expanded="false">
                                             The Peacock
@@ -491,8 +496,7 @@
                                                     data-bs-toggle="dropdown" aria-expanded="false">
                                                     Old Versions
                                                 </a>
-
-                                                {{-- <ul class="dropdown-menu">
+                                                <ul class="dropdown-menu">
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('the-peacock', ['year' => 2023]) }}">2023</a>
                                                     </li>
@@ -505,10 +509,10 @@
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('the-peacock', ['year' => 2020]) }}">2020</a>
                                                     </li>
-                                                </ul> --}}
+                                                </ul>
                                             </li>
                                         </ul>
-                                    </li>
+                                    </li> --}}
 
                                 </ul>
                             </div>

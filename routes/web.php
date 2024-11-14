@@ -19,8 +19,6 @@ Route::controller(CommonController::class)->group(function () {
 
     Route::get('highlights', 'highlights')->name('highlights');
 
-    // Route::get('international-cinema', 'internationalCinema')->name('international-cinema');
-
     Route::get('cureted-section-2024', 'curetedsection2024')->name('cureted-section-2024');
 
     Route::get('international-cinema/competition/{slug}', 'internationalCompetitionDetail')->name('international-competition-detail');
@@ -41,7 +39,7 @@ Route::controller(CommonController::class)->group(function () {
 
     Route::get('media/press-release', 'pressRelease')->name('press-release');
 
-    // Route::get('media/the-peacock', 'thepeacock')->name('the-peacock');
+    Route::get('media/the-peacock', 'thepeacock')->name('the-peacock');
 
     Route::get('media/news-and-update', 'newsUpdate')->name('news-and-update');
 

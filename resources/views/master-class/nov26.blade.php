@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-md-2 col-12">
             <div class="master-time">
-                <h4 class="time-div">11:00 PM</h4>
+                <h4 class="time-div">11:00 AM</h4>
                 <h5 class="time-div">12:00 PM</h5>
             </div>
         </div>
@@ -127,9 +127,12 @@
                     melody
                 </h4>
                 <p>
-                    This is a special Centenary session paying tribute to the king of
-                    melody Mr. Mohammad Rafi. This panel will also have a medley session with Rafi Sab’s
-                    songs.
+                    Mohammad Rafi, the timeless voice that defined the golden era of Indian film music, continues to
+                    captivate hearts with his melodies. In this centenary session, Sonu Nigam, Shahid Rafi, Subhash Ghai
+                    & Anuradha Paudwal will pay tribute to the legendary 'King of Melody.' Moderated by Yatindra Mishra,
+                    this conversation will explore Rafi's unparalleled contribution to Indian music, the depth of his
+                    emotional expression, and the enduring legacy of his voice that continues to inspire generations of
+                    singers and music lovers worldwide.
                 </p>
             </div>
         </div>
