@@ -19,7 +19,7 @@ Route::controller(CommonController::class)->group(function () {
 
     Route::get('highlights', 'highlights')->name('highlights');
 
-    Route::get('cureted-section-2024', 'curetedsection2024')->name('cureted-section-2024');
+    Route::get('international-cinema/2024/{slug}', 'curetedsection2024')->name('cureted-section-2024');
 
     Route::get('international-cinema/competition/{slug}', 'internationalCompetitionDetail')->name('international-competition-detail');
 
@@ -140,9 +140,9 @@ Route::get('gala-premier/2nd-edition', function () {
     return view('gala-premier.2nd-edition');
 })->name('2nd-edition');
 
-Route::get('gala-premier/3nd-edition', function () {
-    return view('gala-premier.3nd-edition');
-})->name('3nd-edition');
+Route::get('gala-premier/3rd-edition', function () {
+    return view('gala-premier.3rd-edition');
+})->name('3rd-edition');
 
 //CMOT
 Route::get('cmot/about-cmot', function () {
