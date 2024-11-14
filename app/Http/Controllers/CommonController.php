@@ -306,17 +306,14 @@ class CommonController extends Controller
     public function thepeacock(Request $request)
     {
         $year = $request->input('year');
-
-        $peacock = DB::table('the_peacock')
-            ->where('status', '1')
-            ->orderBy('id', 'desc');
-
+        $peacock = DB::table('the_peacock');
+        $peacock->where('status', '1');
+        $peacock->orderBy('id', 'desc');
         if ($year) {
             $peacock->where('year', $year);
         }
-
-        $thepeacock = $peacock->paginate(10);
-        //  echo '<pre>';
+        $thepeacock = $peacock->get();
+        // echo '<pre>';
         // print_r($thepeacock);
         // exit();
 
