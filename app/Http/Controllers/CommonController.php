@@ -160,13 +160,12 @@ class CommonController extends Controller
         return $directorDebutFilm;
     }
 
-    public function indianPanorama()
+    public function indianPanorama($year)
     {
         $indianPanormas = DB::table('indian_panorama_cinema')
             ->where('status', '=', '1')
-            ->where('year', '=', '2023')
+            ->where('year', '=', $year)
             ->get();
-
         return $indianPanormas;
     }
 
