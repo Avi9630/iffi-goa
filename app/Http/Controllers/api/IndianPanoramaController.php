@@ -43,7 +43,7 @@ class IndianPanoramaController extends Controller
             'title'                 =>  'required',
             'slug'                  =>  'required',
             'directed_by'           =>  'required',
-            'country_of_origin'     =>  'required',
+            'country_of_origin'     =>  '',
             'language'              =>  'required',
             'img_src'               =>  'file|mimes:jpg,jpeg,png|max:10240',
             'year'                  =>  'required',
