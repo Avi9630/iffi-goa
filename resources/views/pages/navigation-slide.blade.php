@@ -485,7 +485,7 @@
                                     </li>
 
 
-                                    <li class="nav-item dropdown">
+                                    {{-- <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" role="button"
                                             data-bs-toggle="dropdown" aria-expanded="false">
                                             The Peacock
@@ -496,7 +496,6 @@
                                                     data-bs-toggle="dropdown" aria-expanded="false">
                                                     Old Versions
                                                 </a>
-
                                                 <ul class="dropdown-menu">
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('the-peacock', ['year' => 2023]) }}">2023</a>
@@ -513,7 +512,7 @@
                                                 </ul>
                                             </li>
                                         </ul>
-                                    </li>
+                                    </li> --}}
 
                                 </ul>
                             </div>

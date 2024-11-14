@@ -45,7 +45,7 @@
     <div class="row">
         <div class="col-md-2 col-12">
             <div class="master-time">
-                <h4 class="time-div">12:30 AM</h4>
+                <h4 class="time-div">12:30 PM</h4>
                 <h5 class="time-div">01:30 PM</h5>
             </div>
         </div>
@@ -142,8 +142,8 @@
                     boundaries. This panel discussion will explore the strategies behind Indian films' international
                     success, examining how they engage global audiences and pioneer cross-cultural narratives. The
                     discussion will feature insights on how contemporary and future filmmakers can take steps to
-                    maximize box office success overseas. Featuring industry leading filmmakers Ali Abbas Zafar, Kabir
-                    Khan, Vijay Krishna Acharya, and Mahaveer Jain, moderated by film critic and trade analyst Taran
+                    maximize box office success overseas. Featuring industry leading filmmakers Ali Abbas Zafar, Vijay
+                    Krishna Acharya, and Mahaveer Jain, moderated by film critic and trade analyst Taran
                     Adarsh, the conversation will focus on the evolving roadmap for leaving a lasting impact across the
                     world.
                 </p>
