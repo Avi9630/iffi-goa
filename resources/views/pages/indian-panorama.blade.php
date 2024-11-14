@@ -3,7 +3,7 @@
         <img src="{{ asset('public/images/indian-panorama-cinema/' . $panorma->img_src . '') }}" alt="image"
             class="img-fluid">
         <div class="International-competition">
-            <p>{{ $panorma->slug }}</p>
+            <p>{{ $panorma->title }}</p>
         </div>
     </div>
 @endforeach
