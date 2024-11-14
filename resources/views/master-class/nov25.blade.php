@@ -98,10 +98,10 @@
                         <img src="{{ asset('public/images/master-class/Kriti Sanon.jpg') }}" alt="image"
                             class="img-fluid">
                     </li>
-                    <li>
+                    {{-- <li>
                         <img src="{{ asset('public/images/master-class/Rudrani Chattoraj.jpg') }}" alt="image"
                             class="img-fluid">
-                    </li>
+                    </li> --}}
                 </ul>
             </div>
         </div>
