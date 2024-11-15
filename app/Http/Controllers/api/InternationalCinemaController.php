@@ -103,8 +103,8 @@ class InternationalCinemaController extends Controller
                 $destinationPath = 'images/cureted-section';
                 $originalFilename = $file->getClientOriginalName();
                 $extension = $file->getClientOriginalExtension();
-                $hashedFilename = substr(md5($originalFilename.time()), 0, 20).'.'.$extension;
-                $fullFilePath = public_path($destinationPath.'/'.$hashedFilename);
+                $hashedFilename = substr(md5($originalFilename . time()), 0, 20) . '.' . $extension;
+                $fullFilePath = public_path($destinationPath . '/' . $hashedFilename);
                 if (File::exists($fullFilePath)) {
                     $response = [
                         'message' => 'File with the same name already exists.',
@@ -186,8 +186,8 @@ class InternationalCinemaController extends Controller
                     $destinationPath = 'images/cureted-section';
                     $originalFilename = $file->getClientOriginalName();
                     $extension = $file->getClientOriginalExtension();
-                    $hashedFilename = substr(md5($originalFilename.time()), 0, 20).'.'.$extension;
-                    $fullFilePath = public_path($destinationPath.'/'.$hashedFilename);
+                    $hashedFilename = substr(md5($originalFilename . time()), 0, 20) . '.' . $extension;
+                    $fullFilePath = public_path($destinationPath . '/' . $hashedFilename);
 
                     if (File::exists($fullFilePath)) {
                         $response = [
@@ -260,18 +260,7 @@ class InternationalCinemaController extends Controller
     public function getById(Request $request, $id)
     {
         $payload = $request->all();
-        // $validatorArray = [
-        //     'id' => 'required',
-        // ];
-        // $messagesArray = [];
-        // $validator = Validator::make($payload, $validatorArray, $messagesArray);
-        // if ($validator->fails()) {
-        //     $output = [
-        //         'message' => $validator->errors()->first(),
-        //     ];
 
-        //     return $this->response('validatorerrors', $output);
-        // }
         try {
             $internationalCinema = InternationalCinema::find($id);
             if ($internationalCinema) {
