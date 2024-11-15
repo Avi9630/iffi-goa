@@ -66,8 +66,8 @@
                                     </li>
 
                                     <li class="nav-item">
-                                        <a href="{{ asset('public/images/sponsor/IFFI-55-Sponsers-Page.pdf') }}"
-                                            class="nav-link" target="_blank">Our Sponsors & Partners</a>
+                                        <a href="{{ asset('partners-sponsors') }}" class="nav-link">Our Partners &
+                                            Sponsors</a>
                                     </li>
 
                                     {{-- <li class="nav-item dropdown">
@@ -175,8 +175,8 @@
                                                             href="{{ route('cureted-section-2024', ['slug' => 'mission-life']) }}">Mission
                                                             Life</a></li>
                                                     <li><a class="dropdown-item"
-                                                            href="{{ route('cureted-section-2024', ['slug' => 'treaty-country-uk']) }}">Treaty
-                                                            Country-UK</a></li>
+                                                            href="{{ route('cureted-section-2024', ['slug' => 'BFI@IFFI']) }}">BFI@IFFI</a>
+                                                    </li>
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('cureted-section-2024', ['slug' => 'country-focus-australia']) }}">Country
                                                             Focus: Australia</a></li>
@@ -266,6 +266,9 @@
                                                 <a href="{{ route('debut-director-jury') }}"
                                                     class="dropdown-item">Debut Director Jury - 2024</a>
                                             </li>
+                                            <li><a class="dropdown-item"
+                                                    href="{{ route('debut-director-films', ['slug' => 'debut-director-films']) }}">Official
+                                                    Selection - Debut Director Films</a></li>
                                             <li>
                                                 <a href="https://iffigoa.org/festival/indian-debut-director"
                                                     class="dropdown-item nav-link yelow-color-link"
@@ -297,10 +300,10 @@
                                                 </a>
                                                 <ul class="dropdown-menu">
                                                     <li><a class="dropdown-item"
-                                                            href="{{ route('indian-panorama-jury-feature') }}">Featured</a>
+                                                            href="{{ route('indian-panorama-jury-feature') }}">Feature</a>
                                                     </li>
                                                     <li><a class="dropdown-item"
-                                                            href="{{ route('indian-panorama-jury-non-feature') }}">Non-Featured</a>
+                                                            href="{{ route('indian-panorama-jury-non-feature') }}">Non-Feature</a>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -316,23 +319,6 @@
                                                     class="dropdown-item">Rules & Regulations</a>
                                             </li>
 
-                                            <li class="nav-item dropend">
-                                                <a class="nav-link dropdown-toggle" href="#" role="button"
-                                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                                    Indian Panorama IFFI 2023
-                                                </a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a class="dropdown-item"
-                                                            href="{{ route('official-selection-feature') }}">Official
-                                                            Selection :
-                                                            Feature</a>
-                                                    </li>
-                                                    <li><a class="dropdown-item"
-                                                            href="{{ route('official-selection-non-feature') }}">Official
-                                                            Selection :
-                                                            Non-Feature</a></li>
-                                                </ul>
-                                            </li>
 
                                             <li class="nav-item dropend">
                                                 <a class="nav-link dropdown-toggle" href="#" role="button"
@@ -343,17 +329,33 @@
                                                     <li>
                                                         <a class="dropdown-item"
                                                             href="{{ route('official-selection-feature', ['year' => 2024]) }}">
-                                                            Official Selection : Feature
+                                                            Feature
                                                         </a>
                                                     </li>
                                                     <li>
                                                         <a class="dropdown-item"
                                                             href="{{ route('official-selection-non-feature', ['year' => 2024]) }}">
-                                                            Official Selection : Non-Feature
+                                                            Non-Feature
                                                         </a>
                                                     </li>
                                                 </ul>
                                             </li>
+
+                                            <li class="nav-item dropend">
+                                                <a class="nav-link dropdown-toggle" href="#" role="button"
+                                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                                    Indian Panorama IFFI 2023
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('official-selection-feature') }}">Feature</a>
+                                                    </li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('official-selection-non-feature') }}">Non-Feature</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
 
                                             <li class="nav-item dropend">
                                                 <a class="nav-link dropdown-toggle" href="#" role="button"
@@ -391,6 +393,9 @@
                                                 <a href="{{ route('web-series-jury') }}" class="dropdown-item">
                                                     Best Web Series Jury - 2024</a>
                                             </li>
+                                            <li><a class="dropdown-item"
+                                                    href="{{ route('best-web-series', ['slug' => 'best-web-series']) }}">Official
+                                                    Selection - Best Web Series</a></li>
                                             <li>
                                                 <a href="https://iffigoa.org/festival/web-series"
                                                     class="dropdown-item nav-link yelow-color-link"
@@ -508,29 +513,22 @@
                                             data-bs-toggle="dropdown" aria-expanded="false">
                                             The Peacock
                                         </a>
+
                                         <ul class="dropdown-menu">
-                                            <li class="nav-item dropend">
-                                                <a class="nav-link dropdown-toggle" href="#" role="button"
-                                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                                    Old Versions
-                                                </a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a class="dropdown-item"
-                                                            href="{{ route('the-peacock', ['year' => 2023]) }}">2023</a>
-                                                    </li>
-                                                    <li><a class="dropdown-item"
-                                                            href="{{ route('the-peacock', ['year' => 2022]) }}">2022</a>
-                                                    </li>
-                                                    <li><a class="dropdown-item"
-                                                            href="{{ route('the-peacock', ['year' => 2021]) }}">2021</a>
-                                                    </li>
-                                                    <li><a class="dropdown-item"
-                                                            href="{{ route('the-peacock', ['year' => 2018]) }}">2018</a>
-                                                    </li>
-                                                    <li><a class="dropdown-item"
-                                                            href="{{ route('the-peacock', ['year' => 2017]) }}">2017</a>
-                                                    </li>
-                                                </ul>
+                                            <li><a class="dropdown-item"
+                                                    href="{{ route('the-peacock', ['year' => 2023]) }}">2023</a>
+                                            </li>
+                                            <li><a class="dropdown-item"
+                                                    href="{{ route('the-peacock', ['year' => 2022]) }}">2022</a>
+                                            </li>
+                                            <li><a class="dropdown-item"
+                                                    href="{{ route('the-peacock', ['year' => 2021]) }}">2021</a>
+                                            </li>
+                                            <li><a class="dropdown-item"
+                                                    href="{{ route('the-peacock', ['year' => 2018]) }}">2018</a>
+                                            </li>
+                                            <li><a class="dropdown-item"
+                                                    href="{{ route('the-peacock', ['year' => 2017]) }}">2017</a>
                                             </li>
                                         </ul>
                                     </li>

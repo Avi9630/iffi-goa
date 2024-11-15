@@ -816,6 +816,12 @@ footer a:hover {
     background-size: cover;
 }
 
+.bannerBg-partnersSponsors {
+    background: linear-gradient(rgb(0 0 0 / 38%), rgb(0 0 0 / 38%)),
+        url(../images/main-header/SPONSOR-BG.jpg) center center no-repeat;
+    background-size: cover;
+}
+
 .iCinema-content h5 {
     font-size: 14px;
     display: flex;
@@ -1323,6 +1329,28 @@ footer a:hover {
 .gallery-container .grid-item {
     border-radius: 10px;
     overflow: hidden;
+}
+
+.sponsor-list ul {
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    column-gap: 10px;
+    flex-wrap: wrap;
+}
+
+.sponsor-list ul li {
+    display: flex;
+    border: solid 1px #ddd;
+    padding: 0px 10px 0px 10px;
+    border-radius: 5px;
+    list-style: none;
+    background: #fff;
+    width: 11%;
+}
+
+.sponsor-list ul li:hover {
+    border: solid 1px #333;
 }
 
 /* Custom animation for slide-in from the right */

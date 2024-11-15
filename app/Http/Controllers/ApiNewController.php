@@ -8,6 +8,7 @@ use App\Models\Gallery;
 use App\Models\LatestUpdate;
 use App\Models\MasterClass;
 use App\Models\NewsUpdate;
+use App\Models\ThePartnerSponsor;
 use App\Models\ThePeacock;
 use App\Models\Ticker;
 use Illuminate\Http\Request;
@@ -81,7 +82,6 @@ class ApiNewController extends Controller
                 'message' => 'News update created successfully!',
                 'data' => $newsUpdate,
             ]);
-
         } catch (\Exception $e) {
             // Return exception response in case of an error
             return $this->response('exception', [
@@ -180,7 +180,6 @@ class ApiNewController extends Controller
                 ];
 
                 return $this->response('success', $response);
-
             } else {
                 $response = [
                     'message' => 'Record not found!',
@@ -276,7 +275,6 @@ class ApiNewController extends Controller
                 'message' => 'Ticker updated successfully!',
                 'data' => $ticker,
             ], 200);
-
         } catch (\Exception $e) {
             // Return an error response for any exceptions
             return response()->json([
@@ -306,7 +304,6 @@ class ApiNewController extends Controller
             ];
 
             return $this->response('success', $response);
-
         } catch (\Exception $e) {
             // Handle any exceptions and return an error response
             $response = [
@@ -373,7 +370,6 @@ class ApiNewController extends Controller
                 'status' => 'success',
                 'message' => 'Ticker deleted successfully',
             ], 200);
-
         } catch (\Exception $e) {
             return response()->json([
                 'status' => 'error',
@@ -433,7 +429,6 @@ class ApiNewController extends Controller
                 'message' => 'Gallery updates retrieved successfully.',
                 'data' => $galleryData,
             ], 200);
-
         } catch (\Exception $e) {
             // Return error response in case of exception
             return response()->json([
@@ -465,7 +460,6 @@ class ApiNewController extends Controller
                 ];
 
                 return $this->response('validatorerrors', $output);
-
             }
 
             // Set up initial data
@@ -500,7 +494,6 @@ class ApiNewController extends Controller
                 'message' => 'Gallery updated successfully.',
                 'data' => $gallery,
             ], 200);
-
         } catch (\Illuminate\Validation\ValidationException $e) {
             // Return validation error response
             return response()->json([
@@ -540,7 +533,6 @@ class ApiNewController extends Controller
                 'message' => 'Gallery data retrieved successfully.',
                 'data' => $galleryData,
             ], 200);
-
         } catch (\Exception $e) {
             // Return error response in case of exception
             return response()->json([
@@ -609,7 +601,6 @@ class ApiNewController extends Controller
                 'message' => 'Gallery created successfully.',
                 'data' => $gallery,
             ], 201);
-
         } catch (\Exception $e) {
             // Return error response in case of exception
             return response()->json([
@@ -642,7 +633,6 @@ class ApiNewController extends Controller
                 'message' => 'thePeacock updates retrieved successfully.',
                 'data' => $thePeacockData,
             ], 200);
-
         } catch (\Exception $e) {
             // Return error response in case of exception
             return response()->json([
@@ -661,7 +651,7 @@ class ApiNewController extends Controller
             // Validate the request data (fields are now optional)
             $validator = Validator::make($payload, [
                 'title' => 'nullable|string|max:255',
-                'img_src_file' => 'nullable', // Assuming image is a URL or file path
+                'img_src_file' => 'nullable|mimes:pdf|max:20000',
                 'year' => 'nullable',
                 'status' => 'nullable|in:0,1', // Assuming status can be 'active' or 'inactive'
             ]);
@@ -673,7 +663,6 @@ class ApiNewController extends Controller
                 ];
 
                 return $this->response('validatorerrors', $output);
-
             }
             $thePeacock = ThePeacock::findOrFail($id);
             $fileNameOriginal = $thePeacock->image_name;
@@ -707,7 +696,6 @@ class ApiNewController extends Controller
                 'message' => 'thePeacock updated successfully.',
                 'year' => $thePeacock,
             ], 200);
-
         } catch (\Illuminate\Validation\ValidationException $e) {
             // Return validation error response
             return response()->json([
@@ -746,7 +734,6 @@ class ApiNewController extends Controller
                 'message' => 'thePeacock data retrieved successfully.',
                 'data' => $thePeacockData,
             ], 200);
-
         } catch (\Exception $e) {
             // Return error response in case of exception
             return response()->json([
@@ -764,7 +751,7 @@ class ApiNewController extends Controller
         // Validation rules
         $validatorArray = [
             'title' => 'required|string|max:255',
-            'img_src_file' => 'nullable|mimes:pdf|max:10000',
+            'img_src_file' => 'nullable|mimes:pdf|max:20000',
             'year' => 'required|integer', // Ensure year is an integer
             'status' => 'required|in:0,1', // Assuming status can be 'active' or 'inactive'
         ];
@@ -815,7 +802,6 @@ class ApiNewController extends Controller
                 'message' => 'ThePeacock created successfully.',
                 'data' => $ThePeacock,
             ], 201);
-
         } catch (\Exception $e) {
             // Return error response in case of exception
             return response()->json([
@@ -855,7 +841,6 @@ class ApiNewController extends Controller
                 'status' => 'success',
                 'message' => 'ThePeacock deleted successfully.',
             ], 200);
-
         } catch (\Exception $e) {
             // Return error response in case of exception
             return response()->json([
@@ -935,7 +920,6 @@ class ApiNewController extends Controller
                 'message' => 'LatestUpdate updated successfully!',
                 'data' => $LatestUpdate,
             ], 200);
-
         } catch (\Exception $e) {
             // Return an error response for any exceptions
             return response()->json([
@@ -965,7 +949,6 @@ class ApiNewController extends Controller
             ];
 
             return $this->response('success', $response);
-
         } catch (\Exception $e) {
             // Handle any exceptions and return an error response
             $response = [
@@ -1034,7 +1017,6 @@ class ApiNewController extends Controller
                 'status' => 'success',
                 'message' => 'LatestUpdate deleted successfully',
             ], 200);
-
         } catch (\Exception $e) {
             return response()->json([
                 'status' => 'error',
@@ -1044,14 +1026,12 @@ class ApiNewController extends Controller
     }
 
     // cureted section 2024
-    public function curetedsection2024()
+    public function curetedSection2024(Request $request)
     {
         try {
-            // Fetch all curetedsection records from the database
-            // $curetedsectionData = curetedsection2024::all();
+            $payload = $request->all();
             $curetedsectionData = curetedsection2024::where('international_cinema.year', 2024)->get();
 
-            // Check if data exists
             if ($curetedsectionData->isEmpty()) {
                 return response()->json([
                     'status' => 'success',
@@ -1060,13 +1040,11 @@ class ApiNewController extends Controller
                 ], 200);
             }
 
-            // Return the curetedsection data as JSON response
             return response()->json([
                 'status' => 'success',
                 'message' => 'curetedsection updates retrieved successfully.',
                 'data' => $curetedsectionData,
             ], 200);
-
         } catch (\Exception $e) {
             // Return error response in case of exception
             return response()->json([
@@ -1153,7 +1131,6 @@ class ApiNewController extends Controller
                     'message' => 'Record not found!',
                 ], 404);
             }
-
         } catch (\Exception $e) {
             return response()->json([
                 'status' => 'error',
@@ -1253,7 +1230,6 @@ class ApiNewController extends Controller
                 'message' => 'cureted section 2024 created successfully.',
                 'data' => $curetedsection2024,
             ], 201);
-
         } catch (\Exception $e) {
             // Return error response in case of exception
             return response()->json([
@@ -1286,7 +1262,6 @@ class ApiNewController extends Controller
                 'message' => 'MasterClass updates retrieved successfully.',
                 'data' => $MasterClassData,
             ], 200);
-
         } catch (\Exception $e) {
             // Return error response in case of exception
             return response()->json([
@@ -1318,7 +1293,6 @@ class ApiNewController extends Controller
                 ];
 
                 return $this->response('validatorerrors', $output);
-
             }
 
             // Set up initial data
@@ -1353,7 +1327,6 @@ class ApiNewController extends Controller
                 'message' => 'MasterClass updated successfully.',
                 'data' => $MasterClass,
             ], 200);
-
         } catch (\Illuminate\Validation\ValidationException $e) {
             // Return validation error response
             return response()->json([
@@ -1393,7 +1366,6 @@ class ApiNewController extends Controller
                 'message' => 'MasterClass data retrieved successfully.',
                 'data' => $MasterClassData,
             ], 200);
-
         } catch (\Exception $e) {
             // Return error response in case of exception
             return response()->json([
@@ -1462,12 +1434,252 @@ class ApiNewController extends Controller
                 'message' => 'MasterClass created successfully.',
                 'data' => $MasterClass,
             ], 201);
-
         } catch (\Exception $e) {
             // Return error response in case of exception
             return response()->json([
                 'status' => 'error',
                 'message' => 'Failed to create MasterClass.',
+                'error' => $e->getMessage(),
+            ], 500);
+        }
+    }
+
+    // The PartnerSponsor
+    public function thePartnerSponsor()
+    {
+        try {
+            // Fetch all thePartnerSponsor records from the database
+            $thePartnerSponsorData = ThePartnerSponsor::all();
+
+            // Check if data exists
+            if ($thePartnerSponsorData->isEmpty()) {
+                return response()->json([
+                    'status' => 'success',
+                    'message' => 'No thePartnerSponsor updates found.',
+                    'data' => [],
+                ], 200);
+            }
+
+            // Return the thePartnerSponsor data as JSON response
+            return response()->json([
+                'status' => 'success',
+                'message' => 'thePartnerSponsor updates retrieved successfully.',
+                'data' => $thePartnerSponsorData,
+            ], 200);
+        } catch (\Exception $e) {
+            // Return error response in case of exception
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Failed to retrieve thePartnerSponsor updates.',
+                'error' => $e->getMessage(),
+            ], 500);
+        }
+    }
+
+    public function updatePartnerSponsor(Request $request, $id)
+    {
+        $payload = $request->all();
+        try {
+            // Validate the request data (fields are now optional)
+            $validator = Validator::make($payload, [
+                'title' => 'nullable|string|max:255',
+                'img_src_file' => 'nullable|mimes:pdf|max:20000',
+                'status' => 'nullable|in:0,1', // Assuming status can be 'active' or 'inactive'
+                'partners_sponsor' => 'nullable|in:0,1', // Assuming status can be 'active' or 'inactive'
+            ]);
+
+            if ($validator->fails()) {
+                $output = [
+                    'message' => $validator->errors()->first(),
+                    'data' => $payload,
+                ];
+
+                return $this->response('validatorerrors', $output);
+            }
+            $thePartnerSponsor = ThePartnerSponsor::findOrFail($id);
+            $fileNameOriginal = $thePartnerSponsor->image_name;
+            $modifiedName = $thePartnerSponsor->img_src;
+            // Check if a new file is uploaded
+            if ($request->hasFile('img_src_file')) {
+                $file = $request->file('img_src_file');
+                $destinationPath = 'images/thePartnerSponsor';
+                $fileNameOriginal = $file->getClientOriginalName();
+                $extension = strtolower($file->getClientOriginalExtension());
+                $modifiedName = rand(100000, 999999).'_'.time().'.'.$extension;
+                $file->move(public_path($destinationPath), $modifiedName);
+                $fileName = $modifiedName;
+            }
+
+            // Find the thePartnerSponsor by ID
+
+            // Update the thePartnerSponsor with new data if provided
+            $thePartnerSponsor->title = $payload['title'];
+            $thePartnerSponsor->year = $payload['year'];
+            $thePartnerSponsor->status = $payload['status'];
+            $thePartnerSponsor->partners_sponsor = $payload['partners_sponsor'];
+            $thePartnerSponsor->image_name = $fileNameOriginal;
+            $thePartnerSponsor->img_src = $modifiedName;
+
+            // Save the changes to the database
+            $thePartnerSponsor->save();
+
+            // Return a success response
+            return response()->json([
+                'status' => 'success',
+                'message' => 'thePartnerSponsor updated successfully.',
+                'year' => $thePartnerSponsor,
+            ], 200);
+        } catch (\Illuminate\Validation\ValidationException $e) {
+            // Return validation error response
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Validation error.',
+                'errors' => $e->errors(),
+            ], 422);
+        } catch (\Exception $e) {
+            // Return general error response
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Failed to update thePartnerSponsor.',
+                'error' => $e->getMessage(),
+            ], 500);
+        }
+    }
+
+    public function getthePartnerSponsorById($id)
+    {
+        try {
+            // Fetch the thePartnerSponsor record by ID from the database
+            $thePartnerSponsorData = thePartnerSponsor::find($id);
+
+            // Check if the record exists
+            if (! $thePartnerSponsorData) {
+                return response()->json([
+                    'status' => 'error',
+                    'message' => 'thePartnerSponsor not found.',
+                    'data' => null,
+                ], 404);
+            }
+
+            // Return the thePartnerSponsor data as JSON response
+            return response()->json([
+                'status' => 'success',
+                'message' => 'thePartnerSponsor data retrieved successfully.',
+                'data' => $thePartnerSponsorData,
+            ], 200);
+        } catch (\Exception $e) {
+            // Return error response in case of exception
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Failed to retrieve thePartnerSponsor data.',
+                'error' => $e->getMessage(),
+            ], 500);
+        }
+    }
+
+    public function createThePartnerSponsor(Request $request)
+    {
+        $payload = $request->all();
+
+        // Validation rules
+        $validatorArray = [
+            'title' => 'required|string|max:255',
+            'img_src_file' => 'nullable|mimes:pdf|max:20000',
+            'status' => 'required|in:0,1', // Assuming status can be 'active' or 'inactive'
+            'partners_sponsor' => 'required|in:0,1', // Assuming status can be 'active' or 'inactive'
+        ];
+
+        $validator = Validator::make($payload, $validatorArray);
+        if ($validator->fails()) {
+            return response()->json([
+                'status' => 'validation_error',
+                'message' => $validator->errors()->first(),
+            ], 422);
+        }
+
+        try {
+            // Set up initial data
+            $formattedDate = null;
+            if (! empty($payload['publish_date'])) {
+                $date = $payload['publish_date'];
+                $formattedDate = \DateTime::createFromFormat('D, d M Y H:i:s T', $date)->format('Y-m-d');
+            }
+
+            $data = [
+                'title' => $payload['title'] ?? '',
+                'year' => isset($payload['year']) && $payload['year'] !== '' ? (int) $payload['year'] : null, // Handle year as integer or null
+                'status' => $payload['status'] ?? '0',
+                'partners_sponsor' => $payload['status'] ?? '0',
+                // 'img_src' => '',
+            ];
+
+            // Handle image upload
+            if ($request->hasFile('img_src_file')) {
+                $file = $request->file('img_src_file');
+                $destinationPath = 'images/thePartnerSponsor';
+                $fileName = $file->getClientOriginalName();
+                $fullFilePath = public_path("{$destinationPath}/{$fileName}");
+                $extension = strtolower($request->file('img_src_file')->getClientOriginalExtension());
+                $modifiedName = (rand(100000, 999999)).'_'.time().'.'.$extension;
+                // Move file to the destination and set image path in data
+                $file->move(public_path($destinationPath), $modifiedName);
+                $data['img_src'] = "{$modifiedName}";
+                $data['image_name'] = "{$fileName}";
+            }
+
+            // Create thePartnerSponsor record
+            $thePartnerSponsor = thePartnerSponsor::create($data);
+
+            // Return success response
+            return response()->json([
+                'status' => 'success',
+                'message' => 'thePartnerSponsor created successfully.',
+                'data' => $thePartnerSponsor,
+            ], 201);
+        } catch (\Exception $e) {
+            // Return error response in case of exception
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Failed to create thePartnerSponsor.',
+                'error' => $e->getMessage(),
+            ], 500);
+        }
+    }
+
+    public function deleteThePartnerSponsor($id)
+    {
+        try {
+            // Find the record by ID
+            $thePartnerSponsor = ThePartnerSponsor::find($id);
+
+            // Check if the record exists
+            if (! $thePartnerSponsor) {
+                return response()->json([
+                    'status' => 'error',
+                    'message' => 'thePartnerSponsor not found.',
+                ], 404);
+            }
+
+            // Delete the image file if it exists
+            if ($thePartnerSponsor->img_src) {
+                $filePath = public_path('images/thePartnerSponsor/'.$thePartnerSponsor->img_src);
+                if (file_exists($filePath)) {
+                    unlink($filePath);
+                }
+            }
+
+            // Delete the record
+            $thePartnerSponsor->delete();
+
+            return response()->json([
+                'status' => 'success',
+                'message' => 'thePartnerSponsor deleted successfully.',
+            ], 200);
+        } catch (\Exception $e) {
+            // Return error response in case of exception
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Failed to delete thePartnerSponsor.',
                 'error' => $e->getMessage(),
             ], 500);
         }

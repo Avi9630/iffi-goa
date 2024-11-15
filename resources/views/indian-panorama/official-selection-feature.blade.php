@@ -11,7 +11,18 @@
     <!-- Inner Page Banner Section -->
     <div class="container-fluid page-header bannerBg-feature py-5">
         <div class="container text-center ">
-            <h1 class="page-title-header">IFFI Festival 2023 Feature film</h1>
+            {{-- @php
+                if (isset($year) && $year != 2024) {
+                    $yearly = 2023;
+                } else {
+                    $yearly = $year;
+                }
+            @endphp --}}
+            @php
+                $yearly = isset($year) && $year != 2024 ? 2023 : $year ?? 2024;
+            @endphp
+            <h1 class="page-title-header">IFFI Festival {{ $yearly }} Feature film
+            </h1>
         </div>
     </div>
 
