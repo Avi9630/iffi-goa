@@ -49,7 +49,7 @@ class ApiNewController extends Controller
                 $fileNameOriginal = $file->getClientOriginalName(); // Adding timestamp to prevent name collision
 
                 $extension = strtolower($request->file('img_src_file')->getClientOriginalExtension());
-                $modifiedName = (rand(100000, 999999)).'_'.time().'.'.$extension;
+                $modifiedName = (rand(100000, 999999)) . '_' . time() . '.' . $extension;
 
                 $file->move(public_path($destinationPath), $modifiedName);
                 $fileName = $modifiedName;
@@ -81,7 +81,6 @@ class ApiNewController extends Controller
                 'message' => 'News update created successfully!',
                 'data' => $newsUpdate,
             ]);
-
         } catch (\Exception $e) {
             // Return exception response in case of an error
             return $this->response('exception', [
@@ -146,7 +145,7 @@ class ApiNewController extends Controller
                     $fileName = $file->getClientOriginalName();
                     $fileNameOriginal = $file->getClientOriginalName();
                     $extension = strtolower($request->file('img_src_file')->getClientOriginalExtension());
-                    $modifiedName = (rand(100000, 999999)).'_'.time().'.'.$extension;
+                    $modifiedName = (rand(100000, 999999)) . '_' . time() . '.' . $extension;
 
                     $file->move(public_path($destinationPath), $modifiedName);
                     $fileName = $modifiedName;
@@ -180,7 +179,6 @@ class ApiNewController extends Controller
                 ];
 
                 return $this->response('success', $response);
-
             } else {
                 $response = [
                     'message' => 'Record not found!',
@@ -236,7 +234,7 @@ class ApiNewController extends Controller
         } catch (\Exception $e) {
             // Step 4: Handle any unexpected errors
             return $this->response('exception', [
-                'message' => 'An error occurred: '.$e->getMessage(),
+                'message' => 'An error occurred: ' . $e->getMessage(),
             ], 500); // 500 status for internal server error
         }
     }
@@ -276,7 +274,6 @@ class ApiNewController extends Controller
                 'message' => 'Ticker updated successfully!',
                 'data' => $ticker,
             ], 200);
-
         } catch (\Exception $e) {
             // Return an error response for any exceptions
             return response()->json([
@@ -306,11 +303,10 @@ class ApiNewController extends Controller
             ];
 
             return $this->response('success', $response);
-
         } catch (\Exception $e) {
             // Handle any exceptions and return an error response
             $response = [
-                'message' => 'An error occurred: '.$e->getMessage(),
+                'message' => 'An error occurred: ' . $e->getMessage(),
             ];
 
             return $this->response('exception', $response);
@@ -351,7 +347,7 @@ class ApiNewController extends Controller
         } catch (\Exception $e) {
             // Step 6: Handle any unexpected errors
             return $this->response('exception', [
-                'message' => 'An error occurred: '.$e->getMessage(),
+                'message' => 'An error occurred: ' . $e->getMessage(),
             ], 500); // 500 status for internal server error
         }
     }
@@ -373,11 +369,10 @@ class ApiNewController extends Controller
                 'status' => 'success',
                 'message' => 'Ticker deleted successfully',
             ], 200);
-
         } catch (\Exception $e) {
             return response()->json([
                 'status' => 'error',
-                'message' => 'An error occurred: '.$e->getMessage(),
+                'message' => 'An error occurred: ' . $e->getMessage(),
             ], 500);
         }
     }
@@ -433,7 +428,6 @@ class ApiNewController extends Controller
                 'message' => 'Gallery updates retrieved successfully.',
                 'data' => $galleryData,
             ], 200);
-
         } catch (\Exception $e) {
             // Return error response in case of exception
             return response()->json([
@@ -465,7 +459,6 @@ class ApiNewController extends Controller
                 ];
 
                 return $this->response('validatorerrors', $output);
-
             }
 
             // Set up initial data
@@ -500,7 +493,6 @@ class ApiNewController extends Controller
                 'message' => 'Gallery updated successfully.',
                 'data' => $gallery,
             ], 200);
-
         } catch (\Illuminate\Validation\ValidationException $e) {
             // Return validation error response
             return response()->json([
@@ -540,7 +532,6 @@ class ApiNewController extends Controller
                 'message' => 'Gallery data retrieved successfully.',
                 'data' => $galleryData,
             ], 200);
-
         } catch (\Exception $e) {
             // Return error response in case of exception
             return response()->json([
@@ -593,7 +584,7 @@ class ApiNewController extends Controller
                 $fileName = $file->getClientOriginalName();
                 $fullFilePath = public_path("{$destinationPath}/{$fileName}");
                 $extension = strtolower($request->file('img_src_file')->getClientOriginalExtension());
-                $modifiedName = (rand(100000, 999999)).'_'.time().'.'.$extension;
+                $modifiedName = (rand(100000, 999999)) . '_' . time() . '.' . $extension;
                 // Move file to the destination and set image path in data
                 $file->move(public_path($destinationPath), $modifiedName);
                 $data['image'] = "{$modifiedName}";
@@ -609,7 +600,6 @@ class ApiNewController extends Controller
                 'message' => 'Gallery created successfully.',
                 'data' => $gallery,
             ], 201);
-
         } catch (\Exception $e) {
             // Return error response in case of exception
             return response()->json([
@@ -642,7 +632,6 @@ class ApiNewController extends Controller
                 'message' => 'thePeacock updates retrieved successfully.',
                 'data' => $thePeacockData,
             ], 200);
-
         } catch (\Exception $e) {
             // Return error response in case of exception
             return response()->json([
@@ -673,7 +662,6 @@ class ApiNewController extends Controller
                 ];
 
                 return $this->response('validatorerrors', $output);
-
             }
             $thePeacock = ThePeacock::findOrFail($id);
             $fileNameOriginal = $thePeacock->image_name;
@@ -684,7 +672,7 @@ class ApiNewController extends Controller
                 $destinationPath = 'images/thePeacock';
                 $fileNameOriginal = $file->getClientOriginalName();
                 $extension = strtolower($file->getClientOriginalExtension());
-                $modifiedName = rand(100000, 999999).'_'.time().'.'.$extension;
+                $modifiedName = rand(100000, 999999) . '_' . time() . '.' . $extension;
                 $file->move(public_path($destinationPath), $modifiedName);
                 $fileName = $modifiedName;
             }
@@ -707,7 +695,6 @@ class ApiNewController extends Controller
                 'message' => 'thePeacock updated successfully.',
                 'year' => $thePeacock,
             ], 200);
-
         } catch (\Illuminate\Validation\ValidationException $e) {
             // Return validation error response
             return response()->json([
@@ -746,7 +733,6 @@ class ApiNewController extends Controller
                 'message' => 'thePeacock data retrieved successfully.',
                 'data' => $thePeacockData,
             ], 200);
-
         } catch (\Exception $e) {
             // Return error response in case of exception
             return response()->json([
@@ -799,7 +785,7 @@ class ApiNewController extends Controller
                 $fileName = $file->getClientOriginalName();
                 $fullFilePath = public_path("{$destinationPath}/{$fileName}");
                 $extension = strtolower($request->file('img_src_file')->getClientOriginalExtension());
-                $modifiedName = (rand(100000, 999999)).'_'.time().'.'.$extension;
+                $modifiedName = (rand(100000, 999999)) . '_' . time() . '.' . $extension;
                 // Move file to the destination and set image path in data
                 $file->move(public_path($destinationPath), $modifiedName);
                 $data['img_src'] = "{$modifiedName}";
@@ -815,7 +801,6 @@ class ApiNewController extends Controller
                 'message' => 'ThePeacock created successfully.',
                 'data' => $ThePeacock,
             ], 201);
-
         } catch (\Exception $e) {
             // Return error response in case of exception
             return response()->json([
@@ -842,7 +827,7 @@ class ApiNewController extends Controller
 
             // Delete the image file if it exists
             if ($thePeacock->img_src) {
-                $filePath = public_path('images/gallery_images/'.$thePeacock->img_src);
+                $filePath = public_path('images/gallery_images/' . $thePeacock->img_src);
                 if (file_exists($filePath)) {
                     unlink($filePath);
                 }
@@ -855,7 +840,6 @@ class ApiNewController extends Controller
                 'status' => 'success',
                 'message' => 'ThePeacock deleted successfully.',
             ], 200);
-
         } catch (\Exception $e) {
             // Return error response in case of exception
             return response()->json([
@@ -891,7 +875,7 @@ class ApiNewController extends Controller
         } catch (\Exception $e) {
             // Step 4: Handle any unexpected errors
             return $this->response('exception', [
-                'message' => 'An error occurred: '.$e->getMessage(),
+                'message' => 'An error occurred: ' . $e->getMessage(),
             ], 500); // 500 status for internal server error
         }
     }
@@ -935,7 +919,6 @@ class ApiNewController extends Controller
                 'message' => 'LatestUpdate updated successfully!',
                 'data' => $LatestUpdate,
             ], 200);
-
         } catch (\Exception $e) {
             // Return an error response for any exceptions
             return response()->json([
@@ -965,11 +948,10 @@ class ApiNewController extends Controller
             ];
 
             return $this->response('success', $response);
-
         } catch (\Exception $e) {
             // Handle any exceptions and return an error response
             $response = [
-                'message' => 'An error occurred: '.$e->getMessage(),
+                'message' => 'An error occurred: ' . $e->getMessage(),
             ];
 
             return $this->response('exception', $response);
@@ -1012,7 +994,7 @@ class ApiNewController extends Controller
         } catch (\Exception $e) {
             // Step 6: Handle any unexpected errors
             return $this->response('exception', [
-                'message' => 'An error occurred: '.$e->getMessage(),
+                'message' => 'An error occurred: ' . $e->getMessage(),
             ], 500); // 500 status for internal server error
         }
     }
@@ -1034,24 +1016,21 @@ class ApiNewController extends Controller
                 'status' => 'success',
                 'message' => 'LatestUpdate deleted successfully',
             ], 200);
-
         } catch (\Exception $e) {
             return response()->json([
                 'status' => 'error',
-                'message' => 'An error occurred: '.$e->getMessage(),
+                'message' => 'An error occurred: ' . $e->getMessage(),
             ], 500);
         }
     }
 
     // cureted section 2024
-    public function curetedsection2024()
+    public function curetedSection2024(Request $request)
     {
         try {
-            // Fetch all curetedsection records from the database
-            // $curetedsectionData = curetedsection2024::all();
+            $payload = $request->all();
             $curetedsectionData = curetedsection2024::where('international_cinema.year', 2024)->get();
 
-            // Check if data exists
             if ($curetedsectionData->isEmpty()) {
                 return response()->json([
                     'status' => 'success',
@@ -1059,14 +1038,11 @@ class ApiNewController extends Controller
                     'data' => [],
                 ], 200);
             }
-
-            // Return the curetedsection data as JSON response
             return response()->json([
                 'status' => 'success',
                 'message' => 'curetedsection updates retrieved successfully.',
                 'data' => $curetedsectionData,
             ], 200);
-
         } catch (\Exception $e) {
             // Return error response in case of exception
             return response()->json([
@@ -1117,7 +1093,7 @@ class ApiNewController extends Controller
                     $destinationPath = 'images/cureted-section';
                     $fileNameOriginal = $file->getClientOriginalName();
                     $extension = strtolower($file->getClientOriginalExtension());
-                    $modifiedName = rand(100000, 999999).'_'.time().'.'.$extension;
+                    $modifiedName = rand(100000, 999999) . '_' . time() . '.' . $extension;
                     $file->move(public_path($destinationPath), $modifiedName);
                     $fileName = $modifiedName;
                 }
@@ -1153,7 +1129,6 @@ class ApiNewController extends Controller
                     'message' => 'Record not found!',
                 ], 404);
             }
-
         } catch (\Exception $e) {
             return response()->json([
                 'status' => 'error',
@@ -1237,7 +1212,7 @@ class ApiNewController extends Controller
                 $fileName = $file->getClientOriginalName();
                 $fullFilePath = public_path("{$destinationPath}/{$fileName}");
                 $extension = strtolower($request->file('img_src_file')->getClientOriginalExtension());
-                $modifiedName = (rand(100000, 999999)).'_'.time().'.'.$extension;
+                $modifiedName = (rand(100000, 999999)) . '_' . time() . '.' . $extension;
                 // Move file to the destination and set image path in data
                 $file->move(public_path($destinationPath), $modifiedName);
                 $data['img_src'] = "{$modifiedName}";
@@ -1253,7 +1228,6 @@ class ApiNewController extends Controller
                 'message' => 'cureted section 2024 created successfully.',
                 'data' => $curetedsection2024,
             ], 201);
-
         } catch (\Exception $e) {
             // Return error response in case of exception
             return response()->json([
@@ -1286,7 +1260,6 @@ class ApiNewController extends Controller
                 'message' => 'MasterClass updates retrieved successfully.',
                 'data' => $MasterClassData,
             ], 200);
-
         } catch (\Exception $e) {
             // Return error response in case of exception
             return response()->json([
@@ -1318,7 +1291,6 @@ class ApiNewController extends Controller
                 ];
 
                 return $this->response('validatorerrors', $output);
-
             }
 
             // Set up initial data
@@ -1353,7 +1325,6 @@ class ApiNewController extends Controller
                 'message' => 'MasterClass updated successfully.',
                 'data' => $MasterClass,
             ], 200);
-
         } catch (\Illuminate\Validation\ValidationException $e) {
             // Return validation error response
             return response()->json([
@@ -1393,7 +1364,6 @@ class ApiNewController extends Controller
                 'message' => 'MasterClass data retrieved successfully.',
                 'data' => $MasterClassData,
             ], 200);
-
         } catch (\Exception $e) {
             // Return error response in case of exception
             return response()->json([
@@ -1446,7 +1416,7 @@ class ApiNewController extends Controller
                 $fileName = $file->getClientOriginalName();
                 $fullFilePath = public_path("{$destinationPath}/{$fileName}");
                 $extension = strtolower($request->file('img_src_file')->getClientOriginalExtension());
-                $modifiedName = (rand(100000, 999999)).'_'.time().'.'.$extension;
+                $modifiedName = (rand(100000, 999999)) . '_' . time() . '.' . $extension;
                 // Move file to the destination and set image path in data
                 $file->move(public_path($destinationPath), $modifiedName);
                 $data['image'] = "{$modifiedName}";
@@ -1462,7 +1432,6 @@ class ApiNewController extends Controller
                 'message' => 'MasterClass created successfully.',
                 'data' => $MasterClass,
             ], 201);
-
         } catch (\Exception $e) {
             // Return error response in case of exception
             return response()->json([

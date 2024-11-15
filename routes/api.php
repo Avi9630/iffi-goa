@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\api\InternationalCinemaController;
 use App\Http\Controllers\api\IndianPanoramaController;
 use App\Http\Controllers\ApiController;
 use App\Http\Controllers\ApiNewController;
@@ -82,16 +83,25 @@ Route::post('master_classes_create', [ApiNewController::class, 'createMasterClas
 // Route::delete('master_classes_delete/{id}', [ApiNewController::class, 'master_classes Delete'])->name('master_classes -delete');
 
 // Cureted Section 2024
-Route::get('get-CuretedSection2024',            [ApiNewController::class, 'CuretedSection2024'])->name('get-CuretedSection2024');
+Route::get('get-CuretedSection2024',            [ApiNewController::class, 'curetedSection2024'])->name('get-CuretedSection2024');
 Route::post('update-curetedsection2024/{id}',   [ApiNewController::class, 'updateCuretedsection2024'])->name('update-curetedsection2024');
 Route::post('create-Curetedsection2024',        [ApiNewController::class, 'createCuretedsection2024'])->name('create-Curetedsection2024');
 Route::get('get-curetedsection2024-ById/{id}',  [ApiNewController::class, 'curetedsection2024ById'])->name('get-curetedsection2024-ById');
 Route::get('get-CuretedSection2024',            [ApiNewController::class, 'CuretedSection2024'])->name('get-CuretedSection2024');
 
 
-// Indian Panorama
+//INDIAN-PANORAMA
 
 Route::get('indian-panorama-list/{year}',   [IndianPanoramaController::class, 'indianPanoramaList'])->name('indian-panorama-list');
 Route::post('create-indian-panorama',       [IndianPanoramaController::class, 'createIndianPanorama'])->name('create-indian-panorama');
 Route::post('update-indian-panorama',       [IndianPanoramaController::class, 'updateIndianPanorama'])->name('update-indian-panorama');
 Route::post('delete-indian-panorama',       [IndianPanoramaController::class, 'deleteIndianPanorama'])->name('delete-indian-panorama');
+Route::post('active-deactive',              [IndianPanoramaController::class, 'activeDeactive'])->name('active-deactive');
+
+//INTERNATIONAL-CINEMA
+
+Route::get('get-curated-section',           [InternationalCinemaController::class, 'getCuratedSection'])->name('get-curated-section');
+Route::get('internation-cinema-list',       [InternationalCinemaController::class, 'internationCinemaList'])->name('internation-cinema-list');
+Route::post('internation-cinema-create',    [InternationalCinemaController::class, 'internationCinemaCreate'])->name('internation-cinema-create');
+Route::post('internation-cinema-update',    [InternationalCinemaController::class, 'internationCinemaUpdate'])->name('internation-cinema-update');
+Route::get('internation-cinema-by-id',      [InternationalCinemaController::class, 'getById'])->name('internation-cinema-by-id');
