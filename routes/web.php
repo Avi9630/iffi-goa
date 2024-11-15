@@ -1,9 +1,9 @@
 <?php
 
-use App\Http\Controllers\InternationalCinemaController;
-use App\Http\Controllers\IndianPanoramaController;
-use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\CommonController;
+use App\Http\Controllers\ContactUsController;
+use App\Http\Controllers\IndianPanoramaController;
+use App\Http\Controllers\InternationalCinemaController;
 use App\Http\Controllers\TickerController;
 use Illuminate\Support\Facades\Route;
 
@@ -20,6 +20,10 @@ Route::controller(CommonController::class)->group(function () {
     Route::get('highlights', 'highlights')->name('highlights');
 
     Route::get('international-cinema/2024/{slug}', 'curetedsection2024')->name('cureted-section-2024');
+
+    Route::get('debut-director-films/2024/{slug}', 'curetedsection2024')->name('debut-director-films');
+
+    Route::get('best-web-series/2024/{slug}', 'curetedsection2024')->name('best-web-series');
 
     Route::get('international-cinema/competition/{slug}', 'internationalCompetitionDetail')->name('international-competition-detail');
 
@@ -42,6 +46,8 @@ Route::controller(CommonController::class)->group(function () {
     Route::get('media/news-and-update', 'newsUpdate')->name('news-and-update');
 
     Route::get('/gallery/date', 'getGalleryByDate')->name('gallery.byDate');
+
+    Route::get('partners-sponsors', 'partnersSponsors')->name('partners-sponsors');
 });
 
 Route::controller(InternationalCinemaController::class)->group(function () {

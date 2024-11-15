@@ -11,7 +11,7 @@
     <!-- Inner Page Banner Section -->
     <div class="container-fluid page-header bannerBg-feature py-5">
         <div class="container text-center ">
-            <h1 class="page-title-header">IFFI Festival 2023 Feature film</h1>
+            <h1 class="page-title-header">IFFI Festival 2024 Feature film</h1>
         </div>
     </div>
 
