@@ -56,7 +56,6 @@ class CommonController extends Controller
     public function curetedsection2024(Request $request, $slug)
     {
         //  exit($slug);
-
         $array = [
             'international-competition' => 1,
             'best-debut-feature-film-of-a-director' => 13,
@@ -133,26 +132,6 @@ class CommonController extends Controller
         return view('international-cinema.2024.curated-section-2024', compact('internationalCinemas', 'curatedSections', 'curatedSectionId'));
     }
 
-    // public function internationalCompetitionDetail($id)
-    // {
-    //     // dd($id);
-    //     $internationalCinemas = DB::table('international_cinema')
-    //         ->join(
-    //             'international_curated_sections',
-    //             'international_cinema.curated_section_id',
-    //             '=',
-    //             'international_curated_sections.id',
-    //         )
-    //         ->where('international_cinema.status', '=', '1')
-    //         ->select(
-    //             'international_cinema.*',
-    //             'international_curated_sections.title AS curated_section_title',
-    //         )
-    //         ->limit(20)
-    //         ->get();
-    //     return view('pages.international-competition-detail');
-    // }
-
     public function internationalCompetitionDetail($slug)
     {
         $fetch_cinema_details = DB::table('international_cinema')
@@ -180,11 +159,11 @@ class CommonController extends Controller
         return view(
             'pages.international-competition-detail',
             [
-                'fetch_cinema_details' => $fetch_cinema_details,
-                'fetch_cinema_basic_details' => $fetch_cinema_basic_details,
-                'currentURL' => $currentURL,
-                'list_international_cinema_images' => $list_international_cinema_images,
-                'list_international_cinema_videos' => $list_international_cinema_videos,
+                'fetch_cinema_details'              =>  $fetch_cinema_details,
+                'fetch_cinema_basic_details'        =>  $fetch_cinema_basic_details,
+                'currentURL'                        =>  $currentURL,
+                'list_international_cinema_images'  =>  $list_international_cinema_images,
+                'list_international_cinema_videos'  =>  $list_international_cinema_videos,
             ]
         );
     }

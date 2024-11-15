@@ -1,8 +1,8 @@
 <?php
 
+use App\Http\Controllers\api\ApiController;
 use App\Http\Controllers\api\IndianPanoramaController;
 use App\Http\Controllers\api\InternationalCinemaController;
-use App\Http\Controllers\ApiController;
 use App\Http\Controllers\ApiNewController;
 use App\Models\Ticker;
 use Illuminate\Http\Request;
@@ -106,8 +106,37 @@ Route::post('active-deactive', [IndianPanoramaController::class, 'activeDeactive
 
 //INTERNATIONAL-CINEMA
 
-Route::get('get-curated-section', [InternationalCinemaController::class, 'getCuratedSection'])->name('get-curated-section');
-Route::get('internation-cinema-list', [InternationalCinemaController::class, 'internationCinemaList'])->name('internation-cinema-list');
-Route::post('internation-cinema-create', [InternationalCinemaController::class, 'internationCinemaCreate'])->name('internation-cinema-create');
-Route::post('internation-cinema-update/{id}', [InternationalCinemaController::class, 'internationCinemaUpdate'])->name('internation-cinema-update');
-Route::get('internation-cinema-by-id/{id}', [InternationalCinemaController::class, 'getById'])->name('internation-cinema-by-id');
+Route::get(
+    'get-curated-section',
+    [InternationalCinemaController::class, 'getCuratedSection']
+)->name('get-curated-section');
+
+Route::get(
+    'international-cinema-list',
+    [InternationalCinemaController::class, 'internationCinemaList']
+)->name('international-cinema-list');
+
+Route::post(
+    'international-cinema-create',
+    [InternationalCinemaController::class, 'internationCinemaCreate']
+)->name('international-cinema-create');
+
+Route::post(
+    'international-cinema-update',
+    [InternationalCinemaController::class, 'internationCinemaUpdate']
+)->name('international-cinema-update');
+
+Route::get(
+    'international-cinema-by-id',
+    [InternationalCinemaController::class, 'getById']
+)->name('internation-cinema-by-id');
+
+Route::post(
+    'international-cinema-basic-detail/{international_cinema_id}',
+    [InternationalCinemaController::class, 'createBasicDetail']
+)->name('international-cinema-basic-detail');
+
+// PRESS-RELEASE
+
+Route::post('add-press-release', [ApiController::class, 'addPressRelease'])->name('add-press-release');
+Route::post('update-press-release', [ApiController::class, 'updatePressRelease'])->name('update-press-release');
