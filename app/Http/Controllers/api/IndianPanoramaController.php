@@ -2,15 +2,12 @@
 
 namespace App\Http\Controllers\api;
 
+use Illuminate\Support\Facades\Validator;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\File;
 use App\Http\Traits\RESPONSETrait;
 use App\Models\IndianPanorama;
-use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
-use App\Models\NewsUpdate;
-use App\Models\Ticker;
-use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\Crypt;
 
 class IndianPanoramaController extends Controller
 {
@@ -240,6 +237,57 @@ class IndianPanoramaController extends Controller
                     'message' => 'Records not found.!',
                 ];
 
+                return $this->response('exception', $response);
+            }
+        } catch (\Exception $e) {
+            $response = [
+                'message' => $e->getMessage(),
+            ];
+
+            return $this->response('exception', $response);
+        }
+    }
+
+    public function activeDeactive(Request $request)
+    {
+        $payload = $request->all();
+        $validatorArray = [
+            'id'        => 'required|numeric',
+            'status' => 'required|in:1,0',
+        ];
+        $messagesArray = [];
+        $validator = Validator::make($payload, $validatorArray, $messagesArray);
+        if ($validator->fails()) {
+            $output = [
+                'message' => $validator->errors()->first(),
+            ];
+
+            return $this->response('validatorerrors', $output);
+        }
+
+        try {
+            $indianPanorama = IndianPanorama::find($payload['id']);
+            if ($indianPanorama) {
+                $update = $indianPanorama->update(['status' => $payload['status']]);
+                if ($update) {
+                    $message = [
+                        0 => 'Deactivated',
+                        1 => 'Activated',
+                    ];
+                    $response = [
+                        'message' => 'Account ' . $message[$payload['status']] . ' successfully',
+                    ];
+                    return $this->response('success', $response);
+                } else {
+                    $response = [
+                        'message' => 'Record not found!',
+                    ];
+                    return $this->response('exception', $response);
+                }
+            } else {
+                $response = [
+                    'message' => 'Record not found!',
+                ];
                 return $this->response('exception', $response);
             }
         } catch (\Exception $e) {

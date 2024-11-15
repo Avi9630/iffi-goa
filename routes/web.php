@@ -1,9 +1,9 @@
 <?php
 
-use App\Http\Controllers\CommonController;
-use App\Http\Controllers\ContactUsController;
-use App\Http\Controllers\IndianPanoramaController;
 use App\Http\Controllers\InternationalCinemaController;
+use App\Http\Controllers\IndianPanoramaController;
+use App\Http\Controllers\ContactUsController;
+use App\Http\Controllers\CommonController;
 use App\Http\Controllers\TickerController;
 use Illuminate\Support\Facades\Route;
 
@@ -31,8 +31,6 @@ Route::controller(CommonController::class)->group(function () {
 
     Route::get('technical-committee', 'technicalCommittee')->name('technical-committee');
 
-    // Route::get('faq',                                       'faq')->name('faq');
-
     Route::get('media/gallery', 'gallery')->name('gallery');
 
     Route::get('media/gallery-2024', 'gallery2024')->name('gallery-2024');
@@ -44,10 +42,6 @@ Route::controller(CommonController::class)->group(function () {
     Route::get('media/news-and-update', 'newsUpdate')->name('news-and-update');
 
     Route::get('/gallery/date', 'getGalleryByDate')->name('gallery.byDate');
-
-    // Route::get('master-class/{id}', 'masterClass')->name('master-class');
-
-    // Route::get('news-and-update',                 'newsUpdate1')->name('news-and-update');
 });
 
 Route::controller(InternationalCinemaController::class)->group(function () {
