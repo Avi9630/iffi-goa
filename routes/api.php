@@ -127,9 +127,9 @@ Route::post(
 )->name('international-cinema-update');
 
 Route::get(
-    'international-cinema-by-id',
+    'international-cinema-by-id/{id}',
     [InternationalCinemaController::class, 'getById']
-)->name('internation-cinema-by-id');
+)->name('international-cinema-by-id');
 
 Route::post(
     'international-cinema-basic-detail/{international_cinema_id}',
