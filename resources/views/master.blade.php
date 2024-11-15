@@ -154,7 +154,7 @@
                 },
                 {
                     title: "Character and Actor: The Power of Nuance ",
-                    moderator: "",
+                    moderator: "Dhanya Varma",
                     panel: "In Conversation",
                     date: "Nov 21st, 2024, 2.30 PM TO 3.15 PM",
                     // description: "This captivating discussion features Manisha Koirala Inconversation with Rana Daggubati. They will delve into the theory of commercial success as both of them have experienced big screen and streaming. From their early works to their recent streaming projects, Rana and Koirala will discuss the challenges and opportunities of adapting their storytelling for different platforms, and how they continue to captivate audiences with their powerful performances.",
@@ -162,17 +162,18 @@
                             name: "Nithya Menen",
                             description: "Nithya Menen is an Indian actress and singer who works primarily in Malayalam, Telugu, Tamil and Kannada films. Menen is noted for her strong portrayals, and is a recipient of several accolades including a National Film Award, four Filmfare Awards South, two South Indian International Movie Awards and two Nandi Awards.She started her career as a child artist, in the French-Indian English film, Hanuman, playing the younger sister to Tabu's character. She made her screen debut with the Kannada film 7 O' Clock. She established herself as a leading South Indian actress with the Tamil romantic film O Kadhal Kanmani. She went onto appear in such commercially successful films — the Malayalam films Ustad Hotel, Bangalore Days and 100 Days of Love, and the Tamil films Kanchana 2 , 24, Mersal etc",
                             image: "{{ asset('public/images/master-class/Nithya Menen.jpg') }}"
-                        },
-                        {
-                            name: "Dhanya Varma",
-                            description: "Dhanya Varma is a Talk show host, TV presenter and Producer with over 20 years of experience in the Media . She hosts and produces the talk show  I AM with Dhanya Varma on YouTube. She was formerly producer and anchor with Star Tv Mumbai. She has also acted in movies and hosted the popular interview show The happiness project on Kappa Tv.",
-                            image: "{{ asset('public/images/master-class/Dhanya Varma.jpg') }}"
                         }
+                        // ,
+                        // {
+                        //     name: "Dhanya Varma",
+                        //     description: "Dhanya Varma is a Talk show host, TV presenter and Producer with over 20 years of experience in the Media . She hosts and produces the talk show  I AM with Dhanya Varma on YouTube. She was formerly producer and anchor with Star Tv Mumbai. She has also acted in movies and hosted the popular interview show The happiness project on Kappa Tv.",
+                        //     image: "{{ asset('public/images/master-class/Dhanya Varma.jpg') }}"
+                        // }
                     ]
                 },
                 {
                     title: "Mastering the Unseen",
-                    moderator: "",
+                    moderator: "Sudhir Srinivasan",
                     panel: "In Conversation",
                     date: "Nov 21st, 2024, 3.30 PM TO 4.15 PM",
                     // description: "This captivating discussion features Manisha Koirala Inconversation with Rana Daggubati. They will delve into the theory of commercial success as both of them have experienced big screen and streaming. From their early works to their recent streaming projects, Rana and Koirala will discuss the challenges and opportunities of adapting their storytelling for different platforms, and how they continue to captivate audiences with their powerful performances.",
@@ -180,12 +181,13 @@
                             name: "Manoj Bajpayee",
                             description: "Manoj Bajpayee is an Indian actor who predominantly works in Hindi, Telugu and Tamil = films. He is the recipient of numerous accolades including four National Film Awards, four Filmfare Awards, and two Asia Pacific Screen Awards. In 2019, he was awarded India's fourth-highest civilian honour, the Padma Shri, for his contributions to art. He is known for Bandit Queen, Satya, Dil Pe Mat Le Yaar! Ghaath, Joram, Sirf Ek Bandaa Kaafi Hai, Suraj Pe Mangal Bhari, Mrs. Serial Killer, Sonchiriya, Love Sonia, The Family Man and many more.",
                             image: "{{ asset('public/images/master-class/Manoj Bajpayee.jpg') }}"
-                        },
-                        {
-                            name: "Sudhir Srinivasan",
-                            description: "Sudhir Srinivasan is the Executive Editor (Entertainment) at The New Indian Express. With over 15 years of experience at leading mainstream media organizations such as The Hindu and The Times of India, he is recognized for his sharp, insightful film reviews and interviews, often imbued with emotional, social, and psychological depth.Focusing primarily on Southern cinema, Sudhir has conducted rich, long-form conversations with renowned figures like Kamal Haasan, Mani Ratnam, Vetrimaaran, as well as international icons like the Russo Brothers and Christian Bale. His ability to facilitate engaging discussions extends to his role as a moderator at esteemed film festivals.",
-                            image: "{{ asset('public/images/master-class/Sudhir Srinivasan.jpg') }}"
                         }
+                        // ,
+                        // {
+                        //     name: "Sudhir Srinivasan",
+                        //     description: "Sudhir Srinivasan is the Executive Editor (Entertainment) at The New Indian Express. With over 15 years of experience at leading mainstream media organizations such as The Hindu and The Times of India, he is recognized for his sharp, insightful film reviews and interviews, often imbued with emotional, social, and psychological depth.Focusing primarily on Southern cinema, Sudhir has conducted rich, long-form conversations with renowned figures like Kamal Haasan, Mani Ratnam, Vetrimaaran, as well as international icons like the Russo Brothers and Christian Bale. His ability to facilitate engaging discussions extends to his role as a moderator at esteemed film festivals.",
+                        //     image: "{{ asset('public/images/master-class/Sudhir Srinivasan.jpg') }}"
+                        // }
                     ]
                 },
                 // {
@@ -239,7 +241,7 @@
                 },
                 {
                     title: "Living Movies: Filmmaking and the Creative Life",
-                    moderator: "",
+                    moderator: "Shantanu Moitra",
                     panel: "In Conversation",
                     date: "Nov-22nd, 2024, 12.30 AM TO 01.30 PM",
                     description: "In this session, the acclaimed filmmaker Vidhu Vinod Chopra takes us on a journey through the creative process, sharing his experiences, challenges, and the philosophy behind living through cinema.With decades of storytelling mastery,Mr. Chopra will bring us the insights into how films not only reflect life but become a living entity of their own, inspiring generations ",
@@ -247,12 +249,13 @@
                             name: "Vidhu Vinod Chopra",
                             description: "Vidhu Vinod Chopra is an Indian film director, producer, screenwriter and editor. He is the recipient of several accolades, including four National Film Awards, ten Filmfare Awards and an Academy Award nomination. He is known for directing films such as the crime drama Parinda (1989), the patriotic romantic drama 1942: A Love Story (1994), the action drama Mission Kashmir (2000) and the biographical drama 12th Fail (2023). He is also known for producing the Munna Bhai film series, 3 Idiots (2009), PK (2014), and Sanju (2018) under his banner Vinod Chopra Films.",
                             image: "{{ asset('public/images/master-class/Vidhu Vinod Chopra.jpg') }}"
-                        },
-                        {
-                            name: "Shantanu Moitra",
-                            description: "Shantanu Moitra is an Indian pianist, score composer and musician who has composed songs for the Hindi film industry, and is most known for his scores in the films Parineeta, Hazaaron Khwaishein Aisi, Lage Raho Munnabhai and 3 Idiots, and private albums, Mann ke Manjeere and Ab ke Saawan sung by Shubha Mudgal. In 2014, he received the National Film Award for Best Music Direction (Background Score) for Na Bangaaru Talli.",
-                            image: "{{ asset('public/images/master-class/Shantanu Moitra.jpg') }}"
-                        },
+                        }
+                        // ,
+                        // {
+                        //     name: "Shantanu Moitra",
+                        //     description: "Shantanu Moitra is an Indian pianist, score composer and musician who has composed songs for the Hindi film industry, and is most known for his scores in the films Parineeta, Hazaaron Khwaishein Aisi, Lage Raho Munnabhai and 3 Idiots, and private albums, Mann ke Manjeere and Ab ke Saawan sung by Shubha Mudgal. In 2014, he received the National Film Award for Best Music Direction (Background Score) for Na Bangaaru Talli.",
+                        //     image: "{{ asset('public/images/master-class/Shantanu Moitra.jpg') }}"
+                        // },
                     ]
                 },
                 {
@@ -274,7 +277,7 @@
                 },
                 {
                     title: "Transforming Literary Masterpieces into Engaging Films",
-                    moderator: "Gautham Vasudeva Menon",
+                    moderator: "Gautham Vasudev Menon",
                     panel: "In Conversation",
                     date: "Nov-22nd, 2024, 04.30 PM TO 06.00 PM",
                     // description: "This session brings together renowned sound designers Nakul Kamte and Eric Hoehn, who will explore the power of sound design in shaping the emotional and narrative depth of films. From subtle  ambient layers to impactful soundscapes, they will share their craft in building the aural  dimension that completes the cinematic experience.",
@@ -284,7 +287,7 @@
                             image: "{{ asset('public/images/master-class/Mani Ratnam.jpg') }}"
                         },
                         {
-                            name: "Gautham Vasudev Menon ",
+                            name: "Gautham Vasudev Menon",
                             description: "Gautham Vasudev Menon is an Indian film director, screenwriter, film producer and actor who predominantly works in Tamil film industry. He has also directed Telugu and Hindi films that are either simultaneously shot with or remakes of his own Tamil films. He has won two National Film Awards, three Nandi Awards and one Tamil Nadu State Film Award. Many of his films have been both critically acclaimed and commercially successful, most notably his romantic films Minnale (2001), Vaaranam Aayiram (2008), Vinnaithaandi Varuvaayaa (2010), his cop action thrillers Kaakha Kaakha (2003), Vettaiyaadu Vilaiyaadu (2006), Yennai Arindhaal (2015) and his gangster drama Vendhu Thanindhathu Kaadu (2022). His 2008 Tamil film, ‘Vaaranam Aayiram’ won the National Film Award for Best Feature Film in Tamil. Menon produces films through his film production company named Photon Kathaas. His production Thanga Meengal (2013) won the National Film Award for Best Feature Film in Tamil.The 2010 romantic blockbuster Vinnaithaandi Varuvaayaa, was re-released and it completed its 1000th day in theaters recentrly.",
                             image: "{{ asset('public/images/master-class/Gautham Vasudev Menon.jpg') }}"
                         }
@@ -301,7 +304,7 @@
                     date: "Nov-23rd, 2024, 11.00 AM TO 12.00 PM",
                     // description: "This centenary special celebrates the legendary actor & producer Akkineni Nageswara Rao (ANR).",
                     speakers: [{
-                        name: "Sivakartikeyan",
+                        name: "Sivakarthikeyan",
                         description: "Sivakarthikeyan is a celebrated Indian actor, playback singer, lyricist, and film producer, primarily known for his works in Tamil cinema. Starting with Marina in 2012, he found success with films like Kedi Billa Killadi Ranga, Ethir Neechal, and Varuthapadatha Valibar Sangam, and penned lyrics for songs like 'Chellamma' and 'Arabic Kuthu.' His notable films include Maan Karate, Kaaki Sattai, Hero, Rajinimurugan, Doctor, Maaveeran, Don, Ayalaan, GOAT, and Amaran. He also produces films under Sivakarthikeyan Productions.",
                         image: "{{ asset('public/images/master-class/Sivakarthikeyan.jpg') }}"
                     }]
@@ -373,26 +376,27 @@
                     panel: "Master Class",
                     date: "Nov-24th, 2024, 11.00 AM TO 12.30 PM",
                     speakers: [{
-                        name: "Anthon Muller, Strategic Director - Barco Cinema",
+                        name: "Anthon Muller, Global Director of Strategic Marketing at Barco Cinema",
                         description: "With over 20 years of experience in strategic marketing, product development, and digital innovation, Anthon Muller is a senior executive from Belgium known for leading high-performing teams across industries such as telecommunications, media, technology, cloud, and IoT. He is currently serving as the Global Director of Strategic Marketing: Post Production, Services & Innovation at Barco.",
                         image: "{{ asset('public/images/master-class/Anthon Muller.jpg') }}"
                     }]
                 },
                 {
                     title: "From Big Screen to Streaming",
-                    moderator: "",
+                    moderator: "Vikramaditya Motwane",
                     panel: "In Conversation",
                     date: "Nov-24th, 2024, 12.45 PM TO 01.30 PM",
                     speakers: [{
                             name: "Manisha Koirala",
                             description: "Manisha Koirala is an actress who works in Indian films, predominantly in Hindi and Tamil. Known for her work in both commercial and independent cinema, she is the recipient of several accolades, including three Filmfare Awards and one Filmfare Awards South. In 2001, the Government of Nepal awarded her with the Order of Gorkha Dakshina Bahu. Later, she featured in the Netflix production 'Lust Stories' and portrayed Nargis in Sanju. She has since starred in the period drama series Heeramandi.",
                             image: "{{ asset('public/images/master-class/Manisha Koirala.jpg') }}"
-                        },
-                        {
-                            name: "Vikramaditya Motwane",
-                            description: "Vikramaditya Motwane is an Indian film director, producer and screenwriter who works in Hindi cinema. He is known for films like Udaan, Lootera, Trapped, and Bhavesh Joshi Superhero.His directorial debut Udaan was selected to compete in the Un Certain Regard category at the 2010 Cannes Film Festival and also won seven Filmfare awards. Motwane is the creator of Netflix's first Indian series Sacred Games.",
-                            image: "{{ asset('public/images/master-class/Vikramaditya Motwane.jpg') }}"
                         }
+                        // ,
+                        // {
+                        //     name: "Vikramaditya Motwane",
+                        //     description: "Vikramaditya Motwane is an Indian film director, producer and screenwriter who works in Hindi cinema. He is known for films like Udaan, Lootera, Trapped, and Bhavesh Joshi Superhero.His directorial debut Udaan was selected to compete in the Un Certain Regard category at the 2010 Cannes Film Festival and also won seven Filmfare awards. Motwane is the creator of Netflix's first Indian series Sacred Games.",
+                        //     image: "{{ asset('public/images/master-class/Vikramaditya Motwane.jpg') }}"
+                        // }
                     ]
                 },
                 {
@@ -413,7 +417,7 @@
                     panel: "Panel Discussion",
                     date: "Nov-24th, 2024, 04.30 PM TO 06.00 PM",
                     speakers: [{
-                            name: "Dr. Sacchidanad Joshi",
+                            name: "Dr. Sachchidanand Joshi",
                             description: "Dr. Sachchidanand Joshi is the Member Secretary and Executive and Academic Head of the Indira Gandhi National Centre for the Arts (IGNCA) and a noted writer, poet, and actor, who has published extensively on topics including media, communication, history, culture, education, and policy; he notably edited speeches of Prime Minister Shri Narendra Modi for the Publication Division and co-edited Connecting through Culture: An Overview of India`s Soft Power Strengths with Dr. Vinay Sahastrabuddhe, and his recent publications include Sachchidanand Joshi ki Lokpriya Kahaniya (2017), Putrikameshti (2021), and Low Hanging Fruits (2024), along with four collections of short stories and three poetry books, with his speeches compiled in Mera Desh Mera Dharm (2 volumes). Dr. Joshi has played a pivotal role in cultural and educational policymaking and led significant projects, including artwork for the New Parliament Building, Bharat Mandapam, and Prerana School, from curation to execution. He is currently leading the installation of the Indian Pavilion exhibit at the Osaka Expo 2025.",
                         image: "{{ asset('public/images/master-class/Dr. Sachchidanand Joshi.jpg') }}"
                     },
@@ -548,7 +552,7 @@
         // 27 November Modal Data Start
         nov27: [{
                 title: "Tapan Sinha-Centenary session-The Spectrum and the Soul",
-                moderator: "Ratnotoma Sen",
+                moderator: "Ratnottama Sengupta",
                 panel: "Panel Discussion",
                 date: "Nov-27th, 2024, 11.00 AM TO 12.00 PM",
                 speakers: [{
@@ -557,14 +561,14 @@
                         image: "{{ asset('public/images/master-class/Arjun Chakrabarty.jpg') }}"
                     },
                     {
-                        name: "N Manu Chakravarthy",
-                        description: "Manu Chakravarthy is an accomplished scholar with an M.A. in English from the University of Mysore, specializing in European Classics, Literary Criticism, and Cultural Theory, currently serving as a visiting professor at various universities and film institutes while sharing his extensive knowledge on cultural and film theory; his extensive research experience is highlighted by his leadership roles in prestigious film festivals such as Ajanta-Ellora, Thrissur, and Kerala International Film Festivals, in addition to chairing the jury for the K R Mohanan endowment award and the Chidananda Dasgupta Memorial awards for best film criticism.",
-                        image: "{{ asset('public/images/master-class/Manu Chakravarthy.jpg') }}"
-                    },
-                    {
                         name: "Sharmila Tagore",
                         description: "Sharmila Tagore is an Indian actress primarily known for her work in Hindi and Bengali films. Regarded among the greatest actresses in the history of Indian Cinema. she is known for portraying both traditional and modern women. Tagore is a recipient of two National Film Awards and the Filmfare Lifetime Achievement Award for her contributions to Hindi cinema. In 2013, the Government of India honoured her with Padma Bhushan, India's third highest civilian honour for her contributions to Indian culture through performing arts.",
                         image: "{{ asset('public/images/master-class/Sharmila Tagore.jpg') }}"
+                    },
+                    {
+                        name: "N Manu Chakravarthy",
+                        description: "Manu Chakravarthy is an accomplished scholar with an M.A. in English from the University of Mysore, specializing in European Classics, Literary Criticism, and Cultural Theory, currently serving as a visiting professor at various universities and film institutes while sharing his extensive knowledge on cultural and film theory; his extensive research experience is highlighted by his leadership roles in prestigious film festivals such as Ajanta-Ellora, Thrissur, and Kerala International Film Festivals, in addition to chairing the jury for the K R Mohanan endowment award and the Chidananda Dasgupta Memorial awards for best film criticism.",
+                        image: "{{ asset('public/images/master-class/Manu Chakravarthy.jpg') }}"
                     }
                 ]
             },
@@ -573,11 +577,12 @@
                 moderator: "Jayprad Desai",
                 panel: "Panel Discussion",
                 date: "Nov-27th, 2024, 12.30 PM TO 01.30 PM",
-                speakers: [{
-                        name: "Kshitij Mehta (Collective Artists Network)",
-                        description: "Kshitij Mehta is the co-founder of Collective Artists Network, which is a multi-faceted content powerhouse with unparalleled access to India’s leading talent across categories. He is an alma mater of Welingkar Institute of Management with specialisation in E-biz & Marketing. He has also been a film critic with DesiMartini and Jam Magazine.",
-                        image: "{{ asset('public/images/master-class/Kshitij Mehta.png') }}"
-                    },
+                speakers: [
+                    // {
+                    //     name: "Kshitij Mehta (Collective Artists Network)",
+                    //     description: "Kshitij Mehta is the co-founder of Collective Artists Network, which is a multi-faceted content powerhouse with unparalleled access to India’s leading talent across categories. He is an alma mater of Welingkar Institute of Management with specialisation in E-biz & Marketing. He has also been a film critic with DesiMartini and Jam Magazine.",
+                    //     image: "{{ asset('public/images/master-class/Kshitij Mehta.png') }}"
+                    // },
                     {
                         name: "Himesh Mankad",
                         description: "Himesh Mankad is a Film Journalist at Pinkvilla. He started the journey in the world of entertainment journalism by being one of the three founders of the entertainment portal, Talking Moviez in 2013. Later, he shifted the base into professional journalism with Catch News, a subsidiary of Rajasthan Patrika, from July 1, 2015. This was followed by a career at Indian Express youth wing, InUth. He has formerly worked with Mumbai Mirror, Catch News, Bollywood Hungama!.",
@@ -600,29 +605,30 @@
                     description: "A R Rahman is an Indian music composer, record producer, singer, songwriter, musician, multi-instrumentalist, and philanthropist known for his works in Indian cinema; predominantly in Tamil and Hindi films, with occasional forays in international cinema. He is a recipient of six National Film Awards, two Academy Awards, two Grammy Awards, a BAFTA Award, a Golden Globe Award, six Tamil Nadu State Film Awards, fifteen Filmfare Awards, and eighteen Filmfare Awards South. In 2010, the Government of India conferred him with the Padma Bhushan.",
                     image: "{{ asset('public/images/master-class/A R Rahman.jpg') }}"
                 }]
-            },
-            {
-                title: "From Local to Global - What's the Roadmap for International Box Office Success? ",
-                moderator: "Taran Adarsh",
-                panel: "Panel Discussion",
-                date: "Nov-27th, 2024, 04.30 PM TO 06.00 PM",
-                speakers: [{
-                        name: "Ali Abbas Zafar",
-                        description: "Ali Abbas Zafar is an Indian filmmaker and screenwriter known for directing blockbuster films like Sultan, Tiger Zinda Hai, and Bharat. His works are celebrated for their dynamic action sequences and larger-than-life storytelling. Zafar’s films often explore intense emotional journeys and complex relationships, making him one of Bollywood’s most commercially successful directors. His vision has helped elevate Indian cinema on the global stage, further expanding its international audience.",
-                        image: "{{ asset('public/images/master-class/Ali Abbas Zafar.jpg') }}"
-                    },
-                    {
-                        name: "Vijay Krishna Acharya",
-                        description: "Vijay Krishna Acharya is an Indian film director, screenwriter, dialogue writer known for his works in Hindi films and television shows. He began his career as a scriptwriter on the first two films of the Dhoom franchise. His directorial debut was the film Tashan and he went on to direct Dhoom 3 which became the highest grossing Bollywood film of all time in international markets at the time of its release.",
-                        image: "{{ asset('public/images/master-class/Vijay Krishna Acharya.png') }}"
-                    },
-                    {
-                        name: "Mahaveer Jain",
-                        description: "Mahaveer Jain is an Indian film producer known for his work on several Hindi films, including Dekh Indian Circus (2011), Chalo Jeetey Hain (2018), Malaal (2019), Khandaani Shafakhana (2019), Uunchai (2022), Ram Setu (2022), and Good Luck Jerry (2022). He began his career with Dekh Indian Circus, which won four National Film Awards, and has since produced award-winning projects like Chalo Jeetey Hain. His production company also partnered with Warner Music India for the 2023 Global Peace Anthem titled 'Coming Home'.",
-                        image: "{{ asset('public/images/master-class/Mahaveer Jain.png') }}"
-                    }
-                ]
             }
+            // ,
+            // {
+            //     title: "From Local to Global - What's the Roadmap for International Box Office Success? ",
+            //     moderator: "Taran Adarsh",
+            //     panel: "Panel Discussion",
+            //     date: "Nov-27th, 2024, 04.30 PM TO 06.00 PM",
+            //     speakers: [{
+            //             name: "Ali Abbas Zafar",
+            //             description: "Ali Abbas Zafar is an Indian filmmaker and screenwriter known for directing blockbuster films like Sultan, Tiger Zinda Hai, and Bharat. His works are celebrated for their dynamic action sequences and larger-than-life storytelling. Zafar’s films often explore intense emotional journeys and complex relationships, making him one of Bollywood’s most commercially successful directors. His vision has helped elevate Indian cinema on the global stage, further expanding its international audience.",
+            //             image: "{{ asset('public/images/master-class/Ali Abbas Zafar.jpg') }}"
+            //         },
+            //         {
+            //             name: "Vijay Krishna Acharya",
+            //             description: "Vijay Krishna Acharya is an Indian film director, screenwriter, dialogue writer known for his works in Hindi films and television shows. He began his career as a scriptwriter on the first two films of the Dhoom franchise. His directorial debut was the film Tashan and he went on to direct Dhoom 3 which became the highest grossing Bollywood film of all time in international markets at the time of its release.",
+            //             image: "{{ asset('public/images/master-class/Vijay Krishna Acharya.png') }}"
+            //         },
+            //         {
+            //             name: "Mahaveer Jain",
+            //             description: "Mahaveer Jain is an Indian film producer known for his work on several Hindi films, including Dekh Indian Circus (2011), Chalo Jeetey Hain (2018), Malaal (2019), Khandaani Shafakhana (2019), Uunchai (2022), Ram Setu (2022), and Good Luck Jerry (2022). He began his career with Dekh Indian Circus, which won four National Film Awards, and has since produced award-winning projects like Chalo Jeetey Hain. His production company also partnered with Warner Music India for the 2023 Global Peace Anthem titled 'Coming Home'.",
+            //             image: "{{ asset('public/images/master-class/Mahaveer Jain.png') }}"
+            //         }
+            //     ]
+            // }
         ],
     };
 
@@ -656,13 +662,13 @@
                     // Populate the speaker list item
                     li.innerHTML =
                         `
-                                                                                                                                                                                                                                                                                                                                                                                                <div class="ms-2 me-auto">
-                                                                                                                                                                                                                                                                                                                                                                                                    <div class="fw-bold">${speaker.name}</div>
-                                                                                                                                                                                                                                                                                                                                                                                                </div>
-                                                                                                                                                                                                                                                                                                                                                                                                <span>
-                                                                                                                                                                                                                                                                                                                                                                                                    <img src="${speaker.image}" class="img-circle" alt="${speaker.name}">
-                                                                                                                                                                                                                                                                                                                                                                                                </span>
-                                                                                                                                                                                                                                                                                                                                                                                            `;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <div class="ms-2 me-auto">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <div class="fw-bold">${speaker.name}</div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <img src="${speaker.image}" class="img-circle" alt="${speaker.name}">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                `;
                         speakersList.appendChild(li);
                     });
                 }

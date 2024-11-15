@@ -67,10 +67,10 @@
         <div class="col-md-3 col-12">
             <div class="user-profile-icon">
                 <ul>
-                    <li>
+                    {{-- <li>
                         <img src="{{ asset('public/images/master-class/Kshitij Mehta.png') }}" alt="image"
                             class="img-fluid">
-                    </li>
+                    </li> --}}
                     <li>
                         <img src="{{ asset('public/images/master-class/Himesh Mankad.jpg') }}" alt="image"
                             class="img-fluid">
@@ -123,7 +123,7 @@
     </div>
 </div>
 
-<div class="mt-4 mb-4">
+{{-- <div class="mt-4 mb-4">
     <h2 class="pb-3">November 27th, 2024</h2>
     <div class="row">
         <div class="col-md-2 col-12">
@@ -168,4 +168,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
