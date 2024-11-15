@@ -605,29 +605,30 @@
                     description: "A R Rahman is an Indian music composer, record producer, singer, songwriter, musician, multi-instrumentalist, and philanthropist known for his works in Indian cinema; predominantly in Tamil and Hindi films, with occasional forays in international cinema. He is a recipient of six National Film Awards, two Academy Awards, two Grammy Awards, a BAFTA Award, a Golden Globe Award, six Tamil Nadu State Film Awards, fifteen Filmfare Awards, and eighteen Filmfare Awards South. In 2010, the Government of India conferred him with the Padma Bhushan.",
                     image: "{{ asset('public/images/master-class/A R Rahman.jpg') }}"
                 }]
-            },
-            {
-                title: "From Local to Global - What's the Roadmap for International Box Office Success? ",
-                moderator: "Taran Adarsh",
-                panel: "Panel Discussion",
-                date: "Nov-27th, 2024, 04.30 PM TO 06.00 PM",
-                speakers: [{
-                        name: "Ali Abbas Zafar",
-                        description: "Ali Abbas Zafar is an Indian filmmaker and screenwriter known for directing blockbuster films like Sultan, Tiger Zinda Hai, and Bharat. His works are celebrated for their dynamic action sequences and larger-than-life storytelling. Zafar’s films often explore intense emotional journeys and complex relationships, making him one of Bollywood’s most commercially successful directors. His vision has helped elevate Indian cinema on the global stage, further expanding its international audience.",
-                        image: "{{ asset('public/images/master-class/Ali Abbas Zafar.jpg') }}"
-                    },
-                    {
-                        name: "Vijay Krishna Acharya",
-                        description: "Vijay Krishna Acharya is an Indian film director, screenwriter, dialogue writer known for his works in Hindi films and television shows. He began his career as a scriptwriter on the first two films of the Dhoom franchise. His directorial debut was the film Tashan and he went on to direct Dhoom 3 which became the highest grossing Bollywood film of all time in international markets at the time of its release.",
-                        image: "{{ asset('public/images/master-class/Vijay Krishna Acharya.png') }}"
-                    },
-                    {
-                        name: "Mahaveer Jain",
-                        description: "Mahaveer Jain is an Indian film producer known for his work on several Hindi films, including Dekh Indian Circus (2011), Chalo Jeetey Hain (2018), Malaal (2019), Khandaani Shafakhana (2019), Uunchai (2022), Ram Setu (2022), and Good Luck Jerry (2022). He began his career with Dekh Indian Circus, which won four National Film Awards, and has since produced award-winning projects like Chalo Jeetey Hain. His production company also partnered with Warner Music India for the 2023 Global Peace Anthem titled 'Coming Home'.",
-                        image: "{{ asset('public/images/master-class/Mahaveer Jain.png') }}"
-                    }
-                ]
             }
+            // ,
+            // {
+            //     title: "From Local to Global - What's the Roadmap for International Box Office Success? ",
+            //     moderator: "Taran Adarsh",
+            //     panel: "Panel Discussion",
+            //     date: "Nov-27th, 2024, 04.30 PM TO 06.00 PM",
+            //     speakers: [{
+            //             name: "Ali Abbas Zafar",
+            //             description: "Ali Abbas Zafar is an Indian filmmaker and screenwriter known for directing blockbuster films like Sultan, Tiger Zinda Hai, and Bharat. His works are celebrated for their dynamic action sequences and larger-than-life storytelling. Zafar’s films often explore intense emotional journeys and complex relationships, making him one of Bollywood’s most commercially successful directors. His vision has helped elevate Indian cinema on the global stage, further expanding its international audience.",
+            //             image: "{{ asset('public/images/master-class/Ali Abbas Zafar.jpg') }}"
+            //         },
+            //         {
+            //             name: "Vijay Krishna Acharya",
+            //             description: "Vijay Krishna Acharya is an Indian film director, screenwriter, dialogue writer known for his works in Hindi films and television shows. He began his career as a scriptwriter on the first two films of the Dhoom franchise. His directorial debut was the film Tashan and he went on to direct Dhoom 3 which became the highest grossing Bollywood film of all time in international markets at the time of its release.",
+            //             image: "{{ asset('public/images/master-class/Vijay Krishna Acharya.png') }}"
+            //         },
+            //         {
+            //             name: "Mahaveer Jain",
+            //             description: "Mahaveer Jain is an Indian film producer known for his work on several Hindi films, including Dekh Indian Circus (2011), Chalo Jeetey Hain (2018), Malaal (2019), Khandaani Shafakhana (2019), Uunchai (2022), Ram Setu (2022), and Good Luck Jerry (2022). He began his career with Dekh Indian Circus, which won four National Film Awards, and has since produced award-winning projects like Chalo Jeetey Hain. His production company also partnered with Warner Music India for the 2023 Global Peace Anthem titled 'Coming Home'.",
+            //             image: "{{ asset('public/images/master-class/Mahaveer Jain.png') }}"
+            //         }
+            //     ]
+            // }
         ],
     };
 
@@ -661,13 +662,13 @@
                     // Populate the speaker list item
                     li.innerHTML =
                         `
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <div class="ms-2 me-auto">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <div class="fw-bold">${speaker.name}</div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <span>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <img src="${speaker.image}" class="img-circle" alt="${speaker.name}">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </span>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    `;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <div class="ms-2 me-auto">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <div class="fw-bold">${speaker.name}</div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <img src="${speaker.image}" class="img-circle" alt="${speaker.name}">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                `;
                         speakersList.appendChild(li);
                     });
                 }
