@@ -141,7 +141,7 @@
         }
     });
 </script>
-@if (Route::currentRouteName() == '/')
+{{-- @if (Route::currentRouteName() == '/')
     <script>
         $(document).ready(function() {
             $("#update_btn").modal("show");
@@ -150,7 +150,45 @@
             }, 10000);
         });
     </script>
-@endif
+@endif --}}
+
+<script>
+    $(document).ready(function() {
+        // Function to get a cookie by name
+        function getCookie(name) {
+            let cookieArr = document.cookie.split(";");
+            for (let i = 0; i < cookieArr.length; i++) {
+                let cookiePair = cookieArr[i].split("=");
+                if (name == cookiePair[0].trim()) {
+                    return decodeURIComponent(cookiePair[1]);
+                }
+            }
+            return null;
+        }
+
+        // Function to set a cookie
+        function setCookie(name, value, days) {
+            let date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            document.cookie = name + "=" + encodeURIComponent(value) + "; expires=" + date.toUTCString() +
+                "; path=/";
+        }
+
+        // Check if the 'modalShown' cookie is set
+        if (!getCookie('modalShown')) {
+            // Show the modal
+            $("#update_btn").modal("show");
+
+            // Set a timeout to hide the modal after 10 seconds
+            setTimeout(() => {
+                $("#update_btn").modal("hide");
+            }, 10000);
+
+            // Set the 'modalShown' cookie to expire in 1 day
+            setCookie('modalShown', 'true', 1);
+        }
+    });
+</script>
 </body>
 
 </html>
