@@ -21,6 +21,10 @@ Route::controller(CommonController::class)->group(function () {
 
     Route::get('international-cinema/2024/{slug}', 'curetedsection2024')->name('cureted-section-2024');
 
+    Route::get('debut-director-films/2024/{slug}', 'curetedsection2024')->name('debut-director-films');
+
+    Route::get('best-web-series/2024/{slug}', 'curetedsection2024')->name('best-web-series');
+
     Route::get('international-cinema/competition/{slug}', 'internationalCompetitionDetail')->name('international-competition-detail');
 
     Route::get('director-debut-film', 'directorDebutFilm')->name('director-debut-film');
@@ -30,8 +34,6 @@ Route::controller(CommonController::class)->group(function () {
     Route::get('sponsors', 'sponsors')->name('sponsors');
 
     Route::get('technical-committee', 'technicalCommittee')->name('technical-committee');
-
-    // Route::get('faq',                                       'faq')->name('faq');
 
     Route::get('media/gallery', 'gallery')->name('gallery');
 
@@ -45,9 +47,7 @@ Route::controller(CommonController::class)->group(function () {
 
     Route::get('/gallery/date', 'getGalleryByDate')->name('gallery.byDate');
 
-    // Route::get('master-class/{id}', 'masterClass')->name('master-class');
-
-    // Route::get('news-and-update',                 'newsUpdate1')->name('news-and-update');
+    Route::get('partners-sponsors', 'partnersSponsors')->name('partners-sponsors');
 });
 
 Route::controller(InternationalCinemaController::class)->group(function () {

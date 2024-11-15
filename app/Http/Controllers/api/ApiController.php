@@ -1,18 +1,19 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\api;
 
+use App\Http\Controllers\Controller;
 use App\Http\Traits\RESPONSETrait;
 use App\Models\NewsUpdate;
 use App\Models\Ticker;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Validator;
+use DB;
 
 class ApiController extends Controller
 {
     use RESPONSETrait;
-
     //Ticker
     public function tickerList()
     {
@@ -158,7 +159,6 @@ class ApiController extends Controller
     }
 
     //newsUpdate
-
     public function newsUpdateList()
     {
         try {
@@ -587,6 +587,153 @@ class ApiController extends Controller
                     'message' => 'Records not found.!',
                 ];
 
+                return $this->response('exception', $response);
+            }
+        } catch (\Exception $e) {
+            $response = [
+                'message' => $e->getMessage(),
+            ];
+
+            return $this->response('exception', $response);
+        }
+    }
+
+    public function addPressRelease(Request $request)
+    {
+        $payload = $request->all();
+        $validatorArray = [
+            'title'  =>  'required',
+            'file'   =>  'required|file|mimes:pdf|max:10240',
+        ];
+        $messagesArray = [];
+        $validator = Validator::make($payload, $validatorArray, $messagesArray);
+        if ($validator->fails()) {
+            $output = [
+                'message' => $validator->errors()->first(),
+            ];
+            return $this->response('validatorerrors', $output);
+        }
+
+        try {
+            if ($request->hasFile('file')) {
+                $file               =   $request->file('file');
+                $destinationPath    =   'press_release';
+                $originalFilename   =   $file->getClientOriginalName();
+                $fullFilePath       =   public_path($destinationPath . '/' . $originalFilename);
+                if (File::exists($fullFilePath)) {
+                    $response = [
+                        'message' => 'File with the same name already exists !! Please re-upload file!!',
+                        'existing_file' => $originalFilename,
+                    ];
+                    return $this->response('conflict', $response);
+                }
+                $file->move(public_path($destinationPath), $originalFilename);
+                $data = [
+                    'title'         =>  $payload['title'],
+                    'publish_date'  =>  date('Y-m-d'),
+                    'img_src'       =>  $originalFilename,
+                    'link'          =>  'https://www.iffigoa.org/public/press_release/' . $originalFilename,
+                ];
+                $created = DB::table('mst_press_release')->insert($data);
+                if ($created) {
+                    $response = [
+                        'message'   =>  'Press release successfully.!',
+                        'data'      =>  $data,
+                    ];
+                    return $this->response('success', $response);
+                } else {
+                    $response = [
+                        'message' => 'Press release not created !!',
+                    ];
+                    return $this->response('exception', $response);
+                }
+            } else {
+                $response = [
+                    'message' => 'File not uploaded.!',
+                ];
+
+                return $this->response('exception', $response);
+            }
+        } catch (\Exception $e) {
+            $response = [
+                'message' => $e->getMessage(),
+            ];
+
+            return $this->response('exception', $response);
+        }
+    }
+
+    public function updatePressRelease(Request $request)
+    {
+        $payload = $request->all();
+        $validatorArray = [
+            'id'    =>  'required|numeric',
+            'title' =>  '',
+            'file'  =>  'file|mimes:pdf|max:10240',
+        ];
+        $messagesArray = [];
+        $validator = Validator::make($payload, $validatorArray, $messagesArray);
+        if ($validator->fails()) {
+            $output = [
+                'message' => $validator->errors()->first(),
+            ];
+
+            return $this->response('validatorerrors', $output);
+        }
+
+        try {
+            $pressRelease = DB::table('mst_press_release')->select('*')->where(['id' => $payload['id']])->first();
+            if ($pressRelease) {
+                if ($request->hasFile('file')) {
+                    $file               =   $request->file('file');
+                    $destinationPath    =   'press_release';
+                    $originalFilename   =   $file->getClientOriginalName();
+                    $fullFilePath       =   public_path($destinationPath . '/' . $originalFilename);
+                    if (File::exists($fullFilePath)) {
+                        File::delete($fullFilePath);
+                        $file->move(public_path($destinationPath), $originalFilename);
+                    } else {
+                        $file->move(public_path($destinationPath), $originalFilename);
+                    }
+                    $data = [
+                        'title'         =>  isset($payload['title']) ? $payload['title'] : $pressRelease->title,
+                        'img_src'       =>  $originalFilename,
+                        'link'          =>  'https://www.iffigoa.org/public/press_release/' . $originalFilename,
+                    ];
+                    $updated = DB::table('mst_press_release')->where(['id' => $payload['id']])->update($data);
+                    if ($updated) {
+                        $response = [
+                            'message'   =>  'Press release updated successfully.!',
+                            'data'      =>  $data,
+                        ];
+                        return $this->response('success', $response);
+                    } else {
+                        $response = [
+                            'message' => 'Press release not updated !!',
+                        ];
+                        return $this->response('exception', $response);
+                    }
+                } else {
+                    $data = [
+                        'title' =>  isset($payload['title']) ? $payload['title'] : $pressRelease->title,
+                    ];
+                    $updated = DB::table('mst_press_release')->where(['id' => $payload['id']])->update($data);
+                    if ($updated) {
+                        $response = [
+                            'message'   =>  'Press release updated successfully.!'
+                        ];
+                        return $this->response('success', $response);
+                    } else {
+                        $response = [
+                            'message' => 'Nothing to updated !!',
+                        ];
+                        return $this->response('success', $response);
+                    }
+                }
+            } else {
+                $response = [
+                    'message' => 'Record not found !!',
+                ];
                 return $this->response('exception', $response);
             }
         } catch (\Exception $e) {
