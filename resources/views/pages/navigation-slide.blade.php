@@ -65,8 +65,14 @@
                                         <a href="{{ route('faq') }}" class="nav-link">FAQ's</a>
                                     </li>
 
-                                    <li class="nav-item">
+                                    {{-- <li class="nav-item">
                                         <a href="{{ asset('partners-sponsors') }}" class="nav-link">Our Partners &
+                                            Sponsors</a>
+                                    </li> --}}
+
+                                    <li class="nav-item">
+                                        <a href="{{ asset('public/images/sponsor/IFFI-55-Sponsers-Page.pdf') }}"
+                                            class="nav-link" target="_blank">Our Partners &
                                             Sponsors</a>
                                     </li>
 
