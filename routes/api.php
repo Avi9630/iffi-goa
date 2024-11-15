@@ -122,7 +122,7 @@ Route::post(
 )->name('international-cinema-create');
 
 Route::post(
-    'international-cinema-update',
+    'international-cinema-update/{id}',
     [InternationalCinemaController::class, 'internationCinemaUpdate']
 )->name('international-cinema-update');
 
