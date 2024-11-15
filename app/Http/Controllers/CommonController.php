@@ -71,12 +71,14 @@ class CommonController extends Controller
             'experimental-films' => 9,
             'rising-stars' => 17,
             'mission-life' => 18,
-            'treaty-country-uk' => 19,
+            'BFI@IFFI' => 19,
             'country-focus-australia' => 20,
             'accolades' => 21,
             'from-the-consulate' => 22,
             'opening-film' => 23,
             'closing-film' => 24,
+            'debut-director-films' => 25,
+            'best-web-series' => 26,
         ];
         //  echo '<pre>';
         // print_r($array);
@@ -92,18 +94,20 @@ class CommonController extends Controller
             9 => 'Experimental Films',
             10 => 'Macabre Dreams',
             11 => 'UNICEF',
-            13 => 'Best Debut Feature Film of a Director',
+            13 => 'Best Debut Feature Film of A Director',
             14 => 'DocuMontage',
             15 => 'Cinema of the World',
             16 => 'Restored Classics',
             17 => 'Rising Stars',
             18 => 'Mission Life',
-            19 => 'Treaty Country-UK',
+            19 => 'BFI@IFFI',
             20 => 'Country Focus: Australia',
             21 => 'Accolades',
             22 => 'From The Consulate',
             23 => 'Opening Film',
             24 => 'Closing Film',
+            25 => 'Official Selection - Debut Director Films',
+            26 => 'Official Selection - Best Web Series',
         ];
 
         $internationalCinemas = DB::table('international_cinema')
@@ -122,7 +126,7 @@ class CommonController extends Controller
                 'international_cinema.*',
                 'international_curated_sections.title AS curated_section_title'
             )
-            ->limit(20)
+            ->limit(80)
             ->get();
         //   exit('sada');
 
@@ -201,6 +205,7 @@ class CommonController extends Controller
             ->where('status', '=', '1')
             ->where('year', '=', $year)
             ->get();
+
         return $indianPanormas;
     }
 
@@ -388,4 +393,14 @@ class CommonController extends Controller
         return view('master-class.master', compact('masterClasses'));
     }
     // }
+
+    public function partnersSponsors()
+    {
+        $partnersSponsors = DB::table('the_partner_sponsor')->where('status', 1)->orderBy('id', 'DESC');
+
+        // dd($gallery);
+        return view('partnersSponsors.partnersSponsors', [
+            'partnersSponsors' => $partnersSponsors,
+        ]);
+    }
 }

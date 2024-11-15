@@ -45,7 +45,7 @@
             </div>
 
             @php
-                $features = ['Shri. Suneel Puranik', 'Shri. Sekhar Das', ' Shri. M. V. Raghu', 'Shri. Vinit Kanojia'];
+                $features = ['Shri. Suneel Puranik', 'Shri. Sekhar Das', ' Shri. M. V. Raghu', 'Shri. Vinit Kanojiya'];
             @endphp
 
             @foreach ($features as $key => $feature)
