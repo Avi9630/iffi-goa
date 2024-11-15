@@ -375,10 +375,13 @@ class CommonController extends Controller
 
     public function partnersSponsors()
     {
-        $partnersSponsors = DB::table('the_partner_sponsor')->where('status', 1)->orderBy('id', 'DESC');
 
-        // dd($gallery);
-        return view('partnersSponsors.partnersSponsors', [
+        $partnersSponsors = DB::table('the_partner_sponsor')
+            ->where('status', 1)
+            ->orderBy('id', 'DESC')
+            ->get();
+        dd($partnersSponsors);
+        return view('partnersSponsors.partner-sponsers', [
             'partnersSponsors' => $partnersSponsors,
         ]);
     }

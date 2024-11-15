@@ -68,6 +68,9 @@
                                     {{-- <li class="nav-item">
                                         <a href="{{ asset('partners-sponsors') }}" class="nav-link">Our Partners &
                                             Sponsors</a>
+
+                                        <a href="{{ route('partners-sponsors') }}" class="nav-link">Our Partners &
+                                            Sponsors</a>
                                     </li> --}}
 
                                     <li class="nav-item">
