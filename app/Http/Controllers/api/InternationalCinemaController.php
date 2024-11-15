@@ -103,8 +103,8 @@ class InternationalCinemaController extends Controller
                 $destinationPath = 'images/cureted-section';
                 $originalFilename = $file->getClientOriginalName();
                 $extension = $file->getClientOriginalExtension();
-                $hashedFilename = substr(md5($originalFilename.time()), 0, 20).'.'.$extension;
-                $fullFilePath = public_path($destinationPath.'/'.$hashedFilename);
+                $hashedFilename = substr(md5($originalFilename . time()), 0, 20) . '.' . $extension;
+                $fullFilePath = public_path($destinationPath . '/' . $hashedFilename);
                 if (File::exists($fullFilePath)) {
                     $response = [
                         'message' => 'File with the same name already exists.',
@@ -156,17 +156,16 @@ class InternationalCinemaController extends Controller
 
         $payload = $request->all();
         $validatorArray = [
-            // 'id' => 'required|numeric',
-            'curated_section_id' => 'required|string|max:255',
-            'title' => 'required|string|max:255',
-            'award' => 'string|max:255',
-            'directed_by' => 'required|string|max:255',
-            'country_of_origin' => 'required|string|max:255',
-            'language' => 'required|string|max:255',
-            'slug' => 'required|string|max:255',
-            'year' => 'required|string|max:4',
-            'img_src_file' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'status' => 'required|boolean',
+            'curated_section_id'    =>  'required|string|max:255',
+            'title'                 =>  '',
+            'award'                 =>  '',
+            'directed_by'           =>  '',
+            'country_of_origin'     =>  '',
+            'language'              =>  '',
+            'slug'                  =>  '',
+            'year'                  =>  'numeric',
+            'img_src_file'          =>  'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'status'                =>  'required|boolean',
         ];
         $messagesArray = [];
         $validator = Validator::make($payload, $validatorArray, $messagesArray);
@@ -186,8 +185,8 @@ class InternationalCinemaController extends Controller
                     $destinationPath = 'images/cureted-section';
                     $originalFilename = $file->getClientOriginalName();
                     $extension = $file->getClientOriginalExtension();
-                    $hashedFilename = substr(md5($originalFilename.time()), 0, 20).'.'.$extension;
-                    $fullFilePath = public_path($destinationPath.'/'.$hashedFilename);
+                    $hashedFilename = substr(md5($originalFilename . time()), 0, 20) . '.' . $extension;
+                    $fullFilePath = public_path($destinationPath . '/' . $hashedFilename);
 
                     if (File::exists($fullFilePath)) {
                         $response = [
