@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Traits\RESPONSETrait;
 use Illuminate\Http\Request;
 use App\Models\InternationalCinema;
+use App\Models\InternationalCinemaBasicDetail;
 use App\Models\InternationalCuratedSection;
 
 class InternationalCinemaController extends Controller
@@ -88,7 +89,6 @@ class InternationalCinemaController extends Controller
             ];
             return $this->response('validatorerrors', $output);
         }
-
         try {
 
             if ($request->hasFile('img_src')) {
@@ -272,32 +272,136 @@ class InternationalCinemaController extends Controller
         }
     }
 
-
-    public function curetedSection2024(Request $request)
+    public function createBasicDetail(Request $request, $id)
     {
-        try {
-            $payload = $request->all();
-            $curetedsectionData = curetedsection2024::where('international_cinema.year', 2024)->get();
+        $payload = $request->all();
 
-            if ($curetedsectionData->isEmpty()) {
-                return response()->json([
-                    'status' => 'success',
-                    'message' => 'No curetedsection updates found.',
-                    'data' => [],
-                ], 200);
+        $validatorArray = [
+            'director'              =>  '',
+            'producer'              =>  '',
+            'screenplay'            =>  '',
+            'editor'                =>  '',
+            'cast'                  =>  '',
+            'dop'                   =>  '',
+            'other_details'         =>  '',
+            'synopsis'              =>  '',
+            'producer_bio'          =>  '',
+            'sales_agent'           =>  '',
+            'award'                 =>  '',
+            'writer'                =>  '',
+            'trailer_link'          =>  '',
+            'official_selection'    =>  '',
+            'best_film_award'       =>  '',
+            'director_and_producer' =>  '',
+            'original_title'        =>  '',
+            'co_produced'           =>  '',
+            'festivals'             =>  '',
+            'drama'                 =>  '',
+            'history'               =>  '',
+            'nomination'            =>  '',
+            'status'                =>  'boolean',
+        ];
+
+        $messagesArray = [];
+        $validator = Validator::make($payload, $validatorArray, $messagesArray);
+        if ($validator->fails()) {
+            $output = [
+                'message' => $validator->errors()->first(),
+            ];
+            return $this->response('validatorerrors', $output);
+        }
+        try {
+
+            $getBasicBasicDetails = InternationalCinemaBasicDetail::where(['cinema_id' => $id])->first();
+            if ($getBasicBasicDetails) {
+                $dataToUpdate = [
+                    'director'              =>  isset($payload['director']) ? $payload['director'] : $getBasicBasicDetails['director'],
+                    'producer'              =>  isset($payload['producer']) ? $payload['producer'] : $getBasicBasicDetails['producer'],
+                    'screenplay'            =>  isset($payload['screenplay']) ? $payload['screenplay'] : $getBasicBasicDetails['screenplay'],
+                    'editor'                =>  isset($payload['editor']) ? $payload['editor'] : $getBasicBasicDetails['editor'],
+                    'cast'                  =>  isset($payload['cast']) ? $payload['cast'] : $getBasicBasicDetails['cast'],
+                    'dop'                   =>  isset($payload['dop']) ? $payload['dop'] : $getBasicBasicDetails['dop'],
+                    'other_details'         =>  isset($payload['other_details']) ? $payload['other_details'] : $getBasicBasicDetails['other_details'],
+                    'synopsis'              =>  isset($payload['synopsis']) ? $payload['synopsis'] : $getBasicBasicDetails['synopsis'],
+                    'producer_bio'          =>  isset($payload['producer_bio']) ? $payload['producer_bio'] : $getBasicBasicDetails['producer_bio'],
+                    'sales_agent'           =>  isset($payload['sales_agent']) ? $payload['sales_agent'] : $getBasicBasicDetails['sales_agent'],
+                    'award'                 =>  isset($payload['award']) ? $payload['award'] : $getBasicBasicDetails['award'],
+                    'writer'                =>  isset($payload['writer']) ? $payload['writer'] : $getBasicBasicDetails['writer'],
+                    'trailer_link'          =>  isset($payload['trailer_link']) ? $payload['trailer_link'] : $getBasicBasicDetails['trailer_link'],
+                    'official_selection'    =>  isset($payload['official_selection']) ? $payload['official_selection'] : $getBasicBasicDetails['official_selection'],
+                    'best_film_award'       =>  isset($payload['best_film_award']) ? $payload['best_film_award'] : $getBasicBasicDetails['best_film_award'],
+                    'director_and_producer' =>  isset($payload['director_and_producer']) ? $payload['director_and_producer'] : $getBasicBasicDetails['director_and_producer'],
+                    'original_title'        =>  isset($payload['original_title']) ? $payload['original_title'] : $getBasicBasicDetails['original_title'],
+                    'co_produced'           =>  isset($payload['co_produced']) ? $payload['co_produced'] : $getBasicBasicDetails['co_produced'],
+                    'festivals'             =>  isset($payload['festivals']) ? $payload['festivals'] : $getBasicBasicDetails['festivals'],
+                    'drama'                 =>  isset($payload['drama']) ? $payload['drama'] : $getBasicBasicDetails['drama'],
+                    'history'               =>  isset($payload['history']) ? $payload['history'] : $getBasicBasicDetails['history'],
+                    'nomination'            =>  isset($payload['nomination']) ? $payload['nomination'] : $getBasicBasicDetails['nomination'],
+                    'status'                =>  isset($payload['status']) ? $payload['status'] : $getBasicBasicDetails['status'],
+                    'created_by'            =>  1,
+                    'updated_by'            =>  1,
+                ];
+                $updateBasicDetails = $getBasicBasicDetails->update($dataToUpdate);
+                if ($updateBasicDetails) {
+                    $response = [
+                        'message' => 'Basic Details updated successfully!!',
+                        'data' => $getBasicBasicDetails,
+                    ];
+                    return $this->response('Basic details updated successfully!!', $response);
+                } else {
+                    $response = [
+                        'message' => 'Something went wrong to update basic details!! Please verify your data below!!',
+                        'data' => $dataToUpdate,
+                    ];
+                    return $this->response('exception', $response);
+                }
+            } else {
+
+                $dataToCreate = [
+                    'cinema_id'             =>  $id,
+                    'director'              =>  isset($payload['director']) ? $payload['director'] : '',
+                    'producer'              =>  isset($payload['producer']) ? $payload['producer'] : '',
+                    'screenplay'            =>  isset($payload['screenplay']) ? $payload['screenplay'] : '',
+                    'editor'                =>  isset($payload['editor']) ? $payload['editor'] : '',
+                    'cast'                  =>  isset($payload['cast']) ? $payload['cast'] : '',
+                    'dop'                   =>  isset($payload['dop']) ? $payload['dop'] : '',
+                    'other_details'         =>  isset($payload['other_details']) ? $payload['other_details'] : '',
+                    'synopsis'              =>  isset($payload['synopsis']) ? $payload['synopsis'] : '',
+                    'producer_bio'          =>  isset($payload['producer_bio']) ? $payload['producer_bio'] : '',
+                    'sales_agent'           =>  isset($payload['sales_agent']) ? $payload['sales_agent'] : '',
+                    'award'                 =>  isset($payload['award']) ? $payload['award'] : '',
+                    'writer'                =>  isset($payload['writer']) ? $payload['writer'] : '',
+                    'trailer_link'          =>  isset($payload['trailer_link']) ? $payload['trailer_link'] : '',
+                    'official_selection'    =>  isset($payload['official_selection']) ? $payload['official_selection'] : '',
+                    'best_film_award'       =>  isset($payload['best_film_award']) ? $payload['best_film_award'] : '',
+                    'director_and_producer' =>  isset($payload['director_and_producer']) ? $payload['director_and_producer'] : '',
+                    'original_title'        =>  isset($payload['original_title']) ? $payload['original_title'] : '',
+                    'co_produced'           =>  isset($payload['co_produced']) ? $payload['co_produced'] : '',
+                    'festivals'             =>  isset($payload['festivals']) ? $payload['festivals'] : '',
+                    'drama'                 =>  isset($payload['drama']) ? $payload['drama'] : '',
+                    'history'               =>  isset($payload['history']) ? $payload['history'] : '',
+                    'nomination'            =>  isset($payload['nomination']) ? $payload['nomination'] : '',
+                    'created_by'            =>  1,
+                ];
+                $createBasicDetails = InternationalCinemaBasicDetail::create($dataToCreate);
+                if ($createBasicDetails) {
+                    $response = [
+                        'message'   =>  'Basic Details created successfully!!',
+                        'data'      =>  $createBasicDetails,
+                    ];
+                    return $this->response('Basic details updated successfully!!', $response);
+                } else {
+                    $response = [
+                        'message'   =>  'Something went wrong to create basic details!!',
+                    ];
+                    return $this->response('exception', $response);
+                }
             }
-            return response()->json([
-                'status' => 'success',
-                'message' => 'curetedsection updates retrieved successfully.',
-                'data' => $curetedsectionData,
-            ], 200);
         } catch (\Exception $e) {
-            // Return error response in case of exception
-            return response()->json([
-                'status' => 'error',
-                'message' => 'Failed to retrieve curetedsection updates.',
-                'error' => $e->getMessage(),
-            ], 500);
+            $response = [
+                'message' => $e->getMessage(),
+            ];
+            return $this->response('exception', $response);
         }
     }
 }
