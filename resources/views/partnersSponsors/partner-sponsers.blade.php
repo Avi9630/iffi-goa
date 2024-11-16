@@ -22,7 +22,6 @@
             <h1 class="page-title-header">Our Partners & Sponsors</h1>
         </div>
     </div>
-
     <!-- Inner Page Banner Section -->
     <div class="col-lg-12 mt-5 static-content">
         <div class="container">
@@ -35,90 +34,22 @@
                 </div>
             </div>
             <div class="row">
-                @foreach ($partnersSponsors as $title => $sponsorList)
-                    <div class="sponsor-list mb-2">
-                        <h4 class="mb-4">{{ $title }}</h4>
-                        <ul>
-                            {{-- @f/oreach ($sponsorList as $sponsor) --}}
-                            {{-- @php
-                                    dd($sponsor);
-                                @endphp --}}
-                            <li>
-                                <a href="{{ $sponsorList[]->link }}">
-                                    <img src="{{ asset('images/sponsor/' . $sponsor->image) }}" class="img-fluid">
-                                </a>
-                            </li>
-                            {{-- @endforeach --}}
+                @foreach ($sponcersPartners as $sponsorList)
+                    <div class="sponsor-list mb-4">
+                        <h4 class="mb-4">{{ $sponsorList->title }}</h4>
+                        <ul class="d-flex flex-wrap">
+                            @foreach (explode(', ', $sponsorList->images) as $image)
+                                <li class="me-2">
+                                    <a href="{{ asset('public/images/sponsor/' . trim($image)) }}">
+                                        <img src="{{ asset('public/images/sponsor/' . trim($image)) }}" class="img-fluid"
+                                            alt="{{ $sponsorList->title }}">
+                                    </a>
+                                </li>
+                            @endforeach
                         </ul>
                     </div>
                 @endforeach
             </div>
-
-            <!-- Sponsor -->
-            <div class="row ">
-                <div class="sponsor-list mb-2">
-                    <h4 class="mb-4">title</h4>
-                    <ul>
-                        <li><a href="#"><img src="images/sponsor/1.png" class="img-fluid"></a></li>
-                        <li><a href="#"><img src="images/sponsor/2.png" class="img-fluid"></a></li>
-                    </ul>
-                </div>
-                <div class="sponsor-list mb-2">
-                    <h4 class="mb-4">title</h4>
-                    <ul>
-                        <li><a href="#"><img src="images/sponsor/3.png" class="img-fluid"></a></li>
-                        <li><a href="#"><img src="images/sponsor/3.png" class="img-fluid"></a></li>
-                    </ul>
-                </div>
-            </div>
-
-
-
-            {{-- <style type="text/css">
-                .sponsor-list ul {
-                    padding: 0px;
-                    margin: 0px;
-                    display: flex;
-                    column-gap: 10px;
-                    flex-wrap: wrap;
-                }
-
-                .sponsor-list ul li {
-                    display: flex;
-                    border: solid 1px #ddd;
-                    padding: 0px 10px 0px 10px;
-                    border-radius: 5px;
-                    list-style: none;
-                    background: #fff;
-                    width: 11%;
-                }
-
-                .sponsor-list ul li:hover {
-                    border: solid 1px #333;
-                }
-            </style> --}}
-            <!-- Sponsor -->
         </div>
-        {{-- <div class="container">
-            <div class="mt-5 mb-4">
-                <div id="lightgallery" class="gallery">
-                    @foreach ($gallery as $gall)
-                        <div class="grid-item">
-                            <a href="{{ asset('public/images/gallery/' . $gall->image) }}"
-                                data-src="{{ asset('public/images/gallery/' . $gall->image) }}">
-                                <img src="{{ asset('public/images/gallery/' . $gall->image) }}" alt="{{ $gall->image }}">
-                            </a>
-                        </div>
-                    @endforeach
-                </div>
-            </div>
-            <div class="container">
-                <nav aria-label="Page navigation pb-4">
-                    <ul class="pagination overflow-hidden">
-                        {{ $gallery->withQueryString()->links() }}
-                    </ul>
-                </nav>
-            </div>
-        </div> --}}
     </div>
 @endsection
