@@ -141,6 +141,3 @@ Route::post(
     'international-cinema-basic-detail/{international_cinema_id}',
     [InternationalCinemaController::class, 'createBasicDetail']
 )->name('international-cinema-basic-detail');
-
-// SPONSORS-PARTNERS
-// Route::get('sponsors-partners');
