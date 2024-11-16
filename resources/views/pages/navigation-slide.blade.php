@@ -62,16 +62,19 @@
                                         <a href="{{ route('faq') }}" class="nav-link">FAQ's</a>
                                     </li>
 
-                                    {{-- <li class="nav-item">                                       
+                                    <li class="nav-item">
+                                        {{-- <a href="{{ asset('partners-sponsors') }}" class="nav-link">Our Partners &
+                                            Sponsors</a> --}}
+
                                         <a href="{{ route('partners-sponsors') }}" class="nav-link">Our Partners &
                                             Sponsors</a>
-                                    </li> --}}
+                                    </li>
 
-                                    <li class="nav-item">
+                                    {{-- <li class="nav-item">
                                         <a href="{{ asset('public/images/sponsor/IFFI-55-Sponsers-Page.pdf') }}"
                                             class="nav-link" target="_blank">Our Partners &
                                             Sponsors</a>
-                                    </li>
+                                    </li> --}}
 
                                     {{-- <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" role="button"
@@ -147,12 +150,12 @@
                                                             Debut Feature Film of a Director</a></li>
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('cureted-section-2024', ['slug' => 'icft-unesco-medal']) }}">ICFT
-                                                            Unesco Medal</a></li>
+                                                            UNESCO Gandhi Medal</a></li>
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('cureted-section-2024', ['slug' => 'festival-kaleidoscope']) }}">From
                                                             The Festivals</a></li>
                                                     <li><a class="dropdown-item"
-                                                            href="{{ route('cureted-section-2024', ['slug' => 'documontage']) }}">DocuMontage</a>
+                                                            href="{{ route('cureted-section-2024', ['slug' => 'docu-montage']) }}">Docu-Montage</a>
                                                     </li>
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('cureted-section-2024', ['slug' => 'experimental-films']) }}">Experimental
@@ -188,7 +191,7 @@
                                                     </li>
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('cureted-section-2024', ['slug' => 'from-the-consulate']) }}">From
-                                                            The Consulate</a></li>
+                                                            The Consulates</a></li>
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('cureted-section-2024', ['slug' => 'opening-film']) }}">Opening
                                                             Film</a></li>
@@ -450,6 +453,11 @@
                                                     <li><a class="dropdown-item" href="{{ route('cmot-jury') }}"
                                                             class="dropdown-item">
                                                             Selection Jury</a>
+                                                    </li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cmot-grand-jury') }}"
+                                                            class="dropdown-item">
+                                                            Grand Jury</a>
                                                     </li>
 
                                                 </ul>
