@@ -179,58 +179,14 @@
     </div>
 </div>
 
-{{-- <div class="mt-4 mb-4">
-    <h2 class="pb-3">November 21st, 2024</h2>
-    <div class="row">
-
-        <div class="col-md-2 col-12">
-            <div class="master-time">
-                <h4 class="time-div">04:30 PM</h4>
-                <h5 class="time-div">05:15 PM</h5>
-            </div>
-        </div>
-
-        <div class="col-md-7 col-12">
-            <div class="callout">
-                <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov21-4-trigger">
-                    Surviving Film Industry : The Hard Truth Nobody Tells You
-                </h4>
-                <p>
-                    For newcomers with big dreams, the film industry can feel like a maze shrouded in mystery with
-                    roadblocks at every turn. Survival strategy is challenging and creative, yet unknown and untold!
-                    Join actor Rakul Preet Singh and actor-producer Jackky Bhagnani as they reveal some hard truths,
-                    knowing which the path of an aspirant can be a little simpler.
-                </p>
-            </div>
-        </div>
-
-        <div class="col-md-3 col-12">
-            <div class="user-profile-icon">
-                <ul>
-                    <li>
-                        <img src="{{ asset('public/images/master-class/Rakul Preet Singh.jpg') }}" alt="image"
-                            class="img-fluid">
-                    </li>
-
-
-                    <li>
-                        <img src="{{ asset('public/images/master-class/Jacky Bagnani.jpg') }}" alt="image"
-                            class="img-fluid">
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div> --}}
-
 <div class="mt-4 mb-4">
     <h2 class="pb-3">November 21st, 2024</h2>
     <div class="row">
 
         <div class="col-md-2 col-12">
             <div class="master-time">
-                <h4 class="time-div">05:30 PM</h4>
-                <h5 class="time-div">06:15 PM</h5>
+                <h4 class="time-div">04:30 PM</h4>
+                <h5 class="time-div">05:30 PM</h5>
             </div>
         </div>
 
@@ -257,6 +213,50 @@
 
                     <li>
                         <img src="{{ asset('public/images/master-class/Anant Vijay.jpg') }}" alt="image"
+                            class="img-fluid">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="mt-4 mb-4">
+    <h2 class="pb-3">November 21st, 2024</h2>
+    <div class="row">
+
+        <div class="col-md-2 col-12">
+            <div class="master-time">
+                <h4 class="time-div">05:45 PM</h4>
+                <h5 class="time-div">06:30 PM</h5>
+            </div>
+        </div>
+
+        <div class="col-md-7 col-12">
+            <div class="callout">
+                <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov21-5-trigger">
+                    Surviving Film Industry : The Hard Truth Nobody Tells You
+                </h4>
+                <p>
+                    For newcomers with big dreams, the film industry can feel like a maze shrouded in mystery with
+                    roadblocks at every turn. Survival strategy is challenging and creative, yet unknown and untold!
+                    Join actor Rakul Preet Singh and actor-producer Jackky Bhagnani as they reveal some hard truths,
+                    knowing which the path of an aspirant can be a little simpler.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-12">
+            <div class="user-profile-icon">
+                <ul>
+                    <li>
+                        <img src="{{ asset('public/images/master-class/Rakul Preet Singh.jpg') }}" alt="image"
+                            class="img-fluid">
+                    </li>
+
+                    <li>
+                        <img src="{{ asset('public/images/master-class/Jacky Bagnani.jpg') }}" alt="image"
                             class="img-fluid">
                     </li>
                 </ul>
