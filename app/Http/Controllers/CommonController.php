@@ -359,30 +359,21 @@ class CommonController extends Controller
         return $datas;
     }
 
-    // public function masterClass($id)
-    // {
-    //     $masterClass = MasterClass::with('speakers')->findOrFail($id);
-
-    //     return view('master-class.master', compact('masterClass'));
-
     public function masterClass()
     {
         $masterClasses = MasterClass::all(); // or any other query to get your data
 
         return view('master-class.master', compact('masterClasses'));
     }
-    // }
 
     public function partnersSponsors()
     {
-
-        $partnersSponsors = DB::table('the_partner_sponsor')
-            ->where('status', 1)
-            ->orderBy('id', 'DESC')
+        $sponcersPartners = DB::table('the_partner_sponsor')
+            ->select('title', DB::raw("GROUP_CONCAT(img_src SEPARATOR ', ') AS images"))
+            ->groupBy('title')
             ->get();
-        dd($partnersSponsors);
         return view('partnersSponsors.partner-sponsers', [
-            'partnersSponsors' => $partnersSponsors,
+            'sponcersPartners' => $sponcersPartners,
         ]);
     }
 }
