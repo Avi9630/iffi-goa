@@ -42,17 +42,14 @@
                                             data-bs-toggle="dropdown" aria-expanded="false">About Goa
                                         </a>
                                         <ul class="dropdown-menu">
-
                                             <li>
                                                 <a href="{{ route('goa-tourist-places') }}" class="dropdown-item">Goa
                                                     Tourist Places</a>
                                             </li>
-
                                             <li>
                                                 <a href="{{ route('connectivity') }}" class="dropdown-item">
                                                     Connectivity </a>
                                             </li>
-
                                         </ul>
 
                                     </li>
@@ -65,10 +62,7 @@
                                         <a href="{{ route('faq') }}" class="nav-link">FAQ's</a>
                                     </li>
 
-                                    {{-- <li class="nav-item">
-                                        <a href="{{ asset('partners-sponsors') }}" class="nav-link">Our Partners &
-                                            Sponsors</a>
-
+                                    {{-- <li class="nav-item">                                       
                                         <a href="{{ route('partners-sponsors') }}" class="nav-link">Our Partners &
                                             Sponsors</a>
                                     </li> --}}
@@ -557,6 +551,14 @@
                                     <li class="nav-item">
                                         <a href="https://my.iffigoa.org/extranet/media" class="nav-link"
                                             target="_blank">Media Login</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="https://filmguide.iffigoa.org/" class="nav-link"
+                                            target="_blank">Film Guide & Ticket Booking</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="https://filmguide.iffigoa.org/schedule" class="nav-link"
+                                            target="_blank">Film Guide Schedule</a>
                                     </li>
                                 </ul>
                             </div>
