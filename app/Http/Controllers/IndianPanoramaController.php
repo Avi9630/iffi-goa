@@ -26,7 +26,6 @@ class IndianPanoramaController extends Controller
             'indian_panorama_cinema.*',
             'indian_panorama_official_selections.title AS curated_section_title',
         );
-        $officialFeature->limit(8);
         $feature = $officialFeature->get();
         return view('indian-panorama.official-selection-feature', [
             'officialFeature' =>  $feature,
@@ -54,9 +53,8 @@ class IndianPanoramaController extends Controller
             'indian_panorama_cinema.*',
             'indian_panorama_official_selections.title AS curated_section_title',
         );
-        $officialNonFeature->limit(8);
+        // $officialNonFeature->limit(8);
         $nonFeature = $officialNonFeature->get();
-        // dd($officialNonFeature);
         return view('indian-panorama.official-selection-non-feature', [
             'officialNonFeature' =>  $nonFeature,
             'year' =>  $year,
