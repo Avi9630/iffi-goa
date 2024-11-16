@@ -9,5 +9,7 @@ class curetedsection2024 extends Model
 {
     use HasFactory;
 
+    protected $table = 'international_cinema';
+
     protected $guarded = [];
 }

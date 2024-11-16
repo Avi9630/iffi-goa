@@ -1,6 +1,8 @@
 <?php
 
-use App\Http\Controllers\ApiController;
+use App\Http\Controllers\api\ApiController;
+use App\Http\Controllers\api\IndianPanoramaController;
+use App\Http\Controllers\api\InternationalCinemaController;
 use App\Http\Controllers\ApiNewController;
 use App\Models\Ticker;
 use Illuminate\Http\Request;
@@ -50,6 +52,13 @@ Route::get('ticker-details/{id}', [ApiNewController::class, 'tickerDetails'])->n
 Route::post('ticker-create', [ApiNewController::class, 'tickerCreate'])->name('ticker-create');
 Route::delete('ticker-delete/{id}', [ApiNewController::class, 'tickerDelete'])->name('ticker-delete');
 
+// LatestUpdate
+Route::get('latest-Update', [ApiNewController::class, 'latestUpdate'])->name('list-LatestUpdate');
+Route::post('latest-Update/{id}', [ApiNewController::class, 'updatelatestUpdate'])->name('latest-Update');
+Route::get('latestUpdate-details/{id}', [ApiNewController::class, 'latestUpdateDetails'])->name('latestUpdate-details');
+Route::post('latestUpdate-create', [ApiNewController::class, 'latestUpdateCreate'])->name('latestUpdate-create');
+Route::delete('latestUpdate-delete/{id}', [ApiNewController::class, 'latestUpdateDelete'])->name('latestUpdate-delete');
+
 // PressRelese
 Route::get('press-relese-list', [ApiNewController::class, 'pressReleseList'])->name('press-relese-list');
 
@@ -66,5 +75,68 @@ Route::post('update-thePeacock/{id}', [ApiNewController::class, 'updateThePeacoc
 Route::post('create-thePeacock', [ApiNewController::class, 'createThePeacock'])->name('create-thePeacock');
 Route::delete('delete-thePeacock/{id}', [ApiNewController::class, 'deleteThePeacock'])->name('delete-thePeacock');
 
+// MasterClass
+Route::get('master_classes', [ApiNewController::class, 'getMasterClass'])->name('master_classes ');
+Route::post('master_classes_Update/{id}', [ApiNewController::class, 'updateMasterClass'])->name('master_classes_Update');
+Route::get('master_classes_details/{id}', [ApiNewController::class, 'getMasterClassById'])->name('master_classes_details');
+Route::post('master_classes_create', [ApiNewController::class, 'createMasterClass'])->name('master_classes_create');
+// Route::delete('master_classes_delete/{id}', [ApiNewController::class, 'master_classes Delete'])->name('master_classes -delete');
+
 // Cureted Section 2024
+Route::get('get-CuretedSection2024', [ApiNewController::class, 'curetedSection2024'])->name('get-CuretedSection2024');
+Route::post('update-curetedsection2024/{id}', [ApiNewController::class, 'updateCuretedsection2024'])->name('update-curetedsection2024');
+Route::post('create-Curetedsection2024', [ApiNewController::class, 'createCuretedsection2024'])->name('create-Curetedsection2024');
+Route::get('get-curetedsection2024-ById/{id}', [ApiNewController::class, 'curetedsection2024ById'])->name('get-curetedsection2024-ById');
 Route::get('get-CuretedSection2024', [ApiNewController::class, 'CuretedSection2024'])->name('get-CuretedSection2024');
+
+// The PartnerSponsor
+Route::get('partnersSponsors-List', [ApiNewController::class, 'thePartnerSponsor'])->name('thePeacock-List');
+Route::post('update-partnersSponsors/{id}', [ApiNewController::class, 'updatePartnerSponsor'])->name('update-thePeacock');
+Route::get('get-partnersSponsors/{id}', [ApiNewController::class, 'getthePartnerSponsorById'])->name('get-partnersSponsorsById');
+Route::post('create-partnersSponsors', [ApiNewController::class, 'createThePartnerSponsor'])->name('create-partnersSponsors');
+Route::delete('delete-partnersSponsors/{id}', [ApiNewController::class, 'deleteThePartnerSponsor'])->name('delete-partnersSponsors');
+
+//INDIAN-PANORAMA
+
+Route::get('indian-panorama-list/{year}', [IndianPanoramaController::class, 'indianPanoramaList'])->name('indian-panorama-list');
+Route::post('create-indian-panorama', [IndianPanoramaController::class, 'createIndianPanorama'])->name('create-indian-panorama');
+Route::post('update-indian-panorama', [IndianPanoramaController::class, 'updateIndianPanorama'])->name('update-indian-panorama');
+Route::post('delete-indian-panorama', [IndianPanoramaController::class, 'deleteIndianPanorama'])->name('delete-indian-panorama');
+Route::post('active-deactive', [IndianPanoramaController::class, 'activeDeactive'])->name('active-deactive');
+
+//INTERNATIONAL-CINEMA
+
+Route::get(
+    'get-curated-section',
+    [InternationalCinemaController::class, 'getCuratedSection']
+)->name('get-curated-section');
+
+Route::get(
+    'international-cinema-list',
+    [InternationalCinemaController::class, 'internationCinemaList']
+)->name('international-cinema-list');
+
+Route::post(
+    'international-cinema-create',
+    [InternationalCinemaController::class, 'internationCinemaCreate']
+)->name('international-cinema-create');
+
+Route::post(
+    'international-cinema-update/{id}',
+    [InternationalCinemaController::class, 'internationCinemaUpdate']
+)->name('international-cinema-update');
+
+Route::get(
+    'international-cinema-by-id/{id}',
+    [InternationalCinemaController::class, 'getById']
+)->name('international-cinema-by-id');
+
+Route::post(
+    'international-cinema-basic-detail/{international_cinema_id}',
+    [InternationalCinemaController::class, 'createBasicDetail']
+)->name('international-cinema-basic-detail');
+
+// PRESS-RELEASE
+
+Route::post('add-press-release', [ApiController::class, 'addPressRelease'])->name('add-press-release');
+Route::post('update-press-release', [ApiController::class, 'updatePressRelease'])->name('update-press-release');

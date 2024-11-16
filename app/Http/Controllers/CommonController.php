@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\MasterClass;
 use App\Models\NewsUpdate;
 use DB;
 use Illuminate\Http\Request;
@@ -22,6 +23,13 @@ class CommonController extends Controller
         return $datas;
     }
 
+    public function getLatestUpdate()
+    {
+        $latestUpdates = DB::table('latest_update')->where(['status' => 1])->get();
+
+        return $latestUpdates;
+    }
+
     public function internationalCinema()
     {
         $internationalCinemas = DB::table('international_cinema')
@@ -31,8 +39,10 @@ class CommonController extends Controller
                 '=',
                 'international_curated_sections.id',
             )
-            ->where(['international_cinema.curated_section_id' => 1,
-                'year' => 2024])
+            ->where([
+                'international_cinema.curated_section_id' => 1,
+                'year' => 2024,
+            ])
             ->select(
                 'international_cinema.*',
                 'international_curated_sections.title AS curated_section_title',
@@ -43,25 +53,84 @@ class CommonController extends Controller
         return $internationalCinemas;
     }
 
-    // public function internationalCompetitionDetail($id)
-    // {
-    //     // dd($id);
-    //     $internationalCinemas = DB::table('international_cinema')
-    //         ->join(
-    //             'international_curated_sections',
-    //             'international_cinema.curated_section_id',
-    //             '=',
-    //             'international_curated_sections.id',
-    //         )
-    //         ->where('international_cinema.status', '=', '1')
-    //         ->select(
-    //             'international_cinema.*',
-    //             'international_curated_sections.title AS curated_section_title',
-    //         )
-    //         ->limit(20)
-    //         ->get();
-    //     return view('pages.international-competition-detail');
-    // }
+    public function curetedsection2024(Request $request, $slug)
+    {
+        //  exit($slug);
+        $array = [
+            'international-competition' => 1,
+            'best-debut-feature-film-of-a-director' => 13,
+            'icft-unesco-medal' => 4,
+            'festival-kaleidoscope' => 3,
+            'documontage' => 14,
+            'macabre-dreams' => 10,
+            'cinema-world' => 15,
+            'restored-classic' => 16,
+            'unicef' => 11,
+            'from-the-festivals' => 3,
+            'experimental-films' => 9,
+            'rising-stars' => 17,
+            'mission-life' => 18,
+            'BFI@IFFI' => 19,
+            'country-focus-australia' => 20,
+            'accolades' => 21,
+            'from-the-consulate' => 22,
+            'opening-film' => 23,
+            'closing-film' => 24,
+            'debut-director-films' => 25,
+            'best-web-series' => 26,
+        ];
+        //  echo '<pre>';
+        // print_r($array);
+        // print_r($slug);
+
+        $curatedSectionId = $array[$slug];
+
+        $year = $request->input('year');
+        $curatedSections = [
+            1 => 'International Competition',
+            3 => 'From The Festivals',
+            4 => 'ICFT Unesco Medal',
+            9 => 'Experimental Films',
+            10 => 'Macabre Dreams',
+            11 => 'UNICEF',
+            13 => 'Best Debut Feature Film of A Director',
+            14 => 'DocuMontage',
+            15 => 'Cinema of the World',
+            16 => 'Restored Classics',
+            17 => 'Rising Stars',
+            18 => 'Mission Life',
+            19 => 'BFI@IFFI',
+            20 => 'Country Focus: Australia',
+            21 => 'Accolades',
+            22 => 'From The Consulate',
+            23 => 'Opening Film',
+            24 => 'Closing Film',
+            25 => 'Official Selection - Debut Director Films',
+            26 => 'Official Selection - Best Web Series',
+        ];
+
+        $internationalCinemas = DB::table('international_cinema')
+            ->join(
+                'international_curated_sections',
+                'international_cinema.curated_section_id',
+                '=',
+                'international_curated_sections.id'
+            )
+            ->where([
+                'international_cinema.curated_section_id' => $curatedSectionId,
+                'international_cinema.year' => 2024,
+                'international_cinema.status' => 1,
+            ])
+            ->select(
+                'international_cinema.*',
+                'international_curated_sections.title AS curated_section_title'
+            )
+            ->limit(80)
+            ->get();
+        //   exit('sada');
+
+        return view('international-cinema.2024.curated-section-2024', compact('internationalCinemas', 'curatedSections', 'curatedSectionId'));
+    }
 
     public function internationalCompetitionDetail($slug)
     {
@@ -90,11 +159,11 @@ class CommonController extends Controller
         return view(
             'pages.international-competition-detail',
             [
-                'fetch_cinema_details' => $fetch_cinema_details,
-                'fetch_cinema_basic_details' => $fetch_cinema_basic_details,
-                'currentURL' => $currentURL,
-                'list_international_cinema_images' => $list_international_cinema_images,
-                'list_international_cinema_videos' => $list_international_cinema_videos,
+                'fetch_cinema_details'              =>  $fetch_cinema_details,
+                'fetch_cinema_basic_details'        =>  $fetch_cinema_basic_details,
+                'currentURL'                        =>  $currentURL,
+                'list_international_cinema_images'  =>  $list_international_cinema_images,
+                'list_international_cinema_videos'  =>  $list_international_cinema_videos,
             ]
         );
     }
@@ -109,11 +178,11 @@ class CommonController extends Controller
         return $directorDebutFilm;
     }
 
-    public function indianPanorama()
+    public function indianPanorama($year)
     {
         $indianPanormas = DB::table('indian_panorama_cinema')
             ->where('status', '=', '1')
-            ->where('year', '=', '2023')
+            ->where('year', '=', $year)
             ->get();
 
         return $indianPanormas;
@@ -255,17 +324,14 @@ class CommonController extends Controller
     public function thepeacock(Request $request)
     {
         $year = $request->input('year');
-
-        $peacock = DB::table('the_peacock')
-            ->where('status', '1')
-            ->orderBy('id', 'desc');
-
+        $peacock = DB::table('the_peacock');
+        $peacock->where('status', '1');
+        $peacock->orderBy('id', 'desc');
         if ($year) {
             $peacock->where('year', $year);
         }
-
-        $thepeacock = $peacock->paginate(10);
-        //  echo '<pre>';
+        $thepeacock = $peacock->get();
+        // echo '<pre>';
         // print_r($thepeacock);
         // exit();
 
@@ -291,5 +357,32 @@ class CommonController extends Controller
             ->get();
 
         return $datas;
+    }
+
+    // public function masterClass($id)
+    // {
+    //     $masterClass = MasterClass::with('speakers')->findOrFail($id);
+
+    //     return view('master-class.master', compact('masterClass'));
+
+    public function masterClass()
+    {
+        $masterClasses = MasterClass::all(); // or any other query to get your data
+
+        return view('master-class.master', compact('masterClasses'));
+    }
+    // }
+
+    public function partnersSponsors()
+    {
+
+        $partnersSponsors = DB::table('the_partner_sponsor')
+            ->where('status', 1)
+            ->orderBy('id', 'DESC')
+            ->get();
+        dd($partnersSponsors);
+        return view('partnersSponsors.partner-sponsers', [
+            'partnersSponsors' => $partnersSponsors,
+        ]);
     }
 }

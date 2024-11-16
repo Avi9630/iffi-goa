@@ -19,7 +19,11 @@ Route::controller(CommonController::class)->group(function () {
 
     Route::get('highlights', 'highlights')->name('highlights');
 
-    Route::get('international-cinema', 'internationalCinema')->name('international-cinema');
+    Route::get('international-cinema/2024/{slug}', 'curetedsection2024')->name('cureted-section-2024');
+
+    Route::get('debut-director-films/2024/{slug}', 'curetedsection2024')->name('debut-director-films');
+
+    Route::get('best-web-series/2024/{slug}', 'curetedsection2024')->name('best-web-series');
 
     Route::get('international-cinema/competition/{slug}', 'internationalCompetitionDetail')->name('international-competition-detail');
 
@@ -31,21 +35,19 @@ Route::controller(CommonController::class)->group(function () {
 
     Route::get('technical-committee', 'technicalCommittee')->name('technical-committee');
 
-    // Route::get('faq',                                       'faq')->name('faq');
-
     Route::get('media/gallery', 'gallery')->name('gallery');
 
     Route::get('media/gallery-2024', 'gallery2024')->name('gallery-2024');
 
     Route::get('media/press-release', 'pressRelease')->name('press-release');
 
-    // Route::get('media/the-peacock', 'thepeacock')->name('the-peacock');
+    Route::get('media/the-peacock', 'thepeacock')->name('the-peacock');
 
     Route::get('media/news-and-update', 'newsUpdate')->name('news-and-update');
 
     Route::get('/gallery/date', 'getGalleryByDate')->name('gallery.byDate');
 
-    // Route::get('news-and-update',                 'newsUpdate1')->name('news-and-update');
+    Route::get('partners-sponsors', 'partnersSponsors')->name('partners-sponsors');
 });
 
 Route::controller(InternationalCinemaController::class)->group(function () {
@@ -137,6 +139,10 @@ Route::get('gala-premier/1st-edition', function () {
 Route::get('gala-premier/2nd-edition', function () {
     return view('gala-premier.2nd-edition');
 })->name('2nd-edition');
+
+Route::get('gala-premier/3rd-edition', function () {
+    return view('gala-premier.3rd-edition');
+})->name('3rd-edition');
 
 //CMOT
 Route::get('cmot/about-cmot', function () {

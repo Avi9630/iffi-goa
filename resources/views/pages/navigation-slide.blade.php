@@ -65,6 +65,20 @@
                                         <a href="{{ route('faq') }}" class="nav-link">FAQ's</a>
                                     </li>
 
+                                    {{-- <li class="nav-item">
+                                        <a href="{{ asset('partners-sponsors') }}" class="nav-link">Our Partners &
+                                            Sponsors</a>
+
+                                        <a href="{{ route('partners-sponsors') }}" class="nav-link">Our Partners &
+                                            Sponsors</a>
+                                    </li> --}}
+
+                                    <li class="nav-item">
+                                        <a href="{{ asset('public/images/sponsor/IFFI-55-Sponsers-Page.pdf') }}"
+                                            class="nav-link" target="_blank">Our Partners &
+                                            Sponsors</a>
+                                    </li>
+
                                     {{-- <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" role="button"
                                             data-bs-toggle="dropdown" aria-expanded="false">Best Of IFFI</a>
@@ -132,11 +146,64 @@
                                                 </a>
                                                 <ul class="dropdown-menu">
                                                     <li><a class="dropdown-item"
-                                                            href="{{ route('international-competition-2024') }}">International
-                                                            Competition</a>
+                                                            href="{{ route('cureted-section-2024', ['slug' => 'international-competition']) }}">International
+                                                            Competition</a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cureted-section-2024', ['slug' => 'best-debut-feature-film-of-a-director']) }}">Best
+                                                            Debut Feature Film of a Director</a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cureted-section-2024', ['slug' => 'icft-unesco-medal']) }}">ICFT
+                                                            Unesco Medal</a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cureted-section-2024', ['slug' => 'festival-kaleidoscope']) }}">From
+                                                            The Festivals</a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cureted-section-2024', ['slug' => 'documontage']) }}">DocuMontage</a>
                                                     </li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cureted-section-2024', ['slug' => 'experimental-films']) }}">Experimental
+                                                            Films</a>
+                                                    </li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cureted-section-2024', ['slug' => 'macabre-dreams']) }}">Macabre
+                                                            Dreams</a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cureted-section-2024', ['slug' => 'cinema-world']) }}">Cinema
+                                                            of the World</a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cureted-section-2024', ['slug' => 'restored-classic']) }}">Restored
+                                                            Classics</a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cureted-section-2024', ['slug' => 'unicef']) }}">UNICEF
+                                                            @
+                                                            IFFI</a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cureted-section-2024', ['slug' => 'rising-stars']) }}">Rising
+                                                            Stars</a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cureted-section-2024', ['slug' => 'mission-life']) }}">Mission
+                                                            Life</a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cureted-section-2024', ['slug' => 'BFI@IFFI']) }}">BFI@IFFI</a>
+                                                    </li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cureted-section-2024', ['slug' => 'country-focus-australia']) }}">Country
+                                                            Focus: Australia</a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cureted-section-2024', ['slug' => 'accolades']) }}">Accolades</a>
+                                                    </li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cureted-section-2024', ['slug' => 'from-the-consulate']) }}">From
+                                                            The Consulate</a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cureted-section-2024', ['slug' => 'opening-film']) }}">Opening
+                                                            Film</a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cureted-section-2024', ['slug' => 'closing-film']) }}">Closing
+                                                            Film</a></li>
                                                 </ul>
                                             </li>
+
 
                                             {{-- Curated Sections 2023 --}}
                                             <li class="nav-item dropend">
@@ -150,19 +217,22 @@
                                                             Competition</a>
                                                     </li>
                                                     <li><a class="dropdown-item"
-                                                            href="{{ route('award-for-best-debute') }}">Award For The
+                                                            href="{{ route('award-for-best-debute') }}">Award
+                                                            For The
                                                             Best
                                                             Debut</a></li>
 
                                                     <li><a class="dropdown-item"
-                                                            href="{{ route('icft-unesco-medal') }}">ICFT-UNESCO Gandhi
+                                                            href="{{ route('icft-unesco-medal') }}">ICFT-UNESCO
+                                                            Gandhi
                                                             Medal
                                                             2023</a></li>
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('festival-kaleloscope') }}">Festival
                                                             Kaleloscope</a></li>
                                                     <li><a class="dropdown-item"
-                                                            href="{{ route('docu-montage') }}">Docu - Montage</a>
+                                                            href="{{ route('docu-montage') }}">Docu -
+                                                            Montage</a>
                                                     </li>
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('integrade') }}">Intergrade</a>
@@ -171,10 +241,12 @@
                                                             href="{{ route('animation') }}">Animation</a>
                                                     </li>
                                                     <li><a class="dropdown-item"
-                                                            href="{{ route('macabre-dreams') }}">Macabre Dreams</a>
+                                                            href="{{ route('macabre-dreams') }}">Macabre
+                                                            Dreams</a>
                                                     </li>
                                                     <li><a class="dropdown-item"
-                                                            href="{{ route('cinema-world') }}">Cinema Of The World</a>
+                                                            href="{{ route('cinema-world') }}">Cinema Of The
+                                                            World</a>
                                                     </li>
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('restored-classic') }}">Restored
@@ -191,7 +263,8 @@
                                     <!-- Indian Debut Director Award menu Start-->
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" role="button"
-                                            data-bs-toggle="dropdown" aria-expanded="false">Indian Debut Director
+                                            data-bs-toggle="dropdown" aria-expanded="false">Indian Debut
+                                            Director
                                             Awards</a>
                                         <ul class="dropdown-menu">
                                             <li>
@@ -202,6 +275,9 @@
                                                 <a href="{{ route('debut-director-jury') }}"
                                                     class="dropdown-item">Debut Director Jury - 2024</a>
                                             </li>
+                                            <li><a class="dropdown-item"
+                                                    href="{{ route('debut-director-films', ['slug' => 'debut-director-films']) }}">Official
+                                                    Selection - Debut Director Films</a></li>
                                             <li>
                                                 <a href="https://iffigoa.org/festival/indian-debut-director"
                                                     class="dropdown-item nav-link yelow-color-link"
@@ -213,16 +289,19 @@
                                             </li>
                                         </ul>
                                     </li>
-                                    <!-- Indian Panorama menu Start-->
+
+                                    <!-- Indian Panorama-2023 menu Start-->
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" role="button"
-                                            data-bs-toggle="dropdown" aria-expanded="false">Indian Panorama</a>
+                                            data-bs-toggle="dropdown" aria-expanded="false">Indian
+                                            Panorama</a>
                                         <ul class="dropdown-menu">
 
                                             <li>
                                                 <a href="{{ route('about-indian-panorama') }}"
                                                     class="dropdown-item">About Indian Panorama</a>
                                             </li>
+
                                             <li class="nav-item dropend">
                                                 <a class="nav-link dropdown-toggle" href="#" role="button"
                                                     data-bs-toggle="dropdown" aria-expanded="false">
@@ -230,10 +309,10 @@
                                                 </a>
                                                 <ul class="dropdown-menu">
                                                     <li><a class="dropdown-item"
-                                                            href="{{ route('indian-panorama-jury-feature') }}">Featured</a>
+                                                            href="{{ route('indian-panorama-jury-feature') }}">Feature</a>
                                                     </li>
                                                     <li><a class="dropdown-item"
-                                                            href="{{ route('indian-panorama-jury-non-feature') }}">Non-Featured</a>
+                                                            href="{{ route('indian-panorama-jury-non-feature') }}">Non-Feature</a>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -243,9 +322,32 @@
                                                     class="dropdown-item nav-link yelow-color-link"
                                                     target="_blank">View your entry</a>
                                             </li>
+
                                             <li>
                                                 <a href="{{ route('indian-panorama-rules-regulations') }}"
                                                     class="dropdown-item">Rules & Regulations</a>
+                                            </li>
+
+
+                                            <li class="nav-item dropend">
+                                                <a class="nav-link dropdown-toggle" href="#" role="button"
+                                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                                    Indian Panorama IFFI 2024
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li>
+                                                        <a class="dropdown-item"
+                                                            href="{{ route('official-selection-feature', ['year' => 2024]) }}">
+                                                            Feature
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item"
+                                                            href="{{ route('official-selection-non-feature', ['year' => 2024]) }}">
+                                                            Non-Feature
+                                                        </a>
+                                                    </li>
+                                                </ul>
                                             </li>
 
                                             <li class="nav-item dropend">
@@ -255,16 +357,14 @@
                                                 </a>
                                                 <ul class="dropdown-menu">
                                                     <li><a class="dropdown-item"
-                                                            href="{{ route('official-selection-feature') }}">Official
-                                                            Selection :
-                                                            Feature</a>
+                                                            href="{{ route('official-selection-feature') }}">Feature</a>
                                                     </li>
                                                     <li><a class="dropdown-item"
-                                                            href="{{ route('official-selection-non-feature') }}">Official
-                                                            Selection :
-                                                            Non-Feature</a></li>
+                                                            href="{{ route('official-selection-non-feature') }}">Non-Feature</a>
+                                                    </li>
                                                 </ul>
                                             </li>
+
 
                                             <li class="nav-item dropend">
                                                 <a class="nav-link dropdown-toggle" href="#" role="button"
@@ -283,13 +383,14 @@
                                                 </ul>
                                             </li>
 
-
                                         </ul>
                                     </li>
+
                                     <!-- Best Web Series menu Start-->
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" role="button"
-                                            data-bs-toggle="dropdown" aria-expanded="false">Best Web Series</a>
+                                            data-bs-toggle="dropdown" aria-expanded="false">Best Web
+                                            Series</a>
                                         <ul class="dropdown-menu">
 
                                             <li>
@@ -301,6 +402,9 @@
                                                 <a href="{{ route('web-series-jury') }}" class="dropdown-item">
                                                     Best Web Series Jury - 2024</a>
                                             </li>
+                                            <li><a class="dropdown-item"
+                                                    href="{{ route('best-web-series', ['slug' => 'best-web-series']) }}">Official
+                                                    Selection - Best Web Series</a></li>
                                             <li>
                                                 <a href="https://iffigoa.org/festival/web-series"
                                                     class="dropdown-item nav-link yelow-color-link"
@@ -313,16 +417,21 @@
                                     <!-- Gala Premieres & Red Carpet menu Start-->
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" role="button"
-                                            data-bs-toggle="dropdown" aria-expanded="false">Gala Premieres & Red
+                                            data-bs-toggle="dropdown" aria-expanded="false">Gala Premieres &
+                                            Red
                                             Carpet</a>
                                         <ul class="dropdown-menu">
                                             <li>
-                                                <a href="{{ route('1st-edition') }}" class="dropdown-item">
-                                                    1st Edition (53rd IFFI)</a>
+                                                <a href="{{ route('3rd-edition') }}" class="dropdown-item">3rd
+                                                    Edition (55th IFFI)</a>
                                             </li>
                                             <li>
                                                 <a href="{{ route('2nd-edition') }}" class="dropdown-item">2nd
                                                     Edition (54th IFFI)</a>
+                                            </li>
+                                            <li>
+                                                <a href="{{ route('1st-edition') }}" class="dropdown-item">
+                                                    1st Edition (53rd IFFI)</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -353,7 +462,8 @@
                                             </li>
                                             <li>
                                                 <a href="https://iffigoa.org/festival/creative-mind-tomorrow"
-                                                    class="nav-link yelow-color-link" target="_blank">View your
+                                                    class="nav-link yelow-color-link" target="_blank">View
+                                                    your
                                                     entry</a>
                                             </li>
                                         </ul>
@@ -407,34 +517,31 @@
                                     </li>
 
 
-                                    {{-- <li class="nav-item dropdown">
+                                    <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" role="button"
                                             data-bs-toggle="dropdown" aria-expanded="false">
                                             The Peacock
                                         </a>
+
                                         <ul class="dropdown-menu">
-                                            <li class="nav-item dropend">
-                                                <a class="nav-link dropdown-toggle" href="#" role="button"
-                                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                                    Old Versions
-                                                </a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a class="dropdown-item"
-                                                            href="{{ route('the-peacock', ['year' => 2023]) }}">2023</a>
-                                                    </li>
-                                                    <li><a class="dropdown-item"
-                                                            href="{{ route('the-peacock', ['year' => 2022]) }}">2022</a>
-                                                    </li>
-                                                    <li><a class="dropdown-item"
-                                                            href="{{ route('the-peacock', ['year' => 2021]) }}">2021</a>
-                                                    </li>
-                                                    <li><a class="dropdown-item"
-                                                            href="{{ route('the-peacock', ['year' => 2020]) }}">2020</a>
-                                                    </li>
-                                                </ul>
+                                            <li><a class="dropdown-item"
+                                                    href="{{ route('the-peacock', ['year' => 2023]) }}">2023</a>
+                                            </li>
+                                            <li><a class="dropdown-item"
+                                                    href="{{ route('the-peacock', ['year' => 2022]) }}">2022</a>
+                                            </li>
+                                            <li><a class="dropdown-item"
+                                                    href="{{ route('the-peacock', ['year' => 2021]) }}">2021</a>
+                                            </li>
+                                            <li><a class="dropdown-item"
+                                                    href="{{ route('the-peacock', ['year' => 2018]) }}">2018</a>
+                                            </li>
+                                            <li><a class="dropdown-item"
+                                                    href="{{ route('the-peacock', ['year' => 2017]) }}">2017</a>
                                             </li>
                                         </ul>
-                                    </li> --}}
+                                    </li>
+
                                 </ul>
                             </div>
                             <!-- Media Section End -->
@@ -491,6 +598,11 @@
                                             Schedule
                                         </a>
                                     </li>
+                                    {{-- <li class="nav-item">
+                                        <a href="{{ route('master-class', ['id' => 1]) }}" class="nav-link">
+                                            Aditya
+                                        </a>
+                                    </li> --}}
 
                                     {{-- <li class="nav-item dropdown">
 

@@ -666,6 +666,12 @@ footer a:hover {
         url(../images/main-header/second_edition.jpg) center center no-repeat;
     background-size: cover;
 }
+.bannerBg-th_edition {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url(../images/main-header/55th-IFFI-Gala-Head-Banner.jpg) center center
+            no-repeat !important;
+    background-size: cover;
+}
 
 .bannerBg-Gallery-banner {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
@@ -807,6 +813,12 @@ footer a:hover {
     background: linear-gradient(rgb(0 0 0 / 89%), rgb(0 0 0 / 74%)),
         url(../images/main-header/International-competition-2024.jpg) center
             center no-repeat;
+    background-size: cover;
+}
+
+.bannerBg-partnersSponsors {
+    background: linear-gradient(rgb(0 0 0 / 38%), rgb(0 0 0 / 38%)),
+        url(../images/main-header/SPONSOR-BG.jpg) center center no-repeat;
     background-size: cover;
 }
 
@@ -1258,6 +1270,9 @@ footer a:hover {
     background: #3c063c url(../images/peacock.png) center no-repeat;
     /* background: linear-gradient(rgb(88 65 85 / 70%), rgb(0 0 0 / 70%)),
         url(../images/peacock.png) bottom no-repeat; */
+    & a {
+        text-decoration: none;
+    }
 }
 .update-heading {
     color: white;
@@ -1314,6 +1329,28 @@ footer a:hover {
 .gallery-container .grid-item {
     border-radius: 10px;
     overflow: hidden;
+}
+
+.sponsor-list ul {
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    column-gap: 10px;
+    flex-wrap: wrap;
+}
+
+.sponsor-list ul li {
+    display: flex;
+    border: solid 1px #ddd;
+    padding: 0px 10px 0px 10px;
+    border-radius: 5px;
+    list-style: none;
+    background: #fff;
+    width: 11%;
+}
+
+.sponsor-list ul li:hover {
+    border: solid 1px #333;
 }
 
 /* Custom animation for slide-in from the right */
@@ -1569,5 +1606,14 @@ footer a:hover {
 @media only screen and (min-width: 790px) and (max-width: 1300px) {
     .hero-banner-text {
         bottom: 17vh;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 900px) {
+    #myTabD {
+        display: inline-flex !important;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        white-space: nowrap;
     }
 }

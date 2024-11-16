@@ -3,9 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Http\Traits\RESPONSETrait;
+use App\Models\curetedsection2024;
 use App\Models\Gallery;
+use App\Models\LatestUpdate;
+use App\Models\MasterClass;
 use App\Models\NewsUpdate;
-// use App\Models\PressRelese;
+use App\Models\ThePartnerSponsor;
 use App\Models\ThePeacock;
 use App\Models\Ticker;
 use Illuminate\Http\Request;
@@ -40,11 +43,17 @@ class ApiNewController extends Controller
         try {
             // Handle file upload if exists
             $fileName = null;
+            $fileNameOriginal = null;
             if ($request->hasFile('img_src_file')) {
                 $file = $request->file('img_src_file');
                 $destinationPath = 'images/news-update';
-                $fileName = time().'_'.$file->getClientOriginalName(); // Adding timestamp to prevent name collision
-                $file->move(public_path($destinationPath), $fileName);
+                $fileNameOriginal = $file->getClientOriginalName(); // Adding timestamp to prevent name collision
+
+                $extension = strtolower($request->file('img_src_file')->getClientOriginalExtension());
+                $modifiedName = (rand(100000, 999999)).'_'.time().'.'.$extension;
+
+                $file->move(public_path($destinationPath), $modifiedName);
+                $fileName = $modifiedName;
             }
 
             // Clean the 'pop_up_content' field before saving it
@@ -53,6 +62,7 @@ class ApiNewController extends Controller
 
             // Prepare data for new entry
             $data = [
+                'image_name' => $fileNameOriginal,
                 'title' => $payload['title'],
                 'description' => $payload['description'],
                 'img_src' => $fileName, // Add the file name if file was uploaded
@@ -72,7 +82,6 @@ class ApiNewController extends Controller
                 'message' => 'News update created successfully!',
                 'data' => $newsUpdate,
             ]);
-
         } catch (\Exception $e) {
             // Return exception response in case of an error
             return $this->response('exception', [
@@ -128,13 +137,19 @@ class ApiNewController extends Controller
 
             if ($newsUpdate) {
                 $fileName = $newsUpdate->img_src; // Retain the previous file name if no new file is uploaded
+                $fileNameOriginal = $newsUpdate->image_name; // Retain the previous file name if no new file is uploaded
 
                 // Check if there's a new file to upload
                 if ($request->hasFile('img_src_file')) {
                     $file = $request->file('img_src_file');
                     $destinationPath = 'images/news-update';
                     $fileName = $file->getClientOriginalName();
-                    $file->move(public_path($destinationPath), $fileName);
+                    $fileNameOriginal = $file->getClientOriginalName();
+                    $extension = strtolower($request->file('img_src_file')->getClientOriginalExtension());
+                    $modifiedName = (rand(100000, 999999)).'_'.time().'.'.$extension;
+
+                    $file->move(public_path($destinationPath), $modifiedName);
+                    $fileName = $modifiedName;
                 }
 
                 // Clean the 'pop_up_content' field before saving it
@@ -143,6 +158,7 @@ class ApiNewController extends Controller
 
                 // Prepare data to update
                 $data = [
+                    'image_name' => $fileNameOriginal,
                     'title' => isset($payload['title']) ? $payload['title'] : $newsUpdate->title,
                     'description' => isset($payload['description']) ? $payload['description'] : $newsUpdate->description,
                     'img_src' => $fileName, // Use the old or new file name
@@ -164,7 +180,6 @@ class ApiNewController extends Controller
                 ];
 
                 return $this->response('success', $response);
-
             } else {
                 $response = [
                     'message' => 'Record not found!',
@@ -260,7 +275,6 @@ class ApiNewController extends Controller
                 'message' => 'Ticker updated successfully!',
                 'data' => $ticker,
             ], 200);
-
         } catch (\Exception $e) {
             // Return an error response for any exceptions
             return response()->json([
@@ -290,7 +304,6 @@ class ApiNewController extends Controller
             ];
 
             return $this->response('success', $response);
-
         } catch (\Exception $e) {
             // Handle any exceptions and return an error response
             $response = [
@@ -357,7 +370,6 @@ class ApiNewController extends Controller
                 'status' => 'success',
                 'message' => 'Ticker deleted successfully',
             ], 200);
-
         } catch (\Exception $e) {
             return response()->json([
                 'status' => 'error',
@@ -417,7 +429,6 @@ class ApiNewController extends Controller
                 'message' => 'Gallery updates retrieved successfully.',
                 'data' => $galleryData,
             ], 200);
-
         } catch (\Exception $e) {
             // Return error response in case of exception
             return response()->json([
@@ -449,7 +460,6 @@ class ApiNewController extends Controller
                 ];
 
                 return $this->response('validatorerrors', $output);
-
             }
 
             // Set up initial data
@@ -484,7 +494,6 @@ class ApiNewController extends Controller
                 'message' => 'Gallery updated successfully.',
                 'data' => $gallery,
             ], 200);
-
         } catch (\Illuminate\Validation\ValidationException $e) {
             // Return validation error response
             return response()->json([
@@ -524,7 +533,6 @@ class ApiNewController extends Controller
                 'message' => 'Gallery data retrieved successfully.',
                 'data' => $galleryData,
             ], 200);
-
         } catch (\Exception $e) {
             // Return error response in case of exception
             return response()->json([
@@ -593,7 +601,6 @@ class ApiNewController extends Controller
                 'message' => 'Gallery created successfully.',
                 'data' => $gallery,
             ], 201);
-
         } catch (\Exception $e) {
             // Return error response in case of exception
             return response()->json([
@@ -626,7 +633,6 @@ class ApiNewController extends Controller
                 'message' => 'thePeacock updates retrieved successfully.',
                 'data' => $thePeacockData,
             ], 200);
-
         } catch (\Exception $e) {
             // Return error response in case of exception
             return response()->json([
@@ -639,17 +645,15 @@ class ApiNewController extends Controller
 
     public function updateThePeacock(Request $request, $id)
     {
-
+        //  exit('Aditya');
         $payload = $request->all();
         try {
             // Validate the request data (fields are now optional)
             $validator = Validator::make($payload, [
                 'title' => 'nullable|string|max:255',
-                'img_src' => 'nullable|string|max:255', // Assuming image is a URL or file path
+                'img_src_file' => 'nullable|mimes:pdf|max:20000',
                 'year' => 'nullable',
                 'status' => 'nullable|in:0,1', // Assuming status can be 'active' or 'inactive'
-                'link' => 'nullable|string|max:255',
-                'publish_date' => 'nullable',  // 'status' is required, must be 1 or 0
             ]);
 
             if ($validator->fails()) {
@@ -659,45 +663,29 @@ class ApiNewController extends Controller
                 ];
 
                 return $this->response('validatorerrors', $output);
-
             }
             $thePeacock = ThePeacock::findOrFail($id);
-
-            // Handle image upload
+            $fileNameOriginal = $thePeacock->image_name;
+            $modifiedName = $thePeacock->img_src;
+            // Check if a new file is uploaded
             if ($request->hasFile('img_src_file')) {
                 $file = $request->file('img_src_file');
                 $destinationPath = 'images/thePeacock';
-                $fileName = $file->getClientOriginalName();
-                $fullFilePath = public_path("{$destinationPath}/{$fileName}");
-                $extension = strtolower($request->file('img_src_file')->getClientOriginalExtension());
-                $modifiedName = (rand(100000, 999999)).'_'.time().'.'.$extension;
-                // Move file to the destination and set image path in data
+                $fileNameOriginal = $file->getClientOriginalName();
+                $extension = strtolower($file->getClientOriginalExtension());
+                $modifiedName = rand(100000, 999999).'_'.time().'.'.$extension;
                 $file->move(public_path($destinationPath), $modifiedName);
-                $thePeacock->img_src = "{$modifiedName}";
-                $thePeacock->image_name = "{$fileName}";
+                $fileName = $modifiedName;
             }
 
             // Find the thePeacock by ID
 
             // Update the thePeacock with new data if provided
-            if (isset($validated['title'])) {
-                $thePeacock->title = $validated['title'];
-            }
-            if (isset($validated['image'])) {
-                $thePeacock->image = $validated['image'];
-            }
-            if (isset($validated['year'])) {
-                $thePeacock->year = $validated['year'];
-            }
-            if (isset($validated['status'])) {
-                $thePeacock->status = $validated['status'];
-            }
-            if (isset($validated['link'])) {
-                $thePeacock->link = $validated['link'];
-            }
-            if (isset($validated['publish_date'])) {
-                $thePeacock->publish_date = $validated['publish_date'];
-            }
+            $thePeacock->title = $payload['title'];
+            $thePeacock->year = $payload['year'];
+            $thePeacock->status = $payload['status'];
+            $thePeacock->image_name = $fileNameOriginal;
+            $thePeacock->img_src = $modifiedName;
 
             // Save the changes to the database
             $thePeacock->save();
@@ -708,7 +696,6 @@ class ApiNewController extends Controller
                 'message' => 'thePeacock updated successfully.',
                 'year' => $thePeacock,
             ], 200);
-
         } catch (\Illuminate\Validation\ValidationException $e) {
             // Return validation error response
             return response()->json([
@@ -747,7 +734,6 @@ class ApiNewController extends Controller
                 'message' => 'thePeacock data retrieved successfully.',
                 'data' => $thePeacockData,
             ], 200);
-
         } catch (\Exception $e) {
             // Return error response in case of exception
             return response()->json([
@@ -765,11 +751,9 @@ class ApiNewController extends Controller
         // Validation rules
         $validatorArray = [
             'title' => 'required|string|max:255',
-            'img_src' => 'nullable|string|max:255',
+            'img_src_file' => 'nullable|mimes:pdf|max:20000',
             'year' => 'required|integer', // Ensure year is an integer
             'status' => 'required|in:0,1', // Assuming status can be 'active' or 'inactive'
-            'link' => 'required|string|max:255', // Corrected spelling here
-            'publish_date' => 'nullable|date',  // Corrected validation rule for date
         ];
 
         $validator = Validator::make($payload, $validatorArray);
@@ -792,22 +776,21 @@ class ApiNewController extends Controller
                 'title' => $payload['title'] ?? '',
                 'year' => isset($payload['year']) && $payload['year'] !== '' ? (int) $payload['year'] : null, // Handle year as integer or null
                 'status' => $payload['status'] ?? '0',
-                'link' => $payload['link'] ?? '',
-                'publish_date' => $formattedDate,
-                'img_src' => '',
+                // 'img_src' => '',
             ];
 
             // Handle image upload
             if ($request->hasFile('img_src_file')) {
                 $file = $request->file('img_src_file');
-                $destinationPath = 'images/gallery_images';
-                $extension = strtolower($file->getClientOriginalExtension());
-                $modifiedName = rand(100000, 999999).'_'.time().'.'.$extension;
-
+                $destinationPath = 'images/thePeacock';
+                $fileName = $file->getClientOriginalName();
+                $fullFilePath = public_path("{$destinationPath}/{$fileName}");
+                $extension = strtolower($request->file('img_src_file')->getClientOriginalExtension());
+                $modifiedName = (rand(100000, 999999)).'_'.time().'.'.$extension;
                 // Move file to the destination and set image path in data
                 $file->move(public_path($destinationPath), $modifiedName);
-                $data['img_src'] = $modifiedName;
-                $data['image_name'] = $file->getClientOriginalName();
+                $data['img_src'] = "{$modifiedName}";
+                $data['image_name'] = "{$fileName}";
             }
 
             // Create ThePeacock record
@@ -819,7 +802,6 @@ class ApiNewController extends Controller
                 'message' => 'ThePeacock created successfully.',
                 'data' => $ThePeacock,
             ], 201);
-
         } catch (\Exception $e) {
             // Return error response in case of exception
             return response()->json([
@@ -859,7 +841,6 @@ class ApiNewController extends Controller
                 'status' => 'success',
                 'message' => 'ThePeacock deleted successfully.',
             ], 200);
-
         } catch (\Exception $e) {
             // Return error response in case of exception
             return response()->json([
@@ -870,25 +851,26 @@ class ApiNewController extends Controller
         }
     }
 
-    // The Peacock
-    public function CuretedSection2024()
+    // LatestUpdate
+    public function latestUpdate()
     {
         try {
-            // Step 1: Retrieve all tickers with specific fields
-            $tickerList = Ticker::select('id', 'content', 'status')->get();
+            // Step 1: Retrieve all LatestUpdates with specific fields
+            $LatestUpdateList = LatestUpdate::all();
+            // $LatestUpdateList = LatestUpdate::select('id', 'content', 'status')->get();
 
-            // Step 2: Check if any tickers are found
-            if ($tickerList->isEmpty()) {
+            // Step 2: Check if any LatestUpdates are found
+            if ($LatestUpdateList->isEmpty()) {
                 return $this->response('no_content', [
-                    'message' => 'No tickers found.',
+                    'message' => 'No LatestUpdates found.',
                     'data' => [],
                 ], 204); // 204 status for no content
             }
 
-            // Step 3: Return a success response with the retrieved ticker data
+            // Step 3: Return a success response with the retrieved LatestUpdate data
             return $this->response('success', [
-                'message' => 'All tickers fetched successfully!',
-                'data' => $tickerList,
+                'message' => 'All LatestUpdates fetched successfully!',
+                'data' => $LatestUpdateList,
             ], 200); // 200 status for success
 
         } catch (\Exception $e) {
@@ -896,6 +878,810 @@ class ApiNewController extends Controller
             return $this->response('exception', [
                 'message' => 'An error occurred: '.$e->getMessage(),
             ], 500); // 500 status for internal server error
+        }
+    }
+
+    public function updatelatestUpdate(Request $request, $id)
+    {
+        // Retrieve all request data
+        $payload = $request->all();
+
+        // Define validation rules
+        $validator = Validator::make($payload, [
+            'title' => 'nullable|string',  // Ensure 'content' is a string if provided
+            'link' => 'nullable|string',  // Ensure 'content' is a string if provided
+            'content' => 'nullable|string',  // Ensure 'content' is a string if provided
+            'status' => 'nullable|in:1,0',   // Ensure 'status' is either 1 or 0 if provided
+        ]);
+
+        // If validation fails, return an error response
+        if ($validator->fails()) {
+            return response()->json([
+                'status' => 'validation_error',
+                'message' => $validator->errors()->first(),
+            ], 422);
+        }
+
+        try {
+            // Find the LatestUpdate entry by ID or return a 404 error if not found
+            $LatestUpdate = LatestUpdate::findOrFail($id);
+
+            // Update only the fields provided in the request
+            $LatestUpdate->update([
+                'title' => $payload['title'] ?? $LatestUpdate->title,
+                'link' => $payload['link'] ?? $LatestUpdate->link,
+                'content' => $payload['content'] ?? $LatestUpdate->content,
+                'status' => $payload['status'] ?? $LatestUpdate->status,
+            ]);
+
+            // Return a success response with the updated LatestUpdate data
+            return response()->json([
+                'status' => 'success',
+                'message' => 'LatestUpdate updated successfully!',
+                'data' => $LatestUpdate,
+            ], 200);
+        } catch (\Exception $e) {
+            // Return an error response for any exceptions
+            return response()->json([
+                'status' => 'error',
+                'message' => $e->getMessage(),
+            ], 500);
+        }
+    }
+
+    public function latestUpdateDetails($id)
+    {
+        try {
+            // Attempt to find the LatestUpdate entry by its ID
+            $LatestUpdateDetails = LatestUpdate::find($id);
+
+            // Check if LatestUpdateDetails exists
+            if (! $LatestUpdateDetails) {
+                return $this->response('not_found', [
+                    'message' => 'LatestUpdate not found!',
+                ]);
+            }
+
+            // Prepare a success response with the retrieved details
+            $response = [
+                'message' => 'LatestUpdate details fetched successfully!',
+                'data' => $LatestUpdateDetails,
+            ];
+
+            return $this->response('success', $response);
+        } catch (\Exception $e) {
+            // Handle any exceptions and return an error response
+            $response = [
+                'message' => 'An error occurred: '.$e->getMessage(),
+            ];
+
+            return $this->response('exception', $response);
+        }
+    }
+
+    public function latestUpdateCreate(Request $request)
+    {
+        // Step 1: Retrieve all data from the request
+        $payload = $request->all();
+
+        // Step 2: Define validation rules and custom messages (if any)
+        $validator = Validator::make($payload, [
+            'content' => 'required|string|max:255',  // 'content' is required, should be a string with a max length
+            'status' => 'required|in:1,0',           // 'status' is required, must be 1 or 0
+        ]);
+
+        // Step 3: Check for validation errors
+        if ($validator->fails()) {
+            return $this->response('validation_error', [
+                'message' => $validator->errors()->first(),
+            ], 422); // 422 status for validation error
+        }
+
+        try {
+            // Step 4: Create the LatestUpdate record in the database
+            $LatestUpdate = LatestUpdate::create([
+                'title' => $payload['title'],
+                'link' => $payload['link'],
+                'content' => $payload['content'],
+                'status' => $payload['status'],
+            ]);
+
+            // Step 5: Return a success response with the created LatestUpdate data
+            return $this->response('success', [
+                'message' => 'LatestUpdate created successfully!',
+                'data' => $LatestUpdate,  // Return the newly created LatestUpdate data
+            ], 201); // 201 status for created
+
+        } catch (\Exception $e) {
+            // Step 6: Handle any unexpected errors
+            return $this->response('exception', [
+                'message' => 'An error occurred: '.$e->getMessage(),
+            ], 500); // 500 status for internal server error
+        }
+    }
+
+    public function latestUpdateDelete($id)
+    {
+        try {
+            // Find the LatestUpdate by ID
+            $LatestUpdate = LatestUpdate::find($id);
+
+            if (! $LatestUpdate) {
+                return response()->json(['status' => 'error', 'message' => 'LatestUpdate not found'], 404);
+            }
+
+            // Delete the LatestUpdate
+            $LatestUpdate->delete();
+
+            return response()->json([
+                'status' => 'success',
+                'message' => 'LatestUpdate deleted successfully',
+            ], 200);
+        } catch (\Exception $e) {
+            return response()->json([
+                'status' => 'error',
+                'message' => 'An error occurred: '.$e->getMessage(),
+            ], 500);
+        }
+    }
+
+    // cureted section 2024
+    public function curetedSection2024(Request $request)
+    {
+        try {
+            $payload = $request->all();
+            $curetedsectionData = curetedsection2024::where('international_cinema.year', 2024)->get();
+
+            if ($curetedsectionData->isEmpty()) {
+                return response()->json([
+                    'status' => 'success',
+                    'message' => 'No curetedsection updates found.',
+                    'data' => [],
+                ], 200);
+            }
+
+            return response()->json([
+                'status' => 'success',
+                'message' => 'curetedsection updates retrieved successfully.',
+                'data' => $curetedsectionData,
+            ], 200);
+        } catch (\Exception $e) {
+            // Return error response in case of exception
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Failed to retrieve curetedsection updates.',
+                'error' => $e->getMessage(),
+            ], 500);
+        }
+    }
+
+    public function updateCuretedsection2024(Request $request, $id)
+    {
+        $payload = $request->all();
+        $validatorArray = [
+            'curated_section_id' => 'required|string|max:255',
+            // 'award_year' => 'required|string|max:255',
+            'title' => 'required|string|max:255',
+             //  'award' => 'string|max:255',
+            'directed_by' => 'required|string|max:255',
+            'country_of_origin' => 'required|string|max:255',
+            'language' => 'required|string|max:255',
+            'slug' => 'required|string|max:255',
+            'year' => 'required|string|max:4', // assuming year is a 4-digit string
+            'img_src_file' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'status' => 'required|boolean',
+        ];
+        $messagesArray = [];
+        $validator = Validator::make($payload, $validatorArray, $messagesArray);
+
+        if ($validator->fails()) {
+            return response()->json([
+                'status' => 'error',
+                'message' => $validator->errors()->first(),
+            ], 422);
+        }
+
+        try {
+            $curetedsection = curetedsection2024::find($id);
+
+            if ($curetedsection) {
+                // Retain existing image if no new file is uploaded
+                $modifiedName = $curetedsection->img_src;
+                $fileNameOriginal = $curetedsection->image_name;
+
+                // Check if a new file is uploaded
+                if ($request->hasFile('img_src_file')) {
+                    $file = $request->file('img_src_file');
+                    $destinationPath = 'images/cureted-section';
+                    $fileNameOriginal = $file->getClientOriginalName();
+                    $extension = strtolower($file->getClientOriginalExtension());
+                    $modifiedName = rand(100000, 999999).'_'.time().'.'.$extension;
+                    $file->move(public_path($destinationPath), $modifiedName);
+                    $fileName = $modifiedName;
+                }
+
+                // Prepare data to update
+                $data = [
+                    'img_src' => $modifiedName,
+                    'image_name' => $fileNameOriginal,
+                    'curated_section_id' => $payload['curated_section_id'],
+                    // 'award_year' => $payload['award_year'],
+                    'title' => $payload['title'],
+                    'award' =>( !empty($payload['award'])?$payload['award']:''),
+                    'directed_by' => $payload['directed_by'],
+                    'country_of_origin' => $payload['country_of_origin'],
+                    'language' => $payload['language'],
+                    'slug' => $payload['slug'],
+                    'year' => $payload['year'],
+                    //   'image' => $payload['img_src'] ?? '', // Assuming img_src is the file field, set default as empty if not provided
+                    'status' => $payload['status'],
+                ];
+
+                // Update the cureted section record
+                $curetedsection->update($data);
+
+                return response()->json([
+                    'status' => 'success',
+                    'message' => 'Curated section updated successfully!',
+                    'data' => $data,
+                ], 200);
+            } else {
+                return response()->json([
+                    'status' => 'error',
+                    'message' => 'Record not found!',
+                ], 404);
+            }
+        } catch (\Exception $e) {
+            return response()->json([
+                'status' => 'error',
+                'message' => 'An error occurred while updating the curated section.',
+                'error' => $e->getMessage(),
+            ], 500);
+        }
+    }
+
+    public function curetedsection2024ById($id)
+    {
+        try {
+            $curetedsection2024details = curetedsection2024::find($id);
+
+            $response = [
+                'message' => 'Details fetched successfully.!',
+                'data' => $curetedsection2024details,
+            ];
+
+            return $this->response('success', $response);
+        } catch (\Exception $e) {
+            $response = [
+                'message' => $e->getMessage(),
+            ];
+
+            return $this->response('exception', $response);
+        }
+    }
+
+    public function createCuretedsection2024(Request $request)
+    {
+        $payload = $request->all();
+
+        // Validation rules
+        $validatorArray = [
+            'curated_section_id' => 'required|string|max:255',
+            // 'award_year' => 'required|string|max:255',
+            'title' => 'required|string|max:255',
+           // 'award' => 'string|max:255',
+            'directed_by' => 'required|string|max:255',
+            'country_of_origin' => 'required|string|max:255',
+            'language' => 'required|string|max:255',
+            'slug' => 'required|string|max:255',
+            'year' => 'required|string|max:4', // assuming year is a 4-digit string
+            'img_src' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'status' => 'required|boolean',
+        ];
+
+        $validator = Validator::make($payload, $validatorArray);
+        if ($validator->fails()) {
+            return response()->json([
+                'status' => 'validation_error',
+                'message' => $validator->errors()->first(),
+            ], 422);
+        }
+
+        try {
+            // Set up initial data
+            // $date = $payload['date'];
+            // $formattedDate = \DateTime::createFromFormat('D, d M Y H:i:s T', $date)->format('Y-m-d');
+
+            // echo $formattedDate;
+            $data = [
+                'curated_section_id' => $payload['curated_section_id'],
+                // 'award_year' => $payload['award_year'],
+                'title' => $payload['title'],
+                'award' => $payload['award'],
+                'directed_by' => $payload['directed_by'],
+                'country_of_origin' => $payload['country_of_origin'],
+                'language' => $payload['language'],
+                'slug' => $payload['slug'],
+                'year' => $payload['year'],
+                //   'image' => $payload['img_src'] ?? '', // Assuming img_src is the file field, set default as empty if not provided
+                'status' => $payload['status'],
+            ];
+
+            // Handle image upload
+            if ($request->hasFile('img_src_file')) {
+                $file = $request->file('img_src_file');
+                $destinationPath = 'images/cureted-section';
+                $fileName = $file->getClientOriginalName();
+                $fullFilePath = public_path("{$destinationPath}/{$fileName}");
+                $extension = strtolower($request->file('img_src_file')->getClientOriginalExtension());
+                $modifiedName = (rand(100000, 999999)).'_'.time().'.'.$extension;
+                // Move file to the destination and set image path in data
+                $file->move(public_path($destinationPath), $modifiedName);
+                $data['img_src'] = "{$modifiedName}";
+                $data['image_name'] = "{$fileName}";
+            }
+
+            // Create curetedsection2024 record
+            $curetedsection2024 = curetedsection2024::create($data);
+
+            // Return success response
+            return response()->json([
+                'status' => 'success',
+                'message' => 'cureted section 2024 created successfully.',
+                'data' => $curetedsection2024,
+            ], 201);
+        } catch (\Exception $e) {
+            // Return error response in case of exception
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Failed to create cureted section 2024.',
+                'error' => $e->getMessage(),
+            ], 500);
+        }
+    }
+
+    // MasterClass
+    public function getMasterClass()
+    {
+        try {
+            // Fetch all MasterClass records from the database
+            $MasterClassData = MasterClass::all();
+
+            // Check if data exists
+            if ($MasterClassData->isEmpty()) {
+                return response()->json([
+                    'status' => 'success',
+                    'message' => 'No MasterClass updates found.',
+                    'data' => [],
+                ], 200);
+            }
+
+            // Return the MasterClass data as JSON response
+            return response()->json([
+                'status' => 'success',
+                'message' => 'MasterClass updates retrieved successfully.',
+                'data' => $MasterClassData,
+            ], 200);
+        } catch (\Exception $e) {
+            // Return error response in case of exception
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Failed to retrieve MasterClass updates.',
+                'error' => $e->getMessage(),
+            ], 500);
+        }
+    }
+
+    public function updateMasterClass(Request $request, $id)
+    {
+        $payload = $request->all();
+        try {
+
+            // Validate the request data (fields are now optional)
+            $validator = Validator::make($payload, [
+                'title' => 'nullable|string|max:255',
+                'category' => 'nullable|string|max:255',
+                'image' => 'nullable|string|max:255', // Assuming image is a URL or file path
+                'date' => 'nullable|date',
+                'status' => 'nullable|in:1,0', // Assuming status can be 'active' or 'inactive'      // 'status' is required, must be 1 or 0
+            ]);
+
+            if ($validator->fails()) {
+                $output = [
+                    'message' => $validator->errors()->first(),
+                    'data' => $payload,
+                ];
+
+                return $this->response('validatorerrors', $output);
+            }
+
+            // Set up initial data
+            $date = $payload['date'];
+            $formattedDate = \DateTime::createFromFormat('D, d M Y H:i:s T', $date)->format('Y-m-d');
+            // Find the MasterClass by ID
+            $MasterClass = MasterClass::findOrFail($id);
+
+            // Update the MasterClass with new data if provided
+            if (isset($payload['title'])) {
+                $MasterClass->title = $payload['title'];
+            }
+            if (isset($payload['category'])) {
+                $MasterClass->category = $payload['category'];
+            }
+            if (isset($payload['image'])) {
+                $MasterClass->image = $payload['image'];
+            }
+            if (isset($payload['date'])) {
+                $MasterClass->date = $formattedDate;
+            }
+            if (isset($payload['status'])) {
+                $MasterClass->status = $payload['status'];
+            }
+
+            // Save the changes to the database
+            $MasterClass->save();
+
+            // Return a success response
+            return response()->json([
+                'status' => 'success',
+                'message' => 'MasterClass updated successfully.',
+                'data' => $MasterClass,
+            ], 200);
+        } catch (\Illuminate\Validation\ValidationException $e) {
+            // Return validation error response
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Validation error.',
+                'errors' => $e->errors(),
+            ], 422);
+        } catch (\Exception $e) {
+            // Return general error response
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Failed to update MasterClass.',
+                'error' => $e->getMessage(),
+                'payload' => $payload,
+            ], 500);
+        }
+    }
+
+    public function getMasterClassById($id)
+    {
+        try {
+            // Fetch the MasterClass record by ID from the database
+            $MasterClassData = MasterClass::find($id);
+
+            // Check if the record exists
+            if (! $MasterClassData) {
+                return response()->json([
+                    'status' => 'error',
+                    'message' => 'MasterClass not found.',
+                    'data' => null,
+                ], 404);
+            }
+
+            // Return the MasterClass data as JSON response
+            return response()->json([
+                'status' => 'success',
+                'message' => 'MasterClass data retrieved successfully.',
+                'data' => $MasterClassData,
+            ], 200);
+        } catch (\Exception $e) {
+            // Return error response in case of exception
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Failed to retrieve MasterClass data.',
+                'error' => $e->getMessage(),
+            ], 500);
+        }
+    }
+
+    public function createMasterClass(Request $request)
+    {
+        $payload = $request->all();
+
+        // Validation rules
+        $validatorArray = [
+            'title' => 'required|string|max:255',
+            'category' => 'required|string|max:255',
+            'img_src_file' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'date' => 'required|date',
+            'status' => 'required|boolean',
+        ];
+
+        $validator = Validator::make($payload, $validatorArray);
+        if ($validator->fails()) {
+            return response()->json([
+                'status' => 'validation_error',
+                'message' => $validator->errors()->first(),
+            ], 422);
+        }
+
+        try {
+            // Set up initial data
+            $date = $payload['date'];
+            $formattedDate = \DateTime::createFromFormat('D, d M Y H:i:s T', $date)->format('Y-m-d');
+
+            // echo $formattedDate;
+            $data = [
+                'title' => $payload['title'],
+                'category' => $payload['category'],
+                'date' => $formattedDate,
+                'status' => $payload['status'],
+                'image' => '',
+            ];
+
+            // Handle image upload
+            if ($request->hasFile('img_src_file')) {
+                $file = $request->file('img_src_file');
+                $destinationPath = 'images/MasterClass_images';
+                $fileName = $file->getClientOriginalName();
+                $fullFilePath = public_path("{$destinationPath}/{$fileName}");
+                $extension = strtolower($request->file('img_src_file')->getClientOriginalExtension());
+                $modifiedName = (rand(100000, 999999)).'_'.time().'.'.$extension;
+                // Move file to the destination and set image path in data
+                $file->move(public_path($destinationPath), $modifiedName);
+                $data['image'] = "{$modifiedName}";
+                $data['image_name'] = "{$fileName}";
+            }
+
+            // Create MasterClass record
+            $MasterClass = MasterClass::create($data);
+
+            // Return success response
+            return response()->json([
+                'status' => 'success',
+                'message' => 'MasterClass created successfully.',
+                'data' => $MasterClass,
+            ], 201);
+        } catch (\Exception $e) {
+            // Return error response in case of exception
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Failed to create MasterClass.',
+                'error' => $e->getMessage(),
+            ], 500);
+        }
+    }
+
+    // The PartnerSponsor
+    public function thePartnerSponsor()
+    {
+        try {
+            // Fetch all thePartnerSponsor records from the database
+            $thePartnerSponsorData = ThePartnerSponsor::all();
+
+            // Check if data exists
+            if ($thePartnerSponsorData->isEmpty()) {
+                return response()->json([
+                    'status' => 'success',
+                    'message' => 'No thePartnerSponsor updates found.',
+                    'data' => [],
+                ], 200);
+            }
+
+            // Return the thePartnerSponsor data as JSON response
+            return response()->json([
+                'status' => 'success',
+                'message' => 'thePartnerSponsor updates retrieved successfully.',
+                'data' => $thePartnerSponsorData,
+            ], 200);
+        } catch (\Exception $e) {
+            // Return error response in case of exception
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Failed to retrieve thePartnerSponsor updates.',
+                'error' => $e->getMessage(),
+            ], 500);
+        }
+    }
+
+    public function updatePartnerSponsor(Request $request, $id)
+    {
+        $payload = $request->all();
+        try {
+            // Validate the request data (fields are now optional)
+            $validator = Validator::make($payload, [
+                'title' => 'nullable|string|max:255',
+                'img_src_file' => 'nullable|mimes:pdf|max:20000',
+                'status' => 'nullable|in:0,1', // Assuming status can be 'active' or 'inactive'
+                'partners_sponsor' => 'nullable|in:0,1', // Assuming status can be 'active' or 'inactive'
+            ]);
+
+            if ($validator->fails()) {
+                $output = [
+                    'message' => $validator->errors()->first(),
+                    'data' => $payload,
+                ];
+
+                return $this->response('validatorerrors', $output);
+            }
+            $thePartnerSponsor = ThePartnerSponsor::findOrFail($id);
+            $fileNameOriginal = $thePartnerSponsor->image_name;
+            $modifiedName = $thePartnerSponsor->img_src;
+            // Check if a new file is uploaded
+            if ($request->hasFile('img_src_file')) {
+                $file = $request->file('img_src_file');
+                $destinationPath = 'images/thePartnerSponsor';
+                $fileNameOriginal = $file->getClientOriginalName();
+                $extension = strtolower($file->getClientOriginalExtension());
+                $modifiedName = rand(100000, 999999).'_'.time().'.'.$extension;
+                $file->move(public_path($destinationPath), $modifiedName);
+                $fileName = $modifiedName;
+            }
+
+            // Find the thePartnerSponsor by ID
+
+            // Update the thePartnerSponsor with new data if provided
+            $thePartnerSponsor->title = $payload['title'];
+            $thePartnerSponsor->year = $payload['year'];
+            $thePartnerSponsor->status = $payload['status'];
+            $thePartnerSponsor->partners_sponsor = $payload['partners_sponsor'];
+            $thePartnerSponsor->image_name = $fileNameOriginal;
+            $thePartnerSponsor->img_src = $modifiedName;
+
+            // Save the changes to the database
+            $thePartnerSponsor->save();
+
+            // Return a success response
+            return response()->json([
+                'status' => 'success',
+                'message' => 'thePartnerSponsor updated successfully.',
+                'year' => $thePartnerSponsor,
+            ], 200);
+        } catch (\Illuminate\Validation\ValidationException $e) {
+            // Return validation error response
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Validation error.',
+                'errors' => $e->errors(),
+            ], 422);
+        } catch (\Exception $e) {
+            // Return general error response
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Failed to update thePartnerSponsor.',
+                'error' => $e->getMessage(),
+            ], 500);
+        }
+    }
+
+    public function getthePartnerSponsorById($id)
+    {
+        try {
+            // Fetch the thePartnerSponsor record by ID from the database
+            $thePartnerSponsorData = thePartnerSponsor::find($id);
+
+            // Check if the record exists
+            if (! $thePartnerSponsorData) {
+                return response()->json([
+                    'status' => 'error',
+                    'message' => 'thePartnerSponsor not found.',
+                    'data' => null,
+                ], 404);
+            }
+
+            // Return the thePartnerSponsor data as JSON response
+            return response()->json([
+                'status' => 'success',
+                'message' => 'thePartnerSponsor data retrieved successfully.',
+                'data' => $thePartnerSponsorData,
+            ], 200);
+        } catch (\Exception $e) {
+            // Return error response in case of exception
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Failed to retrieve thePartnerSponsor data.',
+                'error' => $e->getMessage(),
+            ], 500);
+        }
+    }
+
+    public function createThePartnerSponsor(Request $request)
+    {
+        $payload = $request->all();
+
+        // Validation rules
+        $validatorArray = [
+            'title' => 'required|string|max:255',
+            'img_src_file' => 'nullable|mimes:pdf|max:20000',
+            'status' => 'required|in:0,1', // Assuming status can be 'active' or 'inactive'
+            'partners_sponsor' => 'required|in:0,1', // Assuming status can be 'active' or 'inactive'
+        ];
+
+        $validator = Validator::make($payload, $validatorArray);
+        if ($validator->fails()) {
+            return response()->json([
+                'status' => 'validation_error',
+                'message' => $validator->errors()->first(),
+            ], 422);
+        }
+
+        try {
+            // Set up initial data
+            $formattedDate = null;
+            if (! empty($payload['publish_date'])) {
+                $date = $payload['publish_date'];
+                $formattedDate = \DateTime::createFromFormat('D, d M Y H:i:s T', $date)->format('Y-m-d');
+            }
+
+            $data = [
+                'title' => $payload['title'] ?? '',
+                'year' => isset($payload['year']) && $payload['year'] !== '' ? (int) $payload['year'] : null, // Handle year as integer or null
+                'status' => $payload['status'] ?? '0',
+                'partners_sponsor' => $payload['status'] ?? '0',
+                // 'img_src' => '',
+            ];
+
+            // Handle image upload
+            if ($request->hasFile('img_src_file')) {
+                $file = $request->file('img_src_file');
+                $destinationPath = 'images/thePartnerSponsor';
+                $fileName = $file->getClientOriginalName();
+                $fullFilePath = public_path("{$destinationPath}/{$fileName}");
+                $extension = strtolower($request->file('img_src_file')->getClientOriginalExtension());
+                $modifiedName = (rand(100000, 999999)).'_'.time().'.'.$extension;
+                // Move file to the destination and set image path in data
+                $file->move(public_path($destinationPath), $modifiedName);
+                $data['img_src'] = "{$modifiedName}";
+                $data['image_name'] = "{$fileName}";
+            }
+
+            // Create thePartnerSponsor record
+            $thePartnerSponsor = thePartnerSponsor::create($data);
+
+            // Return success response
+            return response()->json([
+                'status' => 'success',
+                'message' => 'thePartnerSponsor created successfully.',
+                'data' => $thePartnerSponsor,
+            ], 201);
+        } catch (\Exception $e) {
+            // Return error response in case of exception
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Failed to create thePartnerSponsor.',
+                'error' => $e->getMessage(),
+            ], 500);
+        }
+    }
+
+    public function deleteThePartnerSponsor($id)
+    {
+        try {
+            // Find the record by ID
+            $thePartnerSponsor = ThePartnerSponsor::find($id);
+
+            // Check if the record exists
+            if (! $thePartnerSponsor) {
+                return response()->json([
+                    'status' => 'error',
+                    'message' => 'thePartnerSponsor not found.',
+                ], 404);
+            }
+
+            // Delete the image file if it exists
+            if ($thePartnerSponsor->img_src) {
+                $filePath = public_path('images/thePartnerSponsor/'.$thePartnerSponsor->img_src);
+                if (file_exists($filePath)) {
+                    unlink($filePath);
+                }
+            }
+
+            // Delete the record
+            $thePartnerSponsor->delete();
+
+            return response()->json([
+                'status' => 'success',
+                'message' => 'thePartnerSponsor deleted successfully.',
+            ], 200);
+        } catch (\Exception $e) {
+            // Return error response in case of exception
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Failed to delete thePartnerSponsor.',
+                'error' => $e->getMessage(),
+            ], 500);
         }
     }
 }

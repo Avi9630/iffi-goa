@@ -12,14 +12,14 @@
         <div class="col-md-7 col-12">
             <div class="callout">
                 <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov22-0-trigger">
-                    Centenary Special ANR: Celebrating the Life and Works of Akkineni Nageswara Rao
+                    Centenary Special: ANR - Celebrating the Life and Works of Akkineni Nageswara Rao
                 </h4>
                 <p>
                     This centenary special celebrates the legendary actor & producer Akkineni Nageswara Rao (ANR), whose
                     contributions to Indian cinema remain unparalleled. In this special session, ANR's son and the
-                    renowned actor Nagarjuna will discuss how ANR influenced him as a father and as an actor,his
-                    illustrious career, iconic roles, and his immeasurable impact on the film industry, as a tribute
-                    alongside the renowned actress kushboo sundar.
+                    renowned actor Nagarjuna will discuss how ANR influenced him as father and as an actor, his
+                    illustrious career, iconic roles, and his immeasurable impact on the film industry, as a tribute,
+                    together with the renowned actress Kushboo Sundar.
                 </p>
             </div>
         </div>
@@ -39,14 +39,12 @@
 <div class="mt-4 mb-4">
     <h2 class="pb-3">November 22nd, 2024</h2>
     <div class="row">
-
         <div class="col-md-2 col-12">
             <div class="master-time">
                 <h4 class="time-div">12:30 PM</h4>
                 <h5 class="time-div">01:30 PM</h5>
             </div>
         </div>
-
         <div class="col-md-7 col-12">
             <div class="callout">
                 <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov22-1-trigger">
@@ -55,19 +53,23 @@
                 <p>
                     In this session, the acclaimed filmmaker Vidhu Vinod Chopra takes us on a journey through the
                     creative process, sharing his experiences, challenges, and the philosophy behind living through
-                    cinema.With decades of storytelling mastery,Mr.
-                    Chopra will bring us the insights into how films not only reflect life but become a living entity of
-                    their own, inspiring generations
+                    cinema. With decades of storytelling mastery, Mr.
+                    Chopra will bring us insights into how films not only reflect life but become a living entity of
+                    their own, inspiring generations.
                 </p>
             </div>
         </div>
-
         <div class="col-md-3 col-12">
             <div class="user-profile-icon">
                 <ul>
-                    <li><img src="{{ asset('public/images/master-class/Vidhu Vinod Chopra.jpg') }}" alt="image"
+                    <li>
+                        <img src="{{ asset('public/images/master-class/Vidhu Vinod Chopra.jpg') }}" alt="image"
                             class="img-fluid">
                     </li>
+                    {{-- <li>
+                        <img src="{{ asset('public/images/master-class/Shantanu Moitra.jpg') }}" alt="image"
+                            class="img-fluid">
+                    </li> --}}
                 </ul>
             </div>
         </div>
