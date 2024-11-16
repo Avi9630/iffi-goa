@@ -1684,4 +1684,76 @@ class ApiNewController extends Controller
             ], 500);
         }
     }
+
+    // public function readCSV()
+    // {
+    //     $csvFile = public_path('images/csv-read.csv');
+
+    //     // Open the file in read mode
+    //     if (($handle = fopen($csvFile, 'r')) !== false) {
+    //         // Read and process each line
+    //         $headerSkipped = false;
+    //         while (($row = fgetcsv($handle)) !== false) {
+    //             if (! $headerSkipped) {
+    //                 $headerSkipped = true;
+
+    //                 continue;
+    //             }
+
+    //             $newTitle = $row[1];
+
+    //             // Check if the cinema exists
+    //             $cinema = \DB::table('international_cinema')
+    //                 ->where('title', $newTitle)
+    //                 ->first();
+
+    //             if ($cinema) {
+    //                 // Update existing cinema
+    //                 \DB::table('international_cinema')
+    //                     ->where('id', $cinema->id)
+    //                     ->update([
+    //                         // 'title' => $newTitle,
+
+    //                     ]);
+    //             } else {
+    //                 // Create new cinema
+    //                 $cinemaId = \DB::table('international_cinema')->insertGetId([
+    //                     'title' => $newTitle,
+    //                     'created_at' => now(),
+    //                     'updated_at' => now(),
+    //                 ]);
+
+    //                 $cinema = (object) ['id' => $cinemaId];
+    //             }
+
+    //             // Check if basic details exist for the cinema
+    //             $basicDetails = \DB::table('international_cinema_basic_details')
+    //                 ->where('cinema_id', $cinema->id)
+    //                 ->first();
+
+    //             if ($basicDetails) {
+    //                 // Update existing basic details
+    //                 \DB::table('international_cinema_basic_details')
+    //                     ->where('id', $basicDetails->id)
+    //                     ->update([
+    //                         'title' => $newTitle,
+    //                         'updated_at' => now(),
+    //                     ]);
+    //             } else {
+    //                 // Create new basic details
+    //                 \DB::table('international_cinema_basic_details')->insert([
+    //                     'cinema_id' => $cinema->id,
+    //                     'title' => $newTitle,
+    //                     'created_at' => now(),
+    //                     'updated_at' => now(),
+    //                 ]);
+    //             }
+    //         }
+
+    //         // Close the file
+    //         fclose($handle);
+    //     } else {
+    //         echo 'Error: Could not open the file.';
+    //     }
+    // }
 }

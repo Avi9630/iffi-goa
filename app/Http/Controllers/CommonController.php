@@ -61,7 +61,7 @@ class CommonController extends Controller
             'best-debut-feature-film-of-a-director' => 13,
             'icft-unesco-medal' => 4,
             'festival-kaleidoscope' => 3,
-            'documontage' => 14,
+            'docu-montage' => 14,
             'macabre-dreams' => 10,
             'cinema-world' => 15,
             'restored-classic' => 16,
@@ -89,12 +89,12 @@ class CommonController extends Controller
         $curatedSections = [
             1 => 'International Competition',
             3 => 'From The Festivals',
-            4 => 'ICFT Unesco Medal',
+            4 => 'ICFT UNESCO Gandhi Medal',
             9 => 'Experimental Films',
             10 => 'Macabre Dreams',
             11 => 'UNICEF',
             13 => 'Best Debut Feature Film of A Director',
-            14 => 'DocuMontage',
+            14 => 'Docu-Montage',
             15 => 'Cinema of the World',
             16 => 'Restored Classics',
             17 => 'Rising Stars',
@@ -102,7 +102,7 @@ class CommonController extends Controller
             19 => 'BFI@IFFI',
             20 => 'Country Focus: Australia',
             21 => 'Accolades',
-            22 => 'From The Consulate',
+            22 => 'From The Consulates',
             23 => 'Opening Film',
             24 => 'Closing Film',
             25 => 'Official Selection - Debut Director Films',
@@ -159,11 +159,11 @@ class CommonController extends Controller
         return view(
             'pages.international-competition-detail',
             [
-                'fetch_cinema_details'              =>  $fetch_cinema_details,
-                'fetch_cinema_basic_details'        =>  $fetch_cinema_basic_details,
-                'currentURL'                        =>  $currentURL,
-                'list_international_cinema_images'  =>  $list_international_cinema_images,
-                'list_international_cinema_videos'  =>  $list_international_cinema_videos,
+                'fetch_cinema_details' => $fetch_cinema_details,
+                'fetch_cinema_basic_details' => $fetch_cinema_basic_details,
+                'currentURL' => $currentURL,
+                'list_international_cinema_images' => $list_international_cinema_images,
+                'list_international_cinema_videos' => $list_international_cinema_videos,
             ]
         );
     }
@@ -381,6 +381,7 @@ class CommonController extends Controller
             ->orderBy('id', 'DESC')
             ->get();
         dd($partnersSponsors);
+
         return view('partnersSponsors.partner-sponsers', [
             'partnersSponsors' => $partnersSponsors,
         ]);

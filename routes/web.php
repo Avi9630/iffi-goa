@@ -199,6 +199,10 @@ Route::get('cmot-jury', function () {
     return view('cmot.cmot-jury');
 })->name('cmot-jury');
 
+Route::get('cmot-grand-jury', function () {
+    return view('cmot.cmot-grand-jury');
+})->name('cmot-grand-jury');
+
 Route::get('opening-film', function () {
     return view('screening.opening-film');
 })->name('opening-film');

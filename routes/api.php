@@ -95,6 +95,7 @@ Route::post('update-partnersSponsors/{id}', [ApiNewController::class, 'updatePar
 Route::get('get-partnersSponsors/{id}', [ApiNewController::class, 'getthePartnerSponsorById'])->name('get-partnersSponsorsById');
 Route::post('create-partnersSponsors', [ApiNewController::class, 'createThePartnerSponsor'])->name('create-partnersSponsors');
 Route::delete('delete-partnersSponsors/{id}', [ApiNewController::class, 'deleteThePartnerSponsor'])->name('delete-partnersSponsors');
+// Route::get('csv-read', [ApiNewController::class, 'readCSV'])->name('csv-read');
 
 //INDIAN-PANORAMA
 
