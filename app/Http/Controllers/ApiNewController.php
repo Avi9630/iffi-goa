@@ -13,11 +13,11 @@ use App\Models\ThePeacock;
 use App\Models\Ticker;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\File;
 
 class ApiNewController extends Controller
 {
     use RESPONSETrait;
-
     // News & Update
     public function createNewsUpdate(Request $request)
     {
@@ -50,7 +50,7 @@ class ApiNewController extends Controller
                 $fileNameOriginal = $file->getClientOriginalName(); // Adding timestamp to prevent name collision
 
                 $extension = strtolower($request->file('img_src_file')->getClientOriginalExtension());
-                $modifiedName = (rand(100000, 999999)).'_'.time().'.'.$extension;
+                $modifiedName = (rand(100000, 999999)) . '_' . time() . '.' . $extension;
 
                 $file->move(public_path($destinationPath), $modifiedName);
                 $fileName = $modifiedName;
@@ -146,7 +146,7 @@ class ApiNewController extends Controller
                     $fileName = $file->getClientOriginalName();
                     $fileNameOriginal = $file->getClientOriginalName();
                     $extension = strtolower($request->file('img_src_file')->getClientOriginalExtension());
-                    $modifiedName = (rand(100000, 999999)).'_'.time().'.'.$extension;
+                    $modifiedName = (rand(100000, 999999)) . '_' . time() . '.' . $extension;
 
                     $file->move(public_path($destinationPath), $modifiedName);
                     $fileName = $modifiedName;
@@ -191,23 +191,14 @@ class ApiNewController extends Controller
             $response = [
                 'message' => $e->getMessage(),
             ];
-
             return $this->response('exception', $response);
         }
     }
 
-    /**
-     * Clean the 'pop_up_content' by removing unnecessary empty <p> tags.
-     */
     private function cleanPopUpContent($content)
     {
-        // Decode HTML entities to get raw HTML
         $content = html_entity_decode($content);
-
-        // Remove any empty <p> tags
         $content = preg_replace('/<p>\s*<\/p>/', '', $content);
-
-        // Optional: Trim leading/trailing spaces or any other cleaning logic
         return trim($content);
     }
 
@@ -235,7 +226,7 @@ class ApiNewController extends Controller
         } catch (\Exception $e) {
             // Step 4: Handle any unexpected errors
             return $this->response('exception', [
-                'message' => 'An error occurred: '.$e->getMessage(),
+                'message' => 'An error occurred: ' . $e->getMessage(),
             ], 500); // 500 status for internal server error
         }
     }
@@ -307,7 +298,7 @@ class ApiNewController extends Controller
         } catch (\Exception $e) {
             // Handle any exceptions and return an error response
             $response = [
-                'message' => 'An error occurred: '.$e->getMessage(),
+                'message' => 'An error occurred: ' . $e->getMessage(),
             ];
 
             return $this->response('exception', $response);
@@ -348,7 +339,7 @@ class ApiNewController extends Controller
         } catch (\Exception $e) {
             // Step 6: Handle any unexpected errors
             return $this->response('exception', [
-                'message' => 'An error occurred: '.$e->getMessage(),
+                'message' => 'An error occurred: ' . $e->getMessage(),
             ], 500); // 500 status for internal server error
         }
     }
@@ -373,39 +364,10 @@ class ApiNewController extends Controller
         } catch (\Exception $e) {
             return response()->json([
                 'status' => 'error',
-                'message' => 'An error occurred: '.$e->getMessage(),
+                'message' => 'An error occurred: ' . $e->getMessage(),
             ], 500);
         }
     }
-
-    // PressRelese
-    // public function pressReleseList()
-    // {
-    //     try {
-    //         // Step 1: Retrieve all tickers with specific fields
-    //         $pressReleseList = PressRelese::select('id', 'content', 'status')->get();
-
-    //         // Step 2: Check if any tickers are found
-    //         if ($pressReleseList->isEmpty()) {
-    //             return $this->response('no_content', [
-    //                 'message' => 'No Press ReleseList found.',
-    //                 'data' => [],
-    //             ], 204); // 204 status for no content
-    //         }
-
-    //         // Step 3: Return a success response with the retrieved ticker data
-    //         return $this->response('success', [
-    //             'message' => 'All tickers fetched successfully!',
-    //             'data' => $pressReleseList,
-    //         ], 200); // 200 status for success
-
-    //     } catch (\Exception $e) {
-    //         // Step 4: Handle any unexpected errors
-    //         return $this->response('exception', [
-    //             'message' => 'An error occurred: '.$e->getMessage(),
-    //         ], 500); // 500 status for internal server error
-    //     }
-    // }
 
     // Gallery
     public function getGallery()
@@ -585,7 +547,7 @@ class ApiNewController extends Controller
                 $fileName = $file->getClientOriginalName();
                 $fullFilePath = public_path("{$destinationPath}/{$fileName}");
                 $extension = strtolower($request->file('img_src_file')->getClientOriginalExtension());
-                $modifiedName = (rand(100000, 999999)).'_'.time().'.'.$extension;
+                $modifiedName = (rand(100000, 999999)) . '_' . time() . '.' . $extension;
                 // Move file to the destination and set image path in data
                 $file->move(public_path($destinationPath), $modifiedName);
                 $data['image'] = "{$modifiedName}";
@@ -673,7 +635,7 @@ class ApiNewController extends Controller
                 $destinationPath = 'images/thePeacock';
                 $fileNameOriginal = $file->getClientOriginalName();
                 $extension = strtolower($file->getClientOriginalExtension());
-                $modifiedName = rand(100000, 999999).'_'.time().'.'.$extension;
+                $modifiedName = rand(100000, 999999) . '_' . time() . '.' . $extension;
                 $file->move(public_path($destinationPath), $modifiedName);
                 $fileName = $modifiedName;
             }
@@ -786,7 +748,7 @@ class ApiNewController extends Controller
                 $fileName = $file->getClientOriginalName();
                 $fullFilePath = public_path("{$destinationPath}/{$fileName}");
                 $extension = strtolower($request->file('img_src_file')->getClientOriginalExtension());
-                $modifiedName = (rand(100000, 999999)).'_'.time().'.'.$extension;
+                $modifiedName = (rand(100000, 999999)) . '_' . time() . '.' . $extension;
                 // Move file to the destination and set image path in data
                 $file->move(public_path($destinationPath), $modifiedName);
                 $data['img_src'] = "{$modifiedName}";
@@ -828,7 +790,7 @@ class ApiNewController extends Controller
 
             // Delete the image file if it exists
             if ($thePeacock->img_src) {
-                $filePath = public_path('images/gallery_images/'.$thePeacock->img_src);
+                $filePath = public_path('images/gallery_images/' . $thePeacock->img_src);
                 if (file_exists($filePath)) {
                     unlink($filePath);
                 }
@@ -876,7 +838,7 @@ class ApiNewController extends Controller
         } catch (\Exception $e) {
             // Step 4: Handle any unexpected errors
             return $this->response('exception', [
-                'message' => 'An error occurred: '.$e->getMessage(),
+                'message' => 'An error occurred: ' . $e->getMessage(),
             ], 500); // 500 status for internal server error
         }
     }
@@ -952,7 +914,7 @@ class ApiNewController extends Controller
         } catch (\Exception $e) {
             // Handle any exceptions and return an error response
             $response = [
-                'message' => 'An error occurred: '.$e->getMessage(),
+                'message' => 'An error occurred: ' . $e->getMessage(),
             ];
 
             return $this->response('exception', $response);
@@ -995,7 +957,7 @@ class ApiNewController extends Controller
         } catch (\Exception $e) {
             // Step 6: Handle any unexpected errors
             return $this->response('exception', [
-                'message' => 'An error occurred: '.$e->getMessage(),
+                'message' => 'An error occurred: ' . $e->getMessage(),
             ], 500); // 500 status for internal server error
         }
     }
@@ -1020,7 +982,7 @@ class ApiNewController extends Controller
         } catch (\Exception $e) {
             return response()->json([
                 'status' => 'error',
-                'message' => 'An error occurred: '.$e->getMessage(),
+                'message' => 'An error occurred: ' . $e->getMessage(),
             ], 500);
         }
     }
@@ -1095,7 +1057,7 @@ class ApiNewController extends Controller
                     $destinationPath = 'images/cureted-section';
                     $fileNameOriginal = $file->getClientOriginalName();
                     $extension = strtolower($file->getClientOriginalExtension());
-                    $modifiedName = rand(100000, 999999).'_'.time().'.'.$extension;
+                    $modifiedName = rand(100000, 999999) . '_' . time() . '.' . $extension;
                     $file->move(public_path($destinationPath), $modifiedName);
                     $fileName = $modifiedName;
                 }
@@ -1214,7 +1176,7 @@ class ApiNewController extends Controller
                 $fileName = $file->getClientOriginalName();
                 $fullFilePath = public_path("{$destinationPath}/{$fileName}");
                 $extension = strtolower($request->file('img_src_file')->getClientOriginalExtension());
-                $modifiedName = (rand(100000, 999999)).'_'.time().'.'.$extension;
+                $modifiedName = (rand(100000, 999999)) . '_' . time() . '.' . $extension;
                 // Move file to the destination and set image path in data
                 $file->move(public_path($destinationPath), $modifiedName);
                 $data['img_src'] = "{$modifiedName}";
@@ -1418,7 +1380,7 @@ class ApiNewController extends Controller
                 $fileName = $file->getClientOriginalName();
                 $fullFilePath = public_path("{$destinationPath}/{$fileName}");
                 $extension = strtolower($request->file('img_src_file')->getClientOriginalExtension());
-                $modifiedName = (rand(100000, 999999)).'_'.time().'.'.$extension;
+                $modifiedName = (rand(100000, 999999)) . '_' . time() . '.' . $extension;
                 // Move file to the destination and set image path in data
                 $file->move(public_path($destinationPath), $modifiedName);
                 $data['image'] = "{$modifiedName}";
@@ -1448,235 +1410,223 @@ class ApiNewController extends Controller
     public function thePartnerSponsor()
     {
         try {
-            // Fetch all thePartnerSponsor records from the database
-            $thePartnerSponsorData = ThePartnerSponsor::all();
 
-            // Check if data exists
-            if ($thePartnerSponsorData->isEmpty()) {
-                return response()->json([
-                    'status' => 'success',
-                    'message' => 'No thePartnerSponsor updates found.',
-                    'data' => [],
-                ], 200);
+            $thePartnerSponsorData = ThePartnerSponsor::get();
+            if ($thePartnerSponsorData) {
+                $response = [
+                    'message' => 'Success!',
+                    'data' => $thePartnerSponsorData,
+                ];
+                return $this->response('success', $response);
+            } else {
+                $response = [
+                    'message' => 'No records found !!',
+                ];
+                return $this->response('exception', $response);
             }
-
-            // Return the thePartnerSponsor data as JSON response
-            return response()->json([
-                'status' => 'success',
-                'message' => 'thePartnerSponsor updates retrieved successfully.',
-                'data' => $thePartnerSponsorData,
-            ], 200);
         } catch (\Exception $e) {
-            // Return error response in case of exception
-            return response()->json([
-                'status' => 'error',
-                'message' => 'Failed to retrieve thePartnerSponsor updates.',
-                'error' => $e->getMessage(),
-            ], 500);
+            $response = [
+                'message' => $e->getMessage(),
+            ];
+            return $this->response('exception', $response);
+        }
+    }
+
+    public function createPartnerSponsor(Request $request)
+    {
+        $payload = $request->all();
+        $validatorArray = [
+            'title'     =>  ['required', 'unique:the_partner_sponsor,title'],
+            'img_src'   =>  'required|max:2048', //|mimes:jpg,jpeg,png,PNG
+        ];
+        $messagesArray = [];
+        $validator = Validator::make($payload, $validatorArray, $messagesArray);
+        if ($validator->fails()) {
+            $output = [
+                'message' => $validator->errors()->first(),
+            ];
+            return $this->response('validatorerrors', $output);
+        }
+
+        try {
+
+            if ($request->hasFile('img_src')) {
+
+                $files              =   $request->file('img_src');
+                foreach ($files as $file) {
+                    $destinationPath    =   'images/thePartnerSponsor';
+                    $originalFilename   =   $file->getClientOriginalName();
+                    $fullFilePath       =   public_path($destinationPath . '/' . $originalFilename);
+                    if (File::exists($fullFilePath)) {
+                        $response = [
+                            'message' => "File {$originalFilename} already exists. Please upload a different image!",
+                            'existing_file' => $originalFilename,
+                        ];
+                        return $this->response('conflict', $response);
+                    }
+                    $file->move(public_path($destinationPath), $originalFilename);
+                    $data = [
+                        'title'     =>  $payload['title'], // Reuse the title for all images
+                        'img_src'   =>  $originalFilename,
+                    ];                    
+                    $partners = ThePartnerSponsor::create($data);
+                    if ($partners) {
+                        $records[] = $partners;
+                    } else {
+                        throw new \Exception("Failed to create record for {$originalFilename}");
+                    }
+                }
+                // Response after all files are processed
+                $response = [
+                    'message' => 'Created successfully!',
+                    'data'    => $records,
+                ];
+                return $this->response('success', $response);
+                
+            } else {
+                $response = [
+                    'message' => 'No files uploaded!',
+                ];
+                return $this->response('exception', $response);
+            }
+        } catch (\Exception $e) {
+            $response = [
+                'message' => $e->getMessage(),
+            ];
+            return $this->response('exception', $response);
         }
     }
 
     public function updatePartnerSponsor(Request $request, $id)
     {
         $payload = $request->all();
-        try {
-            // Validate the request data (fields are now optional)
-            $validator = Validator::make($payload, [
-                'title' => 'nullable|string|max:255',
-                'img_src_file' => 'nullable|mimes:pdf|max:20000',
-                'status' => 'nullable|in:0,1', // Assuming status can be 'active' or 'inactive'
-                'partners_sponsor' => 'nullable|in:0,1', // Assuming status can be 'active' or 'inactive'
-            ]);
-
-            if ($validator->fails()) {
-                $output = [
-                    'message' => $validator->errors()->first(),
-                    'data' => $payload,
-                ];
-
-                return $this->response('validatorerrors', $output);
-            }
-            $thePartnerSponsor = ThePartnerSponsor::findOrFail($id);
-            $fileNameOriginal = $thePartnerSponsor->image_name;
-            $modifiedName = $thePartnerSponsor->img_src;
-            // Check if a new file is uploaded
-            if ($request->hasFile('img_src_file')) {
-                $file = $request->file('img_src_file');
-                $destinationPath = 'images/thePartnerSponsor';
-                $fileNameOriginal = $file->getClientOriginalName();
-                $extension = strtolower($file->getClientOriginalExtension());
-                $modifiedName = rand(100000, 999999).'_'.time().'.'.$extension;
-                $file->move(public_path($destinationPath), $modifiedName);
-                $fileName = $modifiedName;
-            }
-
-            // Find the thePartnerSponsor by ID
-
-            // Update the thePartnerSponsor with new data if provided
-            $thePartnerSponsor->title = $payload['title'];
-            $thePartnerSponsor->year = $payload['year'];
-            $thePartnerSponsor->status = $payload['status'];
-            $thePartnerSponsor->partners_sponsor = $payload['partners_sponsor'];
-            $thePartnerSponsor->image_name = $fileNameOriginal;
-            $thePartnerSponsor->img_src = $modifiedName;
-
-            // Save the changes to the database
-            $thePartnerSponsor->save();
-
-            // Return a success response
-            return response()->json([
-                'status' => 'success',
-                'message' => 'thePartnerSponsor updated successfully.',
-                'year' => $thePartnerSponsor,
-            ], 200);
-        } catch (\Illuminate\Validation\ValidationException $e) {
-            // Return validation error response
-            return response()->json([
-                'status' => 'error',
-                'message' => 'Validation error.',
-                'errors' => $e->errors(),
-            ], 422);
-        } catch (\Exception $e) {
-            // Return general error response
-            return response()->json([
-                'status' => 'error',
-                'message' => 'Failed to update thePartnerSponsor.',
-                'error' => $e->getMessage(),
-            ], 500);
-        }
-    }
-
-    public function getthePartnerSponsorById($id)
-    {
-        try {
-            // Fetch the thePartnerSponsor record by ID from the database
-            $thePartnerSponsorData = thePartnerSponsor::find($id);
-
-            // Check if the record exists
-            if (! $thePartnerSponsorData) {
-                return response()->json([
-                    'status' => 'error',
-                    'message' => 'thePartnerSponsor not found.',
-                    'data' => null,
-                ], 404);
-            }
-
-            // Return the thePartnerSponsor data as JSON response
-            return response()->json([
-                'status' => 'success',
-                'message' => 'thePartnerSponsor data retrieved successfully.',
-                'data' => $thePartnerSponsorData,
-            ], 200);
-        } catch (\Exception $e) {
-            // Return error response in case of exception
-            return response()->json([
-                'status' => 'error',
-                'message' => 'Failed to retrieve thePartnerSponsor data.',
-                'error' => $e->getMessage(),
-            ], 500);
-        }
-    }
-
-    public function createThePartnerSponsor(Request $request)
-    {
-        $payload = $request->all();
-
-        // Validation rules
         $validatorArray = [
-            'title' => 'required|string|max:255',
-            'img_src_file' => 'nullable|mimes:pdf|max:20000',
-            'status' => 'required|in:0,1', // Assuming status can be 'active' or 'inactive'
-            'partners_sponsor' => 'required|in:0,1', // Assuming status can be 'active' or 'inactive'
+            'title'     =>  '',
+            'img_src'   =>  'mimes:jpg,jpeg,png|max:2048',
+            'status' => 'in:1,0'
         ];
-
-        $validator = Validator::make($payload, $validatorArray);
+        $messagesArray = [];
+        $validator = Validator::make($payload, $validatorArray, $messagesArray);
         if ($validator->fails()) {
-            return response()->json([
-                'status' => 'validation_error',
+            $output = [
                 'message' => $validator->errors()->first(),
-            ], 422);
+            ];
+            return $this->response('validatorerrors', $output);
         }
-
         try {
-            // Set up initial data
-            $formattedDate = null;
-            if (! empty($payload['publish_date'])) {
-                $date = $payload['publish_date'];
-                $formattedDate = \DateTime::createFromFormat('D, d M Y H:i:s T', $date)->format('Y-m-d');
-            }
+            $sponsorsPartners   =   ThePartnerSponsor::find($id);
+            if ($sponsorsPartners) {
+                if ($request->hasFile('img_src')) {
+                    $file               =   $request->file('img_src');
+                    $destinationPath    =   'images/thePartnerSponsor';
+                    $originalFilename   =   $file->getClientOriginalName();
+                    $fullFilePath       =   public_path($destinationPath . '/' . $originalFilename);
 
-            $data = [
-                'title' => $payload['title'] ?? '',
-                'year' => isset($payload['year']) && $payload['year'] !== '' ? (int) $payload['year'] : null, // Handle year as integer or null
-                'status' => $payload['status'] ?? '0',
-                'partners_sponsor' => $payload['status'] ?? '0',
-                // 'img_src' => '',
+                    if (File::exists($fullFilePath)) {
+                        File::delete($fullFilePath);
+                        $file->move(public_path($destinationPath), $originalFilename);
+                    } else {
+                        $file->move(public_path($destinationPath), $originalFilename);
+                    }
+                    $data = [
+                        'title'         =>  isset($payload['title']) ? $payload['title'] : $sponsorsPartners->title,
+                        'img_src'       =>  $originalFilename,
+                        'status'        =>  isset($payload['status']) ? $payload['status'] : $sponsorsPartners->status,
+                    ];
+                    $updated = $sponsorsPartners->update($data);
+                    if ($updated) {
+                        $response = [
+                            'message'   =>  'Updated successfully !!',
+                            'data'      =>  $data,
+                        ];
+                        return $this->response('success', $response);
+                    } else {
+                        $response = [
+                            'message' => 'Not updated !!',
+                        ];
+                        return $this->response('exception', $response);
+                    }
+                } else {
+                    $data = [
+                        'title'         =>  isset($payload['title']) ? $payload['title'] : $sponsorsPartners->title,
+                        'status'        =>  isset($payload['status']) ? $payload['status'] : $sponsorsPartners->status,
+                    ];
+                    $updated = $sponsorsPartners->update($data);
+                    if ($updated) {
+                        $response = [
+                            'message'   =>  'Updated successfully !!',
+                            'data'      =>  $data,
+                        ];
+                        return $this->response('success', $response);
+                    } else {
+                        $response = [
+                            'message' => 'Not updated !!',
+                        ];
+                        return $this->response('exception', $response);
+                    }
+                }
+            } else {
+                $response = [
+                    'message' => 'Record not found !!',
+                ];
+                return $this->response('exception', $response);
+            }
+        } catch (\Exception $e) {
+            $response = [
+                'message' => $e->getMessage(),
             ];
 
-            // Handle image upload
-            if ($request->hasFile('img_src_file')) {
-                $file = $request->file('img_src_file');
-                $destinationPath = 'images/thePartnerSponsor';
-                $fileName = $file->getClientOriginalName();
-                $fullFilePath = public_path("{$destinationPath}/{$fileName}");
-                $extension = strtolower($request->file('img_src_file')->getClientOriginalExtension());
-                $modifiedName = (rand(100000, 999999)).'_'.time().'.'.$extension;
-                // Move file to the destination and set image path in data
-                $file->move(public_path($destinationPath), $modifiedName);
-                $data['img_src'] = "{$modifiedName}";
-                $data['image_name'] = "{$fileName}";
-            }
-
-            // Create thePartnerSponsor record
-            $thePartnerSponsor = thePartnerSponsor::create($data);
-
-            // Return success response
-            return response()->json([
-                'status' => 'success',
-                'message' => 'thePartnerSponsor created successfully.',
-                'data' => $thePartnerSponsor,
-            ], 201);
-        } catch (\Exception $e) {
-            // Return error response in case of exception
-            return response()->json([
-                'status' => 'error',
-                'message' => 'Failed to create thePartnerSponsor.',
-                'error' => $e->getMessage(),
-            ], 500);
+            return $this->response('exception', $response);
         }
     }
 
-    public function deleteThePartnerSponsor($id)
+    public function getPartnerSponsorById($id)
     {
         try {
-            // Find the record by ID
-            $thePartnerSponsor = ThePartnerSponsor::find($id);
-
-            // Check if the record exists
-            if (! $thePartnerSponsor) {
-                return response()->json([
-                    'status' => 'error',
-                    'message' => 'thePartnerSponsor not found.',
-                ], 404);
+            $sponsorsPartners   =   ThePartnerSponsor::find($id);
+            if ($sponsorsPartners) {
+                $response = [
+                    'message'   =>  'Retrieved successfully !!',
+                    'data'      =>  $sponsorsPartners,
+                ];
+                return $this->response('success', $response);
+            } else {
+                $response = [
+                    'message' => 'Record not found !!',
+                ];
+                return $this->response('exception', $response);
             }
-
-            // Delete the image file if it exists
-            if ($thePartnerSponsor->img_src) {
-                $filePath = public_path('images/thePartnerSponsor/'.$thePartnerSponsor->img_src);
-                if (file_exists($filePath)) {
-                    unlink($filePath);
-                }
-            }
-
-            // Delete the record
-            $thePartnerSponsor->delete();
-
-            return response()->json([
-                'status' => 'success',
-                'message' => 'thePartnerSponsor deleted successfully.',
-            ], 200);
         } catch (\Exception $e) {
-            // Return error response in case of exception
+            $response = [
+                'message' => $e->getMessage(),
+            ];
+            return $this->response('exception', $response);
+        }
+    }
+
+    public function deletePartnerSponsor($id)
+    {
+        try {
+            $thePartnerSponsor = ThePartnerSponsor::find($id);
+            if ($thePartnerSponsor) {
+                if ($thePartnerSponsor->img_src) {
+                    $filePath = public_path('images/thePartnerSponsor/' . $thePartnerSponsor->img_src);
+                    if (file_exists($filePath)) {
+                        unlink($filePath);
+                    }
+                }
+                $thePartnerSponsor->delete();
+                $response = [
+                    'message' => 'Deleted successfully.!',
+                ];
+                return $this->response('exception', $response);
+            } else {
+                $response = [
+                    'message' => 'Something went wrong.!',
+                ];
+                return $this->response('exception', $response);
+            }
+        } catch (\Exception $e) {
             return response()->json([
                 'status' => 'error',
                 'message' => 'Failed to delete thePartnerSponsor.',
@@ -1684,4 +1634,76 @@ class ApiNewController extends Controller
             ], 500);
         }
     }
+
+    // public function readCSV()
+    // {
+    //     $csvFile = public_path('images/csv-read.csv');
+
+    //     // Open the file in read mode
+    //     if (($handle = fopen($csvFile, 'r')) !== false) {
+    //         // Read and process each line
+    //         $headerSkipped = false;
+    //         while (($row = fgetcsv($handle)) !== false) {
+    //             if (! $headerSkipped) {
+    //                 $headerSkipped = true;
+
+    //                 continue;
+    //             }
+
+    //             $newTitle = $row[1];
+
+    //             // Check if the cinema exists
+    //             $cinema = \DB::table('international_cinema')
+    //                 ->where('title', $newTitle)
+    //                 ->first();
+
+    //             if ($cinema) {
+    //                 // Update existing cinema
+    //                 \DB::table('international_cinema')
+    //                     ->where('id', $cinema->id)
+    //                     ->update([
+    //                         // 'title' => $newTitle,
+
+    //                     ]);
+    //             } else {
+    //                 // Create new cinema
+    //                 $cinemaId = \DB::table('international_cinema')->insertGetId([
+    //                     'title' => $newTitle,
+    //                     'created_at' => now(),
+    //                     'updated_at' => now(),
+    //                 ]);
+
+    //                 $cinema = (object) ['id' => $cinemaId];
+    //             }
+
+    //             // Check if basic details exist for the cinema
+    //             $basicDetails = \DB::table('international_cinema_basic_details')
+    //                 ->where('cinema_id', $cinema->id)
+    //                 ->first();
+
+    //             if ($basicDetails) {
+    //                 // Update existing basic details
+    //                 \DB::table('international_cinema_basic_details')
+    //                     ->where('id', $basicDetails->id)
+    //                     ->update([
+    //                         'title' => $newTitle,
+    //                         'updated_at' => now(),
+    //                     ]);
+    //             } else {
+    //                 // Create new basic details
+    //                 \DB::table('international_cinema_basic_details')->insert([
+    //                     'cinema_id' => $cinema->id,
+    //                     'title' => $newTitle,
+    //                     'created_at' => now(),
+    //                     'updated_at' => now(),
+    //                 ]);
+    //             }
+    //         }
+
+    //         // Close the file
+    //         fclose($handle);
+    //     } else {
+    //         echo 'Error: Could not open the file.';
+    //     }
+    // }
 }

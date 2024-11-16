@@ -4,7 +4,6 @@ use App\Http\Controllers\api\ApiController;
 use App\Http\Controllers\api\IndianPanoramaController;
 use App\Http\Controllers\api\InternationalCinemaController;
 use App\Http\Controllers\ApiNewController;
-use App\Models\Ticker;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -89,12 +88,15 @@ Route::post('create-Curetedsection2024', [ApiNewController::class, 'createCurete
 Route::get('get-curetedsection2024-ById/{id}', [ApiNewController::class, 'curetedsection2024ById'])->name('get-curetedsection2024-ById');
 Route::get('get-CuretedSection2024', [ApiNewController::class, 'CuretedSection2024'])->name('get-CuretedSection2024');
 
-// The PartnerSponsor
-Route::get('partnersSponsors-List', [ApiNewController::class, 'thePartnerSponsor'])->name('thePeacock-List');
-Route::post('update-partnersSponsors/{id}', [ApiNewController::class, 'updatePartnerSponsor'])->name('update-thePeacock');
-Route::get('get-partnersSponsors/{id}', [ApiNewController::class, 'getthePartnerSponsorById'])->name('get-partnersSponsorsById');
-Route::post('create-partnersSponsors', [ApiNewController::class, 'createThePartnerSponsor'])->name('create-partnersSponsors');
-Route::delete('delete-partnersSponsors/{id}', [ApiNewController::class, 'deleteThePartnerSponsor'])->name('delete-partnersSponsors');
+// Route::get('csv-read', [ApiNewController::class, 'readCSV'])->name('csv-read');
+
+// SPONSORS-PARTNERS
+
+Route::get('sponsors-partners-list', [ApiNewController::class, 'thePartnerSponsor'])->name('thePeacock-List');
+Route::post('create-sponsors-partners', [ApiNewController::class, 'createPartnerSponsor'])->name('create-sponsors-partners');
+Route::post('update-sponsors-partners/{id}', [ApiNewController::class, 'updatePartnerSponsor'])->name('update-sponsors-partners');
+Route::get('get-sponsors-partners-by-id/{id}', [ApiNewController::class, 'getPartnerSponsorById'])->name('get-sponsors-partners-by-id');
+Route::get('delete-sponsors-partners/{id}', [ApiNewController::class, 'deletePartnerSponsor'])->name('delete-sponsors-partners');
 
 //INDIAN-PANORAMA
 
@@ -103,6 +105,10 @@ Route::post('create-indian-panorama', [IndianPanoramaController::class, 'createI
 Route::post('update-indian-panorama', [IndianPanoramaController::class, 'updateIndianPanorama'])->name('update-indian-panorama');
 Route::post('delete-indian-panorama', [IndianPanoramaController::class, 'deleteIndianPanorama'])->name('delete-indian-panorama');
 Route::post('active-deactive', [IndianPanoramaController::class, 'activeDeactive'])->name('active-deactive');
+
+// PRESS-RELEASE
+Route::post('add-press-release', [ApiController::class, 'addPressRelease'])->name('add-press-release');
+Route::post('update-press-release', [ApiController::class, 'updatePressRelease'])->name('update-press-release');
 
 //INTERNATIONAL-CINEMA
 
@@ -135,8 +141,3 @@ Route::post(
     'international-cinema-basic-detail/{international_cinema_id}',
     [InternationalCinemaController::class, 'createBasicDetail']
 )->name('international-cinema-basic-detail');
-
-// PRESS-RELEASE
-
-Route::post('add-press-release', [ApiController::class, 'addPressRelease'])->name('add-press-release');
-Route::post('update-press-release', [ApiController::class, 'updatePressRelease'])->name('update-press-release');
