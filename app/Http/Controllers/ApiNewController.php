@@ -1437,7 +1437,7 @@ class ApiNewController extends Controller
         $payload = $request->all();
         $validatorArray = [
             'title'     =>  ['required', 'unique:the_partner_sponsor,title'],
-            'img_src'   => 'required|mimes:jpg,jpeg,png|max:2048',
+            'img_src'   =>  'required|max:2048', //|mimes:jpg,jpeg,png,PNG
         ];
         $messagesArray = [];
         $validator = Validator::make($payload, $validatorArray, $messagesArray);
@@ -1449,41 +1449,44 @@ class ApiNewController extends Controller
         }
 
         try {
+
             if ($request->hasFile('img_src')) {
-                $file               =   $request->file('img_src');
-                $destinationPath    =   'images/thePartnerSponsor';
-                $originalFilename   =   $file->getClientOriginalName();
-                $fullFilePath       =   public_path($destinationPath . '/' . $originalFilename);
-                if (File::exists($fullFilePath)) {
-                    $response = [
-                        'message' => 'File with the same name already exists. Please upload different image !!',
-                        'existing_file' => $originalFilename,
-                    ];
-                    return $this->response('conflict', $response);
+
+                $files              =   $request->file('img_src');
+                foreach ($files as $file) {
+                    $destinationPath    =   'images/thePartnerSponsor';
+                    $originalFilename   =   $file->getClientOriginalName();
+                    $fullFilePath       =   public_path($destinationPath . '/' . $originalFilename);
+                    if (File::exists($fullFilePath)) {
+                        $response = [
+                            'message' => "File {$originalFilename} already exists. Please upload a different image!",
+                            'existing_file' => $originalFilename,
+                        ];
+                        return $this->response('conflict', $response);
+                    }
+                    $file->move(public_path($destinationPath), $originalFilename);
+                    $data = [
+                        'title'     =>  $payload['title'], // Reuse the title for all images
+                        'img_src'   =>  $originalFilename,
+                    ];                    
+                    $partners = ThePartnerSponsor::create($data);
+                    if ($partners) {
+                        $records[] = $partners;
+                    } else {
+                        throw new \Exception("Failed to create record for {$originalFilename}");
+                    }
                 }
-                $file->move(public_path($destinationPath), $originalFilename);
-                $data = [
-                    'title'     =>  $payload['title'],
-                    'img_src'   =>  $originalFilename,
+                // Response after all files are processed
+                $response = [
+                    'message' => 'Created successfully!',
+                    'data'    => $records,
                 ];
-                $partners = ThePartnerSponsor::create($data);
-                if ($partners) {
-                    $response = [
-                        'message' => 'Created successfully.!',
-                        'data' => $partners,
-                    ];
-                    return $this->response('success', $response);
-                } else {
-                    $response = [
-                        'message' => 'Not created !!',
-                    ];
-                    return $this->response('exception', $response);
-                }
+                return $this->response('success', $response);
+                
             } else {
                 $response = [
-                    'message' => 'File not uploaded.!',
+                    'message' => 'No files uploaded!',
                 ];
-
                 return $this->response('exception', $response);
             }
         } catch (\Exception $e) {
