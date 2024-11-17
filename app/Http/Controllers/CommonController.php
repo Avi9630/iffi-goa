@@ -42,6 +42,7 @@ class CommonController extends Controller
             ->where([
                 'international_cinema.curated_section_id' => 1,
                 'year' => 2024,
+                'international_cinema.status' => 1,
             ])
             ->select(
                 'international_cinema.*',
@@ -168,13 +169,50 @@ class CommonController extends Controller
         );
     }
 
+    public function bestDirectorDetail($slug)
+    {
+        $fetch_cinema_details = DB::table('international_cinema')
+            ->where('status', '=', '1')
+            ->where('slug', '=', $slug)
+            ->first();
+
+        $fetch_cinema_basic_details = DB::table('international_cinema_basic_details')
+            ->where('status', '=', '1')
+            ->where('cinema_id', '=', $fetch_cinema_details->id)
+            ->first();
+
+        // dd($fetch_cinema_basic_details);
+        $currentURL = $_SERVER['REQUEST_URI'];
+
+        $list_international_cinema_images = DB::table('international_cinema_images')
+            ->where('status', '=', '1')
+            ->where('cinema_id', '=', $fetch_cinema_details->id)
+            ->get();
+
+        $list_international_cinema_videos = DB::table('international_cinema_videos')
+            ->where('status', '=', '1')
+            ->where('cinema_id', '=', $fetch_cinema_details->id)
+            ->get();
+
+        return view(
+            'pages.best-director-detail',
+            [
+                'fetch_cinema_details' => $fetch_cinema_details,
+                'fetch_cinema_basic_details' => $fetch_cinema_basic_details,
+                'currentURL' => $currentURL,
+                'list_international_cinema_images' => $list_international_cinema_images,
+                'list_international_cinema_videos' => $list_international_cinema_videos,
+            ]
+        );
+    }
+
     public function directorDebutFilm()
     {
         $directorDebutFilm = DB::table('international_cinema')
             ->where('curated_section_id', '=', 13)
             ->where('year', '=', 2023)
             ->get();
-
+        // dd($directorDebutFilm);
         return $directorDebutFilm;
     }
 
