@@ -1730,7 +1730,7 @@ class ApiNewController extends Controller
 
     public function readCSV()
     {
-        $csvFile = public_path('images/csv-read1.csv');
+        $csvFile = public_path('images/csv-read');
 
         // Open the file in read mode
         if (($handle = fopen($csvFile, 'r')) !== false) {
@@ -1782,7 +1782,7 @@ class ApiNewController extends Controller
                     // Create new cinema
                     $cinemaId = \DB::table('international_cinema')->insertGetId([
                         'curated_section_id' => $international_curated->id,
-
+                        'slug' => str_replace(' ', '-', $title),
                         'title' => $title,
                         'directed_by' => $director,
                         // 'section' => $section,
