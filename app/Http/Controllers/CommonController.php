@@ -123,7 +123,7 @@ class CommonController extends Controller
             )
             ->where([
                 'international_cinema.curated_section_id' => $curatedSectionId,
-                'international_cinema.year' => 2024,
+                'international_cinema.award_year' => 2024,
                 'international_cinema.status' => 1,
             ])
             ->select(

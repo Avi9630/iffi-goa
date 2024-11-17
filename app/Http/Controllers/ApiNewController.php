@@ -1730,7 +1730,7 @@ class ApiNewController extends Controller
 
     public function readCSV()
     {
-        $csvFile = public_path('images/csv-read3.csv');
+        $csvFile = public_path('images/csv-read.csv');
 
         // Open the file in read mode
         if (($handle = fopen($csvFile, 'r')) !== false) {
@@ -1755,6 +1755,7 @@ class ApiNewController extends Controller
                 $country = $row[3];
                 $productionYear = $row[4];
                 $director = $row[8];
+                $awardYear = $row[29];
                 $international_curated = \DB::table('international_curated_sections')
                     ->where('title', $section)
                     ->first();
@@ -1775,6 +1776,7 @@ class ApiNewController extends Controller
                             'language' => $language,
                             'country_of_origin' => $country,
                             'year' => $productionYear,
+                            'award_year' => $awardYear,
                             'directed_by' => $director,
                             'updated_at' => now(),
                             'status' => 1,
@@ -1797,6 +1799,7 @@ class ApiNewController extends Controller
                         'language' => $language,
                         'country_of_origin' => $country,
                         'year' => $productionYear,
+                        'award_year' => $awardYear,
                         //'image' => $title . ".jpg",
                         'created_at' => now(),
                         'updated_at' => now(),
