@@ -41,6 +41,10 @@
                                 {{ $fetch_cinema_details->language }}
                             </li>
                             <li>
+                                <b>Original Title:</b>
+                                {{ isset($fetch_cinema_basic_details->original_title) ? $fetch_cinema_basic_details->original_title : '' }}
+                            </li>
+                            <li>
                                 <b>Director:</b>
                                 {{ isset($fetch_cinema_basic_details->director) ? $fetch_cinema_basic_details->director : '' }}
                             </li>
@@ -59,6 +63,14 @@
                             <li>
                                 <b>Cast:</b>
                                 {{ isset($fetch_cinema_basic_details->cast) ? $fetch_cinema_basic_details->cast : '' }}
+                            </li>
+                            <li>
+                                <b>Premiere:</b>
+                                {{ isset($fetch_cinema_basic_details->premiere) ? $fetch_cinema_basic_details->premiere : '' }}
+                            </li>
+                            <li>
+                                <b>Tags:</b>
+                                {{ isset($fetch_cinema_basic_details->tags) ? $fetch_cinema_basic_details->tags : '' }}
                             </li>
 
                         </ul>
@@ -122,7 +134,10 @@
                     </p>
                     <hr>
                     <h2>Sales Agent: </h2>
-                    <p>{!! $fetch_cinema_basic_details->sales_agent !!}</p>
+                    <p>{!! $fetch_cinema_basic_details?->sales_agent !!}</p>
+                    {{-- <hr>
+                    <h2>Tags: </h2>
+                    <p>{!! $fetch_cinema_basic_details?->tags !!}</p> --}}
                     {{-- <p>True Colours</p> --}}
                     {{-- <p>{!! $fetch_cinema_basic_details->drama !!} | Adaptation | Political | Period Drama<br>
                                 Asia Premiere</p> --}}

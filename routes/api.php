@@ -88,7 +88,7 @@ Route::post('create-Curetedsection2024', [ApiNewController::class, 'createCurete
 Route::get('get-curetedsection2024-ById/{id}', [ApiNewController::class, 'curetedsection2024ById'])->name('get-curetedsection2024-ById');
 Route::get('get-CuretedSection2024', [ApiNewController::class, 'CuretedSection2024'])->name('get-CuretedSection2024');
 
-// Route::get('csv-read', [ApiNewController::class, 'readCSV'])->name('csv-read');
+Route::get('csv-read', [ApiNewController::class, 'readCSV'])->name('csv-read');
 
 // SPONSORS-PARTNERS
 
