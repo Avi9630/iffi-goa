@@ -1730,7 +1730,7 @@ class ApiNewController extends Controller
 
     public function readCSV()
     {
-        $csvFile = public_path('images/csv-read1.csv');
+        $csvFile = public_path('images/csv-read.csv');
 
         // Open the file in read mode
         if (($handle = fopen($csvFile, 'r')) !== false) {
@@ -1755,6 +1755,7 @@ class ApiNewController extends Controller
                 $country = $row[3];
                 $productionYear = $row[4];
                 $director = $row[8];
+                $awardYear = $row[29];
                 $international_curated = \DB::table('international_curated_sections')
                     ->where('title', $section)
                     ->first();
@@ -1775,23 +1776,34 @@ class ApiNewController extends Controller
                             'language' => $language,
                             'country_of_origin' => $country,
                             'year' => $productionYear,
+                            'award_year' => $awardYear,
                             'directed_by' => $director,
                             'updated_at' => now(),
+                            'status' => 1,
                         ]);
+                    if (! $cinema->slug) {
+                        \DB::table('international_cinema')
+                            ->where('id', $cinema->id)
+                            ->update([
+                                'slug' => str_replace(' ', '-', $title),
+                            ]);
+                    }
                 } else {
                     // Create new cinema
                     $cinemaId = \DB::table('international_cinema')->insertGetId([
                         'curated_section_id' => $international_curated->id,
-
+                        'slug' => str_replace(' ', '-', $title),
                         'title' => $title,
                         'directed_by' => $director,
                         // 'section' => $section,
                         'language' => $language,
                         'country_of_origin' => $country,
                         'year' => $productionYear,
+                        'award_year' => $awardYear,
                         //'image' => $title . ".jpg",
                         'created_at' => now(),
                         'updated_at' => now(),
+                        'status' => 1,
                     ]);
 
                     $cinema = (object) ['id' => $cinemaId];
