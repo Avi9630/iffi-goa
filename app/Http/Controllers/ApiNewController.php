@@ -1730,7 +1730,7 @@ class ApiNewController extends Controller
 
     public function readCSV()
     {
-        $csvFile = public_path('images/csv-read');
+        $csvFile = public_path('images/csv-read3.csv');
 
         // Open the file in read mode
         if (($handle = fopen($csvFile, 'r')) !== false) {
@@ -1777,7 +1777,15 @@ class ApiNewController extends Controller
                             'year' => $productionYear,
                             'directed_by' => $director,
                             'updated_at' => now(),
+                            'status' => 1,
                         ]);
+                    if (! $cinema->slug) {
+                        \DB::table('international_cinema')
+                            ->where('id', $cinema->id)
+                            ->update([
+                                'slug' => str_replace(' ', '-', $title),
+                            ]);
+                    }
                 } else {
                     // Create new cinema
                     $cinemaId = \DB::table('international_cinema')->insertGetId([
@@ -1792,6 +1800,7 @@ class ApiNewController extends Controller
                         //'image' => $title . ".jpg",
                         'created_at' => now(),
                         'updated_at' => now(),
+                        'status' => 1,
                     ]);
 
                     $cinema = (object) ['id' => $cinemaId];

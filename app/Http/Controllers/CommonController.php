@@ -79,6 +79,8 @@ class CommonController extends Controller
             'closing-film' => 24,
             'debut-director-films' => 25,
             'best-web-series' => 26,
+            'international-jury-films' => 27,
+            'special-presentations' => 28,
         ];
         //  echo '<pre>';
         // print_r($array);
@@ -108,6 +110,8 @@ class CommonController extends Controller
             24 => 'Closing Film',
             25 => 'Official Selection - Debut Director Films',
             26 => 'Official Selection - Best Web Series',
+            27 => 'International Jury Films',
+            28 => 'Special Presentations',
         ];
 
         $internationalCinemas = DB::table('international_cinema')
@@ -212,6 +216,7 @@ class CommonController extends Controller
             ->where('curated_section_id', '=', 13)
             ->where('year', '=', 2023)
             ->get();
+
         // dd($directorDebutFilm);
         return $directorDebutFilm;
     }
