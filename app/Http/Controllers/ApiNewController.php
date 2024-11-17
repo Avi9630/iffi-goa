@@ -1800,9 +1800,23 @@ class ApiNewController extends Controller
                 $dop = $row[12];
                 $editor = $row[13];
                 $cast = $row[14];
-                $synopsis = $row[11];
-                $trailerLink = $row[11];
+                $synopsis = $row[15];
+                $trailerLink = $row[19];
+                $director_bio = $row[9];
+                $runtime = $row[6];
+                $color = $row[7];
+                $country = $row[11];
+                $original_title = $row[1];
+                $premiere = $row[16];
 
+                $award = $row[17];
+                $festival_history = $row[18];
+                $link_trailer = $row[19];
+                $tags = $row[20];
+                $sales = $row[21];
+                $instagram = $row[26];
+                $twitter = $row[27];
+                $facebook = $row[28];
                 // Insert or update `international_cinema_basic_details`
                 $basicDetails = \DB::table('international_cinema_basic_details')
                     ->where('cinema_id', $cinema->id)
@@ -1813,6 +1827,7 @@ class ApiNewController extends Controller
                     \DB::table('international_cinema_basic_details')
                         ->where('id', $basicDetails->id)
                         ->update([
+
                             'director' => $director,
                             'producer' => $producer,
                             'screenplay' => $screenplay,
@@ -1821,12 +1836,24 @@ class ApiNewController extends Controller
                             'cast' => $cast,
                             'synopsis' => $synopsis,
                             'trailer_link' => $trailerLink,
+                            'other_details' => $runtime . " | " . $color . " | " . $country,
+                            'original_title' => $original_title,
+                            'director_bio' => $director_bio,
+                            'premiere' => $premiere,
+                            'award' => $award,
+                            'festival_history' => $festival_history,
+                            'link_trailer' => $link_trailer,
+                            'tags' => $tags,
+                            'sales' => $sales,
+                            'instagram' => $instagram,
+                            'twitter' => $twitter,
+                            'facebook' => $facebook,
                             'updated_at' => now(),
                         ]);
                 } else {
                     // Create new basic details
                     \DB::table('international_cinema_basic_details')->insert([
-                        'cinema_id' => $cinema->id,
+
                         'director' => $director,
                         'producer' => $producer,
                         'screenplay' => $screenplay,
@@ -1835,12 +1862,27 @@ class ApiNewController extends Controller
                         'cast' => $cast,
                         'synopsis' => $synopsis,
                         'trailer_link' => $trailerLink,
-                        'created_at' => now(),
+                        'other_details' => $runtime . " | " . $color . " | " . $country,
+                        'original_title' => $original_title,
+                        'director_bio' => $director_bio,
+                        'premiere' => $premiere,
+                        'award' => $award,
+                        'festival_history' => $festival_history,
+                        'link_trailer' => $link_trailer,
+                        'tags' => $tags,
+                        'sales' => $sales,
+                        'instagram' => $instagram,
+                        'twitter' => $twitter,
+                        'facebook' => $facebook,
                         'updated_at' => now(),
+                        'created_at' => now(),
                     ]);
                 }
                 // print_r($title);
-                exit('Data Done');
+                //   exit('Data Done');
+                echo '<pre>';
+                print_r($data);
+                exit();
             }
             exit('Data Done');
             // Close the file
