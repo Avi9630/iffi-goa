@@ -133,7 +133,7 @@
                         {{-- {{ $fetch_cinema_basic_details->director_bio }} --}}
                     </p>
                     <hr>
-                    <h2>Sales Agent: </h2>
+                    <h2>Sales: </h2>
                     <p>{!! $fetch_cinema_basic_details?->sales_agent !!}</p>
                     {{-- <hr>
                     <h2>Tags: </h2>
