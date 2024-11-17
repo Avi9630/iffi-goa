@@ -57,7 +57,7 @@
     <section>
         <div class="container">
             <div class="section-heading mb-4">
-                <p>Best 54<sup>th</sup> debut feature film of a</p>
+                <p>Best 55<sup>th</sup> debut feature film of a</p>
                 <h2>Director</h2>
             </div>
             <div class="owl-carousel international">
