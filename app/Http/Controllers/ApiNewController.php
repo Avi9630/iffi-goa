@@ -1785,7 +1785,7 @@ class ApiNewController extends Controller
                         'language' => $language,
                         'country_of_origin' => $country,
                         'year' => $productionYear,
-                        'image' => $title . ".jpg",
+                        //'image' => $title . ".jpg",
                         'created_at' => now(),
                         'updated_at' => now(),
                     ]);
