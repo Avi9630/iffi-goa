@@ -141,3 +141,7 @@ Route::post(
     'international-cinema-basic-detail/{international_cinema_id}',
     [InternationalCinemaController::class, 'createBasicDetail']
 )->name('international-cinema-basic-detail');
+
+// CSV
+
+Route::post('csv', [ApiController::class, 'csv'])->name('csv');
