@@ -744,4 +744,50 @@ class ApiController extends Controller
             return $this->response('exception', $response);
         }
     }
+
+    public function csv(Request $request)
+    {
+        $payload = $request->all();
+        $validatorArray = [
+            'file' => 'required|mimes:csv,txt|max:2048',
+        ];
+        $messagesArray = [];
+        $validator = Validator::make($payload, $validatorArray, $messagesArray);
+        if ($validator->fails()) {
+            $output = [
+                'message' => $validator->errors()->first(),
+            ];
+            return $this->response('validatorerrors', $output);
+        }
+
+        try {
+            $file = $request->file('file')->getRealPath();
+            $handle = fopen($file, 'r');
+            $header = fgetcsv($handle);
+
+            while ($row = fgetcsv($handle)) {
+                $data = array_combine($header, $row);
+                DB::table('international_cinema')->insert([
+                    'curated_section_id' => $data['curated_section_id'],
+                    'title'         =>  $data['title'],
+                    'slug'          =>  $data['slug'],
+                    'award'         =>  $data['award'],
+                    'award2'        =>  $data['award2'],
+                    'directed_by'   =>  $data['directed_by'],
+                    'created_by'    =>  $data['created_by'],
+                ]);
+            }
+            fclose($handle);
+            $response = [
+                'message' => 'CSV uploaded successfully...',
+            ];
+            return $this->response('success', $response);
+        } catch (\Exception $e) {
+            $response = [
+                'message' => $e->getMessage(),
+            ];
+
+            return $this->response('exception', $response);
+        }
+    }
 }

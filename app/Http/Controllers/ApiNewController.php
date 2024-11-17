@@ -1027,7 +1027,7 @@ class ApiNewController extends Controller
             'curated_section_id' => 'required|string|max:255',
             // 'award_year' => 'required|string|max:255',
             'title' => 'required|string|max:255',
-            'award' => 'string|max:255',
+            //  'award' => 'string|max:255',
             'directed_by' => 'required|string|max:255',
             'country_of_origin' => 'required|string|max:255',
             'language' => 'required|string|max:255',
@@ -1072,7 +1072,7 @@ class ApiNewController extends Controller
                     'curated_section_id' => $payload['curated_section_id'],
                     // 'award_year' => $payload['award_year'],
                     'title' => $payload['title'],
-                    'award' => $payload['award'],
+                    'award' => (! empty($payload['award']) ? $payload['award'] : ''),
                     'directed_by' => $payload['directed_by'],
                     'country_of_origin' => $payload['country_of_origin'],
                     'language' => $payload['language'],
@@ -1134,7 +1134,7 @@ class ApiNewController extends Controller
             'curated_section_id' => 'required|string|max:255',
             // 'award_year' => 'required|string|max:255',
             'title' => 'required|string|max:255',
-            'award' => 'string|max:255',
+            // 'award' => 'string|max:255',
             'directed_by' => 'required|string|max:255',
             'country_of_origin' => 'required|string|max:255',
             'language' => 'required|string|max:255',
@@ -1443,7 +1443,7 @@ class ApiNewController extends Controller
         $payload = $request->all();
         $validatorArray = [
             'title' => ['required', 'unique:the_partner_sponsor,title'],
-            'img_src' => 'required|mimes:jpg,jpeg,png|max:2048',
+            'img_src' => 'required|max:2048', //|mimes:jpg,jpeg,png,PNG
         ];
         $messagesArray = [];
         $validator = Validator::make($payload, $validatorArray, $messagesArray);
@@ -1456,42 +1456,45 @@ class ApiNewController extends Controller
         }
 
         try {
+
             if ($request->hasFile('img_src')) {
-                $file = $request->file('img_src');
-                $destinationPath = 'images/thePartnerSponsor';
-                $originalFilename = $file->getClientOriginalName();
-                $fullFilePath = public_path($destinationPath.'/'.$originalFilename);
-                if (File::exists($fullFilePath)) {
-                    $response = [
-                        'message' => 'File with the same name already exists. Please upload different image !!',
-                        'existing_file' => $originalFilename,
-                    ];
 
-                    return $this->response('conflict', $response);
+                $files = $request->file('img_src');
+                foreach ($files as $file) {
+                    $destinationPath = 'images/thePartnerSponsor';
+                    $originalFilename = $file->getClientOriginalName();
+                    $fullFilePath = public_path($destinationPath.'/'.$originalFilename);
+                    if (File::exists($fullFilePath)) {
+                        $response = [
+                            'message' => "File {$originalFilename} already exists. Please upload a different image!",
+                            'existing_file' => $originalFilename,
+                        ];
+
+                        return $this->response('conflict', $response);
+                    }
+                    $file->move(public_path($destinationPath), $originalFilename);
+                    $data = [
+                        'title' => $payload['title'], // Reuse the title for all images
+                        'img_src' => $originalFilename,
+                    ];
+                    $partners = ThePartnerSponsor::create($data);
+                    if ($partners) {
+                        $records[] = $partners;
+                    } else {
+                        throw new \Exception("Failed to create record for {$originalFilename}");
+                    }
                 }
-                $file->move(public_path($destinationPath), $originalFilename);
-                $data = [
-                    'title' => $payload['title'],
-                    'img_src' => $originalFilename,
+                // Response after all files are processed
+                $response = [
+                    'message' => 'Created successfully!',
+                    'data' => $records,
                 ];
-                $partners = ThePartnerSponsor::create($data);
-                if ($partners) {
-                    $response = [
-                        'message' => 'Created successfully.!',
-                        'data' => $partners,
-                    ];
 
-                    return $this->response('success', $response);
-                } else {
-                    $response = [
-                        'message' => 'Not created !!',
-                    ];
+                return $this->response('success', $response);
 
-                    return $this->response('exception', $response);
-                }
             } else {
                 $response = [
-                    'message' => 'File not uploaded.!',
+                    'message' => 'No files uploaded!',
                 ];
 
                 return $this->response('exception', $response);

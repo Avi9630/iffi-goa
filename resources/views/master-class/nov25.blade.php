@@ -39,13 +39,52 @@
     <div class="row">
         <div class="col-md-2 col-12">
             <div class="master-time">
+                <h4 class="time-div">02:30 AM</h4>
+                <h5 class="time-div">04:00 PM</h5>
+            </div>
+        </div>
+        <div class="col-md-7 col-12">
+            <div class="callout">
+                <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov25-1-trigger">
+                    Integrating VFX with Cinematography
+                </h4>
+                <p>
+                    The mass blockbusters of contemporary Indian cinema, particularly in the fantasy and sci-fi genres,
+                    have captivated audiences with their larger-than-life storytelling, heavily relying on VFX. This
+                    transformative tool seamlessly blends traditional lighting techniques with cutting-edge
+                    computer-generated imagery to create stunning visuals. Ace cinematographer K.K. Senthil Kumar, known
+                    for his work on films like RRR, the Baahubali duology, and Magadheera, discusses his image-making
+                    process in the context of this VFX-heavy cinema, in a conversation with writer, filmmaker and actor
+                    Shankar Ramakrishnan. Their discussion will shed light on how cinematographic techniques have
+                    evolved, what the process entails today and the exciting possibilities for the future.
+                </p>
+            </div>
+        </div>
+        <div class="col-md-3 col-12">
+            <div class="user-profile-icon">
+                <ul>
+                    <li>
+                        <img src="{{ asset('public/images/master-class/Senthil Kumar1.jpg') }}" alt="image"
+                            class="img-fluid">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mt-4 mb-4">
+    <h2 class="pb-3">November 25th, 2024</h2>
+    <div class="row">
+        <div class="col-md-2 col-12">
+            <div class="master-time">
                 <h4 class="time-div">04:30 PM</h4>
                 <h5 class="time-div">06:00 PM</h5>
             </div>
         </div>
         <div class="col-md-7 col-12">
             <div class="callout">
-                <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov25-1-trigger">
+                <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov25-2-trigger">
                     How to Succeed in New Hollywood
                 </h4>
                 <p>
@@ -80,7 +119,7 @@
         </div>
         <div class="col-md-7 col-12">
             <div class="callout">
-                <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov25-2-trigger">
+                <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov25-3-trigger">
                     Empowering Change: Women Leading the Way in Cinema
                 </h4>
                 <p>

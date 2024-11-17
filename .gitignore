@@ -7,11 +7,12 @@
 /public/images/cureted-section
 /public/images/indian-panorama-cinema
 /public/images/thePeacock
-/public/images/thePartnerSponsor
+# /public/images/thePartnerSponsor
 /public/press_release
 /storage/*.key
 /vendor
 .env
+.composer.lock
 .env.backup
 .env.production
 .phpactor.json

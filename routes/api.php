@@ -142,5 +142,6 @@ Route::post(
     [InternationalCinemaController::class, 'createBasicDetail']
 )->name('international-cinema-basic-detail');
 
-// SPONSORS-PARTNERS
-// Route::get('sponsors-partners');
+// CSV
+
+Route::post('csv', [ApiController::class, 'csv'])->name('csv');

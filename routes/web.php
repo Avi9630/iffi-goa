@@ -27,6 +27,8 @@ Route::controller(CommonController::class)->group(function () {
 
     Route::get('international-cinema/competition/{slug}', 'internationalCompetitionDetail')->name('international-competition-detail');
 
+    Route::get('international-cinema/best-director/{slug}', 'bestDirectorDetail')->name('best-director-detail');
+
     Route::get('director-debut-film', 'directorDebutFilm')->name('director-debut-film');
 
     Route::get('indian-panorama', 'indianPanorama')->name('indian-panorama');
