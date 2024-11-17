@@ -20,6 +20,7 @@ Route::controller(CommonController::class)->group(function () {
     Route::get('highlights', 'highlights')->name('highlights');
 
     Route::get('international-cinema/2024/{slug}', 'curetedsection2024')->name('cureted-section-2024');
+
     Route::get('international-cinema/2024/film/{slug}', 'curetedsection2024')->name('cureted-section-film-2024');
 
     Route::get('debut-director-films/2024/{slug}', 'curetedsection2024')->name('debut-director-films');
