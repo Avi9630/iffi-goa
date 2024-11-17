@@ -214,7 +214,7 @@ class CommonController extends Controller
     {
         $directorDebutFilm = DB::table('international_cinema')
             ->where('curated_section_id', '=', 13)
-            ->where('year', '=', 2023)
+            ->where('year', '=', 2024)
             ->get();
 
         // dd($directorDebutFilm);
