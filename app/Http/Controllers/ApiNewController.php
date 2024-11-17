@@ -51,7 +51,7 @@ class ApiNewController extends Controller
                 $fileNameOriginal = $file->getClientOriginalName(); // Adding timestamp to prevent name collision
 
                 $extension = strtolower($request->file('img_src_file')->getClientOriginalExtension());
-                $modifiedName = (rand(100000, 999999)).'_'.time().'.'.$extension;
+                $modifiedName = (rand(100000, 999999)) . '_' . time() . '.' . $extension;
 
                 $file->move(public_path($destinationPath), $modifiedName);
                 $fileName = $modifiedName;
@@ -147,7 +147,7 @@ class ApiNewController extends Controller
                     $fileName = $file->getClientOriginalName();
                     $fileNameOriginal = $file->getClientOriginalName();
                     $extension = strtolower($request->file('img_src_file')->getClientOriginalExtension());
-                    $modifiedName = (rand(100000, 999999)).'_'.time().'.'.$extension;
+                    $modifiedName = (rand(100000, 999999)) . '_' . time() . '.' . $extension;
 
                     $file->move(public_path($destinationPath), $modifiedName);
                     $fileName = $modifiedName;
@@ -229,7 +229,7 @@ class ApiNewController extends Controller
         } catch (\Exception $e) {
             // Step 4: Handle any unexpected errors
             return $this->response('exception', [
-                'message' => 'An error occurred: '.$e->getMessage(),
+                'message' => 'An error occurred: ' . $e->getMessage(),
             ], 500); // 500 status for internal server error
         }
     }
@@ -301,7 +301,7 @@ class ApiNewController extends Controller
         } catch (\Exception $e) {
             // Handle any exceptions and return an error response
             $response = [
-                'message' => 'An error occurred: '.$e->getMessage(),
+                'message' => 'An error occurred: ' . $e->getMessage(),
             ];
 
             return $this->response('exception', $response);
@@ -342,7 +342,7 @@ class ApiNewController extends Controller
         } catch (\Exception $e) {
             // Step 6: Handle any unexpected errors
             return $this->response('exception', [
-                'message' => 'An error occurred: '.$e->getMessage(),
+                'message' => 'An error occurred: ' . $e->getMessage(),
             ], 500); // 500 status for internal server error
         }
     }
@@ -367,7 +367,7 @@ class ApiNewController extends Controller
         } catch (\Exception $e) {
             return response()->json([
                 'status' => 'error',
-                'message' => 'An error occurred: '.$e->getMessage(),
+                'message' => 'An error occurred: ' . $e->getMessage(),
             ], 500);
         }
     }
@@ -550,7 +550,7 @@ class ApiNewController extends Controller
                 $fileName = $file->getClientOriginalName();
                 $fullFilePath = public_path("{$destinationPath}/{$fileName}");
                 $extension = strtolower($request->file('img_src_file')->getClientOriginalExtension());
-                $modifiedName = (rand(100000, 999999)).'_'.time().'.'.$extension;
+                $modifiedName = (rand(100000, 999999)) . '_' . time() . '.' . $extension;
                 // Move file to the destination and set image path in data
                 $file->move(public_path($destinationPath), $modifiedName);
                 $data['image'] = "{$modifiedName}";
@@ -638,7 +638,7 @@ class ApiNewController extends Controller
                 $destinationPath = 'images/thePeacock';
                 $fileNameOriginal = $file->getClientOriginalName();
                 $extension = strtolower($file->getClientOriginalExtension());
-                $modifiedName = rand(100000, 999999).'_'.time().'.'.$extension;
+                $modifiedName = rand(100000, 999999) . '_' . time() . '.' . $extension;
                 $file->move(public_path($destinationPath), $modifiedName);
                 $fileName = $modifiedName;
             }
@@ -751,7 +751,7 @@ class ApiNewController extends Controller
                 $fileName = $file->getClientOriginalName();
                 $fullFilePath = public_path("{$destinationPath}/{$fileName}");
                 $extension = strtolower($request->file('img_src_file')->getClientOriginalExtension());
-                $modifiedName = (rand(100000, 999999)).'_'.time().'.'.$extension;
+                $modifiedName = (rand(100000, 999999)) . '_' . time() . '.' . $extension;
                 // Move file to the destination and set image path in data
                 $file->move(public_path($destinationPath), $modifiedName);
                 $data['img_src'] = "{$modifiedName}";
@@ -793,7 +793,7 @@ class ApiNewController extends Controller
 
             // Delete the image file if it exists
             if ($thePeacock->img_src) {
-                $filePath = public_path('images/gallery_images/'.$thePeacock->img_src);
+                $filePath = public_path('images/gallery_images/' . $thePeacock->img_src);
                 if (file_exists($filePath)) {
                     unlink($filePath);
                 }
@@ -841,7 +841,7 @@ class ApiNewController extends Controller
         } catch (\Exception $e) {
             // Step 4: Handle any unexpected errors
             return $this->response('exception', [
-                'message' => 'An error occurred: '.$e->getMessage(),
+                'message' => 'An error occurred: ' . $e->getMessage(),
             ], 500); // 500 status for internal server error
         }
     }
@@ -917,7 +917,7 @@ class ApiNewController extends Controller
         } catch (\Exception $e) {
             // Handle any exceptions and return an error response
             $response = [
-                'message' => 'An error occurred: '.$e->getMessage(),
+                'message' => 'An error occurred: ' . $e->getMessage(),
             ];
 
             return $this->response('exception', $response);
@@ -960,7 +960,7 @@ class ApiNewController extends Controller
         } catch (\Exception $e) {
             // Step 6: Handle any unexpected errors
             return $this->response('exception', [
-                'message' => 'An error occurred: '.$e->getMessage(),
+                'message' => 'An error occurred: ' . $e->getMessage(),
             ], 500); // 500 status for internal server error
         }
     }
@@ -985,7 +985,7 @@ class ApiNewController extends Controller
         } catch (\Exception $e) {
             return response()->json([
                 'status' => 'error',
-                'message' => 'An error occurred: '.$e->getMessage(),
+                'message' => 'An error occurred: ' . $e->getMessage(),
             ], 500);
         }
     }
@@ -1060,7 +1060,7 @@ class ApiNewController extends Controller
                     $destinationPath = 'images/cureted-section';
                     $fileNameOriginal = $file->getClientOriginalName();
                     $extension = strtolower($file->getClientOriginalExtension());
-                    $modifiedName = rand(100000, 999999).'_'.time().'.'.$extension;
+                    $modifiedName = rand(100000, 999999) . '_' . time() . '.' . $extension;
                     $file->move(public_path($destinationPath), $modifiedName);
                     $fileName = $modifiedName;
                 }
@@ -1179,7 +1179,7 @@ class ApiNewController extends Controller
                 $fileName = $file->getClientOriginalName();
                 $fullFilePath = public_path("{$destinationPath}/{$fileName}");
                 $extension = strtolower($request->file('img_src_file')->getClientOriginalExtension());
-                $modifiedName = (rand(100000, 999999)).'_'.time().'.'.$extension;
+                $modifiedName = (rand(100000, 999999)) . '_' . time() . '.' . $extension;
                 // Move file to the destination and set image path in data
                 $file->move(public_path($destinationPath), $modifiedName);
                 $data['img_src'] = "{$modifiedName}";
@@ -1383,7 +1383,7 @@ class ApiNewController extends Controller
                 $fileName = $file->getClientOriginalName();
                 $fullFilePath = public_path("{$destinationPath}/{$fileName}");
                 $extension = strtolower($request->file('img_src_file')->getClientOriginalExtension());
-                $modifiedName = (rand(100000, 999999)).'_'.time().'.'.$extension;
+                $modifiedName = (rand(100000, 999999)) . '_' . time() . '.' . $extension;
                 // Move file to the destination and set image path in data
                 $file->move(public_path($destinationPath), $modifiedName);
                 $data['image'] = "{$modifiedName}";
@@ -1463,7 +1463,7 @@ class ApiNewController extends Controller
                 foreach ($files as $file) {
                     $destinationPath = 'images/thePartnerSponsor';
                     $originalFilename = $file->getClientOriginalName();
-                    $fullFilePath = public_path($destinationPath.'/'.$originalFilename);
+                    $fullFilePath = public_path($destinationPath . '/' . $originalFilename);
                     if (File::exists($fullFilePath)) {
                         $response = [
                             'message' => "File {$originalFilename} already exists. Please upload a different image!",
@@ -1491,7 +1491,6 @@ class ApiNewController extends Controller
                 ];
 
                 return $this->response('success', $response);
-
             } else {
                 $response = [
                     'message' => 'No files uploaded!',
@@ -1532,7 +1531,7 @@ class ApiNewController extends Controller
                     $file = $request->file('img_src');
                     $destinationPath = 'images/thePartnerSponsor';
                     $originalFilename = $file->getClientOriginalName();
-                    $fullFilePath = public_path($destinationPath.'/'.$originalFilename);
+                    $fullFilePath = public_path($destinationPath . '/' . $originalFilename);
 
                     if (File::exists($fullFilePath)) {
                         File::delete($fullFilePath);
@@ -1630,7 +1629,7 @@ class ApiNewController extends Controller
             $thePartnerSponsor = ThePartnerSponsor::find($id);
             if ($thePartnerSponsor) {
                 if ($thePartnerSponsor->img_src) {
-                    $filePath = public_path('images/thePartnerSponsor/'.$thePartnerSponsor->img_src);
+                    $filePath = public_path('images/thePartnerSponsor/' . $thePartnerSponsor->img_src);
                     if (file_exists($filePath)) {
                         unlink($filePath);
                     }
@@ -1729,118 +1728,125 @@ class ApiNewController extends Controller
     //     }
     // }
 
-    // public function readCSV()
-    // {
-    //     $csvFile = public_path('images/csv-read.csv');
+    public function readCSV()
+    {
+        $csvFile = public_path('images/csv-read.csv');
 
-    //     // Open the file in read mode
-    //     if (($handle = fopen($csvFile, 'r')) !== false) {
-    //         // Read and process each line
-    //         $header = null;
-    //         while (($row = fgetcsv($handle)) !== false) {
-    //             if (! $header) {
-    //                 $header = $row; // Read the header row
+        // Open the file in read mode
+        if (($handle = fopen($csvFile, 'r')) !== false) {
+            // Read and process each line
+            $header = null;
+            while (($row = fgetcsv($handle)) !== false) {
+                if (! $header) {
+                    $header = $row; // Read the header row
 
-    //                 continue;
-    //             }
+                    continue;
+                }
 
-    //             // Map CSV columns to variables
-    //             $data = array_combine($header, $row);
-    //             echo '<pre>';
-    //             print_r($data);
-    //             exit();
-    //             // Extract data for `international_cinema`
-    //             $title = $row[1];
-    //             $section = $row[0];
-    //             $language = $row[5];
-    //             $country = $row[3];
-    //             $productionYear = $row[4];
+                // Map CSV columns to variables
+                $data = array_combine($header, $row);
+                // echo '<pre>';
+                // print_r($data);
+                //exit();
+                // Extract data for `international_cinema`
+                $title = $row[1];
+                $section = $row[0];
+                $language = $row[5];
+                $country = $row[3];
+                $productionYear = $row[4];
 
-    //             // Insert or update `international_cinema`
-    //             $cinema = \DB::table('international_cinema')
-    //                 ->where('title', $title)
-    //                 ->first();
+                $international_curated = \DB::table('international_curated_sections')
+                    ->where('title', $section)
+                    ->first();
+                if (!$international_curated) {
+                    continue;
+                }
+                // Insert or update `international_cinema`
+                $cinema = \DB::table('international_cinema')
+                    ->where('title', $title)
+                    ->first();
 
-    //             if ($cinema) {
-    //                 // Update existing cinema
-    //                 \DB::table('international_cinema')
-    //                     ->where('id', $cinema->id)
-    //                     ->update([
-    //                         'section' => $section,
-    //                         'language' => $language,
-    //                         'country_of_origin' => $country,
-    //                         'year' => $productionYear,
-    //                         'updated_at' => now(),
-    //                     ]);
-    //             } else {
-    //                 // Create new cinema
-    //                 $cinemaId = \DB::table('international_cinema')->insertGetId([
-    //                     'title' => $title,
-    //                     'section' => $section,
-    //                     'language' => $language,
-    //                     'country_of_origin' => $country,
-    //                     'year' => $productionYear,
-    //                     'created_at' => now(),
-    //                     'updated_at' => now(),
-    //                 ]);
+                if ($cinema) {
+                    // Update existing cinema
+                    \DB::table('international_cinema')
+                        ->where('id', $cinema->id)
+                        ->update([
+                            'section' => $international_curated->id,
+                            'language' => $language,
+                            'country_of_origin' => $country,
+                            'year' => $productionYear,
+                            'updated_at' => now(),
+                        ]);
+                } else {
+                    // Create new cinema
+                    $cinemaId = \DB::table('international_cinema')->insertGetId([
+                        'title' => $title,
+                        'section' => $section,
+                        'language' => $language,
+                        'country_of_origin' => $country,
+                        'year' => $productionYear,
+                        'image' => $title . ".jpg",
+                        'created_at' => now(),
+                        'updated_at' => now(),
+                    ]);
 
-    //                 $cinema = (object) ['id' => $cinemaId];
-    //             }
+                    $cinema = (object) ['id' => $cinemaId];
+                }
 
-    //             // Extract data for `international_cinema_basic_details`
-    //             $director = $row[8];
-    //             $producer = $row[10];
-    //             $screenplay = $row[11];
-    //             $dop = $row[12];
-    //             $editor = $row[13];
-    //             $cast = $row[14];
-    //             $synopsis = $row[11];
-    //             $trailerLink = $row[11];
+                // Extract data for `international_cinema_basic_details`
+                $director = $row[8];
+                $producer = $row[10];
+                $screenplay = $row[11];
+                $dop = $row[12];
+                $editor = $row[13];
+                $cast = $row[14];
+                $synopsis = $row[11];
+                $trailerLink = $row[11];
 
-    //             // Insert or update `international_cinema_basic_details`
-    //             $basicDetails = \DB::table('international_cinema_basic_details')
-    //                 ->where('cinema_id', $cinema->id)
-    //                 ->first();
+                // Insert or update `international_cinema_basic_details`
+                $basicDetails = \DB::table('international_cinema_basic_details')
+                    ->where('cinema_id', $cinema->id)
+                    ->first();
 
-    //             if ($basicDetails) {
-    //                 // Update existing basic details
-    //                 \DB::table('international_cinema_basic_details')
-    //                     ->where('id', $basicDetails->id)
-    //                     ->update([
-    //                         'director' => $director,
-    //                         'producer' => $producer,
-    //                         'screenplay' => $screenplay,
-    //                         'dop' => $dop,
-    //                         'editor' => $editor,
-    //                         'cast' => $cast,
-    //                         'synopsis' => $synopsis,
-    //                         'trailer_link' => $trailerLink,
-    //                         'updated_at' => now(),
-    //                     ]);
-    //             } else {
-    //                 // Create new basic details
-    //                 \DB::table('international_cinema_basic_details')->insert([
-    //                     'cinema_id' => $cinema->id,
-    //                     'director' => $director,
-    //                     'producer' => $producer,
-    //                     'screenplay' => $screenplay,
-    //                     'dop' => $dop,
-    //                     'editor' => $editor,
-    //                     'cast' => $cast,
-    //                     'synopsis' => $synopsis,
-    //                     'trailer_link' => $trailerLink,
-    //                     'created_at' => now(),
-    //                     'updated_at' => now(),
-    //                 ]);
-    //             }
-    //             print_r($title);
-    //             exit('Data Done');
-    //         }
-
-    //         // Close the file
-    //         fclose($handle);
-    //     } else {
-    //         echo 'Error: Could not open the file.';
-    //     }
-    // }
+                if ($basicDetails) {
+                    // Update existing basic details
+                    \DB::table('international_cinema_basic_details')
+                        ->where('id', $basicDetails->id)
+                        ->update([
+                            'director' => $director,
+                            'producer' => $producer,
+                            'screenplay' => $screenplay,
+                            'dop' => $dop,
+                            'editor' => $editor,
+                            'cast' => $cast,
+                            'synopsis' => $synopsis,
+                            'trailer_link' => $trailerLink,
+                            'updated_at' => now(),
+                        ]);
+                } else {
+                    // Create new basic details
+                    \DB::table('international_cinema_basic_details')->insert([
+                        'cinema_id' => $cinema->id,
+                        'director' => $director,
+                        'producer' => $producer,
+                        'screenplay' => $screenplay,
+                        'dop' => $dop,
+                        'editor' => $editor,
+                        'cast' => $cast,
+                        'synopsis' => $synopsis,
+                        'trailer_link' => $trailerLink,
+                        'created_at' => now(),
+                        'updated_at' => now(),
+                    ]);
+                }
+                // print_r($title);
+                exit('Data Done');
+            }
+            exit('Data Done');
+            // Close the file
+            fclose($handle);
+        } else {
+            echo 'Error: Could not open the file.';
+        }
+    }
 }
