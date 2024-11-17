@@ -36,8 +36,9 @@
                                 <div class="card-text d-flex">
                                     <div class="iCinema-content">
                                         <h4 class="title">
-                                            <a href="{{ route('international-competition-detail', ['slug' => $internationalCinema->slug]) }}">
-                                               {{ $internationalCinema->title }}
+                                            <a
+                                                href="{{ route('international-competition-detail', ['slug' => $internationalCinema?->slug]) }}">
+                                                {{ $internationalCinema->title }}
                                             </a>
 
                                         </h4>

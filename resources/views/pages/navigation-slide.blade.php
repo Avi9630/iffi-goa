@@ -198,6 +198,12 @@
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('cureted-section-2024', ['slug' => 'closing-film']) }}">Closing
                                                             Film</a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cureted-section-2024', ['slug' => 'international-jury-films']) }}">International
+                                                            Jury Films</a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cureted-section-2024', ['slug' => 'special-presentations']) }}">Special
+                                                            Presentations</a></li>
                                                 </ul>
                                             </li>
 
