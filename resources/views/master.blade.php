@@ -190,28 +190,11 @@
                         // }
                     ]
                 },
-                // {
-                //     title: "Surviving Film Industry : The Hard Truth Nobody Tells You",
-                //     moderator: "",
-                //     panel: "",
-                //     date: "Nov 21st, 2024, 4.30 PM TO 5.15 PM",
-                //     speakers: [{
-                //             name: "Rakul Preet Singh",
-                //             description: "Rakul Preet Singh is an Indian actress who predominantly works in Telugu, Hindi and Tamil films. She made her acting debut with the Kannada film Gilli, then to Telugu and Tamil cinema with the films Keratam, Thadaiyara Thaakka and Venkatadri Express. She went on to appear in several films including Loukyam, Pandaga Chesko, Sarrainodu, Dhruva, Nannaku Prematho, Rarandoi Veduka Chudham, Spyder, Theeran Adhigaaram Ondru, Yaariyan, Ayalaan.",
-                //             image: "{{ asset('public/images/master-class/Rakul Preet Singh.jpg') }}"
-                //         },
-                //         {
-                //             name: "Jacky Bagnani",
-                //             description: "Jackky Bhagnani is an Indian actor, film producer, and entrepreneur known for his work in Bollywood. After making his acting debut in Kal Kissne Dekha, he went on to star in films like F.A.L.T.U. and Youngistaan. As the son of producer Vashu Bhagnani, he expanded into film production through his family’s company, Pooja Entertainment, producing successful films such as Coolie No. 1and Jawaani Jaaneman. He is also involved in music production through his label Jjust Music, focusing on emerging talent in the industry.",
-                //             image: "{{ asset('public/images/master-class/Jacky Bagnani.jpg') }}"
-                //         }
-                //     ]
-                // },
                 {
                     title: "The Journey from Script to Screen: Writing for Film and Beyond",
                     moderator: "",
                     panel: "",
-                    date: "Nov 21st, 2024, 5.30 PM TO 6.15 PM",
+                    date: "Nov 21st, 2024, 4.30 PM TO 5.30 PM",
                     speakers: [{
                             name: "Prasoon Joshi",
                             description: "Prasoon Joshi is one of India’s most celebrated creative minds—a Padma Shri awardee and National Award-winning writer. Renowned for his work as a poet, lyricist, screenwriter, and communication expert, he has been honored at global platforms like Cannes Lions and the World Economic Forum. Author of four books, Joshi has penned acclaimed scripts and lyrics for iconic films such as Taare Zameen Par, Rang De Basanti, Bhaag Milkha Bhaag, and Manikarnika. His recent efforts have shaped major brand campaigns like Incredible India, G-20, and Air India, while his impactful societal projects—Swachh Bharat, Child Rights, Pulse Polio, and campaigns on women’s empowerment and malnutrition—have created tangible, positive change.",
@@ -223,7 +206,24 @@
                             image: "{{ asset('public/images/master-class/Anant Vijay.jpg') }}"
                         }
                     ]
-                }
+                },
+                {
+                    title: "Surviving Film Industry : The Hard Truth Nobody Tells You",
+                    moderator: "",
+                    panel: "In Conversation",
+                    date: "Nov 21st, 2024, 5.45 PM TO 6.30 PM",
+                    speakers: [{
+                            name: "Rakul Preet Singh",
+                            description: "Rakul Preet Singh is an Indian actress who predominantly works in Telugu, Hindi and Tamil films. She made her acting debut with the Kannada film Gilli, then to Telugu and Tamil cinema with the films Keratam, Thadaiyara Thaakka and Venkatadri Express. She went on to appear in several films including Loukyam, Pandaga Chesko, Sarrainodu, Dhruva, Nannaku Prematho, Rarandoi Veduka Chudham, Spyder, Theeran Adhigaaram Ondru, Yaariyan, Ayalaan.",
+                            image: "{{ asset('public/images/master-class/Rakul Preet Singh.jpg') }}"
+                        },
+                        {
+                            name: "Jacky Bagnani",
+                            description: "Jackky Bhagnani is an Indian actor, film producer, and entrepreneur known for his work in Bollywood. After making his acting debut in Kal Kissne Dekha, he went on to star in films like F.A.L.T.U. and Youngistaan. As the son of producer Vashu Bhagnani, he expanded into film production through his family’s company, Pooja Entertainment, producing successful films such as Coolie No. 1and Jawaani Jaaneman. He is also involved in music production through his label Jjust Music, focusing on emerging talent in the industry.",
+                            image: "{{ asset('public/images/master-class/Jacky Bagnani.jpg') }}"
+                        }
+                    ]
+                },
             ],
             // 21 November Modal Data End
 
@@ -454,6 +454,17 @@
                 ]
             },
             {
+                title: "Integrating VFX with Cinematography",
+                moderator: "Shankar Ramakrishnan",
+                panel: "Master Class",
+                date: "Nov-25th, 2024, 02.30 PM TO 04.00 PM",
+                speakers: [{
+                    name: "K K Senthil Kumar",
+                    description: "Visionary cinematographer K.K. Senthil Kumar ISC is renowned for crafting epic films like:Magadheera, Eega, Baahubali: The Beginning, Baahubali: The Conclusion, RRR, and many more. He is a jury member for the prestigious Academy Awards (Oscars) and a winner of multiple awards.His breathtaking visuals, infused with emotional depth, have captivated global audiences.",
+                    image: "{{ asset('public/images/master-class/Senthil Kumar1.jpg') }}"
+                }]
+            },
+            {
                 title: "How to Succeed in New Hollywood",
                 moderator: "",
                 panel: "Master Class",
@@ -662,13 +673,13 @@
                     // Populate the speaker list item
                     li.innerHTML =
                         `
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <div class="ms-2 me-auto">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <div class="fw-bold">${speaker.name}</div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <span>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <img src="${speaker.image}" class="img-circle" alt="${speaker.name}">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </span>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                `;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <div class="ms-2 me-auto">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div class="fw-bold">${speaker.name}</div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <img src="${speaker.image}" class="img-circle" alt="${speaker.name}">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        `;
                         speakersList.appendChild(li);
                     });
                 }

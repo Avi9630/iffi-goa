@@ -42,17 +42,14 @@
                                             data-bs-toggle="dropdown" aria-expanded="false">About Goa
                                         </a>
                                         <ul class="dropdown-menu">
-
                                             <li>
                                                 <a href="{{ route('goa-tourist-places') }}" class="dropdown-item">Goa
                                                     Tourist Places</a>
                                             </li>
-
                                             <li>
                                                 <a href="{{ route('connectivity') }}" class="dropdown-item">
                                                     Connectivity </a>
                                             </li>
-
                                         </ul>
 
                                     </li>
@@ -65,19 +62,19 @@
                                         <a href="{{ route('faq') }}" class="nav-link">FAQ's</a>
                                     </li>
 
-                                    {{-- <li class="nav-item">
-                                        <a href="{{ asset('partners-sponsors') }}" class="nav-link">Our Partners &
-                                            Sponsors</a>
+                                    <li class="nav-item">
+                                        {{-- <a href="{{ asset('partners-sponsors') }}" class="nav-link">Our Partners &
+                                            Sponsors</a> --}}
 
                                         <a href="{{ route('partners-sponsors') }}" class="nav-link">Our Partners &
                                             Sponsors</a>
-                                    </li> --}}
+                                    </li>
 
-                                    <li class="nav-item">
+                                    {{-- <li class="nav-item">
                                         <a href="{{ asset('public/images/sponsor/IFFI-55-Sponsers-Page.pdf') }}"
                                             class="nav-link" target="_blank">Our Partners &
                                             Sponsors</a>
-                                    </li>
+                                    </li> --}}
 
                                     {{-- <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" role="button"
@@ -153,12 +150,12 @@
                                                             Debut Feature Film of a Director</a></li>
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('cureted-section-2024', ['slug' => 'icft-unesco-medal']) }}">ICFT
-                                                            Unesco Medal</a></li>
+                                                            UNESCO Gandhi Medal</a></li>
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('cureted-section-2024', ['slug' => 'festival-kaleidoscope']) }}">From
                                                             The Festivals</a></li>
                                                     <li><a class="dropdown-item"
-                                                            href="{{ route('cureted-section-2024', ['slug' => 'documontage']) }}">DocuMontage</a>
+                                                            href="{{ route('cureted-section-2024', ['slug' => 'docu-montage']) }}">Docu-Montage</a>
                                                     </li>
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('cureted-section-2024', ['slug' => 'experimental-films']) }}">Experimental
@@ -194,13 +191,19 @@
                                                     </li>
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('cureted-section-2024', ['slug' => 'from-the-consulate']) }}">From
-                                                            The Consulate</a></li>
+                                                            The Consulates</a></li>
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('cureted-section-2024', ['slug' => 'opening-film']) }}">Opening
                                                             Film</a></li>
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('cureted-section-2024', ['slug' => 'closing-film']) }}">Closing
                                                             Film</a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cureted-section-2024', ['slug' => 'international-jury-films']) }}">International
+                                                            Jury Films</a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cureted-section-2024', ['slug' => 'special-presentations']) }}">Special
+                                                            Presentations</a></li>
                                                 </ul>
                                             </li>
 
@@ -276,7 +279,7 @@
                                                     class="dropdown-item">Debut Director Jury - 2024</a>
                                             </li>
                                             <li><a class="dropdown-item"
-                                                    href="{{ route('debut-director-films', ['slug' => 'debut-director-films']) }}">Official
+                                                    href="{{ route('debut-director-films', ['slug' => 'best-debut-feature-film-of-a-director']) }}">Official
                                                     Selection - Debut Director Films</a></li>
                                             <li>
                                                 <a href="https://iffigoa.org/festival/indian-debut-director"
@@ -457,6 +460,11 @@
                                                             class="dropdown-item">
                                                             Selection Jury</a>
                                                     </li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cmot-grand-jury') }}"
+                                                            class="dropdown-item">
+                                                            Grand Jury</a>
+                                                    </li>
 
                                                 </ul>
                                             </li>
@@ -557,6 +565,14 @@
                                     <li class="nav-item">
                                         <a href="https://my.iffigoa.org/extranet/media" class="nav-link"
                                             target="_blank">Media Login</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="https://filmguide.iffigoa.org/" class="nav-link"
+                                            target="_blank">Film Guide & Ticket Booking</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="https://filmguide.iffigoa.org/schedule" class="nav-link"
+                                            target="_blank">Film Guide Schedule</a>
                                     </li>
                                 </ul>
                             </div>

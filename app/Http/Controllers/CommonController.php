@@ -42,6 +42,7 @@ class CommonController extends Controller
             ->where([
                 'international_cinema.curated_section_id' => 1,
                 'year' => 2024,
+                'international_cinema.status' => 1,
             ])
             ->select(
                 'international_cinema.*',
@@ -61,7 +62,7 @@ class CommonController extends Controller
             'best-debut-feature-film-of-a-director' => 13,
             'icft-unesco-medal' => 4,
             'festival-kaleidoscope' => 3,
-            'documontage' => 14,
+            'docu-montage' => 14,
             'macabre-dreams' => 10,
             'cinema-world' => 15,
             'restored-classic' => 16,
@@ -78,6 +79,8 @@ class CommonController extends Controller
             'closing-film' => 24,
             'debut-director-films' => 25,
             'best-web-series' => 26,
+            'international-jury-films' => 27,
+            'special-presentations' => 28,
         ];
         //  echo '<pre>';
         // print_r($array);
@@ -89,12 +92,12 @@ class CommonController extends Controller
         $curatedSections = [
             1 => 'International Competition',
             3 => 'From The Festivals',
-            4 => 'ICFT Unesco Medal',
+            4 => 'ICFT UNESCO Gandhi Medal',
             9 => 'Experimental Films',
             10 => 'Macabre Dreams',
             11 => 'UNICEF',
             13 => 'Best Debut Feature Film of A Director',
-            14 => 'DocuMontage',
+            14 => 'Docu-Montage',
             15 => 'Cinema of the World',
             16 => 'Restored Classics',
             17 => 'Rising Stars',
@@ -102,11 +105,13 @@ class CommonController extends Controller
             19 => 'BFI@IFFI',
             20 => 'Country Focus: Australia',
             21 => 'Accolades',
-            22 => 'From The Consulate',
+            22 => 'From The Consulates',
             23 => 'Opening Film',
             24 => 'Closing Film',
             25 => 'Official Selection - Debut Director Films',
             26 => 'Official Selection - Best Web Series',
+            27 => 'International Jury Films',
+            28 => 'Special Presentations',
         ];
 
         $internationalCinemas = DB::table('international_cinema')
@@ -118,7 +123,7 @@ class CommonController extends Controller
             )
             ->where([
                 'international_cinema.curated_section_id' => $curatedSectionId,
-                'international_cinema.year' => 2024,
+                'international_cinema.award_year' => 2024,
                 'international_cinema.status' => 1,
             ])
             ->select(
@@ -159,11 +164,48 @@ class CommonController extends Controller
         return view(
             'pages.international-competition-detail',
             [
-                'fetch_cinema_details'              =>  $fetch_cinema_details,
-                'fetch_cinema_basic_details'        =>  $fetch_cinema_basic_details,
-                'currentURL'                        =>  $currentURL,
-                'list_international_cinema_images'  =>  $list_international_cinema_images,
-                'list_international_cinema_videos'  =>  $list_international_cinema_videos,
+                'fetch_cinema_details' => $fetch_cinema_details,
+                'fetch_cinema_basic_details' => $fetch_cinema_basic_details,
+                'currentURL' => $currentURL,
+                'list_international_cinema_images' => $list_international_cinema_images,
+                'list_international_cinema_videos' => $list_international_cinema_videos,
+            ]
+        );
+    }
+
+    public function bestDirectorDetail($slug)
+    {
+        $fetch_cinema_details = DB::table('international_cinema')
+            ->where('status', '=', '1')
+            ->where('slug', '=', $slug)
+            ->first();
+
+        $fetch_cinema_basic_details = DB::table('international_cinema_basic_details')
+            ->where('status', '=', '1')
+            ->where('cinema_id', '=', $fetch_cinema_details->id)
+            ->first();
+
+        // dd($fetch_cinema_basic_details);
+        $currentURL = $_SERVER['REQUEST_URI'];
+
+        $list_international_cinema_images = DB::table('international_cinema_images')
+            ->where('status', '=', '1')
+            ->where('cinema_id', '=', $fetch_cinema_details->id)
+            ->get();
+
+        $list_international_cinema_videos = DB::table('international_cinema_videos')
+            ->where('status', '=', '1')
+            ->where('cinema_id', '=', $fetch_cinema_details->id)
+            ->get();
+
+        return view(
+            'pages.best-director-detail',
+            [
+                'fetch_cinema_details' => $fetch_cinema_details,
+                'fetch_cinema_basic_details' => $fetch_cinema_basic_details,
+                'currentURL' => $currentURL,
+                'list_international_cinema_images' => $list_international_cinema_images,
+                'list_international_cinema_videos' => $list_international_cinema_videos,
             ]
         );
     }
@@ -172,9 +214,10 @@ class CommonController extends Controller
     {
         $directorDebutFilm = DB::table('international_cinema')
             ->where('curated_section_id', '=', 13)
-            ->where('year', '=', 2023)
+            ->where('year', '=', 2024)
             ->get();
 
+        // dd($directorDebutFilm);
         return $directorDebutFilm;
     }
 
@@ -359,30 +402,22 @@ class CommonController extends Controller
         return $datas;
     }
 
-    // public function masterClass($id)
-    // {
-    //     $masterClass = MasterClass::with('speakers')->findOrFail($id);
-
-    //     return view('master-class.master', compact('masterClass'));
-
     public function masterClass()
     {
         $masterClasses = MasterClass::all(); // or any other query to get your data
 
         return view('master-class.master', compact('masterClasses'));
     }
-    // }
 
     public function partnersSponsors()
     {
-
-        $partnersSponsors = DB::table('the_partner_sponsor')
-            ->where('status', 1)
-            ->orderBy('id', 'DESC')
+        $sponcersPartners = DB::table('the_partner_sponsor')
+            ->select('title', DB::raw("GROUP_CONCAT(img_src SEPARATOR ', ') AS images"))
+            ->groupBy('title')
             ->get();
-        dd($partnersSponsors);
+
         return view('partnersSponsors.partner-sponsers', [
-            'partnersSponsors' => $partnersSponsors,
+            'sponcersPartners' => $sponcersPartners,
         ]);
     }
 }

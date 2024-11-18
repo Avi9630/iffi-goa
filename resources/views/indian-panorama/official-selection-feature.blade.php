@@ -46,11 +46,11 @@
                                             <span>:</span>
                                             <span>{{ $feature->directed_by }}</span>
                                         </h5>
-                                        <h5>
+                                        {{-- <h5>
                                             <span>Country of Origin</span>
                                             <span>:</span>
                                             <span>{{ $feature->country_of_origin }}</span>
-                                        </h5>
+                                        </h5> --}}
                                         <h5>
                                             <span>Language</span>
                                             <span>:</span>

@@ -21,11 +21,15 @@ Route::controller(CommonController::class)->group(function () {
 
     Route::get('international-cinema/2024/{slug}', 'curetedsection2024')->name('cureted-section-2024');
 
+    Route::get('international-cinema/2024/film/{slug}', 'curetedsection2024')->name('cureted-section-film-2024');
+
     Route::get('debut-director-films/2024/{slug}', 'curetedsection2024')->name('debut-director-films');
 
     Route::get('best-web-series/2024/{slug}', 'curetedsection2024')->name('best-web-series');
 
     Route::get('international-cinema/competition/{slug}', 'internationalCompetitionDetail')->name('international-competition-detail');
+
+    Route::get('international-cinema/best-director/{slug}', 'bestDirectorDetail')->name('best-director-detail');
 
     Route::get('director-debut-film', 'directorDebutFilm')->name('director-debut-film');
 
@@ -198,6 +202,10 @@ Route::get('web-series-jury', function () {
 Route::get('cmot-jury', function () {
     return view('cmot.cmot-jury');
 })->name('cmot-jury');
+
+Route::get('cmot-grand-jury', function () {
+    return view('cmot.cmot-grand-jury');
+})->name('cmot-grand-jury');
 
 Route::get('opening-film', function () {
     return view('screening.opening-film');
