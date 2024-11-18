@@ -279,7 +279,7 @@
                                                     class="dropdown-item">Debut Director Jury - 2024</a>
                                             </li>
                                             <li><a class="dropdown-item"
-                                                    href="{{ route('debut-director-films', ['slug' => 'debut-director-films']) }}">Official
+                                                    href="{{ route('debut-director-films', ['slug' => 'best-debut-feature-film-of-a-director']) }}">Official
                                                     Selection - Debut Director Films</a></li>
                                             <li>
                                                 <a href="https://iffigoa.org/festival/indian-debut-director"
