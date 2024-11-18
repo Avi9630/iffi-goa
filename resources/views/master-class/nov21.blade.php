@@ -2,14 +2,14 @@
     <h2 class="pb-3">November 21st, 2024</h2>
     <div class="row">
 
-        <div class="col-md-2 col-12">
+        <div class="col-md-2 col-3">
             <div class="master-time">
                 <h4 class="time-div">11:00 AM</h4>
                 <h5 class="time-div">12:00 PM</h5>
             </div>
         </div>
 
-        <div class="col-md-7 col-12">
+        <div class="col-md-7 col-9">
             <div class="callout">
                 <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov21-0-trigger">
                     Women Safety and Cinema
@@ -51,14 +51,14 @@
     <h2 class="pb-3">November 21st, 2024</h2>
     <div class="row">
 
-        <div class="col-md-2 col-12">
+        <div class="col-md-2 col-3">
             <div class="master-time">
                 <h4 class="time-div">12:30 PM</h4>
                 <h5 class="time-div">01:30 PM</h5>
             </div>
         </div>
 
-        <div class="col-md-7 col-12">
+        <div class="col-md-7 col-9">
             <div class="callout">
                 <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov21-1-trigger">
                     360° Cinema: Film Festival Directors' Round Table
@@ -97,14 +97,14 @@
     <h2 class="pb-3">November 21st, 2024</h2>
     <div class="row">
 
-        <div class="col-md-2 col-12">
+        <div class="col-md-2 col-3">
             <div class="master-time">
                 <h4 class="time-div">02:30 PM</h4>
                 <h5 class="time-div">03:15 PM</h5>
             </div>
         </div>
 
-        <div class="col-md-7 col-12">
+        <div class="col-md-7 col-9">
             <div class="callout">
                 <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov21-2-trigger">
                     Character and Actor: The Power of Nuance
@@ -142,14 +142,14 @@
     <h2 class="pb-3">November 21st, 2024</h2>
     <div class="row">
 
-        <div class="col-md-2 col-12">
+        <div class="col-md-2 col-3">
             <div class="master-time">
                 <h4 class="time-div">03:30 PM</h4>
                 <h5 class="time-div">04:15 PM</h5>
             </div>
         </div>
 
-        <div class="col-md-7 col-12">
+        <div class="col-md-7 col-9">
             <div class="callout">
                 <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov21-3-trigger">
                     Mastering the Unseen
@@ -183,14 +183,14 @@
     <h2 class="pb-3">November 21st, 2024</h2>
     <div class="row">
 
-        <div class="col-md-2 col-12">
+        <div class="col-md-2 col-3">
             <div class="master-time">
                 <h4 class="time-div">04:30 PM</h4>
                 <h5 class="time-div">05:30 PM</h5>
             </div>
         </div>
 
-        <div class="col-md-7 col-12">
+        <div class="col-md-7 col-9">
             <div class="callout">
                 <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov21-4-trigger">
                     The Journey from Script to Screen: Writing for Film and Beyond
@@ -226,14 +226,14 @@
     <h2 class="pb-3">November 21st, 2024</h2>
     <div class="row">
 
-        <div class="col-md-2 col-12">
+        <div class="col-md-2 col-3">
             <div class="master-time">
                 <h4 class="time-div">05:45 PM</h4>
                 <h5 class="time-div">06:30 PM</h5>
             </div>
         </div>
 
-        <div class="col-md-7 col-12">
+        <div class="col-md-7 col-9">
             <div class="callout">
                 <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov21-5-trigger">
                     Surviving Film Industry : The Hard Truth Nobody Tells You
@@ -270,14 +270,14 @@
     <h2 class="pb-3">November 21st, 2024</h2>
     <div class="row">
 
-        <div class="col-md-2 col-12">
+        <div class="col-md-2 col-3">
             <div class="master-time">
                 <h4 class="time-div">06:45 PM</h4>
                 <h5 class="time-div">07:30 PM</h5>
             </div>
         </div>
 
-        <div class="col-md-7 col-12">
+        <div class="col-md-7 col-9">
             <div class="callout">
                 <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov21-6-trigger">
                     Centenary Special: ANR - Celebrating the Life and Works of Akkineni Nageswara Rao
