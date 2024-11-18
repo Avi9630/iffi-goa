@@ -1,13 +1,13 @@
 <div class="mt-4 mb-4">
     <h2 class="pb-3">November 27th, 2024</h2>
     <div class="row">
-        <div class="col-md-2 col-12">
+        <div class="col-md-2 col-3">
             <div class="master-time">
                 <h4 class="time-div">11:00 AM</h4>
                 <h5 class="time-div">12:00 PM</h5>
             </div>
         </div>
-        <div class="col-md-7 col-12">
+        <div class="col-md-7 col-9">
             <div class="callout">
                 <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov27-0-trigger">
                     Tapan Sinha-Centenary session-The Spectrum and the Soul
@@ -43,13 +43,13 @@
 <div class="mt-4 mb-4">
     <h2 class="pb-3">November 27th, 2024</h2>
     <div class="row">
-        <div class="col-md-2 col-12">
+        <div class="col-md-2 col-3">
             <div class="master-time">
                 <h4 class="time-div">12:30 PM</h4>
                 <h5 class="time-div">01:30 PM</h5>
             </div>
         </div>
-        <div class="col-md-7 col-12">
+        <div class="col-md-7 col-9">
             <div class="callout">
                 <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov27-1-trigger">
                     Blurring Lines between the Truth & Perception: PR & Perception of Stars and their Films
@@ -88,13 +88,13 @@
 <div class="mt-4 mb-4">
     <h2 class="pb-3">November 27th, 2024</h2>
     <div class="row">
-        <div class="col-md-2 col-12">
+        <div class="col-md-2 col-3">
             <div class="master-time">
                 <h4 class="time-div">02:30 PM</h4>
                 <h5 class="time-div">04:00 PM</h5>
             </div>
         </div>
-        <div class="col-md-7 col-12">
+        <div class="col-md-7 col-9">
             <div class="callout">
                 <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov27-2-trigger">
                     Lata Mangeshkar Memorial Talk: Musical Theatre in India
@@ -126,13 +126,13 @@
 {{-- <div class="mt-4 mb-4">
     <h2 class="pb-3">November 27th, 2024</h2>
     <div class="row">
-        <div class="col-md-2 col-12">
+        <div class="col-md-2 col-3">
             <div class="master-time">
                 <h4 class="time-div">04:30 PM</h4>
                 <h5 class="time-div">06:00 PM</h5>
             </div>
         </div>
-        <div class="col-md-7 col-12">
+        <div class="col-md-7 col-9">
             <div class="callout">
                 <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov27-3-trigger">
                     From Local to Global - What's the Roadmap for International Box Office Success?
