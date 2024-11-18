@@ -279,7 +279,7 @@
                                                     class="dropdown-item">Debut Director Jury - 2024</a>
                                             </li>
                                             <li><a class="dropdown-item"
-                                                    href="{{ route('debut-director-films', ['slug' => 'best-debut-feature-film-of-a-director']) }}">Official
+                                                    href="{{ route('debut-director-films', ['slug' => 'debut-director-films']) }}">Official
                                                     Selection - Debut Director Films</a></li>
                                             <li>
                                                 <a href="https://iffigoa.org/festival/indian-debut-director"
@@ -494,36 +494,28 @@
                                             class="nav-link">Press Release</a>
                                     </li>
 
-                                    {{-- <li class="nav-item">
-                                        <a href="{{ route('gallery') }}" class="nav-link">Gallery
-                                            of 2023 IFFI Festival</a>
-                                    </li> --}}
-
                                     <li class="nav-item dropdown">
-
                                         <a class="nav-link dropdown-toggle" href="#" role="button"
                                             data-bs-toggle="dropdown" aria-expanded="false">Gallery
                                         </a>
                                         <ul class="dropdown-menu">
-
-                                            {{-- <li>
-                                                <a href="{{ route('gallery-2024') }}" class="dropdown-item">
-                                                    IFFI festival 2024</a>
-                                            </li> --}}
-
                                             <li>
-                                                <a href="{{ route('gallery') }}" class="dropdown-item">
-                                                    IFFI festival 2023 </a>
+                                                <a href="{{ route('gallery-2024', ['year' => '2024']) }}"
+                                                    class="dropdown-item">
+                                                    IFFI festival 2024</a>
                                             </li>
 
+                                            <li>
+                                                <a href="{{ route('gallery', ['year' => '2023']) }}"
+                                                    class="dropdown-item">
+                                                    IFFI festival 2023 </a>
+                                            </li>
                                         </ul>
-
                                     </li>
 
                                     <li class="nav-item"><a href="{{ route('news-and-update') }}"
                                             class="nav-link">News and Updates</a>
                                     </li>
-
 
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" role="button"
