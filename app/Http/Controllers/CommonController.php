@@ -56,7 +56,7 @@ class CommonController extends Controller
 
     public function curetedsection2024(Request $request, $slug)
     {
-        dd($slug);
+        // dd($slug);
         //  exit($slug);
         $array = [
             'international-competition' => 1,
