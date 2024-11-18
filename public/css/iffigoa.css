@@ -1623,3 +1623,21 @@ footer a:hover {
         white-space: nowrap;
     }
 }
+
+.sponsor-list-div ul {
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    column-gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    }
+    .sponsor-list-div ul li {
+    display: flex;
+    border-radius: 5px;
+    list-style: none;
+    background: #fff;
+    }
+    .sponsor-list-div ul li img{ width:140px; height:140px; max-width:140px!important  }
+    .title-sponsor{ margin-bottom:0; font-size:18px; margin-top:5px;
+}
