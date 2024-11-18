@@ -56,6 +56,7 @@ class CommonController extends Controller
 
     public function curetedsection2024(Request $request, $slug)
     {
+        dd($slug);
         //  exit($slug);
         $array = [
             'international-competition' => 1,
@@ -300,13 +301,147 @@ class CommonController extends Controller
         return view('about-us.faq', ['faqs' => $faqs]);
     }
 
-    public function gallery()
+    public function gallery(Request $request)
     {
-        $gallery = DB::table('mst_photos')->where('status', 1)->whereNull('deleted_at')->orderBy('id', 'DESC')->paginate(8)->onEachSide(1);
-
-        // dd($gallery);
+        $payload    =   $request->all();
+        $year       =   isset($payload['year']) ? $payload['year'] : NULL;
+        $gallery = DB::table('mst_photos')
+            ->where('status', 1)
+            ->where('year', $year)
+            ->where('category_id', NULL)
+            ->whereNull('deleted_at')
+            ->orderBy('id', 'DESC')
+            ->paginate(8)
+            ->onEachSide(1);
         return view('gallery.gallery', [
             'gallery' => $gallery,
+        ]);
+    }
+
+    public function gallery2024(Request $request)
+    {
+        // Retrieve all active gallery photos
+        // $gallery = DB::table('mst_gallery_2024')
+        //     ->where('status', 1)
+        //     ->orderBy('id', 'DESC')
+        //     ->get();
+        // $dates = DB::table('mst_gallery_2024')
+        //     ->select(DB::raw("DATE_FORMAT(date, '%b %d') as date_alias"), 'date')
+        //     ->where('status', 1)
+        //     ->distinct()
+        //     ->orderBy('date', 'asc')
+        //     ->get();
+
+        // $categories = DB::table('mst_gallery_2024')
+        //     ->where('status', 1)
+        //     ->distinct()
+        //     ->pluck('category');
+
+        // $titles = DB::table('mst_gallery_2024')
+        //     ->where('status', 1)
+        //     ->distinct()
+        //     ->pluck('title');
+
+        // return view('gallery.new-gallery', [
+        //     'gallery' => $gallery,
+        //     'dates' => $dates,
+        //     'categories' => $categories,
+        //     'titles' => $titles,
+        // ]);
+
+        $payload    =   $request->all();
+        $year       =   isset($payload['year']) ? $payload['year'] : NULL;
+        $categories =   DB::table('mst_photos_category')->select('id', 'category')->get();
+        // dd($categories);
+        $gallery = DB::table('mst_photos')
+            ->where('status', 1)
+            ->where('year', $year)
+            // ->where('category_id', '!=', NULL)
+            // ->whereNull('deleted_at')
+            // ->orderBy('id', 'DESC')
+            ->paginate(10);
+        // ->onEachSide(1);
+        // dd($gallery);
+        return view('gallery.new-gallery', [
+            'gallery' => $gallery,
+            'categories' => $categories
+        ]);
+    }
+
+    public function galleryByCategory(Request $request)
+    {
+        $payload    =   $request->all();
+        $category   =   !empty($payload['cmot_category_id']) ? $payload['cmot_category_id'] : '';
+        $fromDate   =   !empty($payload['from_date']) ? $payload['from_date'] : '';
+        $toDate     =   !empty($payload['to_date']) ? $payload['to_date'] : '';
+
+        $query = DB::table('mst_photos');
+        $query->where('status', '1');
+        $query->where('year', '2024');
+
+        if (!empty($fromDate) && !empty($toDate)) {
+            $query->whereDate('created_at', '>=', $fromDate)
+                ->whereDate('created_at', '<=', $toDate);
+        } elseif (empty($fromDate) && !empty($toDate)) {
+            $todayDate = date('Y-m-d');
+            $query->whereDate('created_at', '>=', $todayDate)
+                ->whereDate('created_at', '<=', $toDate);
+        } elseif (!empty($fromDate) && empty($toDate)) {
+            $todayDate = date('Y-m-d');
+            $query->whereDate('created_at', '>=', $fromDate)
+                ->whereDate('created_at', '<=', $todayDate);
+        }
+
+        switch ($category) {
+            case '1':
+                $query->where('category_id', $category);
+                break;
+            case '2':
+                $query->where('category_id', $category);
+                break;
+            case '3':
+                $query->where('category_id', $category);
+                break;
+            case '4':
+                $query->where('category_id', $category);
+                break;
+            case '5':
+                $query->where('category_id', $category);
+                break;
+            case '6':
+                $query->where('category_id', $category);
+                break;
+            case '7':
+                $query->where('category_id', $category);
+                break;
+            case '8':
+                $query->where('category_id', $category);
+                break;
+            case '9':
+                $query->where('category_id', $category);
+                break;
+            case '10':
+                $query->where('category_id', $category);
+                break;
+            case '11':
+                $query->where('category_id', $category);
+                break;
+
+            default:
+                break;
+        }
+        // Final query result
+        $filteredData = $query->get();
+        // $filteredData = $query->toSql();
+        // dd($filteredData);
+        $count = $query->count();
+        $gallery = $query->paginate(10);
+
+        $categories = DB::table('mst_photos_category')->select('id', 'category')->get();
+        return view('gallery.new-gallery', [
+            'gallery'     =>  $gallery,
+            'categories'  =>  $categories,
+            'payload'     =>  $payload,
         ]);
     }
 
@@ -318,40 +453,6 @@ class CommonController extends Controller
             ->get();
 
         return response()->json($gallery);
-    }
-
-    public function gallery2024()
-    {
-        // Retrieve all active gallery photos
-        $gallery = DB::table('mst_gallery_2024')
-            ->where('status', 1)
-            ->orderBy('id', 'DESC')
-            ->get();
-
-        // Get distinct dates and categories
-        $dates = DB::table('mst_gallery_2024')
-            ->select(DB::raw("DATE_FORMAT(date, '%b %d') as date_alias"), 'date')
-            ->where('status', 1)
-            ->distinct()
-            ->orderBy('date', 'asc')
-            ->get();
-
-        $categories = DB::table('mst_gallery_2024')
-            ->where('status', 1)
-            ->distinct()
-            ->pluck('category');
-
-        $titles = DB::table('mst_gallery_2024')
-            ->where('status', 1)
-            ->distinct()
-            ->pluck('title');
-
-        return view('gallery.new-gallery', [
-            'gallery' => $gallery,
-            'dates' => $dates,
-            'categories' => $categories,
-            'titles' => $titles,
-        ]);
     }
 
     public function pressRelease()

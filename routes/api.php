@@ -145,3 +145,6 @@ Route::post(
 // CSV
 
 Route::post('csv', [ApiController::class, 'csv'])->name('csv');
+
+//GALLERY
+Route::post('upload-in-galary', [ApiNewController::class, 'uploadInGalary'])->name('upload-in-galary');

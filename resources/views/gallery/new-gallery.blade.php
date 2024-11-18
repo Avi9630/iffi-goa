@@ -11,56 +11,90 @@
     <!-- Inner Page Banner Section -->
     <div class="container-fluid page-header bannerBg-knowledge-series py-5">
         <div class="container text-center">
-            <h1 class="page-title-header">Gallery 2024</h1>
+            <h1 class="page-title-header">Gallery of 2024 IFFI Festival</h1>
         </div>
     </div>
 
-    <div class="container mt-5 static-content">
-        <!-- Date Tabs -->
-        <ul class="nav nav-tabs" id="dateTabs" role="tablist">
-            @foreach ($dates->unique('date_alias') as $date)
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link {{ $loop->first ? 'active' : '' }}"
-                        id="tab-{{ str_replace(' ', '_', $date->date_alias) }}" data-bs-toggle="tab"
-                        href="#{{ str_replace(' ', '_', $date->date_alias) }}" role="tab"
-                        data-date="{{ $date->date_alias }}">
-                        {{ $date->date_alias }}
-                    </a>
-                </li>
-            @endforeach
-        </ul>
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-md-6 mx-auto mt-4">
+                <form method="GET" action="{{ route('search-gallery-by-cat') }}" class="forms-sample" id="myForm">
+                    @csrf @method('GET')
+                    <div class="row">
 
-        <div class="tab-content" id="dateTabContent">
-            @foreach ($dates->unique('date_alias') as $date)
-                <div class="tab-pane fade {{ $loop->first ? 'show active' : '' }}"
-                    id="{{ str_replace(' ', '_', $date->date_alias) }}" role="tabpanel">
-                    <!-- Category Filter Dropdown -->
-                    <select class="form-select category-filter" data-date="{{ $date->date_alias }}">
-                        <option value="all">All Categories</option>
-                        @foreach ($categories as $category)
-                            <option value="{{ $category }}">{{ $category }}</option>
-                        @endforeach
-                    </select>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <select name="role_id" id="role_id"
+                                    class="form-select @error('role_id') is-invalid @enderror"
+                                    onchange="toggleCategoryField()" style="height: 100%;">
+                                    <option value="">Select option</option>
+                                    <option value="1">All</option>
+                                    <option value="2">Day wise</option>
+                                </select>
+                            </div>
+                        </div>
 
-                    <!-- Gallery Grid -->
-                    <div class="gallery-container mt-3" id="gallery-{{ str_replace(' ', '_', $date->date_alias) }}">
-                        <!-- Gallery items will be dynamically loaded here -->
-                        <div class="row">
-                            @foreach ($gallery->where('date', $date->date) as $photo)
-                                <div class="col-sm-4">
-                                    <div class="grid-item" data-category="{{ $photo->category }}">
-                                        <a href="{{ asset('public/images/gallery_images/' . $photo->image) }}"
-                                            data-src="{{ asset('public/images/gallery_images/' . $photo->image) }}">
-                                            <img src="{{ asset('public/images/gallery_images/' . $photo->image) }}"
-                                                alt="{{ $photo->title }}" class="img-fluid">
-                                        </a>
-                                    </div>
-                                </div>
-                            @endforeach
+                        <div class="col-md-6">
+                            <div class="form-group" style="height: 45%;">
+                                <select name="cmot_category_id" id="cmot_category_id" class="form-select">
+                                    <option value="" selected>Select Department</option>
+                                    @forelse ($categories as $category)
+                                        <option value="{{ $category->id }}"
+                                            {{ old('cmot_category_id') == $category->id ? 'selected' : '' }}>
+                                            {{ $category->category }}
+                                        </option>
+                                    @empty
+                                        <option value="">No Categories Available</option>
+                                    @endforelse
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="search-btn">
+                                <button type="submit" class="btn btn-primary me-2">Search</button>
+                                {{-- <a href="{{ route('gallery-2024', ['year' => 2024]) }}"
+                                    class="btn btn-primary me-2">Reset</a> --}}
+                            </div>
+                        </div>
+
+                        <div class="col-md-6" id="categoryField" style="display: none;">
+                            <div class="form-group" style="height: 45%;">
+                                <label for="name"><strong>Start Date</strong></label>
+                                <input type="date" name="from_date" class="form-control" value="{{ old('from_date') }}">
+                                <label for="name"><strong>End Date</strong></label>
+                                <input type="date" name="to_date" class="form-control" value="{{ old('to_date') }}">
+                            </div>
                         </div>
                     </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-12 mt-5 static-content">
+        <div class="container">
+            <div class="mt-5 mb-4">
+                <div id="lightgallery" class="gallery">
+                    @foreach ($gallery as $gall)
+                        <div class="grid-item">
+                            <a href="{{ asset('public/images/gallery-2024/' . $gall->image) }}"
+                                data-src="{{ asset('public/images/gallery-2024/' . $gall->image) }}">
+                                <img src="{{ asset('public/images/gallery-2024/' . $gall->image) }}"
+                                    alt="{{ $gall->image }}">
+                            </a>
+                        </div>
+                    @endforeach
                 </div>
-            @endforeach
+            </div>
+            <div class="container">
+                <nav aria-label="Page navigation pb-4">
+                    <ul class="pagination overflow-hidden">
+                        {{ $gallery->withQueryString()->links() }}
+                    </ul>
+                </nav>
+            </div>
         </div>
     </div>
 @endsection
@@ -150,4 +184,34 @@
             }
         });
     </script>
+    <script>
+        function showDiv() {
+            var dropdown = document.getElementById("dropdown");
+            var selectedValue = dropdown.value;
+            var myDiv = document.getElementById("myDiv");
+
+            // Show or hide the div based on selected option
+            if (selectedValue === "show") {
+                myDiv.style.display = "block";
+            } else {
+                myDiv.style.display = "none";
+            }
+        }
+    </script>
 @endsection
+<script>
+    function toggleCategoryField() {
+        var roleId = document.getElementById("role_id").value; // Get the selected value
+        var categoryField = document.getElementById("categoryField"); // Target the category field
+
+        if (roleId == 2) {
+            categoryField.style.display = "block"; // Show field when role_id is 2
+        } else {
+            categoryField.style.display = "none"; // Hide for other role_id values
+        }
+    }
+    // Ensure the function runs on page load to set initial visibility
+    document.addEventListener("DOMContentLoaded", function() {
+        toggleCategoryField();
+    });
+</script>
