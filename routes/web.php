@@ -43,6 +43,8 @@ Route::controller(CommonController::class)->group(function () {
 
     Route::get('media/gallery-2024', 'gallery2024')->name('gallery-2024');
 
+    Route::get('search-gallery-by-cat', 'galleryByCategory')->name('search-gallery-by-cat');
+
     Route::get('media/press-release', 'pressRelease')->name('press-release');
 
     Route::get('media/the-peacock', 'thepeacock')->name('the-peacock');
