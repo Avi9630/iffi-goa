@@ -5,8 +5,7 @@
         <div class="International-competition">
             {{-- <p>{{ $director->slug }}</p> --}}
             <p>
-                {{-- <a href="{{ route('best-director-detail', ['slug' => $director->slug]) }}" --}}
-                <a href="{{ route('best-director-detail', ['slug' => 'best-debut-feature-film-of-a-director']) }}"
+                <a href="{{ route('best-director-detail', ['slug' => $director->slug]) }}" {{-- <a href="{{ route('best-director-detail', ['slug' => 'best-debut-feature-film-of-a-director']) }}" --}}
                     class="post-title">{{ $director->title }}
                 </a>
             </p>
