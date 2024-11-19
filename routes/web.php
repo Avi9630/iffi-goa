@@ -86,7 +86,9 @@ Route::controller(InternationalCinemaController::class)->group(function () {
 //Indian Panorama
 Route::controller(IndianPanoramaController::class)->group(function () {
     Route::get('indian-panorama/official-selection-feature', 'officialFeature')->name('official-selection-feature');
+
     Route::get('indian-panorama/official-selection-non-feature', 'officialNonFeature')->name('official-selection-non-feature');
+
     Route::get('indian-panorama/accessible-film', 'accessibleFilm')->name('accessible-film');
 });
 
@@ -200,6 +202,14 @@ Route::get('debut-director-jury', function () {
 Route::get('web-series-jury', function () {
     return view('web-series.web-series-jury');
 })->name('web-series-jury');
+
+Route::get('Best-web-series-previw-commitee-2024', function () {
+    return view('web-series.Best-web-series-previw-commitee-2024');
+})->name('Best-web-series-previw-commitee-2024');
+
+Route::get('debut-directors-previw-commitee-2024', function () {
+    return view('web-series.debut-directors-previw-commitee-2024');
+})->name('debut-directors-previw-commitee-2024');
 
 Route::get('cmot-jury', function () {
     return view('cmot.cmot-jury');

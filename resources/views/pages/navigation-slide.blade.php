@@ -278,6 +278,11 @@
                                                 <a href="{{ route('debut-director-jury') }}"
                                                     class="dropdown-item">Debut Director Jury - 2024</a>
                                             </li>
+                                            <li>
+                                                <a href="{{ route('debut-directors-previw-commitee-2024') }}"
+                                                    class="dropdown-item">
+                                                    Debut Director Preview Committee 2024</a>
+                                            </li>
                                             <li><a class="dropdown-item"
                                                     href="{{ route('debut-director-films', ['slug' => 'debut-director-films']) }}">Official
                                                     Selection - Debut Director Films</a></li>
@@ -404,6 +409,12 @@
                                             <li>
                                                 <a href="{{ route('web-series-jury') }}" class="dropdown-item">
                                                     Best Web Series Jury - 2024</a>
+                                            </li>
+
+                                            <li>
+                                                <a href="{{ route('Best-web-series-previw-commitee-2024') }}"
+                                                    class="dropdown-item">
+                                                    Best Web Series Preview Committee 2024</a>
                                             </li>
                                             <li><a class="dropdown-item"
                                                     href="{{ route('best-web-series', ['slug' => 'best-web-series']) }}">Official
@@ -542,6 +553,13 @@
                                         </ul>
                                     </li>
 
+                                    <li class="nav-item"><a
+                                            href="{{ asset('public/images/MediaPdf/55th-IFFI-Catalogue_Website_Single page_Updated.pdf') }}"
+                                            target="_blank" class="nav-link">55<sup>th</sup> IFFI Official
+                                            Catalogue</a>
+                                    </li>
+
+
                                 </ul>
                             </div>
                             <!-- Media Section End -->
@@ -565,6 +583,11 @@
                                     <li class="nav-item">
                                         <a href="https://filmguide.iffigoa.org/schedule" class="nav-link"
                                             target="_blank">Film Guide Schedule</a>
+                                    </li>
+                                    <li class="nav-item"><a
+                                            href="{{ asset('public/images/MediaPdf/Full-IFFI-Schedule-2024.pdf') }}"
+                                            target="_blank" class="nav-link">55<sup>th</sup> IFFI Official
+                                            Schedule PDF</a>
                                     </li>
                                 </ul>
                             </div>
