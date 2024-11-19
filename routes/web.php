@@ -86,7 +86,9 @@ Route::controller(InternationalCinemaController::class)->group(function () {
 //Indian Panorama
 Route::controller(IndianPanoramaController::class)->group(function () {
     Route::get('indian-panorama/official-selection-feature', 'officialFeature')->name('official-selection-feature');
+
     Route::get('indian-panorama/official-selection-non-feature', 'officialNonFeature')->name('official-selection-non-feature');
+
     Route::get('indian-panorama/accessible-film', 'accessibleFilm')->name('accessible-film');
 });
 
