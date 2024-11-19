@@ -544,7 +544,7 @@
 
                                     <li class="nav-item"><a
                                             href="{{ asset('public/images/55th_IFFI_Catalogue_Website_Single page_Updated.pdf') }}"
-                                            target="_blank" class="nav-link">55<sup>th</sup> Cataloge 2024</a>
+                                            target="_blank" class="nav-link">55<sup>th</sup> Catalogue 2024</a>
                                     </li>
 
                                 </ul>
