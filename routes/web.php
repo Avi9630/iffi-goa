@@ -203,6 +203,14 @@ Route::get('web-series-jury', function () {
     return view('web-series.web-series-jury');
 })->name('web-series-jury');
 
+Route::get('Best-web-series-previw-commitee-2024', function () {
+    return view('web-series.Best-web-series-previw-commitee-2024');
+})->name('Best-web-series-previw-commitee-2024');
+
+Route::get('debut-directors-previw-commitee-2024', function () {
+    return view('web-series.debut-directors-previw-commitee-2024');
+})->name('debut-directors-previw-commitee-2024');
+
 Route::get('cmot-jury', function () {
     return view('cmot.cmot-jury');
 })->name('cmot-jury');
