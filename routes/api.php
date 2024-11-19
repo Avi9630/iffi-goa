@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\api\ApiController;
+use App\Http\Controllers\api\GalleryController;
 use App\Http\Controllers\api\IndianPanoramaController;
 use App\Http\Controllers\api\InternationalCinemaController;
 use App\Http\Controllers\ApiNewController;
@@ -148,3 +149,5 @@ Route::post('csv', [ApiController::class, 'csv'])->name('csv');
 
 //GALLERY
 Route::post('upload-in-galary', [ApiNewController::class, 'uploadInGalary'])->name('upload-in-galary');
+Route::post('gallery',          [GalleryController::class, 'uploadGallery'])->name('gallery');
+Route::post('gallery_upload',   [GalleryController::class, 'upload'])->name('gallery_upload');
