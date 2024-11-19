@@ -15,7 +15,7 @@
         </div>
     </div>
 
-    <div class="content-wrapper">
+    {{-- <div class="content-wrapper">
         <div class="row">
             <div class="col-md-6 mx-auto mt-4">
                 <form method="GET" action="{{ route('search-gallery-by-cat') }}" class="forms-sample" id="myForm">
@@ -53,8 +53,6 @@
                         <div class="col-md-3">
                             <div class="search-btn">
                                 <button type="submit" class="btn btn-primary me-2">Search</button>
-                                {{-- <a href="{{ route('gallery-2024', ['year' => 2024]) }}"
-                                    class="btn btn-primary me-2">Reset</a> --}}
                             </div>
                         </div>
 
@@ -71,6 +69,120 @@
 
             </div>
         </div>
+    </div> --}}
+
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-md-6 mx-auto mt-4">
+                <form method="GET" action="{{ route('search-gallery-by-cat') }}" class="forms-sample" id="myForm">
+                    @csrf @method('GET')
+
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <select name="department_id" id="department_id" class="form-select"
+                                    onchange="toggleCategoryField()" style="height: 100%;">
+                                    <option value="">Select</option>
+                                    <option value="1">All dates</option>
+                                    <option value="2">Daywise</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group" style="height: 45%;">
+                                <select name="category_id" id="category_id" class="form-select">
+                                    <option value="" selected>All section</option>
+                                    @forelse ($categories as $category)
+                                        <option value="{{ $category->id }}"
+                                            {{ old('category_id') == $category->id ? 'selected' : '' }}>
+                                            {{ $category->category }}
+                                        </option>
+                                    @empty
+                                        <option value="">No Categories Available</option>
+                                    @endforelse
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="search-btn">
+                                <button type="submit" class="btn btn-primary me-2">Search</button>
+                            </div>
+                        </div>
+
+                        {{-- Date range --}}
+
+                        <div class="container mt-4" id="categoryField" style="display: none;">
+
+                            <div class="btn-group custom-calander-group" role="group" aria-label="Radio button group">
+
+                                <label class="calander active">
+                                    <input type="radio" name="date" id="option1" value="2024-11-20">
+                                    <div class="calander-text"><span class="white-text">Nov</span> <span>20</span>
+                                        <span>2024</span>
+                                    </div>
+                                </label>
+
+                                <label class="calander">
+                                    <input type="radio" name="date" id="option2" value="2024-11-21">
+                                    <div class="calander-text"><span class="white-text">Nov</span> <span>21</span>
+                                        <span>2024</span>
+                                    </div>
+                                </label>
+
+                                <label class="calander">
+                                    <input type="radio" name="date" id="option3" value="2024-11-22">
+                                    <div class="calander-text"><span class="white-text">Nov</span> <span>22</span>
+                                        <span>2024</span>
+                                    </div>
+                                </label>
+                                <label class="calander">
+                                    <input type="radio" name="date" id="option4" value="2024-11-23">
+                                    <div class="calander-text"><span class="white-text">Nov</span> <span>23</span>
+                                        <span>2024</span>
+                                    </div>
+                                </label>
+                                <label class="calander">
+                                    <input type="radio" name="date" id="option5" value="2024-11-24">
+                                    <div class="calander-text"><span class="white-text">Nov</span> <span>24</span>
+                                        <span>2024</span>
+                                    </div>
+                                </label>
+                                <label class="calander">
+                                    <input type="radio" name="date" id="option6" value="2024-11-25">
+                                    <div class="calander-text"><span class="white-text">Nov</span> <span>25</span>
+                                        <span>2024</span>
+                                    </div>
+
+                                </label>
+                                <label class="calander">
+                                    <input type="radio" name="date" id="option7" value="2024-11-26">
+                                    <div class="calander-text"><span class="white-text">Nov</span> <span>26</span>
+                                        <span>2024</span>
+                                    </div>
+                                </label>
+                                <label class="calander">
+                                    <input type="radio" name="date" id="option8" value="2024-11-27">
+                                    <div class="calander-text"><span class="white-text">Nov</span> <span>27</span>
+                                        <span>2024</span>
+                                    </div>
+                                </label>
+                                <label class="calander">
+                                    <input type="radio" name="date" id="option9" value="2024-11-20">
+                                    <div class="calander-text"><span class="white-text">Nov</span> <span>28</span>
+                                        <span>2024</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 
     <div class="col-lg-12 mt-5 static-content">
@@ -79,10 +191,13 @@
                 <div id="lightgallery" class="gallery">
                     @foreach ($gallery as $gall)
                         <div class="grid-item">
-                            <a href="{{ asset('public/images/gallery-2024/' . $gall->image) }}"
+                            {{-- <a href="{{ asset('public/images/gallery-2024/' . $gall->image) }}"
                                 data-src="{{ asset('public/images/gallery-2024/' . $gall->image) }}">
                                 <img src="{{ asset('public/images/gallery-2024/' . $gall->image) }}"
                                     alt="{{ $gall->image }}">
+                            </a> --}}
+                            <a href="{{ $gall->img_url }}" data-src="{{ $gall->img_url }}">
+                                <img src="{{ $gall->img_url }}" alt="{{ $gall->img_url }}">
                             </a>
                         </div>
                     @endforeach
@@ -199,19 +314,29 @@
         }
     </script>
 @endsection
+
 <script>
     function toggleCategoryField() {
-        var roleId = document.getElementById("role_id").value; // Get the selected value
-        var categoryField = document.getElementById("categoryField"); // Target the category field
-
+        var roleId = document.getElementById("department_id").value;
+        var categoryField = document.getElementById("categoryField");
         if (roleId == 2) {
-            categoryField.style.display = "block"; // Show field when role_id is 2
+            categoryField.style.display = "block";
         } else {
-            categoryField.style.display = "none"; // Hide for other role_id values
+            categoryField.style.display = "none";
         }
     }
-    // Ensure the function runs on page load to set initial visibility
     document.addEventListener("DOMContentLoaded", function() {
         toggleCategoryField();
+    });
+</script>
+
+<script>
+    document.querySelectorAll('.btn-group input[type="radio"]').forEach(function(radio) {
+        radio.addEventListener('change', function() {
+            document.querySelectorAll('.btn-group label').forEach(function(label) {
+                label.classList.remove('active');
+            });
+            radio.closest('label').classList.add('active');
+        });
     });
 </script>
