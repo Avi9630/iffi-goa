@@ -99,6 +99,14 @@ Route::get('about-iffi', function () {
     return view('about-us.about-iffi');
 })->name('about-iffi');
 
+Route::get('iffi-accessibility', function () {
+    return view('about-us.Accessible-IFFI');
+})->name('iffi-accessibility');
+
+Route::get('filmbazaar-mariott-programme', function () {
+    return view('Film-Bazaar.filmbazaar-marriott');
+})->name('filmbazaar-mariott-programme');
+
 Route::get('festival-venue', function () {
     return view('about-us.festival-venue');
 })->name('festival-venue');

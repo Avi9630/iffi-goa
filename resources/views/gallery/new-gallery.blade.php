@@ -105,9 +105,15 @@
                             </div>
                         </div>
 
+                        <div class="col-md-3">
+                            <div class="search-btn">
+                                <button type="submit" class="btn btn-primary me-2">Search</button>
+                            </div>
+                        </div>
+
                         {{-- Date range --}}
 
-                        <div class="container" id="categoryField" style="display: none;">
+                        <div class="container mt-4" id="categoryField" style="display: none;">
 
                             <div class="btn-group custom-calander-group" role="group" aria-label="Radio button group">
 
@@ -171,11 +177,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-3">
-                            <div class="search-btn">
-                                <button type="submit" class="btn btn-primary me-2">Search</button>
-                            </div>
-                        </div>
+
 
                     </div>
                 </form>
