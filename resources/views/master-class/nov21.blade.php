@@ -211,10 +211,10 @@
                             class="img-fluid">
                     </li>
 
-                    <li>
+                    {{-- <li>
                         <img src="{{ asset('public/images/master-class/Anant Vijay.jpg') }}" alt="image"
                             class="img-fluid">
-                    </li>
+                    </li> --}}
                 </ul>
             </div>
         </div>
@@ -266,7 +266,7 @@
 </div>
 
 
-<div class="mt-4 mb-4">
+{{-- <div class="mt-4 mb-4">
     <h2 class="pb-3">November 21st, 2024</h2>
     <div class="row">
 
@@ -302,4 +302,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}

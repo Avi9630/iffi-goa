@@ -822,6 +822,13 @@ footer a:hover {
     background-size: cover;
 }
 
+.bannerBg-accessible-iffi {
+    background: linear-gradient(rgb(0 0 0 / 79%), rgb(0 0 0 / 70%)),
+        url(../images/main-header/accessible-iffi-for-all.jpg) center center
+            no-repeat;
+    background-size: cover;
+}
+
 .iCinema-content h5 {
     font-size: 14px;
     display: flex;
@@ -1631,26 +1638,38 @@ footer a:hover {
     column-gap: 10px;
     justify-content: center;
     flex-wrap: wrap;
-    }
-    .sponsor-list-div ul li {
+}
+.sponsor-list-div ul li {
     display: flex;
     border-radius: 5px;
     list-style: none;
     background: #fff;
-    }
-    .sponsor-list-div ul li img{ width:140px; height:140px; max-width:140px!important  }
-    .title-sponsor{ margin-bottom:0; font-size:18px; margin-top:5px;
+}
+.sponsor-list-div ul li img {
+    width: 140px;
+    height: 140px;
+    max-width: 140px !important;
+}
+.title-sponsor {
+    margin-bottom: 0;
+    font-size: 18px;
+    margin-top: 5px;
 }
 @media only screen and (min-width: 320px) and (max-width: 765px) {
     .callout {
-         padding: 15px; 
+        padding: 15px;
         border-left: none;
         border-left: solid 4px #1b809e;
-        border-top: none!important;
+        border-top: none !important;
+    }
+
+    .master-time .time-div {
+        font-size: 16px !important;
+    }
+    .callout h4 {
+        font-size: 20px !important;
+    }
+    .tab-pane .pb-3 {
+        font-size: 20px !important;
+    }
 }
-    
-    .master-time .time-div{ font-size:16px!important; }
-     .callout h4{ font-size:20px!important; }
-     .tab-pane .pb-3 { font-size:20px!important; }
-}
-   
