@@ -70,6 +70,11 @@
                                             Sponsors</a>
                                     </li>
 
+                                    <li class="nav-item">
+                                        <a href="{{ route('iffi-accessibility') }}" class="nav-link">Accessible IFFI For
+                                            All</a>
+                                    </li>
+
                                     {{-- <li class="nav-item">
                                         <a href="{{ asset('public/images/sponsor/IFFI-55-Sponsers-Page.pdf') }}"
                                             class="nav-link" target="_blank">Our Partners &
@@ -610,6 +615,11 @@
                                     <li class="nav-item">
                                         <a href="https://filmbazaarindia.com/programme/market-screenings/"
                                             class="nav-link" target="_blank">Market Screenings</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="{{ route('filmbazaar-mariott-programme') }}" class="nav-link">
+                                            Filmbazaar Marriott Stage Programme
+                                        </a>
                                     </li>
                                     {{-- <li class="nav-item">
                                         <a href="{{ route('knowledge-series') }}" class="nav-link">
