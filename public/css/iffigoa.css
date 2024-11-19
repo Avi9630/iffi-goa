@@ -829,6 +829,13 @@ footer a:hover {
     background-size: cover;
 }
 
+.bannerBg-marriott {
+    background: linear-gradient(rgb(0 0 0 / 79%), rgb(0 0 0 / 70%)),
+        url(../images/main-header/Film-Bazaar-logo-bg.jpg) center center
+            no-repeat;
+    background-size: cover;
+}
+
 .iCinema-content h5 {
     font-size: 14px;
     display: flex;

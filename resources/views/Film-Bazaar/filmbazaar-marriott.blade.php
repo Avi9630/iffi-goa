@@ -3,7 +3,8 @@
 @section('site_description',
     'Join the exclusive Film Bazaar Marriott Programme, a premier platform for filmmakers and
     industry professionals to network, collaborate, and explore opportunities in the global film market. ')
-@section('site_keywords', 'Film Bazaar Marriott Programme, networking for filmmakers, global film market, industry
+@section('site_keywords',
+    'Film Bazaar Marriott Programme, networking for filmmakers, global film market, industry
     collaboration, cinematic opportunities, Film Bazaar events, filmmaker networking, film industry programmes.')
 @section('content')
 
@@ -16,7 +17,7 @@
     <!-- Menu slide end -->
 
     <!-- Inner Page Banner Section -->
-    <div class="container-fluid page-header accessible-iffi py-5">
+    <div class="container-fluid page-header bannerBg-marriott py-5">
         <div class="container text-center ">
             <h1 class="page-title-header">FILMBAZAAR MARRIOTT STAGE PROGRAMME</h1>
         </div>
@@ -383,24 +384,24 @@
                         </div>
                     </div>
                     <!--    <div class="mt-4 mb-4">
-                                                     <div class="row">
-                                                        <div class="col-md-2 col-3">
-                                                           <div class="master-time">
-                                                              <h4 class="time-div">16:30 PM</h4>
-                                                              <h5 class="time-div">17:30 PM</h5>
-                                                           </div>
-                                                        </div>
-                                                        <div class="col-md-10 col-9">
-                                                           <div class="callout">
-                                                              <h4 class="title-tab" id="nov21-0-trigger">
-                                                      ll
-                                                              </h4>
-                                                            
-                                                           </div>
-                                                        </div>
-                                                       
-                                                     </div>
-                                                     </div> -->
+                                                         <div class="row">
+                                                            <div class="col-md-2 col-3">
+                                                               <div class="master-time">
+                                                                  <h4 class="time-div">16:30 PM</h4>
+                                                                  <h5 class="time-div">17:30 PM</h5>
+                                                               </div>
+                                                            </div>
+                                                            <div class="col-md-10 col-9">
+                                                               <div class="callout">
+                                                                  <h4 class="title-tab" id="nov21-0-trigger">
+                                                          ll
+                                                                  </h4>
+                                                                
+                                                               </div>
+                                                            </div>
+                                                           
+                                                         </div>
+                                                         </div> -->
                 </div>
             </div>
         </div>
