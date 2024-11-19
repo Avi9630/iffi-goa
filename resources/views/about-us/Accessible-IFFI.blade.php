@@ -20,7 +20,7 @@
     <!-- Inner Page Banner Section -->
     <div class="container-fluid page-header bannerBg-accessible-iffi py-5">
         <div class="container text-center ">
-            <h1 class="page-title-header">FILMBAZAAR MARRIOTT STAGE PROGRAMME</h1>
+            <h1 class="page-title-header">Accessible IFFI For All</h1>
         </div>
     </div>
     <!-- Inner Page Banner Section -->
