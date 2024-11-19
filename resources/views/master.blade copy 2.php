@@ -211,11 +211,12 @@
                     moderator: "",
                     panel: "",
                     date: "Nov 21st, 2024, 5.30 PM TO 6.15 PM",
-                    speakers: [{
-                            name: "Prasoon Joshi",
-                            description: "Prasoon Joshi is one of India’s most celebrated creative minds—a Padma Shri awardee and National Award-winning writer. Renowned for his work as a poet, lyricist, screenwriter, and communication expert, he has been honored at global platforms like Cannes Lions and the World Economic Forum. Author of four books, Joshi has penned acclaimed scripts and lyrics for iconic films such as Taare Zameen Par, Rang De Basanti, Bhaag Milkha Bhaag, and Manikarnika. His recent efforts have shaped major brand campaigns like Incredible India, G-20, and Air India, while his impactful societal projects—Swachh Bharat, Child Rights, Pulse Polio, and campaigns on women’s empowerment and malnutrition—have created tangible, positive change.",
-                            image: "{{ asset('public/images/master-class/Prasoon Joshi.jpg') }}"
-                        },
+                    speakers: [
+                        // {
+                        //     name: "Prasoon Joshi",
+                        //     description: "Prasoon Joshi is one of India’s most celebrated creative minds—a Padma Shri awardee and National Award-winning writer. Renowned for his work as a poet, lyricist, screenwriter, and communication expert, he has been honored at global platforms like Cannes Lions and the World Economic Forum. Author of four books, Joshi has penned acclaimed scripts and lyrics for iconic films such as Taare Zameen Par, Rang De Basanti, Bhaag Milkha Bhaag, and Manikarnika. His recent efforts have shaped major brand campaigns like Incredible India, G-20, and Air India, while his impactful societal projects—Swachh Bharat, Child Rights, Pulse Polio, and campaigns on women’s empowerment and malnutrition—have created tangible, positive change.",
+                        //     image: "{{ asset('public/images/master-class/Prasoon Joshi.jpg') }}"
+                        // },
                         {
                             name: "Anant Vijay",
                             description: "Anant Vijay is a National Award winning Journalist and Author. Presently working with Dainik Jagran. His journalism experience spans more than two decades across TV and Print, writing mainly on the Cinema, politics of Culture and Literature. His weekly column has been running for 13 years in Dainik Jagran, the largest read newspaper in India. Writing with consummate ease, he’s authored 14 books across genres. His Book Bollywood Selfie was the best seller. His book Amethi Sangram became a best seller within a week of its launch. A keen student of the Hindi language, Anant has organized literature festivals, been part of Hindi literary bodies playing active advisory roles, been on editorial boards, been a Jury Chairman at the National Film Awards twice, Chairman of the selection Jury (Konkani Films) of International Film Festival of India (IFFI) 2019 and Member of Jury, 75 Creative Minds, Ministry of Information and Broadcasting, 2021. He is the Vice Chairman of Governing Council of Film and Television Institute of India, Pune.Apart from the National Award (Swarn Kamal), Anant Vijay is the recipient of the most prestigious Ganesh Shankar Vidyarthi Award and Father Camille Bulcke Award.",

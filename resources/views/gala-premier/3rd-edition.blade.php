@@ -92,7 +92,7 @@
                                     <td>
                                         4:30 pm
                                     </td>
-                                    <td>The Rana Daggubati Show
+                                    <td>The Rana Daggubati Show (Series)
                                     </td>
                                     <td>Ranu Daggubati
                                     </td>
@@ -116,7 +116,7 @@
                                     <td>November 22, 2024
                                     </td>
                                     <td>
-                                        12 noon
+                                        12:00 pm
                                     </td>
                                     <td>
                                         Snow Flower
@@ -130,7 +130,7 @@
                                     <td>November 22, 2024
                                     </td>
                                     <td>
-                                        5:00 pm&lt;
+                                        5:00 pm
                                     </td>
                                     <td>
                                         Saali Mohabbat
@@ -157,7 +157,7 @@
                                     <td>
                                         4:30 pm
                                     </td>
-                                    <td>Vikatakavi
+                                    <td>Vikatakavi (Series)
                                     </td>
                                     <td>Naresh Agastya, Megha<br>
                                         Akash, Ram Talluri, Pradeep Maddali
@@ -181,10 +181,10 @@
                                     <td>November 24, 2024
                                     </td>
                                     <td>
-                                        12 Noon
+                                        12:00 pm
                                     </td>
-                                    <td>Sholay Trailer +<br>
-                                        Hazar Vela Sholay Pehlila Manus
+                                    <td>Sholay 4k Trailer +<br>
+                                        Hazar Vela Sholay Pahilela Manus
                                     </td>
                                     <td>Ramesh Sippy +<br>
                                         Sonali Kulkarni, Siddharth<br>
@@ -194,7 +194,7 @@
 
                                     </td>
                                 </tr>
-                                <tr>
+                                {{-- <tr>
                                     <td>November 25, 2024
                                     </td>
                                     <td>
@@ -205,7 +205,7 @@
                                     <td>Vishnu Manchu,<br>
                                         Prabhudheva, Kajal Aggarwal, R SarathKumar, Mohan Babu, Mukesh Kumar Singh
                                     </td>
-                                </tr>
+                                </tr> --}}
                                 <tr>
                                     <td>November 25, 2024
                                     </td>
@@ -259,7 +259,7 @@
                                     <td>
                                         5:45 pm
                                     </td>
-                                    <td>Headhunting To Beatboxing
+                                    <td>Headhunting To Beatboxing (Documentary)
                                     </td>
                                     <td>AR Rahman, Rohit Gupta,Amit Malik, Manil Gupta
                                     </td>

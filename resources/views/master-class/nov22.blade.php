@@ -1,4 +1,4 @@
-{{-- <div class="mt-4 mb-4">
+<div class="mt-4 mb-4">
     <h2 class="pb-3">November 22nd, 2024</h2>
     <div class="row">
 
@@ -34,7 +34,7 @@
             </div>
         </div>
     </div>
-</div> --}}
+</div>
 
 <div class="mt-4 mb-4">
     <h2 class="pb-3">November 22nd, 2024</h2>
@@ -47,7 +47,7 @@
         </div>
         <div class="col-md-7 col-9">
             <div class="callout">
-                <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov22-0-trigger">
+                <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov22-1-trigger">
                     Living Movies: Filmmaking and the Creative Life
                 </h4>
                 <p>
@@ -89,7 +89,7 @@
 
         <div class="col-md-7 col-9">
             <div class="callout">
-                <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov22-1-trigger">
+                <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov22-2-trigger">
                     Sound Design : The Aural Universe of cinematic Storytelling
                 </h4>
                 <p>
@@ -131,7 +131,7 @@
 
         <div class="col-md-7 col-9">
             <div class="callout">
-                <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov22-2-trigger">
+                <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov22-3-trigger">
                     Transforming Literary Masterpieces into Engaging Films
                 </h4>
                 <p>
