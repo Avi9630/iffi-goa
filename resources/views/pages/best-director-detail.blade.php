@@ -26,7 +26,7 @@
             <div class="row">
                 <div class="col-md-5">
                     <div class="international-img">
-                        <img src="{{ asset('public/images/director-debut-film/' . $fetch_cinema_details->img_src . '') }}"
+                        <img src="{{ asset('public/images/cureted-section/' . $fetch_cinema_details->img_src . '') }}"
                             alt="{{ $fetch_cinema_details->title }} image" class="img-fluid">
                     </div>
                 </div>

@@ -1,13 +1,13 @@
 <div class="mt-4 mb-4">
     <h2 class="pb-3">November 25th, 2024</h2>
     <div class="row">
-        <div class="col-md-2 col-12">
+        <div class="col-md-2 col-3">
             <div class="master-time">
                 <h4 class="time-div">11:00 AM</h4>
                 <h5 class="time-div">12:00 PM</h5>
             </div>
         </div>
-        <div class="col-md-7 col-12">
+        <div class="col-md-7 col-9">
             <div class="callout">
                 <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov25-0-trigger">
                     Will Artificial Intelligence Alter Filmmaking Forever?
@@ -37,13 +37,13 @@
 <div class="mt-4 mb-4">
     <h2 class="pb-3">November 25th, 2024</h2>
     <div class="row">
-        <div class="col-md-2 col-12">
+        <div class="col-md-2 col-3">
             <div class="master-time">
                 <h4 class="time-div">02:30 AM</h4>
                 <h5 class="time-div">04:00 PM</h5>
             </div>
         </div>
-        <div class="col-md-7 col-12">
+        <div class="col-md-7 col-9">
             <div class="callout">
                 <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov25-1-trigger">
                     Integrating VFX with Cinematography
@@ -76,13 +76,13 @@
 <div class="mt-4 mb-4">
     <h2 class="pb-3">November 25th, 2024</h2>
     <div class="row">
-        <div class="col-md-2 col-12">
+        <div class="col-md-2 col-3">
             <div class="master-time">
                 <h4 class="time-div">04:30 PM</h4>
                 <h5 class="time-div">06:00 PM</h5>
             </div>
         </div>
-        <div class="col-md-7 col-12">
+        <div class="col-md-7 col-9">
             <div class="callout">
                 <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov25-2-trigger">
                     How to Succeed in New Hollywood
@@ -111,13 +111,13 @@
 <div class="mt-4 mb-4">
     <h2 class="pb-3">November 25th, 2024</h2>
     <div class="row">
-        <div class="col-md-2 col-12">
+        <div class="col-md-2 col-3">
             <div class="master-time">
                 <h4 class="time-div">06:15 PM</h4>
                 <h5 class="time-div">07:00 PM</h5>
             </div>
         </div>
-        <div class="col-md-7 col-12">
+        <div class="col-md-7 col-9">
             <div class="callout">
                 <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov25-3-trigger">
                     Empowering Change: Women Leading the Way in Cinema
