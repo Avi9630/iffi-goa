@@ -356,6 +356,7 @@ class CommonController extends Controller
         $gallery = DB::table('mst_photos')
             ->where('status', 1)
             ->where('year', $year)
+            ->where('img_url', '!=', '')
             // ->where('category_id', '!=', NULL)
             // ->whereNull('deleted_at')
             // ->orderBy('id', 'DESC')
@@ -371,25 +372,31 @@ class CommonController extends Controller
     public function galleryByCategory(Request $request)
     {
         $payload    =   $request->all();
-        $category   =   !empty($payload['cmot_category_id']) ? $payload['cmot_category_id'] : '';
-        $fromDate   =   !empty($payload['from_date']) ? $payload['from_date'] : '';
-        $toDate     =   !empty($payload['to_date']) ? $payload['to_date'] : '';
+        $category   =   !empty($payload['category_id']) ? $payload['category_id'] : '';
+        $date       =   !empty($payload['date']) ? $payload['date'] : '';
 
+        // $fromDate   =   !empty($payload['from_date']) ? $payload['from_date'] : '';
+        // $toDate     =   !empty($payload['to_date']) ? $payload['to_date'] : '';
         $query = DB::table('mst_photos');
         $query->where('status', '1');
         $query->where('year', '2024');
+        $query->where('img_url', '!=', '');
 
-        if (!empty($fromDate) && !empty($toDate)) {
-            $query->whereDate('created_at', '>=', $fromDate)
-                ->whereDate('created_at', '<=', $toDate);
-        } elseif (empty($fromDate) && !empty($toDate)) {
-            $todayDate = date('Y-m-d');
-            $query->whereDate('created_at', '>=', $todayDate)
-                ->whereDate('created_at', '<=', $toDate);
-        } elseif (!empty($fromDate) && empty($toDate)) {
-            $todayDate = date('Y-m-d');
-            $query->whereDate('created_at', '>=', $fromDate)
-                ->whereDate('created_at', '<=', $todayDate);
+        // if (!empty($fromDate) && !empty($toDate)) {
+        //     $query->whereDate('created_at', '>=', $fromDate)
+        //         ->whereDate('created_at', '<=', $toDate);
+        // } elseif (empty($fromDate) && !empty($toDate)) {
+        //     $todayDate = date('Y-m-d');
+        //     $query->whereDate('created_at', '>=', $todayDate)
+        //         ->whereDate('created_at', '<=', $toDate);
+        // } elseif (!empty($fromDate) && empty($toDate)) {
+        //     $todayDate = date('Y-m-d');
+        //     $query->whereDate('created_at', '>=', $fromDate)
+        //         ->whereDate('created_at', '<=', $todayDate);
+        // }
+
+        if (!empty($date)) {
+            $query->whereDate('created_at', $date);
         }
 
         switch ($category) {
