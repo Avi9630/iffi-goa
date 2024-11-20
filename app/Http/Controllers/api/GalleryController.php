@@ -185,7 +185,93 @@ class GalleryController extends Controller
             $response = [
                 'message' => $e->getMessage(),
             ];
+            return $this->response('exception', $response);
+        }
+    }
 
+    public function allPhoto()
+    {
+        try {
+            $allPhotos = DB::table('mst_photos')
+                ->where(['status' => 1, 'year' => 2024])
+                ->orderBy('id', 'DESC')->get();
+            if (!empty($allPhotos)) {
+                $response = [
+                    'message'   => 'All photos fetched !!',
+                    'data'      =>  $allPhotos
+                ];
+                return $this->response('success', $response);
+            } else {
+                $response = [
+                    'message' => 'Not found category !!',
+                ];
+                return $this->response('exception', $response);
+            }
+        } catch (\Exception $e) {
+            $response = [
+                'message' => $e->getMessage(),
+            ];
+            return $this->response('exception', $response);
+        }
+    }
+
+    public function activeInactive(Request $request, $id)
+    {
+
+        $payload = $request->all();
+        $validatorArray = [
+            'status'    =>  'required|in:0,1',
+        ];
+        $messagesArray = [];
+        $validator = Validator::make($payload, $validatorArray, $messagesArray);
+        if ($validator->fails()) {
+            $output = [
+                'message' => $validator->errors()->first(),
+            ];
+            return $this->response('validatorerrors', $output);
+        }
+
+        try {
+            $toUpdate       =   DB::table('mst_photos')->where(['id' => $id])->update(['status' => $payload['status']]);
+            if ($toUpdate > 0) {
+                $response = [
+                    'message'   => $payload['status'] == 1 ? 'Activated' : 'Deactivated',
+                ];
+                return $this->response('success', $response);
+            } else {
+                $response = [
+                    'message' => 'Status not changed !!',
+                ];
+                return $this->response('exception', $response);
+            }
+        } catch (\Exception $e) {
+            $response = [
+                'message' => $e->getMessage(),
+            ];
+            return $this->response('exception', $response);
+        }
+    }
+
+    public function photoCategory()
+    {
+        try {
+            $categories = DB::table('mst_photos_category')->select('id', 'category')->get();
+            if (!empty($categories)) {
+                $response = [
+                    'message'   => 'Category fetched !!',
+                    'data'      =>  $categories
+                ];
+                return $this->response('success', $response);
+            } else {
+                $response = [
+                    'message' => 'Not found category !!',
+                ];
+                return $this->response('exception', $response);
+            }
+        } catch (\Exception $e) {
+            $response = [
+                'message' => $e->getMessage(),
+            ];
             return $this->response('exception', $response);
         }
     }
