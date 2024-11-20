@@ -290,7 +290,8 @@
                                             </li>
                                             <li><a class="dropdown-item"
                                                     href="{{ route('debut-director-films', ['slug' => 'debut-director-films']) }}">Official
-                                                    Selection - Debut Director Films</a></li>
+                                                    Selection - Debut Director Films</a>
+                                            </li>
                                             <li>
                                                 <a href="https://iffigoa.org/festival/indian-debut-director"
                                                     class="dropdown-item nav-link yelow-color-link"
@@ -360,6 +361,44 @@
                                                             Non-Feature
                                                         </a>
                                                     </li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('indian-panorama-2024', ['slug' => 'accessible-india-accessible-films']) }}">Accessible
+                                                            India, Accessible Films</a>
+                                                    </li>
+                                                    <li class="nav-item dropend">
+                                                        <a class="nav-link dropdown-toggle" href="#"
+                                                            role="button" data-bs-toggle="dropdown"
+                                                            aria-expanded="false">
+                                                            Special Presentation
+                                                        </a>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a class="dropdown-item"
+                                                                    href="{{ route('indian-panorama-2024', ['slug' => 'panorama-feature-jury-recommends']) }}">Panorama
+                                                                    Feature Jury Recommends</a>
+                                                            </li>
+                                                            <li><a class="dropdown-item"
+                                                                    href="{{ route('indian-panorama-2024', ['slug' => 'special-showcase']) }}">Special
+                                                                    Showcase</a>
+                                                            </li>
+                                                            <li><a class="dropdown-item"
+                                                                    href="{{ route('indian-panorama-2024', ['slug' => 'nfdc-showcase-premieres']) }}">NFDC
+                                                                    Showcase & Premieres</a>
+                                                            </li>
+                                                            <li><a class="dropdown-item"
+                                                                    href="{{ route('indian-panorama-2024', ['slug' => 'nfai-classics']) }}">NFAI
+                                                                    Classics</a>
+                                                            </li>
+                                                            <li><a class="dropdown-item"
+                                                                    href="{{ route('indian-panorama-2024', ['slug' => 'prasar-bharti-ott']) }}">Prasar
+                                                                    Bharti OTT</a>
+                                                            </li>
+                                                            <li><a class="dropdown-item"
+                                                                    href="{{ route('indian-panorama-2024', ['slug' => 'prasar-bharti-films']) }}">Prasar
+                                                                    Bharti Films</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+
                                                 </ul>
                                             </li>
 
@@ -540,6 +579,9 @@
                                         </a>
 
                                         <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item"
+                                                    href="{{ route('the-peacock', ['year' => 2024]) }}">2024</a>
+                                            </li>
                                             <li><a class="dropdown-item"
                                                     href="{{ route('the-peacock', ['year' => 2023]) }}">2023</a>
                                             </li>

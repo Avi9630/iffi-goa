@@ -84,7 +84,7 @@
                             class="img-fluid">
                     </li>
                     <li>
-                        <img src="{{ asset('public/images/master-class/Christian Jeune.jpg') }}" alt="image"
+                        <img src="{{ asset('public/images/master-class/Emma Profile Photo 2024.jpg') }}" alt="image"
                             class="img-fluid">
                     </li>
                 </ul>
