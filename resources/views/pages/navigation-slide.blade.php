@@ -554,10 +554,28 @@
                                             data-bs-toggle="dropdown" aria-expanded="false">Gallery
                                         </a>
                                         <ul class="dropdown-menu">
-                                            <li>
+                                            {{-- <li>
                                                 <a href="{{ route('gallery-2024', ['year' => '2024']) }}"
                                                     class="dropdown-item">
                                                     IFFI festival 2024</a>
+                                            </li> --}}
+
+                                            <li class="nav-item dropend">
+                                                <a class="nav-link dropdown-toggle" href="#" role="button"
+                                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                                    IFFI festival 2024
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li>
+                                                        <a class="dropdown-item"
+                                                            href="{{ route('gallery-2024', ['year' => '2024']) }}">Photos
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item"
+                                                            href="{{ route('gallery-2024/videos', ['year' => '2024']) }}">Videos</a>
+                                                    </li>
+                                                </ul>
                                             </li>
 
                                             <li>
