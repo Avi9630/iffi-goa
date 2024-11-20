@@ -65,7 +65,9 @@
                     </div>
                 </div>
                 <div class="col-md-12">
-                    <h2>Festivals: </h2>
+                    <h2>{{ isset($fetch_cinema_basic_details->festivals) && !empty($fetch_cinema_basic_details->festivals) ? 'Festivals' : '' }}
+                    </h2>
+                    {{-- <h2>Festivals: </h2> --}}
                     <p>
                         @isset($fetch_cinema_basic_details->festivals)
                             @if (substr($currentURL, -3) === '/en')
@@ -79,7 +81,9 @@
                         {{-- {!! $fetch_cinema_basic_details->festivals !!} --}}
                     </p>
                     <hr>
-                    <h2>Award: </h2>
+                    <h2> {{ isset($fetch_cinema_basic_details->award) && !empty($fetch_cinema_basic_details->award) ? 'Award' : '' }}
+                    </h2>
+                    {{-- <h2>Award: </h2> --}}
                     <p>
                         @isset($fetch_cinema_basic_details->award)
                             @if (substr($currentURL, -3) === '/en')
