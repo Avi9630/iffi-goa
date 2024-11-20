@@ -60,7 +60,7 @@
                     'Rekha Gupta',
                     'Satish Pandey',
                     'Saurabh Kanti Dutta',
-                    'Shivam Chabbra',
+                    'Shivam Chhabra',
                     'Sriprakash Menon',
                     'Sulakhyana Baruah',
                     'Supratim Bhol',

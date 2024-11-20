@@ -27,6 +27,8 @@ Route::controller(CommonController::class)->group(function () {
 
     Route::get('best-web-series/2024/{slug}', 'curetedsection2024')->name('best-web-series');
 
+    Route::get('indian-panorama/2024/{slug}', 'curetedsection2024')->name('indian-panorama-2024');
+
     Route::get('international-cinema/competition/{slug}', 'internationalCompetitionDetail')->name('international-competition-detail');
 
     Route::get('international-cinema/best-director/{slug}', 'bestDirectorDetail')->name('best-director-detail');
