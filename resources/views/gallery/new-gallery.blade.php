@@ -197,7 +197,7 @@
                                     alt="{{ $gall->image }}">
                             </a> --}}
                             <a href="{{ $gall->img_url }}" data-src="{{ $gall->img_url }}">
-                                <img src="{{ $gall->img_url }}" alt="{{ $gall->img_url }}">
+                                <img src="{{ $gall->img_url }}" alt="{{ $gall->img_caption }}">
                             </a>
                         </div>
                     @endforeach
