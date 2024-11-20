@@ -92,8 +92,11 @@
                         @endisset
                         {{-- {!! $fetch_cinema_basic_details->festivals !!} --}}
                     </p>
+
                     {{-- <hr> --}}
                     <h2> {{ isset($fetch_cinema_basic_details->award) && !empty($fetch_cinema_basic_details->award) ? 'Award : ' : '' }}
+
+
                     </h2>
                     {{-- <h2>Award: </h2> --}}
                     <p>
