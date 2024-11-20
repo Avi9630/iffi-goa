@@ -52,7 +52,7 @@ class ApiNewController extends Controller
                 $fileNameOriginal = $file->getClientOriginalName(); // Adding timestamp to prevent name collision
 
                 $extension = strtolower($request->file('img_src_file')->getClientOriginalExtension());
-                $modifiedName = (rand(100000, 999999)).'_'.time().'.'.$extension;
+                $modifiedName = (rand(100000, 999999)) . '_' . time() . '.' . $extension;
 
                 $file->move(public_path($destinationPath), $modifiedName);
                 $fileName = $modifiedName;
@@ -148,7 +148,7 @@ class ApiNewController extends Controller
                     $fileName = $file->getClientOriginalName();
                     $fileNameOriginal = $file->getClientOriginalName();
                     $extension = strtolower($request->file('img_src_file')->getClientOriginalExtension());
-                    $modifiedName = (rand(100000, 999999)).'_'.time().'.'.$extension;
+                    $modifiedName = (rand(100000, 999999)) . '_' . time() . '.' . $extension;
 
                     $file->move(public_path($destinationPath), $modifiedName);
                     $fileName = $modifiedName;
@@ -230,7 +230,7 @@ class ApiNewController extends Controller
         } catch (\Exception $e) {
             // Step 4: Handle any unexpected errors
             return $this->response('exception', [
-                'message' => 'An error occurred: '.$e->getMessage(),
+                'message' => 'An error occurred: ' . $e->getMessage(),
             ], 500); // 500 status for internal server error
         }
     }
@@ -302,7 +302,7 @@ class ApiNewController extends Controller
         } catch (\Exception $e) {
             // Handle any exceptions and return an error response
             $response = [
-                'message' => 'An error occurred: '.$e->getMessage(),
+                'message' => 'An error occurred: ' . $e->getMessage(),
             ];
 
             return $this->response('exception', $response);
@@ -343,7 +343,7 @@ class ApiNewController extends Controller
         } catch (\Exception $e) {
             // Step 6: Handle any unexpected errors
             return $this->response('exception', [
-                'message' => 'An error occurred: '.$e->getMessage(),
+                'message' => 'An error occurred: ' . $e->getMessage(),
             ], 500); // 500 status for internal server error
         }
     }
@@ -368,7 +368,7 @@ class ApiNewController extends Controller
         } catch (\Exception $e) {
             return response()->json([
                 'status' => 'error',
-                'message' => 'An error occurred: '.$e->getMessage(),
+                'message' => 'An error occurred: ' . $e->getMessage(),
             ], 500);
         }
     }
@@ -551,7 +551,7 @@ class ApiNewController extends Controller
                 $fileName = $file->getClientOriginalName();
                 $fullFilePath = public_path("{$destinationPath}/{$fileName}");
                 $extension = strtolower($request->file('img_src_file')->getClientOriginalExtension());
-                $modifiedName = (rand(100000, 999999)).'_'.time().'.'.$extension;
+                $modifiedName = (rand(100000, 999999)) . '_' . time() . '.' . $extension;
                 // Move file to the destination and set image path in data
                 $file->move(public_path($destinationPath), $modifiedName);
                 $data['image'] = "{$modifiedName}";
@@ -639,7 +639,7 @@ class ApiNewController extends Controller
                 $destinationPath = 'images/thePeacock';
                 $fileNameOriginal = $file->getClientOriginalName();
                 $extension = strtolower($file->getClientOriginalExtension());
-                $modifiedName = rand(100000, 999999).'_'.time().'.'.$extension;
+                $modifiedName = rand(100000, 999999) . '_' . time() . '.' . $extension;
                 $file->move(public_path($destinationPath), $modifiedName);
                 $fileName = $modifiedName;
             }
@@ -752,7 +752,7 @@ class ApiNewController extends Controller
                 $fileName = $file->getClientOriginalName();
                 $fullFilePath = public_path("{$destinationPath}/{$fileName}");
                 $extension = strtolower($request->file('img_src_file')->getClientOriginalExtension());
-                $modifiedName = (rand(100000, 999999)).'_'.time().'.'.$extension;
+                $modifiedName = (rand(100000, 999999)) . '_' . time() . '.' . $extension;
                 // Move file to the destination and set image path in data
                 $file->move(public_path($destinationPath), $modifiedName);
                 $data['img_src'] = "{$modifiedName}";
@@ -794,7 +794,7 @@ class ApiNewController extends Controller
 
             // Delete the image file if it exists
             if ($thePeacock->img_src) {
-                $filePath = public_path('images/gallery_images/'.$thePeacock->img_src);
+                $filePath = public_path('images/gallery_images/' . $thePeacock->img_src);
                 if (file_exists($filePath)) {
                     unlink($filePath);
                 }
@@ -842,7 +842,7 @@ class ApiNewController extends Controller
         } catch (\Exception $e) {
             // Step 4: Handle any unexpected errors
             return $this->response('exception', [
-                'message' => 'An error occurred: '.$e->getMessage(),
+                'message' => 'An error occurred: ' . $e->getMessage(),
             ], 500); // 500 status for internal server error
         }
     }
@@ -918,7 +918,7 @@ class ApiNewController extends Controller
         } catch (\Exception $e) {
             // Handle any exceptions and return an error response
             $response = [
-                'message' => 'An error occurred: '.$e->getMessage(),
+                'message' => 'An error occurred: ' . $e->getMessage(),
             ];
 
             return $this->response('exception', $response);
@@ -961,7 +961,7 @@ class ApiNewController extends Controller
         } catch (\Exception $e) {
             // Step 6: Handle any unexpected errors
             return $this->response('exception', [
-                'message' => 'An error occurred: '.$e->getMessage(),
+                'message' => 'An error occurred: ' . $e->getMessage(),
             ], 500); // 500 status for internal server error
         }
     }
@@ -986,7 +986,7 @@ class ApiNewController extends Controller
         } catch (\Exception $e) {
             return response()->json([
                 'status' => 'error',
-                'message' => 'An error occurred: '.$e->getMessage(),
+                'message' => 'An error occurred: ' . $e->getMessage(),
             ], 500);
         }
     }
@@ -1061,7 +1061,7 @@ class ApiNewController extends Controller
                     $destinationPath = 'images/cureted-section';
                     $fileNameOriginal = $file->getClientOriginalName();
                     $extension = strtolower($file->getClientOriginalExtension());
-                    $modifiedName = rand(100000, 999999).'_'.time().'.'.$extension;
+                    $modifiedName = rand(100000, 999999) . '_' . time() . '.' . $extension;
                     $file->move(public_path($destinationPath), $modifiedName);
                     $fileName = $modifiedName;
                 }
@@ -1180,7 +1180,7 @@ class ApiNewController extends Controller
                 $fileName = $file->getClientOriginalName();
                 $fullFilePath = public_path("{$destinationPath}/{$fileName}");
                 $extension = strtolower($request->file('img_src_file')->getClientOriginalExtension());
-                $modifiedName = (rand(100000, 999999)).'_'.time().'.'.$extension;
+                $modifiedName = (rand(100000, 999999)) . '_' . time() . '.' . $extension;
                 // Move file to the destination and set image path in data
                 $file->move(public_path($destinationPath), $modifiedName);
                 $data['img_src'] = "{$modifiedName}";
@@ -1384,7 +1384,7 @@ class ApiNewController extends Controller
                 $fileName = $file->getClientOriginalName();
                 $fullFilePath = public_path("{$destinationPath}/{$fileName}");
                 $extension = strtolower($request->file('img_src_file')->getClientOriginalExtension());
-                $modifiedName = (rand(100000, 999999)).'_'.time().'.'.$extension;
+                $modifiedName = (rand(100000, 999999)) . '_' . time() . '.' . $extension;
                 // Move file to the destination and set image path in data
                 $file->move(public_path($destinationPath), $modifiedName);
                 $data['image'] = "{$modifiedName}";
@@ -1464,7 +1464,7 @@ class ApiNewController extends Controller
                 foreach ($files as $file) {
                     $destinationPath = 'images/thePartnerSponsor';
                     $originalFilename = $file->getClientOriginalName();
-                    $fullFilePath = public_path($destinationPath.'/'.$originalFilename);
+                    $fullFilePath = public_path($destinationPath . '/' . $originalFilename);
                     if (File::exists($fullFilePath)) {
                         $response = [
                             'message' => "File {$originalFilename} already exists. Please upload a different image!",
@@ -1532,7 +1532,7 @@ class ApiNewController extends Controller
                     $file = $request->file('img_src');
                     $destinationPath = 'images/thePartnerSponsor';
                     $originalFilename = $file->getClientOriginalName();
-                    $fullFilePath = public_path($destinationPath.'/'.$originalFilename);
+                    $fullFilePath = public_path($destinationPath . '/' . $originalFilename);
 
                     if (File::exists($fullFilePath)) {
                         File::delete($fullFilePath);
@@ -1630,7 +1630,7 @@ class ApiNewController extends Controller
             $thePartnerSponsor = ThePartnerSponsor::find($id);
             if ($thePartnerSponsor) {
                 if ($thePartnerSponsor->img_src) {
-                    $filePath = public_path('images/thePartnerSponsor/'.$thePartnerSponsor->img_src);
+                    $filePath = public_path('images/thePartnerSponsor/' . $thePartnerSponsor->img_src);
                     if (file_exists($filePath)) {
                         unlink($filePath);
                     }
@@ -1781,7 +1781,7 @@ class ApiNewController extends Controller
                             'cast' => $cast,
                             'synopsis' => $synopsis,
                             'trailer_link' => $trailerLink,
-                            'other_details' => $runtime.' | '.$color.' | '.$country,
+                            'other_details' => $runtime . ' | ' . $color . ' | ' . $country,
                             'original_title' => $original_title,
                             'director_bio' => $director_bio,
                             'premiere' => $premiere,
@@ -1807,7 +1807,7 @@ class ApiNewController extends Controller
                         'cast' => $cast,
                         'synopsis' => $synopsis,
                         'trailer_link' => $trailerLink,
-                        'other_details' => $runtime.' | '.$color.' | '.$country,
+                        'other_details' => $runtime . ' | ' . $color . ' | ' . $country,
                         'original_title' => $original_title,
                         'director_bio' => $director_bio,
                         'premiere' => $premiere,
@@ -1864,8 +1864,8 @@ class ApiNewController extends Controller
                     $destinationPath = 'images/gallery-2024';
                     $originalFilename = $file->getClientOriginalName();
                     $extension = $file->getClientOriginalExtension();
-                    $hashedFilename = substr(md5($originalFilename.time()), 0, 20).'.'.$extension;
-                    $fullFilePath = public_path($destinationPath.'/'.$hashedFilename);
+                    $hashedFilename = substr(md5($originalFilename . time()), 0, 20) . '.' . $extension;
+                    $fullFilePath = public_path($destinationPath . '/' . $hashedFilename);
                     if (File::exists($fullFilePath)) {
                         $response = [
                             'message' => 'File with the same name already exists.',
