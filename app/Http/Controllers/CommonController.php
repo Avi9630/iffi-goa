@@ -82,6 +82,14 @@ class CommonController extends Controller
             'best-web-series' => 26,
             'international-jury-films' => 27,
             'special-presentations' => 28,
+            'goan-section' => 29,
+            'accessible-india-accessible-films' => 30,
+            'panorama-feature-jury-recommends' => 31,
+            'special-showcase' => 32,
+            'nfdc-showcase-premieres' => 33,
+            'nfai-classics' => 34,
+            'prasar-bharti-ott' => 35,
+            'prasar-bharti-films' => 36,
         ];
         //  echo '<pre>';
         // print_r($array);
@@ -113,6 +121,14 @@ class CommonController extends Controller
             26 => 'Official Selection - Best Web Series',
             27 => 'International Jury Films',
             28 => 'Special Presentations',
+            29 => 'Goan Section',
+            30 => 'Accessible India, Accessible Films',
+            31 => 'Panorama Feature Jury Recommends',
+            32 => 'Special Showcase',
+            33 => 'NFDC Showcase & Premieres',
+            34 => 'NFAI Classics',
+            35 => 'Prasar Bharti OTT',
+            36 => 'Prasar Bharti Films',
         ];
 
         $internationalCinemas = DB::table('international_cinema')
@@ -303,16 +319,17 @@ class CommonController extends Controller
 
     public function gallery(Request $request)
     {
-        $payload    =   $request->all();
-        $year       =   isset($payload['year']) ? $payload['year'] : NULL;
+        $payload = $request->all();
+        $year = isset($payload['year']) ? $payload['year'] : null;
         $gallery = DB::table('mst_photos')
             ->where('status', 1)
             ->where('year', $year)
-            ->where('category_id', NULL)
+            ->where('category_id', null)
             ->whereNull('deleted_at')
             ->orderBy('id', 'DESC')
             ->paginate(8)
             ->onEachSide(1);
+
         return view('gallery.gallery', [
             'gallery' => $gallery,
         ]);
@@ -349,9 +366,9 @@ class CommonController extends Controller
         //     'titles' => $titles,
         // ]);
 
-        $payload    =   $request->all();
-        $year       =   isset($payload['year']) ? $payload['year'] : NULL;
-        $categories =   DB::table('mst_photos_category')->select('id', 'category')->get();
+        $payload = $request->all();
+        $year = isset($payload['year']) ? $payload['year'] : null;
+        $categories = DB::table('mst_photos_category')->select('id', 'category')->get();
         // dd($categories);
         $gallery = DB::table('mst_photos')
             ->where('status', 1)
@@ -361,19 +378,20 @@ class CommonController extends Controller
             // ->whereNull('deleted_at')
             // ->orderBy('id', 'DESC')
             ->paginate(10);
+
         // ->onEachSide(1);
         // dd($gallery);
         return view('gallery.new-gallery', [
             'gallery' => $gallery,
-            'categories' => $categories
+            'categories' => $categories,
         ]);
     }
 
     public function galleryByCategory(Request $request)
     {
-        $payload    =   $request->all();
-        $category   =   !empty($payload['category_id']) ? $payload['category_id'] : '';
-        $date       =   !empty($payload['date']) ? $payload['date'] : '';
+        $payload = $request->all();
+        $category = ! empty($payload['category_id']) ? $payload['category_id'] : '';
+        $date = ! empty($payload['date']) ? $payload['date'] : '';
 
         // $fromDate   =   !empty($payload['from_date']) ? $payload['from_date'] : '';
         // $toDate     =   !empty($payload['to_date']) ? $payload['to_date'] : '';
@@ -395,7 +413,7 @@ class CommonController extends Controller
         //         ->whereDate('created_at', '<=', $todayDate);
         // }
 
-        if (!empty($date)) {
+        if (! empty($date)) {
             $query->whereDate('created_at', $date);
         }
 
@@ -445,10 +463,11 @@ class CommonController extends Controller
         $gallery = $query->paginate(10);
 
         $categories = DB::table('mst_photos_category')->select('id', 'category')->get();
+
         return view('gallery.new-gallery', [
-            'gallery'     =>  $gallery,
-            'categories'  =>  $categories,
-            'payload'     =>  $payload,
+            'gallery' => $gallery,
+            'categories' => $categories,
+            'payload' => $payload,
         ]);
     }
 
