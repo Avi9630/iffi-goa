@@ -1786,7 +1786,7 @@ class ApiNewController extends Controller
                             'director_bio' => $director_bio,
                             'premiere' => $premiere,
                             'award' => $award,
-                            'festival_history' => $festival_history,
+                            'festivals' => $festival_history,
                             'link_trailer' => $link_trailer,
                             'tags' => $tags,
                             'sales_agent' => $sales,
