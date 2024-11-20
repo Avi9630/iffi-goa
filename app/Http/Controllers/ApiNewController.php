@@ -1657,9 +1657,174 @@ class ApiNewController extends Controller
         }
     }
 
+    // public function readCSV()
+    // {
+    //     $csvFile = public_path('images/csv-new-adi.csv');
+
+    //     // Open the file in read mode
+    //     if (($handle = fopen($csvFile, 'r')) !== false) {
+    //         // Read and process each line
+    //         $header = null;
+    //         while (($row = fgetcsv($handle)) !== false) {
+    //             if (! $header) {
+    //                 $header = $row; // Read the header row
+
+    //                 continue;
+    //             }
+
+    //             // Map CSV columns to variables
+    //             $section = $row[0];
+    //             $title = $row[1];
+    //             $country = $row[3]; // This could be a problem; you may want to rename the second $country usage
+    //             $productionYear = $row[4];
+    //             $language = $row[5];
+    //             $director = $row[8];
+    //             $awardYear = $row[29];
+    //             $international_curated = \DB::table('international_curated_sections')
+    //                 ->where('title', $section)
+    //                 ->first();
+    //             if (! $international_curated) {
+    //                 continue;
+    //             }
+
+    //             // Insert or update `international_cinema`
+    //             $cinemas = \DB::table('international_cinema')
+    //                 ->where('title', $title)
+    //                 ->get(); // Fetch all matching records
+    //             $cinema_ids = [];
+
+    //             if ($cinemas->isNotEmpty()) {
+    //                 foreach ($cinemas as $cinema) {
+    //                     $cinema_ids[] = $cinema->id; // Corrected push with array syntax
+    //                     // Update existing cinema
+    //                     \DB::table('international_cinema')
+    //                         ->where('id', $cinema->id)
+    //                         ->update([
+    //                             'language' => $language,
+    //                             'country_of_origin' => $country,
+    //                             'year' => $productionYear,
+    //                             'award_year' => $awardYear,
+    //                             'directed_by' => $director,
+    //                             'updated_at' => now(),
+    //                             'status' => 1,
+    //                             'slug' => $cinema->slug ?: str_replace(' ', '-', $title),
+    //                         ]);
+    //                 }
+    //             } else {
+    //                 // Create new cinema
+    //                 $cinemaId = \DB::table('international_cinema')->insertGetId([
+    //                     'curated_section_id' => $international_curated->id,
+    //                     'slug' => str_replace(' ', '-', $title),
+    //                     'title' => $title,
+    //                     'directed_by' => $director,
+    //                     'language' => $language,
+    //                     'country_of_origin' => $country,
+    //                     'year' => $productionYear,
+    //                     'award_year' => $awardYear,
+    //                     'created_at' => now(),
+    //                     'updated_at' => now(),
+    //                     'status' => 1,
+    //                 ]);
+
+    //                 $cinema_ids[] = $cinemaId; // Add the new cinema's ID to the array
+    //             }
+
+    //             // Extract data for `international_cinema_basic_details`
+    //             $producer = $row[10];
+    //             $screenplay = $row[11];
+    //             $dop = $row[12];
+    //             $editor = $row[13];
+    //             $cast = $row[14];
+    //             $synopsis = $row[15];
+    //             $trailerLink = $row[19];
+    //             $director_bio = $row[9];
+    //             $runtime = $row[6];
+    //             $color = $row[7];
+    //             $original_title = $row[2];
+    //             $premiere = $row[16];
+    //             $award = $row[17];
+    //             $festival_history = $row[18];
+    //             $link_trailer = $row[19];
+    //             $tags = $row[20];
+    //             $sales = $row[21];
+    //             $instagram = $row[26];
+    //             $twitter = $row[27];
+    //             $facebook = $row[28];
+
+    //             // Insert or update `international_cinema_basic_details`
+    //             foreach ($cinema_ids as $cinema_id) {
+    //                 $basicDetails = \DB::table('international_cinema_basic_details')
+    //                     ->where('cinema_id', $cinema_id)
+    //                     ->first();
+
+    //                 if ($basicDetails) {
+    //                     // Update existing basic details
+    //                     \DB::table('international_cinema_basic_details')
+    //                         ->where('id', $basicDetails->id)
+    //                         ->update([
+    //                             'director' => $director,
+    //                             'producer' => $producer,
+    //                             'screenplay' => $screenplay,
+    //                             'dop' => $dop,
+    //                             'editor' => $editor,
+    //                             'cast' => $cast,
+    //                             'synopsis' => $synopsis,
+    //                             'trailer_link' => $trailerLink,
+    //                             'other_details' => $runtime.' | '.$color.' | '.$country,
+    //                             'original_title' => $original_title,
+    //                             'director_bio' => $director_bio,
+    //                             'premiere' => $premiere,
+    //                             'award' => $award,
+    //                             'festivals' => $festival_history,
+    //                             'link_trailer' => $link_trailer,
+    //                             'tags' => $tags,
+    //                             'sales_agent' => $sales,
+    //                             'instagram' => $instagram,
+    //                             'twitter' => $twitter,
+    //                             'facebook' => $facebook,
+    //                             'updated_at' => now(),
+    //                         ]);
+    //                 } else {
+    //                     // Create new basic details
+    //                     \DB::table('international_cinema_basic_details')->insert([
+    //                         'cinema_id' => $cinema_id,
+    //                         'director' => $director,
+    //                         'producer' => $producer,
+    //                         'screenplay' => $screenplay,
+    //                         'dop' => $dop,
+    //                         'editor' => $editor,
+    //                         'cast' => $cast,
+    //                         'synopsis' => $synopsis,
+    //                         'trailer_link' => $trailerLink,
+    //                         'other_details' => $runtime.' | '.$color.' | '.$country,
+    //                         'original_title' => $original_title,
+    //                         'director_bio' => $director_bio,
+    //                         'premiere' => $premiere,
+    //                         'award' => $award,
+    //                         'festival_history' => $festival_history,
+    //                         'link_trailer' => $link_trailer,
+    //                         'tags' => $tags,
+    //                         'sales_agent' => $sales,
+    //                         'instagram' => $instagram,
+    //                         'twitter' => $twitter,
+    //                         'facebook' => $facebook,
+    //                         'updated_at' => now(),
+    //                         'created_at' => now(),
+    //                     ]);
+    //                 }
+    //             }
+    //         }
+    //         exit('Data Done');
+    //         // Close the file
+    //         fclose($handle);
+    //     } else {
+    //         echo 'Error: Could not open the file.';
+    //     }
+    // }
+
     public function readCSV()
     {
-        $csvFile = public_path('images/csv-read.csv');
+        $csvFile = public_path('images/csv-new-adi.csv');
 
         // Open the file in read mode
         if (($handle = fopen($csvFile, 'r')) !== false) {
@@ -1673,73 +1838,68 @@ class ApiNewController extends Controller
                 }
 
                 // Map CSV columns to variables
-                $data = array_combine($header, $row);
-                // echo '<pre>';
-                // print_r($data);
-                //exit();
-                // Extract data for `international_cinema`
-                $title = $row[1];
                 $section = $row[0];
-                $language = $row[5];
+                $title = $row[1];
                 $country = $row[3];
                 $productionYear = $row[4];
+                $language = $row[5];
                 $director = $row[8];
                 $awardYear = $row[29];
+
+                // Get the curated section
                 $international_curated = \DB::table('international_curated_sections')
                     ->where('title', $section)
                     ->first();
                 if (! $international_curated) {
-                    continue;
+                    continue; // Skip if no curated section found
                 }
-                // Insert or update `international_cinema`
-                $cinema = \DB::table('international_cinema')
-                    ->where('title', $title)
-                    ->first();
 
-                if ($cinema) {
-                    // Update existing cinema
-                    \DB::table('international_cinema')
-                        ->where('id', $cinema->id)
-                        ->update([
-                            // 'section' => $international_curated->id,
-                            'language' => $language,
-                            'country_of_origin' => $country,
-                            'year' => $productionYear,
-                            'award_year' => $awardYear,
-                            'directed_by' => $director,
-                            'updated_at' => now(),
-                            'status' => 1,
-                        ]);
-                    if (! $cinema->slug) {
+                // Insert or update `international_cinema` for each record
+                $cinema_ids = [];
+
+                // Insert each record based on title and section
+                $cinemas = \DB::table('international_cinema')
+                    ->where('title', $title)
+                    ->where('curated_section_id', $international_curated->id) // Ensure title is stored under the correct section
+                    ->get();
+
+                if ($cinemas->isNotEmpty()) {
+                    foreach ($cinemas as $cinema) {
+                        // Update existing cinema under the same section
                         \DB::table('international_cinema')
                             ->where('id', $cinema->id)
                             ->update([
-                                'slug' => str_replace(' ', '-', $title),
+                                'language' => $language,
+                                'country_of_origin' => $country,
+                                'year' => $productionYear,
+                                'award_year' => $awardYear,
+                                'directed_by' => $director,
+                                'updated_at' => now(),
+                                'status' => 1,
+                                'slug' => $cinema->slug ?: str_replace(' ', '-', $title),
                             ]);
+                        $cinema_ids[] = $cinema->id; // Store the updated cinema id
                     }
                 } else {
-                    // Create new cinema
+                    // Create a new cinema if not exists
                     $cinemaId = \DB::table('international_cinema')->insertGetId([
                         'curated_section_id' => $international_curated->id,
                         'slug' => str_replace(' ', '-', $title),
                         'title' => $title,
                         'directed_by' => $director,
-                        // 'section' => $section,
                         'language' => $language,
                         'country_of_origin' => $country,
                         'year' => $productionYear,
                         'award_year' => $awardYear,
-                        //'image' => $title . ".jpg",
                         'created_at' => now(),
                         'updated_at' => now(),
                         'status' => 1,
                     ]);
 
-                    $cinema = (object) ['id' => $cinemaId];
+                    $cinema_ids[] = $cinemaId; // Add new cinema id to array
                 }
 
-                // Extract data for `international_cinema_basic_details`
-
+                // Extract additional details for `international_cinema_basic_details`
                 $producer = $row[10];
                 $screenplay = $row[11];
                 $dop = $row[12];
@@ -1750,10 +1910,8 @@ class ApiNewController extends Controller
                 $director_bio = $row[9];
                 $runtime = $row[6];
                 $color = $row[7];
-                $country = $row[11];
                 $original_title = $row[2];
                 $premiere = $row[16];
-
                 $award = $row[17];
                 $festival_history = $row[18];
                 $link_trailer = $row[19];
@@ -1762,17 +1920,44 @@ class ApiNewController extends Controller
                 $instagram = $row[26];
                 $twitter = $row[27];
                 $facebook = $row[28];
+
                 // Insert or update `international_cinema_basic_details`
-                $basicDetails = \DB::table('international_cinema_basic_details')
-                    ->where('cinema_id', $cinema->id)
-                    ->first();
+                foreach ($cinema_ids as $cinema_id) {
+                    $basicDetails = \DB::table('international_cinema_basic_details')
+                        ->where('cinema_id', $cinema_id)
+                        ->first();
 
-                if ($basicDetails) {
-                    // Update existing basic details
-                    \DB::table('international_cinema_basic_details')
-                        ->where('id', $basicDetails->id)
-                        ->update([
-
+                    if ($basicDetails) {
+                        // Update existing basic details
+                        \DB::table('international_cinema_basic_details')
+                            ->where('id', $basicDetails->id)
+                            ->update([
+                                'director' => $director,
+                                'producer' => $producer,
+                                'screenplay' => $screenplay,
+                                'dop' => $dop,
+                                'editor' => $editor,
+                                'cast' => $cast,
+                                'synopsis' => $synopsis,
+                                'trailer_link' => $trailerLink,
+                                'other_details' => $runtime . ' | ' . $color . ' | ' . $country,
+                                'original_title' => $original_title,
+                                'director_bio' => $director_bio,
+                                'premiere' => $premiere,
+                                'award' => $award,
+                                'festivals' => $festival_history,
+                                'link_trailer' => $link_trailer,
+                                'tags' => $tags,
+                                'sales_agent' => $sales,
+                                'instagram' => $instagram,
+                                'twitter' => $twitter,
+                                'facebook' => $facebook,
+                                'updated_at' => now(),
+                            ]);
+                    } else {
+                        // Create new basic details for each cinema
+                        \DB::table('international_cinema_basic_details')->insert([
+                            'cinema_id' => $cinema_id,
                             'director' => $director,
                             'producer' => $producer,
                             'screenplay' => $screenplay,
@@ -1786,48 +1971,18 @@ class ApiNewController extends Controller
                             'director_bio' => $director_bio,
                             'premiere' => $premiere,
                             'award' => $award,
-                            'festivals' => $festival_history,
+                            'festival_history' => $festival_history,
                             'link_trailer' => $link_trailer,
                             'tags' => $tags,
                             'sales_agent' => $sales,
                             'instagram' => $instagram,
                             'twitter' => $twitter,
                             'facebook' => $facebook,
+                            'created_at' => now(),
                             'updated_at' => now(),
                         ]);
-                } else {
-                    // Create new basic details
-                    \DB::table('international_cinema_basic_details')->insert([
-                        'cinema_id' => $cinema->id,
-                        'director' => $director,
-                        'producer' => $producer,
-                        'screenplay' => $screenplay,
-                        'dop' => $dop,
-                        'editor' => $editor,
-                        'cast' => $cast,
-                        'synopsis' => $synopsis,
-                        'trailer_link' => $trailerLink,
-                        'other_details' => $runtime . ' | ' . $color . ' | ' . $country,
-                        'original_title' => $original_title,
-                        'director_bio' => $director_bio,
-                        'premiere' => $premiere,
-                        'award' => $award,
-                        'festival_history' => $festival_history,
-                        'link_trailer' => $link_trailer,
-                        'tags' => $tags,
-                        'sales_agent' => $sales,
-                        'instagram' => $instagram,
-                        'twitter' => $twitter,
-                        'facebook' => $facebook,
-                        'updated_at' => now(),
-                        'created_at' => now(),
-                    ]);
+                    }
                 }
-                // print_r($title);
-                //   exit('Data Done');
-                // echo '<pre>';
-                // print_r($data);
-                // exit();
             }
             exit('Data Done');
             // Close the file
