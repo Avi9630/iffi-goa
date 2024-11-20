@@ -387,6 +387,23 @@ class CommonController extends Controller
         ]);
     }
 
+    public function galleryVideos2024(Request $request)
+    {
+        $payload = $request->all();
+
+        $year = isset($payload['year']) ? $payload['year'] : null;
+        $categories = DB::table('mst_photos_category')->select('id', 'category')->get();
+        $gallery = DB::table('mst_photos')
+            ->where('status', 1)
+            ->where('year', $year)
+            ->where('video_url', '!=', '')
+            ->paginate(10);
+        return view('gallery.new-gallery-videos', [
+            'gallery' => $gallery,
+            'categories' => $categories,
+        ]);
+    }
+
     public function galleryByCategory(Request $request)
     {
         $payload = $request->all();
