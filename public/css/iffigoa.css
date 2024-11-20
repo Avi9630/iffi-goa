@@ -1680,3 +1680,65 @@ footer a:hover {
         font-size: 20px !important;
     }
 }
+
+    
+    .master-time .time-div{ font-size:16px!important; }
+     .callout h4{ font-size:20px!important; }
+     .tab-pane .pb-3 { font-size:20px!important; }
+
+
+
+/* Calender css */
+
+#categoryField input[type='radio'] {
+    visibility: hidden !important;
+    width: 1px;
+ }
+
+ .calander {
+    background: url(../images/calander-icon.png) left top no-repeat;
+    width: 76px;
+    height: 88px;
+    text-align: center;
+    margin: 5px;
+    font-weight: bold;
+    cursor: pointer;
+ }
+
+ #categoryField .active {
+    background: url(../images/calander-icon-active.png) left top no-repeat;
+    width: 76px;
+    height: 88px;
+    text-align: center;
+    margin: 5px
+ }
+
+ .calander-text {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 76px;
+ }
+
+ .calander-text .white-text {
+    color: #fff;
+    margin-bottom: 5px;
+ }
+
+ .custom-calander-group {
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+ }
+
+ @media only screen and (min-width: 320px) and (max-width: 900px) {
+    .custom-calander-group {
+       overflow: auto;
+       column-gap: 10px;
+    }
+
+    .forms-sample .form-group {
+       margin-bottom: 15px !important;
+    }
+
+ }
