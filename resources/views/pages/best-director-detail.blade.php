@@ -97,7 +97,9 @@
                         {{-- {{ $fetch_cinema_basic_details->award }} --}}
                     </p>
                     <hr>
-                    <h2>Synopsis: </h2>
+                    <h2> {{ isset($fetch_cinema_basic_details->synopsis) && !empty($fetch_cinema_basic_details->synopsis) ? 'Synopsis : ' : '' }}
+                    </h2>
+                    {{-- <h2>Synopsis: </h2> --}}
                     <p>
                         @isset($fetch_cinema_basic_details->synopsis)
                             @if (substr($currentURL, -3) === '/en')
@@ -111,7 +113,9 @@
                         {{-- {{ $fetch_cinema_basic_details->synopsis }} --}}
                     </p>
                     <hr>
-                    <h2>Directors Bio: </h2>
+                    <h2> {{ isset($fetch_cinema_basic_details->director_bio) && !empty($fetch_cinema_basic_details->director_bio) ? 'Directors Bio : ' : '' }}
+                    </h2>
+                    {{-- <h2>Directors Bio: </h2> --}}
                     <p>
                         @isset($fetch_cinema_basic_details->director_bio)
                             @if (substr($currentURL, -3) === '/en')
@@ -125,7 +129,9 @@
                         {{-- {{ $fetch_cinema_basic_details->director_bio }} --}}
                     </p>
                     <hr>
-                    <h2>Sales Agent: </h2>
+                    <h2> {{ isset($fetch_cinema_basic_details->sales_agent) && !empty($fetch_cinema_basic_details->sales_agent) ? 'Sales : ' : '' }}
+                    </h2>
+                    {{-- <h2>Sales: </h2> --}}
                     <p>{!! $fetch_cinema_basic_details->sales_agent !!}</p>
                     {{-- <p>True Colours</p> --}}
                     {{-- <p>{!! $fetch_cinema_basic_details->drama !!} | Adaptation | Political | Period Drama<br>
