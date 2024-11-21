@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\MasterClass;
 use App\Models\NewsUpdate;
+use App\Models\Photo;
+use App\Models\PhotoCategory;
 use DB;
 use Illuminate\Http\Request;
 
@@ -337,53 +339,105 @@ class CommonController extends Controller
 
     public function gallery2024(Request $request)
     {
-        // Retrieve all active gallery photos
-        // $gallery = DB::table('mst_gallery_2024')
-        //     ->where('status', 1)
-        //     ->orderBy('id', 'DESC')
-        //     ->get();
-        // $dates = DB::table('mst_gallery_2024')
-        //     ->select(DB::raw("DATE_FORMAT(date, '%b %d') as date_alias"), 'date')
-        //     ->where('status', 1)
-        //     ->distinct()
-        //     ->orderBy('date', 'asc')
-        //     ->get();
-
-        // $categories = DB::table('mst_gallery_2024')
-        //     ->where('status', 1)
-        //     ->distinct()
-        //     ->pluck('category');
-
-        // $titles = DB::table('mst_gallery_2024')
-        //     ->where('status', 1)
-        //     ->distinct()
-        //     ->pluck('title');
-
-        // return view('gallery.new-gallery', [
-        //     'gallery' => $gallery,
-        //     'dates' => $dates,
-        //     'categories' => $categories,
-        //     'titles' => $titles,
-        // ]);
-
-        $payload = $request->all();
-        $year = isset($payload['year']) ? $payload['year'] : null;
-        $categories = DB::table('mst_photos_category')->select('id', 'category')->get();
-        // dd($categories);
-        $gallery = DB::table('mst_photos')
-            ->where('status', 1)
+        $payload    =   $request->all();
+        $year       =   isset($payload['year']) ? $payload['year'] : null;
+        $categories =   PhotoCategory::select('id', 'category')->get();
+        $gallery = Photo::where('status', 1)
             ->where('year', $year)
             ->where('img_url', '!=', '')
-            // ->where('category_id', '!=', NULL)
-            // ->whereNull('deleted_at')
-            // ->orderBy('id', 'DESC')
+            ->whereNotNull('category_id')
+            ->orderBy('id', 'DESC')
             ->paginate(10);
-
-        // ->onEachSide(1);
-        // dd($gallery);
         return view('gallery.new-gallery', [
-            'gallery' => $gallery,
-            'categories' => $categories,
+            'gallery'       =>  $gallery,
+            'categories'    =>  $categories,
+        ]);
+    }
+
+    public function galleryByCategory(Request $request)
+    {
+        $payload    =   $request->all();
+        $category   =   !empty($payload['category_id']) ? $payload['category_id'] : '';
+        $date       =   ! empty($payload['date']) ? $payload['date'] : '';
+        // $query      =   DB::table('mst_photos');
+        // $query->where('status', '1');
+        // $query->where('year', '2024');
+        // $query->where('img_url', '!=', '');
+        // if (! empty($date)) {
+        //     $query->whereDate('created_at', $date);
+        // }
+        // switch ($category) {
+        //     case '1':
+        //         $query->where('category_id', $category);
+        //         break;
+        //     case '2':
+        //         $query->where('category_id', $category);
+        //         break;
+        //     case '3':
+        //         $query->where('category_id', $category);
+        //         break;
+        //     case '4':
+        //         $query->where('category_id', $category);
+        //         break;
+        //     case '5':
+        //         $query->where('category_id', $category);
+        //         break;
+        //     case '6':
+        //         $query->where('category_id', $category);
+        //         break;
+        //     case '7':
+        //         $query->where('category_id', $category);
+        //         break;
+        //     case '8':
+        //         $query->where('category_id', $category);
+        //         break;
+        //     case '9':
+        //         $query->where('category_id', $category);
+        //         break;
+        //     case '10':
+        //         $query->where('category_id', $category);
+        //         break;
+        //     case '11':
+        //         $query->where('category_id', $category);
+        //         break;
+
+        //     default:
+        //         break;
+        // }
+        // $filteredData   =   $query->get();
+        // $count          =   $query->count();
+        // $gallery        =   $query->paginate(12);
+
+        $query = Photo::where('status', '1')
+            ->where('year', '2024')
+            ->where('img_url', '!=', '');
+        if (!empty($date)) {
+            $query->whereDate('created_at', $date);
+        }
+        switch ($category) {
+            case '1':
+            case '2':
+            case '3':
+            case '4':
+            case '5':
+            case '6':
+            case '7':
+            case '8':
+            case '9':
+            case '10':
+            case '11':
+                $query->where('category_id', $category);
+                break;
+            default:
+                break;
+        }
+        $gallery = $query->paginate(12);
+
+        $categories     =   PhotoCategory::select('id', 'category')->get();
+        return view('gallery.new-gallery', [
+            'gallery'       =>  $gallery,
+            'categories'    =>  $categories,
+            'payload'       =>  $payload,
         ]);
     }
 
@@ -401,90 +455,6 @@ class CommonController extends Controller
         return view('gallery.new-gallery-videos', [
             'gallery' => $gallery,
             'categories' => $categories,
-        ]);
-    }
-
-    public function galleryByCategory(Request $request)
-    {
-        $payload = $request->all();
-        $category = ! empty($payload['category_id']) ? $payload['category_id'] : '';
-        $date = ! empty($payload['date']) ? $payload['date'] : '';
-
-        // $fromDate   =   !empty($payload['from_date']) ? $payload['from_date'] : '';
-        // $toDate     =   !empty($payload['to_date']) ? $payload['to_date'] : '';
-        $query = DB::table('mst_photos');
-        $query->where('status', '1');
-        $query->where('year', '2024');
-        $query->where('img_url', '!=', '');
-
-        // if (!empty($fromDate) && !empty($toDate)) {
-        //     $query->whereDate('created_at', '>=', $fromDate)
-        //         ->whereDate('created_at', '<=', $toDate);
-        // } elseif (empty($fromDate) && !empty($toDate)) {
-        //     $todayDate = date('Y-m-d');
-        //     $query->whereDate('created_at', '>=', $todayDate)
-        //         ->whereDate('created_at', '<=', $toDate);
-        // } elseif (!empty($fromDate) && empty($toDate)) {
-        //     $todayDate = date('Y-m-d');
-        //     $query->whereDate('created_at', '>=', $fromDate)
-        //         ->whereDate('created_at', '<=', $todayDate);
-        // }
-
-        if (! empty($date)) {
-            $query->whereDate('created_at', $date);
-        }
-
-        switch ($category) {
-            case '1':
-                $query->where('category_id', $category);
-                break;
-            case '2':
-                $query->where('category_id', $category);
-                break;
-            case '3':
-                $query->where('category_id', $category);
-                break;
-            case '4':
-                $query->where('category_id', $category);
-                break;
-            case '5':
-                $query->where('category_id', $category);
-                break;
-            case '6':
-                $query->where('category_id', $category);
-                break;
-            case '7':
-                $query->where('category_id', $category);
-                break;
-            case '8':
-                $query->where('category_id', $category);
-                break;
-            case '9':
-                $query->where('category_id', $category);
-                break;
-            case '10':
-                $query->where('category_id', $category);
-                break;
-            case '11':
-                $query->where('category_id', $category);
-                break;
-
-            default:
-                break;
-        }
-        // Final query result
-        $filteredData = $query->get();
-        // $filteredData = $query->toSql();
-        // dd($filteredData);
-        $count = $query->count();
-        $gallery = $query->paginate(10);
-
-        $categories = DB::table('mst_photos_category')->select('id', 'category')->get();
-
-        return view('gallery.new-gallery', [
-            'gallery' => $gallery,
-            'categories' => $categories,
-            'payload' => $payload,
         ]);
     }
 
