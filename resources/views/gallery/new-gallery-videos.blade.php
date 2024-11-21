@@ -139,9 +139,9 @@
                         </thead>
                         <tbody>
                             @if (count($gallery) > 0)
-                                @foreach ($gallery as $gall)
+                                @foreach ($gallery as $key => $gall)
                                     <tr>
-                                        <th scope="row">1</th>
+                                        <th scope="row">{{ $key + 1 }}</th>
                                         <td>{{ $gall->img_caption }}</td>
                                         <td>
                                             <a href="{{ $gall->video_url }}">{{ $gall->video_url }}</a>
