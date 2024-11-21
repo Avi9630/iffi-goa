@@ -5,9 +5,10 @@ namespace App\Http\Controllers\api;
 use App\Http\Controllers\Controller;
 use App\Http\Traits\RESPONSETrait;
 use App\Models\Photo;
-use DB;
+use App\Models\PhotoCategory;
 use Google\Cloud\Storage\StorageClient;
 use GuzzleHttp\Client;
+use Illuminate\Http\Request;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Validator;
@@ -335,7 +336,7 @@ class GalleryController extends Controller
     public function photoCategory()
     {
         try {
-            $categories = DB::table('mst_photos_category')->select('id', 'category')->get();
+            $categories = PhotoCategory::select('id', 'category')->get();
             if (! empty($categories)) {
                 $response = [
                     'message' => 'Category fetched !!',
@@ -358,5 +359,31 @@ class GalleryController extends Controller
             return $this->response('exception', $response);
         }
     }
+
+    public function deleteGalleryPhoto($id)
+    {
+        try {
+            $getPhoto = Photo::find($id);
+            if ($getPhoto) {
+                $getPhoto->delete();
+                $response = [
+                    'message' => 'Deleted successfully',
+                ];
+
+                return $this->response('exception', $response);
+            } else {
+                $response = [
+                    'message' => 'Nothing to updated !!',
+                ];
+
+                return $this->response('exception', $response);
+            }
+        } catch (\Exception $e) {
+            $response = [
+                'message' => $e->getMessage(),
+            ];
+
+            return $this->response('exception', $response);
+        }
+    }
 }
-//
