@@ -185,8 +185,8 @@
                         <div class="row">
                             <div class="col-md-2 col-3">
                                 <div class="master-time">
-                                    <h4 class="time-div">12:00 PM</h4>
-                                    <h5 class="time-div">12:30 PM</h5>
+                                    <h4 class="time-div">11:45 PM</h4>
+                                    <h5 class="time-div">12:45 PM</h5>
                                 </div>
                             </div>
                             <div class="col-md-10 col-9">
@@ -384,24 +384,24 @@
                         </div>
                     </div>
                     <!--    <div class="mt-4 mb-4">
-                                                         <div class="row">
-                                                            <div class="col-md-2 col-3">
-                                                               <div class="master-time">
-                                                                  <h4 class="time-div">16:30 PM</h4>
-                                                                  <h5 class="time-div">17:30 PM</h5>
-                                                               </div>
-                                                            </div>
-                                                            <div class="col-md-10 col-9">
-                                                               <div class="callout">
-                                                                  <h4 class="title-tab" id="nov21-0-trigger">
-                                                          ll
-                                                                  </h4>
-                                                                
-                                                               </div>
-                                                            </div>
-                                                           
-                                                         </div>
-                                                         </div> -->
+                                                                         <div class="row">
+                                                                            <div class="col-md-2 col-3">
+                                                                               <div class="master-time">
+                                                                                  <h4 class="time-div">16:30 PM</h4>
+                                                                                  <h5 class="time-div">17:30 PM</h5>
+                                                                               </div>
+                                                                            </div>
+                                                                            <div class="col-md-10 col-9">
+                                                                               <div class="callout">
+                                                                                  <h4 class="title-tab" id="nov21-0-trigger">
+                                                                          ll
+                                                                                  </h4>
+                                                                                
+                                                                               </div>
+                                                                            </div>
+                                                                           
+                                                                         </div>
+                                                                         </div> -->
                 </div>
             </div>
         </div>
