@@ -27,6 +27,8 @@ Route::controller(CommonController::class)->group(function () {
 
     Route::get('best-web-series/2024/{slug}', 'curetedsection2024')->name('best-web-series');
 
+    Route::get('indian-panorama/2024/{slug}', 'curetedsection2024')->name('indian-panorama-2024');
+
     Route::get('international-cinema/competition/{slug}', 'internationalCompetitionDetail')->name('international-competition-detail');
 
     Route::get('international-cinema/best-director/{slug}', 'bestDirectorDetail')->name('best-director-detail');
@@ -42,6 +44,8 @@ Route::controller(CommonController::class)->group(function () {
     Route::get('media/gallery', 'gallery')->name('gallery');
 
     Route::get('media/gallery-2024', 'gallery2024')->name('gallery-2024');
+
+    Route::get('media/gallery-2024/videos', 'galleryVideos2024')->name('gallery-2024/videos');
 
     Route::get('search-gallery-by-cat', 'galleryByCategory')->name('search-gallery-by-cat');
 
@@ -86,7 +90,9 @@ Route::controller(InternationalCinemaController::class)->group(function () {
 //Indian Panorama
 Route::controller(IndianPanoramaController::class)->group(function () {
     Route::get('indian-panorama/official-selection-feature', 'officialFeature')->name('official-selection-feature');
+
     Route::get('indian-panorama/official-selection-non-feature', 'officialNonFeature')->name('official-selection-non-feature');
+
     Route::get('indian-panorama/accessible-film', 'accessibleFilm')->name('accessible-film');
 });
 
@@ -96,6 +102,14 @@ Route::get('get-all-ticker', [TickerController::class,   'getAllTicker'])->name(
 Route::get('about-iffi', function () {
     return view('about-us.about-iffi');
 })->name('about-iffi');
+
+Route::get('iffi-accessibility', function () {
+    return view('about-us.Accessible-IFFI');
+})->name('iffi-accessibility');
+
+Route::get('filmbazaar-mariott-programme', function () {
+    return view('Film-Bazaar.filmbazaar-marriott');
+})->name('filmbazaar-mariott-programme');
 
 Route::get('festival-venue', function () {
     return view('about-us.festival-venue');
@@ -200,6 +214,14 @@ Route::get('debut-director-jury', function () {
 Route::get('web-series-jury', function () {
     return view('web-series.web-series-jury');
 })->name('web-series-jury');
+
+Route::get('Best-web-series-previw-commitee-2024', function () {
+    return view('web-series.Best-web-series-previw-commitee-2024');
+})->name('Best-web-series-previw-commitee-2024');
+
+Route::get('debut-directors-previw-commitee-2024', function () {
+    return view('web-series.debut-directors-previw-commitee-2024');
+})->name('debut-directors-previw-commitee-2024');
 
 Route::get('cmot-jury', function () {
     return view('cmot.cmot-jury');

@@ -146,9 +146,9 @@
                             image: "{{ asset('public/images/master-class/Giona A. Nazzaro.jpg') }}"
                         },
                         {
-                            name: "Christian Jeune",
-                            description: "Christian Jeune is the Head of the Cannes Film Festival. He is famous for the film 'Parched' and 'Ongoing Smile'.",
-                            image: "{{ asset('public/images/master-class/Christian Jeune.jpg') }}"
+                            name: "Emma Boa",
+                            description: "Emma has worked in film exhibition since 2003, with various front of house, venue and event management roles before moving into the Programming team at Edinburgh International Film Festival, curating and producing a diverse range of programmes and special events. She worked with EventScotland, the national events agency for Scotland, to deliver the hugely successful Year of Stories in 2022, before returning to EIFF in 2023 as Festival Producer, working under the auspices of Edinburgh International Festivalto deliver a special one-off iteration. She joined the newly relaunched EIFF as Festival Producer in January 2024, working closely with Festival Director, Paul Ridd, to build and shape the new organisation from the ground up. A University of Edinburgh graduate with an MA in Philosophy, she has worked for BFI London Film Festival, Reykjavik International Film Festival, Glasgow Film Festival and Dominion Cinema, as well as in several different roles within Centre for the Moving Image, across EIFF, Filmhouse and Belmont Filmhouse.",
+                            image: "{{ asset('public/images/master-class/Emma Profile Photo 2024.jpg') }}"
                         }
                     ]
                 },
@@ -192,19 +192,19 @@
                 },
                 {
                     title: "The Journey from Script to Screen: Writing for Film and Beyond",
-                    moderator: "",
-                    panel: "",
+                    moderator: "Anant Vijay",
+                    panel: "In Conversation",
                     date: "Nov 21st, 2024, 4.30 PM TO 5.30 PM",
                     speakers: [{
                             name: "Prasoon Joshi",
                             description: "Prasoon Joshi is one of India’s most celebrated creative minds—a Padma Shri awardee and National Award-winning writer. Renowned for his work as a poet, lyricist, screenwriter, and communication expert, he has been honored at global platforms like Cannes Lions and the World Economic Forum. Author of four books, Joshi has penned acclaimed scripts and lyrics for iconic films such as Taare Zameen Par, Rang De Basanti, Bhaag Milkha Bhaag, and Manikarnika. His recent efforts have shaped major brand campaigns like Incredible India, G-20, and Air India, while his impactful societal projects—Swachh Bharat, Child Rights, Pulse Polio, and campaigns on women’s empowerment and malnutrition—have created tangible, positive change.",
                             image: "{{ asset('public/images/master-class/Prasoon Joshi.jpg') }}"
                         },
-                        {
-                            name: "Anant Vijay",
-                            description: "Anant Vijay is a National Award winning Journalist and Author. Presently working with Dainik Jagran. His journalism experience spans more than two decades across TV and Print, writing mainly on the Cinema, politics of Culture and Literature. His weekly column has been running for 13 years in Dainik Jagran, the largest read newspaper in India. Writing with consummate ease, he’s authored 14 books across genres. His Book Bollywood Selfie was the best seller. His book Amethi Sangram became a best seller within a week of its launch. A keen student of the Hindi language, Anant has organized literature festivals, been part of Hindi literary bodies playing active advisory roles, been on editorial boards, been a Jury Chairman at the National Film Awards twice, Chairman of the selection Jury (Konkani Films) of International Film Festival of India (IFFI) 2019 and Member of Jury, 75 Creative Minds, Ministry of Information and Broadcasting, 2021. He is the Vice Chairman of Governing Council of Film and Television Institute of India, Pune.Apart from the National Award (Swarn Kamal), Anant Vijay is the recipient of the most prestigious Ganesh Shankar Vidyarthi Award and Father Camille Bulcke Award.",
-                            image: "{{ asset('public/images/master-class/Anant Vijay.jpg') }}"
-                        }
+                        // {
+                        //     name: "Anant Vijay",
+                        //     description: "Anant Vijay is a National Award winning Journalist and Author. Presently working with Dainik Jagran. His journalism experience spans more than two decades across TV and Print, writing mainly on the Cinema, politics of Culture and Literature. His weekly column has been running for 13 years in Dainik Jagran, the largest read newspaper in India. Writing with consummate ease, he’s authored 14 books across genres. His Book Bollywood Selfie was the best seller. His book Amethi Sangram became a best seller within a week of its launch. A keen student of the Hindi language, Anant has organized literature festivals, been part of Hindi literary bodies playing active advisory roles, been on editorial boards, been a Jury Chairman at the National Film Awards twice, Chairman of the selection Jury (Konkani Films) of International Film Festival of India (IFFI) 2019 and Member of Jury, 75 Creative Minds, Ministry of Information and Broadcasting, 2021. He is the Vice Chairman of Governing Council of Film and Television Institute of India, Pune.Apart from the National Award (Swarn Kamal), Anant Vijay is the recipient of the most prestigious Ganesh Shankar Vidyarthi Award and Father Camille Bulcke Award.",
+                        //     image: "{{ asset('public/images/master-class/Anant Vijay.jpg') }}"
+                        // }
                     ]
                 },
                 {
@@ -224,22 +224,33 @@
                         }
                     ]
                 },
-                {
+                // {
+                //     title: "Centenary Special: ANR - Celebrating the Life and Works of Akkineni Nageswara Rao",
+                //     moderator: "Kushboo Sundar",
+                //     panel: "In Conversation",
+                //     date: "Nov-21st, 2024, 06.45 PM TO 07.30 PM",
+                //     speakers: [{
+                //         name: "Nagarjuna",
+                //         description: "Nagarjuna is an Indian actor, film producer and entrepreneur. Nagarjuna has acted predominantly in Telugu cinema, along with Hindi and Tamil films. He received two National Film Awards namely, for Ninne Pelladata, which he produced won the Best Feature Film in Telugu and a Special Mention as actor for Annamayya, Ten state Nandi Awards, and three Filmfare Awards South.",
+                //         image: "{{ asset('public/images/master-class/Akkineni Nagarjuna Rao.jpg') }}"
+                //     }]
+                // },
+            ],
+            // 21 November Modal Data End
+
+            // 22 November Modal Data Start
+            nov22: [{
                     title: "Centenary Special: ANR - Celebrating the Life and Works of Akkineni Nageswara Rao",
                     moderator: "Kushboo Sundar",
                     panel: "In Conversation",
-                    date: "Nov-21st, 2024, 06.45 PM TO 07.30 PM",
+                    date: "Nov-22st, 2024, 11.00 AM TO 12.00 PM",
                     speakers: [{
                         name: "Nagarjuna",
                         description: "Nagarjuna is an Indian actor, film producer and entrepreneur. Nagarjuna has acted predominantly in Telugu cinema, along with Hindi and Tamil films. He received two National Film Awards namely, for Ninne Pelladata, which he produced won the Best Feature Film in Telugu and a Special Mention as actor for Annamayya, Ten state Nandi Awards, and three Filmfare Awards South.",
                         image: "{{ asset('public/images/master-class/Akkineni Nagarjuna Rao.jpg') }}"
                     }]
                 },
-            ],
-            // 21 November Modal Data End
-
-            // 22 November Modal Data Start
-            nov22: [{
+                {
                     title: "Living Movies: Filmmaking and the Creative Life",
                     moderator: "Shantanu Moitra",
                     panel: "In Conversation",
@@ -286,11 +297,11 @@
                             description: "Mani Ratnam, a synonym for cinematic brilliance, is a renowned Indian film director, producer, and screenwriter. His illustrious career spans multiple languages, including Tamil, Hindi, Telugu, Malayalam, and Kannada. Recognized as one of India's most acclaimed and commercially successful filmmakers, his contributions to the world of cinema have earned him numerous accolades, including seven National Film Awards and the prestigious Padma Shri. Renowned for his unique storytelling, captivating visuals, and powerful music, he has consistently pushed the boundaries of Indian cinema. His filmography includes Roja, Bombay, Dil Se.., Iruvar, Kannathil Muthamittal, AlaiPayuthey, Guru, Raavan, OK Kanmani, Kaatru Veliyidai, and Ponniyin Selvan Part 1 & 2.",
                             image: "{{ asset('public/images/master-class/Mani Ratnam.jpg') }}"
                         },
-                        {
-                            name: "Gautham Vasudev Menon",
-                            description: "Gautham Vasudev Menon is an Indian film director, screenwriter, film producer and actor who predominantly works in Tamil film industry. He has also directed Telugu and Hindi films that are either simultaneously shot with or remakes of his own Tamil films. He has won two National Film Awards, three Nandi Awards and one Tamil Nadu State Film Award. Many of his films have been both critically acclaimed and commercially successful, most notably his romantic films Minnale (2001), Vaaranam Aayiram (2008), Vinnaithaandi Varuvaayaa (2010), his cop action thrillers Kaakha Kaakha (2003), Vettaiyaadu Vilaiyaadu (2006), Yennai Arindhaal (2015) and his gangster drama Vendhu Thanindhathu Kaadu (2022). His 2008 Tamil film, ‘Vaaranam Aayiram’ won the National Film Award for Best Feature Film in Tamil. Menon produces films through his film production company named Photon Kathaas. His production Thanga Meengal (2013) won the National Film Award for Best Feature Film in Tamil.The 2010 romantic blockbuster Vinnaithaandi Varuvaayaa, was re-released and it completed its 1000th day in theaters recentrly.",
-                            image: "{{ asset('public/images/master-class/Gautham Vasudev Menon.jpg') }}"
-                        }
+                        // {
+                        //     name: "Gautham Vasudev Menon",
+                        //     description: "Gautham Vasudev Menon is an Indian film director, screenwriter, film producer and actor who predominantly works in Tamil film industry. He has also directed Telugu and Hindi films that are either simultaneously shot with or remakes of his own Tamil films. He has won two National Film Awards, three Nandi Awards and one Tamil Nadu State Film Award. Many of his films have been both critically acclaimed and commercially successful, most notably his romantic films Minnale (2001), Vaaranam Aayiram (2008), Vinnaithaandi Varuvaayaa (2010), his cop action thrillers Kaakha Kaakha (2003), Vettaiyaadu Vilaiyaadu (2006), Yennai Arindhaal (2015) and his gangster drama Vendhu Thanindhathu Kaadu (2022). His 2008 Tamil film, ‘Vaaranam Aayiram’ won the National Film Award for Best Feature Film in Tamil. Menon produces films through his film production company named Photon Kathaas. His production Thanga Meengal (2013) won the National Film Award for Best Feature Film in Tamil.The 2010 romantic blockbuster Vinnaithaandi Varuvaayaa, was re-released and it completed its 1000th day in theaters recentrly.",
+                        //     image: "{{ asset('public/images/master-class/Gautham Vasudev Menon.jpg') }}"
+                        // }
                     ]
                 }
             ],
@@ -616,30 +627,18 @@
                     description: "A R Rahman is an Indian music composer, record producer, singer, songwriter, musician, multi-instrumentalist, and philanthropist known for his works in Indian cinema; predominantly in Tamil and Hindi films, with occasional forays in international cinema. He is a recipient of six National Film Awards, two Academy Awards, two Grammy Awards, a BAFTA Award, a Golden Globe Award, six Tamil Nadu State Film Awards, fifteen Filmfare Awards, and eighteen Filmfare Awards South. In 2010, the Government of India conferred him with the Padma Bhushan.",
                     image: "{{ asset('public/images/master-class/A R Rahman.jpg') }}"
                 }]
+            },
+            {
+                title: "The Larger Impact of Cinema and How AI will Change the Course of Entertainment Industry.",
+                moderator: "Mahaveer Jain",
+                panel: "In conversation",
+                date: "Nov-27th, 2024, 04.30 PM TO 06.00 PM",
+                speakers: [{
+                    name: "Sudipta Bhattacharya (CTO Adani Group)",
+                    description: "Sudipta Bhattacharya is the Group’s Chief Technology Officer and the Chief Executive Officer for North America. He manages several New Business Development, Innovation and Strategic Communications initiatives.",
+                    image: "{{ asset('public/images/master-class/Sudipta Bhattacharya.jpg') }}"
+                }]
             }
-            // ,
-            // {
-            //     title: "From Local to Global - What's the Roadmap for International Box Office Success? ",
-            //     moderator: "Taran Adarsh",
-            //     panel: "Panel Discussion",
-            //     date: "Nov-27th, 2024, 04.30 PM TO 06.00 PM",
-            //     speakers: [{
-            //             name: "Ali Abbas Zafar",
-            //             description: "Ali Abbas Zafar is an Indian filmmaker and screenwriter known for directing blockbuster films like Sultan, Tiger Zinda Hai, and Bharat. His works are celebrated for their dynamic action sequences and larger-than-life storytelling. Zafar’s films often explore intense emotional journeys and complex relationships, making him one of Bollywood’s most commercially successful directors. His vision has helped elevate Indian cinema on the global stage, further expanding its international audience.",
-            //             image: "{{ asset('public/images/master-class/Ali Abbas Zafar.jpg') }}"
-            //         },
-            //         {
-            //             name: "Vijay Krishna Acharya",
-            //             description: "Vijay Krishna Acharya is an Indian film director, screenwriter, dialogue writer known for his works in Hindi films and television shows. He began his career as a scriptwriter on the first two films of the Dhoom franchise. His directorial debut was the film Tashan and he went on to direct Dhoom 3 which became the highest grossing Bollywood film of all time in international markets at the time of its release.",
-            //             image: "{{ asset('public/images/master-class/Vijay Krishna Acharya.png') }}"
-            //         },
-            //         {
-            //             name: "Mahaveer Jain",
-            //             description: "Mahaveer Jain is an Indian film producer known for his work on several Hindi films, including Dekh Indian Circus (2011), Chalo Jeetey Hain (2018), Malaal (2019), Khandaani Shafakhana (2019), Uunchai (2022), Ram Setu (2022), and Good Luck Jerry (2022). He began his career with Dekh Indian Circus, which won four National Film Awards, and has since produced award-winning projects like Chalo Jeetey Hain. His production company also partnered with Warner Music India for the 2023 Global Peace Anthem titled 'Coming Home'.",
-            //             image: "{{ asset('public/images/master-class/Mahaveer Jain.png') }}"
-            //         }
-            //     ]
-            // }
         ],
     };
 
@@ -673,13 +672,13 @@
                     // Populate the speaker list item
                     li.innerHTML =
                         `
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <div class="ms-2 me-auto">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div class="fw-bold">${speaker.name}</div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <span>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <img src="${speaker.image}" class="img-circle" alt="${speaker.name}">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </span>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        `;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div class="ms-2 me-auto">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <div class="fw-bold">${speaker.name}</div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <img src="${speaker.image}" class="img-circle" alt="${speaker.name}">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            `;
                         speakersList.appendChild(li);
                     });
                 }
