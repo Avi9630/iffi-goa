@@ -297,7 +297,7 @@ class GalleryController extends Controller
                     }
                 } else {
                     $data = [
-                        'category_id' => isset($payload['category_id']) ? $payload['category_id'] : $photoToUpdate->category_id,
+                        'category_id' => $photoToUpdate->category_id,
                         'video_url' => isset($payload['video_url']) ? $payload['video_url'] : $photoToUpdate->video_url,
                         'status' => isset($payload['status']) ? $payload['status'] : $photoToUpdate->status,
                     ];
