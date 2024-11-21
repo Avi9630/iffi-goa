@@ -154,5 +154,6 @@ Route::post('gallery_upload',               [GalleryController::class, 'upload']
 Route::get('all_photo',                     [GalleryController::class, 'allPhoto'])->name('all_photo');
 Route::get('photo_by_id/{id}',              [GalleryController::class, 'photoById'])->name('photo_by_id');
 Route::post('photo_active_inactive/{id}',   [GalleryController::class, 'activeInactive'])->name('photo_active_inactive');
+Route::post('photo_delete/{id}',            [GalleryController::class, 'deleteGalleryPhoto'])->name('photo_delete');
 
 Route::get('photo_category',                [GalleryController::class, 'photoCategory'])->name('photo_category');
