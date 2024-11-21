@@ -5,6 +5,7 @@ namespace App\Http\Controllers\api;
 use App\Http\Controllers\Controller;
 use App\Http\Traits\RESPONSETrait;
 use App\Models\Photo;
+use App\Models\PhotoCategory;
 use Illuminate\Http\Request;
 use Google\Cloud\Storage\StorageClient;
 use GuzzleHttp\Client;
