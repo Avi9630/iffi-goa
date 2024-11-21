@@ -4,6 +4,7 @@ namespace App\Http\Controllers\api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Traits\RESPONSETrait;
+use App\Models\Photo;
 use Illuminate\Http\Request;
 use Google\Cloud\Storage\StorageClient;
 use GuzzleHttp\Client;
@@ -17,9 +18,10 @@ class GalleryController extends Controller
 
     public function __construct()
     {
-        $this->projectId    =   'iffi-goa-429607';
-        $this->bucketName   =   'iffi-goa-public-bucket-0001';
-        $this->keyFilePath  =   storage_path('app/keys/service-account.json');
+        $this->projectId    =   env('GOOGLE_CLOUD_PROJECT_ID');
+        $this->bucketName   =   env('GOOGLE_CLOUD_STORAGE_BUCKET');
+        $this->keyFilePath  =   storage_path('app/keys/' . env("GOOGLE_APPLICATION_CREDENTIALS"));
+        $this->gcsApi       =   env('GOOGLE_CLOUD_STORAGE_API_URI');
     }
 
     public function uploadGallery(Request $request)
@@ -77,14 +79,15 @@ class GalleryController extends Controller
     {
         $payload = $request->all();
         $validatorArray = [
-            'category_id'   =>  'required',
+            'category_id'   =>  'required_without:video_url|nullable',
             'img_caption'   =>  'required',
-            'video_url'     =>  'required_without:image',
+            'video_url'     =>  'required_without:image|url',
             'image'         =>  'required_without:video_url|file|mimes:jpg,jpeg,png|max:100048',
-            'title'         =>  '',
-            'ceremony'      =>  '',
         ];
-        $messagesArray = [];
+        $messagesArray = [
+            'img_caption.required'          =>  'Camption is required !!',
+            'category_id.required_without'  =>  'Category is required, when video url is not present !!'
+        ];
         $validator = Validator::make($payload, $validatorArray, $messagesArray);
         if ($validator->fails()) {
             $output = [
@@ -96,19 +99,8 @@ class GalleryController extends Controller
         try {
             if ($request->hasFile('image')) {
                 $file = $request->file('image');
-                $destinationPath    =   'images/gallery-2024';
                 $tempPath           =   $file->getRealPath();
                 $originalFilename   =   $file->getClientOriginalName();
-                $extension          =   $file->getClientOriginalExtension();
-                $hashedFilename     =   substr(md5($originalFilename . time()), 0, 20) . '.' . $extension;
-                $fullFilePath       =   public_path($destinationPath . '/' . $hashedFilename);
-                if (File::exists($fullFilePath)) {
-                    $response = [
-                        'message' => 'File with the same name already exists !! Please upload again !!',
-                        'existing_file' => $hashedFilename,
-                    ];
-                    return $this->response('conflict', $response);
-                }
                 //This is for GOOGLE CLOUD STORAGE
                 $guzzleClient = new Client([
                     'verify' => false,
@@ -124,28 +116,20 @@ class GalleryController extends Controller
                     'httpClient'    =>  $guzzleClient
                 ]);
                 $bucket = $storage->bucket($this->bucketName);
-                $bucket->upload(
-                    fopen($tempPath, 'r'),
-                    ['name' => 'uploads/' . $originalFilename]
-                );
-                $publicUrl = sprintf('https://storage.googleapis.com/%s/uploads/%s', $this->bucketName, $originalFilename);
+                $bucket->upload(fopen($tempPath, 'r'), ['name' => 'uploads/' . $originalFilename]);
+                $publicUrl = sprintf($this->gcsApi, $this->bucketName, $originalFilename);
                 $data = [
                     'category_id'   =>  $payload['category_id'],
                     'img_caption'   =>  isset($payload['img_caption']) ? $payload['img_caption'] : NULL,
                     'image'         =>  $originalFilename,
                     'img_url'       =>  $publicUrl,
-                    'title'         =>  isset($payload['title']) ? $payload['title'] : NULL,
-                    'ceremony'      =>  isset($payload['ceremony']) ? $payload['ceremony'] : NULL,
                     'year'          =>  2024,
                 ];
-                $partners = DB::table('mst_photos')->insert($data);
-                if ($partners) {
-                    // $lastInsertedId = $partners->insertGetId($data);
+                $photo = Photo::create($data);
+                if ($photo) {
                     $response = [
                         'message'   =>  'File uploaded successfully!!',
-                        // 'data'      =>  DB::table('mst_photos')
-                        //     ->select('id', 'category_id', 'img_caption', 'image', 'img_url', 'video_url')
-                        //     ->find($lastInsertedId)
+                        'data'      =>  $photo->latest()->first()
                     ];
                     return $this->response('success', $response);
                 } else {
@@ -157,21 +141,15 @@ class GalleryController extends Controller
             } else {
 
                 $data = [
-                    'category_id'   =>  $payload['category_id'],
-                    'img_caption'   =>  isset($payload['img_caption']) ? $payload['img_caption'] : NULL,
+                    'img_caption'   =>  $payload['img_caption'],
                     'video_url'     =>  $payload['video_url'],
-                    'title'         =>  isset($payload['title']) ? $payload['title'] : NULL,
-                    'ceremony'      =>  isset($payload['ceremony']) ? $payload['ceremony'] : NULL,
                     'year'          =>  2024,
                 ];
-                $partners = DB::table('mst_photos')->insert($data);
-                if ($partners) {
-                    // $lastInsertedId = DB::table('mst_photos')->insertGetId($data);
+                $photo = Photo::create($data);
+                if ($photo) {
                     $response = [
                         'message'   =>  'Video uploaded successfully!!',
-                        // 'data'      =>  DB::table('mst_photos')
-                        //     ->select('id', 'category_id', 'img_caption', 'image', 'img_url', 'video_url')
-                        //     ->find($lastInsertedId)
+                        'data'      =>  $photo->latest()->first()
                     ];
                     return $this->response('success', $response);
                 } else {
@@ -192,9 +170,7 @@ class GalleryController extends Controller
     public function allPhoto()
     {
         try {
-            $allPhotos = DB::table('mst_photos')
-                ->where(['year' => 2024])
-                ->orderBy('id', 'DESC')->get();
+            $allPhotos  =   Photo::select('id', 'category_id', 'img_caption', 'image', 'img_url', 'video_url', 'status', 'year', 'created_at', 'updated_at', 'title', 'ceremony')->where(['year' => 2024])->orderBy('id', 'DESC')->get();
             if (!empty($allPhotos)) {
                 $response = [
                     'message'   => 'All photos fetched !!',
@@ -218,9 +194,7 @@ class GalleryController extends Controller
     public function photoById(Request $request, $id)
     {
         try {
-            $photoById = DB::table('mst_photos')
-                ->where(['id' => $id, 'status' => 1, 'year' => 2024])
-                ->orderBy('id', 'DESC')->first();
+            $photoById = Photo::where(['id' => $id, 'status' => 1, 'year' => 2024])->first();
             if (!empty($photoById)) {
                 $response = [
                     'message'   => 'Photo details fetched !!',
@@ -229,7 +203,7 @@ class GalleryController extends Controller
                 return $this->response('success', $response);
             } else {
                 $response = [
-                    'message' => 'Not found category !!',
+                    'message' => 'No records found !!',
                 ];
                 return $this->response('exception', $response);
             }
@@ -244,13 +218,12 @@ class GalleryController extends Controller
     public function activeInactive(Request $request, $id)
     {
         $payload = $request->all();
+
         $validatorArray = [
-            'category_id'   =>  'required',
+            'category_id'   =>  '',
             'img_caption'   =>  '',
             'video_url'     =>  '',
             'image'         =>  'file|mimes:jpg,jpeg,png|max:100048',
-            'title'         =>  '',
-            'ceremony'      =>  '',
             'status'        =>  'in:0,1',
         ];
         $messagesArray = [];
@@ -263,17 +236,12 @@ class GalleryController extends Controller
         }
 
         try {
-            $photoToUpdate = DB::table('mst_photos')
-                ->where(['id' => $id, 'year' => 2024])
-                ->orderBy('id', 'DESC')->first();
-
+            $photoToUpdate  =   Photo::where(['year' => 2024])->find($id);
             if (!empty($photoToUpdate)) {
                 if ($request->hasFile('image')) {
                     $file = $request->file('image');
                     $tempPath           =   $file->getRealPath();
                     $originalFilename   =   $file->getClientOriginalName();
-                    $extension          =   $file->getClientOriginalExtension();
-
                     $guzzleClient = new Client([
                         'verify' => false,
                         'curl' => [
@@ -282,36 +250,27 @@ class GalleryController extends Controller
                             CURLOPT_CAINFO => 'C:\php\extras\ssl\cacert.pem'
                         ]
                     ]);
-
                     $storage = new StorageClient([
                         'projectId'     =>  $this->projectId,
                         'keyFilePath'   =>  $this->keyFilePath,
                         'httpClient'    =>  $guzzleClient
                     ]);
                     $bucket = $storage->bucket($this->bucketName);
-                    $bucket->upload(
-                        fopen($tempPath, 'r'),
-                        ['name' => 'uploads/' . $originalFilename]
-                    );
-                    $publicUrl = sprintf('https://storage.googleapis.com/%s/uploads/%s', $this->bucketName, $originalFilename);
+                    $bucket->upload(fopen($tempPath, 'r'), ['name' => 'uploads/' . $originalFilename]);
+                    $publicUrl = sprintf($this->gcsApi, $this->bucketName, $originalFilename);
                     $data = [
-                        'category_id'   =>  $payload['category_id'],
+                        'category_id'   =>  isset($payload['category_id']) ? $payload['category_id'] : $photoToUpdate->category_id,
                         'img_caption'   =>  isset($payload['img_caption']) ? $payload['img_caption'] : $photoToUpdate->img_caption,
                         'image'         =>  $originalFilename,
                         'img_url'       =>  $publicUrl,
-                        'title'         =>  isset($payload['title']) ? $payload['title'] : $photoToUpdate->title,
-                        'ceremony'      =>  isset($payload['ceremony']) ? $payload['ceremony'] : $photoToUpdate->ceremony,
-                        'year'          =>  2024,
                         'status'        =>  isset($payload['status']) ? $payload['status'] : $photoToUpdate->status,
                     ];
-                    $partners = DB::table('mst_photos')->where('id', $id)->update($data);
-                    if ($partners) {
-                        // $lastInsertedId = $partners->insertGetId($data);
+
+                    $photo = Photo::where('id', $id)->update($data);
+                    if ($photo) {
                         $response = [
                             'message'   =>  'File uploaded successfully!!',
-                            // 'data'      =>  DB::table('mst_photos')
-                            //     ->select('id', 'category_id', 'img_caption', 'image', 'img_url', 'video_url')
-                            //     ->find($lastInsertedId)
+                            'data'      =>  Photo::find($id)
                         ];
                         return $this->response('success', $response);
                     } else {
@@ -321,20 +280,16 @@ class GalleryController extends Controller
                         return $this->response('exception', $response);
                     }
                 } else {
-
                     $data = [
-                        'category_id'   =>  $payload['category_id'],
+                        'category_id'   =>  isset($payload['category_id']) ? $payload['category_id'] : $photoToUpdate->category_id,
                         'video_url'     =>  isset($payload['video_url']) ? $payload['video_url'] : $photoToUpdate->video_url,
-                        'title'         =>  isset($payload['title']) ? $photoToUpdate['title'] : $photoToUpdate->title,
-                        'ceremony'      =>  isset($payload['ceremony']) ? $photoToUpdate['ceremony'] : $photoToUpdate->ceremony,
-                        'year'          =>  2024,
                         'status'        =>  isset($payload['status']) ? $payload['status'] : $photoToUpdate->status,
                     ];
-
-                    $mst_photos = DB::table('mst_photos')->where('id', $id)->update($data);
-                    if ($mst_photos) {
+                    $photo = Photo::where('id', $id)->update($data);
+                    if ($photo) {
                         $response = [
-                            'message'   =>  'Video uploaded successfully!!',
+                            'message'   =>  'Data updated successfully !!',
+                            'data'      => Photo::find($id)
                         ];
                         return $this->response('success', $response);
                     } else {
@@ -346,7 +301,7 @@ class GalleryController extends Controller
                 }
             } else {
                 $response = [
-                    'message'   =>  'Record not fond !!',
+                    'message'   =>  'Records not found !!',
                 ];
                 return $this->response('exception', $response);
             }
