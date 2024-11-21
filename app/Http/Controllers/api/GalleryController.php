@@ -144,6 +144,7 @@ class GalleryController extends Controller
             } else {
 
                 $data = [
+                    'category_id' => 12,
                     'img_caption' => $payload['img_caption'],
                     'video_url' => $payload['video_url'],
                     'year' => 2024,
