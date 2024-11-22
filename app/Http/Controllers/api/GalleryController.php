@@ -20,7 +20,7 @@ class GalleryController extends Controller
     {
         $this->projectId = env('GOOGLE_CLOUD_PROJECT_ID');
         $this->bucketName = env('GOOGLE_CLOUD_STORAGE_BUCKET');
-        $this->keyFilePath = storage_path('app/keys/'.env('GOOGLE_APPLICATION_CREDENTIALS'));
+        $this->keyFilePath = storage_path('app/keys/' . env('GOOGLE_APPLICATION_CREDENTIALS'));
         $this->gcsApi = env('GOOGLE_CLOUD_STORAGE_API_URI');
     }
 
@@ -59,7 +59,7 @@ class GalleryController extends Controller
                 // Upload the file to the GCS bucket
                 $object = $bucket->upload(
                     fopen($fileTmpPath, 'r'),
-                    ['name' => 'uploads/'.$fileName] // Save inside 'uploads' folder in GCS
+                    ['name' => 'uploads/' . $fileName] // Save inside 'uploads' folder in GCS
                 );
 
                 // Get the public URL (optional)
@@ -68,7 +68,7 @@ class GalleryController extends Controller
                 echo 'File uploaded successfully!<br>';
                 echo "File URL: <a href='$publicUrl' target='_blank'>$publicUrl</a>";
             } catch (Exception $e) {
-                echo 'Error uploading file: '.$e->getMessage();
+                echo 'Error uploading file: ' . $e->getMessage();
             }
         } else {
             echo 'No file uploaded.';
@@ -167,7 +167,6 @@ class GalleryController extends Controller
             // 'uploaded_date' => 'nullable|date|date_format:Y-m-d',
         ];
         $messagesArray = [
-
             'img_caption.required' => 'Camption is required !!',
             'category_id.required_without' => 'Category is required, when video url is not present !!',
             // 'uploaded_date.required' => 'Uploaded date field is required !!',
@@ -178,7 +177,6 @@ class GalleryController extends Controller
             $output = [
                 'message' => $validator->errors()->first(),
             ];
-
             return $this->response('validatorerrors', $output);
         }
 
@@ -210,7 +208,7 @@ class GalleryController extends Controller
                     'httpClient' => $guzzleClient,
                 ]);
                 $bucket = $storage->bucket($this->bucketName);
-                $bucket->upload(fopen($tempPath, 'r'), ['name' => 'uploads/'.$originalFilename]);
+                $bucket->upload(fopen($tempPath, 'r'), ['name' => 'uploads/' . $originalFilename]);
                 $publicUrl = sprintf($this->gcsApi, $this->bucketName, $originalFilename);
 
                 $data = [
@@ -321,7 +319,7 @@ class GalleryController extends Controller
                         'httpClient' => $guzzleClient,
                     ]);
                     $bucket = $storage->bucket($this->bucketName);
-                    $bucket->upload(fopen($tempPath, 'r'), ['name' => 'uploads/'.$originalFilename]);
+                    $bucket->upload(fopen($tempPath, 'r'), ['name' => 'uploads/' . $originalFilename]);
                     $publicUrl = sprintf($this->gcsApi, $this->bucketName, $originalFilename);
                     $data = [
                         'category_id' => isset($payload['category_id']) ? $payload['category_id'] : $photoToUpdate->category_id,
