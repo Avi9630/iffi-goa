@@ -32,7 +32,7 @@
                             class="text-decoration-none">
                             <div class="card shadow-sm w-100">
                                 <div class="card-image min-size-img">
-                                    <img src="{{ asset('public/images/thePeacock/poster/' . $value->poster) }}"
+                                    <img src="{{ asset('public/images/thePeacock/poster/' . ($value->poster ?? 'pdf.jpg')) }}"
                                         alt="{{ $value->title }} image" class="img-fluid">
                                 </div>
                                 <div class="card-body text-start">
