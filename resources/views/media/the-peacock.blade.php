@@ -22,6 +22,36 @@
         </div>
     </div>
 
+
+    <div class="col-lg-12 mt-5 static-content">
+        <div class="container">
+            <div class="row">
+                @foreach ($thepeacock as $value)
+                    <div class="col-md-3 col-sm-4 col-xs-12 d-flex">
+                        <a href="{{ asset('public/images/thePeacock/' . $value->img_src) }}" target="_blank"
+                            class="text-decoration-none">
+                            <div class="card shadow-sm w-100">
+                                <div class="card-image min-size-img">
+                                    <img src="{{ asset('public/images/thePeacock/poster/' . $value->poster) }}"
+                                        alt="{{ $value->title }} image" class="img-fluid">
+                                </div>
+                                <div class="card-body text-start">
+                                    <div class="card-text d-flex">
+                                        <div class="iCinema-content">
+                                            {{-- <h6 class="title"> {{ $value->title }} </h6> --}}
+                                            <h6 class="text-uppercase"> {{ $value->title }} </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
+
+
     <!-- Inner Page Banner Section -->
     <div class="container press">
         <div class="table-responsive">
