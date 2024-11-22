@@ -132,25 +132,17 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th scope="col">Sr Nom</th>
-                                <th scope="col">Category</th>
-                                <th scope="col">Video URL's</th>
+                                <th scope="col">S. N.</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">Video Link</th>
                             </tr>
                         </thead>
-                        @php
-                            $items = [];
-                        @endphp
-                        @foreach ($categories as $category)
-                            @php
-                                $items[$category->id] = $category->category;
-                            @endphp
-                        @endforeach
                         <tbody>
                             @if (count($gallery) > 0)
-                                @foreach ($gallery as $gall)
+                                @foreach ($gallery as $key => $gall)
                                     <tr>
-                                        <th scope="row">1</th>
-                                        <td>{{ $items[$gall->category_id] }}</td>
+                                        <th scope="row">{{ $key + 1 }}</th>
+                                        <td>{{ $gall->img_caption }}</td>
                                         <td>
                                             <a href="{{ $gall->video_url }}">{{ $gall->video_url }}</a>
                                         </td>
