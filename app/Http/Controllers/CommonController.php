@@ -339,28 +339,37 @@ class CommonController extends Controller
 
     public function gallery2024(Request $request)
     {
-        $payload    =   $request->all();
-        $year       =   isset($payload['year']) ? $payload['year'] : null;
-        $categories =   PhotoCategory::select('id', 'category')->get();
+
+        $dates = [
+            '2024-11-20', '2024-11-21', '2024-11-22',
+            '2024-11-23', '2024-11-24', '2024-11-25',
+            '2024-11-26', '2024-11-27', '2024-11-28',
+        ];
+
+        $payload = $request->all();
+        $year = isset($payload['year']) ? $payload['year'] : null;
+        $categories = PhotoCategory::select('id', 'category')->get();
         $gallery = Photo::where('status', 1)
             ->where('year', $year)
             ->where('img_url', '!=', '')
             ->whereNotNull('category_id')
             ->orderBy('id', 'DESC')
             ->paginate(10);
+
         return view('gallery.new-gallery', [
-            'gallery'       =>  $gallery,
-            'categories'    =>  $categories,
+            'gallery' => $gallery,
+            'categories' => $categories,
+            'dates' => $dates,  // Pass the dates array
         ]);
     }
 
     public function galleryByCategory(Request $request)
     {
-        $payload    =   $request->all();
-        $category   =   !empty($payload['category_id']) ? $payload['category_id'] : '';
-        $date       =   ! empty($payload['date']) ? $payload['date'] : '';
-        $query      =   Photo::where('status', '1')->where('year', '2024')->where('img_url', '!=', '');
-        if (!empty($date)) {
+        $payload = $request->all();
+        $category = ! empty($payload['category_id']) ? $payload['category_id'] : '';
+        $date = ! empty($payload['date']) ? $payload['date'] : '';
+        $query = Photo::where('status', '1')->where('year', '2024')->where('img_url', '!=', '');
+        if (! empty($date)) {
             $query->whereDate('uploaded_date', $date);
         }
         switch ($category) {
@@ -382,11 +391,19 @@ class CommonController extends Controller
         }
         $gallery = $query->paginate(12);
 
-        $categories     =   PhotoCategory::select('id', 'category')->get();
+        $dates = [
+            '2024-11-20', '2024-11-21', '2024-11-22',
+            '2024-11-23', '2024-11-24', '2024-11-25',
+            '2024-11-26', '2024-11-27', '2024-11-28',
+        ];
+
+        $categories = PhotoCategory::select('id', 'category')->get();
+
         return view('gallery.new-gallery', [
-            'gallery'       =>  $gallery,
-            'categories'    =>  $categories,
-            'payload'       =>  $payload,
+            'gallery' => $gallery,
+            'categories' => $categories,
+            'payload' => $payload,
+            'dates' => $dates,  // Pass the dates array
         ]);
     }
 
@@ -401,6 +418,7 @@ class CommonController extends Controller
             ->where('year', $year)
             ->where('video_url', '!=', '')
             ->paginate(10);
+
         return view('gallery.new-gallery-videos', [
             'gallery' => $gallery,
             'categories' => $categories,
