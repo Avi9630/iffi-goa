@@ -56,7 +56,7 @@
                     </select>
                 </div>
                 <div>
-                    <button type="submit" class="btn btn-primary">Filter</button>
+                    <button type="submit" class="btn cus-prim-btn   text-center">Filter</button>
                 </div>
             </div>
         </form>
