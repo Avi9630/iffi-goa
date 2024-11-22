@@ -62,7 +62,7 @@
         </form>
 
         <!-- Gallery Display -->
-        <div class="gallery mt-4">
+        <div class="gallery mt-4 gallery" id="lightgallery">
             @forelse ($gallery as $item)
                 <div class="grid-item">
                     <a href="{{ $item->img_url }}" target="_blank">
