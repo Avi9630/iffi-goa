@@ -148,12 +148,11 @@ Route::post(
 Route::post('csv', [ApiController::class, 'csv'])->name('csv');
 
 //GALLERY
-Route::post('upload-in-galary', [ApiNewController::class, 'uploadInGalary'])->name('upload-in-galary');
 // Route::post('gallery',                   [GalleryController::class, 'uploadGallery'])->name('gallery');
-Route::post('gallery_upload', [GalleryController::class, 'upload'])->name('gallery_upload');
-Route::get('all_photo', [GalleryController::class, 'allPhoto'])->name('all_photo');
-Route::get('photo_by_id/{id}', [GalleryController::class, 'photoById'])->name('photo_by_id');
-Route::post('photo_active_inactive/{id}', [GalleryController::class, 'activeInactive'])->name('photo_active_inactive');
-Route::post('photo_delete/{id}', [GalleryController::class, 'deleteGalleryPhoto'])->name('photo_delete');
-
-Route::get('photo_category', [GalleryController::class, 'photoCategory'])->name('photo_category');
+// Route::post('upload-in-galary',             [ApiNewController::class, 'uploadInGalary'])->name('upload-in-galary');
+Route::get('all_photo',                     [GalleryController::class, 'allPhoto'])->name('all_photo');
+Route::get('photo_by_id/{id}',              [GalleryController::class, 'getById'])->name('photo_by_id');
+Route::post('gallery_upload',               [GalleryController::class, 'create'])->name('gallery_upload');
+Route::post('photo_active_inactive/{id}',   [GalleryController::class, 'update'])->name('photo_active_inactive');
+Route::post('photo_delete/{id}',            [GalleryController::class, 'delete'])->name('photo_delete');
+Route::get('photo_category',                [GalleryController::class, 'photoCategory'])->name('photo_category');
