@@ -53,7 +53,7 @@
 
 
     <!-- Inner Page Banner Section -->
-    <div class="container press">
+    {{-- <div class="container press">
         <div class="table-responsive">
             <table id="example" class="table table-hover mt-3">
                 <tbody>
@@ -76,9 +76,9 @@
         <div class="container">
             <nav aria-label="Page navigation pb-4">
                 <ul class="pagination overflow-hidden">
-                    {{-- {{ $thepeacock->withQueryString()->links() }} --}}
+                    {{ $thepeacock->withQueryString()->links() }}
                 </ul>
             </nav>
         </div>
-    </div>
+    </div> --}}
 @endsection
