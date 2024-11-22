@@ -359,60 +359,9 @@ class CommonController extends Controller
         $payload    =   $request->all();
         $category   =   !empty($payload['category_id']) ? $payload['category_id'] : '';
         $date       =   ! empty($payload['date']) ? $payload['date'] : '';
-        // $query      =   DB::table('mst_photos');
-        // $query->where('status', '1');
-        // $query->where('year', '2024');
-        // $query->where('img_url', '!=', '');
-        // if (! empty($date)) {
-        //     $query->whereDate('created_at', $date);
-        // }
-        // switch ($category) {
-        //     case '1':
-        //         $query->where('category_id', $category);
-        //         break;
-        //     case '2':
-        //         $query->where('category_id', $category);
-        //         break;
-        //     case '3':
-        //         $query->where('category_id', $category);
-        //         break;
-        //     case '4':
-        //         $query->where('category_id', $category);
-        //         break;
-        //     case '5':
-        //         $query->where('category_id', $category);
-        //         break;
-        //     case '6':
-        //         $query->where('category_id', $category);
-        //         break;
-        //     case '7':
-        //         $query->where('category_id', $category);
-        //         break;
-        //     case '8':
-        //         $query->where('category_id', $category);
-        //         break;
-        //     case '9':
-        //         $query->where('category_id', $category);
-        //         break;
-        //     case '10':
-        //         $query->where('category_id', $category);
-        //         break;
-        //     case '11':
-        //         $query->where('category_id', $category);
-        //         break;
-
-        //     default:
-        //         break;
-        // }
-        // $filteredData   =   $query->get();
-        // $count          =   $query->count();
-        // $gallery        =   $query->paginate(12);
-
-        $query = Photo::where('status', '1')
-            ->where('year', '2024')
-            ->where('img_url', '!=', '');
+        $query      =   Photo::where('status', '1')->where('year', '2024')->where('img_url', '!=', '');
         if (!empty($date)) {
-            $query->whereDate('created_at', $date);
+            $query->whereDate('uploaded_date', $date);
         }
         switch ($category) {
             case '1':
