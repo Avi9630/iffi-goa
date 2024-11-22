@@ -75,18 +75,102 @@ class GalleryController extends Controller
         }
     }
 
-    public function upload(Request $request)
+    public function photoCategory()
+    {
+        try {
+            $categories = PhotoCategory::select('id', 'category')->get();
+            if (! empty($categories)) {
+                $response = [
+                    'message' => 'Category fetched !!',
+                    'data' => $categories,
+                ];
+
+                return $this->response('success', $response);
+            } else {
+                $response = [
+                    'message' => 'Not found category !!',
+                ];
+
+                return $this->response('exception', $response);
+            }
+        } catch (\Exception $e) {
+            $response = [
+                'message' => $e->getMessage(),
+            ];
+
+            return $this->response('exception', $response);
+        }
+    }
+
+    public function allPhoto()
+    {
+        try {
+            $allPhotos = Photo::select('id', 'category_id', 'img_caption', 'image', 'img_url', 'video_url', 'status', 'year', 'uploaded_date', 'created_at', 'updated_at', 'title', 'ceremony')->where(['year' => 2024])->orderBy('id', 'DESC')->get();
+            if (! empty($allPhotos)) {
+                $response = [
+                    'message' => 'All photos fetched !!',
+                    'data' => $allPhotos,
+                ];
+
+                return $this->response('success', $response);
+            } else {
+                $response = [
+                    'message' => 'Not found category !!',
+                ];
+
+                return $this->response('exception', $response);
+            }
+        } catch (\Exception $e) {
+            $response = [
+                'message' => $e->getMessage(),
+            ];
+
+            return $this->response('exception', $response);
+        }
+    }
+
+    public function getById(Request $request, $id)
+    {
+        try {
+            $photoById = Photo::select('id', 'category_id', 'img_caption', 'image', 'img_url', 'video_url', 'status', 'year', 'uploaded_date', 'created_at', 'updated_at')->where(['id' => $id, 'year' => 2024])->first();
+            if (! empty($photoById)) {
+                $response = [
+                    'message' => 'Photo details fetched !!',
+                    'data' => $photoById,
+                ];
+
+                return $this->response('success', $response);
+            } else {
+                $response = [
+                    'message' => 'No records found !!',
+                ];
+
+                return $this->response('exception', $response);
+            }
+        } catch (\Exception $e) {
+            $response = [
+                'message' => $e->getMessage(),
+            ];
+
+            return $this->response('exception', $response);
+        }
+    }
+
+    public function create(Request $request)
     {
         $payload = $request->all();
         $validatorArray = [
-            'category_id' => 'required_without:video_url|nullable',
-            'img_caption' => 'required',
-            'video_url' => 'required_without:image|url',
-            'image' => 'required_without:video_url|file|mimes:jpg,jpeg,png|max:100048',
+            'category_id'   =>  'required_without:video_url|nullable',
+            'img_caption'   =>  'required',
+            'video_url'     =>  'required_without:image|url',
+            'image'         =>  'required_without:video_url|file|mimes:jpg,jpeg,png|max:100048',
+            'uploaded_date' =>  'nullable|date|date_format:Y-m-d',
         ];
         $messagesArray = [
-            'img_caption.required' => 'Camption is required !!',
-            'category_id.required_without' => 'Category is required, when video url is not present !!',
+            'img_caption.required'          =>  'Camption is required !!',
+            'category_id.required_without'  =>  'Category is required, when video url is not present !!',
+            'uploaded_date.required'        =>  'Uploaded date field is required !!',
+            'uploaded_date.date_format'     =>  'Uploaded date format should be Y-m-d !!',
         ];
         $validator = Validator::make($payload, $validatorArray, $messagesArray);
         if ($validator->fails()) {
@@ -120,48 +204,46 @@ class GalleryController extends Controller
                 $bucket->upload(fopen($tempPath, 'r'), ['name' => 'uploads/' . $originalFilename]);
                 $publicUrl = sprintf($this->gcsApi, $this->bucketName, $originalFilename);
                 $data = [
-                    'category_id' => $payload['category_id'],
-                    'img_caption' => isset($payload['img_caption']) ? $payload['img_caption'] : null,
-                    'image' => $originalFilename,
-                    'img_url' => $publicUrl,
-                    'year' => 2024,
+                    'category_id'   =>  $payload['category_id'],
+                    'img_caption'   =>  isset($payload['img_caption']) ? $payload['img_caption'] : null,
+                    'image'         =>  $originalFilename,
+                    'img_url'       =>  $publicUrl,
+                    'uploaded_date' =>  isset($payload['uploaded_date']) ? $payload['uploaded_date'] : date('Y-m-d'),
+                    'year'          =>  2024,
                 ];
                 $photo = Photo::create($data);
                 if ($photo) {
                     $response = [
-                        'message' => 'File uploaded successfully!!',
-                        'data' => $photo->latest()->first(),
+                        'message'   =>  'File uploaded successfully!!',
+                        'data'      =>  $photo->latest()->first(),
                     ];
-
                     return $this->response('success', $response);
                 } else {
                     $response = [
                         'message' => 'Something went wrong !!',
                     ];
-
                     return $this->response('exception', $response);
                 }
             } else {
 
                 $data = [
-                    'category_id' => 12,
-                    'img_caption' => $payload['img_caption'],
-                    'video_url' => $payload['video_url'],
-                    'year' => 2024,
+                    'category_id'   =>  12,
+                    'img_caption'   =>  $payload['img_caption'],
+                    'video_url'     =>  $payload['video_url'],
+                    'uploaded_date' =>  isset($payload['uploaded_date']) ? $payload['uploaded_date'] : date('Y-m-d'),
+                    'year'          =>  2024,
                 ];
                 $photo = Photo::create($data);
                 if ($photo) {
                     $response = [
-                        'message' => 'Video uploaded successfully!!',
-                        'data' => $photo->latest()->first(),
+                        'message'   =>  'Video uploaded successfully!!',
+                        'data'      =>  $photo->latest()->first(),
                     ];
-
                     return $this->response('success', $response);
                 } else {
                     $response = [
                         'message' => 'Something went wrong !!',
                     ];
-
                     return $this->response('exception', $response);
                 }
             }
@@ -174,70 +256,16 @@ class GalleryController extends Controller
         }
     }
 
-    public function allPhoto()
-    {
-        try {
-            $allPhotos = Photo::select('id', 'category_id', 'img_caption', 'image', 'img_url', 'video_url', 'status', 'year', 'created_at', 'updated_at', 'title', 'ceremony')->where(['year' => 2024])->orderBy('id', 'DESC')->get();
-            if (! empty($allPhotos)) {
-                $response = [
-                    'message' => 'All photos fetched !!',
-                    'data' => $allPhotos,
-                ];
-
-                return $this->response('success', $response);
-            } else {
-                $response = [
-                    'message' => 'Not found category !!',
-                ];
-
-                return $this->response('exception', $response);
-            }
-        } catch (\Exception $e) {
-            $response = [
-                'message' => $e->getMessage(),
-            ];
-
-            return $this->response('exception', $response);
-        }
-    }
-
-    public function photoById(Request $request, $id)
-    {
-        try {
-            $photoById = Photo::where(['id' => $id, 'year' => 2024])->first();
-            if (! empty($photoById)) {
-                $response = [
-                    'message' => 'Photo details fetched !!',
-                    'data' => $photoById,
-                ];
-
-                return $this->response('success', $response);
-            } else {
-                $response = [
-                    'message' => 'No records found !!',
-                ];
-
-                return $this->response('exception', $response);
-            }
-        } catch (\Exception $e) {
-            $response = [
-                'message' => $e->getMessage(),
-            ];
-
-            return $this->response('exception', $response);
-        }
-    }
-
-    public function activeInactive(Request $request, $id)
+    public function update(Request $request, $id)
     {
         $payload = $request->all();
-
         $validatorArray = [
-            'category_id' => '',
-            'img_caption' => '',
-            'video_url' => '',
-            'image' => 'file|mimes:jpg,jpeg,png|max:100048',
-            'status' => 'in:0,1',
+            'category_id'   =>  '',
+            'img_caption'   =>  '',
+            'video_url'     =>  '',
+            'image'         =>  'file|mimes:jpg,jpeg,png|max:100048',
+            'status'        =>  'in:0,1',
+            'uploaded_date' =>  'nullable|date|date_format:Y-m-d',
         ];
         $messagesArray = [];
         $validator = Validator::make($payload, $validatorArray, $messagesArray);
@@ -245,12 +273,12 @@ class GalleryController extends Controller
             $output = [
                 'message' => $validator->errors()->first(),
             ];
-
             return $this->response('validatorerrors', $output);
         }
 
         try {
             $photoToUpdate = Photo::where(['year' => 2024])->find($id);
+
             if (! empty($photoToUpdate)) {
                 if ($request->hasFile('image')) {
                     $file = $request->file('image');
@@ -273,33 +301,33 @@ class GalleryController extends Controller
                     $bucket->upload(fopen($tempPath, 'r'), ['name' => 'uploads/' . $originalFilename]);
                     $publicUrl = sprintf($this->gcsApi, $this->bucketName, $originalFilename);
                     $data = [
-                        'category_id' => isset($payload['category_id']) ? $payload['category_id'] : $photoToUpdate->category_id,
-                        'img_caption' => isset($payload['img_caption']) ? $payload['img_caption'] : $photoToUpdate->img_caption,
-                        'image' => $originalFilename,
-                        'img_url' => $publicUrl,
-                        'status' => isset($payload['status']) ? $payload['status'] : $photoToUpdate->status,
+                        'category_id'   =>  isset($payload['category_id']) ? $payload['category_id'] : $photoToUpdate->category_id,
+                        'img_caption'   =>  isset($payload['img_caption']) ? $payload['img_caption'] : $photoToUpdate->img_caption,
+                        'image'         =>  $originalFilename,
+                        'img_url'       =>  $publicUrl,
+                        'status'        =>  isset($payload['status']) ? $payload['status'] : $photoToUpdate->status,
+                        'uploaded_date' =>  isset($payload['uploaded_date']) ? $payload['uploaded_date'] : $photoToUpdate->uploaded_date,
                     ];
-
                     $photo = Photo::where('id', $id)->update($data);
                     if ($photo) {
                         $response = [
                             'message' => 'File uploaded successfully!!',
                             'data' => Photo::find($id),
                         ];
-
                         return $this->response('success', $response);
                     } else {
                         $response = [
                             'message' => 'Something went wrong !!',
                         ];
-
                         return $this->response('exception', $response);
                     }
                 } else {
                     $data = [
-                        'category_id' => $photoToUpdate->category_id,
-                        'video_url' => isset($payload['video_url']) ? $payload['video_url'] : $photoToUpdate->video_url,
-                        'status' => isset($payload['status']) ? $payload['status'] : $photoToUpdate->status,
+                        'category_id'   =>  $photoToUpdate->category_id,
+                        'img_caption'   =>  isset($payload['img_caption']) ? $payload['img_caption'] : $photoToUpdate->img_caption,
+                        'video_url'     =>  isset($payload['video_url']) ? $payload['video_url'] : $photoToUpdate->video_url,
+                        'status'        =>  isset($payload['status']) ? $payload['status'] : $photoToUpdate->status,
+                        'uploaded_date' =>  isset($payload['uploaded_date']) ? $payload['uploaded_date'] : $photoToUpdate->uploaded_date,
                     ];
                     $photo = Photo::where('id', $id)->update($data);
                     if ($photo) {
@@ -307,13 +335,11 @@ class GalleryController extends Controller
                             'message' => 'Data updated successfully !!',
                             'data' => Photo::find($id),
                         ];
-
                         return $this->response('success', $response);
                     } else {
                         $response = [
                             'message' => 'Something went wrong !!',
                         ];
-
                         return $this->response('exception', $response);
                     }
                 }
@@ -321,46 +347,17 @@ class GalleryController extends Controller
                 $response = [
                     'message' => 'Records not found !!',
                 ];
-
                 return $this->response('exception', $response);
             }
         } catch (\Exception $e) {
             $response = [
                 'message' => $e->getMessage(),
             ];
-
             return $this->response('exception', $response);
         }
     }
 
-    public function photoCategory()
-    {
-        try {
-            $categories = PhotoCategory::select('id', 'category')->get();
-            if (! empty($categories)) {
-                $response = [
-                    'message' => 'Category fetched !!',
-                    'data' => $categories,
-                ];
-
-                return $this->response('success', $response);
-            } else {
-                $response = [
-                    'message' => 'Not found category !!',
-                ];
-
-                return $this->response('exception', $response);
-            }
-        } catch (\Exception $e) {
-            $response = [
-                'message' => $e->getMessage(),
-            ];
-
-            return $this->response('exception', $response);
-        }
-    }
-
-    public function deleteGalleryPhoto($id)
+    public function delete($id)
     {
         try {
             $getPhoto = Photo::find($id);
