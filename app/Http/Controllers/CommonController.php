@@ -353,10 +353,10 @@ class CommonController extends Controller
             '2024-11-27',
             '2024-11-28',
         ];
-        $payload = $request->all();
-        $year = isset($payload['year']) ? $payload['year'] : null;
-        $categories = PhotoCategory::select('id', 'category')->get();
-        $gallery = Photo::where('status', 1)
+        $payload    =   $request->all();
+        $year       =   isset($payload['year']) ? $payload['year'] : null;
+        $categories =   PhotoCategory::select('id', 'category')->get();
+        $gallery    =   Photo::where('status', 1)
             ->where('year', $year)
             ->where('img_url', '!=', '')
             ->whereNotNull('category_id')
@@ -365,7 +365,7 @@ class CommonController extends Controller
         return view('gallery.new-gallery', [
             'gallery'       =>  $gallery,
             'categories'    =>  $categories,
-            'dates'         =>  $dates,  // Pass the dates array
+            'dates'         =>  $dates,
         ]);
     }
 
@@ -378,22 +378,9 @@ class CommonController extends Controller
         if (! empty($date)) {
             $query->whereDate('uploaded_date', $date);
         }
-        switch ($category) {
-            case '1':
-            case '2':
-            case '3':
-            case '4':
-            case '5':
-            case '6':
-            case '7':
-            case '8':
-            case '9':
-            case '10':
-            case '11':
-                $query->where('category_id', $category);
-                break;
-            default:
-                break;
+        $validCategories = PhotoCategory::pluck('id')->toArray();
+        if (in_array($category, $validCategories)) {
+            $query->where('category_id', $category);
         }
         $query->orderBy('id', 'DESC');
         $gallery    =   $query->get();
@@ -426,11 +413,10 @@ class CommonController extends Controller
         $categories =   PhotoCategory::select('id', 'category')->get();
         $gallery    =   Photo::select('id', 'img_caption', 'year', 'video_url')->where(['status' => 1, 'year' => $year, 'category_id' => 12])
             ->where('video_url', '!=', '')
-
             ->paginate(12);
         return view('gallery.new-gallery-videos', [
-            'gallery' => $gallery,
-            'categories' => $categories,
+            'gallery'       =>  $gallery,
+            'categories'    =>  $categories,
         ]);
     }
 
