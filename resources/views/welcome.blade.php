@@ -43,10 +43,7 @@
         'datas' => app(\App\Http\Controllers\CommonController::class)->newsUpdate1(),
     ])
 
-    <!-- Highlights Section-->
-    @include('pages.highlights', [
-        'datas' => app(\App\Http\Controllers\CommonController::class)->highlights(),
-    ])
+
 
     <!-- International competition Section-->
     @include('pages.international-competition', [
@@ -104,6 +101,11 @@
     <!-- Social Media Corner  -->
     @include('pages.social-media-cornor')
     <!-- Social Media Corner end  -->
+
+    <!-- Highlights Section-->
+    @include('pages.highlights', [
+        'datas' => app(\App\Http\Controllers\CommonController::class)->highlights(),
+    ])
 
     <!-- Message -->
     @include('pages.message')
