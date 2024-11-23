@@ -191,6 +191,14 @@
             <div class="user-profile-icon">
                 <ul>
                     <li>
+                        <img src="{{ asset('public/images/master-class/Shekhar Kapur.jpg') }}" alt="image"
+                            class="img-fluid">
+                    </li>
+                    <li>
+                        <img src="{{ asset('public/images/master-class/Manisha Koirala.jpg') }}" alt="image"
+                            class="img-fluid">
+                    </li>
+                    <li>
                         <img src="{{ asset('public/images/master-class/Lucy Walker.jpg') }}" alt="image"
                             class="img-fluid">
                     </li>
