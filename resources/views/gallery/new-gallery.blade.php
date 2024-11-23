@@ -62,7 +62,7 @@
         </form>
 
         <!-- Gallery Display -->
-        <div class="gallery mt-4">
+        <div class="gallery mt-4 gallery" id="lightgallery">
             @forelse ($gallery as $item)
                 <div class="grid-item">
                     <a href="{{ $item->img_url }}" target="_blank">
@@ -79,42 +79,37 @@
             {{ $gallery->appends(request()->input())->links() }}
         </div>
     </div>
-
-    <script>
-        // Change tab and update the gallery
-        function changeTab(tab, date) {
-            // Remove 'active' class from all tabs
-            document.querySelectorAll('.nav-link').forEach(el => el.classList.remove('active'));
-
-            // Add 'active' class to clicked tab
-            tab.classList.add('active');
-
-            // Update the filter form date field
-            const form = document.getElementById('filterForm');
-            let dateInput = form.querySelector('input[name="date"]');
-            if (!dateInput) {
-                dateInput = document.createElement('input');
-                dateInput.type = 'hidden';
-                dateInput.name = 'date';
-                form.appendChild(dateInput);
-            }
-            dateInput.value = date;
-
-            // Submit the form to apply the new filter
-            form.submit();
-        }
-
-        // Reset all filters and show all images
-        function resetFilters() {
-            const form = document.getElementById('filterForm');
-            let dateInput = form.querySelector('input[name="date"]');
-            if (dateInput) dateInput.remove(); // Remove the hidden date input field
-
-            // Reset the category filter
-            document.getElementById('categorySelect').value = ''; // Reset category selection
-
-            // Submit the form to reload the page without any filters
-            form.submit();
-        }
-    </script>
 @endsection
+<script>
+    // Change tab and update the gallery
+    function changeTab(tab, date) {
+        // Remove 'active' class from all tabs
+        document.querySelectorAll('.nav-link').forEach(el => el.classList.remove('active'));
+
+        // Add 'active' class to clicked tab
+        tab.classList.add('active');
+
+        // Update the filter form date field
+        const form = document.getElementById('filterForm');
+        let dateInput = form.querySelector('input[name="date"]');
+        if (!dateInput) {
+            dateInput = document.createElement('input');
+            dateInput.type = 'hidden';
+            dateInput.name = 'date';
+            form.appendChild(dateInput);
+        }
+        dateInput.value = date;
+
+        // Submit the form to apply the new filter
+        form.submit();
+    }
+
+    // Reset all filters and show all images
+    function resetFilters() {
+        const form = document.getElementById('filterForm');
+        let dateInput = form.querySelector('input[name="date"]');
+        if (dateInput) dateInput.remove();
+        document.getElementById('categorySelect').value = '';
+        form.submit();
+    }
+</script>
