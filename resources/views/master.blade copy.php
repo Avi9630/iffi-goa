@@ -439,7 +439,7 @@
                     },
                     {
                         name: "Bharatbala",
-                        description: "Bharath Bala is an Indian film director, screenwriter, and film producer based in Chennai, Tamil Nadu, known for producing the acclaimed album Vande Mataram and Jana Gana Mana Video, as well as heading BharatBala Productions; he directed the short film Hari Om in 2004, the music video for the official song of the 2010 Commonwealth Games, Jiyo Utho Bado Jeeto, and the opening ceremony of the games, and in 2013, he completed his first feature film, Maryan.",
+                        description: "Bharatbala is an Indian film director, screenwriter, and film producer based in Chennai, Tamil Nadu, known for producing the acclaimed album Vande Mataram and Jana Gana Mana Video, as well as heading Bharatbala Productions; he directed the short film Hari Om in 2004, the music video for the official song of the 2010 Commonwealth Games, Jiyo Utho Bado Jeeto, and the opening ceremony of the games, and in 2013, he completed his first feature film, Maryan.",
                         image: "{{ asset('public/images/master-class/Bharath Bala.jpg') }}"
                     },
                 ]
