@@ -21,7 +21,13 @@ class CommonController extends Controller
     public function highlights()
     {
         $datas = DB::table('highlights')->where(['status' => 1])->get();
+        return $datas;
+    }
 
+    public function cmotHighlights()
+    {
+        $datas = Photo::select('id', 'img_url', 'image')
+            ->where(['category_id' => 9, 'status' => 1, 'year' => 2024, 'highlights' => 1])->get();
         return $datas;
     }
 
