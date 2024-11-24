@@ -71,41 +71,41 @@ Route::get('press-relese-list', [ApiNewController::class, 'pressReleseList'])->n
 // Route::get('get-gallery/{id}', [ApiNewController::class, 'getGalleryById'])->name('get-galleryById');
 
 // The Peacock
-Route::get('thePeacock-List', [ApiNewController::class, 'thePeacockList'])->name('thePeacock-List');
-Route::get('get-thePeacock/{id}', [ApiNewController::class, 'getthePeacockById'])->name('get-thePeacockById');
-Route::post('update-thePeacock/{id}', [ApiNewController::class, 'updateThePeacock'])->name('update-thePeacock');
-Route::post('create-thePeacock', [ApiNewController::class, 'createThePeacock'])->name('create-thePeacock');
-Route::delete('delete-thePeacock/{id}', [ApiNewController::class, 'deleteThePeacock'])->name('delete-thePeacock');
+Route::get('thePeacock-List',                   [ApiNewController::class, 'thePeacockList'])->name('thePeacock-List');
+Route::get('get-thePeacock/{id}',               [ApiNewController::class, 'getthePeacockById'])->name('get-thePeacockById');
+Route::post('update-thePeacock/{id}',           [ApiNewController::class, 'updateThePeacock'])->name('update-thePeacock');
+Route::post('create-thePeacock',                [ApiNewController::class, 'createThePeacock'])->name('create-thePeacock');
+Route::delete('delete-thePeacock/{id}',         [ApiNewController::class, 'deleteThePeacock'])->name('delete-thePeacock');
 
 // MasterClass
-Route::get('master_classes', [ApiNewController::class, 'getMasterClass'])->name('master_classes ');
-Route::post('master_classes_Update/{id}', [ApiNewController::class, 'updateMasterClass'])->name('master_classes_Update');
-Route::get('master_classes_details/{id}', [ApiNewController::class, 'getMasterClassById'])->name('master_classes_details');
-Route::post('master_classes_create', [ApiNewController::class, 'createMasterClass'])->name('master_classes_create');
-// Route::delete('master_classes_delete/{id}', [ApiNewController::class, 'master_classes Delete'])->name('master_classes -delete');
+Route::get('master_classes',                    [ApiNewController::class, 'getMasterClass'])->name('master_classes ');
+Route::post('master_classes_Update/{id}',       [ApiNewController::class, 'updateMasterClass'])->name('master_classes_Update');
+Route::get('master_classes_details/{id}',       [ApiNewController::class, 'getMasterClassById'])->name('master_classes_details');
+Route::post('master_classes_create',            [ApiNewController::class, 'createMasterClass'])->name('master_classes_create');
+// Route::delete('master_classes_delete/{id}',  [ApiNewController::class, 'master_classes Delete'])->name('master_classes -delete');
 
 // Cureted Section 2024
-Route::get('get-CuretedSection2024', [ApiNewController::class, 'curetedSection2024'])->name('get-CuretedSection2024');
-Route::post('update-curetedsection2024/{id}', [ApiNewController::class, 'updateCuretedsection2024'])->name('update-curetedsection2024');
-Route::post('create-Curetedsection2024', [ApiNewController::class, 'createCuretedsection2024'])->name('create-Curetedsection2024');
-Route::get('get-curetedsection2024-ById/{id}', [ApiNewController::class, 'curetedsection2024ById'])->name('get-curetedsection2024-ById');
-Route::get('get-CuretedSection2024', [ApiNewController::class, 'CuretedSection2024'])->name('get-CuretedSection2024');
+Route::get('get-CuretedSection2024',            [ApiNewController::class, 'curetedSection2024'])->name('get-CuretedSection2024');
+Route::post('update-curetedsection2024/{id}',   [ApiNewController::class, 'updateCuretedsection2024'])->name('update-curetedsection2024');
+Route::post('create-Curetedsection2024',        [ApiNewController::class, 'createCuretedsection2024'])->name('create-Curetedsection2024');
+Route::get('get-curetedsection2024-ById/{id}',  [ApiNewController::class, 'curetedsection2024ById'])->name('get-curetedsection2024-ById');
+Route::get('get-CuretedSection2024',            [ApiNewController::class, 'CuretedSection2024'])->name('get-CuretedSection2024');
 
 // SPONSORS-PARTNERS
 
-Route::get('sponsors-partners-list', [ApiNewController::class, 'thePartnerSponsor'])->name('thePeacock-List');
-Route::post('create-sponsors-partners', [ApiNewController::class, 'createPartnerSponsor'])->name('create-sponsors-partners');
-Route::post('update-sponsors-partners/{id}', [ApiNewController::class, 'updatePartnerSponsor'])->name('update-sponsors-partners');
-Route::get('get-sponsors-partners-by-id/{id}', [ApiNewController::class, 'getPartnerSponsorById'])->name('get-sponsors-partners-by-id');
-Route::get('delete-sponsors-partners/{id}', [ApiNewController::class, 'deletePartnerSponsor'])->name('delete-sponsors-partners');
+Route::get('sponsors-partners-list',            [ApiNewController::class, 'thePartnerSponsor'])->name('thePeacock-List');
+Route::post('create-sponsors-partners',         [ApiNewController::class, 'createPartnerSponsor'])->name('create-sponsors-partners');
+Route::post('update-sponsors-partners/{id}',    [ApiNewController::class, 'updatePartnerSponsor'])->name('update-sponsors-partners');
+Route::get('get-sponsors-partners-by-id/{id}',  [ApiNewController::class, 'getPartnerSponsorById'])->name('get-sponsors-partners-by-id');
+Route::get('delete-sponsors-partners/{id}',     [ApiNewController::class, 'deletePartnerSponsor'])->name('delete-sponsors-partners');
 
 //INDIAN-PANORAMA
 
-Route::get('indian-panorama-list/{year}', [IndianPanoramaController::class, 'indianPanoramaList'])->name('indian-panorama-list');
-Route::post('create-indian-panorama', [IndianPanoramaController::class, 'createIndianPanorama'])->name('create-indian-panorama');
-Route::post('update-indian-panorama', [IndianPanoramaController::class, 'updateIndianPanorama'])->name('update-indian-panorama');
-Route::post('delete-indian-panorama', [IndianPanoramaController::class, 'deleteIndianPanorama'])->name('delete-indian-panorama');
-Route::post('active-deactive', [IndianPanoramaController::class, 'activeDeactive'])->name('active-deactive');
+Route::get('indian-panorama-list/{year}',       [IndianPanoramaController::class, 'indianPanoramaList'])->name('indian-panorama-list');
+Route::post('create-indian-panorama',           [IndianPanoramaController::class, 'createIndianPanorama'])->name('create-indian-panorama');
+Route::post('update-indian-panorama',           [IndianPanoramaController::class, 'updateIndianPanorama'])->name('update-indian-panorama');
+Route::post('delete-indian-panorama',           [IndianPanoramaController::class, 'deleteIndianPanorama'])->name('delete-indian-panorama');
+Route::post('active-deactive',                  [IndianPanoramaController::class, 'activeDeactive'])->name('active-deactive');
 
 // PRESS-RELEASE
 Route::post('add-press-release', [ApiController::class, 'addPressRelease'])->name('add-press-release');
