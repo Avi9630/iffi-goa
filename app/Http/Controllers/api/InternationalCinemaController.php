@@ -84,6 +84,7 @@ class InternationalCinemaController extends Controller
             'language' => 'required|string|max:255',
             'slug' => 'required|string|max:255',
             'year' => 'required|string|max:4',
+            'award_year' => 'required|string|max:4',
             'img_src_file' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:10050',
             'status' => 'required|boolean',
         ];
@@ -103,8 +104,8 @@ class InternationalCinemaController extends Controller
                 $destinationPath = 'images/cureted-section';
                 $originalFilename = $file->getClientOriginalName();
                 $extension = $file->getClientOriginalExtension();
-                $hashedFilename = substr(md5($originalFilename . time()), 0, 20) . '.' . $extension;
-                $fullFilePath = public_path($destinationPath . '/' . $hashedFilename);
+                $hashedFilename = substr(md5($originalFilename.time()), 0, 20).'.'.$extension;
+                $fullFilePath = public_path($destinationPath.'/'.$hashedFilename);
                 if (File::exists($fullFilePath)) {
                     $response = [
                         'message' => 'File with the same name already exists.',
@@ -123,6 +124,7 @@ class InternationalCinemaController extends Controller
                     'language' => $payload['language'],
                     'slug' => $payload['slug'],
                     'year' => $payload['year'],
+                    'award_year' => $payload['award_year'],
                     'status' => $payload['status'],
                     'img_src' => $hashedFilename,
                     'image_name' => $hashedFilename,
@@ -156,16 +158,17 @@ class InternationalCinemaController extends Controller
 
         $payload = $request->all();
         $validatorArray = [
-            'curated_section_id'    =>  'required|string|max:255',
-            'title'                 =>  '',
-            'award'                 =>  '',
-            'directed_by'           =>  '',
-            'country_of_origin'     =>  '',
-            'language'              =>  '',
-            'slug'                  =>  '',
-            'year'                  =>  'numeric',
-            'img_src_file'          =>  'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'status'                =>  'required|boolean',
+            'curated_section_id' => 'required|string|max:255',
+            'title' => '',
+            'award' => '',
+            'directed_by' => '',
+            'country_of_origin' => '',
+            'language' => '',
+            'slug' => '',
+            'year' => 'numeric',
+            'award_year' => 'numeric',
+            'img_src_file' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'status' => 'required|boolean',
         ];
         $messagesArray = [];
         $validator = Validator::make($payload, $validatorArray, $messagesArray);
@@ -185,8 +188,8 @@ class InternationalCinemaController extends Controller
                     $destinationPath = 'images/cureted-section';
                     $originalFilename = $file->getClientOriginalName();
                     $extension = $file->getClientOriginalExtension();
-                    $hashedFilename = substr(md5($originalFilename . time()), 0, 20) . '.' . $extension;
-                    $fullFilePath = public_path($destinationPath . '/' . $hashedFilename);
+                    $hashedFilename = substr(md5($originalFilename.time()), 0, 20).'.'.$extension;
+                    $fullFilePath = public_path($destinationPath.'/'.$hashedFilename);
 
                     if (File::exists($fullFilePath)) {
                         $response = [
@@ -209,6 +212,7 @@ class InternationalCinemaController extends Controller
                         'language' => isset($payload['language']) ? $payload['language'] : $internationalCinema['language'],
                         'slug' => isset($payload['slug']) ? $payload['slug'] : $internationalCinema['slug'],
                         'year' => isset($payload['year']) ? $payload['year'] : $internationalCinema['year'],
+                        'award_year' => isset($payload['award_year']) ? $payload['award_year'] : $internationalCinema['award_year'],
                         'status' => isset($payload['status']) ? $payload['status'] : $internationalCinema['status'],
                     ];
                     $internationalCinema->update($data);
@@ -230,6 +234,7 @@ class InternationalCinemaController extends Controller
                         'language' => isset($payload['language']) ? $payload['language'] : $internationalCinema['language'],
                         'slug' => isset($payload['slug']) ? $payload['slug'] : $internationalCinema['slug'],
                         'year' => isset($payload['year']) ? $payload['year'] : $internationalCinema['year'],
+                        'award_year' => isset($payload['award_year']) ? $payload['award_year'] : $internationalCinema['award_year'],
                         'status' => isset($payload['status']) ? $payload['status'] : $internationalCinema['status'],
                     ];
                     $internationalCinema->update($data);
