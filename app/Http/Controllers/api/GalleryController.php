@@ -20,7 +20,7 @@ class GalleryController extends Controller
     {
         $this->projectId = env('GOOGLE_CLOUD_PROJECT_ID');
         $this->bucketName = env('GOOGLE_CLOUD_STORAGE_BUCKET');
-        $this->keyFilePath = storage_path('app/keys/' . env('GOOGLE_APPLICATION_CREDENTIALS'));
+        $this->keyFilePath = storage_path('app/keys/'.env('GOOGLE_APPLICATION_CREDENTIALS'));
         $this->gcsApi = env('GOOGLE_CLOUD_STORAGE_API_URI');
     }
 
@@ -59,7 +59,7 @@ class GalleryController extends Controller
                 // Upload the file to the GCS bucket
                 $object = $bucket->upload(
                     fopen($fileTmpPath, 'r'),
-                    ['name' => 'uploads/' . $fileName] // Save inside 'uploads' folder in GCS
+                    ['name' => 'uploads/'.$fileName] // Save inside 'uploads' folder in GCS
                 );
 
                 // Get the public URL (optional)
@@ -68,7 +68,7 @@ class GalleryController extends Controller
                 echo 'File uploaded successfully!<br>';
                 echo "File URL: <a href='$publicUrl' target='_blank'>$publicUrl</a>";
             } catch (Exception $e) {
-                echo 'Error uploading file: ' . $e->getMessage();
+                echo 'Error uploading file: '.$e->getMessage();
             }
         } else {
             echo 'No file uploaded.';
@@ -105,7 +105,7 @@ class GalleryController extends Controller
     public function allPhoto()
     {
         try {
-            $allPhotos = Photo::select('id', 'category_id', 'img_caption', 'image', 'img_url', 'video_url', 'status', 'year', 'uploaded_date', 'created_at', 'updated_at', 'title', 'ceremony')->where(['year' => 2024])->orderBy('id', 'DESC')->get();
+            $allPhotos = Photo::select('id', 'category_id', 'img_caption', 'image', 'img_url', 'video_url', 'status', 'year', 'uploaded_date', 'created_at', 'updated_at', 'title', 'highlights', 'ceremony')->where(['year' => 2024])->orderBy('id', 'DESC')->get();
             if (! empty($allPhotos)) {
                 $response = [
                     'message' => 'All photos fetched !!',
@@ -132,7 +132,8 @@ class GalleryController extends Controller
     public function getById(Request $request, $id)
     {
         try {
-            $photoById = Photo::select('id', 'category_id', 'img_caption', 'image', 'img_url', 'video_url', 'status', 'year', 'uploaded_date', 'created_at', 'updated_at')->where(['id' => $id, 'year' => 2024])->first();
+            $photoById = Photo::select('id', 'category_id', 'img_caption', 'image', 'img_url', 'highlights', 'video_url', 'status', 'year', 'uploaded_date', 'created_at', 'updated_at')->where(['id' => $id, 'year' => 2024])->first();
+            // $photoById = Photo::select('*')->where(['id' => $id, 'year' => 2024])->first();
             if (! empty($photoById)) {
                 $response = [
                     'message' => 'Photo details fetched !!',
@@ -160,27 +161,28 @@ class GalleryController extends Controller
     {
         $payload = $request->all();
         $validatorArray = [
-            'category_id'   =>  'required_without:video_url|nullable',
-            'img_caption'   =>  'required',
-            'video_url'     =>  'required_without:image|url',
-            'image'         =>  'required_without:video_url|file|mimes:jpg,jpeg,png|max:100048',
+            'category_id' => 'required_without:video_url|nullable',
+            'img_caption' => 'required',
+            'video_url' => 'required_without:image|url',
+            'image' => 'required_without:video_url|file|mimes:jpg,jpeg,png|max:100048',
         ];
         $messagesArray = [
-            'img_caption.required'          =>  'Camption is required !!',
-            'category_id.required_without'  =>  'Category is required, when video url is not present !!',
+            'img_caption.required' => 'Camption is required !!',
+            'category_id.required_without' => 'Category is required, when video url is not present !!',
         ];
         $validator = Validator::make($payload, $validatorArray, $messagesArray);
         if ($validator->fails()) {
             $output = [
                 'message' => $validator->errors()->first(),
             ];
+
             return $this->response('validatorerrors', $output);
         }
 
-        $uploaded_date  =   isset($payload['uploaded_date']) ? $payload['uploaded_date'] : date('Y-m-d');
+        $uploaded_date = isset($payload['uploaded_date']) ? $payload['uploaded_date'] : date('Y-m-d');
         if ($uploaded_date) {
-            $date           =   new \DateTime($uploaded_date);
-            $uploaded_date  =   $date->format('Y-m-d');
+            $date = new \DateTime($uploaded_date);
+            $uploaded_date = $date->format('Y-m-d');
         } else {
             $uploaded_date = date('Y-m-d');
         }
@@ -205,17 +207,17 @@ class GalleryController extends Controller
                     'httpClient' => $guzzleClient,
                 ]);
                 $bucket = $storage->bucket($this->bucketName);
-                $bucket->upload(fopen($tempPath, 'r'), ['name' => 'uploads/' . $originalFilename]);
+                $bucket->upload(fopen($tempPath, 'r'), ['name' => 'uploads/'.$originalFilename]);
                 $publicUrl = sprintf($this->gcsApi, $this->bucketName, $originalFilename);
 
                 $data = [
-                    'category_id'   =>  $payload['category_id'],
-                    'img_caption'   =>  $payload['img_caption'],
-                    'image'         =>  $originalFilename,
-                    'img_url'       =>  $publicUrl,
-                    'uploaded_date' =>  $uploaded_date,
-                    'highlights'    =>  isset($payload['highlights']) ? $payload['highlights'] : 0,
-                    'year'          =>  2024,
+                    'category_id' => $payload['category_id'],
+                    'img_caption' => $payload['img_caption'],
+                    'image' => $originalFilename,
+                    'img_url' => $publicUrl,
+                    'uploaded_date' => $uploaded_date,
+                    'highlights' => isset($payload['highlights']) ? $payload['highlights'] : 0,
+                    'year' => 2024,
                 ];
 
                 $photo = Photo::create($data);
@@ -224,22 +226,24 @@ class GalleryController extends Controller
                         'message' => 'File uploaded successfully!!',
                         'data' => $photo->latest()->first(),
                     ];
+
                     return $this->response('success', $response);
                 } else {
                     $response = [
                         'message' => 'Something went wrong !!',
                     ];
+
                     return $this->response('exception', $response);
                 }
             } else {
 
                 $data = [
-                    'category_id'   => 12,
-                    'img_caption'   => $payload['img_caption'],
-                    'video_url'     => $payload['video_url'],
+                    'category_id' => 12,
+                    'img_caption' => $payload['img_caption'],
+                    'video_url' => $payload['video_url'],
                     'uploaded_date' => $uploaded_date,
-                    'highlights'    =>  isset($payload['highlights']) ? $payload['highlights'] : 0,
-                    'year'          => 2024,
+                    'highlights' => isset($payload['highlights']) ? $payload['highlights'] : 0,
+                    'year' => 2024,
                 ];
                 $photo = Photo::create($data);
                 if ($photo) {
@@ -247,11 +251,13 @@ class GalleryController extends Controller
                         'message' => 'Video uploaded successfully!!',
                         'data' => $photo->latest()->first(),
                     ];
+
                     return $this->response('success', $response);
                 } else {
                     $response = [
                         'message' => 'Something went wrong !!',
                     ];
+
                     return $this->response('exception', $response);
                 }
             }
@@ -259,6 +265,7 @@ class GalleryController extends Controller
             $response = [
                 'message' => $e->getMessage(),
             ];
+
             return $this->response('exception', $response);
         }
     }
@@ -315,16 +322,16 @@ class GalleryController extends Controller
                         'httpClient' => $guzzleClient,
                     ]);
                     $bucket = $storage->bucket($this->bucketName);
-                    $bucket->upload(fopen($tempPath, 'r'), ['name' => 'uploads/' . $originalFilename]);
+                    $bucket->upload(fopen($tempPath, 'r'), ['name' => 'uploads/'.$originalFilename]);
                     $publicUrl = sprintf($this->gcsApi, $this->bucketName, $originalFilename);
                     $data = [
-                        'category_id'   =>  isset($payload['category_id']) ? $payload['category_id'] : $photoToUpdate->category_id,
-                        'img_caption'   =>  isset($payload['img_caption']) ? $payload['img_caption'] : $photoToUpdate->img_caption,
-                        'image'         =>  $originalFilename,
-                        'img_url'       =>  $publicUrl,
-                        'status'        =>  isset($payload['status']) ? $payload['status'] : $photoToUpdate->status,
-                        'uploaded_date' =>  Photo::dateFormate(isset($payload['uploaded_date']) ? $payload['uploaded_date'] : $photoToUpdate->uploaded_date),
-                        'highlights'    =>  isset($payload['highlights']) ? $payload['highlights'] : $photoToUpdate->highlights,
+                        'category_id' => isset($payload['category_id']) ? $payload['category_id'] : $photoToUpdate->category_id,
+                        'img_caption' => isset($payload['img_caption']) ? $payload['img_caption'] : $photoToUpdate->img_caption,
+                        'image' => $originalFilename,
+                        'img_url' => $publicUrl,
+                        'status' => isset($payload['status']) ? $payload['status'] : $photoToUpdate->status,
+                        'uploaded_date' => Photo::dateFormate(isset($payload['uploaded_date']) ? $payload['uploaded_date'] : $photoToUpdate->uploaded_date),
+                        'highlights' => isset($payload['highlights']) ? $payload['highlights'] : $photoToUpdate->highlights,
                     ];
                     $photo = Photo::where('id', $id)->update($data);
                     if ($photo) {
@@ -332,21 +339,23 @@ class GalleryController extends Controller
                             'message' => 'File uploaded successfully!!',
                             'data' => Photo::find($id),
                         ];
+
                         return $this->response('success', $response);
                     } else {
                         $response = [
                             'message' => 'Something went wrong !!',
                         ];
+
                         return $this->response('exception', $response);
                     }
                 } else {
                     $data = [
-                        'category_id'   =>  isset($payload['category_id']) ? $payload['category_id'] : $photoToUpdate->category_id,
-                        'img_caption'   =>  isset($payload['img_caption']) ? $payload['img_caption'] : $photoToUpdate->img_caption,
-                        'video_url'     =>  isset($payload['video_url']) ? $payload['video_url'] : $photoToUpdate->video_url,
-                        'status'        =>  isset($payload['status']) ? $payload['status'] : $photoToUpdate->status,
-                        'uploaded_date' =>  Photo::dateFormate(isset($payload['uploaded_date']) ? $payload['uploaded_date'] : $photoToUpdate->uploaded_date),
-                        'highlights'    =>  isset($payload['highlights']) ? $payload['highlights'] : $photoToUpdate->highlights,
+                        'category_id' => isset($payload['category_id']) ? $payload['category_id'] : $photoToUpdate->category_id,
+                        'img_caption' => isset($payload['img_caption']) ? $payload['img_caption'] : $photoToUpdate->img_caption,
+                        'video_url' => isset($payload['video_url']) ? $payload['video_url'] : $photoToUpdate->video_url,
+                        'status' => isset($payload['status']) ? $payload['status'] : $photoToUpdate->status,
+                        'uploaded_date' => Photo::dateFormate(isset($payload['uploaded_date']) ? $payload['uploaded_date'] : $photoToUpdate->uploaded_date),
+                        'highlights' => isset($payload['highlights']) ? $payload['highlights'] : $photoToUpdate->highlights,
                     ];
                     $photo = Photo::where('id', $id)->update($data);
                     if ($photo) {
@@ -354,11 +363,13 @@ class GalleryController extends Controller
                             'message' => 'Data updated successfully !!',
                             'data' => Photo::find($id),
                         ];
+
                         return $this->response('success', $response);
                     } else {
                         $response = [
                             'message' => 'Something went wrong !!',
                         ];
+
                         return $this->response('exception', $response);
                     }
                 }
