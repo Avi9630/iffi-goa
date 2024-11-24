@@ -75,7 +75,7 @@
         </div>
 
         <!-- Pagination -->
-        <div class="mt-4">
+        <div class="mt-4 gallery-pageni">
             {{ $gallery->appends(request()->input())->links() }}
         </div>
     </div>

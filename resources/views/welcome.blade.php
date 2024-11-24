@@ -43,11 +43,6 @@
         'datas' => app(\App\Http\Controllers\CommonController::class)->newsUpdate1(),
     ])
 
-    <!-- Highlights Section-->
-    @include('pages.highlights', [
-        'datas' => app(\App\Http\Controllers\CommonController::class)->highlights(),
-    ])
-
     <!-- International competition Section-->
     @include('pages.international-competition', [
         'internationalCinemas' => app(\App\Http\Controllers\CommonController::class)->internationalCinema(),
@@ -83,6 +78,7 @@
             </div>
         </div>
     </section> --}}
+
     {{-- 55th --}}
     <section>
         <div class="container mb-5">
@@ -100,6 +96,18 @@
 
     <!-- Life Time Achievement Award  Section-->
     @include('pages.lifetime-achievement-award')
+
+    <br><br>
+
+    <!-- Highlights Section-->
+    @include('pages.highlights', [
+        'datas' => app(\App\Http\Controllers\CommonController::class)->highlights(),
+    ])
+
+    <!-- Highlights Creative Minds Of Tomorrow-->
+    @include('pages.cmot-highlights', [
+        'datas' => app(\App\Http\Controllers\CommonController::class)->cmotHighlights(),
+    ])
 
     <!-- Social Media Corner  -->
     @include('pages.social-media-cornor')
