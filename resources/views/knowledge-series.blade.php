@@ -14,87 +14,88 @@
             <h1 class="page-title-header">Knowledge Series</h1>
         </div>
     </div>
+    <section class="knowledge-series">
+        <!-- Inner Page Banner Section -->
+        <div class="container mt-5 static-content ">
 
-    <!-- Inner Page Banner Section -->
-    <div class="container mt-5 static-content">
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="master-nav-bar">
-                    <ul class="nav nav-tabs custom-tab-list nav-justified " id="myTabD" role="tablist">
-                        @foreach (['all' => 'All', 'nov20' => 'Nov 20', 'nov21' => 'Nov 21', 'nov22' => 'Nov 22', 'nov23' => 'Nov 23', 'nov24' => 'Nov 24', 'nov25' => 'Nov 25', 'nov26' => 'Nov 26', 'nov27' => 'Nov 27', 'nov28' => 'Nov 28'] as $date => $label)
-                            <li class="nav-item" role="presentation">
-                                <a class="nav-link {{ $date === 'all' ? 'active' : '' }}" id="{{ $date }}-tab"
-                                    data-bs-toggle="tab" href="#{{ $date }}" role="tab"
-                                    aria-controls="{{ $date }}"
-                                    aria-selected="{{ $date === 'all' ? 'true' : 'false' }}">{{ $label }}</a>
-                            </li>
-                        @endforeach
-                    </ul>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="master-nav-bar">
+                        <ul class="nav nav-tabs custom-tab-list nav-justified " id="myTabD" role="tablist">
+                            @foreach (['all' => 'All', 'nov20' => 'Nov 20', 'nov21' => 'Nov 21', 'nov22' => 'Nov 22', 'nov23' => 'Nov 23', 'nov24' => 'Nov 24', 'nov25' => 'Nov 25', 'nov26' => 'Nov 26', 'nov27' => 'Nov 27', 'nov28' => 'Nov 28'] as $date => $label)
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link {{ $date === 'all' ? 'active' : '' }}" id="{{ $date }}-tab"
+                                        data-bs-toggle="tab" href="#{{ $date }}" role="tab"
+                                        aria-controls="{{ $date }}"
+                                        aria-selected="{{ $date === 'all' ? 'true' : 'false' }}">{{ $label }}</a>
+                                </li>
+                            @endforeach
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+                    @foreach (['nov20', 'nov21', 'nov22', 'nov23', 'nov24', 'nov25', 'nov26', 'nov27', 'nov28'] as $date)
+                        @include("knowledge-series.{$date}")
+                    @endforeach
+                </div>
+
                 @foreach (['nov20', 'nov21', 'nov22', 'nov23', 'nov24', 'nov25', 'nov26', 'nov27', 'nov28'] as $date)
-                    @include("knowledge-series.{$date}")
+                    <div class="tab-pane fade" id="{{ $date }}" role="tabpanel"
+                        aria-labelledby="{{ $date }}-tab">
+                        @include("knowledge-series.{$date}")
+                    </div>
                 @endforeach
             </div>
 
-            @foreach (['nov20', 'nov21', 'nov22', 'nov23', 'nov24', 'nov25', 'nov26', 'nov27', 'nov28'] as $date)
-                <div class="tab-pane fade" id="{{ $date }}" role="tabpanel"
-                    aria-labelledby="{{ $date }}-tab">
-                    @include("knowledge-series.{$date}")
-                </div>
-            @endforeach
         </div>
 
-    </div>
+        </div>
 
-    {{-- POPUP --}}
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <ul class="list-icon">
-                        <li><i class="fa fa-clock-o" aria-hidden="true"></i> <span id="modalDate"></span></li>
-                        <li>
-                            {{-- <i class="fa fa-briefcase" aria-hidden="true"></i> --}}
-                            <span id="panel"></span>
-                        </li>
-                        <li><i class="fa fa-user" aria-hidden="true"></i> Moderator :- <span id="modalModerator"></span>
-                        </li>
-                    </ul>
-                    <h4>Speakers</h4>
-                    <ol class="list-group list-group-numbered" id="modalSpeakers"></ol>
+        {{-- POPUP --}}
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="list-icon">
+                            <li><i class="fa fa-clock-o" aria-hidden="true"></i> <span id="modalDate"></span></li>
+                            <li>
+                                {{-- <i class="fa fa-briefcase" aria-hidden="true"></i> --}}
+                                <span id="panel"></span>
+                            </li>
+                            <li><i class="fa fa-user" aria-hidden="true"></i> Moderator :- <span id="modalModerator"></span>
+                            </li>
+                        </ul>
+                        <h4>Speakers</h4>
+                        <ol class="list-group list-group-numbered" id="modalSpeakers"></ol>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <!-- Speaker Details Modal -->
-    <div class="modal fade" id="speakerDetailsModal" tabindex="-1" aria-labelledby="speakerDetailsLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="speakerDetailsLabel"></h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <img id="speakerImage" src="" alt="Speaker Image" class="img-fluid mb-3" />
-                    <p id="speakerDescription"></p>
+            <!-- Speaker Details Modal -->
+            <div class="modal fade" id="speakerDetailsModal" tabindex="-1" aria-labelledby="speakerDetailsLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="speakerDetailsLabel"></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img id="speakerImage" src="" alt="Speaker Image" class="img-fluid mb-3" />
+                            <p id="speakerDescription"></p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <!-- Speakers Popup End -->
-
+            <!-- Speakers Popup End -->
+    </section>
     {{-- Script Start --}}
     <script>
         const modalData = {
