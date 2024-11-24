@@ -82,14 +82,14 @@ Route::get('master_classes', [ApiNewController::class, 'getMasterClass'])->name(
 Route::post('master_classes_Update/{id}', [ApiNewController::class, 'updateMasterClass'])->name('master_classes_Update');
 Route::get('master_classes_details/{id}', [ApiNewController::class, 'getMasterClassById'])->name('master_classes_details');
 Route::post('master_classes_create', [ApiNewController::class, 'createMasterClass'])->name('master_classes_create');
-// Route::delete('master_classes_delete/{id}', [ApiNewController::class, 'master_classes Delete'])->name('master_classes -delete');
+// Route::delete('master_classes_delete/{id}',  [ApiNewController::class, 'master_classes Delete'])->name('master_classes -delete');
 
 // Cureted Section 2024
 Route::get('get-CuretedSection2024', [ApiNewController::class, 'curetedSection2024'])->name('get-CuretedSection2024');
 Route::post('update-curetedsection2024/{id}', [ApiNewController::class, 'updateCuretedsection2024'])->name('update-curetedsection2024');
 Route::post('create-Curetedsection2024', [ApiNewController::class, 'createCuretedsection2024'])->name('create-Curetedsection2024');
 Route::get('get-curetedsection2024-ById/{id}', [ApiNewController::class, 'curetedsection2024ById'])->name('get-curetedsection2024-ById');
-// Route::get('get-CuretedSection2024', [ApiNewController::class, 'CuretedSection2024'])->name('get-CuretedSection2024');
+Route::get('get-CuretedSection2024', [ApiNewController::class, 'CuretedSection2024'])->name('get-CuretedSection2024');
 
 // SPONSORS-PARTNERS
 

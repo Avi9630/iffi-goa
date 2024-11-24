@@ -78,15 +78,12 @@ class InternationalCinemaController extends Controller
         $validatorArray = [
             'curated_section_id' => 'required|string|max:255',
             'title' => 'required|string|max:255',
-            'award' => '',
+            'slug' => 'required|string|max:255',
             'directed_by' => 'required|string|max:255',
             'country_of_origin' => 'required|string|max:255',
             'language' => 'required|string|max:255',
-            'slug' => 'required|string|max:255',
             'year' => 'required|string|max:4',
-            'award_year' => 'required|string|max:4',
-            'img_src_file' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:10050',
-            'status' => 'required|boolean',
+            'img_src' => 'required|image|mimes:jpeg,png,jpg,gif|max:10050',
         ];
         $messagesArray = [];
         $validator = Validator::make($payload, $validatorArray, $messagesArray);
@@ -99,8 +96,8 @@ class InternationalCinemaController extends Controller
         }
         try {
 
-            if ($request->hasFile('img_src_file')) {
-                $file = $request->file('img_src_file');
+            if ($request->hasFile('img_src')) {
+                $file = $request->file('img_src');
                 $destinationPath = 'images/cureted-section';
                 $originalFilename = $file->getClientOriginalName();
                 $extension = $file->getClientOriginalExtension();
@@ -118,17 +115,16 @@ class InternationalCinemaController extends Controller
                 $data = [
                     'curated_section_id' => $payload['curated_section_id'],
                     'title' => $payload['title'],
-                    'award' => $payload['award'],
+                    'slug' => $payload['slug'],
                     'directed_by' => $payload['directed_by'],
                     'country_of_origin' => $payload['country_of_origin'],
                     'language' => $payload['language'],
-                    'slug' => $payload['slug'],
                     'year' => $payload['year'],
-                    'award_year' => $payload['award_year'],
-                    'status' => $payload['status'],
                     'img_src' => $hashedFilename,
                     'image_name' => $hashedFilename,
-
+                    'award' => isset($payload['award']) ? $payload['award'] : null,
+                    'award_year' => isset($payload['award_year']) ? $payload['award_year'] : 2024,
+                    'status' => isset($payload['status']) ? $payload['status'] : 1,
                 ];
                 $datasave = InternationalCinema::create($data);
                 $response = [
@@ -159,16 +155,6 @@ class InternationalCinemaController extends Controller
         $payload = $request->all();
         $validatorArray = [
             'curated_section_id' => 'required|string|max:255',
-            'title' => '',
-            'award' => '',
-            'directed_by' => '',
-            'country_of_origin' => '',
-            'language' => '',
-            'slug' => '',
-            'year' => 'numeric',
-            'award_year' => 'numeric',
-            'img_src_file' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'status' => 'required|boolean',
         ];
         $messagesArray = [];
         $validator = Validator::make($payload, $validatorArray, $messagesArray);
@@ -180,17 +166,15 @@ class InternationalCinemaController extends Controller
             return $this->response('validatorerrors', $output);
         }
         try {
-            // $internationalCinema = InternationalCinema::find($payload['id']);
             $internationalCinema = InternationalCinema::find($id);
             if ($internationalCinema) {
-                if ($request->hasFile('img_src_file')) {
-                    $file = $request->file('img_src_file');
+                if ($request->hasFile('img_src')) {
+                    $file = $request->file('img_src');
                     $destinationPath = 'images/cureted-section';
                     $originalFilename = $file->getClientOriginalName();
                     $extension = $file->getClientOriginalExtension();
                     $hashedFilename = substr(md5($originalFilename.time()), 0, 20).'.'.$extension;
                     $fullFilePath = public_path($destinationPath.'/'.$hashedFilename);
-
                     if (File::exists($fullFilePath)) {
                         $response = [
                             'message' => 'File with the same name already exists. Please reupload file!!',
@@ -199,21 +183,20 @@ class InternationalCinemaController extends Controller
 
                         return $this->response('conflict', $response);
                     }
-
                     $file->move(public_path($destinationPath), $hashedFilename);
                     $data = [
+                        'curated_section_id' => isset($payload['curated_section_id']) ? $payload['curated_section_id'] : $internationalCinema->curated_section_id,
+                        'title' => isset($payload['title']) ? $payload['title'] : $internationalCinema->title,
+                        'slug' => isset($payload['slug']) ? $payload['slug'] : $internationalCinema->title,
+                        'directed_by' => isset($payload['directed_by']) ? $payload['directed_by'] : $internationalCinema->directed_by,
+                        'country_of_origin' => isset($payload['country_of_origin']) ? $payload['country_of_origin'] : $internationalCinema->country_of_origin,
+                        'language' => isset($payload['language']) ? $payload['language'] : $internationalCinema->language,
+                        'year' => isset($payload['year']) ? $payload['year'] : $internationalCinema->year,
                         'img_src' => $hashedFilename,
                         'image_name' => $hashedFilename,
-                        'curated_section_id' => isset($payload['curated_section_id']) ? $payload['curated_section_id'] : $internationalCinema['curated_section_id'],
-                        'title' => isset($payload['title']) ? $payload['title'] : $internationalCinema['title'],
-                        'award' => isset($payload['award']) ? $payload['award'] : $internationalCinema['award'],
-                        'directed_by' => isset($payload['directed_by']) ? $payload['directed_by'] : $internationalCinema['directed_by'],
-                        'country_of_origin' => isset($payload['country_of_origin']) ? $payload['country_of_origin'] : $internationalCinema['country_of_origin'],
-                        'language' => isset($payload['language']) ? $payload['language'] : $internationalCinema['language'],
-                        'slug' => isset($payload['slug']) ? $payload['slug'] : $internationalCinema['slug'],
-                        'year' => isset($payload['year']) ? $payload['year'] : $internationalCinema['year'],
-                        'award_year' => isset($payload['award_year']) ? $payload['award_year'] : $internationalCinema['award_year'],
-                        'status' => isset($payload['status']) ? $payload['status'] : $internationalCinema['status'],
+                        'award' => isset($payload['award']) ? $payload['award'] : $internationalCinema->award,
+                        'award_year' => isset($payload['award_year']) ? $payload['award_year'] : $internationalCinema->award_year,
+                        'status' => isset($payload['status']) ? $payload['status'] : $internationalCinema->status,
                     ];
                     $internationalCinema->update($data);
                     $response = [
@@ -224,18 +207,18 @@ class InternationalCinemaController extends Controller
                     return $this->response('success', $response);
                 } else {
                     $data = [
+                        'curated_section_id' => isset($payload['curated_section_id']) ? $payload['curated_section_id'] : $internationalCinema->curated_section_id,
+                        'title' => isset($payload['title']) ? $payload['title'] : $internationalCinema->title,
+                        'slug' => isset($payload['slug']) ? $payload['slug'] : $internationalCinema->title,
+                        'directed_by' => isset($payload['directed_by']) ? $payload['directed_by'] : $internationalCinema->directed_by,
+                        'country_of_origin' => isset($payload['country_of_origin']) ? $payload['country_of_origin'] : $internationalCinema->country_of_origin,
+                        'language' => isset($payload['language']) ? $payload['language'] : $internationalCinema->language,
+                        'year' => isset($payload['year']) ? $payload['year'] : $internationalCinema->year,
                         'img_src' => isset($payload['img_src']) ? $payload['img_src'] : $internationalCinema['img_src'],
                         'image_name' => isset($payload['image_name']) ? $payload['image_name'] : $internationalCinema['image_name'],
-                        'curated_section_id' => isset($payload['curated_section_id']) ? $payload['curated_section_id'] : $internationalCinema['curated_section_id'],
-                        'title' => isset($payload['title']) ? $payload['title'] : $internationalCinema['title'],
-                        'award' => isset($payload['award']) ? $payload['award'] : $internationalCinema['award'],
-                        'directed_by' => isset($payload['directed_by']) ? $payload['directed_by'] : $internationalCinema['directed_by'],
-                        'country_of_origin' => isset($payload['country_of_origin']) ? $payload['country_of_origin'] : $internationalCinema['country_of_origin'],
-                        'language' => isset($payload['language']) ? $payload['language'] : $internationalCinema['language'],
-                        'slug' => isset($payload['slug']) ? $payload['slug'] : $internationalCinema['slug'],
-                        'year' => isset($payload['year']) ? $payload['year'] : $internationalCinema['year'],
-                        'award_year' => isset($payload['award_year']) ? $payload['award_year'] : $internationalCinema['award_year'],
-                        'status' => isset($payload['status']) ? $payload['status'] : $internationalCinema['status'],
+                        'award' => isset($payload['award']) ? $payload['award'] : $internationalCinema->award,
+                        'award_year' => isset($payload['award_year']) ? $payload['award_year'] : $internationalCinema->award_year,
+                        'status' => isset($payload['status']) ? $payload['status'] : $internationalCinema->status,
                     ];
                     $internationalCinema->update($data);
                     $response = [
@@ -295,29 +278,7 @@ class InternationalCinemaController extends Controller
         $payload = $request->all();
 
         $validatorArray = [
-            'director' => '',
-            'producer' => '',
-            'screenplay' => '',
-            'editor' => '',
-            'cast' => '',
-            'dop' => '',
-            'other_details' => '',
-            'synopsis' => '',
-            'producer_bio' => '',
-            'sales_agent' => '',
-            'award' => '',
-            'writer' => '',
-            'trailer_link' => '',
-            'official_selection' => '',
-            'best_film_award' => '',
-            'director_and_producer' => '',
-            'original_title' => '',
-            'co_produced' => '',
-            'festivals' => '',
-            'drama' => '',
-            'history' => '',
-            'nomination' => '',
-            'status' => 'boolean',
+            'status' => 'in:1,0',
         ];
 
         $messagesArray = [];
@@ -357,6 +318,9 @@ class InternationalCinemaController extends Controller
                     'history' => isset($payload['history']) ? $payload['history'] : $getBasicBasicDetails['history'],
                     'nomination' => isset($payload['nomination']) ? $payload['nomination'] : $getBasicBasicDetails['nomination'],
                     'status' => isset($payload['status']) ? $payload['status'] : $getBasicBasicDetails['status'],
+                    'premiere' => isset($payload['premiere']) ? $payload['premiere'] : $getBasicBasicDetails['premiere'],
+                    'tags' => isset($payload['tags']) ? $payload['tags'] : $getBasicBasicDetails['tags'],
+                    'director_bio' => isset($payload['director_bio']) ? $payload['director_bio'] : $getBasicBasicDetails['director_bio'],
                     'created_by' => 1,
                     'updated_by' => 1,
                 ];
