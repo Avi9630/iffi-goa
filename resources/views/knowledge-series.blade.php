@@ -665,5 +665,37 @@
         .title-boder-none {
             border-bottom: none;
         }
+
+        /* .knowledge-series .static-content p {
+                color: #3db223 !important;
+            } */
+
+        .knowledge-series .custom-tab-list li a {
+            color: #3db223 !important;
+        }
+
+        .knowledge-series .custom-tab-list li {
+            border-right: solid 1px #3db223;
+        }
+
+        .knowledge-series .callout {
+            border-left: solid 4px #3db223;
+        }
+
+        .knowledge-series h2,
+        h4,
+        h5 {
+            color: #3db223;
+        }
+
+        .knowledge-series .custom-tab-list li .active {
+            background: #3db2234a !important;
+            border-bottom: solid 3px #3db223 !important;
+        }
+
+        .knowledge-series .custom-tab-list li a:hover {
+            background: #3db2234a !important;
+            border-bottom: solid 3px #3db223 !important;
+        }
     </style>
 @endsection

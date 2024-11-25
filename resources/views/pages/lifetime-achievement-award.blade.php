@@ -6,8 +6,9 @@
             </div>
             <div class="col-md-6 col-sm-6 ">
                 <h4 class="mb-3">55<sup>th</sup> IFFI Satyajit Ray Lifetime Achievement Award</h4>
-                <p>The prestigious Satyajit Ray Lifetime Achievement Award for Excellence in Cinema goes to
-                    Michael Kirk Douglas at 54TH IFFI Festival.
+                <p>
+                    The prestigious Satyajit Ray Lifetime Achievement Award for Excellence in Cinema goes to Veteran
+                    Australian filmmaker Phillip Noyce at 55th IFFI.
                 </p>
                 <p>
                     Noyce, known for films such as the Angelina Jolie-starrer "Salt", "Patriot Game" starring Harrison
