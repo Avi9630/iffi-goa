@@ -94,6 +94,16 @@
         </div>
     </section>
 
+    <!-- Highlights Creative Minds Of Tomorrow-->
+    @include('pages.cmot-highlights', [
+        'datas' => app(\App\Http\Controllers\CommonController::class)->cmotHighlights(),
+    ])
+
+    <!--Master classs Highlights-->
+    @include('pages.master-class-highlights', [
+        'datas' => app(\App\Http\Controllers\CommonController::class)->masterClasssHighlights(),
+    ])
+
     <!-- Life Time Achievement Award  Section-->
     @include('pages.lifetime-achievement-award')
 
@@ -104,10 +114,6 @@
         'datas' => app(\App\Http\Controllers\CommonController::class)->highlights(),
     ])
 
-    <!-- Highlights Creative Minds Of Tomorrow-->
-    @include('pages.cmot-highlights', [
-        'datas' => app(\App\Http\Controllers\CommonController::class)->cmotHighlights(),
-    ])
 
     <!-- Social Media Corner  -->
     @include('pages.social-media-cornor')
