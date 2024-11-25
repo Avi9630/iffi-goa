@@ -2,7 +2,7 @@
     <div class="container">
         <div class="section-heading mb-4">
             <p>Showcasing 55<sup>th</sup> IFFI</p>
-            <h2>Creative minds of tomorrow</h2>
+            <h2>Master class</h2>
         </div>
         <div class="owl-carousel">
             @foreach ($datas as $data)
