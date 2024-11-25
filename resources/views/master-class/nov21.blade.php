@@ -43,6 +43,9 @@
                     </li>
                 </ul>
             </div>
+            <br>
+            <a href="https://www.youtube.com/watch?v=54Q6M1VtD5A&list=PLzkvk19CaSlI01tnt7RiIMF_7eQoc1oHJ&index=4"
+                class="btn btn-sm btn-primary" target="_blank" style="margin-left: 80px"> View session</a>
         </div>
     </div>
 </div>
@@ -120,7 +123,6 @@
                 </p>
             </div>
         </div>
-
         <div class="col-md-3 col-12">
             <div class="user-profile-icon">
                 <ul>
@@ -128,12 +130,11 @@
                         <img src="{{ asset('public/images/master-class/Nithya Menen.jpg') }}" alt="image"
                             class="img-fluid">
                     </li>
-                    {{-- <li>
-                        <img src="{{ asset('public/images/master-class/Dhanya Varma.jpg') }}" alt="image"
-                            class="img-fluid">
-                    </li> --}}
                 </ul>
             </div>
+            <br>
+            <a href="https://www.youtube.com/watch?v=_ZgS3lh8lbY&list=PLzkvk19CaSlI01tnt7RiIMF_7eQoc1oHJ&index=5"
+                class="btn btn-sm btn-primary" target="_blank" style="margin-left: 80px"> View session</a>
         </div>
     </div>
 </div>
@@ -161,7 +162,6 @@
                 </p>
             </div>
         </div>
-
         <div class="col-md-3 col-12">
             <div class="user-profile-icon">
                 <ul>
@@ -169,12 +169,11 @@
                         <img src="{{ asset('public/images/master-class/Manoj Bajpayee.jpg') }}" alt="image"
                             class="img-fluid">
                     </li>
-                    {{-- <li>
-                        <img src="{{ asset('public/images/master-class/Sudhir Srinivasan.jpg') }}" alt="image"
-                            class="img-fluid">
-                    </li> --}}
                 </ul>
             </div>
+            <br>
+            <a href="https://www.youtube.com/watch?v=YImdnaxxl00&list=PLzkvk19CaSlI01tnt7RiIMF_7eQoc1oHJ&index=6"
+                class="btn btn-sm btn-primary" target="_blank" style="margin-left: 80px"> View session</a>
         </div>
     </div>
 </div>
@@ -210,13 +209,11 @@
                         <img src="{{ asset('public/images/master-class/Prasoon Joshi.jpg') }}" alt="image"
                             class="img-fluid">
                     </li>
-
-                    {{-- <li>
-                        <img src="{{ asset('public/images/master-class/Anant Vijay.jpg') }}" alt="image"
-                            class="img-fluid">
-                    </li> --}}
                 </ul>
             </div>
+            <br>
+            <a href="https://www.youtube.com/watch?v=aQzWCFxqDlA&list=PLzkvk19CaSlI01tnt7RiIMF_7eQoc1oHJ&index=3"
+                class="btn btn-sm btn-primary" target="_blank" style="margin-left: 80px"> View session</a>
         </div>
     </div>
 </div>
