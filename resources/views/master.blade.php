@@ -157,38 +157,22 @@
                     moderator: "Dhanya Varma",
                     panel: "In Conversation",
                     date: "Nov 21st, 2024, 2.30 PM TO 3.15 PM",
-                    // description: "This captivating discussion features Manisha Koirala Inconversation with Rana Daggubati. They will delve into the theory of commercial success as both of them have experienced big screen and streaming. From their early works to their recent streaming projects, Rana and Koirala will discuss the challenges and opportunities of adapting their storytelling for different platforms, and how they continue to captivate audiences with their powerful performances.",
                     speakers: [{
-                            name: "Nithya Menen",
-                            description: "Nithya Menen is an Indian actress and singer who works primarily in Malayalam, Telugu, Tamil and Kannada films. Menen is noted for her strong portrayals, and is a recipient of several accolades including a National Film Award, four Filmfare Awards South, two South Indian International Movie Awards and two Nandi Awards.She started her career as a child artist, in the French-Indian English film, Hanuman, playing the younger sister to Tabu's character. She made her screen debut with the Kannada film 7 O' Clock. She established herself as a leading South Indian actress with the Tamil romantic film O Kadhal Kanmani. She went onto appear in such commercially successful films — the Malayalam films Ustad Hotel, Bangalore Days and 100 Days of Love, and the Tamil films Kanchana 2 , 24, Mersal etc",
-                            image: "{{ asset('public/images/master-class/Nithya Menen.jpg') }}"
-                        }
-                        // ,
-                        // {
-                        //     name: "Dhanya Varma",
-                        //     description: "Dhanya Varma is a Talk show host, TV presenter and Producer with over 20 years of experience in the Media . She hosts and produces the talk show  I AM with Dhanya Varma on YouTube. She was formerly producer and anchor with Star Tv Mumbai. She has also acted in movies and hosted the popular interview show The happiness project on Kappa Tv.",
-                        //     image: "{{ asset('public/images/master-class/Dhanya Varma.jpg') }}"
-                        // }
-                    ]
+                        name: "Nithya Menen",
+                        description: "Nithya Menen is an Indian actress and singer who works primarily in Malayalam, Telugu, Tamil and Kannada films. Menen is noted for her strong portrayals, and is a recipient of several accolades including a National Film Award, four Filmfare Awards South, two South Indian International Movie Awards and two Nandi Awards.She started her career as a child artist, in the French-Indian English film, Hanuman, playing the younger sister to Tabu's character. She made her screen debut with the Kannada film 7 O' Clock. She established herself as a leading South Indian actress with the Tamil romantic film O Kadhal Kanmani. She went onto appear in such commercially successful films — the Malayalam films Ustad Hotel, Bangalore Days and 100 Days of Love, and the Tamil films Kanchana 2 , 24, Mersal etc",
+                        image: "{{ asset('public/images/master-class/Nithya Menen.jpg') }}"
+                    }]
                 },
                 {
                     title: "Mastering the Unseen",
                     moderator: "Sudhir Srinivasan",
                     panel: "In Conversation",
                     date: "Nov 21st, 2024, 3.30 PM TO 4.15 PM",
-                    // description: "This captivating discussion features Manisha Koirala Inconversation with Rana Daggubati. They will delve into the theory of commercial success as both of them have experienced big screen and streaming. From their early works to their recent streaming projects, Rana and Koirala will discuss the challenges and opportunities of adapting their storytelling for different platforms, and how they continue to captivate audiences with their powerful performances.",
                     speakers: [{
-                            name: "Manoj Bajpayee",
-                            description: "Manoj Bajpayee is an Indian actor who predominantly works in Hindi, Telugu and Tamil = films. He is the recipient of numerous accolades including four National Film Awards, four Filmfare Awards, and two Asia Pacific Screen Awards. In 2019, he was awarded India's fourth-highest civilian honour, the Padma Shri, for his contributions to art. He is known for Bandit Queen, Satya, Dil Pe Mat Le Yaar! Ghaath, Joram, Sirf Ek Bandaa Kaafi Hai, Suraj Pe Mangal Bhari, Mrs. Serial Killer, Sonchiriya, Love Sonia, The Family Man and many more.",
-                            image: "{{ asset('public/images/master-class/Manoj Bajpayee.jpg') }}"
-                        }
-                        // ,
-                        // {
-                        //     name: "Sudhir Srinivasan",
-                        //     description: "Sudhir Srinivasan is the Executive Editor (Entertainment) at The New Indian Express. With over 15 years of experience at leading mainstream media organizations such as The Hindu and The Times of India, he is recognized for his sharp, insightful film reviews and interviews, often imbued with emotional, social, and psychological depth.Focusing primarily on Southern cinema, Sudhir has conducted rich, long-form conversations with renowned figures like Kamal Haasan, Mani Ratnam, Vetrimaaran, as well as international icons like the Russo Brothers and Christian Bale. His ability to facilitate engaging discussions extends to his role as a moderator at esteemed film festivals.",
-                        //     image: "{{ asset('public/images/master-class/Sudhir Srinivasan.jpg') }}"
-                        // }
-                    ]
+                        name: "Manoj Bajpayee",
+                        description: "Manoj Bajpayee is an Indian actor who predominantly works in Hindi, Telugu and Tamil = films. He is the recipient of numerous accolades including four National Film Awards, four Filmfare Awards, and two Asia Pacific Screen Awards. In 2019, he was awarded India's fourth-highest civilian honour, the Padma Shri, for his contributions to art. He is known for Bandit Queen, Satya, Dil Pe Mat Le Yaar! Ghaath, Joram, Sirf Ek Bandaa Kaafi Hai, Suraj Pe Mangal Bhari, Mrs. Serial Killer, Sonchiriya, Love Sonia, The Family Man and many more.",
+                        image: "{{ asset('public/images/master-class/Manoj Bajpayee.jpg') }}"
+                    }]
                 },
                 {
                     title: "The Journey from Script to Screen: Writing for Film and Beyond",
@@ -196,16 +180,10 @@
                     panel: "In Conversation",
                     date: "Nov 21st, 2024, 4.30 PM TO 5.30 PM",
                     speakers: [{
-                            name: "Prasoon Joshi",
-                            description: "Prasoon Joshi is one of India’s most celebrated creative minds—a Padma Shri awardee and National Award-winning writer. Renowned for his work as a poet, lyricist, screenwriter, and communication expert, he has been honored at global platforms like Cannes Lions and the World Economic Forum. Author of four books, Joshi has penned acclaimed scripts and lyrics for iconic films such as Taare Zameen Par, Rang De Basanti, Bhaag Milkha Bhaag, and Manikarnika. His recent efforts have shaped major brand campaigns like Incredible India, G-20, and Air India, while his impactful societal projects—Swachh Bharat, Child Rights, Pulse Polio, and campaigns on women’s empowerment and malnutrition—have created tangible, positive change.",
-                            image: "{{ asset('public/images/master-class/Prasoon Joshi.jpg') }}"
-                        },
-                        // {
-                        //     name: "Anant Vijay",
-                        //     description: "Anant Vijay is a National Award winning Journalist and Author. Presently working with Dainik Jagran. His journalism experience spans more than two decades across TV and Print, writing mainly on the Cinema, politics of Culture and Literature. His weekly column has been running for 13 years in Dainik Jagran, the largest read newspaper in India. Writing with consummate ease, he’s authored 14 books across genres. His Book Bollywood Selfie was the best seller. His book Amethi Sangram became a best seller within a week of its launch. A keen student of the Hindi language, Anant has organized literature festivals, been part of Hindi literary bodies playing active advisory roles, been on editorial boards, been a Jury Chairman at the National Film Awards twice, Chairman of the selection Jury (Konkani Films) of International Film Festival of India (IFFI) 2019 and Member of Jury, 75 Creative Minds, Ministry of Information and Broadcasting, 2021. He is the Vice Chairman of Governing Council of Film and Television Institute of India, Pune.Apart from the National Award (Swarn Kamal), Anant Vijay is the recipient of the most prestigious Ganesh Shankar Vidyarthi Award and Father Camille Bulcke Award.",
-                        //     image: "{{ asset('public/images/master-class/Anant Vijay.jpg') }}"
-                        // }
-                    ]
+                        name: "Prasoon Joshi",
+                        description: "Prasoon Joshi is one of India’s most celebrated creative minds—a Padma Shri awardee and National Award-winning writer. Renowned for his work as a poet, lyricist, screenwriter, and communication expert, he has been honored at global platforms like Cannes Lions and the World Economic Forum. Author of four books, Joshi has penned acclaimed scripts and lyrics for iconic films such as Taare Zameen Par, Rang De Basanti, Bhaag Milkha Bhaag, and Manikarnika. His recent efforts have shaped major brand campaigns like Incredible India, G-20, and Air India, while his impactful societal projects—Swachh Bharat, Child Rights, Pulse Polio, and campaigns on women’s empowerment and malnutrition—have created tangible, positive change.",
+                        image: "{{ asset('public/images/master-class/Prasoon Joshi.jpg') }}"
+                    }]
                 },
                 {
                     title: "Surviving Film Industry : The Hard Truth Nobody Tells You",
@@ -224,17 +202,6 @@
                         }
                     ]
                 },
-                // {
-                //     title: "Centenary Special: ANR - Celebrating the Life and Works of Akkineni Nageswara Rao",
-                //     moderator: "Kushboo Sundar",
-                //     panel: "In Conversation",
-                //     date: "Nov-21st, 2024, 06.45 PM TO 07.30 PM",
-                //     speakers: [{
-                //         name: "Nagarjuna",
-                //         description: "Nagarjuna is an Indian actor, film producer and entrepreneur. Nagarjuna has acted predominantly in Telugu cinema, along with Hindi and Tamil films. He received two National Film Awards namely, for Ninne Pelladata, which he produced won the Best Feature Film in Telugu and a Special Mention as actor for Annamayya, Ten state Nandi Awards, and three Filmfare Awards South.",
-                //         image: "{{ asset('public/images/master-class/Akkineni Nagarjuna Rao.jpg') }}"
-                //     }]
-                // },
             ],
             // 21 November Modal Data End
 
@@ -257,17 +224,10 @@
                     date: "Nov-22nd, 2024, 12.30 AM TO 01.30 PM",
                     description: "In this session, the acclaimed filmmaker Vidhu Vinod Chopra takes us on a journey through the creative process, sharing his experiences, challenges, and the philosophy behind living through cinema.With decades of storytelling mastery,Mr. Chopra will bring us the insights into how films not only reflect life but become a living entity of their own, inspiring generations ",
                     speakers: [{
-                            name: "Vidhu Vinod Chopra",
-                            description: "Vidhu Vinod Chopra is an Indian film director, producer, screenwriter and editor. He is the recipient of several accolades, including four National Film Awards, ten Filmfare Awards and an Academy Award nomination. He is known for directing films such as the crime drama Parinda (1989), the patriotic romantic drama 1942: A Love Story (1994), the action drama Mission Kashmir (2000) and the biographical drama 12th Fail (2023). He is also known for producing the Munna Bhai film series, 3 Idiots (2009), PK (2014), and Sanju (2018) under his banner Vinod Chopra Films.",
-                            image: "{{ asset('public/images/master-class/Vidhu Vinod Chopra.jpg') }}"
-                        }
-                        // ,
-                        // {
-                        //     name: "Shantanu Moitra",
-                        //     description: "Shantanu Moitra is an Indian pianist, score composer and musician who has composed songs for the Hindi film industry, and is most known for his scores in the films Parineeta, Hazaaron Khwaishein Aisi, Lage Raho Munnabhai and 3 Idiots, and private albums, Mann ke Manjeere and Ab ke Saawan sung by Shubha Mudgal. In 2014, he received the National Film Award for Best Music Direction (Background Score) for Na Bangaaru Talli.",
-                        //     image: "{{ asset('public/images/master-class/Shantanu Moitra.jpg') }}"
-                        // },
-                    ]
+                        name: "Vidhu Vinod Chopra",
+                        description: "Vidhu Vinod Chopra is an Indian film director, producer, screenwriter and editor. He is the recipient of several accolades, including four National Film Awards, ten Filmfare Awards and an Academy Award nomination. He is known for directing films such as the crime drama Parinda (1989), the patriotic romantic drama 1942: A Love Story (1994), the action drama Mission Kashmir (2000) and the biographical drama 12th Fail (2023). He is also known for producing the Munna Bhai film series, 3 Idiots (2009), PK (2014), and Sanju (2018) under his banner Vinod Chopra Films.",
+                        image: "{{ asset('public/images/master-class/Vidhu Vinod Chopra.jpg') }}"
+                    }]
                 },
                 {
                     title: "Sound Design: The Aural Universe of Cinematic Storytelling",
@@ -291,18 +251,11 @@
                     moderator: "Gautham Vasudev Menon",
                     panel: "In Conversation",
                     date: "Nov-22nd, 2024, 04.30 PM TO 06.00 PM",
-                    // description: "This session brings together renowned sound designers Nakul Kamte and Eric Hoehn, who will explore the power of sound design in shaping the emotional and narrative depth of films. From subtle  ambient layers to impactful soundscapes, they will share their craft in building the aural  dimension that completes the cinematic experience.",
                     speakers: [{
-                            name: "Mani Ratnam",
-                            description: "Mani Ratnam, a synonym for cinematic brilliance, is a renowned Indian film director, producer, and screenwriter. His illustrious career spans multiple languages, including Tamil, Hindi, Telugu, Malayalam, and Kannada. Recognized as one of India's most acclaimed and commercially successful filmmakers, his contributions to the world of cinema have earned him numerous accolades, including seven National Film Awards and the prestigious Padma Shri. Renowned for his unique storytelling, captivating visuals, and powerful music, he has consistently pushed the boundaries of Indian cinema. His filmography includes Roja, Bombay, Dil Se.., Iruvar, Kannathil Muthamittal, AlaiPayuthey, Guru, Raavan, OK Kanmani, Kaatru Veliyidai, and Ponniyin Selvan Part 1 & 2.",
-                            image: "{{ asset('public/images/master-class/Mani Ratnam.jpg') }}"
-                        },
-                        // {
-                        //     name: "Gautham Vasudev Menon",
-                        //     description: "Gautham Vasudev Menon is an Indian film director, screenwriter, film producer and actor who predominantly works in Tamil film industry. He has also directed Telugu and Hindi films that are either simultaneously shot with or remakes of his own Tamil films. He has won two National Film Awards, three Nandi Awards and one Tamil Nadu State Film Award. Many of his films have been both critically acclaimed and commercially successful, most notably his romantic films Minnale (2001), Vaaranam Aayiram (2008), Vinnaithaandi Varuvaayaa (2010), his cop action thrillers Kaakha Kaakha (2003), Vettaiyaadu Vilaiyaadu (2006), Yennai Arindhaal (2015) and his gangster drama Vendhu Thanindhathu Kaadu (2022). His 2008 Tamil film, ‘Vaaranam Aayiram’ won the National Film Award for Best Feature Film in Tamil. Menon produces films through his film production company named Photon Kathaas. His production Thanga Meengal (2013) won the National Film Award for Best Feature Film in Tamil.The 2010 romantic blockbuster Vinnaithaandi Varuvaayaa, was re-released and it completed its 1000th day in theaters recentrly.",
-                        //     image: "{{ asset('public/images/master-class/Gautham Vasudev Menon.jpg') }}"
-                        // }
-                    ]
+                        name: "Mani Ratnam",
+                        description: "Mani Ratnam, a synonym for cinematic brilliance, is a renowned Indian film director, producer, and screenwriter. His illustrious career spans multiple languages, including Tamil, Hindi, Telugu, Malayalam, and Kannada. Recognized as one of India's most acclaimed and commercially successful filmmakers, his contributions to the world of cinema have earned him numerous accolades, including seven National Film Awards and the prestigious Padma Shri. Renowned for his unique storytelling, captivating visuals, and powerful music, he has consistently pushed the boundaries of Indian cinema. His filmography includes Roja, Bombay, Dil Se.., Iruvar, Kannathil Muthamittal, AlaiPayuthey, Guru, Raavan, OK Kanmani, Kaatru Veliyidai, and Ponniyin Selvan Part 1 & 2.",
+                        image: "{{ asset('public/images/master-class/Mani Ratnam.jpg') }}"
+                    }]
                 }
             ],
             // 22 November Modal Data End
@@ -313,7 +266,6 @@
                     moderator: "Kushboo Sundar",
                     panel: "In Conversation",
                     date: "Nov-23rd, 2024, 11.00 AM TO 12.00 PM",
-                    // description: "This centenary special celebrates the legendary actor & producer Akkineni Nageswara Rao (ANR).",
                     speakers: [{
                         name: "Sivakarthikeyan",
                         description: "Sivakarthikeyan is a celebrated Indian actor, playback singer, lyricist, and film producer, primarily known for his works in Tamil cinema. Starting with Marina in 2012, he found success with films like Kedi Billa Killadi Ranga, Ethir Neechal, and Varuthapadatha Valibar Sangam, and penned lyrics for songs like 'Chellamma' and 'Arabic Kuthu.' His notable films include Maan Karate, Kaaki Sattai, Hero, Rajinimurugan, Doctor, Maaveeran, Don, Ayalaan, GOAT, and Amaran. He also produces films under Sivakarthikeyan Productions.",
@@ -325,7 +277,6 @@
                     moderator: "Bobby Bedi",
                     panel: "Panel Discussion",
                     date: "Nov-23rd, 2024, 12.30 PM TO 01.30 PM",
-                    // description: "In this session, the acclaimed filmmaker Vidhu Vinod Chopra takes us on a journey through the creative process, sharing his experiences, challenges, and the philosophy behind living through cinema.With decades of storytelling mastery,Mr. Chopra will bring us the insights into how films not only reflect life but become a living entity of their own, inspiring generations ",
                     speakers: [{
                             name: "Farrukh Dhondy",
                             description: "Farrukh Dhondy is an Indian-born British Parsi writer, playwright, screenwriter and an activist who resides in the UK. He is known for Skates, Tandoori Nights and Rangoon.",
@@ -358,7 +309,6 @@
                     moderator: "",
                     panel: "Master Class",
                     date: "Nov-23rd, 2024, 02.30 PM TO 04.00 PM",
-                    // description: "This session brings together renowned sound designers Nakul Kamte and Eric Hoehn, who will explore the power of sound design in shaping the emotional and narrative depth of films. From subtle  ambient layers to impactful soundscapes, they will share their craft in building the aural  dimension that completes the cinematic experience.",
                     speakers: [{
                         name: "John Seale",
                         description: "John Seale is an Australian cinematographer. He has received numerous accolades including an Academy Award, a BAFTA Award, and an American Society of Cinematographers Award. He then earned international prominence working with directors such as Anthony Minghella, Wolfgang Petersen, Ron Howard, Sydney Pollack, and George Miller. He received the Academy Award for Best Cinematography for ‘The English Patient’. He was also Oscar-nominated for Witness , Rain Man, Cold Mountain, Mad Max: Fury Road. Seale's other work includes the films Children of a Lesser God, Dead Poets Society, The Firm ,The Talented Mr. Ripley, and Harry Potter and the Philosopher's Stone.",
@@ -370,7 +320,6 @@
                     moderator: "",
                     panel: "Masterclass",
                     date: "Nov-23rd, 2024, 04.30 AM TO 06.00 PM",
-                    // description: "This session brings together renowned sound designers Nakul Kamte and Eric Hoehn, who will explore the power of sound design in shaping the emotional and narrative depth of films. From subtle  ambient layers to impactful soundscapes, they will share their craft in building the aural  dimension that completes the cinematic experience.",
                     speakers: [{
                         name: "Anupam Kher",
                         description: "Anupam Kher, best known for his prolific career in Indian and international cinema, has appeared in over 540 films and 100 plays over a span of 35 years, playing iconic characters in critical and commercial hits such as Saaransh, Dilwale Dulhaniya Le Jayenge, Karma, A Wednesday, Special 26, and The Accidental Prime Minister, among others. He is a member of the Academy of Motion Picture Arts and Sciences (USA) and was awarded the Padma Shri in 2004, followed by the Padma Bhushan in 2016. In addition to his acting career, Kher founded Anupam Kher’s Actor Prepares in 2005, a world-renowned acting school, and is also an acclaimed author with publications that include Lessons Life Taught Me, Unknowingly: An Autobiography, and The Best Thing About You Is You, Your Best Day Is Today.",
@@ -409,24 +358,16 @@
                     panel: "In Conversation",
                     date: "Nov-24th, 2024, 12.45 PM TO 01.30 PM",
                     speakers: [{
-                            name: "Manisha Koirala",
-                            description: "Manisha Koirala is an actress who works in Indian films, predominantly in Hindi and Tamil. Known for her work in both commercial and independent cinema, she is the recipient of several accolades, including three Filmfare Awards and one Filmfare Awards South. In 2001, the Government of Nepal awarded her with the Order of Gorkha Dakshina Bahu. Later, she featured in the Netflix production 'Lust Stories' and portrayed Nargis in Sanju. She has since starred in the period drama series Heeramandi.",
-                            image: "{{ asset('public/images/master-class/Manisha Koirala.jpg') }}"
-                        }
-                        // ,
-                        // {
-                        //     name: "Vikramaditya Motwane",
-                        //     description: "Vikramaditya Motwane is an Indian film director, producer and screenwriter who works in Hindi cinema. He is known for films like Udaan, Lootera, Trapped, and Bhavesh Joshi Superhero.His directorial debut Udaan was selected to compete in the Un Certain Regard category at the 2010 Cannes Film Festival and also won seven Filmfare awards. Motwane is the creator of Netflix's first Indian series Sacred Games.",
-                        //     image: "{{ asset('public/images/master-class/Vikramaditya Motwane.jpg') }}"
-                        // }
-                    ]
+                        name: "Manisha Koirala",
+                        description: "Manisha Koirala is an actress who works in Indian films, predominantly in Hindi and Tamil. Known for her work in both commercial and independent cinema, she is the recipient of several accolades, including three Filmfare Awards and one Filmfare Awards South. In 2001, the Government of Nepal awarded her with the Order of Gorkha Dakshina Bahu. Later, she featured in the Netflix production 'Lust Stories' and portrayed Nargis in Sanju. She has since starred in the period drama series Heeramandi.",
+                        image: "{{ asset('public/images/master-class/Manisha Koirala.jpg') }}"
+                    }]
                 },
                 {
                     title: "Centenary Special: Celebrating the Life and Works of Raj Kapoor - 'The Greatest Showman'",
                     moderator: "Rahul Rawail",
                     panel: "In Conversation",
                     date: "Nov-24th, 2024, 02.30 PM TO 04.00 PM",
-                    // description: "In this session, the acclaimed filmmaker Vidhu Vinod Chopra takes us on a journey through the creative process, sharing his experiences, challenges, and the philosophy behind living through cinema.With decades of storytelling mastery,Mr. Chopra will bring us the insights into how films not only reflect life but become a living entity of their own, inspiring generations ",
                     speakers: [{
                         name: "Ranbir Kapoor",
                         description: "Ranbir Kapoor is an Indian actor known for his work in Hindi-language films. He is one of the highest-paid actors of Hindi cinema and has featured in Forbes India's Celebrity 100 list since 2012. He made his acting debut with Sanjay Leela Bhansali's tragic romance Saawariya and rose to prominence with the coming-of-age film Wake Up Sid, the romantic comedy Ajab Prem Ki Ghazab Kahani, and the political drama Raajneeti. Kapoor's performances as a troubled musician in Rockstar and a cheerful deaf-and-mute man in Barfi! earned him two consecutive Filmfare Awards for Best Actor.",
@@ -462,7 +403,6 @@
                 moderator: "Shekhar Kapur",
                 panel: "Panel Discussion",
                 date: "Nov-25th, 2024, 11.00 AM TO 12.00 PM",
-                // description: "This centenary special celebrates the legendary actor & producer Akkineni Nageswara Rao (ANR).",
                 speakers: [{
                         name: "Pragya Misra",
                         description: "Pragya is a multifaceted leader currently driving public policy and partnerships at OpenAI; she previously led public affairs at Truecaller and spearheaded WhatsApp’s campaign against misinformation in 2018, and beyond her professional roles, she is also a podcast host and a former national-level golfer.",
@@ -503,17 +443,10 @@
                 panel: "In Conversation",
                 date: "Nov-25th, 2024, 06.15 PM TO 07.00 PM",
                 speakers: [{
-                        name: "Kriti Sanon",
-                        description: "Kriti Sanon is an Indian actress who works in Hindi and Telugu-language films. Sanon briefly worked as a fashion model. She began her acting career by playing the leading lady in the 2014 action films 1: Nenokkadine and Heropanti, romantic comedies Bareilly Ki Barfi (2017) and Luka Chuppi (2019), and her highest-grossing releases came with Dilwale (2015) and Housefull 4 (2019).She won the National Film Award and the Filmfare Award for Best Actress for playing the title role of a surrogate mother in the comedy-drama Mimi (2021).",
-                        image: "{{ asset('public/images/master-class/Kriti Sanon.jpg') }}"
-                    }
-                    // ,
-                    // {
-                    //     name: "Rudrani Chattoraj",
-                    //     description: "Rudrani Chattoraj  is a well-known journalist and Anchor , who is known for insightful and authentic conversations . She has recently been honored with the prestigious ‘Dadasaheb Phalke Film Foundation Award’ and the ‘Maharashtra Gaurav Puraskar’ for her impactful contribution in the fields of entertainment and journalism . She has conducted interviews of the who’s and who of the film industries ( globally ) , and engaged in meaningful conversations around cinema and their personal film journeys , for more than a decade . Right now is leading the entertainment news content for ZoomTV which is a part of Times Network . She also writes thought-provoking opinion pieces on various topics and actively voices her opinions on social media and stands up for what she believes in.",
-                    //     image: "{{ asset('public/images/master-class/Rudrani Chattoraj.jpg') }}"
-                    // }
-                ]
+                    name: "Kriti Sanon",
+                    description: "Kriti Sanon is an Indian actress who works in Hindi and Telugu-language films. Sanon briefly worked as a fashion model. She began her acting career by playing the leading lady in the 2014 action films 1: Nenokkadine and Heropanti, romantic comedies Bareilly Ki Barfi (2017) and Luka Chuppi (2019), and her highest-grossing releases came with Dilwale (2015) and Housefull 4 (2019).She won the National Film Award and the Filmfare Award for Best Actress for playing the title role of a surrogate mother in the comedy-drama Mimi (2021).",
+                    image: "{{ asset('public/images/master-class/Kriti Sanon.jpg') }}"
+                }]
             }
         ],
 
@@ -545,7 +478,6 @@
                 moderator: "",
                 panel: "Master Class",
                 date: "Nov-26th, 2024, 02.30 PM TO 04.00 PM",
-                // description: "This session brings together renowned sound designers Nakul Kamte and Eric Hoehn, who will explore the power of sound design in shaping the emotional and narrative depth of films. From subtle  ambient layers to impactful soundscapes, they will share their craft in building the aural  dimension that completes the cinematic experience.",
                 speakers: [{
                     name: "Senthil Kumar-Co-Founder, Qube Cinema Technologies",
                     description: "A tech entrepreneur with experience in movie and television production and postproduction and multiple patents to his credit, Senthil Kumar is a co-founder of Qube Cinema, the company that brought digital editing to India with Avid, digital cinema sound to India with DTS, and helped transform the cinema industry worldwide with its Qube digital cinema system and Qube Wire content delivery system; he is also a member of the Production and Technology Branch of the Academy of Motion Picture Arts and Sciences.",
@@ -557,7 +489,6 @@
                 moderator: "Yatindra Mishra",
                 panel: "Panel Discussion",
                 date: "Nov-26th, 2024, 04.30 PM TO 06.00 PM",
-                // description: "This session brings together renowned sound designers Nakul Kamte and Eric Hoehn, who will explore the power of sound design in shaping the emotional and narrative depth of films. From subtle  ambient layers to impactful soundscapes, they will share their craft in building the aural  dimension that completes the cinematic experience.",
                 speakers: [{
                         name: "Sonu Nigam",
                         description: "Sonu Nigam is an Indian playback singer, music director, dubbing artist, and actor who predominantly sings in Hindi and Kannada language films, having sung over 4000 songs in various languages; he is one of the most preeminent singers of Hindi cinema, known for his non-film albums and roles in Hindi films, and was honoured with the Padma Shri, India’s fourth-highest civilian award, in 2022; his repertoire includes Romantic, Rock, Devotional, Ghazal, and Patriotic songs, and he has sung in multiple languages including Hindi, Odia, Bengali, English, Gujarati, Kannada, Maithili, Bhojpuri, Malayalam, Manipuri, Marathi, Nepali, Tamil, and Telugu, as well as releasing pop albums in Hindi, Kannada, Odia, Chhattisgarhi, and Punjabi, alongside Hindu and Islamic devotional albums.",
@@ -610,13 +541,7 @@
                 moderator: "Jayprad Desai",
                 panel: "Panel Discussion",
                 date: "Nov-27th, 2024, 12.30 PM TO 01.30 PM",
-                speakers: [
-                    // {
-                    //     name: "Kshitij Mehta (Collective Artists Network)",
-                    //     description: "Kshitij Mehta is the co-founder of Collective Artists Network, which is a multi-faceted content powerhouse with unparalleled access to India’s leading talent across categories. He is an alma mater of Welingkar Institute of Management with specialisation in E-biz & Marketing. He has also been a film critic with DesiMartini and Jam Magazine.",
-                    //     image: "{{ asset('public/images/master-class/Kshitij Mehta.png') }}"
-                    // },
-                    {
+                speakers: [{
                         name: "Himesh Mankad",
                         description: "Himesh Mankad is a Film Journalist at Pinkvilla. He started the journey in the world of entertainment journalism by being one of the three founders of the entertainment portal, Talking Moviez in 2013. Later, he shifted the base into professional journalism with Catch News, a subsidiary of Rajasthan Patrika, from July 1, 2015. This was followed by a career at Indian Express youth wing, InUth. He has formerly worked with Mumbai Mirror, Catch News, Bollywood Hungama!.",
                         image: "{{ asset('public/images/master-class/Himesh Mankad.jpg') }}"
@@ -651,6 +576,24 @@
                 }]
             }
         ],
+
+        nov28: [{
+            title: "Tapan Sinha-Centenary session-The Spectrum and the Soul",
+            moderator: "Mohit Soni",
+            panel: "In Conversation",
+            date: "Nov-28th, 2024, 11.00 AM TO 12.30 PM",
+            speakers: [{
+                    name: "Ramesh Sippy",
+                    description: "Padmashree Ramesh Sippy is a renowned Indian film director, producer, and industry leader, best known for his iconic film Sholay (1975) along with his films Andaaz , Seeta aur Geeta, Saagar, Shakti and many more. Apart from his directorial success, he has also made significant contributions as a producer, shaping several successful films under Ramesh Sippy Entertainment, including Dum Mari Dum and Nautanki Saala. He has served as the chairman of Guild, MESC and NFDC, and as been Chairman Jury for National Awards, Filmfare, IIFA and several others while playing a key role in India's film industry regulations. Additionally, he founded Ramesh Sippy Academy of Cinema and Entertainment offering courses in Media and Entertainment.",
+                    image: "{{ asset('public/images/master-class/ramesh-sippy.jpg') }}"
+                },
+                {
+                    name: "Kiran Jonaja",
+                    description: "Kiran Joneja is a versatile Indian actress, model, producer, and the Managing Director of the Ramesh Sippy Academy of Cinema and Entertainment (RSACE). She is significantly know for her roles in the films Jab We Met and Khosla Ka Ghosla, alongside her roles in popular TV shows Buniyaad and Mahabharat. She began her career as a model doing prestigious advertisements for Nivea, Lakme and many more. She also hosted her own talk show, The Kiran Joneja Talk Show for Starplus and Fasle for DD News. In addition, Kiran Joneja plays an influential role as MD in RSACE, contributing to shaping the future of cinema education and talent development.",
+                    image: "{{ asset('public/images/master-class/kiran-jonaja.jpg') }}"
+                }
+            ]
+        }],
     };
 
     document.querySelectorAll('.title-tab').forEach(tab => {
@@ -683,13 +626,13 @@
                     // Populate the speaker list item
                     li.innerHTML =
                         `
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <div class="ms-2 me-auto">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <div class="fw-bold">${speaker.name}</div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <span>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <img src="${speaker.image}" class="img-circle" alt="${speaker.name}">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </span>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                `;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <div class="ms-2 me-auto">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <div class="fw-bold">${speaker.name}</div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <img src="${speaker.image}" class="img-circle" alt="${speaker.name}">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    `;
                         speakersList.appendChild(li);
                     });
                 }
