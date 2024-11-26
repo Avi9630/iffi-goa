@@ -258,6 +258,9 @@
                     </li>
                 </ul>
             </div>
+            <br>
+            <a href="https://www.youtube.com/watch?v=Cge9FYzxcfs" class="btn btn-sm btn-primary" target="_blank"
+                style="margin-left: 80px"> View session</a>
         </div>
     </div>
 </div>
