@@ -47,7 +47,7 @@ class InternationalCinemaController extends Controller
     public function internationCinemaList(Request $request)
     {
         try {
-            $data = InternationalCinema::where(['year' => 2024])->get();
+            $data = InternationalCinema::where(['award_year' => 2024])->get();
             if ($data) {
                 $response = [
                     'message' => 'Success!',
@@ -101,8 +101,8 @@ class InternationalCinemaController extends Controller
                 $destinationPath = 'images/cureted-section';
                 $originalFilename = $file->getClientOriginalName();
                 $extension = $file->getClientOriginalExtension();
-                $hashedFilename = substr(md5($originalFilename.time()), 0, 20).'.'.$extension;
-                $fullFilePath = public_path($destinationPath.'/'.$hashedFilename);
+                $hashedFilename = substr(md5($originalFilename . time()), 0, 20) . '.' . $extension;
+                $fullFilePath = public_path($destinationPath . '/' . $hashedFilename);
                 if (File::exists($fullFilePath)) {
                     $response = [
                         'message' => 'File with the same name already exists.',
@@ -173,8 +173,8 @@ class InternationalCinemaController extends Controller
                     $destinationPath = 'images/cureted-section';
                     $originalFilename = $file->getClientOriginalName();
                     $extension = $file->getClientOriginalExtension();
-                    $hashedFilename = substr(md5($originalFilename.time()), 0, 20).'.'.$extension;
-                    $fullFilePath = public_path($destinationPath.'/'.$hashedFilename);
+                    $hashedFilename = substr(md5($originalFilename . time()), 0, 20) . '.' . $extension;
+                    $fullFilePath = public_path($destinationPath . '/' . $hashedFilename);
                     if (File::exists($fullFilePath)) {
                         $response = [
                             'message' => 'File with the same name already exists. Please reupload file!!',
