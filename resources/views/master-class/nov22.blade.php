@@ -32,6 +32,8 @@
                     </li>
                 </ul>
             </div>
+            <a href="https://www.youtube.com/watch?v=yGuy9DsYn2k" class="btn btn-sm btn-primary" target="_blank"
+                style="margin-left: 80px"> View session</a>
         </div>
     </div>
 </div>
@@ -113,6 +115,9 @@
                     </li>
                 </ul>
             </div>
+            <br>
+            <a href="https://www.youtube.com/watch?v=bRgc0LTRV24" class="btn btn-sm btn-primary" target="_blank"
+                style="margin-left: 80px"> View session</a>
         </div>
     </div>
 </div>
