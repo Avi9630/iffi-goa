@@ -501,15 +501,15 @@ class CommonController extends Controller
         return view('master-class.master', compact('masterClasses'));
     }
 
-    public function partnersSponsors()
-    {
-        $sponcersPartners = DB::table('the_partner_sponsor')
-            ->select('title', DB::raw("GROUP_CONCAT(img_src SEPARATOR ', ') AS images"))
-            ->groupBy('title')
-            ->get();
+    // public function partnersSponsors()
+    // {
+    //     $sponcersPartners = DB::table('the_partner_sponsor')
+    //         ->select('title', DB::raw("GROUP_CONCAT(img_src SEPARATOR ', ') AS images"))
+    //         ->groupBy('title')
+    //         ->get();
 
-        return view('partnersSponsors.partner-sponsers', [
-            'sponcersPartners' => $sponcersPartners,
-        ]);
-    }
+    //     return view('partnersSponsors.partner-sponsers', [
+    //         'sponcersPartners' => $sponcersPartners,
+    //     ]);
+    // }
 }
