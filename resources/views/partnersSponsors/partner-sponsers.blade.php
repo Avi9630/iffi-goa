@@ -734,6 +734,38 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="col-md-12 col-sm-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="title-sponsor">LICENSING PARTNER</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="sponsor-list-div ">
+                                <ul>
+                                    <li class="me-2">
+                                        <a href="https://www.iffigoa.org/public/images/thePartnerSponsor/impr.jpg">
+                                            <img src="https://www.iffigoa.org/public/images/thePartnerSponsor/impr.jpg"
+                                                class="img-fluid" alt="LICENSING PARTNER">
+                                        </a>
+                                    </li>
+                                    <li class="me-2">
+                                        <a href="https://www.iffigoa.org/public/images/thePartnerSponsor/novex.jpg">
+                                            <img src="https://www.iffigoa.org/public/images/thePartnerSponsor/novex.jpg"
+                                                class="img-fluid" alt="LICENSING PARTNER">
+                                        </a>
+                                    </li>
+                                    <li class="me-2">
+                                        <a href="https://www.iffigoa.org/public/images/thePartnerSponsor/rmpl.jpg">
+                                            <img src="https://www.iffigoa.org/public/images/thePartnerSponsor/rmpl.jpg"
+                                                class="img-fluid" alt="LICENSING PARTNER">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
