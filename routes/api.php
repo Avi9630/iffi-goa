@@ -82,7 +82,7 @@ Route::get('master_classes', [ApiNewController::class, 'getMasterClass'])->name(
 Route::post('master_classes_Update/{id}', [ApiNewController::class, 'updateMasterClass'])->name('master_classes_Update');
 Route::get('master_classes_details/{id}', [ApiNewController::class, 'getMasterClassById'])->name('master_classes_details');
 Route::post('master_classes_create', [ApiNewController::class, 'createMasterClass'])->name('master_classes_create');
-// Route::delete('master_classes_delete/{id}', [ApiNewController::class, 'master_classes Delete'])->name('master_classes -delete');
+// Route::delete('master_classes_delete/{id}',  [ApiNewController::class, 'master_classes Delete'])->name('master_classes -delete');
 
 // Cureted Section 2024
 Route::get('get-CuretedSection2024', [ApiNewController::class, 'curetedSection2024'])->name('get-CuretedSection2024');
@@ -111,37 +111,13 @@ Route::post('active-deactive', [IndianPanoramaController::class, 'activeDeactive
 Route::post('add-press-release', [ApiController::class, 'addPressRelease'])->name('add-press-release');
 Route::post('update-press-release', [ApiController::class, 'updatePressRelease'])->name('update-press-release');
 
-//INTERNATIONAL-CINEMA
-
-Route::get(
-    'get-curated-section',
-    [InternationalCinemaController::class, 'getCuratedSection']
-)->name('get-curated-section');
-
-Route::get(
-    'international-cinema-list',
-    [InternationalCinemaController::class, 'internationCinemaList']
-)->name('international-cinema-list');
-
-Route::post(
-    'international-cinema-create',
-    [InternationalCinemaController::class, 'internationCinemaCreate']
-)->name('international-cinema-create');
-
-Route::post(
-    'international-cinema-update/{id}',
-    [InternationalCinemaController::class, 'internationCinemaUpdate']
-)->name('international-cinema-update');
-
-Route::get(
-    'international-cinema-by-id/{id}',
-    [InternationalCinemaController::class, 'getById']
-)->name('international-cinema-by-id');
-
-Route::post(
-    'international-cinema-basic-detail/{international_cinema_id}',
-    [InternationalCinemaController::class, 'createBasicDetail']
-)->name('international-cinema-basic-detail');
+//INTERNATIONAL-CINEMA-BASIC-Details
+Route::get('get-curated-section', [InternationalCinemaController::class, 'getCuratedSection'])->name('get-curated-section');
+Route::get('international-cinema-list', [InternationalCinemaController::class, 'internationCinemaList'])->name('international-cinema-list');
+Route::post('international-cinema-create', [InternationalCinemaController::class, 'internationCinemaCreate'])->name('international-cinema-create');
+Route::post('international-cinema-update/{id}', [InternationalCinemaController::class, 'internationCinemaUpdate'])->name('international-cinema-update');
+Route::get('international-cinema-by-id/{id}', [InternationalCinemaController::class, 'getById'])->name('international-cinema-by-id');
+Route::post('international-cinema-basic-detail/{international_cinema_id}', [InternationalCinemaController::class, 'createBasicDetail'])->name('international-cinema-basic-detail');
 
 // CSV
 
@@ -150,9 +126,9 @@ Route::post('csv', [ApiController::class, 'csv'])->name('csv');
 //GALLERY
 // Route::post('gallery',                   [GalleryController::class, 'uploadGallery'])->name('gallery');
 // Route::post('upload-in-galary',             [ApiNewController::class, 'uploadInGalary'])->name('upload-in-galary');
-Route::get('all_photo',                     [GalleryController::class, 'allPhoto'])->name('all_photo');
-Route::get('photo_by_id/{id}',              [GalleryController::class, 'getById'])->name('photo_by_id');
-Route::post('gallery_upload',               [GalleryController::class, 'create'])->name('gallery_upload');
-Route::post('photo_active_inactive/{id}',   [GalleryController::class, 'update'])->name('photo_active_inactive');
-Route::post('photo_delete/{id}',            [GalleryController::class, 'delete'])->name('photo_delete');
-Route::get('photo_category',                [GalleryController::class, 'photoCategory'])->name('photo_category');
+Route::get('all_photo', [GalleryController::class, 'allPhoto'])->name('all_photo');
+Route::get('photo_by_id/{id}', [GalleryController::class, 'getById'])->name('photo_by_id');
+Route::post('gallery_upload', [GalleryController::class, 'create'])->name('gallery_upload');
+Route::post('photo_active_inactive/{id}', [GalleryController::class, 'update'])->name('photo_active_inactive');
+Route::post('photo_delete/{id}', [GalleryController::class, 'delete'])->name('photo_delete');
+Route::get('photo_category', [GalleryController::class, 'photoCategory'])->name('photo_category');

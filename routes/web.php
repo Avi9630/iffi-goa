@@ -57,7 +57,7 @@ Route::controller(CommonController::class)->group(function () {
 
     Route::get('/gallery/date', 'getGalleryByDate')->name('gallery.byDate');
 
-    Route::get('partners-sponsors', 'partnersSponsors')->name('partners-sponsors');
+    // Route::get('partners-sponsors', 'partnersSponsors')->name('partners-sponsors');
 });
 
 Route::controller(InternationalCinemaController::class)->group(function () {
@@ -242,3 +242,7 @@ Route::get('midfest-film', function () {
 Route::get('closing-film', function () {
     return view('screening.closing-film');
 })->name('closing-film');
+
+Route::get('partners-sponsors', function () {
+    return view('partnersSponsors.partner-sponsers');
+})->name('partners-sponsors');

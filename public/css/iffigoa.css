@@ -3,38 +3,6 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Sanchez:ital@0;1&display=swap"); */
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Sanchez:ital@0;1&display=swap");
 
-/* h1, h2, h3, h4, h5, h6{ font-family: "Sora", sans-serif; } */
-h2 {
-    color: #3e4eb0;
-    /* font-size: 1.5rem; */
-}
-
-h3 {
-    color: #3e4eb0;
-    font-size: 1.5rem;
-}
-h4 {
-    color: #3e4eb0;
-    font-size: 1.5rem;
-}
-h5 {
-    color: #3e4eb0;
-    font-size: 1.5rem;
-}
-body {
-    background-image: url(../images/bodybg.png);
-    /* background-image: url(../images/bgaa.jpeg); */
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-body {
-    font-family: "Roboto", sans-serif;
-    color: #000;
-    font-size: 16px;
-}
-body p {
-    font-family: "Roboto", sans-serif;
-}
 .blackBG {
     background: #000 !important;
     color: #fff;
@@ -1815,4 +1783,37 @@ footer a:hover {
     .forms-sample .form-group {
         margin-bottom: 15px !important;
     }
+}
+
+/* h1, h2, h3, h4, h5, h6{ font-family: "Sora", sans-serif; } */
+h2 {
+    color: #3e4eb0;
+    /* font-size: 1.5rem; */
+}
+
+h3 {
+    color: #3e4eb0;
+    font-size: 1.5rem;
+}
+h4 {
+    color: #3e4eb0;
+    font-size: 1.5rem;
+}
+h5 {
+    color: #3e4eb0;
+    font-size: 1.5rem;
+}
+body {
+    background-image: url(../images/bodybg.png);
+    /* background-image: url(../images/bgaa.jpeg); */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+body {
+    font-family: "Roboto", sans-serif;
+    color: #000;
+    font-size: 16px;
+}
+body p {
+    font-family: "Roboto", sans-serif;
 }

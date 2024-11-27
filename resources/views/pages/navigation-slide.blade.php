@@ -681,11 +681,11 @@
                                             Filmbazaar Marriott Stage Programme
                                         </a>
                                     </li>
-                                    {{-- <li class="nav-item">
+                                    <li class="nav-item">
                                         <a href="{{ route('knowledge-series') }}" class="nav-link">
                                             Knowledge series
                                         </a>
-                                    </li> --}}
+                                    </li>
                                 </ul>
                             </div>
                             <!-- Film Bazaar Section End -->

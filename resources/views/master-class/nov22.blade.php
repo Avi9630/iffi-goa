@@ -32,6 +32,8 @@
                     </li>
                 </ul>
             </div>
+            <a href="https://www.youtube.com/watch?v=yGuy9DsYn2k" class="btn btn-sm btn-primary" target="_blank"
+                style="margin-left: 80px"> View session</a>
         </div>
     </div>
 </div>
@@ -66,12 +68,11 @@
                         <img src="{{ asset('public/images/master-class/Vidhu Vinod Chopra.jpg') }}" alt="image"
                             class="img-fluid">
                     </li>
-                    {{-- <li>
-                        <img src="{{ asset('public/images/master-class/Shantanu Moitra.jpg') }}" alt="image"
-                            class="img-fluid">
-                    </li> --}}
                 </ul>
             </div>
+            <br>
+            <a href="https://www.youtube.com/watch?v=bBy_dJJ3_Jc&list=PLzkvk19CaSlI01tnt7RiIMF_7eQoc1oHJ&index=3"
+                class="btn btn-sm btn-primary" target="_blank" style="margin-left: 80px"> View session</a>
         </div>
     </div>
 </div>
@@ -114,6 +115,9 @@
                     </li>
                 </ul>
             </div>
+            <br>
+            <a href="https://www.youtube.com/watch?v=bRgc0LTRV24" class="btn btn-sm btn-primary" target="_blank"
+                style="margin-left: 80px"> View session</a>
         </div>
     </div>
 </div>
@@ -157,6 +161,10 @@
                     </li>
                 </ul>
             </div>
+            <br>
+            <a href="https://www.youtube.com/watch?v=TTuN_8_9DsE&list=PLzkvk19CaSlI01tnt7RiIMF_7eQoc1oHJ&index=1&pp=iAQB"
+                class="btn btn-sm btn-primary" target="_blank" style="margin-left: 80px"> View session</a>
         </div>
+
     </div>
 </div>
