@@ -5,7 +5,10 @@
                 <img src="{{ asset('public/images/phlip.jpg') }}" alt="image" class="img-fluid fit-img img-radius">
             </div>
             <div class="col-md-6 col-sm-6 ">
-                <h4 class="mb-3">55<sup>th</sup> IFFI Satyajit Ray Lifetime Achievement Award</h4>
+                <h4 class="mb-3">
+                    {{-- 55<sup>th</sup> IFFI Satyajit Ray Lifetime Achievement Award --}}
+                    Satyajit Ray Excellence in Cinema Award
+                </h4>
                 <p>
                     The prestigious Satyajit Ray Lifetime Achievement Award for Excellence in Cinema goes to Veteran
                     Australian filmmaker Phillip Noyce at 55th IFFI.

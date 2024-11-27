@@ -59,24 +59,29 @@
                     comes to celebrities and their films. Public Relations (PR) plays a crucial role in shaping how
                     stars are perceived by the public. This session will explore how PR strategies influence the public
                     image of stars and their films, and the complex relationship between media portrayal and reality.
-                    Join industry experts Himesh Mankad and Sajan Raj Kurup moderated by Jayprad Desai,
-                    as they delve into the intricacies of star power, perception, and the role of PR in shaping both.
+                    Join industry experts Himesh Mankad, Ravi Kottarakkara and Shankar Ramakrishnan moderated by Jayprad
+                    Desai, as they delve into the intricacies of star power, perception, and the role of PR
+                    in shaping both.
                 </p>
             </div>
         </div>
         <div class="col-md-3 col-12">
             <div class="user-profile-icon">
                 <ul>
-                    {{-- <li>
-                        <img src="{{ asset('public/images/master-class/Kshitij Mehta.png') }}" alt="image"
-                            class="img-fluid">
-                    </li> --}}
                     <li>
                         <img src="{{ asset('public/images/master-class/Himesh Mankad.jpg') }}" alt="image"
                             class="img-fluid">
                     </li>
                     <li>
                         <img src="{{ asset('public/images/master-class/Sajan Raj Kurup.jpg') }}" alt="image"
+                            class="img-fluid">
+                    </li>
+                    <li>
+                        <img src="{{ asset('public/images/master-class/shankar-ramakrishnan.jpg') }}" alt="image"
+                            class="img-fluid">
+                    </li>
+                    <li>
+                        <img src="{{ asset('public/images/master-class/ravi-kottarakkara.jpg') }}" alt="image"
                             class="img-fluid">
                     </li>
                 </ul>
