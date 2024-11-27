@@ -2,7 +2,8 @@
     <div class="container mb-4">
         <div class="row">
             <div class="col-md-6 col-sm-6">
-                <img src="{{ asset('public/images/phlip.jpg') }}" alt="image" class="img-fluid fit-img img-radius">
+                <img src="{{ asset('public/images/Satyajit-Ray-Excellence-in-Cinema-Award.jpg') }}" alt="image"
+                    class="img-fluid fit-img img-radius">
             </div>
             <div class="col-md-6 col-sm-6 ">
                 <h4 class="mb-3">
