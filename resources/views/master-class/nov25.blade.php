@@ -30,7 +30,11 @@
                     </li>
                 </ul>
             </div>
+            <br>
+            <a href="https://www.youtube.com/watch?v=OEEeT9xtqnk&list=PLUiMfS6qzIMy7gIZtzSgYYLcrVbEc1O7m&index=2"
+                class="btn btn-sm btn-primary" target="_blank" style="margin-left: 80px"> View session</a>
         </div>
+
     </div>
 </div>
 
