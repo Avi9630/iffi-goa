@@ -125,6 +125,9 @@
                     </li>
                 </ul>
             </div>
+            <br>
+            <a href="https://www.youtube.com/watch?v=JtjqWM1gBdQ&list=PLUiMfS6qzIMy7gIZtzSgYYLcrVbEc1O7m&index=19"
+                class="btn btn-sm btn-primary" target="_blank" style="margin-left: 80px"> View session</a>
         </div>
     </div>
 </div>
@@ -170,14 +173,12 @@
 <div class="mt-4 mb-4">
     <h2 class="pb-3">November 23rd, 2024</h2>
     <div class="row">
-
         <div class="col-md-2 col-3">
             <div class="master-time">
                 <h4 class="time-div">07:30 PM</h4>
                 <h5 class="time-div">08:30 PM</h5>
             </div>
         </div>
-
         <div class="col-md-7 col-9">
             <div class="callout">
                 <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov23-4-trigger">
@@ -191,7 +192,6 @@
                 </p>
             </div>
         </div>
-
         <div class="col-md-3 col-12">
             <div class="user-profile-icon">
                 <ul>
@@ -209,6 +209,9 @@
                     </li>
                 </ul>
             </div>
+            <br>
+            <a href="https://www.youtube.com/watch?v=2RW5YIrf-9k&list=PLUiMfS6qzIMy7gIZtzSgYYLcrVbEc1O7m&index=3"
+                class="btn btn-sm btn-primary" target="_blank" style="margin-left: 80px"> View session</a>
         </div>
     </div>
 </div>
