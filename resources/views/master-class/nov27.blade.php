@@ -72,10 +72,10 @@
                         <img src="{{ asset('public/images/master-class/Himesh Mankad.jpg') }}" alt="image"
                             class="img-fluid">
                     </li>
-                    <li>
+                    {{-- <li>
                         <img src="{{ asset('public/images/master-class/Sajan Raj Kurup.jpg') }}" alt="image"
                             class="img-fluid">
-                    </li>
+                    </li> --}}
                     <li>
                         <img src="{{ asset('public/images/master-class/shankar-ramakrishnan.jpg') }}" alt="image"
                             class="img-fluid">
