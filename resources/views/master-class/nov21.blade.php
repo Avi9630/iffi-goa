@@ -92,6 +92,9 @@
                     </li>
                 </ul>
             </div>
+            <br>
+            <a href="https://www.youtube.com/watch?v=zBFfr647ADU&list=PLUiMfS6qzIMy7gIZtzSgYYLcrVbEc1O7m&index=4"
+                class="btn btn-sm btn-primary" target="_blank" style="margin-left: 80px"> View session</a>
         </div>
     </div>
 </div>
