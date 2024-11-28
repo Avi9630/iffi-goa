@@ -51,7 +51,13 @@
                 <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov28-1-trigger">
                     Passion for perfection-Ramesh Sippy philosophy
                 </h4>
-                <p></p>
+                <p>
+                    Mr. Ramesh Sippy has been a distinguished name in the world of Indian cinema. With an iconic body of
+                    work that features films like Sholay, Andaaz, Shaan and Seeta aur Geeta, he has truly exemplified
+                    his passion for perfection. In this session titled, "Passion for Perfection: Ramesh Sippy's
+                    Philosophy", Mr. Sippy will delve into the intricacies of his filmmaking methodology in conversation
+                    with the CEO of Media & Entertainment Skills Council, Mr. Mohit Soni.
+                </p>
             </div>
         </div>
         <div class="col-md-3 col-12">
