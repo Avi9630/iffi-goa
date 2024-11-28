@@ -4,7 +4,7 @@
         <div class="col-md-2 col-3">
             <div class="master-time">
                 <h4 class="time-div">11:00 AM</h4>
-                <h5 class="time-div">12:30 PM</h5>
+                <h5 class="time-div">11:30 PM</h5>
             </div>
         </div>
         <div class="col-md-7 col-9">
