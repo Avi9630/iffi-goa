@@ -114,7 +114,6 @@
         'datas' => app(\App\Http\Controllers\CommonController::class)->highlights(),
     ])
 
-
     <!-- Social Media Corner  -->
     @include('pages.social-media-cornor')
     <!-- Social Media Corner end  -->
