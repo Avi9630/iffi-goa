@@ -36,6 +36,9 @@
                     </li>
                 </ul>
             </div>
+            <br>
+            <a href="https://www.youtube.com/watch?v=erG9M0_3vps&list=PLUiMfS6qzIMy7gIZtzSgYYLcrVbEc1O7m&index=32"
+                class="btn btn-sm btn-primary" target="_blank" style="margin-left: 80px"> View session</a>
         </div>
     </div>
 </div>
@@ -82,6 +85,9 @@
                     </li>
                 </ul>
             </div>
+            <br>
+            <a href="https://www.youtube.com/watch?v=-ILnEpKM4qo&list=PLUiMfS6qzIMy7gIZtzSgYYLcrVbEc1O7m&index=1"
+                class="btn btn-sm btn-primary" target="_blank" style="margin-left: 80px"> View session</a>
         </div>
     </div>
 </div>
@@ -120,6 +126,9 @@
                     </li>
                 </ul>
             </div>
+            <br>
+            <a href="https://www.youtube.com/watch?v=ix4W-Ohv3Ik&list=PLUiMfS6qzIMy7gIZtzSgYYLcrVbEc1O7m&index=29"
+                class="btn btn-sm btn-primary" target="_blank" style="margin-left: 80px"> View session</a>
         </div>
     </div>
 </div>
@@ -157,6 +166,9 @@
                     </li>
                 </ul>
             </div>
+            <br>
+            <a href="https://www.youtube.com/watch?v=fTzKOPcthYo&list=PLUiMfS6qzIMy7gIZtzSgYYLcrVbEc1O7m&index=2"
+                class="btn btn-sm btn-primary" target="_blank" style="margin-left: 80px"> View session</a>
         </div>
     </div>
 </div>

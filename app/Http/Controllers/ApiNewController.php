@@ -27,55 +27,47 @@ class ApiNewController extends Controller
 
         // Validation rules
         $validatorArray = [
-            'title' => 'required',
-            'description' => 'required',
-            'img_src_file' => 'nullable|file|mimes:jpg,jpeg,png|max:2048', // Make img_src_file optional
-            'link' => 'nullable|string',
-            'link_title' => 'nullable|string',
+            'title'         =>  'required',
+            'description'   =>  'required',
+            'img_src_file'  =>  'nullable|file|mimes:jpg,jpeg,png|max:2048',
+            'link'          =>  'nullable|string',
+            'link_title'    =>  'nullable|string',
         ];
-
         $validator = Validator::make($payload, $validatorArray);
-
         if ($validator->fails()) {
             return $this->response('validatorerrors', [
                 'message' => $validator->errors()->first(),
             ]);
         }
-
         try {
-            // Handle file upload if exists
             $fileName = null;
             $fileNameOriginal = null;
             if ($request->hasFile('img_src_file')) {
                 $file = $request->file('img_src_file');
-                $destinationPath = 'images/news-update';
-                $fileNameOriginal = $file->getClientOriginalName(); // Adding timestamp to prevent name collision
-
-                $extension = strtolower($request->file('img_src_file')->getClientOriginalExtension());
-                $modifiedName = (rand(100000, 999999)) . '_' . time() . '.' . $extension;
-
+                $destinationPath    =   'images/news-update';
+                $fileNameOriginal   =   $file->getClientOriginalName();
+                $extension          =   strtolower($request->file('img_src_file')->getClientOriginalExtension());
+                $modifiedName       =   (rand(100000, 999999)) . '_' . time() . '.' . $extension;
                 $file->move(public_path($destinationPath), $modifiedName);
-                $fileName = $modifiedName;
+                $fileName   =   $modifiedName;
             }
-
             // Clean the 'pop_up_content' field before saving it
             $popUpContent = isset($payload['pop_up_content']) ? $payload['pop_up_content'] : null;
             $popUpContent = $this->cleanPopUpContent($popUpContent);
-
             // Prepare data for new entry
             $data = [
-                'image_name' => $fileNameOriginal,
-                'title' => $payload['title'],
-                'description' => $payload['description'],
-                'img_src' => $fileName, // Add the file name if file was uploaded
-                'link' => $payload['link'] ?? null, // Use null if not provided
-                'link_title' => $payload['link_title'] ?? null, // Use null if not provided
-                'pop_up_content' => $popUpContent, // Cleaned content
-                'have_popup' => $payload['have_popup'] ?? null, // Optional
-                'pop_up_header' => $payload['pop_up_header'] ?? null, // Optional
-                'sort_num' => $payload['sort_num'] ?? null, // Optional
+                'image_name'        =>  $fileNameOriginal,
+                'title'             =>  $payload['title'],
+                'description'       =>  $payload['description'],
+                'img_src'           =>  $fileName,
+                'link'              =>  $payload['link'] ?? null,
+                'link_title'        =>  $payload['link_title'] ?? null,
+                'pop_up_content'    =>  $popUpContent,
+                'have_popup'        =>  $payload['have_popup'] ?? null,
+                'pop_up_header'     =>  $payload['pop_up_header'] ?? null,
+                'sort_num'          =>  $payload['sort_num'] ?? null,
             ];
-
+            // dd($data);
             // Create a new news update
             $newsUpdate = NewsUpdate::create($data);
 
