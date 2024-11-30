@@ -23,16 +23,15 @@
         <div class="col-md-3 col-12">
             <div class="user-profile-icon">
                 <ul>
-                    {{-- <li>
-                        <img src="{{ asset('public/images/master-class/ramesh-sippy.jpg') }}" alt="image"
-                            class="img-fluid">
-                    </li> --}}
                     <li>
                         <img src="{{ asset('public/images/master-class/kiran-jonaja.jpg') }}" alt="image"
                             class="img-fluid">
                     </li>
                 </ul>
             </div>
+            <br>
+            <a href="https://www.youtube.com/watch?v=pgUwZXH1Uac&list=PLUiMfS6qzIMy7gIZtzSgYYLcrVbEc1O7m&index=4"
+                class="btn btn-sm btn-primary" target="_blank" style="margin-left: 80px"> View session</a>
         </div>
     </div>
 </div>
@@ -69,6 +68,9 @@
                     </li>
                 </ul>
             </div>
+            <br>
+            <a href="https://www.youtube.com/watch?v=YPtdoWbYdv0&list=PLUiMfS6qzIMy7gIZtzSgYYLcrVbEc1O7m&index=3"
+                class="btn btn-sm btn-primary" target="_blank" style="margin-left: 80px"> View session</a>
         </div>
     </div>
 </div>
