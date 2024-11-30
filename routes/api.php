@@ -24,28 +24,28 @@ Route::get('/testing', function (Request $request) {
 Route::get('csv-read', [ApiNewController::class, 'readCSV'])->name('csv-read');
 
 // Ticker
-Route::get('ticker-list', [ApiController::class, 'tickerList'])->name('ticker-list');
-Route::post('create-ticker', [ApiController::class, 'createTicker'])->name('create-ticker');
-Route::post('update-ticker', [ApiController::class, 'updateTicker'])->name('update-ticker');
-Route::post('delete-ticker', [ApiController::class, 'deleteTicker'])->name('delete-ticker');
+Route::get('ticker-list',           [ApiController::class, 'tickerList'])->name('ticker-list');
+Route::post('create-ticker',        [ApiController::class, 'createTicker'])->name('create-ticker');
+Route::post('update-ticker',        [ApiController::class, 'updateTicker'])->name('update-ticker');
+Route::post('delete-ticker',        [ApiController::class, 'deleteTicker'])->name('delete-ticker');
 
 //News and Update
-Route::get('news-update-list', [ApiController::class, 'newsUpdateList'])->name('news-update-list');
-Route::post('create-news-update', [ApiController::class, 'createNewsUpdate'])->name('create-news-update');
-Route::post('update-news-update', [ApiController::class, 'updateNewsUpdate'])->name('update-news-update');
-Route::post('delete-news-update', [ApiController::class, 'deleteNewsUpdate'])->name('delete-news-update');
+Route::get('news-update-list',      [ApiController::class, 'newsUpdateList'])->name('news-update-list');
+Route::post('create-news-update',   [ApiController::class, 'createNewsUpdate'])->name('create-news-update');
+Route::post('update-news-update',   [ApiController::class, 'updateNewsUpdate'])->name('update-news-update');
+Route::post('delete-news-update',   [ApiController::class, 'deleteNewsUpdate'])->name('delete-news-update');
 
 //faqs
-Route::get('faqs-list', [ApiController::class, 'faqsList'])->name('faqs-list');
-Route::post('create-faqs', [ApiController::class, 'createFaqs'])->name('create-faqs');
-Route::post('update-faqs', [ApiController::class, 'updateFaqs'])->name('update-faqs');
-Route::post('delete-faqs', [ApiController::class, 'deleteFaqs'])->name('delete-faqs');
+Route::get('faqs-list',             [ApiController::class, 'faqsList'])->name('faqs-list');
+Route::post('create-faqs',          [ApiController::class, 'createFaqs'])->name('create-faqs');
+Route::post('update-faqs',          [ApiController::class, 'updateFaqs'])->name('update-faqs');
+Route::post('delete-faqs',          [ApiController::class, 'deleteFaqs'])->name('delete-faqs');
 
 // Abhishek's API .. dont delete
 // News & Update
-Route::post('news-update/{id}', [ApiNewController::class, 'updateNewsUpdate'])->name('update-news');
-Route::get('news-details/{id}', [ApiNewController::class, 'newsUpdateDetails'])->name('details-news');
-Route::post('news-create', [ApiNewController::class, 'createNewsUpdate'])->name('create-news');
+Route::post('news-update/{id}',     [ApiNewController::class, 'updateNewsUpdate'])->name('update-news');
+Route::get('news-details/{id}',     [ApiNewController::class, 'newsUpdateDetails'])->name('details-news');
+Route::post('news-create',          [ApiNewController::class, 'createNewsUpdate'])->name('create-news');
 
 // Ticker
 Route::get('list-ticker', [ApiNewController::class, 'tickerList'])->name('list-ticker');
@@ -55,11 +55,11 @@ Route::post('ticker-create', [ApiNewController::class, 'tickerCreate'])->name('t
 Route::delete('ticker-delete/{id}', [ApiNewController::class, 'tickerDelete'])->name('ticker-delete');
 
 // LatestUpdate
-Route::get('latest-Update', [ApiNewController::class, 'latestUpdate'])->name('list-LatestUpdate');
-Route::post('latest-Update/{id}', [ApiNewController::class, 'updatelatestUpdate'])->name('latest-Update');
-Route::get('latestUpdate-details/{id}', [ApiNewController::class, 'latestUpdateDetails'])->name('latestUpdate-details');
-Route::post('latestUpdate-create', [ApiNewController::class, 'latestUpdateCreate'])->name('latestUpdate-create');
-Route::delete('latestUpdate-delete/{id}', [ApiNewController::class, 'latestUpdateDelete'])->name('latestUpdate-delete');
+Route::get('latest-Update',                 [ApiNewController::class, 'latestUpdate'])->name('list-LatestUpdate');
+Route::post('latest-Update/{id}',           [ApiNewController::class, 'updatelatestUpdate'])->name('latest-Update');
+Route::get('latestUpdate-details/{id}',     [ApiNewController::class, 'latestUpdateDetails'])->name('latestUpdate-details');
+Route::post('latestUpdate-create',          [ApiNewController::class, 'latestUpdateCreate'])->name('latestUpdate-create');
+Route::delete('latestUpdate-delete/{id}',   [ApiNewController::class, 'latestUpdateDelete'])->name('latestUpdate-delete');
 
 // PressRelese
 Route::get('press-relese-list', [ApiNewController::class, 'pressReleseList'])->name('press-relese-list');
