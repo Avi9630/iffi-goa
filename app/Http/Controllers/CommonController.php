@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\InternationalMedia;
 use App\Models\MasterClass;
 use App\Models\NewsUpdate;
 use App\Models\Photo;
@@ -511,5 +512,12 @@ class CommonController extends Controller
         return view('partnersSponsors.partner-sponsers', [
             'sponcersPartners' => $sponcersPartners,
         ]);
+    }
+
+    function internationalMedia(Request $request)
+    {
+        $payload = $request->all();
+        $internationalMedia = InternationalMedia::paginate(10);
+        return view('media.international-media', ['internationalMedia' => $internationalMedia]);
     }
 }
