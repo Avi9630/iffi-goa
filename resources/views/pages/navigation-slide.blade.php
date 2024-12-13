@@ -508,8 +508,15 @@
                             <div class="col-md-3 col-sm-12 ">
                                 <h4 class="menu-title ">Media</h4>
                                 <ul class="navbar-nav vertical-menu-custom">
-                                    <li class="nav-item"><a href="{{ route('press-release') }}"
-                                            class="nav-link">Press Release</a>
+
+                                    <li class="nav-item">
+                                        <a href="{{ route('press-release') }}" class="nav-link">Press Release</a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="{{ route('media-international-media') }}"
+                                            class="nav-link">International
+                                            Media</a>
                                     </li>
 
                                     <li class="nav-item dropdown">
@@ -580,7 +587,6 @@
                                             target="_blank" class="nav-link">55<sup>th</sup> IFFI Official
                                             Catalogue</a>
                                     </li>
-
 
                                 </ul>
                             </div>

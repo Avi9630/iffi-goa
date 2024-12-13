@@ -55,6 +55,8 @@ Route::controller(CommonController::class)->group(function () {
 
     Route::get('media/news-and-update', 'newsUpdate')->name('news-and-update');
 
+    Route::get('media/international-media', 'internationalMedia')->name('media-international-media');
+
     Route::get('/gallery/date', 'getGalleryByDate')->name('gallery.byDate');
 
     // Route::get('partners-sponsors', 'partnersSponsors')->name('partners-sponsors');
@@ -246,3 +248,7 @@ Route::get('closing-film', function () {
 Route::get('partners-sponsors', function () {
     return view('partnersSponsors.partner-sponsers');
 })->name('partners-sponsors');
+
+// Route::get('international-media', function () {
+//     return view('media.international-media');
+// });
