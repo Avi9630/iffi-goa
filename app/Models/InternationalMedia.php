@@ -9,7 +9,7 @@ class InternationalMedia extends Model
 {
     use HasFactory;
 
-    protected $table = 'international-media';
+    protected $table = 'international_media';
 
     protected $guarded = [];
 }
