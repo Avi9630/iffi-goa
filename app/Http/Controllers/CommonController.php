@@ -514,10 +514,13 @@ class CommonController extends Controller
         ]);
     }
 
-    function internationalMedia(Request $request)
+    public function internationalMedia()
     {
-        $payload = $request->all();
-        $internationalMedia = InternationalMedia::paginate(10);
+        // $payload = $request->all();
+        $internationalMedia = InternationalMedia::where('status', 1)
+            ->orderBy('id', 'DESC')
+            ->paginate(10);
+
         return view('media.international-media', ['internationalMedia' => $internationalMedia]);
     }
 }
