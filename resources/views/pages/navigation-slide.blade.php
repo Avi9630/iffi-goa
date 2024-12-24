@@ -74,42 +74,6 @@
                                         <a href="{{ route('iffi-accessibility') }}" class="nav-link">Accessible IFFI For
                                             All</a>
                                     </li>
-
-                                    {{-- <li class="nav-item">
-                                        <a href="{{ asset('public/images/sponsor/IFFI-55-Sponsers-Page.pdf') }}"
-                                            class="nav-link" target="_blank">Our Partners &
-                                            Sponsors</a>
-                                    </li> --}}
-
-                                    {{-- <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="#" role="button"
-                                            data-bs-toggle="dropdown" aria-expanded="false">Best Of IFFI</a>
-                                        <ul class="dropdown-menu">
-
-                                            <li class="nav-item dropend">
-                                                <a class="nav-link dropdown-toggle" href="#" role="button"
-                                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                                    Screening
-                                                </a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a class="dropdown-item"
-                                                            href="{{ route('opening-film') }}">Opening
-                                                            Film</a>
-                                                    </li>
-                                                    <li><a class="dropdown-item"
-                                                            href="{{ route('midfest-film') }}">Midfest
-                                                            Film</a>
-                                                    </li>
-                                                    <li><a class="dropdown-item"
-                                                            href="{{ route('closing-film') }}">Closing
-                                                            Film</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-
-                                        </ul>
-                                    </li> --}}
-
                                 </ul>
                             </div>
                             <!-- About Us Section End -->
@@ -417,7 +381,6 @@
                                                 </ul>
                                             </li>
 
-
                                             <li class="nav-item dropend">
                                                 <a class="nav-link dropdown-toggle" href="#" role="button"
                                                     data-bs-toggle="dropdown" aria-expanded="false">
@@ -545,8 +508,15 @@
                             <div class="col-md-3 col-sm-12 ">
                                 <h4 class="menu-title ">Media</h4>
                                 <ul class="navbar-nav vertical-menu-custom">
-                                    <li class="nav-item"><a href="{{ route('press-release') }}"
-                                            class="nav-link">Press Release</a>
+
+                                    <li class="nav-item">
+                                        <a href="{{ route('press-release') }}" class="nav-link">Press Release</a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="{{ route('media-international-media') }}"
+                                            class="nav-link">International
+                                            Media</a>
                                     </li>
 
                                     <li class="nav-item dropdown">
@@ -554,12 +524,6 @@
                                             data-bs-toggle="dropdown" aria-expanded="false">Gallery
                                         </a>
                                         <ul class="dropdown-menu">
-                                            {{-- <li>
-                                                <a href="{{ route('gallery-2024', ['year' => '2024']) }}"
-                                                    class="dropdown-item">
-                                                    IFFI festival 2024</a>
-                                            </li> --}}
-
                                             <li class="nav-item dropend">
                                                 <a class="nav-link dropdown-toggle" href="#" role="button"
                                                     data-bs-toggle="dropdown" aria-expanded="false">
@@ -623,7 +587,6 @@
                                             target="_blank" class="nav-link">55<sup>th</sup> IFFI Official
                                             Catalogue</a>
                                     </li>
-
 
                                 </ul>
                             </div>

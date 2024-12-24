@@ -29,6 +29,7 @@
                     </li>
                 </ul>
             </div>
+            <br>
             <a href="https://www.youtube.com/watch?v=0RNe2Wvmn8I" class="btn btn-sm btn-primary" target="_blank"
                 style="margin-left: 80px"> View session</a>
         </div>
@@ -66,12 +67,11 @@
                         <img src="{{ asset('public/images/master-class/Manisha Koirala.jpg') }}" alt="image"
                             class="img-fluid">
                     </li>
-                    {{-- <li>
-                        <img src="{{ asset('public/images/master-class/Vikramaditya Motwane.jpg') }}" alt="image"
-                            class="img-fluid">
-                    </li> --}}
                 </ul>
             </div>
+            <br>
+            <a href="https://www.youtube.com/watch?v=O84o3mM9i34&list=PLUiMfS6qzIMy7gIZtzSgYYLcrVbEc1O7m&index=2"
+                class="btn btn-sm btn-primary" target="_blank" style="margin-left: 80px"> View session</a>
         </div>
     </div>
 </div>
@@ -109,6 +109,7 @@
                     </li>
                 </ul>
             </div>
+            <br>
             <a href="https://www.youtube.com/watch?v=iTCOEyaeFAY" class="btn btn-sm btn-primary" target="_blank"
                 style="margin-left: 80px"> View session</a>
         </div>
@@ -150,6 +151,9 @@
                     </li>
                 </ul>
             </div>
+            <br>
+            <a href="https://www.youtube.com/watch?v=hGPNE_4yLMA&list=PLUiMfS6qzIMy7gIZtzSgYYLcrVbEc1O7m&index=17"
+                class="btn btn-sm btn-primary" target="_blank" style="margin-left: 80px"> View session</a>
         </div>
     </div>
 </div>

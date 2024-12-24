@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\InternationalMedia;
 use App\Models\MasterClass;
 use App\Models\NewsUpdate;
 use App\Models\Photo;
@@ -501,15 +502,25 @@ class CommonController extends Controller
         return view('master-class.master', compact('masterClasses'));
     }
 
-    // public function partnersSponsors()
-    // {
-    //     $sponcersPartners = DB::table('the_partner_sponsor')
-    //         ->select('title', DB::raw("GROUP_CONCAT(img_src SEPARATOR ', ') AS images"))
-    //         ->groupBy('title')
-    //         ->get();
+    public function partnersSponsors()
+    {
+        $sponcersPartners = DB::table('the_partner_sponsor')
+            ->select('title', DB::raw("GROUP_CONCAT(img_src SEPARATOR ', ') AS images"))
+            ->groupBy('title')
+            ->get();
 
-    //     return view('partnersSponsors.partner-sponsers', [
-    //         'sponcersPartners' => $sponcersPartners,
-    //     ]);
-    // }
+        return view('partnersSponsors.partner-sponsers', [
+            'sponcersPartners' => $sponcersPartners,
+        ]);
+    }
+
+    public function internationalMedia()
+    {
+        // $payload = $request->all();
+        $internationalMedia = InternationalMedia::where('status', 1)
+            ->orderBy('id', 'DESC')
+            ->paginate(10);
+
+        return view('media.international-media', ['internationalMedia' => $internationalMedia]);
+    }
 }

@@ -30,7 +30,11 @@
                     </li>
                 </ul>
             </div>
+            <br>
+            <a href="https://www.youtube.com/watch?v=OEEeT9xtqnk&list=PLUiMfS6qzIMy7gIZtzSgYYLcrVbEc1O7m&index=2"
+                class="btn btn-sm btn-primary" target="_blank" style="margin-left: 80px"> View session</a>
         </div>
+
     </div>
 </div>
 
@@ -69,6 +73,9 @@
                     </li>
                 </ul>
             </div>
+            <br>
+            <a href="https://www.youtube.com/watch?v=H16MtCZPNS8&list=PLUiMfS6qzIMy7gIZtzSgYYLcrVbEc1O7m&index=18"
+                class="btn btn-sm btn-primary" target="_blank" style="margin-left: 80px"> View session</a>
         </div>
     </div>
 </div>
@@ -104,6 +111,9 @@
                     </li>
                 </ul>
             </div>
+            <br>
+            <a href="https://www.youtube.com/watch?v=cI_PQXGmbdQ&list=PLUiMfS6qzIMy7gIZtzSgYYLcrVbEc1O7m&index=4"
+                class="btn btn-sm btn-primary" target="_blank" style="margin-left: 80px"> View session</a>
         </div>
     </div>
 </div>
@@ -138,12 +148,11 @@
                         <img src="{{ asset('public/images/master-class/Kriti Sanon.jpg') }}" alt="image"
                             class="img-fluid">
                     </li>
-                    {{-- <li>
-                        <img src="{{ asset('public/images/master-class/Rudrani Chattoraj.jpg') }}" alt="image"
-                            class="img-fluid">
-                    </li> --}}
                 </ul>
             </div>
+            <br>
+            <a href="https://www.youtube.com/watch?v=ZieGBiYTIf4&list=PLUiMfS6qzIMy7gIZtzSgYYLcrVbEc1O7m&index=1"
+                class="btn btn-sm btn-primary" target="_blank" style="margin-left: 80px"> View session</a>
         </div>
     </div>
 </div>

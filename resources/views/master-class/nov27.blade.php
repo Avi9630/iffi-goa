@@ -36,6 +36,9 @@
                     </li>
                 </ul>
             </div>
+            <br>
+            <a href="https://www.youtube.com/watch?v=erG9M0_3vps&list=PLUiMfS6qzIMy7gIZtzSgYYLcrVbEc1O7m&index=32"
+                class="btn btn-sm btn-primary" target="_blank" style="margin-left: 80px"> View session</a>
         </div>
     </div>
 </div>
@@ -72,10 +75,6 @@
                         <img src="{{ asset('public/images/master-class/Himesh Mankad.jpg') }}" alt="image"
                             class="img-fluid">
                     </li>
-                    {{-- <li>
-                        <img src="{{ asset('public/images/master-class/Sajan Raj Kurup.jpg') }}" alt="image"
-                            class="img-fluid">
-                    </li> --}}
                     <li>
                         <img src="{{ asset('public/images/master-class/shankar-ramakrishnan.jpg') }}" alt="image"
                             class="img-fluid">
@@ -86,6 +85,9 @@
                     </li>
                 </ul>
             </div>
+            <br>
+            <a href="https://www.youtube.com/watch?v=-ILnEpKM4qo&list=PLUiMfS6qzIMy7gIZtzSgYYLcrVbEc1O7m&index=1"
+                class="btn btn-sm btn-primary" target="_blank" style="margin-left: 80px"> View session</a>
         </div>
     </div>
 </div>
@@ -124,6 +126,9 @@
                     </li>
                 </ul>
             </div>
+            <br>
+            <a href="https://www.youtube.com/watch?v=ix4W-Ohv3Ik&list=PLUiMfS6qzIMy7gIZtzSgYYLcrVbEc1O7m&index=29"
+                class="btn btn-sm btn-primary" target="_blank" style="margin-left: 80px"> View session</a>
         </div>
     </div>
 </div>
@@ -144,7 +149,7 @@
                 </h4>
                 <p>
                     From a technological point of view, AI or Artificial Intelligence is a giant leap, but is it going
-                    to benefit  the future of cinema? Or, it can never replace that human touch!... In what ways then AI
+                    to benefit the future of cinema? Or, it can never replace that human touch!... In what ways then AI
                     can be the friend of the entertainment industry?
                     These and many such questions will be answered in this In Conversation session with the CTO of Adani
                     Group Mr. Sudipta Bhattacharya and film producer Mahaveer Jain as they try to unearth the ways of
@@ -159,16 +164,11 @@
                         <img src="{{ asset('public/images/master-class/Sudipta Bhattacharya.jpg') }}" alt="image"
                             class="img-fluid">
                     </li>
-                    {{-- <li>
-                        <img src="{{ asset('public/images/master-class/Vijay Krishna Acharya.png') }}" alt="image"
-                            class="img-fluid">
-                    </li>
-                    <li>
-                        <img src="{{ asset('public/images/master-class/Mahaveer Jain.png') }}" alt="image"
-                            class="img-fluid">
-                    </li> --}}
                 </ul>
             </div>
+            <br>
+            <a href="https://www.youtube.com/watch?v=fTzKOPcthYo&list=PLUiMfS6qzIMy7gIZtzSgYYLcrVbEc1O7m&index=2"
+                class="btn btn-sm btn-primary" target="_blank" style="margin-left: 80px"> View session</a>
         </div>
     </div>
 </div>

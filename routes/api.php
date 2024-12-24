@@ -4,6 +4,7 @@ use App\Http\Controllers\api\ApiController;
 use App\Http\Controllers\api\GalleryController;
 use App\Http\Controllers\api\IndianPanoramaController;
 use App\Http\Controllers\api\InternationalCinemaController;
+use App\Http\Controllers\api\InternationalMediaController;
 use App\Http\Controllers\ApiNewController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -21,7 +22,7 @@ Route::get('/testing', function (Request $request) {
     ]);
 });
 // CSV read API
-Route::get('csv-read', [ApiNewController::class, 'readCSV'])->name('csv-read');
+Route::get('csv-read', [ApiNewController::class, 'readCSVV'])->name('csv-read');
 
 // Ticker
 Route::get('ticker-list', [ApiController::class, 'tickerList'])->name('ticker-list');
@@ -61,15 +62,6 @@ Route::get('latestUpdate-details/{id}', [ApiNewController::class, 'latestUpdateD
 Route::post('latestUpdate-create', [ApiNewController::class, 'latestUpdateCreate'])->name('latestUpdate-create');
 Route::delete('latestUpdate-delete/{id}', [ApiNewController::class, 'latestUpdateDelete'])->name('latestUpdate-delete');
 
-// PressRelese
-Route::get('press-relese-list', [ApiNewController::class, 'pressReleseList'])->name('press-relese-list');
-
-// Gallery
-// Route::get('get-gallery', [ApiNewController::class, 'getGallery'])->name('get-gallery');
-// Route::post('update-gallery/{id}', [ApiNewController::class, 'updateGallery'])->name('update-gallery');
-// Route::post('create-gallery', [ApiNewController::class, 'createGallery'])->name('create-gallery');
-// Route::get('get-gallery/{id}', [ApiNewController::class, 'getGalleryById'])->name('get-galleryById');
-
 // The Peacock
 Route::get('thePeacock-List', [ApiNewController::class, 'thePeacockList'])->name('thePeacock-List');
 Route::get('get-thePeacock/{id}', [ApiNewController::class, 'getthePeacockById'])->name('get-thePeacockById');
@@ -82,7 +74,6 @@ Route::get('master_classes', [ApiNewController::class, 'getMasterClass'])->name(
 Route::post('master_classes_Update/{id}', [ApiNewController::class, 'updateMasterClass'])->name('master_classes_Update');
 Route::get('master_classes_details/{id}', [ApiNewController::class, 'getMasterClassById'])->name('master_classes_details');
 Route::post('master_classes_create', [ApiNewController::class, 'createMasterClass'])->name('master_classes_create');
-// Route::delete('master_classes_delete/{id}',  [ApiNewController::class, 'master_classes Delete'])->name('master_classes -delete');
 
 // Cureted Section 2024
 Route::get('get-CuretedSection2024', [ApiNewController::class, 'curetedSection2024'])->name('get-CuretedSection2024');
@@ -124,11 +115,19 @@ Route::post('international-cinema-basic-detail/{international_cinema_id}', [Inte
 Route::post('csv', [ApiController::class, 'csv'])->name('csv');
 
 //GALLERY
-// Route::post('gallery',                   [GalleryController::class, 'uploadGallery'])->name('gallery');
-// Route::post('upload-in-galary',             [ApiNewController::class, 'uploadInGalary'])->name('upload-in-galary');
 Route::get('all_photo', [GalleryController::class, 'allPhoto'])->name('all_photo');
 Route::get('photo_by_id/{id}', [GalleryController::class, 'getById'])->name('photo_by_id');
 Route::post('gallery_upload', [GalleryController::class, 'create'])->name('gallery_upload');
 Route::post('photo_active_inactive/{id}', [GalleryController::class, 'update'])->name('photo_active_inactive');
 Route::post('photo_delete/{id}', [GalleryController::class, 'delete'])->name('photo_delete');
 Route::get('photo_category', [GalleryController::class, 'photoCategory'])->name('photo_category');
+
+// PressRelese
+Route::get('press-relese-list', [ApiNewController::class, 'pressReleseList'])->name('press-relese-list');
+
+//International Media
+Route::get('all-international-media', [InternationalMediaController::class, 'getAll'])->name('all-international-media');
+Route::post('create-international-media', [InternationalMediaController::class, 'create'])->name('create-international-media');
+Route::post('update-international-media', [InternationalMediaController::class, 'update'])->name('update-international-media');
+Route::post('delete-international-media', [InternationalMediaController::class, 'delete'])->name('delete-international-media');
+Route::get('fetch-international-media-by-id/{id}', [InternationalMediaController::class, 'fetchById'])->name('fetch-international-media-by-id');

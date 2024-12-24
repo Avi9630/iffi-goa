@@ -1,4 +1,5 @@
 @extends('layouts.app')
+
 @section('site_title', 'Explore IFFI Goa Precious Moments Captured')
 @section('site_description',
     'Discover the vibrant moments of the IFFI Goa Festival in our gallery. Browse through
@@ -22,29 +23,6 @@
             <h1 class="page-title-header">Our Partners & Sponsors</h1>
         </div>
     </div>
-    {{--
-    <div class="col-lg-12 mt-5 static-content">
-        <div class="container">
-
-            <div class="row">
-                @foreach ($sponcersPartners as $sponsorList)
-                    <div class="sponsor-list mb-4">
-                        <h4 class="mb-4">{{ $sponsorList->title }}</h4>
-                        <ul class="d-flex flex-wrap">
-                            @foreach (explode(', ', $sponsorList->images) as $image)
-                                <li class="me-2">
-                                    <a href="{{ asset('public/images/thePartnerSponsor/' . trim($image)) }}">
-                                        <img src="{{ asset('public/images/thePartnerSponsor/' . trim($image)) }}"
-                                            class="img-fluid" alt="{{ $sponsorList->title }}">
-                                    </a>
-                                </li>
-                            @endforeach
-                        </ul>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-    </div> --}}
 
     <div class="col-lg-12 mt-5 static-content">
         <div class="container">
@@ -545,6 +523,13 @@
                                     <li class="me-2">
                                         <a href="https://www.iffigoa.org/public/images/thePartnerSponsor/62.png">
                                             <img src="https://www.iffigoa.org/public/images/thePartnerSponsor/62.png"
+                                                class="img-fluid" alt="OTHER PARTNERS">
+                                        </a>
+                                    </li>
+
+                                    <li class="me-2">
+                                        <a href="{{ asset('public/images/thePartnerSponsor/Quatar Airways.jpg') }}">
+                                            <img src="{{ asset('public/images/thePartnerSponsor/Quatar Airways.jpg') }}"
                                                 class="img-fluid" alt="OTHER PARTNERS">
                                         </a>
                                     </li>

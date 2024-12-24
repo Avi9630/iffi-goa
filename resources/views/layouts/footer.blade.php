@@ -74,7 +74,7 @@
                 </li>
                 <li> <a href="{{ route('faq') }}" class="cus-menuP-link">FAQ's</a></li>
                 <li><a href="{{ route('press-release') }}">Press Release</a></li>
-                <li> <a href="{{ route('gallery') }}">Gallery</a></li>
+                <li> <a href="{{ route('gallery-2024', ['year' => '2024']) }}">Gallery</a></li>
                 <li> <a href="{{ route('privacy-policy') }}">Privacy Policy</a></li>
             </ul>
         </div>
