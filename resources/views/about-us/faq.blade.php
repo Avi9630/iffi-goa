@@ -627,4 +627,60 @@
 
         </div>
     </div>
+    <script>
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [{
+                "@type": "Question",
+                "name": "What is the International Film Festival of India (IFFI) all about ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The International Film Festival of India (IFFI) is one of Asia's most significant and oldest film festivals, celebrating the best of global cinema. Held annually in Goa, IFFI brings together filmmakers, industry professionals, and cinema lovers from around the world to showcase and appreciate cinematic excellence."
+                }
+            }, {
+                "@type": "Question",
+                "name": "When and where is IFFI held ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "IFFI is held every year in the picturesque state of Goa, India. This festival typically takes place in the month of November, providing a perfect blend of film, art, and culture against the backdrop of Goa's scenic beauty."
+                }
+            }, {
+                "@type": "Question",
+                "name": "How do I register as a delegate for IFFI ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "To attend IFFI, you can register online through the official IFFI website. The registration process involves filling out a form with your details and selecting the type of pass you require. Early registration is recommended due to limited availability. Once you log in, scroll down the IFFI account, follow the Delegate Application Guidelines, and send in your application. You will receive an email acknowledging the receipt of your application."
+                }
+            }, {
+                "@type": "Question",
+                "name": "When will Delegate Registration for IFFI started?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Delegate registration for the 55th edition of the International Film Festival of India (IFFI), scheduled in the state from Nov 20 to 28, has opened on 27th September 2024. Film lovers can apply in the delegate category starting at the cost of Rs 1,000 including the GST, however, in the student category, it is free of charge."
+                }
+            }, {
+                "@type": "Question",
+                "name": "When will Delegate Registration for IFFI ends?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Since there is no specific end date for delegate registration for IFFI, be sure to register early to secure your spot."
+                }
+            }, {
+                "@type": "Question",
+                "name": "Who can participate in IFFI ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "IFFI is open to filmmakers, producers, actors, industry professionals, media, delegates and cinema enthusiasts. Whether you're an industry veteran or a passionate film lover or you come from the media industry then, you can easily participate in this biggest film festival of GOA."
+                }
+            }, {
+                "@type": "Question",
+                "name": "Does registering for IFFI give me access to the Opening/Closing ceremony?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No, registering with IFFI does not grant access to the opening and closing ceremonies. This event is invite-based only."
+                }
+            }]
+        }
+    </script>
 @endsection
