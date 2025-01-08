@@ -141,16 +141,6 @@
         }
     });
 </script>
-{{-- @if (Route::currentRouteName() == '/')
-    <script>
-        $(document).ready(function() {
-            $("#update_btn").modal("show");
-            setTimeout(() => {
-                $("#update_btn").modal("hide");
-            }, 10000);
-        });
-    </script>
-@endif --}}
 
 <script>
     $(document).ready(function() {
@@ -189,6 +179,93 @@
         }
     });
 </script>
-</body>
+{{-- Newly added  start --}}
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "International Film Festival of India (IFFI)",
+      "url": "https://iffigoa.org",
+      "logo": "https://iffigoa.org/logo.png",
+      "sameAs": [
+        "https://www.facebook.com/iffigoa",
+        "https://twitter.com/iffigoa",
+        "https://www.instagram.com/iffigoa"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "iffigoa@nfdcindia.com",
+        "contactType": "Customer Service",
+        "areaServed": "IN",
+        "availableLanguage": "English"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Entertainment Society of Goa Maquinez Palace Complex",
+        "addressLocality": "Dayanand Bandodkar Marg, Campal Panaji",
+        "addressRegion": "Goa",
+        "postalCode": "403001",
+        "addressCountry": "IN"
+      }
+    }
+    </script>
 
-</html>
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": "International Film Festival of India 2025",
+        "startDate": "2025-11-20T00:00:00Z",
+        "endDate": "2025-11-30T23:59:59Z",
+        "location": {
+          "@type": "Place",
+          "name": "Goa, India",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Entertainment Society of Goa Maquinez Palace Complex, Dayanand Bandodkar Marg, Campal Panaji, GA 403001",
+            "addressLocality": "Goa",
+            "addressCountry": "IN"
+          }
+        },
+        "performer": {
+          "@type": "Organization",
+          "name": "IFFI Organizers"
+        },
+        "description": "The International Film Festival of India showcases global cinema with screenings, workshops, and more.",
+        "image": "https://iffigoa.org/public/images/iffi.svg",
+        "offers": {
+          "@type": "Offer",
+          "url": "https://iffigoa.org",
+          "priceCurrency": "INR",
+          "price": "Varies"
+        }
+      }
+      </script>
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "International Film Festival of India (IFFI) 2025",
+        "url": "https://iffigoa.org",
+        "description": "Official website of the International Film Festival of India (IFFI), showcasing global cinema, events, and news.",
+        "mainEntityOfPage": "https://iffigoa.org",
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://iffigoa.org"
+          }]
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "IFFI Goa"
+        }
+      }
+      </script>
+
+
+{{-- Newly added  end --}} < /body>
+
+    < /html>
