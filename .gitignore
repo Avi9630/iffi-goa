@@ -4,9 +4,17 @@
 /public/hot
 /public/storage
 /public/images/news-update
+/public/images/cureted-section
+/public/images/indian-panorama-cinema
+/public/images/thePeacock
+# /public/images/thePartnerSponsor
+/public/images/gallery-2024
+/public/images/MediaPdf
+/public/press_release
 /storage/*.key
 /vendor
 .env
+.composer.lock
 .env.backup
 .env.production
 .phpactor.json

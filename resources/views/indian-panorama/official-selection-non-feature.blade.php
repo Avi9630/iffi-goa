@@ -11,7 +11,17 @@
     <!-- Inner Page Banner Section -->
     <div class="container-fluid page-header bannerBg-non-feature py-5">
         <div class="container text-center ">
-            <h1 class="page-title-header">IFFI Festival 2023 Non-Feature Film</h1>
+            {{-- @php
+                if (isset($year) && $year != 2024) {
+                    $yearly = 2023;
+                } else {
+                    $yearly = $year;
+                }
+            @endphp --}}
+            @php
+                $yearly = isset($year) && $year != 2024 ? 2023 : $year ?? 2024;
+            @endphp
+            <h1 class="page-title-header">IFFI Festival {{ $yearly }} Non-Feature Film</h1>
         </div>
     </div>
 
@@ -22,7 +32,7 @@
                     <div class="col-md-3 col-sm-4 col-xs-12 d-flex">
                         <div class="card shadow-sm">
                             <div class="card-image min-size-img">
-                                <img src="{{ asset('public/images/film-selection/indian-panorama/' . $feature->img_src) }}"
+                                <img src="{{ asset('public/images/indian-panorama-cinema/' . $feature->img_src) }}"
                                     alt="image" class="img-fluid">
                             </div>
                             <div class="card-body text-start">
@@ -34,11 +44,11 @@
                                             <span>:</span>
                                             <span>{{ $feature->directed_by }}</span>
                                         </h5>
-                                        <h5>
+                                        {{-- <h5>
                                             <span>Country of Origin</span>
                                             <span>:</span>
                                             <span>{{ $feature->country_of_origin }}</span>
-                                        </h5>
+                                        </h5> --}}
                                         <h5>
                                             <span>Language</span>
                                             <span>:</span>

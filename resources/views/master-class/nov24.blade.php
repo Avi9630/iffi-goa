@@ -1,23 +1,23 @@
 <div class="mt-4 mb-4">
     <h2 class="pb-3">November 24th, 2024</h2>
     <div class="row">
-        <div class="col-md-2 col-12">
+        <div class="col-md-2 col-3">
             <div class="master-time">
                 <h4 class="time-div">11:00 AM</h4>
                 <h5 class="time-div">12:30 PM</h5>
             </div>
         </div>
-        <div class="col-md-7 col-12">
+        <div class="col-md-7 col-9">
             <div class="callout">
                 <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov24-0-trigger">
                     Laser for Post Production and Evolution to HDR
                 </h4>
                 <p>
-                    As technology continues to revolutionize the filmmaking process, Anton Muller, Strategic Director at
-                    Barco Cinema, will take us on a journey through the cutting-edge advancements in laser projection
-                    and the evolution to High Dynamic Range (HDR) in this session. He will dig into how these
-                    technologies enhance image quality, creating sharper and more immersive cinematic experiences,
-                    reshaping the future of post production workflows.
+                    As technology continues to revolutionize the filmmaking process, Anthon Muller, Global Director of
+                    Strategic Marketing at Barco Cinema, will take us on a journey through the cutting-edge advancements
+                    in laser projection and the evolution to High Dynamic Range (HDR) in this session. He will dig into
+                    how these technologies enhance image quality, creating sharper and more immersive cinematic
+                    experiences, reshaping the future of post production workflows.
                 </p>
             </div>
         </div>
@@ -29,6 +29,9 @@
                     </li>
                 </ul>
             </div>
+            <br>
+            <a href="https://www.youtube.com/watch?v=0RNe2Wvmn8I" class="btn btn-sm btn-primary" target="_blank"
+                style="margin-left: 80px"> View session</a>
         </div>
     </div>
 </div>
@@ -36,13 +39,13 @@
 <div class="mt-4 mb-4">
     <h2 class="pb-3">November 24th, 2024</h2>
     <div class="row">
-        <div class="col-md-2 col-12">
+        <div class="col-md-2 col-3">
             <div class="master-time">
                 <h4 class="time-div">12:45 PM</h4>
                 <h5 class="time-div">01:30 PM</h5>
             </div>
         </div>
-        <div class="col-md-7 col-12">
+        <div class="col-md-7 col-9">
             <div class="callout">
                 <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov24-1-trigger">
                     From Big Screen to Streaming
@@ -64,12 +67,11 @@
                         <img src="{{ asset('public/images/master-class/Manisha Koirala.jpg') }}" alt="image"
                             class="img-fluid">
                     </li>
-                    <li>
-                        <img src="{{ asset('public/images/master-class/Vikramaditya Motwane.jpg') }}" alt="image"
-                            class="img-fluid">
-                    </li>
                 </ul>
             </div>
+            <br>
+            <a href="https://www.youtube.com/watch?v=O84o3mM9i34&list=PLUiMfS6qzIMy7gIZtzSgYYLcrVbEc1O7m&index=2"
+                class="btn btn-sm btn-primary" target="_blank" style="margin-left: 80px"> View session</a>
         </div>
     </div>
 </div>
@@ -77,13 +79,13 @@
 <div class="mt-4 mb-4">
     <h2 class="pb-3">November 24th, 2024</h2>
     <div class="row">
-        <div class="col-md-2 col-12">
+        <div class="col-md-2 col-3">
             <div class="master-time">
                 <h4 class="time-div">02:30 PM</h4>
                 <h5 class="time-div">04:00 PM</h5>
             </div>
         </div>
-        <div class="col-md-7 col-12">
+        <div class="col-md-7 col-9">
             <div class="callout">
                 <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov24-2-trigger">
                     Centenary Special: Celebrating the Life and Works of Raj Kapoor - 'The Greatest Showman'
@@ -107,21 +109,23 @@
                     </li>
                 </ul>
             </div>
+            <br>
+            <a href="https://www.youtube.com/watch?v=iTCOEyaeFAY" class="btn btn-sm btn-primary" target="_blank"
+                style="margin-left: 80px"> View session</a>
         </div>
     </div>
 </div>
 
-
 <div class="mt-4 mb-4">
     <h2 class="pb-3">November 24th, 2024</h2>
     <div class="row">
-        <div class="col-md-2 col-12">
+        <div class="col-md-2 col-3">
             <div class="master-time">
                 <h4 class="time-div">04:30 PM</h4>
                 <h5 class="time-div">06:00 PM</h5>
             </div>
         </div>
-        <div class="col-md-7 col-12">
+        <div class="col-md-7 col-9">
             <div class="callout">
                 <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov24-3-trigger">
                     Culture As Context for Cinematic Storytelling
@@ -147,6 +151,9 @@
                     </li>
                 </ul>
             </div>
+            <br>
+            <a href="https://www.youtube.com/watch?v=hGPNE_4yLMA&list=PLUiMfS6qzIMy7gIZtzSgYYLcrVbEc1O7m&index=17"
+                class="btn btn-sm btn-primary" target="_blank" style="margin-left: 80px"> View session</a>
         </div>
     </div>
 </div>

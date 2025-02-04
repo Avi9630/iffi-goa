@@ -7,47 +7,57 @@ use DB;
 
 class IndianPanoramaController extends Controller
 {
-    public function officialFeature()
+    public function officialFeature(Request $request)
     {
-        $officialFeature = DB::table('indian_panorama_cinema')
-            ->join(
-                'indian_panorama_official_selections',
-                'indian_panorama_cinema.official_selection_id',
-                '=',
-                'indian_panorama_official_selections.id',
-            )
-            ->where('indian_panorama_cinema.official_selection_id', '=', '1')
-            ->select(
-                'indian_panorama_cinema.*',
-                'indian_panorama_official_selections.title AS curated_section_title',
-            )
-            ->limit(8)
-            ->get();
-        // dd($officialFeature);
+        $payload            =   $request->all();
+        $year               =   isset($payload['year']) ? $payload['year'] : '';
+        $officialFeature    =   DB::table('indian_panorama_cinema');
+        $officialFeature->join(
+            'indian_panorama_official_selections',
+            'indian_panorama_cinema.official_selection_id',
+            '=',
+            'indian_panorama_official_selections.id',
+        );
+        $officialFeature->where('indian_panorama_cinema.official_selection_id', '=', '1');
+        if (!empty($year)) {
+            $officialFeature->where('indian_panorama_cinema.year', '=', $year);
+        }
+        $officialFeature->select(
+            'indian_panorama_cinema.*',
+            'indian_panorama_official_selections.title AS curated_section_title',
+        );
+        $feature = $officialFeature->get();
         return view('indian-panorama.official-selection-feature', [
-            'officialFeature' =>  $officialFeature,
+            'officialFeature' =>  $feature,
+            'year'               => $year
         ]);
     }
 
-    public function officialNonFeature()
+    public function officialNonFeature(Request $request)
     {
-        $officialNonFeature = DB::table('indian_panorama_cinema')
-            ->join(
-                'indian_panorama_official_selections',
-                'indian_panorama_cinema.official_selection_id',
-                '=',
-                'indian_panorama_official_selections.id',
-            )
-            ->where('indian_panorama_cinema.official_selection_id', '=', '2')
-            ->select(
-                'indian_panorama_cinema.*',
-                'indian_panorama_official_selections.title AS curated_section_title',
-            )
-            ->limit(8)
-            ->get();
-        // dd($officialNonFeature);
+        $payload            =   $request->all();
+        $year               =   isset($payload['year']) ? $payload['year'] : '';
+
+        $officialNonFeature = DB::table('indian_panorama_cinema');
+        $officialNonFeature->join(
+            'indian_panorama_official_selections',
+            'indian_panorama_cinema.official_selection_id',
+            '=',
+            'indian_panorama_official_selections.id',
+        );
+        $officialNonFeature->where('indian_panorama_cinema.official_selection_id', '=', '2');
+        if (!empty($year)) {
+            $officialNonFeature->where('indian_panorama_cinema.year', '=', $year);
+        }
+        $officialNonFeature->select(
+            'indian_panorama_cinema.*',
+            'indian_panorama_official_selections.title AS curated_section_title',
+        );
+        // $officialNonFeature->limit(8);
+        $nonFeature = $officialNonFeature->get();
         return view('indian-panorama.official-selection-non-feature', [
-            'officialNonFeature' =>  $officialNonFeature,
+            'officialNonFeature' =>  $nonFeature,
+            'year' =>  $year,
         ]);
     }
 

@@ -9,5 +9,8 @@
                 'sponsors' => app(\App\Http\Controllers\CommonController::class)->sponsors(),
             ])
         </div>
+        <div class="all-sponstr text-center m-3">
+            <a href="{{ route('partners-sponsors') }}" class="btn cus-prim-btn text-center">View All</a>
+        </div>
     </div>
 </div>

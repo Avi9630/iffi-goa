@@ -19,11 +19,19 @@ Route::controller(CommonController::class)->group(function () {
 
     Route::get('highlights', 'highlights')->name('highlights');
 
-    // Route::get('international-cinema', 'internationalCinema')->name('international-cinema');
+    Route::get('international-cinema/2024/{slug}', 'curetedsection2024')->name('cureted-section-2024');
 
-    Route::get('cureted-section-2024', 'curetedsection2024')->name('cureted-section-2024');
+    Route::get('international-cinema/2024/film/{slug}', 'curetedsection2024')->name('cureted-section-film-2024');
+
+    Route::get('debut-director-films/2024/{slug}', 'curetedsection2024')->name('debut-director-films');
+
+    Route::get('best-web-series/2024/{slug}', 'curetedsection2024')->name('best-web-series');
+
+    Route::get('indian-panorama/2024/{slug}', 'curetedsection2024')->name('indian-panorama-2024');
 
     Route::get('international-cinema/competition/{slug}', 'internationalCompetitionDetail')->name('international-competition-detail');
+
+    Route::get('international-cinema/best-director/{slug}', 'bestDirectorDetail')->name('best-director-detail');
 
     Route::get('director-debut-film', 'directorDebutFilm')->name('director-debut-film');
 
@@ -33,23 +41,25 @@ Route::controller(CommonController::class)->group(function () {
 
     Route::get('technical-committee', 'technicalCommittee')->name('technical-committee');
 
-    // Route::get('faq',                                       'faq')->name('faq');
-
     Route::get('media/gallery', 'gallery')->name('gallery');
 
     Route::get('media/gallery-2024', 'gallery2024')->name('gallery-2024');
 
+    Route::get('media/gallery-2024/videos', 'galleryVideos2024')->name('gallery-2024/videos');
+
+    Route::get('search-gallery-by-cat', 'galleryByCategory')->name('search-gallery-by-cat');
+
     Route::get('media/press-release', 'pressRelease')->name('press-release');
 
-    // Route::get('media/the-peacock', 'thepeacock')->name('the-peacock');
+    Route::get('media/the-peacock', 'thepeacock')->name('the-peacock');
 
     Route::get('media/news-and-update', 'newsUpdate')->name('news-and-update');
 
+    Route::get('media/international-media', 'internationalMedia')->name('media-international-media');
+
     Route::get('/gallery/date', 'getGalleryByDate')->name('gallery.byDate');
 
-    // Route::get('master-class/{id}', 'masterClass')->name('master-class');
-
-    // Route::get('news-and-update',                 'newsUpdate1')->name('news-and-update');
+    // Route::get('partners-sponsors', 'partnersSponsors')->name('partners-sponsors');
 });
 
 Route::controller(InternationalCinemaController::class)->group(function () {
@@ -82,7 +92,9 @@ Route::controller(InternationalCinemaController::class)->group(function () {
 //Indian Panorama
 Route::controller(IndianPanoramaController::class)->group(function () {
     Route::get('indian-panorama/official-selection-feature', 'officialFeature')->name('official-selection-feature');
+
     Route::get('indian-panorama/official-selection-non-feature', 'officialNonFeature')->name('official-selection-non-feature');
+
     Route::get('indian-panorama/accessible-film', 'accessibleFilm')->name('accessible-film');
 });
 
@@ -92,6 +104,14 @@ Route::get('get-all-ticker', [TickerController::class,   'getAllTicker'])->name(
 Route::get('about-iffi', function () {
     return view('about-us.about-iffi');
 })->name('about-iffi');
+
+Route::get('iffi-accessibility', function () {
+    return view('about-us.Accessible-IFFI');
+})->name('iffi-accessibility');
+
+Route::get('filmbazaar-mariott-programme', function () {
+    return view('Film-Bazaar.filmbazaar-marriott');
+})->name('filmbazaar-mariott-programme');
 
 Route::get('festival-venue', function () {
     return view('about-us.festival-venue');
@@ -142,9 +162,9 @@ Route::get('gala-premier/2nd-edition', function () {
     return view('gala-premier.2nd-edition');
 })->name('2nd-edition');
 
-Route::get('gala-premier/3nd-edition', function () {
-    return view('gala-premier.3nd-edition');
-})->name('3nd-edition');
+Route::get('gala-premier/3rd-edition', function () {
+    return view('gala-premier.3rd-edition');
+})->name('3rd-edition');
 
 //CMOT
 Route::get('cmot/about-cmot', function () {
@@ -197,9 +217,21 @@ Route::get('web-series-jury', function () {
     return view('web-series.web-series-jury');
 })->name('web-series-jury');
 
+Route::get('Best-web-series-previw-commitee-2024', function () {
+    return view('web-series.Best-web-series-previw-commitee-2024');
+})->name('Best-web-series-previw-commitee-2024');
+
+Route::get('debut-directors-previw-commitee-2024', function () {
+    return view('web-series.debut-directors-previw-commitee-2024');
+})->name('debut-directors-previw-commitee-2024');
+
 Route::get('cmot-jury', function () {
     return view('cmot.cmot-jury');
 })->name('cmot-jury');
+
+Route::get('cmot-grand-jury', function () {
+    return view('cmot.cmot-grand-jury');
+})->name('cmot-grand-jury');
 
 Route::get('opening-film', function () {
     return view('screening.opening-film');
@@ -212,3 +244,11 @@ Route::get('midfest-film', function () {
 Route::get('closing-film', function () {
     return view('screening.closing-film');
 })->name('closing-film');
+
+Route::get('partners-sponsors', function () {
+    return view('partnersSponsors.partner-sponsers');
+})->name('partners-sponsors');
+
+// Route::get('international-media', function () {
+//     return view('media.international-media');
+// });

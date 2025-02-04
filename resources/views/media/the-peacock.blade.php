@@ -22,22 +22,51 @@
         </div>
     </div>
 
+
+    <div class="col-lg-12 mt-5 static-content">
+        <div class="container">
+            <div class="row">
+                @foreach ($thepeacock as $value)
+                    <div class="col-md-3 col-sm-4 col-xs-12 d-flex">
+                        <a href="{{ asset('public/images/thePeacock/' . $value->img_src) }}" target="_blank"
+                            class="text-decoration-none">
+                            <div class="card shadow-sm w-100">
+                                <div class="card-image min-size-img">
+                                    <img src="{{ asset('public/images/thePeacock/poster/' . ($value->poster ?? 'pdf.jpg')) }}"
+                                        alt="{{ $value->title }} image" class="img-fluid">
+                                </div>
+                                <div class="card-body text-start">
+                                    <div class="card-text d-flex">
+                                        <div class="iCinema-content">
+                                            {{-- <h6 class="title"> {{ $value->title }} </h6> --}}
+                                            <h6 class="text-uppercase"> {{ $value->title }} </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
+
+
     <!-- Inner Page Banner Section -->
-    <div class="container press">
+    {{-- <div class="container press">
         <div class="table-responsive">
             <table id="example" class="table table-hover mt-3">
                 <tbody>
                     @foreach ($thepeacock as $value)
-                        @if (!empty($value->link))
-                            <tr>
-                                <td>
-                                    <p>{{ $value->title }}</p>
-                                </td>
-                                <td>
-                                    <a href="{{ $value->link }}" class="btn btn-primary" target="_blank">View</a>
-                                </td>
-                            </tr>
-                        @endif
+                        <tr>
+                            <td>
+                                <p>{{ $value->title }}</p>
+                            </td>
+                            <td class="text-end">
+                                <a href="{{ asset('public/images/thePeacock/' . $value->img_src) }}" class="btn btn-primary"
+                                    target="_blank">View</a>
+                            </td>
+                        </tr>
                     @endforeach
                 </tbody>
             </table>
@@ -51,5 +80,5 @@
                 </ul>
             </nav>
         </div>
-    </div>
+    </div> --}}
 @endsection

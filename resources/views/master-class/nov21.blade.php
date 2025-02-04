@@ -2,14 +2,14 @@
     <h2 class="pb-3">November 21st, 2024</h2>
     <div class="row">
 
-        <div class="col-md-2 col-12">
+        <div class="col-md-2 col-3">
             <div class="master-time">
                 <h4 class="time-div">11:00 AM</h4>
                 <h5 class="time-div">12:00 PM</h5>
             </div>
         </div>
 
-        <div class="col-md-7 col-12">
+        <div class="col-md-7 col-9">
             <div class="callout">
                 <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov21-0-trigger">
                     Women Safety and Cinema
@@ -43,6 +43,9 @@
                     </li>
                 </ul>
             </div>
+            <br>
+            <a href="https://www.youtube.com/watch?v=54Q6M1VtD5A&list=PLzkvk19CaSlI01tnt7RiIMF_7eQoc1oHJ&index=4"
+                class="btn btn-sm btn-primary" target="_blank" style="margin-left: 80px"> View session</a>
         </div>
     </div>
 </div>
@@ -51,14 +54,14 @@
     <h2 class="pb-3">November 21st, 2024</h2>
     <div class="row">
 
-        <div class="col-md-2 col-12">
+        <div class="col-md-2 col-3">
             <div class="master-time">
                 <h4 class="time-div">12:30 PM</h4>
                 <h5 class="time-div">01:30 PM</h5>
             </div>
         </div>
 
-        <div class="col-md-7 col-12">
+        <div class="col-md-7 col-9">
             <div class="callout">
                 <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov21-1-trigger">
                     360° Cinema: Film Festival Directors' Round Table
@@ -84,11 +87,14 @@
                             class="img-fluid">
                     </li>
                     <li>
-                        <img src="{{ asset('public/images/master-class/Christian Jeune.jpg') }}" alt="image"
+                        <img src="{{ asset('public/images/master-class/Emma Profile Photo 2024.jpg') }}" alt="image"
                             class="img-fluid">
                     </li>
                 </ul>
             </div>
+            <br>
+            <a href="https://www.youtube.com/watch?v=zBFfr647ADU&list=PLUiMfS6qzIMy7gIZtzSgYYLcrVbEc1O7m&index=4"
+                class="btn btn-sm btn-primary" target="_blank" style="margin-left: 80px"> View session</a>
         </div>
     </div>
 </div>
@@ -97,14 +103,14 @@
     <h2 class="pb-3">November 21st, 2024</h2>
     <div class="row">
 
-        <div class="col-md-2 col-12">
+        <div class="col-md-2 col-3">
             <div class="master-time">
                 <h4 class="time-div">02:30 PM</h4>
                 <h5 class="time-div">03:15 PM</h5>
             </div>
         </div>
 
-        <div class="col-md-7 col-12">
+        <div class="col-md-7 col-9">
             <div class="callout">
                 <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov21-2-trigger">
                     Character and Actor: The Power of Nuance
@@ -120,7 +126,6 @@
                 </p>
             </div>
         </div>
-
         <div class="col-md-3 col-12">
             <div class="user-profile-icon">
                 <ul>
@@ -128,12 +133,11 @@
                         <img src="{{ asset('public/images/master-class/Nithya Menen.jpg') }}" alt="image"
                             class="img-fluid">
                     </li>
-                    <li>
-                        <img src="{{ asset('public/images/master-class/Dhanya Varma.jpg') }}" alt="image"
-                            class="img-fluid">
-                    </li>
                 </ul>
             </div>
+            <br>
+            <a href="https://www.youtube.com/watch?v=_ZgS3lh8lbY&list=PLzkvk19CaSlI01tnt7RiIMF_7eQoc1oHJ&index=5"
+                class="btn btn-sm btn-primary" target="_blank" style="margin-left: 80px"> View session</a>
         </div>
     </div>
 </div>
@@ -142,14 +146,14 @@
     <h2 class="pb-3">November 21st, 2024</h2>
     <div class="row">
 
-        <div class="col-md-2 col-12">
+        <div class="col-md-2 col-3">
             <div class="master-time">
                 <h4 class="time-div">03:30 PM</h4>
                 <h5 class="time-div">04:15 PM</h5>
             </div>
         </div>
 
-        <div class="col-md-7 col-12">
+        <div class="col-md-7 col-9">
             <div class="callout">
                 <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov21-3-trigger">
                     Mastering the Unseen
@@ -161,7 +165,6 @@
                 </p>
             </div>
         </div>
-
         <div class="col-md-3 col-12">
             <div class="user-profile-icon">
                 <ul>
@@ -169,14 +172,11 @@
                         <img src="{{ asset('public/images/master-class/Manoj Bajpayee.jpg') }}" alt="image"
                             class="img-fluid">
                     </li>
-
-
-                    <li>
-                        <img src="{{ asset('public/images/master-class/Sudhir Srinivasan.jpg') }}" alt="image"
-                            class="img-fluid">
-                    </li>
                 </ul>
             </div>
+            <br>
+            <a href="https://www.youtube.com/watch?v=YImdnaxxl00&list=PLzkvk19CaSlI01tnt7RiIMF_7eQoc1oHJ&index=6"
+                class="btn btn-sm btn-primary" target="_blank" style="margin-left: 80px"> View session</a>
         </div>
     </div>
 </div>
@@ -185,16 +185,57 @@
     <h2 class="pb-3">November 21st, 2024</h2>
     <div class="row">
 
-        <div class="col-md-2 col-12">
+        <div class="col-md-2 col-3">
             <div class="master-time">
                 <h4 class="time-div">04:30 PM</h4>
-                <h5 class="time-div">05:15 PM</h5>
+                <h5 class="time-div">05:30 PM</h5>
             </div>
         </div>
 
-        <div class="col-md-7 col-12">
+        <div class="col-md-7 col-9">
             <div class="callout">
                 <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov21-4-trigger">
+                    The Journey from Script to Screen: Writing for Film and Beyond
+                </h4>
+                <p>
+                    The Session will provide an inside look at the collaborative process of bringing a story from page
+                    to screen, covering how a writer works with directors, actors, and production teams to translate a
+                    story into its final form.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-12">
+            <div class="user-profile-icon">
+                <ul>
+                    <li>
+                        <img src="{{ asset('public/images/master-class/Prasoon Joshi.jpg') }}" alt="image"
+                            class="img-fluid">
+                    </li>
+                </ul>
+            </div>
+            <br>
+            <a href="https://www.youtube.com/watch?v=aQzWCFxqDlA&list=PLzkvk19CaSlI01tnt7RiIMF_7eQoc1oHJ&index=3"
+                class="btn btn-sm btn-primary" target="_blank" style="margin-left: 80px"> View session</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="mt-4 mb-4">
+    <h2 class="pb-3">November 21st, 2024</h2>
+    <div class="row">
+
+        <div class="col-md-2 col-3">
+            <div class="master-time">
+                <h4 class="time-div">05:45 PM</h4>
+                <h5 class="time-div">06:30 PM</h5>
+            </div>
+        </div>
+
+        <div class="col-md-7 col-9">
+            <div class="callout">
+                <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov21-5-trigger">
                     Surviving Film Industry : The Hard Truth Nobody Tells You
                 </h4>
                 <p>
@@ -214,37 +255,42 @@
                             class="img-fluid">
                     </li>
 
-
                     <li>
                         <img src="{{ asset('public/images/master-class/Jacky Bagnani.jpg') }}" alt="image"
                             class="img-fluid">
                     </li>
                 </ul>
             </div>
+            <br>
+            <a href="https://www.youtube.com/watch?v=Cge9FYzxcfs" class="btn btn-sm btn-primary" target="_blank"
+                style="margin-left: 80px"> View session</a>
         </div>
     </div>
 </div>
 
-<div class="mt-4 mb-4">
+
+{{-- <div class="mt-4 mb-4">
     <h2 class="pb-3">November 21st, 2024</h2>
     <div class="row">
 
-        <div class="col-md-2 col-12">
+        <div class="col-md-2 col-3">
             <div class="master-time">
-                <h4 class="time-div">05:30 PM</h4>
-                <h5 class="time-div">06:15 PM</h5>
+                <h4 class="time-div">06:45 PM</h4>
+                <h5 class="time-div">07:30 PM</h5>
             </div>
         </div>
 
-        <div class="col-md-7 col-12">
+        <div class="col-md-7 col-9">
             <div class="callout">
-                <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov21-5-trigger">
-                    The Journey from Script to Screen: Writing for Film and Beyond
+                <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov21-6-trigger">
+                    Centenary Special: ANR - Celebrating the Life and Works of Akkineni Nageswara Rao
                 </h4>
                 <p>
-                    The Session will provide an inside look at the collaborative process of bringing a story from page
-                    to screen, covering how a writer works with directors, actors, and production teams to translate a
-                    story into its final form.
+                    This centenary special celebrates the legendary actor & producer Akkineni Nageswara Rao (ANR), whose
+                    contributions to Indian cinema remain unparalleled. In this special session, ANR's son and the
+                    renowned actor Nagarjuna will discuss how ANR influenced him as father and as an actor, his
+                    illustrious career, iconic roles, and his immeasurable impact on the film industry, as a tribute,
+                    together with the renowned actress Kushboo Sundar.
                 </p>
             </div>
         </div>
@@ -252,18 +298,11 @@
         <div class="col-md-3 col-12">
             <div class="user-profile-icon">
                 <ul>
-                    <li>
-                        <img src="{{ asset('public/images/master-class/Prasoon Joshi.jpg') }}" alt="image"
-                            class="img-fluid">
-                    </li>
-
-
-                    <li>
-                        <img src="{{ asset('public/images/master-class/Anant Vijay.jpg') }}" alt="image"
-                            class="img-fluid">
+                    <li><img src="{{ asset('public/images/master-class/Akkineni Nagarjuna Rao.jpg') }}"
+                            alt="image" class="img-fluid">
                     </li>
                 </ul>
             </div>
         </div>
     </div>
-</div>
+</div> --}}

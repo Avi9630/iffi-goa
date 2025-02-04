@@ -1,13 +1,13 @@
 <div class="mt-4 mb-4">
     <h2 class="pb-3">November 26th, 2024</h2>
     <div class="row">
-        <div class="col-md-2 col-12">
+        <div class="col-md-2 col-3">
             <div class="master-time">
-                <h4 class="time-div">11:00 PM</h4>
+                <h4 class="time-div">11:00 AM</h4>
                 <h5 class="time-div">12:00 PM</h5>
             </div>
         </div>
-        <div class="col-md-7 col-12">
+        <div class="col-md-7 col-9">
             <div class="callout">
                 <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov26-0-trigger">
                     The Thrill of Victory
@@ -38,13 +38,13 @@
 <div class="mt-4 mb-4">
     <h2 class="pb-3">November 26th, 2024</h2>
     <div class="row">
-        <div class="col-md-2 col-12">
+        <div class="col-md-2 col-3">
             <div class="master-time">
                 <h4 class="time-div">12:30 PM</h4>
                 <h5 class="time-div">01:30 PM</h5>
             </div>
         </div>
-        <div class="col-md-7 col-12">
+        <div class="col-md-7 col-9">
             <div class="callout">
                 <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov26-1-trigger">
                     Who is a Film Producer? - Five Important Stages of Film Production
@@ -65,6 +65,9 @@
                     </li>
                 </ul>
             </div>
+            <br>
+            <a href="https://www.youtube.com/watch?v=5On4QLR-Jxc&list=PLUiMfS6qzIMy7gIZtzSgYYLcrVbEc1O7m&index=32"
+                class="btn btn-sm btn-primary" target="_blank" style="margin-left: 80px"> View session</a>
         </div>
     </div>
 </div>
@@ -73,14 +76,14 @@
     <h2 class="pb-3">November 26th, 2024</h2>
     <div class="row">
 
-        <div class="col-md-2 col-12">
+        <div class="col-md-2 col-3">
             <div class="master-time">
                 <h4 class="time-div">02:30 PM</h4>
                 <h5 class="time-div">04:00 PM</h5>
             </div>
         </div>
 
-        <div class="col-md-7 col-12">
+        <div class="col-md-7 col-9">
             <div class="callout">
                 <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov26-2-trigger">
                     Exhibition of Feature Films in Cinema Theaters : The Question of Accessibility
@@ -105,6 +108,9 @@
                     </li>
                 </ul>
             </div>
+            <br>
+            <a href="https://www.youtube.com/watch?v=SYmXqyqtQ0U&list=PLUiMfS6qzIMy7gIZtzSgYYLcrVbEc1O7m&index=3"
+                class="btn btn-sm btn-primary" target="_blank" style="margin-left: 80px"> View session</a>
         </div>
     </div>
 </div>
@@ -113,14 +119,14 @@
     <h2 class="pb-3">November 26th, 2024</h2>
     <div class="row">
 
-        <div class="col-md-2 col-12">
+        <div class="col-md-2 col-3">
             <div class="master-time">
                 <h4 class="time-div">04:30 PM</h4>
                 <h5 class="time-div">06:00 PM</h5>
             </div>
         </div>
 
-        <div class="col-md-7 col-12">
+        <div class="col-md-7 col-9">
             <div class="callout">
                 <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov26-3-trigger">
                     Centenary session : 'Azmaan se aaya farishta' - Mohammad Rafi - The king of
@@ -154,6 +160,9 @@
                     </li>
                 </ul>
             </div>
+            <br>
+            <a href="https://www.youtube.com/watch?v=Sf9eZwtx538&list=PLUiMfS6qzIMy7gIZtzSgYYLcrVbEc1O7m&index=2"
+                class="btn btn-sm btn-primary" target="_blank" style="margin-left: 80px"> View session</a>
         </div>
     </div>
 </div>

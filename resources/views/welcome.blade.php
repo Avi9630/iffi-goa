@@ -43,11 +43,6 @@
         'datas' => app(\App\Http\Controllers\CommonController::class)->newsUpdate1(),
     ])
 
-    <!-- Highlights Section-->
-    @include('pages.highlights', [
-        'datas' => app(\App\Http\Controllers\CommonController::class)->highlights(),
-    ])
-
     <!-- International competition Section-->
     @include('pages.international-competition', [
         'internationalCinemas' => app(\App\Http\Controllers\CommonController::class)->internationalCinema(),
@@ -57,7 +52,7 @@
     <section>
         <div class="container">
             <div class="section-heading mb-4">
-                <p>Best 54<sup>th</sup> debut feature film of a</p>
+                <p>Best 55<sup>th</sup> debut feature film of a</p>
                 <h2>Director</h2>
             </div>
             <div class="owl-carousel international">
@@ -69,7 +64,8 @@
     </section>
 
     <!-- Indian Panorama  Section-->
-    <section>
+    {{-- 54th --}}
+    {{-- <section>
         <div class="container mb-5">
             <div class="section-heading mb-4">
                 <p>A Kaleidoscope of Creativity and Culture of 54<sup>th</sup></p>
@@ -77,14 +73,46 @@
             </div>
             <div class="owl-carousel international">
                 @include('pages.indian-panorama', [
-                    'indianPanormas' => app(\App\Http\Controllers\CommonController::class)->indianPanorama(),
+                    'indianPanormas' => app(\App\Http\Controllers\CommonController::class)->indianPanorama(2023),
+                ])
+            </div>
+        </div>
+    </section> --}}
+
+    {{-- 55th --}}
+    <section>
+        <div class="container mb-5">
+            <div class="section-heading mb-4">
+                <p>A Kaleidoscope of Creativity and Culture of 55<sup>th</sup></p>
+                <h2>Indian Panorama</h2>
+            </div>
+            <div class="owl-carousel international">
+                @include('pages.indian-panorama', [
+                    'indianPanormas' => app(\App\Http\Controllers\CommonController::class)->indianPanorama('2024'),
                 ])
             </div>
         </div>
     </section>
 
+    <!-- Highlights Creative Minds Of Tomorrow-->
+    @include('pages.cmot-highlights', [
+        'datas' => app(\App\Http\Controllers\CommonController::class)->cmotHighlights(),
+    ])
+
+    <!--Master classs Highlights-->
+    @include('pages.master-class-highlights', [
+        'datas' => app(\App\Http\Controllers\CommonController::class)->masterClasssHighlights(),
+    ])
+
     <!-- Life Time Achievement Award  Section-->
     @include('pages.lifetime-achievement-award')
+
+    <br><br>
+
+    <!-- Highlights Section-->
+    @include('pages.highlights', [
+        'datas' => app(\App\Http\Controllers\CommonController::class)->highlights(),
+    ])
 
     <!-- Social Media Corner  -->
     @include('pages.social-media-cornor')

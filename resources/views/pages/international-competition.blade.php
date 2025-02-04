@@ -9,8 +9,8 @@
 
             @foreach ($internationalCinemas as $cinema)
                 <div class="item card">
-                    <img src="{{ asset('public/images/international-competition/2024/' . $cinema->img_src) }}"
-                        alt="image" class="img-fluid">
+                    <img src="{{ asset('public/images/cureted-section/' . $cinema->img_src) }}" alt="image"
+                        class="img-fluid">
                     <div class="International-competition">
                         <p> <a href="{{ route('international-competition-detail', ['slug' => $cinema->slug]) }}"
                                 class="post-title">{{ $cinema->title }}</a></p>

@@ -1,13 +1,13 @@
 <div class="mt-4 mb-4">
     <h2 class="pb-3">November 25th, 2024</h2>
     <div class="row">
-        <div class="col-md-2 col-12">
+        <div class="col-md-2 col-3">
             <div class="master-time">
                 <h4 class="time-div">11:00 AM</h4>
                 <h5 class="time-div">12:00 PM</h5>
             </div>
         </div>
-        <div class="col-md-7 col-12">
+        <div class="col-md-7 col-9">
             <div class="callout">
                 <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov25-0-trigger">
                     Will Artificial Intelligence Alter Filmmaking Forever?
@@ -30,100 +30,68 @@
                     </li>
                 </ul>
             </div>
+            <br>
+            <a href="https://www.youtube.com/watch?v=OEEeT9xtqnk&list=PLUiMfS6qzIMy7gIZtzSgYYLcrVbEc1O7m&index=2"
+                class="btn btn-sm btn-primary" target="_blank" style="margin-left: 80px"> View session</a>
         </div>
+
     </div>
 </div>
-
-{{-- <div class="mt-4 mb-4">
-    <h2 class="pb-3">November 25th, 2024</h2>
-    <div class="row">
-
-        <div class="col-md-2 col-12">
-            <div class="master-time">
-                <h4 class="time-div">12:30 PM</h4>
-                <h5 class="time-div">01:30 PM</h5>
-            </div>
-        </div>
-
-        <div class="col-md-7 col-12">
-            <div class="callout">
-                <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov25-1-trigger">
-                    Art of Cinematography
-                </h4>
-                <p>
-                    With a career spanning decades, the speaker will share his invaluable
-                    insights and techniques. It will be a great learning process for the elevation of Filmmaking.
-                </p>
-            </div>
-        </div>
-
-        <div class="col-md-3 col-12">
-            <div class="user-profile-icon">
-                <ul>
-                    <li><img src="{{ asset('public/images/master-class/John Seale.jpg') }}" alt="image"
-                            class="img-fluid">
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div> --}}
-
-{{-- <div class="mt-4 mb-4">
-    <h2 class="pb-3">November 25th, 2024</h2>
-    <div class="row">
-
-        <div class="col-md-2 col-12">
-            <div class="master-time">
-                <h4 class="time-div">02:30 PM</h4>
-                <h5 class="time-div">04:00 PM</h5>
-            </div>
-        </div>
-
-        <div class="col-md-7 col-12">
-            <div class="callout">
-                <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov25-2-trigger">
-                    Beyond Cinematic Endeavors:Celebrating 50 Years of Shabana Azmi
-                </h4>
-                <p>
-                    Description: This fireside chat brings together two iconic figures of Indian cinema for a
-                    retrospective conversation.Shabana Azmi's exceptional talent and versatility have left an
-                    indelible mark on Indian and international cinema. This discussion offers a unique opportunity to
-                    delve deep into the making of the iconic film "Masoom," exploring its artistic journey, cultural
-                    impact, and its enduring legacy. Through this conversation, audiences will gain valuable insights
-                    into how "Masoom" shaped the careers of these legendary artists and continue to influence the
-                    broader cultural landscape.This session celebrates the 50 years of Shabana Azmi .
-                </p>
-            </div>
-        </div>
-
-        <div class="col-md-3 col-12">
-            <div class="user-profile-icon">
-                <ul>
-                    <li><img src="{{ asset('public/images/master-class/Shekhar Kapur.jpg') }}" alt="image"
-                            class="img-fluid">
-                    </li>
-                    <li><img src="{{ asset('public/images/master-class/Shabana Azmi.jpg') }}" alt="image"
-                            class="img-fluid">
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div> --}}
 
 <div class="mt-4 mb-4">
     <h2 class="pb-3">November 25th, 2024</h2>
     <div class="row">
-        <div class="col-md-2 col-12">
+        <div class="col-md-2 col-3">
+            <div class="master-time">
+                <h4 class="time-div">02:30 AM</h4>
+                <h5 class="time-div">04:00 PM</h5>
+            </div>
+        </div>
+        <div class="col-md-7 col-9">
+            <div class="callout">
+                <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov25-1-trigger">
+                    Integrating VFX with Cinematography
+                </h4>
+                <p>
+                    The mass blockbusters of contemporary Indian cinema, particularly in the fantasy and sci-fi genres,
+                    have captivated audiences with their larger-than-life storytelling, heavily relying on VFX. This
+                    transformative tool seamlessly blends traditional lighting techniques with cutting-edge
+                    computer-generated imagery to create stunning visuals. Ace cinematographer K.K. Senthil Kumar, known
+                    for his work on films like RRR, the Baahubali duology, and Magadheera, discusses his image-making
+                    process in the context of this VFX-heavy cinema, in a conversation with writer, filmmaker and actor
+                    Shankar Ramakrishnan. Their discussion will shed light on how cinematographic techniques have
+                    evolved, what the process entails today and the exciting possibilities for the future.
+                </p>
+            </div>
+        </div>
+        <div class="col-md-3 col-12">
+            <div class="user-profile-icon">
+                <ul>
+                    <li>
+                        <img src="{{ asset('public/images/master-class/Senthil Kumar1.jpg') }}" alt="image"
+                            class="img-fluid">
+                    </li>
+                </ul>
+            </div>
+            <br>
+            <a href="https://www.youtube.com/watch?v=H16MtCZPNS8&list=PLUiMfS6qzIMy7gIZtzSgYYLcrVbEc1O7m&index=18"
+                class="btn btn-sm btn-primary" target="_blank" style="margin-left: 80px"> View session</a>
+        </div>
+    </div>
+</div>
+
+<div class="mt-4 mb-4">
+    <h2 class="pb-3">November 25th, 2024</h2>
+    <div class="row">
+        <div class="col-md-2 col-3">
             <div class="master-time">
                 <h4 class="time-div">04:30 PM</h4>
                 <h5 class="time-div">06:00 PM</h5>
             </div>
         </div>
-        <div class="col-md-7 col-12">
+        <div class="col-md-7 col-9">
             <div class="callout">
-                <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov25-1-trigger">
+                <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov25-2-trigger">
                     How to Succeed in New Hollywood
                 </h4>
                 <p>
@@ -143,6 +111,9 @@
                     </li>
                 </ul>
             </div>
+            <br>
+            <a href="https://www.youtube.com/watch?v=cI_PQXGmbdQ&list=PLUiMfS6qzIMy7gIZtzSgYYLcrVbEc1O7m&index=4"
+                class="btn btn-sm btn-primary" target="_blank" style="margin-left: 80px"> View session</a>
         </div>
     </div>
 </div>
@@ -150,22 +121,23 @@
 <div class="mt-4 mb-4">
     <h2 class="pb-3">November 25th, 2024</h2>
     <div class="row">
-        <div class="col-md-2 col-12">
+        <div class="col-md-2 col-3">
             <div class="master-time">
                 <h4 class="time-div">06:15 PM</h4>
                 <h5 class="time-div">07:00 PM</h5>
             </div>
         </div>
-        <div class="col-md-7 col-12">
+        <div class="col-md-7 col-9">
             <div class="callout">
-                <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov25-2-trigger">
+                <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov25-3-trigger">
                     Empowering Change: Women Leading the Way in Cinema
                 </h4>
                 <p>
-                    A conversation on how Kriti sees her role and influence as a woman in today's film industry, the
-                    rise of strong female protagonists, and how streaming platforms are creating more opportunities for
-                    diverse female-led stories. She will also discuss her commitment to selecting roles that inspire and
-                    resonate with women and how she dawns the many hats of an actor, producer and entrepreneur.
+                    A conversation on how Kriti Sanon sees her role and influence as a woman in today's film industry,
+                    the rise of strong female protagonists, and how streaming platforms such as Netflix are creating
+                    more opportunities to bring authentic and diverse stories. She will also discuss her commitment to
+                    selecting roles that inspire and resonate with women and how she dawns the many hats of an actor,
+                    producer, and entrepreneur.
                 </p>
             </div>
         </div>
@@ -176,12 +148,11 @@
                         <img src="{{ asset('public/images/master-class/Kriti Sanon.jpg') }}" alt="image"
                             class="img-fluid">
                     </li>
-                    <li>
-                        <img src="{{ asset('public/images/master-class/Rudrani Chattoraj.jpg') }}" alt="image"
-                            class="img-fluid">
-                    </li>
                 </ul>
             </div>
+            <br>
+            <a href="https://www.youtube.com/watch?v=ZieGBiYTIf4&list=PLUiMfS6qzIMy7gIZtzSgYYLcrVbEc1O7m&index=1"
+                class="btn btn-sm btn-primary" target="_blank" style="margin-left: 80px"> View session</a>
         </div>
     </div>
 </div>

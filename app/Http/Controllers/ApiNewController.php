@@ -8,9 +8,12 @@ use App\Models\Gallery;
 use App\Models\LatestUpdate;
 use App\Models\MasterClass;
 use App\Models\NewsUpdate;
+use App\Models\ThePartnerSponsor;
 use App\Models\ThePeacock;
 use App\Models\Ticker;
+use DB;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Validator;
 
 class ApiNewController extends Controller
@@ -26,53 +29,45 @@ class ApiNewController extends Controller
         $validatorArray = [
             'title' => 'required',
             'description' => 'required',
-            'img_src_file' => 'nullable|file|mimes:jpg,jpeg,png|max:2048', // Make img_src_file optional
+            'img_src_file' => 'nullable|file|mimes:jpg,jpeg,png|max:2048',
             'link' => 'nullable|string',
             'link_title' => 'nullable|string',
         ];
-
         $validator = Validator::make($payload, $validatorArray);
-
         if ($validator->fails()) {
             return $this->response('validatorerrors', [
                 'message' => $validator->errors()->first(),
             ]);
         }
-
         try {
-            // Handle file upload if exists
             $fileName = null;
             $fileNameOriginal = null;
             if ($request->hasFile('img_src_file')) {
                 $file = $request->file('img_src_file');
                 $destinationPath = 'images/news-update';
-                $fileNameOriginal = $file->getClientOriginalName(); // Adding timestamp to prevent name collision
-
+                $fileNameOriginal = $file->getClientOriginalName();
                 $extension = strtolower($request->file('img_src_file')->getClientOriginalExtension());
                 $modifiedName = (rand(100000, 999999)).'_'.time().'.'.$extension;
-
                 $file->move(public_path($destinationPath), $modifiedName);
                 $fileName = $modifiedName;
             }
-
             // Clean the 'pop_up_content' field before saving it
             $popUpContent = isset($payload['pop_up_content']) ? $payload['pop_up_content'] : null;
             $popUpContent = $this->cleanPopUpContent($popUpContent);
-
             // Prepare data for new entry
             $data = [
                 'image_name' => $fileNameOriginal,
                 'title' => $payload['title'],
                 'description' => $payload['description'],
-                'img_src' => $fileName, // Add the file name if file was uploaded
-                'link' => $payload['link'] ?? null, // Use null if not provided
-                'link_title' => $payload['link_title'] ?? null, // Use null if not provided
-                'pop_up_content' => $popUpContent, // Cleaned content
-                'have_popup' => $payload['have_popup'] ?? null, // Optional
-                'pop_up_header' => $payload['pop_up_header'] ?? null, // Optional
-                'sort_num' => $payload['sort_num'] ?? null, // Optional
+                'img_src' => $fileName,
+                'link' => $payload['link'] ?? null,
+                'link_title' => $payload['link_title'] ?? null,
+                'pop_up_content' => $popUpContent,
+                'have_popup' => $payload['have_popup'] ?? null,
+                'pop_up_header' => $payload['pop_up_header'] ?? null,
+                'sort_num' => $payload['sort_num'] ?? null,
             ];
-
+            // dd($data);
             // Create a new news update
             $newsUpdate = NewsUpdate::create($data);
 
@@ -81,7 +76,6 @@ class ApiNewController extends Controller
                 'message' => 'News update created successfully!',
                 'data' => $newsUpdate,
             ]);
-
         } catch (\Exception $e) {
             // Return exception response in case of an error
             return $this->response('exception', [
@@ -180,7 +174,6 @@ class ApiNewController extends Controller
                 ];
 
                 return $this->response('success', $response);
-
             } else {
                 $response = [
                     'message' => 'Record not found!',
@@ -197,18 +190,11 @@ class ApiNewController extends Controller
         }
     }
 
-    /**
-     * Clean the 'pop_up_content' by removing unnecessary empty <p> tags.
-     */
     private function cleanPopUpContent($content)
     {
-        // Decode HTML entities to get raw HTML
         $content = html_entity_decode($content);
-
-        // Remove any empty <p> tags
         $content = preg_replace('/<p>\s*<\/p>/', '', $content);
 
-        // Optional: Trim leading/trailing spaces or any other cleaning logic
         return trim($content);
     }
 
@@ -276,7 +262,6 @@ class ApiNewController extends Controller
                 'message' => 'Ticker updated successfully!',
                 'data' => $ticker,
             ], 200);
-
         } catch (\Exception $e) {
             // Return an error response for any exceptions
             return response()->json([
@@ -306,7 +291,6 @@ class ApiNewController extends Controller
             ];
 
             return $this->response('success', $response);
-
         } catch (\Exception $e) {
             // Handle any exceptions and return an error response
             $response = [
@@ -373,7 +357,6 @@ class ApiNewController extends Controller
                 'status' => 'success',
                 'message' => 'Ticker deleted successfully',
             ], 200);
-
         } catch (\Exception $e) {
             return response()->json([
                 'status' => 'error',
@@ -381,35 +364,6 @@ class ApiNewController extends Controller
             ], 500);
         }
     }
-
-    // PressRelese
-    // public function pressReleseList()
-    // {
-    //     try {
-    //         // Step 1: Retrieve all tickers with specific fields
-    //         $pressReleseList = PressRelese::select('id', 'content', 'status')->get();
-
-    //         // Step 2: Check if any tickers are found
-    //         if ($pressReleseList->isEmpty()) {
-    //             return $this->response('no_content', [
-    //                 'message' => 'No Press ReleseList found.',
-    //                 'data' => [],
-    //             ], 204); // 204 status for no content
-    //         }
-
-    //         // Step 3: Return a success response with the retrieved ticker data
-    //         return $this->response('success', [
-    //             'message' => 'All tickers fetched successfully!',
-    //             'data' => $pressReleseList,
-    //         ], 200); // 200 status for success
-
-    //     } catch (\Exception $e) {
-    //         // Step 4: Handle any unexpected errors
-    //         return $this->response('exception', [
-    //             'message' => 'An error occurred: '.$e->getMessage(),
-    //         ], 500); // 500 status for internal server error
-    //     }
-    // }
 
     // Gallery
     public function getGallery()
@@ -433,7 +387,6 @@ class ApiNewController extends Controller
                 'message' => 'Gallery updates retrieved successfully.',
                 'data' => $galleryData,
             ], 200);
-
         } catch (\Exception $e) {
             // Return error response in case of exception
             return response()->json([
@@ -465,7 +418,6 @@ class ApiNewController extends Controller
                 ];
 
                 return $this->response('validatorerrors', $output);
-
             }
 
             // Set up initial data
@@ -500,7 +452,6 @@ class ApiNewController extends Controller
                 'message' => 'Gallery updated successfully.',
                 'data' => $gallery,
             ], 200);
-
         } catch (\Illuminate\Validation\ValidationException $e) {
             // Return validation error response
             return response()->json([
@@ -540,7 +491,6 @@ class ApiNewController extends Controller
                 'message' => 'Gallery data retrieved successfully.',
                 'data' => $galleryData,
             ], 200);
-
         } catch (\Exception $e) {
             // Return error response in case of exception
             return response()->json([
@@ -609,7 +559,6 @@ class ApiNewController extends Controller
                 'message' => 'Gallery created successfully.',
                 'data' => $gallery,
             ], 201);
-
         } catch (\Exception $e) {
             // Return error response in case of exception
             return response()->json([
@@ -642,7 +591,6 @@ class ApiNewController extends Controller
                 'message' => 'thePeacock updates retrieved successfully.',
                 'data' => $thePeacockData,
             ], 200);
-
         } catch (\Exception $e) {
             // Return error response in case of exception
             return response()->json([
@@ -655,17 +603,16 @@ class ApiNewController extends Controller
 
     public function updateThePeacock(Request $request, $id)
     {
-
+        //  exit('Aditya');
         $payload = $request->all();
         try {
             // Validate the request data (fields are now optional)
             $validator = Validator::make($payload, [
                 'title' => 'nullable|string|max:255',
-                'img_src' => 'nullable|string|max:255', // Assuming image is a URL or file path
+                'img_src_file' => 'nullable|mimes:pdf|max:20480',
+                // 'poster' => '',
                 'year' => 'nullable',
                 'status' => 'nullable|in:0,1', // Assuming status can be 'active' or 'inactive'
-                'link' => 'nullable|string|max:255',
-                'publish_date' => 'nullable',  // 'status' is required, must be 1 or 0
             ]);
 
             if ($validator->fails()) {
@@ -675,45 +622,40 @@ class ApiNewController extends Controller
                 ];
 
                 return $this->response('validatorerrors', $output);
-
             }
             $thePeacock = ThePeacock::findOrFail($id);
-
-            // Handle image upload
+            $fileNameOriginal = $thePeacock->image_name;
+            $modifiedName = $thePeacock->img_src;
+            // Check if a new file is uploaded
             if ($request->hasFile('img_src_file')) {
                 $file = $request->file('img_src_file');
                 $destinationPath = 'images/thePeacock';
-                $fileName = $file->getClientOriginalName();
-                $fullFilePath = public_path("{$destinationPath}/{$fileName}");
-                $extension = strtolower($request->file('img_src_file')->getClientOriginalExtension());
-                $modifiedName = (rand(100000, 999999)).'_'.time().'.'.$extension;
-                // Move file to the destination and set image path in data
+                $fileNameOriginal = $file->getClientOriginalName();
+                $extension = strtolower($file->getClientOriginalExtension());
+                $modifiedName = rand(100000, 999999).'_'.time().'.'.$extension;
                 $file->move(public_path($destinationPath), $modifiedName);
-                $thePeacock->img_src = "{$modifiedName}";
-                $thePeacock->image_name = "{$fileName}";
+                $fileName = $modifiedName;
+            }
+            $modifiedPosterName = $thePeacock->poster;
+            if ($request->hasFile('poster')) {
+                $file = $request->file('poster');
+                $destinationPath = 'images/thePeacock/poster';
+                // $fileNameOriginal = $file->getClientOriginalName();
+                $extension = strtolower($file->getClientOriginalExtension());
+                $modifiedPosterName = rand(100000, 999999).'_'.time().'.'.$extension;
+                $file->move(public_path($destinationPath), $modifiedPosterName);
+                // $fileName = $modifiedPosterName;
             }
 
             // Find the thePeacock by ID
 
             // Update the thePeacock with new data if provided
-            if (isset($validated['title'])) {
-                $thePeacock->title = $validated['title'];
-            }
-            if (isset($validated['image'])) {
-                $thePeacock->image = $validated['image'];
-            }
-            if (isset($validated['year'])) {
-                $thePeacock->year = $validated['year'];
-            }
-            if (isset($validated['status'])) {
-                $thePeacock->status = $validated['status'];
-            }
-            if (isset($validated['link'])) {
-                $thePeacock->link = $validated['link'];
-            }
-            if (isset($validated['publish_date'])) {
-                $thePeacock->publish_date = $validated['publish_date'];
-            }
+            $thePeacock->title = $payload['title'];
+            $thePeacock->year = $payload['year'];
+            $thePeacock->status = $payload['status'];
+            $thePeacock->poster = $modifiedPosterName;
+            $thePeacock->image_name = $fileNameOriginal;
+            $thePeacock->img_src = $modifiedName;
 
             // Save the changes to the database
             $thePeacock->save();
@@ -724,7 +666,6 @@ class ApiNewController extends Controller
                 'message' => 'thePeacock updated successfully.',
                 'year' => $thePeacock,
             ], 200);
-
         } catch (\Illuminate\Validation\ValidationException $e) {
             // Return validation error response
             return response()->json([
@@ -763,7 +704,6 @@ class ApiNewController extends Controller
                 'message' => 'thePeacock data retrieved successfully.',
                 'data' => $thePeacockData,
             ], 200);
-
         } catch (\Exception $e) {
             // Return error response in case of exception
             return response()->json([
@@ -781,11 +721,9 @@ class ApiNewController extends Controller
         // Validation rules
         $validatorArray = [
             'title' => 'required|string|max:255',
-            'img_src' => 'nullable|string|max:255',
+            'img_src_file' => 'nullable|mimes:pdf|max:20480',
             'year' => 'required|integer', // Ensure year is an integer
             'status' => 'required|in:0,1', // Assuming status can be 'active' or 'inactive'
-            'link' => 'required|string|max:255', // Corrected spelling here
-            'publish_date' => 'nullable|date',  // Corrected validation rule for date
         ];
 
         $validator = Validator::make($payload, $validatorArray);
@@ -808,22 +746,33 @@ class ApiNewController extends Controller
                 'title' => $payload['title'] ?? '',
                 'year' => isset($payload['year']) && $payload['year'] !== '' ? (int) $payload['year'] : null, // Handle year as integer or null
                 'status' => $payload['status'] ?? '0',
-                'link' => $payload['link'] ?? '',
-                'publish_date' => $formattedDate,
-                'img_src' => '',
+                // 'img_src' => '',
             ];
 
             // Handle image upload
             if ($request->hasFile('img_src_file')) {
                 $file = $request->file('img_src_file');
-                $destinationPath = 'images/gallery_images';
-                $extension = strtolower($file->getClientOriginalExtension());
-                $modifiedName = rand(100000, 999999).'_'.time().'.'.$extension;
-
+                $destinationPath = 'images/thePeacock';
+                $fileName = $file->getClientOriginalName();
+                $fullFilePath = public_path("{$destinationPath}/{$fileName}");
+                $extension = strtolower($request->file('img_src_file')->getClientOriginalExtension());
+                $modifiedName = (rand(100000, 999999)).'_'.time().'.'.$extension;
                 // Move file to the destination and set image path in data
                 $file->move(public_path($destinationPath), $modifiedName);
-                $data['img_src'] = $modifiedName;
-                $data['image_name'] = $file->getClientOriginalName();
+                $data['img_src'] = "{$modifiedName}";
+                $data['image_name'] = "{$fileName}";
+            }
+
+            // $modifiedPosterName = $thePeacock->poster;
+            if ($request->hasFile('poster')) {
+                $file = $request->file('poster');
+                $destinationPath = 'images/thePeacock/poster';
+                // $fileNameOriginal = $file->getClientOriginalName();
+                $extension = strtolower($file->getClientOriginalExtension());
+                $modifiedPosterName = rand(100000, 999999).'_'.time().'.'.$extension;
+                $file->move(public_path($destinationPath), $modifiedPosterName);
+                // $fileName = $modifiedPosterName;
+                $data['poster'] = "{$modifiedPosterName}";
             }
 
             // Create ThePeacock record
@@ -835,7 +784,6 @@ class ApiNewController extends Controller
                 'message' => 'ThePeacock created successfully.',
                 'data' => $ThePeacock,
             ], 201);
-
         } catch (\Exception $e) {
             // Return error response in case of exception
             return response()->json([
@@ -875,7 +823,6 @@ class ApiNewController extends Controller
                 'status' => 'success',
                 'message' => 'ThePeacock deleted successfully.',
             ], 200);
-
         } catch (\Exception $e) {
             // Return error response in case of exception
             return response()->json([
@@ -955,7 +902,6 @@ class ApiNewController extends Controller
                 'message' => 'LatestUpdate updated successfully!',
                 'data' => $LatestUpdate,
             ], 200);
-
         } catch (\Exception $e) {
             // Return an error response for any exceptions
             return response()->json([
@@ -985,7 +931,6 @@ class ApiNewController extends Controller
             ];
 
             return $this->response('success', $response);
-
         } catch (\Exception $e) {
             // Handle any exceptions and return an error response
             $response = [
@@ -1054,7 +999,6 @@ class ApiNewController extends Controller
                 'status' => 'success',
                 'message' => 'LatestUpdate deleted successfully',
             ], 200);
-
         } catch (\Exception $e) {
             return response()->json([
                 'status' => 'error',
@@ -1064,14 +1008,12 @@ class ApiNewController extends Controller
     }
 
     // cureted section 2024
-    public function curetedsection2024()
+    public function curetedSection2024(Request $request)
     {
         try {
-            // Fetch all curetedsection records from the database
-            // $curetedsectionData = curetedsection2024::all();
-            $curetedsectionData = curetedsection2024::where('international_cinema.year', 2024)->get();
+            $payload = $request->all();
+            $curetedsectionData = curetedsection2024::where('international_cinema.award_year', 2024)->get();
 
-            // Check if data exists
             if ($curetedsectionData->isEmpty()) {
                 return response()->json([
                     'status' => 'success',
@@ -1080,13 +1022,11 @@ class ApiNewController extends Controller
                 ], 200);
             }
 
-            // Return the curetedsection data as JSON response
             return response()->json([
                 'status' => 'success',
                 'message' => 'curetedsection updates retrieved successfully.',
                 'data' => $curetedsectionData,
             ], 200);
-
         } catch (\Exception $e) {
             // Return error response in case of exception
             return response()->json([
@@ -1104,7 +1044,7 @@ class ApiNewController extends Controller
             'curated_section_id' => 'required|string|max:255',
             // 'award_year' => 'required|string|max:255',
             'title' => 'required|string|max:255',
-            'award' => 'string|max:255',
+            //  'award' => 'string|max:255',
             'directed_by' => 'required|string|max:255',
             'country_of_origin' => 'required|string|max:255',
             'language' => 'required|string|max:255',
@@ -1149,7 +1089,7 @@ class ApiNewController extends Controller
                     'curated_section_id' => $payload['curated_section_id'],
                     // 'award_year' => $payload['award_year'],
                     'title' => $payload['title'],
-                    'award' => $payload['award'],
+                    'award' => (! empty($payload['award']) ? $payload['award'] : ''),
                     'directed_by' => $payload['directed_by'],
                     'country_of_origin' => $payload['country_of_origin'],
                     'language' => $payload['language'],
@@ -1173,7 +1113,6 @@ class ApiNewController extends Controller
                     'message' => 'Record not found!',
                 ], 404);
             }
-
         } catch (\Exception $e) {
             return response()->json([
                 'status' => 'error',
@@ -1212,7 +1151,7 @@ class ApiNewController extends Controller
             'curated_section_id' => 'required|string|max:255',
             // 'award_year' => 'required|string|max:255',
             'title' => 'required|string|max:255',
-            'award' => 'string|max:255',
+            // 'award' => 'string|max:255',
             'directed_by' => 'required|string|max:255',
             'country_of_origin' => 'required|string|max:255',
             'language' => 'required|string|max:255',
@@ -1273,7 +1212,6 @@ class ApiNewController extends Controller
                 'message' => 'cureted section 2024 created successfully.',
                 'data' => $curetedsection2024,
             ], 201);
-
         } catch (\Exception $e) {
             // Return error response in case of exception
             return response()->json([
@@ -1306,7 +1244,6 @@ class ApiNewController extends Controller
                 'message' => 'MasterClass updates retrieved successfully.',
                 'data' => $MasterClassData,
             ], 200);
-
         } catch (\Exception $e) {
             // Return error response in case of exception
             return response()->json([
@@ -1338,7 +1275,6 @@ class ApiNewController extends Controller
                 ];
 
                 return $this->response('validatorerrors', $output);
-
             }
 
             // Set up initial data
@@ -1373,7 +1309,6 @@ class ApiNewController extends Controller
                 'message' => 'MasterClass updated successfully.',
                 'data' => $MasterClass,
             ], 200);
-
         } catch (\Illuminate\Validation\ValidationException $e) {
             // Return validation error response
             return response()->json([
@@ -1413,7 +1348,6 @@ class ApiNewController extends Controller
                 'message' => 'MasterClass data retrieved successfully.',
                 'data' => $MasterClassData,
             ], 200);
-
         } catch (\Exception $e) {
             // Return error response in case of exception
             return response()->json([
@@ -1482,7 +1416,6 @@ class ApiNewController extends Controller
                 'message' => 'MasterClass created successfully.',
                 'data' => $MasterClass,
             ], 201);
-
         } catch (\Exception $e) {
             // Return error response in case of exception
             return response()->json([
@@ -1490,6 +1423,706 @@ class ApiNewController extends Controller
                 'message' => 'Failed to create MasterClass.',
                 'error' => $e->getMessage(),
             ], 500);
+        }
+    }
+
+    // The PartnerSponsor
+    public function thePartnerSponsor()
+    {
+        try {
+
+            $thePartnerSponsorData = ThePartnerSponsor::get();
+            if ($thePartnerSponsorData) {
+                $response = [
+                    'message' => 'Success!',
+                    'data' => $thePartnerSponsorData,
+                ];
+
+                return $this->response('success', $response);
+            } else {
+                $response = [
+                    'message' => 'No records found !!',
+                ];
+
+                return $this->response('exception', $response);
+            }
+        } catch (\Exception $e) {
+            $response = [
+                'message' => $e->getMessage(),
+            ];
+
+            return $this->response('exception', $response);
+        }
+    }
+
+    public function createPartnerSponsor(Request $request)
+    {
+        $payload = $request->all();
+        $validatorArray = [
+            'title' => ['required', 'unique:the_partner_sponsor,title'],
+            'img_src' => 'required|max:2048', //|mimes:jpg,jpeg,png,PNG
+        ];
+        $messagesArray = [];
+        $validator = Validator::make($payload, $validatorArray, $messagesArray);
+        if ($validator->fails()) {
+            $output = [
+                'message' => $validator->errors()->first(),
+            ];
+
+            return $this->response('validatorerrors', $output);
+        }
+
+        try {
+
+            if ($request->hasFile('img_src')) {
+
+                $files = $request->file('img_src');
+                foreach ($files as $file) {
+                    $destinationPath = 'images/thePartnerSponsor';
+                    $originalFilename = $file->getClientOriginalName();
+                    $fullFilePath = public_path($destinationPath.'/'.$originalFilename);
+                    if (File::exists($fullFilePath)) {
+                        $response = [
+                            'message' => "File {$originalFilename} already exists. Please upload a different image!",
+                            'existing_file' => $originalFilename,
+                        ];
+
+                        return $this->response('conflict', $response);
+                    }
+                    $file->move(public_path($destinationPath), $originalFilename);
+                    $data = [
+                        'title' => $payload['title'], // Reuse the title for all images
+                        'img_src' => $originalFilename,
+                    ];
+                    $partners = ThePartnerSponsor::create($data);
+                    if ($partners) {
+                        $records[] = $partners;
+                    } else {
+                        throw new \Exception("Failed to create record for {$originalFilename}");
+                    }
+                }
+                // Response after all files are processed
+                $response = [
+                    'message' => 'Created successfully!',
+                    'data' => $records,
+                ];
+
+                return $this->response('success', $response);
+            } else {
+                $response = [
+                    'message' => 'No files uploaded!',
+                ];
+
+                return $this->response('exception', $response);
+            }
+        } catch (\Exception $e) {
+            $response = [
+                'message' => $e->getMessage(),
+            ];
+
+            return $this->response('exception', $response);
+        }
+    }
+
+    public function updatePartnerSponsor(Request $request, $id)
+    {
+        $payload = $request->all();
+        $validatorArray = [
+            'title' => '',
+            'img_src' => 'mimes:jpg,jpeg,png|max:2048',
+            'status' => 'in:1,0',
+        ];
+        $messagesArray = [];
+        $validator = Validator::make($payload, $validatorArray, $messagesArray);
+        if ($validator->fails()) {
+            $output = [
+                'message' => $validator->errors()->first(),
+            ];
+
+            return $this->response('validatorerrors', $output);
+        }
+        try {
+            $sponsorsPartners = ThePartnerSponsor::find($id);
+            if ($sponsorsPartners) {
+                if ($request->hasFile('img_src')) {
+                    $file = $request->file('img_src');
+                    $destinationPath = 'images/thePartnerSponsor';
+                    $originalFilename = $file->getClientOriginalName();
+                    $fullFilePath = public_path($destinationPath.'/'.$originalFilename);
+
+                    if (File::exists($fullFilePath)) {
+                        File::delete($fullFilePath);
+                        $file->move(public_path($destinationPath), $originalFilename);
+                    } else {
+                        $file->move(public_path($destinationPath), $originalFilename);
+                    }
+                    $data = [
+                        'title' => isset($payload['title']) ? $payload['title'] : $sponsorsPartners->title,
+                        'img_src' => $originalFilename,
+                        'status' => isset($payload['status']) ? $payload['status'] : $sponsorsPartners->status,
+                    ];
+                    $updated = $sponsorsPartners->update($data);
+                    if ($updated) {
+                        $response = [
+                            'message' => 'Updated successfully !!',
+                            'data' => $data,
+                        ];
+
+                        return $this->response('success', $response);
+                    } else {
+                        $response = [
+                            'message' => 'Not updated !!',
+                        ];
+
+                        return $this->response('exception', $response);
+                    }
+                } else {
+                    $data = [
+                        'title' => isset($payload['title']) ? $payload['title'] : $sponsorsPartners->title,
+                        'status' => isset($payload['status']) ? $payload['status'] : $sponsorsPartners->status,
+                    ];
+                    $updated = $sponsorsPartners->update($data);
+                    if ($updated) {
+                        $response = [
+                            'message' => 'Updated successfully !!',
+                            'data' => $data,
+                        ];
+
+                        return $this->response('success', $response);
+                    } else {
+                        $response = [
+                            'message' => 'Not updated !!',
+                        ];
+
+                        return $this->response('exception', $response);
+                    }
+                }
+            } else {
+                $response = [
+                    'message' => 'Record not found !!',
+                ];
+
+                return $this->response('exception', $response);
+            }
+        } catch (\Exception $e) {
+            $response = [
+                'message' => $e->getMessage(),
+            ];
+
+            return $this->response('exception', $response);
+        }
+    }
+
+    public function getPartnerSponsorById($id)
+    {
+        try {
+            $sponsorsPartners = ThePartnerSponsor::find($id);
+            if ($sponsorsPartners) {
+                $response = [
+                    'message' => 'Retrieved successfully !!',
+                    'data' => $sponsorsPartners,
+                ];
+
+                return $this->response('success', $response);
+            } else {
+                $response = [
+                    'message' => 'Record not found !!',
+                ];
+
+                return $this->response('exception', $response);
+            }
+        } catch (\Exception $e) {
+            $response = [
+                'message' => $e->getMessage(),
+            ];
+
+            return $this->response('exception', $response);
+        }
+    }
+
+    public function deletePartnerSponsor($id)
+    {
+        try {
+            $thePartnerSponsor = ThePartnerSponsor::find($id);
+            if ($thePartnerSponsor) {
+                if ($thePartnerSponsor->img_src) {
+                    $filePath = public_path('images/thePartnerSponsor/'.$thePartnerSponsor->img_src);
+                    if (file_exists($filePath)) {
+                        unlink($filePath);
+                    }
+                }
+                $thePartnerSponsor->delete();
+                $response = [
+                    'message' => 'Deleted successfully.!',
+                ];
+
+                return $this->response('exception', $response);
+            } else {
+                $response = [
+                    'message' => 'Something went wrong.!',
+                ];
+
+                return $this->response('exception', $response);
+            }
+        } catch (\Exception $e) {
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Failed to delete thePartnerSponsor.',
+                'error' => $e->getMessage(),
+            ], 500);
+        }
+    }
+
+    // public function readCSV()
+    // {
+    //     $csvFile = public_path('images/csv-new-adi.csv');
+
+    //     // Open the file in read mode
+    //     if (($handle = fopen($csvFile, 'r')) !== false) {
+    //         // Read and process each line
+    //         $header = null;
+    //         while (($row = fgetcsv($handle)) !== false) {
+    //             if (! $header) {
+    //                 $header = $row; // Read the header row
+
+    //                 continue;
+    //             }
+
+    //             // Map CSV columns to variables
+    //             $section = $row[0];
+    //             $title = $row[1];
+    //             $country = $row[3]; // This could be a problem; you may want to rename the second $country usage
+    //             $productionYear = $row[4];
+    //             $language = $row[5];
+    //             $director = $row[8];
+    //             $awardYear = $row[29];
+    //             $international_curated = \DB::table('international_curated_sections')
+    //                 ->where('title', $section)
+    //                 ->first();
+    //             if (! $international_curated) {
+    //                 continue;
+    //             }
+
+    //             // Insert or update `international_cinema`
+    //             $cinemas = \DB::table('international_cinema')
+    //                 ->where('title', $title)
+    //                 ->get(); // Fetch all matching records
+    //             $cinema_ids = [];
+
+    //             if ($cinemas->isNotEmpty()) {
+    //                 foreach ($cinemas as $cinema) {
+    //                     $cinema_ids[] = $cinema->id; // Corrected push with array syntax
+    //                     // Update existing cinema
+    //                     \DB::table('international_cinema')
+    //                         ->where('id', $cinema->id)
+    //                         ->update([
+    //                             'language' => $language,
+    //                             'country_of_origin' => $country,
+    //                             'year' => $productionYear,
+    //                             'award_year' => $awardYear,
+    //                             'directed_by' => $director,
+    //                             'updated_at' => now(),
+    //                             'status' => 1,
+    //                             'slug' => $cinema->slug ?: str_replace(' ', '-', $title),
+    //                         ]);
+    //                 }
+    //             } else {
+    //                 // Create new cinema
+    //                 $cinemaId = \DB::table('international_cinema')->insertGetId([
+    //                     'curated_section_id' => $international_curated->id,
+    //                     'slug' => str_replace(' ', '-', $title),
+    //                     'title' => $title,
+    //                     'directed_by' => $director,
+    //                     'language' => $language,
+    //                     'country_of_origin' => $country,
+    //                     'year' => $productionYear,
+    //                     'award_year' => $awardYear,
+    //                     'created_at' => now(),
+    //                     'updated_at' => now(),
+    //                     'status' => 1,
+    //                 ]);
+
+    //                 $cinema_ids[] = $cinemaId; // Add the new cinema's ID to the array
+    //             }
+
+    //             // Extract data for `international_cinema_basic_details`
+    //             $producer = $row[10];
+    //             $screenplay = $row[11];
+    //             $dop = $row[12];
+    //             $editor = $row[13];
+    //             $cast = $row[14];
+    //             $synopsis = $row[15];
+    //             $trailerLink = $row[19];
+    //             $director_bio = $row[9];
+    //             $runtime = $row[6];
+    //             $color = $row[7];
+    //             $original_title = $row[2];
+    //             $premiere = $row[16];
+    //             $award = $row[17];
+    //             $festival_history = $row[18];
+    //             $link_trailer = $row[19];
+    //             $tags = $row[20];
+    //             $sales = $row[21];
+    //             $instagram = $row[26];
+    //             $twitter = $row[27];
+    //             $facebook = $row[28];
+
+    //             // Insert or update `international_cinema_basic_details`
+    //             foreach ($cinema_ids as $cinema_id) {
+    //                 $basicDetails = \DB::table('international_cinema_basic_details')
+    //                     ->where('cinema_id', $cinema_id)
+    //                     ->first();
+
+    //                 if ($basicDetails) {
+    //                     // Update existing basic details
+    //                     \DB::table('international_cinema_basic_details')
+    //                         ->where('id', $basicDetails->id)
+    //                         ->update([
+    //                             'director' => $director,
+    //                             'producer' => $producer,
+    //                             'screenplay' => $screenplay,
+    //                             'dop' => $dop,
+    //                             'editor' => $editor,
+    //                             'cast' => $cast,
+    //                             'synopsis' => $synopsis,
+    //                             'trailer_link' => $trailerLink,
+    //                             'other_details' => $runtime.' | '.$color.' | '.$country,
+    //                             'original_title' => $original_title,
+    //                             'director_bio' => $director_bio,
+    //                             'premiere' => $premiere,
+    //                             'award' => $award,
+    //                             'festivals' => $festival_history,
+    //                             'link_trailer' => $link_trailer,
+    //                             'tags' => $tags,
+    //                             'sales_agent' => $sales,
+    //                             'instagram' => $instagram,
+    //                             'twitter' => $twitter,
+    //                             'facebook' => $facebook,
+    //                             'updated_at' => now(),
+    //                         ]);
+    //                 } else {
+    //                     // Create new basic details
+    //                     \DB::table('international_cinema_basic_details')->insert([
+    //                         'cinema_id' => $cinema_id,
+    //                         'director' => $director,
+    //                         'producer' => $producer,
+    //                         'screenplay' => $screenplay,
+    //                         'dop' => $dop,
+    //                         'editor' => $editor,
+    //                         'cast' => $cast,
+    //                         'synopsis' => $synopsis,
+    //                         'trailer_link' => $trailerLink,
+    //                         'other_details' => $runtime.' | '.$color.' | '.$country,
+    //                         'original_title' => $original_title,
+    //                         'director_bio' => $director_bio,
+    //                         'premiere' => $premiere,
+    //                         'award' => $award,
+    //                         'festival_history' => $festival_history,
+    //                         'link_trailer' => $link_trailer,
+    //                         'tags' => $tags,
+    //                         'sales_agent' => $sales,
+    //                         'instagram' => $instagram,
+    //                         'twitter' => $twitter,
+    //                         'facebook' => $facebook,
+    //                         'updated_at' => now(),
+    //                         'created_at' => now(),
+    //                     ]);
+    //                 }
+    //             }
+    //         }
+    //         exit('Data Done');
+    //         // Close the file
+    //         fclose($handle);
+    //     } else {
+    //         echo 'Error: Could not open the file.';
+    //     }
+    // }
+
+    public function readCSV()
+    {
+        $csvFile = public_path('images/csv-new-adi.csv');
+
+        // Open the file in read mode
+        if (($handle = fopen($csvFile, 'r')) !== false) {
+            // Read and process each line
+            $header = null;
+            while (($row = fgetcsv($handle)) !== false) {
+                if (! $header) {
+                    $header = $row; // Read the header row
+
+                    continue;
+                }
+
+                // Map CSV columns to variables
+                $section = $row[0];
+                $title = $row[1];
+                $country = $row[3];
+                $productionYear = $row[4];
+                $language = $row[5];
+                $director = $row[8];
+                $awardYear = $row[29];
+
+                // Get the curated section
+                $international_curated = \DB::table('international_curated_sections')
+                    ->where('title', $section)
+                    ->first();
+                if (! $international_curated) {
+                    continue; // Skip if no curated section found
+                }
+
+                // Insert or update `international_cinema` for each record
+                $cinema_ids = [];
+
+                // Insert each record based on title and section
+                $cinemas = \DB::table('international_cinema')
+                    ->where('title', $title)
+                    ->where('curated_section_id', $international_curated->id) // Ensure title is stored under the correct section
+                    ->get();
+
+                if ($cinemas->isNotEmpty()) {
+                    foreach ($cinemas as $cinema) {
+                        // Update existing cinema under the same section
+                        \DB::table('international_cinema')
+                            ->where('id', $cinema->id)
+                            ->update([
+                                'language' => $language,
+                                'country_of_origin' => $country,
+                                'year' => $productionYear,
+                                'award_year' => $awardYear,
+                                'directed_by' => $director,
+                                'updated_at' => now(),
+                                'status' => 1,
+                                'slug' => $cinema->slug ?: str_replace(' ', '-', $title),
+                            ]);
+                        $cinema_ids[] = $cinema->id; // Store the updated cinema id
+                    }
+                } else {
+                    // Create a new cinema if not exists
+                    $cinemaId = \DB::table('international_cinema')->insertGetId([
+                        'curated_section_id' => $international_curated->id,
+                        'slug' => str_replace(' ', '-', $title),
+                        'title' => $title,
+                        'directed_by' => $director,
+                        'language' => $language,
+                        'country_of_origin' => $country,
+                        'year' => $productionYear,
+                        'award_year' => $awardYear,
+                        'created_at' => now(),
+                        'updated_at' => now(),
+                        'status' => 1,
+                    ]);
+
+                    $cinema_ids[] = $cinemaId; // Add new cinema id to array
+                }
+
+                // Extract additional details for `international_cinema_basic_details`
+                $producer = $row[10];
+                $screenplay = $row[11];
+                $dop = $row[12];
+                $editor = $row[13];
+                $cast = $row[14];
+                $synopsis = $row[15];
+                $trailerLink = $row[19];
+                $director_bio = $row[9];
+                $runtime = $row[6];
+                $color = $row[7];
+                $original_title = $row[2];
+                $premiere = $row[16];
+                $award = $row[17];
+                $festival_history = $row[18];
+                $link_trailer = $row[19];
+                $tags = $row[20];
+                $sales = $row[21];
+                $instagram = $row[26];
+                $twitter = $row[27];
+                $facebook = $row[28];
+
+                // Insert or update `international_cinema_basic_details`
+                foreach ($cinema_ids as $cinema_id) {
+                    $basicDetails = \DB::table('international_cinema_basic_details')
+                        ->where('cinema_id', $cinema_id)
+                        ->first();
+
+                    if ($basicDetails) {
+                        // Update existing basic details
+                        \DB::table('international_cinema_basic_details')
+                            ->where('id', $basicDetails->id)
+                            ->update([
+                                'director' => $director,
+                                'producer' => $producer,
+                                'screenplay' => $screenplay,
+                                'dop' => $dop,
+                                'editor' => $editor,
+                                'cast' => $cast,
+                                'synopsis' => $synopsis,
+                                'trailer_link' => $trailerLink,
+                                'other_details' => $runtime.' | '.$color.' | '.$country,
+                                'original_title' => $original_title,
+                                'director_bio' => $director_bio,
+                                'premiere' => $premiere,
+                                'award' => $award,
+                                'festivals' => $festival_history,
+                                'link_trailer' => $link_trailer,
+                                'tags' => $tags,
+                                'sales_agent' => $sales,
+                                'instagram' => $instagram,
+                                'twitter' => $twitter,
+                                'facebook' => $facebook,
+                                'updated_at' => now(),
+                            ]);
+                    } else {
+                        // Create new basic details for each cinema
+                        \DB::table('international_cinema_basic_details')->insert([
+                            'cinema_id' => $cinema_id,
+                            'director' => $director,
+                            'producer' => $producer,
+                            'screenplay' => $screenplay,
+                            'dop' => $dop,
+                            'editor' => $editor,
+                            'cast' => $cast,
+                            'synopsis' => $synopsis,
+                            'trailer_link' => $trailerLink,
+                            'other_details' => $runtime.' | '.$color.' | '.$country,
+                            'original_title' => $original_title,
+                            'director_bio' => $director_bio,
+                            'premiere' => $premiere,
+                            'award' => $award,
+                            'festival_history' => $festival_history,
+                            'link_trailer' => $link_trailer,
+                            'tags' => $tags,
+                            'sales_agent' => $sales,
+                            'instagram' => $instagram,
+                            'twitter' => $twitter,
+                            'facebook' => $facebook,
+                            'created_at' => now(),
+                            'updated_at' => now(),
+                        ]);
+                    }
+                }
+            }
+            exit('Data Done');
+            // Close the file
+            fclose($handle);
+        } else {
+            echo 'Error: Could not open the file.';
+        }
+    }
+
+    public function uploadInGalary(Request $request)
+    {
+        $payload = $request->all();
+        $validatorArray = [
+            'category_id' => 'required',
+            'img_src' => 'required', //|mimes:jpg,jpeg,png,PNG
+        ];
+        $messagesArray = [];
+        $validator = Validator::make($payload, $validatorArray, $messagesArray);
+        if ($validator->fails()) {
+            $output = [
+                'message' => $validator->errors()->first(),
+            ];
+
+            return $this->response('validatorerrors', $output);
+        }
+
+        try {
+
+            if ($request->hasFile('img_src')) {
+                $files = $request->file('img_src');
+
+                $records = [];
+                foreach ($files as $file) {
+                    $destinationPath = 'images/gallery-2024';
+                    $originalFilename = $file->getClientOriginalName();
+                    $extension = $file->getClientOriginalExtension();
+                    $hashedFilename = substr(md5($originalFilename.time()), 0, 20).'.'.$extension;
+                    $fullFilePath = public_path($destinationPath.'/'.$hashedFilename);
+                    if (File::exists($fullFilePath)) {
+                        $response = [
+                            'message' => 'File with the same name already exists.',
+                            'existing_file' => $hashedFilename,
+                        ];
+
+                        return $this->response('conflict', $response);
+                    }
+                    $file->move(public_path($destinationPath), $hashedFilename);
+                    $data = [
+                        'category_id' => $payload['category_id'], // Reuse the title for all images
+                        'image' => $hashedFilename,
+                        'year' => 2024,
+                    ];
+                    $partners = DB::table('mst_photos')->insert($data);
+
+                    if ($partners) {
+                        $records[] = $partners;
+                    } else {
+                        throw new \Exception("Failed to create record for {$hashedFilename}");
+                    }
+                }
+                $response = [
+                    'message' => 'Created successfully!',
+                    'data' => $records,
+                ];
+
+                return $this->response('success', $response);
+            } else {
+                $response = [
+                    'message' => 'No files uploaded!',
+                ];
+
+                return $this->response('exception', $response);
+            }
+        } catch (\Exception $e) {
+            $response = [
+                'message' => $e->getMessage(),
+            ];
+
+            return $this->response('exception', $response);
+        }
+    }
+
+    public function readCSVV()
+    {
+        $csvFile = public_path('images/csv-media.csv');
+
+        // Open the file in read mode
+        if (($handle = fopen($csvFile, 'r')) !== false) {
+            $header = null;
+
+            // Read each line of the CSV
+            while (($row = fgetcsv($handle)) !== false) {
+                if (! $header) {
+                    $header = $row; // Read and skip the header row
+
+                    continue;
+                }
+
+                // Map CSV columns to variables
+                $title = $row[0];
+                $urls = $row[1];
+                $status = $row[2];
+
+                // Check if the record already exists based on title
+                $existingRecord = \DB::table('international_media')
+                    ->where('title', $title)
+                    ->first();
+
+                if (! $existingRecord) {
+                    // Insert the data into the database
+                    \DB::table('international_media')->insert([
+                        'title' => $title,
+                        'urls' => $urls,
+                        'status' => $status,
+                    ]);
+                }
+            }
+
+            // Close the file
+            fclose($handle);
+
+            exit('Data imported successfully!');
+        } else {
+            exit('Error: Could not open the file.');
         }
     }
 }

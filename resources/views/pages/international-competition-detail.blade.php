@@ -26,7 +26,7 @@
             <div class="row">
                 <div class="col-md-5">
                     <div class="international-img">
-                        <img src="{{ asset('public/images/international-competition/2024/' . $fetch_cinema_details->img_src . '') }}"
+                        <img src="{{ asset('public/images/cureted-section/' . $fetch_cinema_details->img_src . '') }}"
                             alt="{{ $fetch_cinema_details->title }} image" class="img-fluid">
                     </div>
                 </div>
@@ -39,6 +39,10 @@
                                 {{ $fetch_cinema_details->country_of_origin }} |
                                 {{ $fetch_cinema_details->year }} |
                                 {{ $fetch_cinema_details->language }}
+                            </li>
+                            <li>
+                                <b>Original Title:</b>
+                                {{ isset($fetch_cinema_basic_details->original_title) ? $fetch_cinema_basic_details->original_title : '' }}
                             </li>
                             <li>
                                 <b>Director:</b>
@@ -60,12 +64,22 @@
                                 <b>Cast:</b>
                                 {{ isset($fetch_cinema_basic_details->cast) ? $fetch_cinema_basic_details->cast : '' }}
                             </li>
+                            <li>
+                                <b>Premiere:</b>
+                                {{ isset($fetch_cinema_basic_details->premiere) ? $fetch_cinema_basic_details->premiere : '' }}
+                            </li>
+                            <li>
+                                <b>Tags:</b>
+                                {{ isset($fetch_cinema_basic_details->tags) ? $fetch_cinema_basic_details->tags : '' }}
+                            </li>
 
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-12">
-                    <h2>Festivals: </h2>
+                    <h2>{{ isset($fetch_cinema_basic_details->festivals) && !empty($fetch_cinema_basic_details->festivals) ? 'Festivals : ' : '' }}
+                    </h2>
+                    {{-- <h2>Festivals: </h2> --}}
                     <p>
                         @isset($fetch_cinema_basic_details->festivals)
                             @if (substr($currentURL, -3) === '/en')
@@ -78,8 +92,13 @@
                         @endisset
                         {{-- {!! $fetch_cinema_basic_details->festivals !!} --}}
                     </p>
-                    <hr>
-                    <h2>Award: </h2>
+
+                    {{-- <hr> --}}
+                    <h2> {{ isset($fetch_cinema_basic_details->award) && !empty($fetch_cinema_basic_details->award) ? 'Award : ' : '' }}
+
+
+                    </h2>
+                    {{-- <h2>Award: </h2> --}}
                     <p>
                         @isset($fetch_cinema_basic_details->award)
                             @if (substr($currentURL, -3) === '/en')
@@ -93,7 +112,9 @@
                         {{-- {{ $fetch_cinema_basic_details->award }} --}}
                     </p>
                     <hr>
-                    <h2>Synopsis: </h2>
+                    <h2> {{ isset($fetch_cinema_basic_details->synopsis) && !empty($fetch_cinema_basic_details->synopsis) ? 'Synopsis : ' : '' }}
+                    </h2>
+                    {{-- <h2>Synopsis:</h2> --}}
                     <p>
                         @isset($fetch_cinema_basic_details->synopsis)
                             @if (substr($currentURL, -3) === '/en')
@@ -107,7 +128,9 @@
                         {{-- {{ $fetch_cinema_basic_details->synopsis }} --}}
                     </p>
                     <hr>
-                    <h2>Directors Bio: </h2>
+                    <h2> {{ isset($fetch_cinema_basic_details->director_bio) && !empty($fetch_cinema_basic_details->director_bio) ? 'Directors Bio : ' : '' }}
+                    </h2>
+                    {{-- <h2>Directors Bio: </h2> --}}
                     <p>
                         @isset($fetch_cinema_basic_details->director_bio)
                             @if (substr($currentURL, -3) === '/en')
@@ -121,11 +144,10 @@
                         {{-- {{ $fetch_cinema_basic_details->director_bio }} --}}
                     </p>
                     <hr>
-                    <h2>Sales Agent: </h2>
-                    <p>{!! $fetch_cinema_basic_details->sales_agent !!}</p>
-                    {{-- <p>True Colours</p> --}}
-                    {{-- <p>{!! $fetch_cinema_basic_details->drama !!} | Adaptation | Political | Period Drama<br>
-                                Asia Premiere</p> --}}
+                    <h2> {{ isset($fetch_cinema_basic_details->sales_agent) && !empty($fetch_cinema_basic_details->sales_agent) ? 'Sales' : '' }}
+                    </h2>
+                    {{-- <h2>Sales: </h2> --}}
+                    <p>{!! $fetch_cinema_basic_details?->sales_agent !!}</p>
                 </div>
             </div>
         </div>
