@@ -15,20 +15,20 @@
             </div>
             <div class="row mt-4 phone-text">
                 <div class="col-md-3 col-sm-3">
-                    <h4>Indian Panorama</h4>
+                    {{-- <h4>Indian Panorama</h4> --}}
                     {{-- <ul class="text-highlight">
                         <li><a href="https://iffigoa.org/festival/indian-paranoma" class="cus-menuP-link"
                                 target="_blank">View your entry</a></li>
                     </ul> --}}
                 </div>
                 <div class="col-md-3 col-sm-3">
-                    <h4>Web Series</h4>
+                    {{-- <h4>Web Series</h4> --}}
                     {{-- <ul class="text-highlight">
                         <li><a href="https://iffigoa.org/festival/web-series" target="_blank">View your entry</a></li>
                     </ul> --}}
                 </div>
                 <div class="col-md-3 col-sm-3">
-                    <h4>Indian Debut Director Award</h4>
+                    {{-- <h4>Indian Debut Director Award</h4> --}}
                     {{-- <ul class="text-highlight">
                         <li><a href="https://iffigoa.org/festival/indian-debut-director" class="cus-menuP-link"
                                 target="_blank">View your entry</a></li>
@@ -36,7 +36,7 @@
                 </div>
 
                 <div class="col-md-3 col-sm-3">
-                    <h4>Creative Minds Of Tomorrow (CMOT)</h4>
+                    {{-- <h4>Creative Minds Of Tomorrow (CMOT)</h4> --}}
                     {{-- <ul class="text-highlight">
                         <li>
                             <a href="https://iffigoa.org/festival/creative-mind-tomorrow" class="cus-menuP-link"
