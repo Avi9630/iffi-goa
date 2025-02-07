@@ -660,7 +660,7 @@
                                 <ul class="navbar-nav vertical-menu-custom">
                                     <li class="nav-item">
                                         <a href="{{ route('master-classes') }}" class="nav-link">
-                                            55 th IFFI Schedule
+                                            55<sup>th</sup> IFFI Schedule
                                         </a>
                                     </li>
                                     {{-- <li class="nav-item">
