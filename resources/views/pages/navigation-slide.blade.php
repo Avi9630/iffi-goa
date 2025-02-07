@@ -256,11 +256,11 @@
                                                     href="{{ route('debut-director-films', ['slug' => 'debut-director-films']) }}">Official
                                                     Selection - Debut Director Films</a>
                                             </li>
-                                            <li>
+                                            {{-- <li>
                                                 <a href="https://iffigoa.org/festival/indian-debut-director"
                                                     class="dropdown-item nav-link yelow-color-link"
                                                     target="_blank">View your entry</a>
-                                            </li>
+                                            </li> --}}
                                             <li>
                                                 <a href="{{ route('dd-rules-regulations') }}"
                                                     class="dropdown-item">Rules & Regulations</a>
@@ -295,11 +295,11 @@
                                                 </ul>
                                             </li>
 
-                                            <li>
+                                            {{-- <li>
                                                 <a href="https://iffigoa.org/festival/indian-paranoma"
                                                     class="dropdown-item nav-link yelow-color-link"
                                                     target="_blank">View your entry</a>
-                                            </li>
+                                            </li> --}}
 
                                             <li>
                                                 <a href="{{ route('indian-panorama-rules-regulations') }}"
@@ -426,15 +426,14 @@
                                             <li><a class="dropdown-item"
                                                     href="{{ route('best-web-series', ['slug' => 'best-web-series']) }}">Official
                                                     Selection - Best Web Series</a></li>
-                                            <li>
+                                            {{-- <li>
                                                 <a href="https://iffigoa.org/festival/web-series"
                                                     class="dropdown-item nav-link yelow-color-link"
                                                     target="_blank">View your entry</a>
-                                            </li>
-
-
+                                            </li> --}}
                                         </ul>
                                     </li>
+
                                     <!-- Gala Premieres & Red Carpet menu Start-->
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" role="button"
@@ -456,6 +455,7 @@
                                             </li>
                                         </ul>
                                     </li>
+
                                     <!-- CMOT Section Start-->
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" role="button"
@@ -486,14 +486,15 @@
 
                                                 </ul>
                                             </li>
-                                            <li>
+                                            {{-- <li>
                                                 <a href="https://iffigoa.org/festival/creative-mind-tomorrow"
                                                     class="nav-link yelow-color-link" target="_blank">View
                                                     your
                                                     entry</a>
-                                            </li>
+                                            </li> --}}
                                         </ul>
                                     </li>
+
                                     <!-- Technical Committee Start-->
                                     <li class="nav-item dropdown">
                                         <a href="{{ route('technical-committee') }}" class="nav-link">Technical
@@ -593,7 +594,7 @@
                             <!-- Media Section End -->
 
                             <!-- Delegate Registration Section Start -->
-                            <div class="col-md-3 col-sm-12 ">
+                            {{-- <div class="col-md-3 col-sm-12 ">
                                 <h4 class="menu-title ">IFFI Delegate Registration</h4>
                                 <ul class="navbar-nav vertical-menu-custom">
                                     <li class="nav-item">
@@ -618,11 +619,11 @@
                                             Schedule PDF</a>
                                     </li>
                                 </ul>
-                            </div>
+                            </div> --}}
                             <!-- Delegate Registration Section End -->
 
                             <!-- Film Bazaar Section Start -->
-                            <div class="col-md-3 col-sm-12 ">
+                            {{-- <div class="col-md-3 col-sm-12 ">
                                 <h4 class="menu-title ">Film Bazaar</h4>
                                 <ul class="navbar-nav vertical-menu-custom">
                                     <li class="nav-item">
@@ -650,7 +651,7 @@
                                         </a>
                                     </li>
                                 </ul>
-                            </div>
+                            </div> --}}
                             <!-- Film Bazaar Section End -->
 
                             <!-- Master class Section Start -->
@@ -659,7 +660,7 @@
                                 <ul class="navbar-nav vertical-menu-custom">
                                     <li class="nav-item">
                                         <a href="{{ route('master-classes') }}" class="nav-link">
-                                            Schedule
+                                            55 th IFFI Schedule
                                         </a>
                                     </li>
                                     {{-- <li class="nav-item">
