@@ -1,7 +1,7 @@
 @extends('layouts.app')
-@section('site_title', '55th IFFI Goa International Film Festival | NFDC | MIB')
+@section('site_title', '56th IFFI Goa International Film Festival | NFDC | MIB')
 @section('site_description',
-    'Join 55th IFFI Goa, an international film festival showcasing global cinema. Discover
+    'Join 56th IFFI Goa, an international film festival showcasing global cinema. Discover
     films, events, and cultural experiences in the heart of Goa.')
 @section('site_keywords',
     'IFFI Goa, IFFI Goa 2024, IFFI 2022, 55th IFFI, Goan Films, Goa Film news, Indian films, film
@@ -16,9 +16,9 @@
     @include('pages.video-section')
 
     <!-- Ticker Content-->
-    @include('pages.ticker', [
+    {{-- @include('pages.ticker', [
         'tickers' => app(\App\Http\Controllers\TickerController::class)->getAllTicker(),
-    ])
+    ]) --}}
 
     <!-- About IFFI Section-->
     @include('pages.about-iffi')
@@ -28,7 +28,7 @@
         <div class="container">
             <div class="section-heading mb-4">
                 <p>Why you should attend</p>
-                <h2>55<sup>th</sup> IFFI Festival?</h2>
+                <h2>56<sup>th</sup> IFFI Festival?</h2>
             </div>
             <div class="row festival-img">
                 @include('pages.55th-iffi-festival', [
