@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('site_title', 'IFFI 55 Accessibility: Embracing Inclusivity for All')
+@section('site_title', 'IFFI 56 Accessibility: Embracing Inclusivity for All')
 @section('site_description',
     'Discover how the 55th International Film Festival of India (IFFI) celebrates inclusivity
     and accessibility with initiatives like live sign language interpretation, audio-described films, wheelchair-accessible
@@ -30,8 +30,8 @@
         <div class="container">
             <div class="row">
                 <div class=" col-md-12 col-sm-12 col-12">
-                    <h3>IFFI 55: Cinema for All – Embracing Accessibility and Inclusivity</h3>
-                    <p>The 55th International Film Festival of India (IFFI) proudly champions Sabka Manoranjan
+                    <h3>IFFI 56: Cinema for All – Embracing Accessibility and Inclusivity</h3>
+                    <p>The 56th International Film Festival of India (IFFI) proudly champions Sabka Manoranjan
                         (Entertainment for All), pushing the boundaries to create a festival that celebrates diversity,
                         accessibility, and inclusivity. Each initiative this year is designed to make cinema a truly shared
                         experience, accessible to all cinema enthusiasts.</p>
