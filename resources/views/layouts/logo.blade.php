@@ -4,7 +4,7 @@
         <div class="container">
             <div class="top-logo ">
                 <a href="{{ route('/') }}">
-                    <img src="{{ asset('public/images/iffi.svg') }}" alt="iffi-logo">
+                    <img class="iffi-logo" src="{{ asset('public/images/logo/IFFI56.png') }}" alt="iffi-logo">
                 </a>
                 <a href="https://www.nfdcindia.com/" target="_blank">
                     <img src="{{ asset('public/images/nfdc.svg') }}" alt="nfdc-logo">
