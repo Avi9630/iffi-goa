@@ -248,7 +248,3 @@ Route::get('closing-film', function () {
 Route::get('partners-sponsors', function () {
     return view('partnersSponsors.partner-sponsers');
 })->name('partners-sponsors');
-
-// Route::get('international-media', function () {
-//     return view('media.international-media');
-// });
