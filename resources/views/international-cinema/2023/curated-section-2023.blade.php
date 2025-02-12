@@ -14,9 +14,9 @@
     <!-- Menu slide end -->
 
     <!-- Inner Page Banner Section -->
-    <div class="container-fluid page-header bannerBg-International-competition py-5">
+    <div class="container-fluid page-header bannerBg-InternationalCompetition py-5">
         <div class="container text-center ">
-            <h1>{{ $curatedSections[$curatedSectionId]->title ?? 'Title not found' }} - 2024</h1>
+            <h1>{{ $curatedSections[$curatedSectionId]->title ?? 'Title not found' }} - 2023</h1>
 
         </div>
     </div>
@@ -29,19 +29,13 @@
                     <div class="col-md-3 col-sm-4 col-xs-12 d-flex">
                         <div class="card shadow-sm w-100">
                             <div class="card-image min-size-img">
-                                <img src="{{ asset('public/images/cureted-section/' . $internationalCinema->img_src) }}"
-                                    alt="{{ $internationalCinema->title }} image" class="img-fluid">
+                                <img src="{{ asset('public/images/film-selection/international-cinema/' . $internationalCinema->img_src) }}"
+                                    alt="image" class="img-fluid">
                             </div>
                             <div class="card-body text-start">
                                 <div class="card-text d-flex">
                                     <div class="iCinema-content">
-                                        <h4 class="title">
-                                            <a
-                                                href="{{ route('international-competition-detail', ['slug' => $internationalCinema?->slug]) }}">
-                                                {{ $internationalCinema->title }}
-                                            </a>
-
-                                        </h4>
+                                        <h4 class="title">{{ $internationalCinema->title }}</h4>
                                         <h5>
                                             <span>Directed by</span>
                                             <span>:</span>

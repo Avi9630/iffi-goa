@@ -10,23 +10,18 @@ class InternationalCinemaController extends Controller
     {
         $internationalCinemas = DB::table('international_cinema')
             ->join(
-                'international_curated_sections',
+                'curated_sections',
                 'international_cinema.curated_section_id',
                 '=',
-                'international_curated_sections.id',
+                'curated_sections.id',
             )
-            // ->where('international_cinema.status', '=', '1')
-            // ->where('international_curated_sections.id', '=', '1')
             ->where('international_cinema.curated_section_id', '=', '1')
             ->select(
                 'international_cinema.*',
-                'international_curated_sections.title AS curated_section_title',
+                'curated_sections.title AS curated_section_title',
             )
-            // ->orderBy('international_cinema.id', 'DESC')
             ->limit(8)
             ->get();
-
-        // dd($internationalCinemas);
         return view('international-cinema.international-competition', [
             'internationalCinemas' => $internationalCinemas,
         ]);
@@ -44,8 +39,10 @@ class InternationalCinemaController extends Controller
             // ->where('international_cinema.status', '=', '1')
             // ->where('international_curated_sections.id', '=', '1')
             // ->where('international_cinema.curated_section_id', '=', '1')
-            ->where(['international_cinema.curated_section_id' => 1,
-                'year' => 2024])
+            ->where([
+                'international_cinema.curated_section_id' => 1,
+                'year' => 2024
+            ])
             ->select(
                 'international_cinema.*',
                 'international_curated_sections.title AS curated_section_title',

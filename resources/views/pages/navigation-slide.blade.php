@@ -121,7 +121,7 @@
                                                             href="{{ route('cureted-section-2024', ['slug' => 'icft-unesco-medal']) }}">ICFT
                                                             UNESCO Gandhi Medal</a></li>
                                                     <li><a class="dropdown-item"
-                                                            href="{{ route('cureted-section-2024', ['slug' => 'festival-kaleidoscope']) }}">From
+                                                            href="{{ route('cureted-section-2024', ['slug' => 'from-the-festivals']) }}">From
                                                             The Festivals</a></li>
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('cureted-section-2024', ['slug' => 'docu-montage']) }}">Docu-Montage</a>
@@ -176,14 +176,87 @@
                                                 </ul>
                                             </li>
 
-
                                             {{-- Curated Sections 2023 --}}
                                             <li class="nav-item dropend">
+
                                                 <a class="nav-link dropdown-toggle" href="#" role="button"
                                                     data-bs-toggle="dropdown" aria-expanded="false">
                                                     Curated Sections 2023
                                                 </a>
+
                                                 <ul class="dropdown-menu">
+
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cureted-section-2023', ['slug' => 'international-competition']) }}">International
+                                                            Competition</a></li>
+
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cureted-section-2023', ['slug' => 'best-debut-feature-film-of-a-director']) }}">Best
+                                                            Debut Feature Film of a Director</a></li>
+
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cureted-section-2023', ['slug' => 'icft-unesco-medal']) }}">ICFT
+                                                            UNESCO Gandhi Medal</a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cureted-section-2023', ['slug' => 'from-the-festivals']) }}">From
+                                                            The Festivals</a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cureted-section-2023', ['slug' => 'docu-montage']) }}">Docu-Montage</a>
+                                                    </li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cureted-section-2023', ['slug' => 'experimental-films']) }}">Experimental
+                                                            Films</a>
+                                                    </li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cureted-section-2023', ['slug' => 'animation']) }}">Animation</a>
+                                                    </li>
+
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cureted-section-2023', ['slug' => 'macabre-dreams']) }}">Macabre
+                                                            Dreams</a></li>
+
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cureted-section-2023', ['slug' => 'cinema-world']) }}">Cinema
+                                                            of the World</a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cureted-section-2023', ['slug' => 'restored-classic']) }}">Restored
+                                                            Classics</a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cureted-section-2023', ['slug' => 'unicef']) }}">UNICEF
+                                                            @
+                                                            IFFI</a></li>
+                                                    {{-- <li><a class="dropdown-item"
+                                                            href="{{ route('cureted-section-2023', ['slug' => 'rising-stars']) }}">Rising
+                                                            Stars</a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cureted-section-2023', ['slug' => 'mission-life']) }}">Mission
+                                                            Life</a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cureted-section-2023', ['slug' => 'BFI@IFFI']) }}">BFI@IFFI</a>
+                                                    </li> --}}
+                                                    {{-- <li><a class="dropdown-item"
+                                                            href="{{ route('cureted-section-2023', ['slug' => 'country-focus-australia']) }}">Country
+                                                            Focus: Australia</a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cureted-section-2023', ['slug' => 'accolades']) }}">Accolades</a>
+                                                    </li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cureted-section-2023', ['slug' => 'from-the-consulate']) }}">From
+                                                            The Consulates</a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cureted-section-2023', ['slug' => 'opening-film']) }}">Opening
+                                                            Film</a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cureted-section-2023', ['slug' => 'closing-film']) }}">Closing
+                                                            Film</a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cureted-section-2023', ['slug' => 'international-jury-films']) }}">International
+                                                            Jury Films</a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cureted-section-2023', ['slug' => 'special-presentations']) }}">Special
+                                                            Presentations</a></li> --}}
+                                                </ul>
+                                                {{-- <ul class="dropdown-menu">
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('international-competition') }}">International
                                                             Competition</a>
@@ -228,7 +301,7 @@
                                                             X
                                                             IFFI</a>
                                                     </li>
-                                                </ul>
+                                                </ul> --}}
                                             </li>
                                         </ul>
                                     </li>

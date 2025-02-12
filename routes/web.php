@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CommonController;
 use App\Http\Controllers\ContactUsController;
+use App\Http\Controllers\CuratedSectionController;
 use App\Http\Controllers\IndianPanoramaController;
 use App\Http\Controllers\InternationalCinemaController;
 use App\Http\Controllers\TickerController;
@@ -19,7 +20,7 @@ Route::controller(CommonController::class)->group(function () {
 
     Route::get('highlights', 'highlights')->name('highlights');
 
-    Route::get('international-cinema/2024/{slug}', 'curetedsection2024')->name('cureted-section-2024');
+    // Route::get('international-cinema/2024/{slug}', 'curetedsection2024')->name('cureted-section-2024');
 
     Route::get('international-cinema/2024/film/{slug}', 'curetedsection2024')->name('cureted-section-film-2024');
 
@@ -62,32 +63,37 @@ Route::controller(CommonController::class)->group(function () {
     // Route::get('partners-sponsors', 'partnersSponsors')->name('partners-sponsors');
 });
 
-Route::controller(InternationalCinemaController::class)->group(function () {
-
-    Route::get('international-cinema/international-competition', 'internationalCompetition')->name('international-competition');
-
-    Route::get('international-cinema/international-competition-2024', 'internationalCompetition2024')->name('international-competition-2024');
-
-    Route::get('international-cinema/award-for-best-debute', 'awardForBestDebute')->name('award-for-best-debute');
-
-    Route::get('international-cinema/icft-unesco-medal', 'icftUnescoMedal')->name('icft-unesco-medal');
-
-    Route::get('international-cinema/festival-kaleidoscope', 'festivalKaleloscope')->name('festival-kaleloscope');
-
-    Route::get('international-cinema/docu-montage', 'docuMontage')->name('docu-montage');
-
-    Route::get('international-cinema/integrade', 'integrade')->name('integrade');
-
-    Route::get('international-cinema/animation', 'animation')->name('animation');
-
-    Route::get('international-cinema/macabre-dreams', 'macabreDreams')->name('macabre-dreams');
-
-    Route::get('international-cinema/cinema-world', 'cinemaWorld')->name('cinema-world');
-
-    Route::get('international-cinema/restored-classic', 'restoredClassic')->name('restored-classic');
-
-    Route::get('international-cinema/uniceff', 'uniceff')->name('uniceff');
+Route::controller(CuratedSectionController::class)->group(function () {
+    Route::get('international-cinema/2024/{slug}', 'curetedsection2024')->name('cureted-section-2024');
+    Route::get('international-cinema/2023/{slug}', 'curetedsection2023')->name('cureted-section-2023');
 });
+
+// Route::controller(InternationalCinemaController::class)->group(function () {
+
+//     Route::get('international-cinema/international-competition-2024', 'internationalCompetition2024')->name('international-competition-2024');
+
+//     Route::get('international-cinema/international-competition', 'internationalCompetition')->name('international-competition');
+
+//     Route::get('international-cinema/award-for-best-debute', 'awardForBestDebute')->name('award-for-best-debute');
+
+//     Route::get('international-cinema/icft-unesco-medal', 'icftUnescoMedal')->name('icft-unesco-medal');
+
+//     Route::get('international-cinema/festival-kaleidoscope', 'festivalKaleloscope')->name('festival-kaleloscope');
+
+//     Route::get('international-cinema/docu-montage', 'docuMontage')->name('docu-montage');
+
+//     Route::get('international-cinema/integrade', 'integrade')->name('integrade');
+
+//     Route::get('international-cinema/animation', 'animation')->name('animation');
+
+//     Route::get('international-cinema/macabre-dreams', 'macabreDreams')->name('macabre-dreams');
+
+//     Route::get('international-cinema/cinema-world', 'cinemaWorld')->name('cinema-world');
+
+//     Route::get('international-cinema/restored-classic', 'restoredClassic')->name('restored-classic');
+
+//     Route::get('international-cinema/uniceff', 'uniceff')->name('uniceff');
+// });
 
 //Indian Panorama
 Route::controller(IndianPanoramaController::class)->group(function () {
@@ -100,10 +106,20 @@ Route::controller(IndianPanoramaController::class)->group(function () {
 
 Route::get('get-all-ticker', [TickerController::class,   'getAllTicker'])->name('get-all-ticker');
 
-//ABOUT-IFFI
+//About Iffi
 Route::get('about-iffi', function () {
     return view('about-us.about-iffi');
 })->name('about-iffi');
+
+// Festival Vanue
+Route::get('festival-venue', function () {
+    return view('about-us.festival-venue');
+})->name('festival-venue');
+
+//About-goa/Connectivity
+Route::get('goa-connectivity', function () {
+    return view('about-us.about-goa.connectivity');
+})->name('connectivity');
 
 Route::get('iffi-accessibility', function () {
     return view('about-us.Accessible-IFFI');
@@ -113,13 +129,9 @@ Route::get('filmbazaar-mariott-programme', function () {
     return view('Film-Bazaar.filmbazaar-marriott');
 })->name('filmbazaar-mariott-programme');
 
-Route::get('festival-venue', function () {
-    return view('about-us.festival-venue');
-})->name('festival-venue');
 
-Route::get('goa-connectivity', function () {
-    return view('about-us.about-goa.connectivity');
-})->name('connectivity');
+
+
 
 Route::get('faq', function () {
     return view('about-us.faq');
