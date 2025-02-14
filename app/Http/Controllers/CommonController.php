@@ -2,52 +2,48 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\InternationalCinema;
 use App\Models\InternationalCinemaBasicDetail;
 use App\Models\InternationalCinemaImage;
+use App\Models\InternationalCinema;
 use App\Models\InternationalMedia;
+use App\Models\UnescoHeritageGoa;
+use App\Models\GoaTouristPlace;
+use App\Models\PhotoCategory;
+use Illuminate\Http\Request;
 use App\Models\MasterClass;
 use App\Models\NewsUpdate;
 use App\Models\Photo;
-use App\Models\PhotoCategory;
 use DB;
-use Illuminate\Http\Request;
 
 class CommonController extends Controller
 {
     public function goaTouristPlace()
     {
-        $gtp = DB::table('goa_tourist_places')
-            ->where('unesco_heritage_goa_id', 1)
+        $unescoHeritageIds = UnescoHeritageGoa::whereNull('deleted_at')->pluck('id')->toArray();
+        $goaTouristPlaces = GoaTouristPlace::with('unescoHeritage')
+            ->whereIn('unesco_heritage_goa_id', $unescoHeritageIds)
             ->whereNull('deleted_at')
-            ->get();
-        $gtpu11 = DB::table('goa_tourist_places')
-            ->where('unesco_heritage_goa_id', 2)
-            ->whereNull('deleted_at')
-            ->get();
-        $gtpu = DB::table('unesco_heritage_goa')->where('id', 1)->whereNull('deleted_at')->get();
-        $gtpp22 = DB::table('goa_tourist_places')
-            ->where('unesco_heritage_goa_id', 3)
-            ->whereNull('deleted_at')
-            ->get();
-        $gtpp33 = DB::table('goa_tourist_places')
-            ->where('unesco_heritage_goa_id', 4)
-            ->whereNull('deleted_at')
-            ->get();
-
+            ->get()
+            ->groupBy('unesco_heritage_goa_id');
+        $groupedTouristPlaces = [];
+        foreach ($goaTouristPlaces as $heritageId => $places) {
+            $groupedTouristPlaces[$heritageId] = $places ?? collect();
+        }
+        $gtp    =   $groupedTouristPlaces[1] ?? collect();
+        $gtpu11 =   $groupedTouristPlaces[2] ?? collect();
+        $gtpp22 =   $groupedTouristPlaces[3] ?? collect();
+        $gtpp33 =   $groupedTouristPlaces[4] ?? collect();
         return view('about-us.about-goa.goa-tourist-place', [
-            'gtp' => $gtp,
-            'gtpu' => $gtpu,
-            'gtpu11' => $gtpu11,
-            'gtpp22' => $gtpp22,
-            'gtpp33' => $gtpp33,
+            'gtp'       =>  $gtp,
+            'gtpu11'    =>  $gtpu11,
+            'gtpp22'    =>  $gtpp22,
+            'gtpp33'    =>  $gtpp33,
         ]);
     }
 
     public function iffiFestival()
     {
         $datas = DB::table('iffi_festival_programmes')->where(['status' => 1])->get();
-
         return $datas;
     }
 

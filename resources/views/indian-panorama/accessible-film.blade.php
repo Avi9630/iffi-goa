@@ -11,7 +11,7 @@
     <!-- Inner Page Banner Section -->
     <div class="container-fluid page-header bannerBg-accessible-film py-5">
         <div class="container text-center ">
-            <h1 class="page-title-header">Accessible India - Accessible Films</h1>
+            <h1 class="page-title-header">Accessible India - Accessible Films - {{ $year }}</h1>
         </div>
     </div>
 

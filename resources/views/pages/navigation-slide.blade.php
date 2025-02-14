@@ -225,86 +225,11 @@
                                                             href="{{ route('cureted-section-2023', ['slug' => 'unicef']) }}">UNICEF
                                                             @
                                                             IFFI</a></li>
-                                                    {{-- <li><a class="dropdown-item"
-                                                            href="{{ route('cureted-section-2023', ['slug' => 'rising-stars']) }}">Rising
-                                                            Stars</a></li>
-                                                    <li><a class="dropdown-item"
-                                                            href="{{ route('cureted-section-2023', ['slug' => 'mission-life']) }}">Mission
-                                                            Life</a></li>
-                                                    <li><a class="dropdown-item"
-                                                            href="{{ route('cureted-section-2023', ['slug' => 'BFI@IFFI']) }}">BFI@IFFI</a>
-                                                    </li> --}}
-                                                    {{-- <li><a class="dropdown-item"
-                                                            href="{{ route('cureted-section-2023', ['slug' => 'country-focus-australia']) }}">Country
-                                                            Focus: Australia</a></li>
-                                                    <li><a class="dropdown-item"
-                                                            href="{{ route('cureted-section-2023', ['slug' => 'accolades']) }}">Accolades</a>
-                                                    </li>
-                                                    <li><a class="dropdown-item"
-                                                            href="{{ route('cureted-section-2023', ['slug' => 'from-the-consulate']) }}">From
-                                                            The Consulates</a></li>
-                                                    <li><a class="dropdown-item"
-                                                            href="{{ route('cureted-section-2023', ['slug' => 'opening-film']) }}">Opening
-                                                            Film</a></li>
-                                                    <li><a class="dropdown-item"
-                                                            href="{{ route('cureted-section-2023', ['slug' => 'closing-film']) }}">Closing
-                                                            Film</a></li>
-                                                    <li><a class="dropdown-item"
-                                                            href="{{ route('cureted-section-2023', ['slug' => 'international-jury-films']) }}">International
-                                                            Jury Films</a></li>
-                                                    <li><a class="dropdown-item"
-                                                            href="{{ route('cureted-section-2023', ['slug' => 'special-presentations']) }}">Special
-                                                            Presentations</a></li> --}}
                                                 </ul>
-                                                {{-- <ul class="dropdown-menu">
-                                                    <li><a class="dropdown-item"
-                                                            href="{{ route('international-competition') }}">International
-                                                            Competition</a>
-                                                    </li>
-                                                    <li><a class="dropdown-item"
-                                                            href="{{ route('award-for-best-debute') }}">Award
-                                                            For The
-                                                            Best
-                                                            Debut</a></li>
-
-                                                    <li><a class="dropdown-item"
-                                                            href="{{ route('icft-unesco-medal') }}">ICFT-UNESCO
-                                                            Gandhi
-                                                            Medal
-                                                            2023</a></li>
-                                                    <li><a class="dropdown-item"
-                                                            href="{{ route('festival-kaleloscope') }}">Festival
-                                                            Kaleloscope</a></li>
-                                                    <li><a class="dropdown-item"
-                                                            href="{{ route('docu-montage') }}">Docu -
-                                                            Montage</a>
-                                                    </li>
-                                                    <li><a class="dropdown-item"
-                                                            href="{{ route('integrade') }}">Intergrade</a>
-                                                    </li>
-                                                    <li><a class="dropdown-item"
-                                                            href="{{ route('animation') }}">Animation</a>
-                                                    </li>
-                                                    <li><a class="dropdown-item"
-                                                            href="{{ route('macabre-dreams') }}">Macabre
-                                                            Dreams</a>
-                                                    </li>
-                                                    <li><a class="dropdown-item"
-                                                            href="{{ route('cinema-world') }}">Cinema Of The
-                                                            World</a>
-                                                    </li>
-                                                    <li><a class="dropdown-item"
-                                                            href="{{ route('restored-classic') }}">Restored
-                                                            Classics</a>
-                                                    </li>
-                                                    <li><a class="dropdown-item" href="{{ route('uniceff') }}">UNICEF
-                                                            X
-                                                            IFFI</a>
-                                                    </li>
-                                                </ul> --}}
                                             </li>
                                         </ul>
                                     </li>
+
                                     <!-- Indian Debut Director Award menu Start-->
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" role="button"
@@ -434,6 +359,32 @@
                                                                     Bharti Films</a>
                                                             </li>
                                                         </ul>
+                                                        {{-- <ul class="dropdown-menu">
+                                                            <li><a class="dropdown-item"
+                                                                    href="{{ route('cureted-section-2024', ['slug' => 'panorama-feature-jury-recommends']) }}">Panorama
+                                                                    Feature Jury Recommends</a>
+                                                            </li>
+                                                            <li><a class="dropdown-item"
+                                                                    href="{{ route('cureted-section-2024', ['slug' => 'special-showcase']) }}">Special
+                                                                    Showcase</a>
+                                                            </li>
+                                                            <li><a class="dropdown-item"
+                                                                    href="{{ route('cureted-section-2024', ['slug' => 'nfdc-showcase-premieres']) }}">NFDC
+                                                                    Showcase & Premieres</a>
+                                                            </li>
+                                                            <li><a class="dropdown-item"
+                                                                    href="{{ route('cureted-section-2024', ['slug' => 'nfai-classics']) }}">NFAI
+                                                                    Classics</a>
+                                                            </li>
+                                                            <li><a class="dropdown-item"
+                                                                    href="{{ route('cureted-section-2024', ['slug' => 'prasar-bharti-ott']) }}">Prasar
+                                                                    Bharti OTT</a>
+                                                            </li>
+                                                            <li><a class="dropdown-item"
+                                                                    href="{{ route('cureted-section-2024', ['slug' => 'prasar-bharti-films']) }}">Prasar
+                                                                    Bharti Films</a>
+                                                            </li>
+                                                        </ul> --}}
                                                     </li>
 
                                                 </ul>
@@ -446,10 +397,10 @@
                                                 </a>
                                                 <ul class="dropdown-menu">
                                                     <li><a class="dropdown-item"
-                                                            href="{{ route('official-selection-feature') }}">Feature</a>
+                                                            href="{{ route('official-selection-feature', ['year' => 2023]) }}">Feature</a>
                                                     </li>
                                                     <li><a class="dropdown-item"
-                                                            href="{{ route('official-selection-non-feature') }}">Non-Feature</a>
+                                                            href="{{ route('official-selection-non-feature', ['year' => 2023]) }}">Non-Feature</a>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -461,7 +412,7 @@
                                                 </a>
                                                 <ul class="dropdown-menu">
                                                     <li><a class="dropdown-item"
-                                                            href="{{ route('accessible-film') }}">Accessible
+                                                            href="{{ route('accessible-film', ['slug' => 'accessible-india-accessible-films', 'year' => 2023]) }}">Accessible
                                                             India-Accessible Films</a>
                                                     </li>
                                                     <li><a class="dropdown-item"

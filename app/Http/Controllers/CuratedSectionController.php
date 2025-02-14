@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\CuratedSection;
 use App\Models\InternationalCinema;
+use App\Http\Traits\UICLASSTrait;
+use App\Models\CuratedSection;
 use Illuminate\Http\Request;
 
 class CuratedSectionController extends Controller
 {
+    use UICLASSTrait;
+
     public function curetedsection2024(Request $request, $slug)
     {
         $curatedSections        =   CuratedSection::all()->keyBy('id');
@@ -37,7 +40,7 @@ class CuratedSectionController extends Controller
                 $cinema->curated_section_title = $cinema->curatedSection->title ?? null;
                 return $cinema;
             });
-
-        return view('international-cinema.2023.curated-section-2023', compact('internationalCinemas', 'curatedSections', 'curatedSectionId'));
+        $cssClass = $this->headerClass($curatedSectionId);
+        return view('international-cinema.2023.curated-section-2023', compact('internationalCinemas', 'curatedSections', 'curatedSectionId', 'cssClass'));
     }
 }

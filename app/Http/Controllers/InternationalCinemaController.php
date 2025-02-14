@@ -6,27 +6,6 @@ use DB;
 
 class InternationalCinemaController extends Controller
 {
-    public function internationalCompetition()
-    {
-        $internationalCinemas = DB::table('international_cinema')
-            ->join(
-                'curated_sections',
-                'international_cinema.curated_section_id',
-                '=',
-                'curated_sections.id',
-            )
-            ->where('international_cinema.curated_section_id', '=', '1')
-            ->select(
-                'international_cinema.*',
-                'curated_sections.title AS curated_section_title',
-            )
-            ->limit(8)
-            ->get();
-        return view('international-cinema.international-competition', [
-            'internationalCinemas' => $internationalCinemas,
-        ]);
-    }
-
     public function internationalCompetition2024()
     {
         $internationalCinemas = DB::table('international_cinema')
@@ -53,6 +32,27 @@ class InternationalCinemaController extends Controller
 
         // dd($internationalCinemas);
         return view('international-cinema.2024.international-competition', [
+            'internationalCinemas' => $internationalCinemas,
+        ]);
+    }
+
+    public function internationalCompetition()
+    {
+        $internationalCinemas = DB::table('international_cinema')
+            ->join(
+                'curated_sections',
+                'international_cinema.curated_section_id',
+                '=',
+                'curated_sections.id',
+            )
+            ->where('international_cinema.curated_section_id', '=', '1')
+            ->select(
+                'international_cinema.*',
+                'curated_sections.title AS curated_section_title',
+            )
+            ->limit(8)
+            ->get();
+        return view('international-cinema.international-competition', [
             'internationalCinemas' => $internationalCinemas,
         ]);
     }

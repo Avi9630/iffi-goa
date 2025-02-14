@@ -14,7 +14,7 @@
     <!-- Menu slide end -->
 
     <!-- Inner Page Banner Section -->
-    <div class="container-fluid page-header bannerBg-InternationalCompetition py-5">
+    <div class="container-fluid page-header bannerBg-{{ $cssClass }} py-5">
         <div class="container text-center ">
             <h1>{{ $curatedSections[$curatedSectionId]->title ?? 'Title not found' }} - 2023</h1>
 
