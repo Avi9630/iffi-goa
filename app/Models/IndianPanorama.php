@@ -10,4 +10,9 @@ class IndianPanorama extends Model
     use HasFactory;
     protected $table = 'indian_panorama_cinema';
     protected $guarded = [];
+
+    public function officialSelection()
+    {
+        return $this->belongsTo(OfficialSelection::class, 'official_selection_id');
+    }
 }

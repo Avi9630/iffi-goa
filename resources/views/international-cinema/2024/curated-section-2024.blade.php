@@ -16,7 +16,7 @@
     <!-- Inner Page Banner Section -->
     <div class="container-fluid page-header bannerBg-International-competition py-5">
         <div class="container text-center ">
-            <h1>{{ $curatedSections[$curatedSectionId] ?? 'Title not found' }} - 2024</h1>
+            <h1>{{ $curatedSections[$curatedSectionId]->title ?? 'Title not found' }} - 2024</h1>
 
         </div>
     </div>
