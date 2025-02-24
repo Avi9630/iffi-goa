@@ -109,7 +109,7 @@ Route::get('indian-panorama/indian-panorama-rules-regulations', function () {
     return view('indian-panorama.rules-regulations');
 })->name('indian-panorama-rules-regulations');
 
-Route::get('indian-panorama/about-IP', function () {
+Route::get('indian-panorama/about-ip', function () {
     return view('indian-panorama.about-indian-panorama');
 })->name('about-indian-panorama');
 

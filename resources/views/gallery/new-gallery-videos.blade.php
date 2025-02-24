@@ -132,7 +132,7 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th scope="col">S. N.</th>
+                                <th scope="col">S.No.</th>
                                 <th scope="col">Description</th>
                                 <th scope="col">Video Link</th>
                             </tr>
