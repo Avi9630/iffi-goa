@@ -16,7 +16,7 @@
     <!-- Inner Page Banner Section -->
     <div class="container-fluid page-header bannerBg-rules py-5">
         <div class="container text-center ">
-            <h1 class="page-title-header">56th International Cinema Rules & Regulations</h1>
+            <h1 class="page-title-header">International Cinema - Rules & Regulations</h1>
         </div>
     </div>
     <!-- Inner Page Banner Section -->
@@ -25,24 +25,23 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="rules-text">
+
                         <h5>FIAPF Accredited Competitive, Feature Film Festival (20th- 28th November, 2025)</h5>
-                        <p>Since 1952, India has hosted 55 International Film Festival of India (IFFI) both competitive and
-                            non-competitive. The festival became an annual event from 1975 onwards. The 56th edition of the
-                            festival which includes a competition for feature films by Directors from all Continents will be
-                            held in Goa.</p>
+
+                        <p>Since 1952, India has hosted 55 editions of the International Film Festival of India (IFFI) both
+                            competitive and non-competitive. The festival became an annual event from 1975 onwards. The 56th
+                            edition of the festival which includes a competition for feature films from all continents
+                            will be held in Goa.</p>
                         <hr>
                         <h5>Festival Regulations</h5>
-                        <p>The Festival is being organized by The National Film Development Corporation of India Ltd (NFDC),
+                        <p>The Festival is being organized by the National Film Development Corporation of India Ltd (NFDC),
                             Ministry of Information and Broadcasting, Government of India in collaboration with the State
                             Government of Goa and the Indian Film Industry. The Festival is recognized by the International
-                            Federation of Film Producers Associations (FIAPF). 56th IFFI will have theatrical screenings of
-                            selected films at different festival screens in Goa. It may also screen films on its official
-                            digital platform during the festival in Goa, subject to the prevailing conditions.</p>
+                            Federation of Film Producers' Associations (FIAPF). 56th IFFI will screen selected films at
+                            dedicated festival venues in Goa.</p>
                         <hr>
                         <h5>1. Objectives :</h5>
-                        <p> <strong>Vasudhaiva Kutumbakam</strong>(The Whole World is One Family) <strong>
-                                Celebrating the Joy of Cinema</strong>
-                        </p>
+                        <p>Celebrating the Joy of Cinema</p>
                         <p>The Festival aims at providing a common platform for film-makers of the world to project their
                             excellence in film art; contributing to the understanding and appreciation of film cultures of
                             different nations in the context of their social and cultural ethos; and promoting friendship
@@ -63,48 +62,34 @@
                             i) International Competition for Feature Films (up to 15 numbers. Up to three Indian Films will
                             be selected for this section. Fiction Films with a minimum duration of 72 minutes and above).
                         </p>
-                        {{-- <p>
-                            ii) Non-Competition (World Panorama) - for feature films from around the world (Films with a
-                            minimum
-                            duration of 70 minutes and above).</p> --}}
+
                         <p>
                             ii)Non-Competition (Cinema of the World) - for feature films from around the world including
                             fiction and documentaries (Films with a minimum duration of 72 minutes and above).</p>
-                        {{-- <p>
-                            iii) Country Focus & other specially curated packages (Indian & Foreign) and Special
-                            Screenings/Gala
-                            Premieres.</p> --}}
+
                         <p>
                             iii) Curated packages(Indian&Foreign) and Special Screenings/Gala Premieres/Country
                             Focus/Tribute/Animation/UNICEF etc.</p>
-                        <p>
-                            iv) Indian Panorama - for Indian feature films, Indian Panorama Regulations 2023 will be
+                        <p> iv) Indian Panorama - for Indian feature films, Indian Panorama Regulations 2025 will be
                             applicable.
                         </p>
-                        {{-- <p>
-                            v) Technical Workshops/Masterclasses/other Interactive & Academic Sessions/Panel
-                            Discussions/Talent
-                            Hub etc. both virtual and physical.</p> --}}
+
                         <p>
                             v) Masterclasses, In Conversation Sessions, Workshops and Talent Hub etc. physical and/or
                             virtual in-person.
                         </p>
+
                         <p>
                             vi) IFFI Mela (Cine-Fair): Public engagement activitiesincluding cultural programmes and
                             interactive exhibitions themed around films.
                         </p>
+
                         <p>
                             vii) Film Bazaar: IFFI also hosts the Film Bazaar, South Asia's largest and One of Asia's most
                             prolific Film Markets showcasing rich content to potential buyers from different countries
                             across the world. 19th edition of Film Bazaar will take place from 20th 24th November 2025.
                         </p>
-                        {{-- <p>
-                            viii) National Film Development Corporation Ltd (NFDC) reserves the right to exclude films that
-                            are
-                            not in conformity with the philosophy and objective of the festival, which could offend the
-                            feelings/susceptibilities of any participating country, or are likely to promote discrimination
-                            of
-                            any kind.</p> --}}
+
                         <p>
                             viii) <b>SATYAJIT RAY EXCELLENCE IN CINEMA AWARD :</b> This prestigious award, instituted in the
                             name of
@@ -112,7 +97,9 @@
                             shawl, Medal (Silver Peacock) and a scroll, is conferred upon a master filmmaker/film
                             technicians/film personalities for their outstanding contribution to cinema. The festival
                             annually invites a film maker/ film technicians/ film personalities of repute for this award.
-                            The Award was given to Mr. Phillip Noyce in IFFI 2024 and Mr. Michael Douglas in IFFI 2023. </p>
+                            The Award was given to Mr. Phillip Noyce in IFFI 2024 and Mr. Michael Douglas in IFFI 2023.
+                        </p>
+
                         <p>
                             ix) <b>INDIAN FILM PERSONALITY OF THE YEAR AWARD : </b> This
                             prestigious
@@ -123,19 +110,22 @@
                             x) National Film Development Corporation Ltd reserves the right to exclude films that are not
                             in conformity with the philosophy and objective of the festival, or which could offend the
                             feelings/susceptibilities of any participating country, or are likely to promote discrimination
-                            of any kind. </p>
-                        <hr>
+                            of any kind.
+                        </p>
 
+                        <hr>
                         <h5>4. International Competition</h5>
 
                         <p>Films entered in the International Competition MUST fulfil the following conditions:</p>
                         <P>a) Films must be fiction, feature-length films should not be not less than 72 minutes in duration
-                            and in original language sound-track with English Subtitles.</P>
+                            and in original language sound-track with English Subtitles.
+                        </P>
                         <p>b) They must have been completed between 1st September 2024 and 31st August 2025.
                             Eligibility will be determined by the declaration made by the entrant in the film entry form.
                             For International films, where no proof is available,
                             the date of the first theatrical screening will be considered as
-                            completion date/self-declaration by the applicant.</p>
+                            completion date/self-declaration by the applicant.
+                        </p>
                         <p>c) Except for Indian films, the entries in this section should not have been released/ shown on
                             virtual/ OTT platforms/ physically in India or presented in any other Indian Film Festivals
                             before.
@@ -228,16 +218,6 @@
                             World” or other curated sections of the Festival. However, consent of the entrant shall be
                             sought before selection and inclusion in the festival programme.
                         </p>
-
-                        {{-- <p>c) First feature film of a director selected under Indian Panorama is also eligible for this
-                            Award.
-                            Indian film entry for the Award for the Best Debut Feature Film of a Director will be identified
-                            by
-                            the Indian Panorama Jury from the selected films for Indian Panorama 2023. A maximum of two such
-                            films can be recommended by the Indian Panorama Jury at the time of the final selection of
-                            Indian
-                            Panorama Films for IFFI 2023.</p> --}}
-
                         <p>c) Films entered for Award for the Best Debut Feature Film of a Director MUST fulfil the
                             following conditions :-</p>
 
@@ -253,40 +233,12 @@
                             completion date.</p>
 
                         <p>iii) Except for Indian films, the entries in this section should not have been released/ shown in
-                            India or presented in any other Indian Film Festivals before.</p>
-                        {{-- <p>iv) In the case of co-productions, the entrants must comply with article 15.3 of the Festival’s
-                            regulations and therefore have the right to sanction participation of the film for this award
-                            and
-                            also sanction the authority to receive awards, if the film wins any.</p> --}}
+                            India or presented in any other Indian Film Festivals before.
+                        </p>
+
                         <p>iv) Entrants must agree that if their film/films win the Award, all screenings thereafter will
                             acknowledge the Award on the film itself.</p>
-                        {{-- <p>v) If shortlisted for competing for this award, the entrant(s) - must provide a DCP (Non-
-                            encrypted,
-                            DCI Compliant-J2K Intrope or SMPTE in 24 fps) with EST for festival screenings - must agree that
-                            in
-                            case of winning an award, they will provide the festival with a region free PAL DVD/Blu-ray copy
-                            of
-                            the film for archival purposes.</p>
-                        <p>vi) The winner of the award will be recommended by the International Jury of IFFI 2023 to the
-                            Ministry of Information and Broadcasting, Government of India.</p>
 
-                        <p><strong><span style="font-size:18px">(VII) Satyajit Ray Lifetime Achievement Award for Excellence
-                                    in
-                                    Cinema</span></strong></p>
-                        <p>This prestigious award, instituted in the name of the legendry filmmaker the Satyajit Ray,
-                            consisting
-                            of a cash prize of Rs. 10,00,000/-, certificate, shawl, Medal (Silver Peacock) and a scroll, is
-                            conferred upon a master film-maker/film technician/film personalities for his/her outstanding
-                            contribution to cinema. The festival every year invites a film maker/ film technician/ film
-                            personalities of repute for this award.</p>
-                        <p><strong><span style="font-size:18px">(VIII) Indian Film Personality of the Year
-                                    Award</span></strong>
-                        </p>
-                        <p>This prestigious award consisting of a cash prize of Rs. 10,00,000/-, certificate, shawl and
-                            Medal
-                            (Silver Peacock) is conferred upon an Indian film personality for his/her outstanding
-                            contribution
-                            to Indian Cinema.</p> --}}
                         <p><strong><span style="font-size:18px">(VII) ICFT UNESCO – Gandhi Medal Award</span></strong></p>
 
                         <p>IFFI 2025 in collaboration with the International Council for Film, Television and Audiovisual
@@ -322,22 +274,7 @@
                             cancel the cash component in case of the awardee(s) is unable present either herself/himself, or
                             nominate a family member, orthe film’s Producer or Director at the award ceremony on the closing
                             night.</p>
-                        {{-- <p>IFFI Preview Committee shall recommend upto 7 films for this award’s competition from the entries
-                            received in the International Cinema section. While up to 3 Indian films for this Award’s
-                            competition will be shortlisted by Indian Panorama Jury from the entries in the Indian Panorama
-                            Section.</p>
-                        <p>The Gandhi Medal Award Jury members nominated by ICFT UNESCO shall recommend this award from the
-                            films entered in this competition. The Award consists of a Certificate and a medal given by ICFT
-                            UNESCO.</p>
-                        <p>Recipients are to agree that the concerned professional will receive the award in person, if the
-                            film/he/she wins any award. National Film Development Corporation Ltd reserves the right to
-                            cancel
-                            the cash component in case of the awardees not being able to present him/her at the award
-                            ceremony
-                            on the closing night. For any reason the awardee is not able to personally attend, he or she
-                            should
-                            immediately in writing, nominate an immediate family member or from the film-its Producer or
-                            Director.</p> --}}
+
                         <hr>
                         <h5>5. Non- Competition (Cinema of the World & Curated Packages)</h5>
 
@@ -375,10 +312,10 @@
                         <p>In case physical screeners are sent, they should reach us at National Film Development
                             Corporation Ltd, New Delhi office before the above mentioned date. Please inscribe 'No
                             commercial value for Cultural purposes only' on the parcel. The Festival will not bear the cost
-                            of transportation of preview material.</p>
+                            of transportation of preview material.
+                        </p>
 
                         <hr>
-
                         <h5>8. Entering films in the festival</h5>
 
                         <p>Film producers, distributors, or their duly authorized representatives or duly authorized
@@ -400,11 +337,7 @@
                         <p>c) National Film Development Corporation Ltd may also invite films which it considers of
                             interest.
                         </p>
-                        {{-- <p>d) The Form, duly filled in, separately for each film proposed to be entered, should reach the
-                            National Film Development Corporation Ltd by August 31st, 2023 through the online entry route at
-                            www.iffigoa.org. In case of the day being a holiday, the next working day will be considered as
-                            the
-                            deadline.</p> --}}
+
                         <hr>
                         <h5>9. Final Screening Materials</h5>
                         <p> a)
@@ -532,18 +465,7 @@
                                 href="tel:+ 91112649356">+91-11-2649356</a>
                         </p>
                         <p>E-Mail: <a href="mailto:programming@nfdcindia.com">programming@nfdcindia.com</a></p>
-                        {{-- <p>All correspondence, publicity materials, DCP, DVDs and film print of the selected films should be
-                            addressed to:</p>
-                        <p>Managing Director</p>
-                        <p>International Film Festival of India</p>
-                        <p>National Film Development Corporation Ltd</p>
-                        <p>Siri Fort Auditorium Complex</p>
-                        <p>August Kranti Marg, Khel Gaon</p>
-                        <p>New Delhi 110 049, India.</p>
-                        <p>Tel: <a href="tel:+ 91112649352">+91-11-2649352</a> | <a
-                                href="tel:+ 91112649356">+91-11-2649356</a>
-                        </p>
-                        <p>E-Mail: <a href="mailto:programming@nfdcindia.com">programming@nfdcindia.com</a></p> --}}
+
                         <p>
                             WEBSITES: (online application)<br>
                             <a href="http://www.iffigoa.org">http://www.iffigoa.org</a><br>
