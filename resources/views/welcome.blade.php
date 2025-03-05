@@ -16,9 +16,9 @@
     @include('pages.video-section')
 
     <!-- Ticker Content-->
-    {{-- @include('pages.ticker', [
+    @include('pages.ticker', [
         'tickers' => app(\App\Http\Controllers\TickerController::class)->getAllTicker(),
-    ]) --}}
+    ])
 
     <!-- About IFFI Section-->
     @include('pages.about-iffi')
