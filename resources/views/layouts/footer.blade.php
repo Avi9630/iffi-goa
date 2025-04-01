@@ -15,39 +15,40 @@
             </div>
             <div class="row mt-4 phone-text">
                 <div class="col-md-3 col-sm-3">
-                    <h4>Indian Panorama</h4>
-                    <ul class="text-highlight">
+                    {{-- <h4>Indian Panorama</h4> --}}
+                    {{-- <ul class="text-highlight">
                         <li><a href="https://iffigoa.org/festival/indian-paranoma" class="cus-menuP-link"
                                 target="_blank">View your entry</a></li>
-                    </ul>
+                    </ul> --}}
                 </div>
                 <div class="col-md-3 col-sm-3">
-                    <h4>Web Series</h4>
-                    <ul class="text-highlight">
+                    {{-- <h4>Web Series</h4> --}}
+                    {{-- <ul class="text-highlight">
                         <li><a href="https://iffigoa.org/festival/web-series" target="_blank">View your entry</a></li>
-                    </ul>
+                    </ul> --}}
                 </div>
                 <div class="col-md-3 col-sm-3">
-                    <h4>Indian Debut Director Award</h4>
-                    <ul class="text-highlight">
+                    {{-- <h4>Indian Debut Director Award</h4> --}}
+                    {{-- <ul class="text-highlight">
                         <li><a href="https://iffigoa.org/festival/indian-debut-director" class="cus-menuP-link"
                                 target="_blank">View your entry</a></li>
-                    </ul>
+                    </ul> --}}
                 </div>
 
                 <div class="col-md-3 col-sm-3">
-                    <h4>Creative Minds Of Tomorrow (CMOT)</h4>
-                    <ul class="text-highlight">
+                    {{-- <h4>Creative Minds Of Tomorrow (CMOT)</h4> --}}
+                    {{-- <ul class="text-highlight">
                         <li>
                             <a href="https://iffigoa.org/festival/creative-mind-tomorrow" class="cus-menuP-link"
                                 target="_blank">View your entry</a>
                         </li>
-                    </ul>
+                    </ul> --}}
                 </div>
             </div>
         </div>
     </div>
     </div>
+
     <div class="row ">
         <div class=" text-center quick-link">
             <ul class="phone-text">
@@ -79,6 +80,7 @@
             </ul>
         </div>
     </div>
+
     <div class="f-foot row">
         <div class="social-bar">
             <a href="https://www.facebook.com/IFFIGoa/" target="_blank">
@@ -92,7 +94,12 @@
             </a>
         </div>
         <div class="d-flex flex-column text-center justify-content-center f-foot-copyright">
-            <p class="mb-0">Copyright © 2024 IFFI All Rights Reserved.</p>
+            <p class="mb-0">Copyright ©
+                <script>
+                    document.write(new Date().getFullYear())
+                </script>
+                IFFI All Rights Reserved.
+            </p>
         </div>
     </div>
 </footer>
@@ -266,6 +273,7 @@
       </script>
 
 
-{{-- Newly added  end --}} < /body>
+{{-- Newly added  end --}}
+</body>
 
-    < /html>
+</html>
