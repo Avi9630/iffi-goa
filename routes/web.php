@@ -6,9 +6,14 @@ use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\CommonController;
 use App\Http\Controllers\TickerController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', function (Request $request) {
+    if ($_SERVER['HTTP_HOST'] === 'iffigoa.org') {
+        return view('welcome');
+    } else {
+        return 'We are on maintanance mode. Please wait a while.!!';
+    }
 })->name('/');
 
 Route::controller(CommonController::class)->group(function () {
