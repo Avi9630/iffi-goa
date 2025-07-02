@@ -34,8 +34,11 @@
                             class="img-fluid img-radius">
                     </p>
                     <div class="text-center">
-                        <a href="https://drive.google.com/file/d/15mSIHlkgx-nZP51r7JgJAnlnz8z45mxk/view" target="_blank"
-                            class="btn cus-prim-btn">Details Of Poster</a>
+                        <a href="{{ asset('public/pdfs/iffi-poster-2025.pdf') }}" target="_blank"
+                            class="btn cus-prim-btn">Details
+                            Of Poster</a>
+                        {{-- <a href="https://drive.google.com/file/d/15mSIHlkgx-nZP51r7JgJAnlnz8z45mxk/view" target="_blank"
+                            class="btn cus-prim-btn">Details Of Poster</a> --}}
                     </div>
                 </div>
             </div>
