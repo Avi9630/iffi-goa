@@ -10,7 +10,7 @@
 
     {{-- @include('layouts.timer') --}}
     <!-- Menu Item's -->
-    @include('pages.navigation-slide')
+    @include('pages.navigation-slide') 
 
     <!-- Video Section -->
     @include('pages.video-section')
