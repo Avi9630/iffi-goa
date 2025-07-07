@@ -17,32 +17,60 @@ class GalleryController extends Controller
 
     public function __construct()
     {
-        $this->projectId    =   env('GOOGLE_CLOUD_PROJECT_ID');
-        $this->bucketName   =   env('GOOGLE_CLOUD_STORAGE_BUCKET');
-        $this->keyFilePath  =   storage_path('app/keys/' . env('GOOGLE_APPLICATION_CREDENTIALS'));
-        $this->gcsApi       =   env('GOOGLE_CLOUD_STORAGE_API_URI');
+        $this->projectId = env('GOOGLE_CLOUD_PROJECT_ID');
+        $this->bucketName = env('GOOGLE_CLOUD_STORAGE_BUCKET');
+        $this->keyFilePath = storage_path('app/keys/' . env('GOOGLE_APPLICATION_CREDENTIALS'));
+        $this->gcsApi = env('GOOGLE_CLOUD_STORAGE_API_URI');
     }
 
     public function getById(Request $request, $id)
     {
-        try {
-            $photoById = Photo::select('id', 'category_id', 'img_caption', 'image', 'img_url', 'highlights', 'video_url', 'status', 'year', 'uploaded_date', 'created_at', 'updated_at')
-                ->where(['id' => $id, 'year' => 2024])
-                ->first();
-            // $photoById = Photo::select('*')->where(['id' => $id, 'year' => 2024])->first();
-            if (!empty($photoById)) {
-                $response = [
-                    'message' => 'Photo details fetched !!',
-                    'data' => $photoById,
-                ];
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['file'])) {
+
+            $projectId = 'iffi-goa-429607'; // Replace with your GCP project ID
+            $bucketName = 'iffi-goa-public-bucket-0001'; // Replace with your GCS bucket name
+            $keyFilePath = storage_path('app/keys/service-account.json');
+            // $keyFilePath = __DIR__ . '/service-account.json';
+            // dd($keyFilePath);
+            $fileTmpPath = $_FILES['file']['tmp_name'];
+            $fileName = $_FILES['file']['name'];
+            // dd($fileName);
+            try {
+                // Initialize Guzzle HTTP Client with SSL verification disabled
+                $guzzleClient = new Client([
+                    'verify' => false, // This should disable SSL verification
+                    'curl' => [
+                        CURLOPT_SSL_VERIFYPEER => false,
+                        CURLOPT_SSL_VERIFYHOST => false,
+                        CURLOPT_CAINFO => 'C:\php\extras\ssl\cacert.pem', // Path to cacert.pem file
+                    ],
+                ]);
+                // Initialize Google Cloud Storage Client
+                $storage = new StorageClient([
+                    'projectId' => $projectId,
+                    'keyFilePath' => $keyFilePath,
+                    'httpClient' => $guzzleClient,
+                ]);
+
+                // Get the bucket
+                $bucket = $storage->bucket($bucketName);
+
+                // Upload the file to the GCS bucket
+                $object = $bucket->upload(
+                    fopen($fileTmpPath, 'r'),
+                    ['name' => 'uploads/' . $fileName] // Save inside 'uploads' folder in GCS
+                );
 
                 return $this->response('success', $response);
             } else {
                 $response = [
                     'message' => 'No records found !!',
                 ];
-
-                return $this->response('exception', $response);
+                echo 'File uploaded successfully!<br>';
+                echo "File URL: <a href='$publicUrl' target='_blank'>$publicUrl</a>";
+            } catch (Exception $e) {
+                echo 'Error uploading file: ' . $e->getMessage();
             }
         } catch (\Exception $e) {
             $response = [
@@ -215,9 +243,8 @@ class GalleryController extends Controller
                     'keyFilePath'   =>  $this->keyFilePath,
                     'httpClient'    =>  $guzzleClient,
                 ]);
-
-                $bucket =   $storage->bucket($this->bucketName);
-                $bucket->upload(fopen($tempPath, 'r'), ['name' => 'iffi-2025/' . $originalFilename]);
+                $bucket = $storage->bucket($this->bucketName);
+                $bucket->upload(fopen($tempPath, 'r'), ['name' => 'uploads/' . $originalFilename]);
                 $publicUrl = sprintf($this->gcsApi, $this->bucketName, $originalFilename);
 
                 $data = [

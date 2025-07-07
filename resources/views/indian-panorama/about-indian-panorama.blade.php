@@ -37,24 +37,46 @@
                             was introduced in 1978 as part of the stupendous IFFI umbrella to promote Indian Films along
                             with India's rich culture and heritage with the help of cinematic art. Since its inception, the
                             Indian Panorama has been completely devoted to showcasing the best Indian films of the year.
-                            <br><br> Organized by the National Film Development Corporation, Ministry of Information and
+                            <br><br>
+
+                            Organized by the National Film Development Corporation, Ministry of Information and
                             Broadcasting, the primary aim of the Indian Panorama is to select the feature and non-feature
                             films of cinematic, thematic and aesthetic excellence for the promotion of film art through the
-                            non-profit screening of these films under different categories such as:
-                            <br><br> (1) International Film Festivals in India and abroad.
-                            <br> (2) Indian Film Weeks held under Bilateral Cultural Exchange Programmes and
-                            Specialized Indian Film Festivals outside cultural exchange protocols.
-                            <br>(3) Special Indian Panorama Festivals in India.
+                            non-profit screening of these films under different categories such as:-
+                        <ul>
+                            <li>(1) International Film Festivals in India and abroad.</li>
+                            <li>(2) Indian Film Weeks held under Bilateral Cultural Exchange Programmes and</li>
+                            <li>(3) Special Indian Panorama Festivals in India.</li>
+                        </ul>
 
-                            <br><br> The Indian Panorama has the following sections:- <br>
-                            <br> a) Feature Films- A maximum of 26 Feature films, including the Best Feature Film of the
-                            National Film Awards of the respective year, distinguished by cinematic, thematic
-                            and aesthetic excellence, are selected in accordance with the conditions and
-                            procedure in the said regulations of Indian Panorama.
-                            <br> b) Non-Feature Films- A maximum of 21 Non-Feature films, including the best Non-
-                            Feature Film of the National Film Awards of the respective year, distinguished by
-                            cinematic, thematic and aesthetic excellence, are selected in accordance with the
-                            conditions and procedure in the said regulations of Indian Panorama.
+                        <p>The Indian Panorama has the following sections:-</p>
+
+                        <p>a) <b>Feature Films</b> - A maximum of 26 Feature films, including the Best Feature Film of the National
+                            Film Awards of the respective year, distinguished by cinematic, thematic and aesthetic
+                            excellence,
+                            are selected by the conditions and procedure in the said regulations of Indian Panorama.
+
+                        <p>
+                            b) <b>Non-Feature Films</b> - A maximum of 21 Non-Feature films, including the best Non-Feature Film of
+                            the
+                            National Film Awards of the respective year, distinguished by cinematic, thematic and aesthetic
+                            excellence, are selected by the conditions and procedure in the said regulations of Indian
+                            Panorama.
+                        </p>
+                        <p> c) <b>Best Debut Director of Indian Feature Film</b> - 5 Debut feature films, showcase a diverse range
+                            of
+                            narratives and cinematic styles of young filmmakers from across the country, selected by the
+                            jury to
+                            promote new and young talent. Out of 5, the best film will be awarded the Best Debut Director of
+                            an
+                            Indian Feature Film Award, accompanied by a trophy and a cash prize of Rs. 5,00,000/-.
+                        </p>
+                        <p> d) <b>New Horizons (Feature Films)</b> – Those feature films from the above selections (a), (b) and (c)
+                            that are screening for the first time anywhere, either in the world or at least in India, i.e.
+                            World, International, Asia or India Premieres. Besides feature films recommended by the IP Jury,
+                            this subsection may also include up to 5 feature films curated specially for this subsection by
+                            the
+                            festival outside the scope of Indian Panorama.
                         </p>
                         <p>
                         <div class="col-12 text-center">
