@@ -2,15 +2,14 @@
 
 namespace App\Http\Controllers\api;
 
+use Illuminate\Support\Facades\Validator;
+use Google\Cloud\Storage\StorageClient;
 use App\Http\Controllers\Controller;
 use App\Http\Traits\RESPONSETrait;
-use App\Models\Photo;
 use App\Models\PhotoCategory;
-use Google\Cloud\Storage\StorageClient;
-use GuzzleHttp\Client;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\Validator;
+use GuzzleHttp\Client;
+use App\Models\Photo;
 
 class GalleryController extends Controller
 {
@@ -24,8 +23,9 @@ class GalleryController extends Controller
         $this->gcsApi = env('GOOGLE_CLOUD_STORAGE_API_URI');
     }
 
-    public function uploadGallery(Request $request)
+    public function getById(Request $request, $id)
     {
+
         if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['file'])) {
 
             $projectId = 'iffi-goa-429607'; // Replace with your GCP project ID
@@ -62,16 +62,22 @@ class GalleryController extends Controller
                     ['name' => 'uploads/' . $fileName] // Save inside 'uploads' folder in GCS
                 );
 
-                // Get the public URL (optional)
-                $publicUrl = sprintf('https://storage.googleapis.com/%s/uploads/%s', $bucketName, $fileName);
-
+                return $this->response('success', $response);
+            } else {
+                $response = [
+                    'message' => 'No records found !!',
+                ];
                 echo 'File uploaded successfully!<br>';
                 echo "File URL: <a href='$publicUrl' target='_blank'>$publicUrl</a>";
             } catch (Exception $e) {
                 echo 'Error uploading file: ' . $e->getMessage();
             }
-        } else {
-            echo 'No file uploaded.';
+        } catch (\Exception $e) {
+            $response = [
+                'message' => $e->getMessage(),
+            ];
+
+            return $this->response('exception', $response);
         }
     }
 
@@ -79,7 +85,7 @@ class GalleryController extends Controller
     {
         try {
             $categories = PhotoCategory::select('id', 'category')->get();
-            if (! empty($categories)) {
+            if (!empty($categories)) {
                 $response = [
                     'message' => 'Category fetched !!',
                     'data' => $categories,
@@ -105,8 +111,11 @@ class GalleryController extends Controller
     public function allPhoto()
     {
         try {
-            $allPhotos = Photo::select('id', 'category_id', 'img_caption', 'image', 'img_url', 'video_url', 'status', 'year', 'uploaded_date', 'created_at', 'updated_at', 'title', 'highlights', 'ceremony')->where(['year' => 2024])->orderBy('id', 'DESC')->get();
-            if (! empty($allPhotos)) {
+            $allPhotos = Photo::select('id', 'category_id', 'img_caption', 'image', 'img_url', 'video_url', 'status', 'year', 'uploaded_date', 'created_at', 'updated_at', 'title', 'highlights', 'ceremony')
+                ->where(['year' => 2024])
+                ->orderBy('id', 'DESC')
+                ->get();
+            if (!empty($allPhotos)) {
                 $response = [
                     'message' => 'All photos fetched !!',
                     'data' => $allPhotos,
@@ -129,31 +138,53 @@ class GalleryController extends Controller
         }
     }
 
-    public function getById(Request $request, $id)
+    public function uploadGallery(Request $request)
     {
-        try {
-            $photoById = Photo::select('id', 'category_id', 'img_caption', 'image', 'img_url', 'highlights', 'video_url', 'status', 'year', 'uploaded_date', 'created_at', 'updated_at')->where(['id' => $id, 'year' => 2024])->first();
-            // $photoById = Photo::select('*')->where(['id' => $id, 'year' => 2024])->first();
-            if (! empty($photoById)) {
-                $response = [
-                    'message' => 'Photo details fetched !!',
-                    'data' => $photoById,
-                ];
+        if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['file'])) {
+            $projectId = 'iffi-goa-429607'; // Replace with your GCP project ID
+            $bucketName = 'iffi-goa-public-bucket-0001'; // Replace with your GCS bucket name
+            $keyFilePath = storage_path('app/keys/service-account.json');
+            // $keyFilePath = __DIR__ . '/service-account.json';
+            // dd($keyFilePath);
+            $fileTmpPath = $_FILES['file']['tmp_name'];
+            $fileName = $_FILES['file']['name'];
+            // dd($fileName);
+            try {
+                // Initialize Guzzle HTTP Client with SSL verification disabled
+                $guzzleClient = new Client([
+                    'verify' => false, // This should disable SSL verification
+                    'curl' => [
+                        CURLOPT_SSL_VERIFYPEER => false,
+                        CURLOPT_SSL_VERIFYHOST => false,
+                        CURLOPT_CAINFO => 'C:\php\extras\ssl\cacert.pem', // Path to cacert.pem file
+                    ],
+                ]);
+                // Initialize Google Cloud Storage Client
+                $storage = new StorageClient([
+                    'projectId' => $projectId,
+                    'keyFilePath' => $keyFilePath,
+                    'httpClient' => $guzzleClient,
+                ]);
 
-                return $this->response('success', $response);
-            } else {
-                $response = [
-                    'message' => 'No records found !!',
-                ];
+                // Get the bucket
+                $bucket = $storage->bucket($bucketName);
 
-                return $this->response('exception', $response);
+                // Upload the file to the GCS bucket
+                $object = $bucket->upload(
+                    fopen($fileTmpPath, 'r'),
+                    ['name' => 'uploads/' . $fileName], // Save inside 'uploads' folder in GCS
+                );
+
+                // Get the public URL (optional)
+                $publicUrl = sprintf('https://storage.googleapis.com/%s/uploads/%s', $bucketName, $fileName);
+
+                echo 'File uploaded successfully!<br>';
+                echo "File URL: <a href='$publicUrl' target='_blank'>$publicUrl</a>";
+            } catch (Exception $e) {
+                echo 'Error uploading file: ' . $e->getMessage();
             }
-        } catch (\Exception $e) {
-            $response = [
-                'message' => $e->getMessage(),
-            ];
-
-            return $this->response('exception', $response);
+        } else {
+            echo 'No file uploaded.';
         }
     }
 
@@ -161,37 +192,42 @@ class GalleryController extends Controller
     {
         $payload = $request->all();
         $validatorArray = [
-            'category_id' => 'required_without:video_url|nullable',
-            'img_caption' => 'required',
-            'video_url' => 'required_without:image|url',
-            'image' => 'required_without:video_url|file|mimes:jpg,jpeg,png|max:100048',
+            'category_id'   =>  'required_without:video_url|nullable',
+            'img_caption'   =>  'required',
+            'video_url'     =>  'required_without:image|url',
+            'image'         =>  'required_without:video_url|file|mimes:jpg,jpeg,png|max:100048',
         ];
+
         $messagesArray = [
-            'img_caption.required' => 'Camption is required !!',
-            'category_id.required_without' => 'Category is required, when video url is not present !!',
+            'img_caption.required'          =>  'Camption is required !!',
+            'category_id.required_without'  =>  'Category is required, when video url is not present !!',
         ];
+
         $validator = Validator::make($payload, $validatorArray, $messagesArray);
+
         if ($validator->fails()) {
             $output = [
                 'message' => $validator->errors()->first(),
             ];
-
             return $this->response('validatorerrors', $output);
         }
 
-        $uploaded_date = isset($payload['uploaded_date']) ? $payload['uploaded_date'] : date('Y-m-d');
-        if ($uploaded_date) {
-            $date = new \DateTime($uploaded_date);
-            $uploaded_date = $date->format('Y-m-d');
-        } else {
-            $uploaded_date = date('Y-m-d');
-        }
-
         try {
+            $uploaded_date = isset($payload['uploaded_date']) ? $payload['uploaded_date'] : date('Y-m-d');
+
+            if ($uploaded_date) {
+                $date = new \DateTime($uploaded_date);
+                $uploaded_date = $date->format('Y-m-d');
+            } else {
+                $uploaded_date = date('Y-m-d');
+            }
+
             if ($request->hasFile('image')) {
-                $file = $request->file('image');
-                $tempPath = $file->getRealPath();
-                $originalFilename = $file->getClientOriginalName();
+
+                $file               =   $request->file('image');
+                $tempPath           =   $file->getRealPath();
+                $originalFilename   =   $file->getClientOriginalName();
+
                 //This is for GOOGLE CLOUD STORAGE
                 $guzzleClient = new Client([
                     'verify' => false,
@@ -201,32 +237,33 @@ class GalleryController extends Controller
                         CURLOPT_CAINFO => 'C:\php\extras\ssl\cacert.pem',
                     ],
                 ]);
+
                 $storage = new StorageClient([
-                    'projectId' => $this->projectId,
-                    'keyFilePath' => $this->keyFilePath,
-                    'httpClient' => $guzzleClient,
+                    'projectId'     =>  $this->projectId,
+                    'keyFilePath'   =>  $this->keyFilePath,
+                    'httpClient'    =>  $guzzleClient,
                 ]);
                 $bucket = $storage->bucket($this->bucketName);
                 $bucket->upload(fopen($tempPath, 'r'), ['name' => 'uploads/' . $originalFilename]);
                 $publicUrl = sprintf($this->gcsApi, $this->bucketName, $originalFilename);
 
                 $data = [
-                    'category_id' => $payload['category_id'],
-                    'img_caption' => $payload['img_caption'],
-                    'image' => $originalFilename,
-                    'img_url' => $publicUrl,
-                    'uploaded_date' => $uploaded_date,
-                    'highlights' => isset($payload['highlights']) ? $payload['highlights'] : 0,
-                    'year' => 2024,
+                    'category_id'   =>  $payload['category_id'],
+                    'img_caption'   =>  $payload['img_caption'],
+                    'image'         =>  $originalFilename,
+                    'img_url'       =>  $publicUrl,
+                    'uploaded_date' =>  $uploaded_date,
+                    'highlights'    =>  isset($payload['highlights']) ? $payload['highlights'] : 0,
+                    'year'          =>  2025,
                 ];
 
                 $photo = Photo::create($data);
+
                 if ($photo) {
                     $response = [
-                        'message' => 'File uploaded successfully!!',
-                        'data' => $photo->latest()->first(),
+                        'message'   =>  'File uploaded successfully!!',
+                        'data'      =>  $photo->latest()->first(),
                     ];
-
                     return $this->response('success', $response);
                 } else {
                     $response = [
@@ -245,7 +282,9 @@ class GalleryController extends Controller
                     'highlights' => isset($payload['highlights']) ? $payload['highlights'] : 0,
                     'year' => 2024,
                 ];
+
                 $photo = Photo::create($data);
+
                 if ($photo) {
                     $response = [
                         'message' => 'Video uploaded successfully!!',
@@ -300,10 +339,8 @@ class GalleryController extends Controller
         //     $uploaded_date = date('Y-m-d');
         // }
         try {
-
             $photoToUpdate = Photo::where(['year' => 2024])->find($id);
-            if (! empty($photoToUpdate)) {
-
+            if (!empty($photoToUpdate)) {
                 if ($request->hasFile('image')) {
                     $file = $request->file('image');
                     $tempPath = $file->getRealPath();
@@ -391,6 +428,7 @@ class GalleryController extends Controller
 
     public function delete($id)
     {
+
         try {
             $getPhoto = Photo::find($id);
             if ($getPhoto) {
@@ -407,6 +445,33 @@ class GalleryController extends Controller
 
                 return $this->response('exception', $response);
             }
+        } catch (\Exception $e) {
+            $response = [
+                'message' => $e->getMessage(),
+            ];
+
+            return $this->response('exception', $response);
+        }
+    }
+
+    public function bucketDelete(Request $request)
+    {
+        $payload = $request->all();
+
+        try {
+            $storage = new StorageClient([
+                'projectId'     =>  $this->projectId,
+                'keyFilePath'   =>  $this->keyFilePath,
+            ]);
+            $bucket  =   $storage->bucket($this->bucketName);
+            $objects = $bucket->objects(['prefix' => 'iffi-2025/']);
+            foreach ($objects as $object) {
+                $object->delete();
+            }
+            return response()->json([
+                'status' => true,
+                'message' => 'Bucket deleted successfull.!!'
+            ]);
         } catch (\Exception $e) {
             $response = [
                 'message' => $e->getMessage(),
