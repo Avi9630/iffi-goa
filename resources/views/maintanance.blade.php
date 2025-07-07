@@ -5,15 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Counter</title>
-    @livewireStyles
+    <title>Document</title>
 </head>
 
 <body>
-    @livewire('Counter')
-    {{-- <livewire:counter /> --}}
-    {{-- <livewire:counter class="App\Livewire\Counter" /> --}}
-    @livewireScripts
+    <p style="text-align: center">
+        <img src="{{ asset('public/images/Upgrading.jpg') }}" alt="Upgrading">
+    </p>
 </body>
 
 </html>

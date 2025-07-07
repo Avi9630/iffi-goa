@@ -108,7 +108,6 @@
                     <div class="row">
                         @foreach ($gtpp22 as $dd22)
                             <div class="col-md-6 col-sm-6 d-flex">
-                                {{-- <div class=" item d-flex"> --}}
                                 <div class="card shadow-sm">
                                     <div class="card-image min-img-height-card">
                                         <img src="{{ asset('public/images/about-us/' . $dd22->image) }}" alt="image"
@@ -119,7 +118,6 @@
                                         <p>{!! $dd22->description !!}</p>
                                     </div>
                                 </div>
-                                {{-- </div> --}}
                             </div>
                         @endforeach
                     </div>
@@ -130,26 +128,3 @@
     </div>
 
 @endsection
-
-{{-- <script type="text/javascript">
-    $(document).ready(function() {
-        $('.owl-carousel').owlCarousel({
-            items: 3, // Number of items you want to display at once
-            loop: true, // Loop through the items
-            margin: 10, // Margin between items
-            nav: true, // Show navigation arrows
-            dots: false, // Show pagination dots
-            responsive: {
-                0: {
-                    items: 1 // Number of items at viewport width 0px
-                },
-                600: {
-                    items: 2 // Number of items at viewport width 600px
-                },
-                1000: {
-                    items: 3 // Number of items at viewport width 1000px
-                }
-            }
-        });
-    });
-</script> --}}

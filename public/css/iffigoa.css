@@ -1817,3 +1817,6 @@ body {
 body p {
     font-family: "Roboto", sans-serif;
 }
+.iffi-logo {
+    width: 90px !important;
+}
