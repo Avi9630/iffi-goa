@@ -15,6 +15,10 @@
     <!-- Video Section -->
     @include('pages.video-section')
 
+    {{-- @include('pages.video-section', [
+        'videoTitle' => app(\App\Http\Controllers\HomeController::class)->getvideoTitle(),
+    ]) --}}
+
     <!-- Ticker Content-->
     @include('pages.ticker', [
         'tickers' => app(\App\Http\Controllers\TickerController::class)->getAllTicker(),
