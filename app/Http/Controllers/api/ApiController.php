@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Validator;
 use DB;
+// use Illuminate\Container\Attributes\DB as AttributesDB;
 
 class ApiController extends Controller
 {
@@ -780,6 +781,24 @@ class ApiController extends Controller
             fclose($handle);
             $response = [
                 'message' => 'CSV uploaded successfully...',
+            ];
+            return $this->response('success', $response);
+        } catch (\Exception $e) {
+            $response = [
+                'message' => $e->getMessage(),
+            ];
+
+            return $this->response('exception', $response);
+        }
+    }
+
+    public function allProgrammes()
+    {
+        try {
+            $datas = DB::table('iffi_festival_programmes')->where(['status' => 1])->get();
+            $response = [
+                'message' => 'All feativall program...',
+                "data" => $datas,
             ];
             return $this->response('success', $response);
         } catch (\Exception $e) {
