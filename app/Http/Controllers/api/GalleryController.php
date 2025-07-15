@@ -25,18 +25,19 @@ class GalleryController extends Controller
 
     public function getById(Request $request, $id)
     {
+        try {
+            if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['file'])) {
 
-        if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['file'])) {
-
-            $projectId = 'iffi-goa-429607'; // Replace with your GCP project ID
-            $bucketName = 'iffi-goa-public-bucket-0001'; // Replace with your GCS bucket name
-            $keyFilePath = storage_path('app/keys/service-account.json');
-            // $keyFilePath = __DIR__ . '/service-account.json';
-            // dd($keyFilePath);
-            $fileTmpPath = $_FILES['file']['tmp_name'];
-            $fileName = $_FILES['file']['name'];
-            // dd($fileName);
-            try {
+                $projectId = 'iffi-goa-429607'; // Replace with your GCP project ID
+                $bucketName = 'iffi-goa-public-bucket-0001'; // Replace with your GCS bucket name
+                $keyFilePath = storage_path('app/keys/service-account.json');
+                // $keyFilePath = __DIR__ . '/service-account.json';
+                // dd($keyFilePath);
+                $fileTmpPath = $_FILES['file']['tmp_name'];
+                $fileName = $_FILES['file']['name'];
+                // dd($fileName);
+                // try {
+                // if ($fileName) {
                 // Initialize Guzzle HTTP Client with SSL verification disabled
                 $guzzleClient = new Client([
                     'verify' => false, // This should disable SSL verification
@@ -62,16 +63,17 @@ class GalleryController extends Controller
                     ['name' => 'uploads/' . $fileName] // Save inside 'uploads' folder in GCS
                 );
 
-                return $this->response('success', $response);
+                return $this->response('success');
             } else {
                 $response = [
                     'message' => 'No records found !!',
                 ];
                 echo 'File uploaded successfully!<br>';
-                echo "File URL: <a href='$publicUrl' target='_blank'>$publicUrl</a>";
-            } catch (Exception $e) {
-                echo 'Error uploading file: ' . $e->getMessage();
+                // echo "File URL: <a href='$publicUrl' target='_blank'>$publicUrl</a>";
             }
+            // } catch (Exception $e) {
+            //     echo 'Error uploading file: ' . $e->getMessage();
+            // }
         } catch (\Exception $e) {
             $response = [
                 'message' => $e->getMessage(),

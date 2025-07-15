@@ -29,40 +29,60 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="rules-text">
-                        <h5>Web Series</h5>
-                        <p></p>
-                        <p>
-                            The International Film Festival of India (IFFI), accredited by the International Federation of
-                            Film Producers Associations (FIAPF), celebrates the finest cinematic art from around the globe.
-                            Recognizing the significant changes in the entertainment industry, particularly with the rise of
-                            Over-The-Top (OTT) platforms, the Best Web Series (OTT) Award was introduced in the 54th edition
-                            of IFFI (2023). This award aims to acknowledge, encourage, and honour the flourishing content
-                            and its creators on OTT platforms.<br><br>
-                            India's media and entertainment sector is diverse, encompassing content across various
-                            languages, regions, and platforms, including theatrical films and OTT. The OTT sector has led to
-                            increased production of content in Indian languages to cater to diverse audiences. This growth
-                            has significantly impacted regional cinema, generating employment and opportunities for young
-                            creative professionals. <br><br>
-                            The Government of India has supported the OTT industry through the Information Technology
-                            (Intermediary Guidelines and Digital Media Ethics Code) Rules 2021, promoting self-regulation
-                            and content accountability. The Ministry has encouraged OTT platforms' participation in events
-                            like IFFI through world premieres, masterclasses, and technology exhibitions. Similar
-                            collaborations have occurred at regional film festivals in Kashi and Ladakh. Public
-                            communication campaigns, such as the Hon'ble Prime Minister's Pariksha Pe Charcha programme and
-                            Azadi Ka Amrit Mahotsav, have also involved OTT platforms. <br><br>
-                            The 'Best Web Series (OTT) Award' at IFFI 2023 highlights the critical role of the OTT industry
-                            in enriching Indian media and entertainment. By recognizing excellence in web series, IFFI
-                            celebrates creativity and innovation, underscoring the importance of this growing segment in
-                            shaping the future of Indian entertainment.
-                        </p>
+                    {{-- <div class="rules-text"> --}}
+                    <h5>About Best Web Series Awards</h5>
+                    <p>
+                        The International Film Festival of India (IFFI), accredited by the International Federation of
+                        Film Producers Associations (FIAPF), has consistently proven to be a film festival par
+                        excellence, celebrating the finest cinematic art and talents from around the globe.</br> </br>
 
-                        <div class="col-12 text-center">
-                            <a href="https://iffigoa.org/festival/web-series" class="btn cus-prim-btn m-auto"
-                                target="_blank">Veiw your entry
-                            </a>
-                        </div>
+                        Recognizing the tectonic changes in the entertainment industry especially in the recent years
+                        with the onset and acceptance of Over-The-top (OTT) platforms, the “Best Web Series (OTT) Award”
+                        was introduced by Ministry of Information & Broadcasting, Government of India at the 54th
+                        edition of IFFI (2023).</br> </br>
+
+                        Continuing the momentum, the award aims at acknowledging, encouraging and honouring the
+                        flourishing content and its creators on OTT platforms.</br> </br>
+
+                        The Objective of the Best Web-Series(OTT) Award is to </br>
+
+                    <ul>
+                        <li>
+                            Foster growth and innovation in the Indian OTT industry by encouraging and celebrating web
+                            series content produced for and screened on digital platforms.
+                        </li>
+                        <li>
+                            Encourage OTT content in Indian languages by promoting regional diversity and creativity in
+                            the web content industry, including content produced in regional languages.
+                        </li>
+                        <li>
+                            Recognize and reward exceptional talent that has realized its potential due to the
+                            opportunities provided by the OTT space in India.
+                        </li>
+                        <li>
+                            Incentivize and create investment opportunities in India's OTT sector by providing avenues
+                            to
+                            content creators and OTT platforms to showcase their work, exchange knowledge, and foster
+                            international relationships through the International Film Festival of India (IFFI).
+                        </li>
+                    </ul>
+
+
+                    The Best Web Series (OTT) Award, presented at IFFI, consists of a Certificate and cash Prize of
+                    Rs.10 lakhs, to one(1) best Web-Series for its artistic merit, storytelling, technical
+                    excellence, and overall impact.
+                    </br></br>
+
+                    By recognizing excellence in web series, IFFI celebrates creativity and innovation, underscoring
+                    the importance of this growing segment in shaping the future of Indian entertainment.
+
+                    </p>
+                    <div class="col-12 text-center">
+                        <a href="https://iffigoa.org/festival/web-series" class="btn cus-prim-btn m-auto" target="_blank">View
+                            your entry
+                        </a>
                     </div>
+                    {{-- </div> --}}
                 </div>
             </div>
         </div>
