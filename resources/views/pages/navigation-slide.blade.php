@@ -299,10 +299,10 @@
                                                     target="_blank">View your entry</a>
                                             </li> --}}
 
-                                            <li>
+                                            {{-- <li>
                                                 <a href="{{ route('indian-panorama-rules-regulations') }}"
                                                     class="dropdown-item">Rules & Regulations</a>
-                                            </li>
+                                            </li> --}}
 
 
                                             <li class="nav-item dropend">
