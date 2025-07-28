@@ -2,16 +2,16 @@
     <div class="col-lg-12 ">
         <div class="container">
             <div class="footer-logo">
-                <img src="{{ asset('public/images/f-logoOne.svg') }}" alt="image" class="lap-view">
-                <img src="{{ asset('public/images/goa-govt-logo.png') }}" alt="image" class="lap-view">
-                <img src="{{ asset('public/images/mib.png') }}" alt="image" style="width: 20%; height: 88px;"
+                <img src="{{ asset('public/images/header-logo/f-logoOne.svg') }}" alt="image" class="lap-view">
+                <img src="{{ asset('public/images/header-logo/goa-govt-logo.png') }}" alt="image" class="lap-view">
+                <img src="{{ asset('public/images/header-logo/mib.png') }}" alt="image" style="width: 20%; height: 88px;"
                     class="Mobile-view">
                 <a href="https://filmbazaarindia.com/" target="_blank">
-                    <img src="{{ asset('public/images/Film-Bazar.png') }}" alt="image">
+                    <img src="{{ asset('public/images/header-logo/Film-Bazar.png') }}" alt="image">
                 </a>
-                <img src="{{ asset('public/images/esg-logo.png') }}" alt="image" class="Mobile-view">
-                <img src="{{ asset('public/images/GOG.png') }}" alt="image" style="width:9%" class="Mobile-view">
-                <img src="{{ asset('public/images/Svayam.png') }}" alt="image" style="width:20%" class="Mobile-view">
+                <img src="{{ asset('public/images/header-logo/esg-logo.png') }}" alt="image" class="Mobile-view">
+                <img src="{{ asset('public/images/header-logo/GOG.png') }}" alt="image" style="width:9%" class="Mobile-view">
+                <img src="{{ asset('public/images/header-logo/Svayam.png') }}" alt="image" style="width:20%" class="Mobile-view">
             </div>
             <div class="row mt-4 phone-text">
                  <div class="col-md-3 col-sm-3">
