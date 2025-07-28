@@ -10,10 +10,14 @@
 
     {{-- @include('layouts.timer') --}}
     <!-- Menu Item's -->
-    @include('pages.navigation-slide')
+    @include('pages.navigation-slide') 
 
     <!-- Video Section -->
     @include('pages.video-section')
+
+    {{-- @include('pages.video-section', [
+        'videoTitle' => app(\App\Http\Controllers\HomeController::class)->getvideoTitle(),
+    ]) --}}
 
     <!-- Ticker Content-->
     @include('pages.ticker', [
