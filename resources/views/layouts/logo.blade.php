@@ -12,7 +12,7 @@
                 <a href="https://www.goa.gov.in/" target="_blank">
                     <img src="{{ asset('public/images/header-logo/goa-govt-logo.png') }}" alt="goa-govt-logo">
                 </a>
-                <a href="https://www/iffigoa.org" target="_blank">
+                <a href="https://www.iffigoa.org" target="_blank">
                     <img src="{{ asset('public/images/header-logo/iffi-logo.png') }}" alt=" Peacock-fill" class="peacock-logo">
                 </a>
                 <a href="https://esg.co.in/" target="_blank">
