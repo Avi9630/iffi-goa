@@ -17,11 +17,15 @@
                     <div class="col-md-5 col-sm-6 col-12 mb-4">
                         <p class="newsupdatesView-block-img">
                             @if (!empty($newsUpdate->img_src))
-                                <img src="{{ asset('public/images/news-update/' . $newsUpdate->img_src) }}" alt="news image"
-                                    class="img-fluid img-radius">
+                                {{-- <img src="{{ asset('public/images/news-update/' . $newsUpdate->img_src) }}" alt="news image"
+                                    class="img-fluid img-radius"> --}}
+                                <img src="{{ !empty($newsUpdate->img_src) ? asset('public/images/news-update/' . $newsUpdate->img_src) : $newsUpdate->image_url }}"
+                                    alt="image" class="img-fluid">
                             @else
-                                <img src="{{ asset('public/images/news-update/default-image.webp') }}" alt="default image"
-                                    class="img-fluid img-radius">
+                                {{-- <img src="{{ asset('public/images/news-update/default-image.webp') }}" alt="default image"
+                                    class="img-fluid img-radius"> --}}
+                                <img src="{{ empty($newsUpdate->image_url) ? asset('public/images/news-update/default-image.webp') : $newsUpdate->image_url }}"
+                                    alt="image" class="img-fluid">
                             @endif
                         </p>
                     </div>
