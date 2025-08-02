@@ -48,9 +48,9 @@
     <div class="modal update" id="update_btn" tabindex="-1" aria-labelledby="exampleupdate_btn" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-slide">
             {{-- <div class="modal-dialog modal-dialog-slide"> --}}
-            <div class="modal-content update-btn-content">
+            <div class="modal-content ">
                 <div class="modal-header">
-                    <p>55th International Film Festival of India, Goa </p>
+                    <p>56th International Film Festival of India, Goa </p>
                     {{-- <h1 class="modal-title fs-5" id="exampleModalLabel">Latest Update</h1> --}}
                     {{-- <div class="top-logo "> --}}
                     {{-- <a href="{{ route('/') }}">
@@ -82,7 +82,7 @@
                         <a href={{ $latestUpdate->link }} class="text-decoration-none" target="_blank">
                             <div class="update-heading text-center">
                                 {{-- <p>55th International Film Festival of India, Goa</p> --}}
-                                <p>20-28th November-2024</p>
+                                {{-- <p>20-28th November-2024</p> --}}
                                 {{-- <p>DELEGATE REGISTRATIONS </p> --}}
                                 {{-- <p> ARE NOW OPEN!</p> --}}
                                 {{-- <div class="link">

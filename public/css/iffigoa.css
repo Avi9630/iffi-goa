@@ -1201,7 +1201,8 @@ footer a:hover {
   animation: slideInRight 0.5s ease forwards;
   /* background-color: gray; */
   /* background-color: #455165e3; */
-  background-color: #511451;
+  /* background-color: #511451; */
+  background: linear-gradient(44.43deg, #3e4eb0 -20.27%, #164e47 105%);
   padding: 30px;
   border: none;
 }
@@ -1812,5 +1813,8 @@ body p {
   font-family: "Roboto", sans-serif;
 }
 .iffi-logo {
+  width: 90px !important;
+}
+.peacock-logo {
   width: 90px !important;
 }
