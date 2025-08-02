@@ -725,6 +725,49 @@
                                 </ul>
                             </div>
                             <!-- Masterclass Section End -->
+
+                            <!-- Waves Film Bazzar Section Start -->
+                            <div class="col-md-3 col-sm-12 ">
+                                <h4 class="menu-title ">Waves Film Bazzar</h4>
+                                <ul class="navbar-nav vertical-menu-custom">
+                                    <li class="nav-item">
+                                        <a href="https://films.wavesbazaar.com/programme/screenwriters-lab/features/"
+                                            class="nav-link" target="_blank">Screenwriters Lab</a>
+                                    </li>
+                                    {{-- <li class="nav-item">
+                                        <a href="{{ route('master-classes') }}" class="nav-link">
+                                            55<sup>th</sup> IFFI Schedule
+                                        </a>
+                                    </li> --}}
+                                    {{-- <li class="nav-item">
+                                        <a href="{{ route('master-class', ['id' => 1]) }}" class="nav-link">
+                                            Aditya
+                                        </a>
+                                    </li> --}}
+
+                                    {{-- <li class="nav-item dropdown">
+
+                                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">About Goa
+                                        </a>
+                                        <ul class="dropdown-menu">
+
+                                            <li>
+                                                <a href="{{ route('goa-tourist-places') }}" class="dropdown-item">Goa
+                                                    Tourist Places</a>
+                                            </li>
+
+                                            <li>
+                                                <a href="{{ route('connectivity') }}" class="dropdown-item">
+                                                    Connectivity </a>
+                                            </li>
+
+                                        </ul>
+
+                                    </li> --}}
+                                </ul>
+                            </div>
+                            <!-- Waves Film Bazzar Section End -->
                         </div>
                     </div>
                 </div>
