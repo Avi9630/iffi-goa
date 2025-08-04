@@ -1,3 +1,69 @@
+<style>
+    .scene {
+        width: 200px;
+        height: 200px;
+        perspective: 800px;
+        position: fixed;
+        top: 300px;
+        right: 50px;
+    }
+
+    .cube {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: transform 2s ease-in-out;
+    }
+
+    .face {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background: linear-gradient(135deg, #0d6efd, #0b5ed7);
+        border: 2px solid #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        font-weight: bold;
+        color: white;
+        backface-visibility: hidden;
+        border-radius: 10px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* 6 Cube Faces */
+    .front {
+        transform: rotateY(0deg) translateZ(100px);
+    }
+
+    .back {
+        transform: rotateY(180deg) translateZ(100px);
+    }
+
+    .right {
+        transform: rotateY(90deg) translateZ(100px);
+    }
+
+    .left {
+        transform: rotateY(-90deg) translateZ(100px);
+    }
+
+    .top {
+        transform: rotateX(90deg) translateZ(100px);
+    }
+
+    .bottom {
+        transform: rotateX(-90deg) translateZ(100px);
+    }
+
+    /* Fix text on back face */
+    .back span {
+        transform: rotateX(180deg) rotateY(180deg);
+        display: inline-block;
+    }
+</style>
 <footer class="container-fluid">
     <div class="col-lg-12 ">
         <div class="container">
@@ -14,7 +80,7 @@
                 <img src="{{ asset('public/images/header-logo/Svayam.png') }}" alt="image" style="width:20%" class="Mobile-view">
             </div>
             <div class="row mt-4 phone-text">
-                 <div class="col-md-3 col-sm-3">
+                <div class="col-md-3 col-sm-3">
                     {{-- <h4>Indian Debut Director Award</h4> --}}
                     {{-- <ul class="text-highlight">
                         <li><a href="https://iffigoa.org/festival/indian-debut-director" class="cus-menuP-link"
@@ -72,7 +138,7 @@
                         Venue</a>
                 </li>
                 <li>
-                    <a href="{{ route('goa-tourist-places') }}"class="cus-menuP-link">
+                    <a href="{{ route('goa-tourist-places') }}" class="cus-menuP-link">
                         Goa Tourist Places
                     </a>
                 </li>
@@ -109,6 +175,20 @@
             </p>
         </div>
     </div>
+    @if(request()->query('test') == 1)
+
+    <div class="scene">
+        <div class="cube" id="cube">
+            <div class="face front"><span>data1</span></div>
+            <div class="face back"><span>data2</span></div>
+            <div class="face right"><span>data3</span></div>
+            <div class="face left"><span>data4</span></div>
+            <div class="face top"><span>data5</span></div>
+            <div class="face bottom"><span>data6</span></div>
+        </div>
+    </div>
+    @endif
+
 </footer>
 <!-- Footer ends  -->
 {{-- @livewireScripts --}}
@@ -121,6 +201,42 @@
 <script src="{{ asset('public/js/jquery-3.6.0.min.js') }}"></script>
 <script src="{{ asset('public/js/owl.carousel.min.js') }}"></script>
 <script src="{{ asset('public/js/bootstrap.min.js') }}"></script>
+
+<script>
+    let angleX = 0;
+    let angleY = 0;
+    let step = 0;
+    const cube = document.getElementById('cube');
+
+    function rotateCube() {
+        step++;
+
+        if (step <= 4) {
+            // First 4 steps: vertical rotation
+            angleX = -90 * (step % 4);
+            $(".back span").css({
+                "transform": "rotateX(180deg) rotateY(180deg)",
+
+            });
+        } else {
+            // Next 4 steps: horizontal rotation
+            angleY = 90 * ((step - 4) % 4);
+            $(".back span").css({
+                "transform": "rotateX(0deg) rotateY(0deg)",
+
+            });
+        }
+
+        cube.style.transform = `rotateX(${angleX}deg) rotateY(${angleY}deg)`;
+
+        if (step === 8) step = 0; // Reset cycle
+    }
+
+    // Start quickly
+    setTimeout(rotateCube, 1000);
+    // Rotate every 4s
+    setInterval(rotateCube, 4000);
+</script>
 <script type="text/javascript" src="{{ asset('public/js/custom.js') }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.10.0/js/lightgallery-all.min.js"></script>
 <script>
@@ -196,33 +312,33 @@
 {{-- Newly added  start --}}
 <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "International Film Festival of India (IFFI)",
-      "url": "https://iffigoa.org",
-      "logo": "https://iffigoa.org/logo.png",
-      "sameAs": [
-        "https://www.facebook.com/iffigoa",
-        "https://twitter.com/iffigoa",
-        "https://www.instagram.com/iffigoa"
-      ],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "email": "iffigoa@nfdcindia.com",
-        "contactType": "Customer Service",
-        "areaServed": "IN",
-        "availableLanguage": "English"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Entertainment Society of Goa Maquinez Palace Complex",
-        "addressLocality": "Dayanand Bandodkar Marg, Campal Panaji",
-        "addressRegion": "Goa",
-        "postalCode": "403001",
-        "addressCountry": "IN"
-      }
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "International Film Festival of India (IFFI)",
+        "url": "https://iffigoa.org",
+        "logo": "https://iffigoa.org/logo.png",
+        "sameAs": [
+            "https://www.facebook.com/iffigoa",
+            "https://twitter.com/iffigoa",
+            "https://www.instagram.com/iffigoa"
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "iffigoa@nfdcindia.com",
+            "contactType": "Customer Service",
+            "areaServed": "IN",
+            "availableLanguage": "English"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Entertainment Society of Goa Maquinez Palace Complex",
+            "addressLocality": "Dayanand Bandodkar Marg, Campal Panaji",
+            "addressRegion": "Goa",
+            "postalCode": "403001",
+            "addressCountry": "IN"
+        }
     }
-    </script>
+</script>
 
 <script type="application/ld+json">
     {
@@ -232,29 +348,29 @@
         "startDate": "2025-11-20T00:00:00Z",
         "endDate": "2025-11-30T23:59:59Z",
         "location": {
-          "@type": "Place",
-          "name": "Goa, India",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Entertainment Society of Goa Maquinez Palace Complex, Dayanand Bandodkar Marg, Campal Panaji, GA 403001",
-            "addressLocality": "Goa",
-            "addressCountry": "IN"
-          }
+            "@type": "Place",
+            "name": "Goa, India",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Entertainment Society of Goa Maquinez Palace Complex, Dayanand Bandodkar Marg, Campal Panaji, GA 403001",
+                "addressLocality": "Goa",
+                "addressCountry": "IN"
+            }
         },
         "performer": {
-          "@type": "Organization",
-          "name": "IFFI Organizers"
+            "@type": "Organization",
+            "name": "IFFI Organizers"
         },
         "description": "The International Film Festival of India showcases global cinema with screenings, workshops, and more.",
         "image": "https://iffigoa.org/public/images/iffi.svg",
         "offers": {
-          "@type": "Offer",
-          "url": "https://iffigoa.org",
-          "priceCurrency": "INR",
-          "price": "Varies"
+            "@type": "Offer",
+            "url": "https://iffigoa.org",
+            "priceCurrency": "INR",
+            "price": "Varies"
         }
-      }
-      </script>
+    }
+</script>
 <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -264,20 +380,20 @@
         "description": "Official website of the International Film Festival of India (IFFI), showcasing global cinema, events, and news.",
         "mainEntityOfPage": "https://iffigoa.org",
         "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [{
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://iffigoa.org"
-          }]
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://iffigoa.org"
+            }]
         },
         "publisher": {
-          "@type": "Organization",
-          "name": "IFFI Goa"
+            "@type": "Organization",
+            "name": "IFFI Goa"
         }
-      }
-      </script>
+    }
+</script>
 
 
 {{-- Newly added  end --}}
