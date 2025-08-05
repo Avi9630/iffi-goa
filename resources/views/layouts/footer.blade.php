@@ -1,4 +1,4 @@
-<style>
+{{-- <style>
     .scene {
         width: 200px;
         height: 200px;
@@ -63,7 +63,8 @@
         transform: rotateX(180deg) rotateY(180deg);
         display: inline-block;
     }
-</style>
+</style> --}}
+
 <footer class="container-fluid">
     <div class="col-lg-12 ">
         <div class="container">
@@ -192,6 +193,7 @@
     @endif
 
 </footer>
+@include('layouts.cubes')
 <!-- Footer ends  -->
 {{-- @livewireScripts --}}
 </body>
