@@ -558,6 +558,25 @@
                                             data-bs-toggle="dropdown" aria-expanded="false">Gallery
                                         </a>
                                         <ul class="dropdown-menu">
+                                            {{-- 2025 --}}
+                                            {{-- <li class="nav-item dropend">
+                                                <a class="nav-link dropdown-toggle" href="#" role="button"
+                                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                                    IFFI festival 2025
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li>
+                                                        <a class="dropdown-item"
+                                                            href="{{ route('get-photo', ['year' => '2025']) }}">Photos
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item"
+                                                            href="{{ route('get-videos', ['year' => '2025']) }}">Videos</a>
+                                                    </li>
+                                                </ul>
+                                            </li> --}}
+                                            {{-- 2024 --}}
                                             <li class="nav-item dropend">
                                                 <a class="nav-link dropdown-toggle" href="#" role="button"
                                                     data-bs-toggle="dropdown" aria-expanded="false">
@@ -575,7 +594,7 @@
                                                     </li>
                                                 </ul>
                                             </li>
-
+                                            {{-- 2023 --}}
                                             <li>
                                                 <a href="{{ route('gallery', ['year' => '2023']) }}"
                                                     class="dropdown-item">
