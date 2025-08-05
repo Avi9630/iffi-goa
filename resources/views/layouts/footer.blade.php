@@ -400,34 +400,36 @@
 </script>
 
 <script type="text/javascript">
-    $('.owl-carousel-popup').owlCarousel({
-        loop: true,
-        autoplay: true,
-        margin: 10,
-        responsiveClass: true,
-        responsive: {
-            0: {
-                items: 1,
-                nav: true,
-                dots: false,
-            },
-            600: {
-                items: 2,
-                nav: false,
-                dots: false,
-            },
-            1000: {
-                items: 2,
-                nav: true,
-                loop: false,
-                dots: false,
+    $(document).ready(function() {
+        var owl = $('.owl-carousel-popup');
+
+        owl.owlCarousel({
+            loop: true, // ✅ Enable infinite loop
+            margin: 10,
+            responsiveClass: true,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            autoplayHoverPause: false,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: true,
+                    dots: false,
+                },
+                600: {
+                    items: 2,
+                    nav: false,
+                    dots: false,
+                },
+                1000: {
+                    items: 2,
+                    nav: true,
+                    dots: false,
+                }
             }
-        }
-    })
+        });
+    });
 </script>
-
-
-{{-- Newly added  end --}}
 </body>
 
 </html>
