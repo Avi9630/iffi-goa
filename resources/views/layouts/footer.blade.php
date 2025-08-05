@@ -112,24 +112,8 @@
             </p>
         </div>
     </div>
-<<<<<<< HEAD
-
-=======
-    @if (request()->query('test') == 1)
-        <div class="scene">
-            <div class="cube" id="cube">
-                <div class="face front"><span>data1</span></div>
-                <div class="face back"><span>data2</span></div>
-                <div class="face right"><span>data3</span></div>
-                <div class="face left"><span>data4</span></div>
-                <div class="face top"><span>data5</span></div>
-                <div class="face bottom"><span>data6</span></div>
-            </div>
-        </div>
-    @endif
->>>>>>> bd39f50edd248b0230fec6070a38063c4776779c
-
 </footer>
+@include('layouts.cubes')
 <!-- Footer ends  -->
 {{-- @livewireScripts --}}
 </body>
