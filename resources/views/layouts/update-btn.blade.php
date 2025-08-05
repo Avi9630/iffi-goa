@@ -1,7 +1,7 @@
 <section>
     <div class="pointer-btn">
         <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#update_btn">
-            Latest Update
+            Call For Entries
         </button>
     </div>
     <div class="modal update" id="update_btn" tabindex="-1" aria-labelledby="exampleupdate_btn" aria-hidden="true">
@@ -26,9 +26,11 @@
                         @foreach ($latestUpdates as $latestUpdate)
                             <div class="item white-text">
                                 <p>{!! nl2br(e($latestUpdate->title)) !!}</p>
-                                <a href="{{ $latestUpdate->link }}" target="_blank">
-                                    <p><span class="open-now">{!! nl2br(e($latestUpdate->content)) !!}</span></p>
-                                </a>
+                                <p>
+                                    <a href="{{ $latestUpdate->link }}" target="_blank">
+                                        <span class="open-now">{!! nl2br(e($latestUpdate->content)) !!}</span>
+                                    </a>
+                                </p>
                             </div>
                         @endforeach
                     </div>

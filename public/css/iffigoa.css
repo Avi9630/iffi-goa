@@ -1402,6 +1402,11 @@ footer a:hover {
   }
 }
 
+.pointer-btn .btn {
+  background-color: #02e5e5;
+  border: 0;
+}
+
 .modal-dialog-slide .modal-content {
   animation: slideInRight 0.5s ease forwards;
   /* background-color: gray; */
@@ -1417,7 +1422,7 @@ footer a:hover {
 }
 
 .modal-dialog-slide .modal-content h1 {
-  color: #fff;
+  color: #ffc107;
   text-align: center;
   font-weight: 900;
 }
@@ -1461,9 +1466,9 @@ footer a:hover {
 .btn-close-popup {
   border-radius: 50%;
   position: absolute;
-  right: -15px;
-  top: -15px;
-  border: solid 1px #fff;
+  right: 15px;
+  top: 15px;
+
   background: none;
   color: #fff;
   cursor: pointer;
@@ -2191,6 +2196,10 @@ body p {
 
 .owl-carousel-popup .white-text {
   color: #fff !important;
+}
+
+.owl-carousel-popup a {
+  text-decoration: none;
 }
 
 .owl-carousel-popup .owl-nav {
