@@ -1461,9 +1461,9 @@ footer a:hover {
 .btn-close-popup {
   border-radius: 50%;
   position: absolute;
-  right: -15px;
-  top: -15px;
-  border: solid 1px #fff;
+  right: 15px;
+  top: 15px;
+ 
   background: none;
   color: #fff;
   cursor: pointer;
@@ -2192,6 +2192,7 @@ body p {
 .owl-carousel-popup .white-text {
   color: #fff !important;
 }
+.owl-carousel-popup a{ text-decoration: none;}
 
 .owl-carousel-popup .owl-nav {
   width: 100%;

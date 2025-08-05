@@ -26,9 +26,12 @@
                         @foreach ($latestUpdates as $latestUpdate)
                             <div class="item white-text">
                                 <p>{!! nl2br(e($latestUpdate->title)) !!}</p>
-                                <a href="{{ $latestUpdate->link }}" target="_blank">
-                                    <p><span class="open-now">{!! nl2br(e($latestUpdate->content)) !!}</span></p>
-                                </a>
+
+                                <p>
+                                    <a href="{{ $latestUpdate->link }}" target="_blank">
+                                        <span class="open-now">{!! nl2br(e($latestUpdate->content)) !!}</span>
+                                    </a>
+                                </p>
                             </div>
                         @endforeach
                     </div>
