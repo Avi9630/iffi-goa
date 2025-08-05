@@ -4,14 +4,16 @@
             <div class="footer-logo">
                 <img src="{{ asset('public/images/header-logo/f-logoOne.svg') }}" alt="image" class="lap-view">
                 <img src="{{ asset('public/images/header-logo/goa-govt-logo.png') }}" alt="image" class="lap-view">
-                <img src="{{ asset('public/images/header-logo/mib.png') }}" alt="image" style="width: 20%; height: 88px;"
-                    class="Mobile-view">
+                <img src="{{ asset('public/images/header-logo/mib.png') }}" alt="image"
+                    style="width: 20%; height: 88px;" class="Mobile-view">
                 <a href="https://filmbazaarindia.com/" target="_blank">
                     <img src="{{ asset('public/images/header-logo/Film-Bazar.png') }}" alt="image">
                 </a>
                 <img src="{{ asset('public/images/header-logo/esg-logo.png') }}" alt="image" class="Mobile-view">
-                <img src="{{ asset('public/images/header-logo/GOG.png') }}" alt="image" style="width:9%" class="Mobile-view">
-                <img src="{{ asset('public/images/header-logo/Svayam.png') }}" alt="image" style="width:20%" class="Mobile-view">
+                <img src="{{ asset('public/images/header-logo/GOG.png') }}" alt="image" style="width:9%"
+                    class="Mobile-view">
+                <img src="{{ asset('public/images/header-logo/Svayam.png') }}" alt="image" style="width:20%"
+                    class="Mobile-view">
             </div>
             <div class="row mt-4 phone-text">
                 <div class="col-md-3 col-sm-3">
@@ -31,7 +33,8 @@
                 <div class="col-md-3 col-sm-3">
                     <h4>Web Series</h4>
                     <ul class="text-highlight">
-                        <li><a href="https://iffigoa.org/festival/web-series" target="_blank">Submit your entry 2025</a></li>
+                        <li><a href="https://iffigoa.org/festival/web-series" target="_blank">Submit your entry 2025</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="col-md-3 col-sm-3">
@@ -109,7 +112,22 @@
             </p>
         </div>
     </div>
+<<<<<<< HEAD
 
+=======
+    @if (request()->query('test') == 1)
+        <div class="scene">
+            <div class="cube" id="cube">
+                <div class="face front"><span>data1</span></div>
+                <div class="face back"><span>data2</span></div>
+                <div class="face right"><span>data3</span></div>
+                <div class="face left"><span>data4</span></div>
+                <div class="face top"><span>data5</span></div>
+                <div class="face bottom"><span>data6</span></div>
+            </div>
+        </div>
+    @endif
+>>>>>>> bd39f50edd248b0230fec6070a38063c4776779c
 
 </footer>
 <!-- Footer ends  -->
@@ -280,6 +298,33 @@
             "name": "IFFI Goa"
         }
     }
+</script>
+
+<script type="text/javascript">
+    $('.owl-carousel-popup').owlCarousel({
+        loop: true,
+        autoplay: true,
+        margin: 10,
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1,
+                nav: true,
+                dots: false,
+            },
+            600: {
+                items: 2,
+                nav: false,
+                dots: false,
+            },
+            1000: {
+                items: 2,
+                nav: true,
+                loop: false,
+                dots: false,
+            }
+        }
+    })
 </script>
 
 

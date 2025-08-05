@@ -13,6 +13,7 @@ use Illuminate\Http\Request;
 use App\Models\MasterClass;
 use App\Models\NewsUpdate;
 use App\Models\Photo;
+use Carbon\CarbonPeriod;
 use DB;
 
 class CommonController extends Controller
@@ -406,5 +407,40 @@ class CommonController extends Controller
         $internationalMedia = InternationalMedia::where('status', 1)->orderBy('id', 'DESC')->paginate(10);
 
         return view('media.international-media', ['internationalMedia' => $internationalMedia]);
+    }
+
+    function getPhoto($year)
+    {
+        $year = $year ?? null;
+        $gallery = Photo::query();
+        $gallery->where('status', 1);
+        if ($year) {
+            $gallery->where('year', $year);
+        }
+        // $gallery->where('category_id', '=', 12);
+        $gallery->where('video_url', null);
+        $gallery->orderBy('id', 'DESC');
+        $gallery = $gallery->paginate(12);
+
+        $startDate = '2024-11-20';
+        $endDate = '2024-11-28';
+        $dates = collect(CarbonPeriod::create($startDate, $endDate))->map(fn($date) => $date->toDateString())->toArray();
+        
+        return view('gallery.new-gallery', [
+            'gallery' => $gallery,
+            'categories' => PhotoCategory::all(),
+            'dates' => $dates,
+        ]);
+    }
+
+    function getVideos($year)
+    {
+        dd($year);
+        $photos = Photo::where('year', $year)->where('status', 1)->orderBy('id', 'DESC')->paginate(12);
+
+        return view('gallery.get-photo', [
+            'photos' => $photos,
+            'year' => $year,
+        ]);
     }
 }
