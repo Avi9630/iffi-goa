@@ -1402,6 +1402,11 @@ footer a:hover {
   }
 }
 
+.pointer-btn .btn {
+  background-color: #02e5e5;
+  border: 0;
+}
+
 .modal-dialog-slide .modal-content {
   animation: slideInRight 0.5s ease forwards;
   /* background-color: gray; */
