@@ -1417,7 +1417,7 @@ footer a:hover {
 }
 
 .modal-dialog-slide .modal-content h1 {
-  color: #fff;
+  color: #ffc107;
   text-align: center;
   font-weight: 900;
 }
@@ -1463,7 +1463,7 @@ footer a:hover {
   position: absolute;
   right: 15px;
   top: 15px;
- 
+
   background: none;
   color: #fff;
   cursor: pointer;
@@ -2192,7 +2192,10 @@ body p {
 .owl-carousel-popup .white-text {
   color: #fff !important;
 }
-.owl-carousel-popup a{ text-decoration: none;}
+
+.owl-carousel-popup a {
+  text-decoration: none;
+}
 
 .owl-carousel-popup .owl-nav {
   width: 100%;
