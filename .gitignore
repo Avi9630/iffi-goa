@@ -3,7 +3,7 @@
 /public/build
 /public/hot
 /public/storage
-/public/images/news-update
+# /public/images/news-update
 /public/images/cureted-section
 /public/images/indian-panorama-cinema
 /public/images/thePeacock
