@@ -4,7 +4,7 @@
     @endphp
     <div class="item card">
         <img src="{{ asset('public/images/indian-panorama-cinema/webp/' . $webpImage . '') }}" alt="image"
-            class="img-fluid">
+            class="img-fluid" loading="lazy">
         <div class="International-competition">
             <p>{{ $panorma->title }}</p>
         </div>
