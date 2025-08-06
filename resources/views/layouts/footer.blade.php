@@ -1,70 +1,3 @@
-{{-- <style>
-    .scene {
-        width: 200px;
-        height: 200px;
-        perspective: 800px;
-        position: fixed;
-        top: 300px;
-        right: 50px;
-    }
-
-    .cube {
-        width: 100%;
-        height: 100%;
-        position: relative;
-        transform-style: preserve-3d;
-        transition: transform 2s ease-in-out;
-    }
-
-    .face {
-        position: absolute;
-        width: 200px;
-        height: 200px;
-        background: linear-gradient(135deg, #0d6efd, #0b5ed7);
-        border: 2px solid #fff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 24px;
-        font-weight: bold;
-        color: white;
-        backface-visibility: hidden;
-        border-radius: 10px;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    }
-
-    /* 6 Cube Faces */
-    .front {
-        transform: rotateY(0deg) translateZ(100px);
-    }
-
-    .back {
-        transform: rotateY(180deg) translateZ(100px);
-    }
-
-    .right {
-        transform: rotateY(90deg) translateZ(100px);
-    }
-
-    .left {
-        transform: rotateY(-90deg) translateZ(100px);
-    }
-
-    .top {
-        transform: rotateX(90deg) translateZ(100px);
-    }
-
-    .bottom {
-        transform: rotateX(-90deg) translateZ(100px);
-    }
-
-    /* Fix text on back face */
-    .back span {
-        transform: rotateX(180deg) rotateY(180deg);
-        display: inline-block;
-    }
-</style> --}}
-
 <footer class="container-fluid">
     <div class="col-lg-12 ">
         <div class="container">
@@ -179,19 +112,6 @@
             </p>
         </div>
     </div>
-    @if (request()->query('test') == 1)
-        <div class="scene">
-            <div class="cube" id="cube">
-                <div class="face front"><span>data1</span></div>
-                <div class="face back"><span>data2</span></div>
-                <div class="face right"><span>data3</span></div>
-                <div class="face left"><span>data4</span></div>
-                <div class="face top"><span>data5</span></div>
-                <div class="face bottom"><span>data6</span></div>
-            </div>
-        </div>
-    @endif
-
 </footer>
 
 @include('layouts.cubes', [
@@ -210,41 +130,6 @@
 <script src="{{ asset('public/js/owl.carousel.min.js') }}"></script>
 <script src="{{ asset('public/js/bootstrap.min.js') }}"></script>
 
-<script>
-    let angleX = 0;
-    let angleY = 0;
-    let step = 0;
-    const cube = document.getElementById('cube');
-
-    function rotateCube() {
-        step++;
-
-        if (step <= 4) {
-            // First 4 steps: vertical rotation
-            angleX = -90 * (step % 4);
-            $(".back span").css({
-                "transform": "rotateX(180deg) rotateY(180deg)",
-
-            });
-        } else {
-            // Next 4 steps: horizontal rotation
-            angleY = 90 * ((step - 4) % 4);
-            $(".back span").css({
-                "transform": "rotateX(0deg) rotateY(0deg)",
-
-            });
-        }
-
-        cube.style.transform = `rotateX(${angleX}deg) rotateY(${angleY}deg)`;
-
-        if (step === 8) step = 0; // Reset cycle
-    }
-
-    // Start quickly
-    setTimeout(rotateCube, 1000);
-    // Rotate every 4s
-    setInterval(rotateCube, 4000);
-</script>
 <script type="text/javascript" src="{{ asset('public/js/custom.js') }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.10.0/js/lightgallery-all.min.js"></script>
 <script>
