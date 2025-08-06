@@ -1,7 +1,10 @@
 <!-- Director competition -->
 @foreach ($directorDebutFilm as $director)
+    @php
+        $webpImage = preg_replace('/\.\w+$/', '.webp', $director->img_src);
+    @endphp
     <div class="item card">
-        <img src="{{ asset('public/images/cureted-section/' . $director->img_src) }}" alt="image" class="img-fluid">
+        <img src="{{ asset('public/images/cureted-section/webp/' . $webpImage) }}" alt="image" class="img-fluid">
         <div class="International-competition">
             {{-- <p>{{ $director->slug }}</p> --}}
             <p>

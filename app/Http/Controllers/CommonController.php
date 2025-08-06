@@ -443,4 +443,12 @@ class CommonController extends Controller
             'year' => $year,
         ]);
     }
+
+    function getAllCubes () 
+    {
+        $cubes = DB::table('cubes')->where('status', 1)
+            ->orderBy('id', 'DESC')
+            ->get();
+        return $cubes;
+    }
 }
