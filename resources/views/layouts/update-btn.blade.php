@@ -1,8 +1,8 @@
 <section>
     <div class="pointer-btn">
-        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#update_btn">
+        {{-- <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#update_btn">
             Call For Entries
-        </button>
+        </button> --}}
     </div>
     <div class="modal update" id="update_btn" tabindex="-1" aria-labelledby="exampleupdate_btn" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-slide">

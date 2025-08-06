@@ -8,8 +8,11 @@
         <div class="owl-carousel international">
 
             @foreach ($internationalCinemas as $cinema)
+                @php
+                    $webpImage = preg_replace('/\.\w+$/', '.webp', $cinema->img_src);
+                @endphp
                 <div class="item card">
-                    <img src="{{ asset('public/images/cureted-section/' . $cinema->img_src) }}" alt="image"
+                    <img src="{{ asset('public/images/cureted-section/webp/' . $webpImage) }}" alt="image"
                         class="img-fluid">
                     <div class="International-competition">
                         <p> <a href="{{ route('international-competition-detail', ['slug' => $cinema->slug]) }}"
