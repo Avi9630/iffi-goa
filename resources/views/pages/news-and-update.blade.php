@@ -13,11 +13,7 @@
                     <div class="card shadow-sm">
                         <a href="{{ route('news-and-update') }}">
                             <img src="{{ asset('public/images/news-update/webp/' . $webpImage) }}"alt="image"
-                                class="img-fluid">
-                                
-                            {{-- <img src="{{ !empty($news->img_src) ? asset('public/images/news-update/webp/' . $webpImage) : $news->image_url }}"
-                                alt="image" class="img-fluid"> --}}
-
+                                class="img-fluid" loading="lazy">
                             <div class="card-body text-start">
                                 <h3>{!! $news->title !!}</h3>
                                 <p class="card-text">
