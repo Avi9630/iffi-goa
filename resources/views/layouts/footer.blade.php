@@ -113,7 +113,11 @@
         </div>
     </div>
 </footer>
-@include('layouts.cubes')
+
+@include('layouts.cubes', [
+    'cubes' => app(\App\Http\Controllers\CommonController::class)->getAllCubes(),
+])
+
 <!-- Footer ends  -->
 {{-- @livewireScripts --}}
 </body>
@@ -260,6 +264,7 @@
         }
     }
 </script>
+
 <script type="application/ld+json">
     {
         "@context": "https://schema.org",
