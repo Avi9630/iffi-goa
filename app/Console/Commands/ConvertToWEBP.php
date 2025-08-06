@@ -28,7 +28,7 @@ class ConvertToWEBP extends Command
      */
     public function handle()
     {
-        $folderPath = public_path('/images/indian-panorama-cinema/');
+        $folderPath = public_path('/images/news-update/');
 
         if (!file_exists($folderPath)) {
             $this->error("Directory not found: {$folderPath}");
@@ -37,7 +37,7 @@ class ConvertToWEBP extends Command
 
         try {
             $manager = new ImageManager(new Driver());
-            $files = glob($folderPath . '*.{jpg,jpeg,png,avif}', GLOB_BRACE);
+            $files = glob($folderPath . '*.{jpg,jpeg,png,avif,jfif,webp,PNG}', GLOB_BRACE);
             if (empty($files)) {
                 $this->info("No image files found in: {$folderPath}");
                 return 0;
