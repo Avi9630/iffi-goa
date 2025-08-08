@@ -8,10 +8,10 @@
                             <a href="{{ $cube->link }}" class="stretched-link" target="_blank">
                                 @if (!empty($cube->image_url))
                                     <img src="{{ $cube->image_url }}"
-                                        alt="Face {{ $key }} - Round {{ $round + 1 }}" />
+                                        alt="Face {{ $key }} - Round {{ $round + 1 }}" loading="lazy" />
                                 @else
                                     <img src="https://iffigoa.org/public/images/{{ $cube->image_name }}"
-                                        alt="Face {{ $key }} - Round {{ $round + 1 }}" />
+                                        alt="Face {{ $key }} - Round {{ $round + 1 }}" loading="lazy" />
                                 @endif
                             </a>
                         </div>

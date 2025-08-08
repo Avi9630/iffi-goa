@@ -31,7 +31,7 @@
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                     <p><img src="{{ asset('public/images/PDF-Poster.png') }}" alt="image"
-                            class="img-fluid img-radius">
+                            class="img-fluid img-radius" loading="lazy">
                     </p>
                     <div class="text-center">
                         <a href="{{ asset('public/pdfs/iffi-poster-2025.pdf') }}" target="_blank"

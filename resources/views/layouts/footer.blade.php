@@ -141,7 +141,7 @@
     });
 </script>
 
-<script>
+<script defer >
     window.onscroll = function() {
         var menu = document.getElementById('menu');
         if (window.scrollY > 100) { // Change background after scrolling 100px
@@ -165,7 +165,7 @@
     });
 </script>
 
-<script>
+<script defer >
     $(document).ready(function() {
         // Function to get a cookie by name
         function getCookie(name) {
@@ -203,7 +203,7 @@
     });
 </script>
 {{-- Newly added  start --}}
-<script type="application/ld+json">
+<script defer  type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "Organization",
@@ -233,7 +233,7 @@
     }
 </script>
 
-<script type="application/ld+json">
+<script defer  type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "Event",
@@ -265,7 +265,7 @@
     }
 </script>
 
-<script type="application/ld+json">
+<script defer  type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "WebPage",
@@ -289,7 +289,7 @@
     }
 </script>
 
-<script type="text/javascript">
+<script defer type="text/javascript">
     $(document).ready(function() {
         var owl = $('.owl-carousel-popup');
 
