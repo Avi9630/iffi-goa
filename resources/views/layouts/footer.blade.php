@@ -4,17 +4,19 @@
             <div class="footer-logo">
                 <img src="{{ asset('public/images/header-logo/f-logoOne.svg') }}" alt="image" class="lap-view">
                 <img src="{{ asset('public/images/header-logo/goa-govt-logo.png') }}" alt="image" class="lap-view">
-                <img src="{{ asset('public/images/header-logo/mib.png') }}" alt="image" style="width: 20%; height: 88px;"
-                    class="Mobile-view">
+                <img src="{{ asset('public/images/header-logo/mib.png') }}" alt="image"
+                    style="width: 20%; height: 88px;" class="Mobile-view">
                 <a href="https://filmbazaarindia.com/" target="_blank">
                     <img src="{{ asset('public/images/header-logo/Film-Bazar.png') }}" alt="image">
                 </a>
                 <img src="{{ asset('public/images/header-logo/esg-logo.png') }}" alt="image" class="Mobile-view">
-                <img src="{{ asset('public/images/header-logo/GOG.png') }}" alt="image" style="width:9%" class="Mobile-view">
-                <img src="{{ asset('public/images/header-logo/Svayam.png') }}" alt="image" style="width:20%" class="Mobile-view">
+                <img src="{{ asset('public/images/header-logo/GOG.png') }}" alt="image" style="width:9%"
+                    class="Mobile-view">
+                <img src="{{ asset('public/images/header-logo/Svayam.png') }}" alt="image" style="width:20%"
+                    class="Mobile-view">
             </div>
             <div class="row mt-4 phone-text">
-                 <div class="col-md-3 col-sm-3">
+                <div class="col-md-3 col-sm-3">
                     {{-- <h4>Indian Debut Director Award</h4> --}}
                     {{-- <ul class="text-highlight">
                         <li><a href="https://iffigoa.org/festival/indian-debut-director" class="cus-menuP-link"
@@ -31,7 +33,8 @@
                 <div class="col-md-3 col-sm-3">
                     <h4>Web Series</h4>
                     <ul class="text-highlight">
-                        <li><a href="https://iffigoa.org/festival/web-series" target="_blank">Submit your entry 2025</a></li>
+                        <li><a href="https://iffigoa.org/festival/web-series" target="_blank">Submit your entry 2025</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="col-md-3 col-sm-3">
@@ -72,7 +75,7 @@
                         Venue</a>
                 </li>
                 <li>
-                    <a href="{{ route('goa-tourist-places') }}"class="cus-menuP-link">
+                    <a href="{{ route('goa-tourist-places') }}" class="cus-menuP-link">
                         Goa Tourist Places
                     </a>
                 </li>
@@ -110,6 +113,11 @@
         </div>
     </div>
 </footer>
+
+@include('layouts.cubes', [
+    'cubes' => app(\App\Http\Controllers\CommonController::class)->getAllCubes(),
+])
+
 <!-- Footer ends  -->
 {{-- @livewireScripts --}}
 </body>
@@ -121,6 +129,7 @@
 <script src="{{ asset('public/js/jquery-3.6.0.min.js') }}"></script>
 <script src="{{ asset('public/js/owl.carousel.min.js') }}"></script>
 <script src="{{ asset('public/js/bootstrap.min.js') }}"></script>
+
 <script type="text/javascript" src="{{ asset('public/js/custom.js') }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.10.0/js/lightgallery-all.min.js"></script>
 <script>
@@ -132,7 +141,7 @@
     });
 </script>
 
-<script>
+<script defer >
     window.onscroll = function() {
         var menu = document.getElementById('menu');
         if (window.scrollY > 100) { // Change background after scrolling 100px
@@ -156,7 +165,7 @@
     });
 </script>
 
-<script>
+<script defer >
     $(document).ready(function() {
         // Function to get a cookie by name
         function getCookie(name) {
@@ -194,37 +203,37 @@
     });
 </script>
 {{-- Newly added  start --}}
-<script type="application/ld+json">
+<script defer  type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "International Film Festival of India (IFFI)",
-      "url": "https://iffigoa.org",
-      "logo": "https://iffigoa.org/logo.png",
-      "sameAs": [
-        "https://www.facebook.com/iffigoa",
-        "https://twitter.com/iffigoa",
-        "https://www.instagram.com/iffigoa"
-      ],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "email": "iffigoa@nfdcindia.com",
-        "contactType": "Customer Service",
-        "areaServed": "IN",
-        "availableLanguage": "English"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Entertainment Society of Goa Maquinez Palace Complex",
-        "addressLocality": "Dayanand Bandodkar Marg, Campal Panaji",
-        "addressRegion": "Goa",
-        "postalCode": "403001",
-        "addressCountry": "IN"
-      }
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "International Film Festival of India (IFFI)",
+        "url": "https://iffigoa.org",
+        "logo": "https://iffigoa.org/logo.png",
+        "sameAs": [
+            "https://www.facebook.com/iffigoa",
+            "https://twitter.com/iffigoa",
+            "https://www.instagram.com/iffigoa"
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "iffigoa@nfdcindia.com",
+            "contactType": "Customer Service",
+            "areaServed": "IN",
+            "availableLanguage": "English"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Entertainment Society of Goa Maquinez Palace Complex",
+            "addressLocality": "Dayanand Bandodkar Marg, Campal Panaji",
+            "addressRegion": "Goa",
+            "postalCode": "403001",
+            "addressCountry": "IN"
+        }
     }
-    </script>
+</script>
 
-<script type="application/ld+json">
+<script defer  type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "Event",
@@ -232,30 +241,31 @@
         "startDate": "2025-11-20T00:00:00Z",
         "endDate": "2025-11-30T23:59:59Z",
         "location": {
-          "@type": "Place",
-          "name": "Goa, India",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Entertainment Society of Goa Maquinez Palace Complex, Dayanand Bandodkar Marg, Campal Panaji, GA 403001",
-            "addressLocality": "Goa",
-            "addressCountry": "IN"
-          }
+            "@type": "Place",
+            "name": "Goa, India",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Entertainment Society of Goa Maquinez Palace Complex, Dayanand Bandodkar Marg, Campal Panaji, GA 403001",
+                "addressLocality": "Goa",
+                "addressCountry": "IN"
+            }
         },
         "performer": {
-          "@type": "Organization",
-          "name": "IFFI Organizers"
+            "@type": "Organization",
+            "name": "IFFI Organizers"
         },
         "description": "The International Film Festival of India showcases global cinema with screenings, workshops, and more.",
         "image": "https://iffigoa.org/public/images/iffi.svg",
         "offers": {
-          "@type": "Offer",
-          "url": "https://iffigoa.org",
-          "priceCurrency": "INR",
-          "price": "Varies"
+            "@type": "Offer",
+            "url": "https://iffigoa.org",
+            "priceCurrency": "INR",
+            "price": "Varies"
         }
-      }
-      </script>
-<script type="application/ld+json">
+    }
+</script>
+
+<script defer  type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "WebPage",
@@ -264,23 +274,52 @@
         "description": "Official website of the International Film Festival of India (IFFI), showcasing global cinema, events, and news.",
         "mainEntityOfPage": "https://iffigoa.org",
         "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [{
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://iffigoa.org"
-          }]
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://iffigoa.org"
+            }]
         },
         "publisher": {
-          "@type": "Organization",
-          "name": "IFFI Goa"
+            "@type": "Organization",
+            "name": "IFFI Goa"
         }
-      }
-      </script>
+    }
+</script>
 
+<script defer type="text/javascript">
+    $(document).ready(function() {
+        var owl = $('.owl-carousel-popup');
 
-{{-- Newly added  end --}}
+        owl.owlCarousel({
+            loop: true, // ✅ Enable infinite loop
+            margin: 10,
+            responsiveClass: true,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            autoplayHoverPause: false,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: true,
+                    dots: false,
+                },
+                600: {
+                    items: 2,
+                    nav: false,
+                    dots: false,
+                },
+                1000: {
+                    items: 2,
+                    nav: true,
+                    dots: false,
+                }
+            }
+        });
+    });
+</script>
 </body>
 
 </html>

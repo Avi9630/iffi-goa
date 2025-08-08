@@ -89,8 +89,7 @@ class ApiController extends Controller
         }
         try {
             $getTicker = Ticker::where('id', $payload['id'])->first();
-            if (! is_null($getTicker)) {
-
+            if (!is_null($getTicker)) {
                 $getTicker->update([
                     'content' => isset($payload['content']) ? $payload['content'] : $getTicker['content'],
                     'status' => isset($payload['status']) ? $payload['status'] : $getTicker['status'],
@@ -135,8 +134,7 @@ class ApiController extends Controller
         }
         try {
             $getTicker = Ticker::where('id', $payload['id'])->first();
-            if (! is_null($getTicker)) {
-
+            if (!is_null($getTicker)) {
                 $getTicker->delete();
                 $response = [
                     'message' => 'Ticker deleted successfully.!',
@@ -346,8 +344,7 @@ class ApiController extends Controller
         }
         try {
             $newsUpdate = NewsUpdate::find($payload['id']);
-            if (! is_null($newsUpdate)) {
-
+            if (!is_null($newsUpdate)) {
                 $newsUpdate->delete();
                 $response = [
                     'message' => 'Deleted successfully!',
@@ -453,7 +450,6 @@ class ApiController extends Controller
 
                     return $this->response('success', $response);
                 } else {
-
                     $response = [
                         'message' => 'Something went wrong!',
                     ];
@@ -575,8 +571,7 @@ class ApiController extends Controller
         }
         try {
             $newsUpdate = NewsUpdate::find($payload['id']);
-            if (! is_null($newsUpdate)) {
-
+            if (!is_null($newsUpdate)) {
                 $newsUpdate->delete();
                 $response = [
                     'message' => 'Deleted successfully!',
@@ -603,8 +598,8 @@ class ApiController extends Controller
     {
         $payload = $request->all();
         $validatorArray = [
-            'title'  =>  'required',
-            'file'   =>  'required|file|mimes:pdf|max:10240',
+            'title' => 'required',
+            'file' => 'required|file|mimes:pdf|max:10240',
         ];
         $messagesArray = [];
         $validator = Validator::make($payload, $validatorArray, $messagesArray);
@@ -617,10 +612,10 @@ class ApiController extends Controller
 
         try {
             if ($request->hasFile('file')) {
-                $file               =   $request->file('file');
-                $destinationPath    =   'press_release';
-                $originalFilename   =   $file->getClientOriginalName();
-                $fullFilePath       =   public_path($destinationPath . '/' . $originalFilename);
+                $file = $request->file('file');
+                $destinationPath = 'press_release';
+                $originalFilename = $file->getClientOriginalName();
+                $fullFilePath = public_path($destinationPath . '/' . $originalFilename);
                 if (File::exists($fullFilePath)) {
                     $response = [
                         'message' => 'File with the same name already exists !! Please re-upload file!!',
@@ -630,16 +625,16 @@ class ApiController extends Controller
                 }
                 $file->move(public_path($destinationPath), $originalFilename);
                 $data = [
-                    'title'         =>  $payload['title'],
-                    'publish_date'  =>  date('Y-m-d'),
-                    'img_src'       =>  $originalFilename,
-                    'link'          =>  'https://www.iffigoa.org/public/press_release/' . $originalFilename,
+                    'title' => $payload['title'],
+                    'publish_date' => date('Y-m-d'),
+                    'img_src' => $originalFilename,
+                    'link' => 'https://www.iffigoa.org/public/press_release/' . $originalFilename,
                 ];
                 $created = DB::table('mst_press_release')->insert($data);
                 if ($created) {
                     $response = [
-                        'message'   =>  'Press release successfully.!',
-                        'data'      =>  $data,
+                        'message' => 'Press release successfully.!',
+                        'data' => $data,
                     ];
                     return $this->response('success', $response);
                 } else {
@@ -668,9 +663,9 @@ class ApiController extends Controller
     {
         $payload = $request->all();
         $validatorArray = [
-            'id'    =>  'required|numeric',
-            'title' =>  '',
-            'file'  =>  'file|mimes:pdf|max:10240',
+            'id' => 'required|numeric',
+            'title' => '',
+            'file' => 'file|mimes:pdf|max:10240',
         ];
         $messagesArray = [];
         $validator = Validator::make($payload, $validatorArray, $messagesArray);
@@ -683,13 +678,16 @@ class ApiController extends Controller
         }
 
         try {
-            $pressRelease = DB::table('mst_press_release')->select('*')->where(['id' => $payload['id']])->first();
+            $pressRelease = DB::table('mst_press_release')
+                ->select('*')
+                ->where(['id' => $payload['id']])
+                ->first();
             if ($pressRelease) {
                 if ($request->hasFile('file')) {
-                    $file               =   $request->file('file');
-                    $destinationPath    =   'press_release';
-                    $originalFilename   =   $file->getClientOriginalName();
-                    $fullFilePath       =   public_path($destinationPath . '/' . $originalFilename);
+                    $file = $request->file('file');
+                    $destinationPath = 'press_release';
+                    $originalFilename = $file->getClientOriginalName();
+                    $fullFilePath = public_path($destinationPath . '/' . $originalFilename);
                     if (File::exists($fullFilePath)) {
                         File::delete($fullFilePath);
                         $file->move(public_path($destinationPath), $originalFilename);
@@ -697,15 +695,17 @@ class ApiController extends Controller
                         $file->move(public_path($destinationPath), $originalFilename);
                     }
                     $data = [
-                        'title'         =>  isset($payload['title']) ? $payload['title'] : $pressRelease->title,
-                        'img_src'       =>  $originalFilename,
-                        'link'          =>  'https://www.iffigoa.org/public/press_release/' . $originalFilename,
+                        'title' => isset($payload['title']) ? $payload['title'] : $pressRelease->title,
+                        'img_src' => $originalFilename,
+                        'link' => 'https://www.iffigoa.org/public/press_release/' . $originalFilename,
                     ];
-                    $updated = DB::table('mst_press_release')->where(['id' => $payload['id']])->update($data);
+                    $updated = DB::table('mst_press_release')
+                        ->where(['id' => $payload['id']])
+                        ->update($data);
                     if ($updated) {
                         $response = [
-                            'message'   =>  'Press release updated successfully.!',
-                            'data'      =>  $data,
+                            'message' => 'Press release updated successfully.!',
+                            'data' => $data,
                         ];
                         return $this->response('success', $response);
                     } else {
@@ -716,12 +716,14 @@ class ApiController extends Controller
                     }
                 } else {
                     $data = [
-                        'title' =>  isset($payload['title']) ? $payload['title'] : $pressRelease->title,
+                        'title' => isset($payload['title']) ? $payload['title'] : $pressRelease->title,
                     ];
-                    $updated = DB::table('mst_press_release')->where(['id' => $payload['id']])->update($data);
+                    $updated = DB::table('mst_press_release')
+                        ->where(['id' => $payload['id']])
+                        ->update($data);
                     if ($updated) {
                         $response = [
-                            'message'   =>  'Press release updated successfully.!'
+                            'message' => 'Press release updated successfully.!',
                         ];
                         return $this->response('success', $response);
                     } else {
@@ -770,12 +772,12 @@ class ApiController extends Controller
                 $data = array_combine($header, $row);
                 DB::table('international_cinema')->insert([
                     'curated_section_id' => $data['curated_section_id'],
-                    'title'         =>  $data['title'],
-                    'slug'          =>  $data['slug'],
-                    'award'         =>  $data['award'],
-                    'award2'        =>  $data['award2'],
-                    'directed_by'   =>  $data['directed_by'],
-                    'created_by'    =>  $data['created_by'],
+                    'title' => $data['title'],
+                    'slug' => $data['slug'],
+                    'award' => $data['award'],
+                    'award2' => $data['award2'],
+                    'directed_by' => $data['directed_by'],
+                    'created_by' => $data['created_by'],
                 ]);
             }
             fclose($handle);
@@ -795,10 +797,12 @@ class ApiController extends Controller
     public function allProgrammes()
     {
         try {
-            $datas = DB::table('iffi_festival_programmes')->where(['status' => 1])->get();
+            $datas = DB::table('iffi_festival_programmes')
+                ->where(['status' => 1])
+                ->get();
             $response = [
                 'message' => 'All feativall program...',
-                "data" => $datas,
+                'data' => $datas,
             ];
             return $this->response('success', $response);
         } catch (\Exception $e) {
@@ -807,6 +811,106 @@ class ApiController extends Controller
             ];
 
             return $this->response('exception', $response);
+        }
+    }
+
+    public function uploadInFolder(Request $request)
+    {
+        $payload = $request->all();
+        $validatorArray = [
+            'image' => 'required|file|mimes:jpeg,png,jpg,gif,webp,pdf|max:2048',
+            'destination' => 'required',
+        ];
+        $messagesArray = [];
+        $validator = Validator::make($payload, $validatorArray, $messagesArray);
+        if ($validator->fails()) {
+            $output = [
+                'message' => $validator->errors()->first(),
+            ];
+
+            return $this->response('validatorerrors', $output);
+        }
+        try {
+            if ($request->hasFile('image')) {
+                $file = $request->file('image');
+                $fileName = $file->getClientOriginalName();
+                $fullFilePath = public_path($payload['destination'] . '/' . $fileName);
+                if (File::exists($fullFilePath)) {
+                    File::delete($fullFilePath);
+                }
+                $file->move(public_path($payload['destination']), $fileName);
+                $response = [
+                    'message' => 'File uploaded successfully.!!',
+                    'data' => [
+                        'fileName' => $fileName,
+                        'destination' => $payload['destination'],
+                        'filePath' => $fullFilePath,
+                    ],
+                ];
+                return $this->response('success', $response);
+            } else {
+                $response = [
+                    'message' => 'File not uploaded.!',
+                ];
+
+                return $this->response('exception', $response);
+            }
+        } catch (\Exception $e) {
+            $response = [
+                'message' => $e->getMessage(),
+            ];
+
+            return $this->response('exception', $response);
+        }
+    }
+
+    public function listFromFolder(Request $request)
+    {
+        $payload = $request->all();
+        $validatorArray = [
+            'destination' => 'required',
+        ];
+        $messagesArray = [];
+        $validator = Validator::make($payload, $validatorArray, $messagesArray);
+        if ($validator->fails()) {
+            $output = [
+                'message' => $validator->errors()->first(),
+            ];
+
+            return $this->response('validatorerrors', $output);
+        }
+        try {
+            // Destination relative to the public path
+            $relativePath = $payload['destination'];
+            $folderPath = public_path($relativePath);
+            
+            if (!File::exists($folderPath)) {
+                return $this->response('notfound', [
+                    'message' => 'Folder not found.',
+                    'path' => $relativePath,
+                ]);
+            }
+
+            $files = File::files($folderPath);
+            $fileList = [];
+           
+            foreach ($files as $file) {
+                $fileList[] = [
+                    'name' => $file->getFilename(),
+                    'url' => asset('public/'.$relativePath . '/' . $file->getFilename()),
+                    // 'size' => $file->getSize(),
+                    // 'last_modified' => date('Y-m-d H:i:s', $file->getMTime()),
+                ];
+            }
+
+            return $this->response('success', [
+                'files' => $fileList,
+                'count' => count($fileList),
+            ]);
+        } catch (\Exception $e) {
+            return $this->response('exception', [
+                'message' => $e->getMessage(),
+            ]);
         }
     }
 }

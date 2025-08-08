@@ -1,0 +1,134 @@
+.cube-popup-content {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 100px;
+    height: 100px;
+    z-index: 99;
+}
+
+#scene {
+    width: 100%;
+    height: 100%;
+    perspective: 800px;
+    cursor: grab;
+}
+
+.face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 15px;
+    backface-visibility: hidden;
+    line-height: 100%;
+    border-radius: 8%;
+    border: 2px solid white;
+}
+
+.face a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8%;
+}
+
+/* Face transforms */
+.face:nth-child(1) {
+    transform: rotateY(0deg) translateZ(50px);
+}
+
+.face:nth-child(2) {
+    transform: rotateY(180deg) translateZ(50px);
+}
+
+.face:nth-child(3) {
+    transform: rotateY(90deg) translateZ(50px);
+}
+
+.face:nth-child(4) {
+    transform: rotateY(-90deg) translateZ(50px);
+}
+
+.face:nth-child(5) {
+    transform: rotateX(90deg) translateZ(50px);
+}
+
+.face:nth-child(6) {
+    transform: rotateX(-90deg) translateZ(50px);
+}
+
+@keyframes smoothCubeRotation {
+    0% {
+        transform: rotateX(0deg);
+    }
+
+    9% {
+        transform: rotateX(-90deg);
+    }
+
+    18% {
+        transform: rotateX(0deg);
+    }
+
+    27% {
+        transform: rotateX(90deg);
+    }
+
+    36% {
+        transform: rotateX(90deg);
+    }
+
+    45% {
+        transform: rotateX(0deg);
+    }
+
+    54% {
+        transform: rotateY(90deg);
+    }
+
+    63% {
+        transform: rotateY(180deg);
+    }
+
+    72% {
+        transform: rotateY(90deg);
+    }
+
+    81% {
+        transform: rotateX(0deg);
+    }
+
+    90% {
+        transform: rotateY(-90deg);
+    }
+
+    95% {
+        transform: rotateY(-90deg);
+    }
+
+    100% {
+        transform: rotateX(0deg);
+    }
+}
+
+.cube {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: smoothCubeRotation 18s ease-in-out 2s infinite;
+}
+
+.face:hover {
+    pointer-events: all;
+}
+
+.face:hover~.cube,
+.cube:hover {
+    animation-play-state: paused;
+}

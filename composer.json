@@ -10,6 +10,7 @@
     "require": {
         "php": "^8.2",
         "google/cloud-storage": "^1.44",
+        "intervention/image": "^3.11",
         "laravel/framework": "^11.9",
         "laravel/sanctum": "^4.0",
         "laravel/tinker": "^2.9",

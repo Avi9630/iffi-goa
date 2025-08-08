@@ -348,10 +348,7 @@
                         5. Dialogue Sheets/sub-titles file with time code.<br />
                     </li>
 
-                    <li>8.3 A non-refundable entry fee of Rs. 11,800/- (including 18% GST) for Feature Films
-                        including for New Horizons or entry under Best Debut Director of Indian Feature Film and
-                        Rs. 3,540/- (including 18% GST) for Non-Feature Films, must be remitted online at the time
-                        of online entry form submission.</li>
+                    <li>8.3 Entry Fee exempted for entry into Indian Panaroma @ 56th IFFI -2025.</li>
                     <li>8.4 The last date for submission of On- Line applications is 11th August, 2025 till 6.00 P.M.
                         and the last date for receipt of the stamped and signed hard copy of the submitted online
                         application form along with the requisite material is 18th August, 2025 till 6.00 P.M. In case
