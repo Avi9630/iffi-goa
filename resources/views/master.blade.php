@@ -57,14 +57,13 @@
                     @include('partials.masterclass-card', ['topic' => $topic])
                 @endforeach
             </div>
-            
+
             {{-- Tabs for each date --}}
             @foreach ($dates as $date)
                 @php
                     $formattedId = \Carbon\Carbon::parse($date->date)->format('M_d');
                 @endphp
-
-                <div class="tab-pane fade" id="{{ $formattedId }}" role="tabpanel">
+                <div class="tab-pane fade" id="{{ $formattedId }}" role="tabpanel" aria-labelledby="{{ $formattedId }}-tab">
                     @foreach ($topics->where('master_date_id', $date->id) as $topic)
                         @include('partials.masterclass-card', ['topic' => $topic])
                     @endforeach
