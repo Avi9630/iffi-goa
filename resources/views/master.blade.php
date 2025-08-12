@@ -25,17 +25,21 @@
             <div class="col-sm-12">
                 <div class="master-nav-bar">
                     <ul class="nav nav-tabs custom-tab-list nav-justified" id="myTabD" role="tablist">
+
+                        {{-- First "All" tab --}}
                         <li class="nav-item" role="presentation">
                             <a class="nav-link active" id="all-tab" data-bs-toggle="tab" href="#all" role="tab"
                                 aria-controls="all" aria-selected="true">All</a>
                         </li>
 
+                        {{-- Dynamic date tabs --}}
                         @foreach ($dates as $index => $date)
                             @php
-                                $formattedId = \Carbon\Carbon::parse($date->date)->format('M_d');
+                                $formattedId =
+                                    strtolower(\Carbon\Carbon::parse($date->date)->format('M')) .
+                                    \Carbon\Carbon::parse($date->date)->format('d');
                                 $formattedLabel = \Carbon\Carbon::parse($date->date)->format('M d');
                             @endphp
-
                             <li class="nav-item" role="presentation">
                                 <a class="nav-link" id="{{ $formattedId }}-tab" data-bs-toggle="tab"
                                     href="#{{ $formattedId }}" role="tab" aria-controls="{{ $formattedId }}"
@@ -44,31 +48,180 @@
                                 </a>
                             </li>
                         @endforeach
+
                     </ul>
                 </div>
             </div>
         </div>
-
         <div class="tab-content" id="myTabContent">
 
-            {{-- All Tab --}}
-            <div class="tab-pane fade show active" id="all" role="tabpanel">
-                @foreach ($topics as $topic)
-                    @include('partials.masterclass-card', ['topic' => $topic])
+            <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+                @foreach ($dates as $date)
+                    @php
+                        $formattedId =
+                            strtolower(\Carbon\Carbon::parse($date->date)->format('M')) .
+                            \Carbon\Carbon::parse($date->date)->format('d');
+                        $formattedLabel = \Carbon\Carbon::parse($date->date)->format('M d');
+                    @endphp
+                    {{-- @include('partials.masterclass-card', ['topic' => $topic]) --}}
+                    @foreach ($topics->where('master_date_id', $date->id) as $topic)
+                    {{-- @php
+                        dd($topic);
+                    @endphp --}}
+                        @include("master-class.{$formattedId}", ['topic' => $topic])
+                        {{-- @include('partials.masterclass-card', ['topic' => $topic]) --}}
+                    @endforeach
                 @endforeach
             </div>
 
-            {{-- Tabs for each date --}}
             @foreach ($dates as $date)
                 @php
-                    $formattedId = \Carbon\Carbon::parse($date->date)->format('M_d');
+                    $formattedId =
+                        strtolower(\Carbon\Carbon::parse($date->date)->format('M')) .
+                        \Carbon\Carbon::parse($date->date)->format('d');
+                    $formattedLabel = \Carbon\Carbon::parse($date->date)->format('M d');
                 @endphp
-                <div class="tab-pane fade" id="{{ $formattedId }}" role="tabpanel" aria-labelledby="{{ $formattedId }}-tab">
+                <div class="tab-pane fade" id="{{ $formattedId }}" role="tabpanel"
+                    aria-labelledby="{{ $formattedId }}-tab">
                     @foreach ($topics->where('master_date_id', $date->id) as $topic)
-                        @include('partials.masterclass-card', ['topic' => $topic])
+                        @include("master-class.{$formattedId}", ['topic' => $topic])
+                        {{-- @include('partials.masterclass-card', ['topic' => $topic]) --}}
                     @endforeach
+                    {{-- @include("master-class.{$formattedId}") --}}
+                    {{-- @include('partials.masterclass-card', ['topic' => $topic]) --}}
                 </div>
             @endforeach
         </div>
     </div>
+
+    {{-- POPUP --}}
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-icon">
+                        <li><i class="fa fa-clock-o" aria-hidden="true"></i> <span id="modalDate"></span></li>
+                        <li><i class="fa fa-briefcase" aria-hidden="true"></i><span id="panel"></span></li>
+                        <li><i class="fa fa-user" aria-hidden="true"></i> Moderator :- <span id="modalModerator"></span>
+                        </li>
+                    </ul>
+                    <h4>Speakers</h4>
+                    <ol class="list-group list-group-numbered" id="modalSpeakers"></ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Speaker Details Modal -->
+    <div class="modal fade" id="speakerDetailsModal" tabindex="-1" aria-labelledby="speakerDetailsLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="speakerDetailsLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img id="speakerImage" src="" alt="Speaker Image" class="img-fluid mb-3" height="200px"
+                        width="400px" />
+                    <p id="speakerDescription"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Speakers Popup End -->
+
+    {{-- Script Start --}}
+
+    <script>
+        const modalData = {!! $modalData !!};
+
+        console.log(modalData);
+
+
+        document.querySelectorAll('.title-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                const [dateId, sessionIndex] = this.id.split('-');
+                const data = modalData[dateId][sessionIndex];
+                if (data) {
+                    document.getElementById('exampleModalLabel').innerText = data.title;
+                    document.getElementById('modalDate').innerText = data.date;
+                    document.getElementById('modalModerator').innerText = data.moderator;
+                    document.getElementById('panel').innerText = data.panel;
+
+                    // Clear existing speakers and add new ones
+                    const speakersList = document.getElementById('modalSpeakers');
+                    speakersList.innerHTML = '';
+                    data.speakers.forEach(speaker => {
+                        const li = document.createElement('li');
+                        li.className =
+                            'list-group-item d-flex justify-content-between align-items-start title-tab';
+                        li.style.cursor = 'pointer';
+
+                        // Add onclick event to li for opening the modal
+                        li.onclick = function() {
+                            showSpeakerDetails(
+                                speaker.name.replace(/'/g, "\\'"),
+                                speaker.description.replace(/\\/g, ''),
+                                speaker.image.replace(/'/g, "\\'")
+                            );
+                        };
+                        // Populate the speaker list item
+                        li.innerHTML =
+                            `
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <div class="ms-2 me-auto">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div class="fw-bold">${speaker.name}</div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <img src="${speaker.image}" class="img-circle" alt="${speaker.name}">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        `;
+                        speakersList.appendChild(li);
+                    });
+                }
+            });
+        });
+
+        function showSpeakerDetails(name, description, image) {
+            document.getElementById('speakerDetailsLabel').innerText = name;
+            document.getElementById('speakerDescription').innerText = description;
+            document.getElementById('speakerImage').src = image;
+            const speakerDetailsModal = new bootstrap.Modal(document.getElementById('speakerDetailsModal'));
+            speakerDetailsModal.show();
+        }
+    </script>
+
+    <style type="text/css">
+        .title-tab {
+            cursor: pointer;
+        }
+
+        .list-icon {
+            display: flex;
+            list-style: none;
+            flex-direction: column-reverse;
+            padding-left: 0;
+        }
+
+        .list-icon li {
+            display: flex;
+            list-style: none;
+            column-gap: 10px;
+            align-items: center;
+        }
+
+        .img-circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+        }
+
+        .title-boder-none {
+            border-bottom: none;
+        }
+    </style>
 @endsection
