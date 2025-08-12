@@ -1,40 +1,3 @@
-{{-- <div class="card mb-3">
-    <div class="card-header">
-        <h5>{{ $topic->title }}</h5>
-        <p><strong>{{ $topic->description }}</strong></p>
-    </div>
-    <div class="card-body">
-        @if ($topic->masterClass)
-            <p>Time: {{ \Carbon\Carbon::parse($topic->masterClass->start_time)->format('H:i') }}
-                - {{ \Carbon\Carbon::parse($topic->masterClass->end_time)->format('H:i') }}</p>
-            <p>Format: {{ $topic->masterClass->format }}</p>
-        @endif
-
-        @if ($topic->speakers->count())
-            <h6>Speakers:</h6>
-            <ul>
-                @foreach ($topic->speakers as $speaker)
-                    <li>
-                        <strong>{{ $speaker->speaker_name }}</strong> - {{ $speaker->speaker_detail }}
-                        @if ($speaker->image_url)
-                            <img src="{{ $speaker->image_url }}" alt="{{ $speaker->speaker_name }}" width="50" />
-                        @endif
-                    </li>
-                @endforeach
-            </ul>
-        @endif
-
-        @if ($topic->moderators->count())
-            <h6>Moderators:</h6>
-            <ul>
-                @foreach ($topic->moderators as $moderator)
-                    <li>{{ $moderator->moderator_name }}</li>
-                @endforeach
-            </ul>
-        @endif
-    </div>
-</div> --}}
-
 <div class="mt-4 mb-4">
     <h2 class="pb-3">
         {{ \Carbon\Carbon::parse($topic->masterDate->date)->format('F jS, Y') }}
@@ -56,9 +19,7 @@
                     data-title="{{ $topic->title }}"
                     data-date="{{ \Carbon\Carbon::parse($topic->masterDate->date)->format('M jS, Y') }}"
                     data-time="{{ \Carbon\Carbon::parse($topic->masterClass->start_time)->format('g:i A') }} TO {{ \Carbon\Carbon::parse($topic->masterClass->end_time)->format('g:i A') }}"
-                    data-panel="{{ $topic->masterClass->format }}" 
-                    {{-- data-moderator="{{ $topic->moderators->moderator_name }}"  --}}
-                    {{-- data-moderator="@json($topic->speakers)"  --}}
+                    data-panel="{{ $topic->masterClass->format }}" data-moderator='@json($topic->moderators)'
                     data-speakers='@json($topic->speakers)'>
                     {{ $topic->title }}
                 </h4>
@@ -98,8 +59,7 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="modalTitle">Women Safety and Cinema</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h1 class="modal-title fs-5" id="modalTitle"></h1>
             </div>
             <div class="modal-body">
                 <ul class="list-icon">
@@ -113,9 +73,8 @@
                     </li>
                     <li>
                         <i class="fa fa-clock-o" aria-hidden="true"></i>
-                        <span id="modalDate"></span>
+                        <span id="modalDate"></span> || <span id="modalTime"></span>
                     </li>
-                    
                 </ul>
                 <h4>Speakers</h4>
                 <ol class="list-group list-group-numbered" id="modalSpeakers"></ol>
@@ -124,44 +83,60 @@
     </div>
 </div>
 
+<!-- NEW: Speaker Detail Modal -->
+<div class="modal fade" id="speakerDetailModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title fs-5" id="speakerDetailName"></h5>
+            </div>
+            <div class="modal-body">
+                <img id="speakerImage" src="" alt="Speaker Image" class="img-fluid mb-3" height="200px"
+                    width="400px" />
+                <p id="speakerDetailInfo"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const modal = document.getElementById('speakersModal');
-
+        
         modal.addEventListener('show.bs.modal', function(event) {
             const trigger = event.relatedTarget;
             const title = trigger.getAttribute('data-title');
             const date = trigger.getAttribute('data-date');
             const time = trigger.getAttribute('data-time');
             const panel = trigger.getAttribute('data-panel');
-            const moderator = trigger.getAttribute('data-moderator');
-            const speakers = JSON.parse(trigger.getAttribute('data-speakers'));
+            const moderators = JSON.parse(trigger.getAttribute('data-moderator') || '[]');
+            const speakers = JSON.parse(trigger.getAttribute('data-speakers') || '[]');
 
             document.getElementById('modalTitle').innerText = title;
             document.getElementById('modalDate').innerText = date;
+            document.getElementById('modalTime').innerText = time;
             document.getElementById('panel').innerText = panel;
-            document.getElementById('modalModerator').innerText = moderator;
+            document.getElementById('modalModerator').innerText =
+                moderators.map(m => m.moderator_name).join(' || ');
 
             const speakersList = document.getElementById('modalSpeakers');
             speakersList.innerHTML = '';
 
             speakers.forEach(speaker => {
                 const li = document.createElement('li');
-                li.className = ' profile-info';
+                li.className = 'profile-info d-flex align-items-center gap-2';
+                li.style.cursor = 'pointer';
 
-                // clickable speaker name
+                // Speaker name
                 const nameDiv = document.createElement('div');
                 nameDiv.className = 'fw-bold';
-                nameDiv.style.cursor = 'pointer';
                 nameDiv.innerText = speaker.speaker_name;
 
-                nameDiv.addEventListener('click', function() {
-                    alert(`${speaker.speaker_name}\n\n${speaker.speaker_detail}`);
-                    // Or you could open another modal with more info instead of alert
-                });
-
+                // Speaker image
                 const img = document.createElement('img');
-                img.src = `https://iffigoa.org/public/images/master-class/Imtiaz Ali.jpg`;
+                img.src =
+                    `https://iffigoa.org/public/images/master-class/${speaker.image_name}`;
                 img.alt = speaker.speaker_name;
                 img.className = 'rounded-circle';
                 img.style = 'width:50px;height:50px;object-fit:cover;';
@@ -169,10 +144,26 @@
                 li.appendChild(nameDiv);
                 li.appendChild(img);
 
+                // Click event for whole li
+                li.addEventListener('click', function() {
+                    document.getElementById('speakerDetailName').innerText = speaker
+                        .speaker_name;
+                    // document.getElementById('speakerImage').src = 'https://iffigoa.org/public/images/master-class/Imtiaz%20Ali.webp';
+                    document.getElementById('speakerImage').src = speaker
+                        .image_url;
+
+                    document.getElementById('speakerDetailInfo').innerText = speaker
+                        .speaker_detail;
+
+                    const detailModal = new bootstrap.Modal(document.getElementById(
+                        'speakerDetailModal'));
+                    detailModal.show();
+                });
+
                 speakersList.appendChild(li);
             });
         });
-    });
+    });    
 </script>
 
 <style>
