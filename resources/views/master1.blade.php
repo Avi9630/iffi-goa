@@ -32,7 +32,9 @@
 
                         @foreach ($dates as $index => $date)
                             @php
-                                $formattedId = \Carbon\Carbon::parse($date->date)->format('M_d');
+                                $formattedId =
+                                    strtolower(\Carbon\Carbon::parse($date->date)->format('M')) .
+                                    \Carbon\Carbon::parse($date->date)->format('d');
                                 $formattedLabel = \Carbon\Carbon::parse($date->date)->format('M d');
                             @endphp
 
@@ -61,11 +63,14 @@
             {{-- Tabs for each date --}}
             @foreach ($dates as $date)
                 @php
-                    $formattedId = \Carbon\Carbon::parse($date->date)->format('M_d');
+                    $formattedId =
+                        strtolower(\Carbon\Carbon::parse($date->date)->format('M')) .
+                        \Carbon\Carbon::parse($date->date)->format('d');
                 @endphp
-                <div class="tab-pane fade" id="{{ $formattedId }}" role="tabpanel" aria-labelledby="{{ $formattedId }}-tab">
+                <div class="tab-pane fade" id="{{ $formattedId }}" role="tabpanel"
+                    aria-labelledby="{{ $formattedId }}-tab">
                     @foreach ($topics->where('master_date_id', $date->id) as $topic)
-                        @include('partials.masterclass-card', ['topic' => $topic])
+                        @include('partials.masterclass-card', ['topic' => $topic,'modalData' => $modalData])
                     @endforeach
                 </div>
             @endforeach
