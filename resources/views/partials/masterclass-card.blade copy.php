@@ -12,27 +12,38 @@
                 </div>
             </div>
         @endif
+
         <div class="col-md-7 col-9">
             <div class="callout">
-                <h4 data-bs-toggle="modal" data-bs-target="#speakersModal" class="title-tab"
+                <h4 class="title-tab" data-bs-toggle="modal" data-bs-target="#speakersModal"
                     data-title="{{ $topic->title }}"
                     data-date="{{ \Carbon\Carbon::parse($topic->masterDate->date)->format('M jS, Y') }}"
                     data-time="{{ \Carbon\Carbon::parse($topic->masterClass->start_time)->format('g:i A') }} TO {{ \Carbon\Carbon::parse($topic->masterClass->end_time)->format('g:i A') }}"
-                    data-panel="{{ $topic->masterClass->format }}" data-moderator='@json($topic->moderators, JSON_HEX_APOS | JSON_HEX_QUOT)'
-                    data-speakers='@json($topic->speakers, JSON_HEX_APOS | JSON_HEX_QUOT)'>
+                    data-panel="{{ $topic->masterClass->format }}" data-moderator='@json($topic->moderators)'
+                    data-speakers='@json($topic->speakers)'>
                     {{ $topic->title }}
                 </h4>
                 <p>{{ $topic->description }}</p>
             </div>
         </div>
+
         <div class="col-md-3 col-12">
             <div class="user-profile-icon">
                 <ul>
-                    @foreach ($topic->speakers as $speaker)
-                        <li>
-                            <img src="{{ $speaker->image_url }}" alt="image" class="img-fluid">
-                        </li>
-                    @endforeach
+                    <li><img src="https://iffigoa.org/public/images/master-class/Imtiaz Ali.jpg" alt="image"
+                            class="img-fluid">
+                    </li>
+                    <li><img src="https://iffigoa.org/public/images/master-class/Suhasini Maniratnam.jpg" alt="image"
+                            class="img-fluid">
+                    </li>
+                    <li>
+                        <img src="https://iffigoa.org/public/images/master-class/Khushbu Sundar.jpg" alt="image"
+                            class="img-fluid">
+                    </li>
+                    <li>
+                        <img src="https://iffigoa.org/public/images/master-class/BhumiPednekar.jpg" alt="image"
+                            class="img-fluid">
+                    </li>
                 </ul>
             </div>
             <br>
@@ -41,6 +52,7 @@
         </div>
     </div>
 </div>
+
 
 <!-- Modal -->
 <div class="modal fade" id="speakersModal" tabindex="-1" aria-labelledby="speakersModalLabel" aria-hidden="true">
@@ -87,9 +99,11 @@
     </div>
 </div>
 
+
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const modal = document.getElementById('speakersModal');
+        
         modal.addEventListener('show.bs.modal', function(event) {
             const trigger = event.relatedTarget;
             const title = trigger.getAttribute('data-title');
@@ -149,7 +163,7 @@
                 speakersList.appendChild(li);
             });
         });
-    });
+    });    
 </script>
 
 <style>

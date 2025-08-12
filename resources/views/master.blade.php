@@ -25,14 +25,10 @@
             <div class="col-sm-12">
                 <div class="master-nav-bar">
                     <ul class="nav nav-tabs custom-tab-list nav-justified" id="myTabD" role="tablist">
-
-                        {{-- First "All" tab --}}
                         <li class="nav-item" role="presentation">
                             <a class="nav-link active" id="all-tab" data-bs-toggle="tab" href="#all" role="tab"
                                 aria-controls="all" aria-selected="true">All</a>
                         </li>
-
-                        {{-- Dynamic date tabs --}}
                         @foreach ($dates as $index => $date)
                             @php
                                 $formattedId =
@@ -48,47 +44,36 @@
                                 </a>
                             </li>
                         @endforeach
-
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="tab-content" id="myTabContent">
 
+        <div class="tab-content" id="myTabContent">
+            {{-- All Tab --}}
             <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
-                @foreach ($dates as $date)
+                @foreach ($topics as $topic)
                     @php
-                        $formattedId =
-                            strtolower(\Carbon\Carbon::parse($date->date)->format('M')) .
-                            \Carbon\Carbon::parse($date->date)->format('d');
-                        $formattedLabel = \Carbon\Carbon::parse($date->date)->format('M d');
+                        $dateKey =
+                            strtolower(\Carbon\Carbon::parse($topic->masterDate->date)->format('M')) .
+                            \Carbon\Carbon::parse($topic->masterDate->date)->format('d');
                     @endphp
-                    {{-- @include('partials.masterclass-card', ['topic' => $topic]) --}}
-                    @foreach ($topics->where('master_date_id', $date->id) as $topic)
-                    {{-- @php
-                        dd($topic);
-                    @endphp --}}
-                        @include("master-class.{$formattedId}", ['topic' => $topic])
-                        {{-- @include('partials.masterclass-card', ['topic' => $topic]) --}}
-                    @endforeach
+                    @include("master-class.{$dateKey}", ['topic' => $topic])
                 @endforeach
             </div>
 
+            {{-- Per Date Tabs --}}
             @foreach ($dates as $date)
                 @php
                     $formattedId =
                         strtolower(\Carbon\Carbon::parse($date->date)->format('M')) .
                         \Carbon\Carbon::parse($date->date)->format('d');
-                    $formattedLabel = \Carbon\Carbon::parse($date->date)->format('M d');
                 @endphp
                 <div class="tab-pane fade" id="{{ $formattedId }}" role="tabpanel"
                     aria-labelledby="{{ $formattedId }}-tab">
                     @foreach ($topics->where('master_date_id', $date->id) as $topic)
                         @include("master-class.{$formattedId}", ['topic' => $topic])
-                        {{-- @include('partials.masterclass-card', ['topic' => $topic]) --}}
                     @endforeach
-                    {{-- @include("master-class.{$formattedId}") --}}
-                    {{-- @include('partials.masterclass-card', ['topic' => $topic]) --}}
                 </div>
             @endforeach
         </div>
@@ -136,17 +121,13 @@
     <!-- Speakers Popup End -->
 
     {{-- Script Start --}}
-
     <script>
         const modalData = {!! $modalData !!};
-
-        console.log(modalData);
-
-
         document.querySelectorAll('.title-tab').forEach(tab => {
             tab.addEventListener('click', function() {
                 const [dateId, sessionIndex] = this.id.split('-');
                 const data = modalData[dateId][sessionIndex];
+
                 if (data) {
                     document.getElementById('exampleModalLabel').innerText = data.title;
                     document.getElementById('modalDate').innerText = data.date;
@@ -185,7 +166,6 @@
                 }
             });
         });
-
         function showSpeakerDetails(name, description, image) {
             document.getElementById('speakerDetailsLabel').innerText = name;
             document.getElementById('speakerDescription').innerText = description;
