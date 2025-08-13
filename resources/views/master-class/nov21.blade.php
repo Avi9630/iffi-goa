@@ -34,8 +34,10 @@
                 </ul>
             </div>
             <br>
-            <a href="https://www.youtube.com/watch?v=54Q6M1VtD5A&amp;list=PLzkvk19CaSlI01tnt7RiIMF_7eQoc1oHJ&amp;index=4"
+            <a href="{{ $topic->masterClass->session_url }}"
                 class="btn btn-sm btn-primary" target="_blank" style="margin-left: 80px"> View session</a>
+            {{-- <a href="https://www.youtube.com/watch?v=54Q6M1VtD5A&amp;list=PLzkvk19CaSlI01tnt7RiIMF_7eQoc1oHJ&amp;index=4"
+                class="btn btn-sm btn-primary" target="_blank" style="margin-left: 80px"> View session</a> --}}
         </div>
     </div>
 </div>
