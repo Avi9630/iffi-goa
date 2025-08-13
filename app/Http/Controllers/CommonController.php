@@ -13,6 +13,7 @@ use Illuminate\Http\Request;
 use App\Models\MasterClass;
 use App\Models\NewsUpdate;
 use App\Models\Photo;
+use App\Models\PressRelease;
 use Carbon\CarbonPeriod;
 use DB;
 
@@ -345,9 +346,8 @@ class CommonController extends Controller
 
     public function pressRelease()
     {
-        $press = DB::table('mst_press_release')->where('status', '1')->orderBy('id', 'desc')->paginate(10);
-
-        return view('media.press-release', ['press' => $press]);
+        $pressRelease = PressRelease::where('status', '1')->orderBy('id', 'desc')->paginate(10);
+        return view('media.press-release', ['press' => $pressRelease]);
     }
 
     public function thepeacock(Request $request)
