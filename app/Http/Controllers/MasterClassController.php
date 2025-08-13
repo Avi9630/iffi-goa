@@ -9,8 +9,8 @@ class MasterClassController extends Controller
 {
     function index()
     {
-        $dates = MasterDate::orderBy('date')->get();
-        $topics = MasterClassTopic::with(['masterClass', 'speakers', 'moderators', 'masterDate'])->get();
+        $dates = MasterDate::where('year', 2025)->orderBy('date')->get();
+        $topics = MasterClassTopic::where('year', 2025)->with(['masterClass', 'speakers', 'moderators', 'masterDate'])->get();
         $modalData = [];
         foreach ($dates as $date) {
             $key = strtolower(date('M', strtotime($date->date))) . date('d', strtotime($date->date));
