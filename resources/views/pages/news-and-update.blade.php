@@ -7,10 +7,13 @@
         <div class="row card-same-height">
             <div class="newsUpdate1">
                 @foreach ($datas as $news)
+                    @php
+                        $webpImage = preg_replace('/\.\w+$/', '.webp', $news->img_src);
+                    @endphp
                     <div class="card shadow-sm">
                         <a href="{{ route('news-and-update') }}">
-                            <img src="{{ asset('public/images/news-update/' . $news->img_src) }}"alt="image"
-                                class="img-fluid">
+                            <img src="{{ asset('public/images/news-update/webp/' . $webpImage) }}"alt="image"
+                                class="img-fluid" loading="lazy">
                             <div class="card-body text-start">
                                 <h3>{!! $news->title !!}</h3>
                                 <p class="card-text">

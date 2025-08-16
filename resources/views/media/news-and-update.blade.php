@@ -14,15 +14,13 @@
         <div class="container">
             <div class="row ">
                 @foreach ($newsUpdates as $newsUpdate)
+                    @php
+                        $webpImage = preg_replace('/\.\w+$/', '.webp', $newsUpdate->img_src);
+                    @endphp
                     <div class="col-md-5 col-sm-6 col-12 mb-4">
                         <p class="newsupdatesView-block-img">
-                            @if (!empty($newsUpdate->img_src))
-                                <img src="{{ asset('public/images/news-update/' . $newsUpdate->img_src) }}" alt="news image"
-                                    class="img-fluid img-radius">
-                            @else
-                                <img src="{{ asset('public/images/news-update/default-image.webp') }}" alt="default image"
-                                    class="img-fluid img-radius">
-                            @endif
+                            <img src="{{ asset('public/images/news-update/webp/' . $webpImage) }}" alt="news image"
+                                class="img-fluid img-radius" loading="lazy">
                         </p>
                     </div>
 

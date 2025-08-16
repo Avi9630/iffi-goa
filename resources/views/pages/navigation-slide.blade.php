@@ -558,6 +558,25 @@
                                             data-bs-toggle="dropdown" aria-expanded="false">Gallery
                                         </a>
                                         <ul class="dropdown-menu">
+                                            {{-- 2025 --}}
+                                            {{-- <li class="nav-item dropend">
+                                                <a class="nav-link dropdown-toggle" href="#" role="button"
+                                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                                    IFFI festival 2025
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li>
+                                                        <a class="dropdown-item"
+                                                            href="{{ route('get-photo', ['year' => '2025']) }}">Photos
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item"
+                                                            href="{{ route('get-videos', ['year' => '2025']) }}">Videos</a>
+                                                    </li>
+                                                </ul>
+                                            </li> --}}
+                                            {{-- 2024 --}}
                                             <li class="nav-item dropend">
                                                 <a class="nav-link dropdown-toggle" href="#" role="button"
                                                     data-bs-toggle="dropdown" aria-expanded="false">
@@ -575,7 +594,7 @@
                                                     </li>
                                                 </ul>
                                             </li>
-
+                                            {{-- 2023 --}}
                                             <li>
                                                 <a href="{{ route('gallery', ['year' => '2023']) }}"
                                                     class="dropdown-item">
@@ -725,6 +744,49 @@
                                 </ul>
                             </div>
                             <!-- Masterclass Section End -->
+
+                            <!-- Waves Film Bazzar Section Start -->
+                            <div class="col-md-3 col-sm-12 ">
+                                <h4 class="menu-title ">Waves Film Bazzar</h4>
+                                <ul class="navbar-nav vertical-menu-custom">
+                                    <li class="nav-item">
+                                        <a href="https://films.wavesbazaar.com/programme/screenwriters-lab/features/"
+                                            class="nav-link" target="_blank">Screenwriters Lab</a>
+                                    </li>
+                                    {{-- <li class="nav-item">
+                                        <a href="{{ route('master-classes') }}" class="nav-link">
+                                            55<sup>th</sup> IFFI Schedule
+                                        </a>
+                                    </li> --}}
+                                    {{-- <li class="nav-item">
+                                        <a href="{{ route('master-class', ['id' => 1]) }}" class="nav-link">
+                                            Aditya
+                                        </a>
+                                    </li> --}}
+
+                                    {{-- <li class="nav-item dropdown">
+
+                                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">About Goa
+                                        </a>
+                                        <ul class="dropdown-menu">
+
+                                            <li>
+                                                <a href="{{ route('goa-tourist-places') }}" class="dropdown-item">Goa
+                                                    Tourist Places</a>
+                                            </li>
+
+                                            <li>
+                                                <a href="{{ route('connectivity') }}" class="dropdown-item">
+                                                    Connectivity </a>
+                                            </li>
+
+                                        </ul>
+
+                                    </li> --}}
+                                </ul>
+                            </div>
+                            <!-- Waves Film Bazzar Section End -->
                         </div>
                     </div>
                 </div>

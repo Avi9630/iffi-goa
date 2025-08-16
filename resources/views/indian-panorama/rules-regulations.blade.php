@@ -233,8 +233,8 @@
                         Motion Pictures Association (EIMPA), South Indian Film Chamber of Commerce, Akhil
                         Bhartiya Marathi Chitrapat Mahamandal and Film Fraternity of Assam for inclusion in the
                         Indian Panorama. The films should be submitted in the prescribed entry form and format as per the regulations,
-                        within the given deadline for submission of films i.e. 11th August, 2025 till 6.00 P.M. for
-                        submission of online application form and 18th August, 2025 till 6.00 P.M. for receipt of the
+                        within the given deadline for submission of films i.e. 18th August, 2025 till 6.00 P.M. for
+                        submission of online application form and 25th August, 2025 till 6.00 P.M. for receipt of the
                         stamped and signed hard copy of the submitted online application form along with the requisite
                         material. 
                     </li>
@@ -348,14 +348,11 @@
                         5. Dialogue Sheets/sub-titles file with time code.<br />
                     </li>
 
-                    <li>8.3 A non-refundable entry fee of Rs. 11,800/- (including 18% GST) for Feature Films
-                        including for New Horizons or entry under Best Debut Director of Indian Feature Film and
-                        Rs. 3,540/- (including 18% GST) for Non-Feature Films, must be remitted online at the time
-                        of online entry form submission.</li>
-                    <li>8.4 The last date for submission of On- Line applications is 11th August, 2025 till 6.00 P.M.
+                    <li>8.3 Entry Fee exempted for entry into Indian Panaroma @ 56th IFFI -2025.</li>
+                    <li>8.4 The last date for submission of On- Line applications is 18th August, 2025 till 6.00 P.M.
                         and the last date for receipt of the stamped and signed hard copy of the submitted online
-                        application form along with the requisite material is 18th August, 2025 till 6.00 P.M. In case
-                        18th August, 2025 is declared a holiday, the next working day will be treated as the last date
+                        application form along with the requisite material is 25th August, 2025 till 6.00 P.M. In case
+                        25th August, 2025 is declared a holiday, the next working day will be treated as the last date
                         for receipt of Entries. Applications received after the last date may be rejected without any
                         reference to the applicant. (Note: Both the versions (Online and Hard Copy) of application
                         forms submitted by the applicants should be same). 
