@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('site_title', 'IFFI Goa 2024 Press Releases | Latest Updates')
+@section('site_title', 'IFFI Goa Press Releases | Latest Updates')
 @section('site_description',
     'Stay updated with the latest press releases from IFFI Goa 2024. Get the newest
     announcements, news, and media coverage here.')
