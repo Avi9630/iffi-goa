@@ -284,7 +284,7 @@
                                               <li>
                                                 <a href="https://iffigoa.org/festival/indian-paranoma"
                                                     class="dropdown-item nav-link yelow-color-link"
-                                                    target="_blank">Submit Your Entry 2025</a>
+                                                    target="_blank">View Your Entry 2025</a>
                                             </li>
 
                                             <li class="nav-item dropend">

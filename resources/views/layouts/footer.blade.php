@@ -27,7 +27,7 @@
                     <h4>Indian Panorama</h4>
                     <ul class="text-highlight">
                         <li><a href="https://iffigoa.org/festival/indian-paranoma" class="cus-menuP-link"
-                                target="_blank">Submit your entry 2025</a></li>
+                                target="_blank">View your entry 2025</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3 col-sm-3">
