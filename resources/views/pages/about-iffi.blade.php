@@ -10,14 +10,14 @@
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-3">
                     <p>IFFI is the only film festival in
                         South
-                        Asia that is accredited by International Federation of Film Producers’ Associations (FIAPF) of
-                        the 44th
+                        Asia that is accredited by International Federation of Film Producers' Associations (FIAPF) of
+                        the
                         international festivals in the Competitive Feature Films Category.
                         Since its inception in 1952, IFFI has been curating spectacular films from all over the world.
                         Its goal
                         is to provide a single platform for ambitious filmmakers, cineastes, and industry professionals
                         to have
-                        access to excellent cinema from across the world.IFFI’s International Cinema section is an
+                        access to excellent cinema from across the world.IFFI's International Cinema section is an
                         assortment of
                         culturally and aesthetically remarkable films from around the world. It has kept its stature
                         high by
