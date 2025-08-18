@@ -231,9 +231,9 @@
                     </li>
                     <li>6.4 A non-refundable entry fee of (Rs. 11,800/- including 18% GST) must be remitted online at the
                         time of online entry form submission.</li>
-                    <li>6.5 The last date for the submission of the online application is 18th August -2025, until 6:00PM,
+                    <li>6.5 The last date for the submission of the online application is 25th August -2025, until 6:00PM,
                         and the last date for the receipt of the stamped and signed hard copy of the submitted online
-                        application form along with the requisite material is 25th August, 2025 until 6:00PM. In the event
+                        application form along with the requisite material is 1st September, 2025 until 6:00PM. In the event
                         that physical submission deadline is declared a holiday, the next working day will be considered as
                         the final date for receipt of the application. Applications received after the last date may be
                         rejected without any notification to the applicant. (Please note that both the online and hard copy
