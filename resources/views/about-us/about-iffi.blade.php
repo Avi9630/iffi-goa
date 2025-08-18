@@ -28,7 +28,7 @@
             <div class="row">
                 <div class=" col-md-12 col-sm-12 col-12">
                     <p>IFFI is the only film festival in South Asia that is accredited by International Federation of Film
-                        Producers' Associations (FIAPF) of the 44th international festivals in the Competitive Feature Films
+                        Producers' Associations (FIAPF) of the international festivals in the Competitive Feature Films
                         Category.
                     </p>
                     <p>Since its inception in 1952, IFFI has been curating spectacular films from all over the world. Its
