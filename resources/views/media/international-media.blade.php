@@ -27,7 +27,11 @@
                                     <p>{{ $media->title }}</p>
                                 </td>
                                 <td>
-                                    <a href="{{ $media->urls }}" class="btn  btn-primary" target="_blank">View</a>
+                                    {{-- <a href="{{ $media->urls }}" class="btn  btn-primary" target="_blank">View</a> --}}
+                                    <a href="{{ Str::startsWith($media->urls, ['http://', 'https://']) ? $media->urls : 'https://' . $media->urls }}"
+                                        class="btn btn-primary" target="_blank">
+                                        View
+                                    </a>
                                 </td>
                             </tr>
                         @endif
