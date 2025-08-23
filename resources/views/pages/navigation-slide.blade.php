@@ -636,6 +636,9 @@
 
                                         <ul class="dropdown-menu">
                                             <li><a class="dropdown-item"
+                                                    href="{{ route('the-peacock', ['year' => 2025]) }}">2025</a>
+                                            </li>
+                                            <li><a class="dropdown-item"
                                                     href="{{ route('the-peacock', ['year' => 2024]) }}">2024</a>
                                             </li>
                                             <li><a class="dropdown-item"
