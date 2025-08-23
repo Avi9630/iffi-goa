@@ -11,118 +11,9 @@
     <!-- Inner Page Banner Section -->
     <div class="container-fluid page-header bannerBg-knowledge-series py-5">
         <div class="container text-center">
-            <h1 class="page-title-header">Gallery of 2024 IFFI Festival</h1>
+            <h1 class="page-title-header">Gallery of {{ $year }} IFFI Festival</h1>
         </div>
     </div>
-
-    {{-- <div class="content-wrapper">
-        <div class="row">
-            <div class="col-md-6 mx-auto mt-4">
-                <form method="GET" action="{{ route('search-gallery-by-cat') }}" class="forms-sample" id="myForm">
-                    @csrf @method('GET')
-
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="form-group">
-                                <select name="department_id" id="department_id" class="form-select"
-                                    onchange="toggleCategoryField()" style="height: 100%;">
-                                    <option value="">Select</option>
-                                    <option value="1">All dates</option>
-                                    <option value="2">Daywise</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6">
-                            <div class="form-group" style="height: 45%;">
-                                <select name="category_id" id="category_id" class="form-select">
-                                    <option value="" selected>All section</option>
-                                    @forelse ($categories as $category)
-                                        <option value="{{ $category->id }}"
-                                            {{ old('category_id') == $category->id ? 'selected' : '' }}>
-                                            {{ $category->category }}
-                                        </option>
-                                    @empty
-                                        <option value="">No Categories Available</option>
-                                    @endforelse
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3">
-                            <div class="search-btn">
-                                <button type="submit" class="btn btn-primary me-2">Search</button>
-                            </div>
-                        </div>
-
-                        <div class="container mt-4" id="categoryField" style="display: none;">
-
-                            <div class="btn-group custom-calander-group" role="group" aria-label="Radio button group">
-
-                                <label class="calander active">
-                                    <input type="radio" name="date" id="option1" value="2024-11-20">
-                                    <div class="calander-text"><span class="white-text">Nov</span> <span>20</span>
-                                        <span>2024</span>
-                                    </div>
-                                </label>
-
-                                <label class="calander">
-                                    <input type="radio" name="date" id="option2" value="2024-11-21">
-                                    <div class="calander-text"><span class="white-text">Nov</span> <span>21</span>
-                                        <span>2024</span>
-                                    </div>
-                                </label>
-
-                                <label class="calander">
-                                    <input type="radio" name="date" id="option3" value="2024-11-22">
-                                    <div class="calander-text"><span class="white-text">Nov</span> <span>22</span>
-                                        <span>2024</span>
-                                    </div>
-                                </label>
-                                <label class="calander">
-                                    <input type="radio" name="date" id="option4" value="2024-11-23">
-                                    <div class="calander-text"><span class="white-text">Nov</span> <span>23</span>
-                                        <span>2024</span>
-                                    </div>
-                                </label>
-                                <label class="calander">
-                                    <input type="radio" name="date" id="option5" value="2024-11-24">
-                                    <div class="calander-text"><span class="white-text">Nov</span> <span>24</span>
-                                        <span>2024</span>
-                                    </div>
-                                </label>
-                                <label class="calander">
-                                    <input type="radio" name="date" id="option6" value="2024-11-25">
-                                    <div class="calander-text"><span class="white-text">Nov</span> <span>25</span>
-                                        <span>2024</span>
-                                    </div>
-
-                                </label>
-                                <label class="calander">
-                                    <input type="radio" name="date" id="option7" value="2024-11-26">
-                                    <div class="calander-text"><span class="white-text">Nov</span> <span>26</span>
-                                        <span>2024</span>
-                                    </div>
-                                </label>
-                                <label class="calander">
-                                    <input type="radio" name="date" id="option8" value="2024-11-27">
-                                    <div class="calander-text"><span class="white-text">Nov</span> <span>27</span>
-                                        <span>2024</span>
-                                    </div>
-                                </label>
-                                <label class="calander">
-                                    <input type="radio" name="date" id="option9" value="2024-11-20">
-                                    <div class="calander-text"><span class="white-text">Nov</span> <span>28</span>
-                                        <span>2024</span>
-                                    </div>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div> --}}
 
     <div class="col-lg-12 mt-5 static-content">
         <div class="container">
@@ -130,15 +21,16 @@
                 <div id="lightgallery" class="gallery">
 
                     <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">S.No.</th>
-                                <th scope="col">Description</th>
-                                <th scope="col">Video Link</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @if (count($gallery) > 0)
+                        @if (count($gallery) > 0)
+                            <thead>
+                                <tr>
+                                    <th scope="col">S.No.</th>
+                                    <th scope="col">Description</th>
+                                    <th scope="col">Video Link</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
                                 @foreach ($gallery as $key => $gall)
                                     <tr>
                                         <th scope="row">{{ $key + 1 }}</th>
@@ -148,10 +40,10 @@
                                         </td>
                                     </tr>
                                 @endforeach
-                            @else
-                                <p>No records found !!</p>
-                            @endif
-                        </tbody>
+                            </tbody>
+                        @else
+                            <p class="text-center">No records found !!</p>
+                        @endif
                     </table>
                 </div>
             </div>

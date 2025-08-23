@@ -276,12 +276,12 @@
                                             <li>
                                                 <a href="{{ route('about-indian-panorama') }}"
                                                     class="dropdown-item">About Indian Panorama</a>
-                                            </li> 
-                                             <li>
+                                            </li>
+                                            <li>
                                                 <a href="{{ route('indian-panorama-rules-regulations') }}"
                                                     class="dropdown-item">Rules & Regulations</a>
                                             </li>
-                                              <li>
+                                            <li>
                                                 <a href="https://iffigoa.org/festival/indian-paranoma"
                                                     class="dropdown-item nav-link yelow-color-link"
                                                     target="_blank">View Your Entry 2025</a>
@@ -302,7 +302,7 @@
                                                 </ul>
                                             </li>
 
-                                          
+
                                             {{-- <li>
                                                 <a href="{{ route('indian-panorama-rules-regulations') }}"
                                                     class="dropdown-item">Rules & Regulations</a>
@@ -435,10 +435,11 @@
                                             data-bs-toggle="dropdown" aria-expanded="false">Best Web
                                             Series</a>
                                         <ul class="dropdown-menu">
-                                    
 
-                                          <li>
-                                                <a href="{{ route('web-series-rules-regulations') }}" class="dropdown-item">Rules & Regulations</a>
+
+                                            <li>
+                                                <a href="{{ route('web-series-rules-regulations') }}"
+                                                    class="dropdown-item">Rules & Regulations</a>
                                             </li>
 
                                             <li>
@@ -463,7 +464,7 @@
                                             <li><a class="dropdown-item"
                                                     href="{{ route('best-web-series', ['slug' => 'best-web-series']) }}">Official
                                                     Selection - Best Web Series</a></li>
-                                           
+
                                         </ul>
                                     </li>
 
@@ -559,7 +560,7 @@
                                         </a>
                                         <ul class="dropdown-menu">
                                             {{-- 2025 --}}
-                                            {{-- <li class="nav-item dropend">
+                                            <li class="nav-item dropend">
                                                 <a class="nav-link dropdown-toggle" href="#" role="button"
                                                     data-bs-toggle="dropdown" aria-expanded="false">
                                                     IFFI festival 2025
@@ -567,15 +568,17 @@
                                                 <ul class="dropdown-menu">
                                                     <li>
                                                         <a class="dropdown-item"
-                                                            href="{{ route('get-photo', ['year' => '2025']) }}">Photos
+                                                            href="{{ route('media.gallery.byYear', ['year' => '2025']) }}">Photos
                                                         </a>
                                                     </li>
                                                     <li>
                                                         <a class="dropdown-item"
-                                                            href="{{ route('get-videos', ['year' => '2025']) }}">Videos</a>
+                                                            href="{{ route('media.gallery.videos.byYear', ['year' => '2025']) }}">Videos</a>
+                                                        {{-- <a class="dropdown-item"
+                                                            href="{{ route('media.gallery.byYear', ['year' => '2025']) }}">Videos</a> --}}
                                                     </li>
                                                 </ul>
-                                            </li> --}}
+                                            </li>
                                             {{-- 2024 --}}
                                             <li class="nav-item dropend">
                                                 <a class="nav-link dropdown-toggle" href="#" role="button"
@@ -584,21 +587,39 @@
                                                 </a>
                                                 <ul class="dropdown-menu">
                                                     <li>
-                                                        <a class="dropdown-item"
+                                                        {{-- <a class="dropdown-item"
                                                             href="{{ route('gallery-2024', ['year' => '2024']) }}">Photos
+                                                        </a> --}}
+                                                        <a class="dropdown-item"
+                                                            href="{{ route('media.gallery.byYear', ['year' => '2024']) }}">Photos
                                                         </a>
                                                     </li>
                                                     <li>
                                                         <a class="dropdown-item"
-                                                            href="{{ route('gallery-2024/videos', ['year' => '2024']) }}">Videos</a>
+                                                            href="{{ route('media.gallery.videos.byYear', ['year' => '2024']) }}">Videos</a>
+                                                        {{-- <a class="dropdown-item"
+                                                            href="{{ route('gallery-2024/videos', ['year' => '2024']) }}">Videos</a> --}}
                                                     </li>
                                                 </ul>
                                             </li>
                                             {{-- 2023 --}}
-                                            <li>
+                                            {{-- <li>
                                                 <a href="{{ route('gallery', ['year' => '2023']) }}"
                                                     class="dropdown-item">
                                                     IFFI festival 2023 </a>
+                                            </li> --}}
+                                            <li class="nav-item dropend">
+                                                <a class="nav-link dropdown-toggle" href="#" role="button"
+                                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                                    IFFI festival 2023
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li>
+                                                        <a class="dropdown-item"
+                                                            href="{{ route('media.gallery.byYear', ['year' => '2023']) }}">Photos
+                                                        </a>
+                                                    </li>
+                                                </ul>
                                             </li>
                                         </ul>
                                     </li>
