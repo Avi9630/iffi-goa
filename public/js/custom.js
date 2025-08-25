@@ -126,20 +126,20 @@ $(document).ready(function () {
     window.addEventListener("load", reloadInstagramEmbed);
 });
 
-// window.addEventListener("scroll", function () {
-//     const targetElement = document.getElementById("start-animation");
-//     const elementToAnimate = document.querySelector(".animate-me");
-//     const targetPosition = targetElement.getBoundingClientRect().top;
-//     const windowHeight = window.innerHeight;
+window.addEventListener("scroll", function () {
+    const targetElement = document.getElementById("start-animation");
+    const elementToAnimate = document.querySelector(".animate-me");
+    const targetPosition = targetElement.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
 
-//     if (
-//         targetPosition < windowHeight &&
-//         elementToAnimate.classList.contains("hiddentext")
-//     ) {
-//         elementToAnimate.classList.remove("hiddentext");
-//         typeText(elementToAnimate);
-//     }
-// });
+    if (
+        targetPosition < windowHeight &&
+        elementToAnimate.classList.contains("hiddentext")
+    ) {
+        elementToAnimate.classList.remove("hiddentext");
+        typeText(elementToAnimate);
+    }
+});
 
 function typeText(element) {
     const fullText = element.textContent; // Get the full text content from the HTML
