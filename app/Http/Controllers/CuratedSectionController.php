@@ -43,4 +43,16 @@ class CuratedSectionController extends Controller
         $cssClass = $this->headerClass($curatedSectionId);
         return view('international-cinema.2023.curated-section-2023', compact('internationalCinemas', 'curatedSections', 'curatedSectionId', 'cssClass'));
     }
+
+    function curetedsection(Request $request, $year, $slug)
+    {
+        dd($year, $slug);
+        if ($year == 2024) {
+            return $this->curetedsection2024($request, $slug);
+        } elseif ($year == 2023) {
+            return $this->curetedsection2023($request, $slug);
+        } else {
+            abort(404);
+        }
+    }
 }
