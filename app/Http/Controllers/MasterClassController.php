@@ -38,7 +38,7 @@ class MasterClassController extends Controller
                 ];
             }
         }
-        return view('master', [
+        return view('master-new', [
             'dates' => $dates,
             'topics' => $topics,
             'modalData' => json_encode($modalData, JSON_PRETTY_PRINT),
