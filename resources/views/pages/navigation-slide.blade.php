@@ -105,13 +105,13 @@
                                             </li>
 
                                             {{-- Curated Sections 2025 --}}
-                                            {{-- <li class="nav-item dropend">
-                                                <a class="nav-link dropdown-toggle" href="#" role="button"
+                                            <li class="nav-item dropend">
+                                                {{-- <a class="nav-link dropdown-toggle" href="#" role="button"
                                                     data-bs-toggle="dropdown" aria-expanded="false">
                                                     Curated Sections 2025
-                                                </a>
-                                                <ul class="dropdown-menu">
-                                                    <li>
+                                                </a> --}}
+                                                {{-- <ul class="dropdown-menu"> --}}
+                                                    {{-- <li>
                                                         <a class="dropdown-item"
                                                             href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'international-competition']) }}">
                                                             International Competition</a>
@@ -120,8 +120,8 @@
                                                         <a class="dropdown-item"
                                                             href="{{ route('cureted-section-2024', ['slug' => 'best-debut-feature-film-of-a-director']) }}">Best
                                                             Debut Feature Film of a Director</a>
-                                                    </li>
-                                                    <li><a class="dropdown-item"
+                                                    </li> --}}
+                                                    {{-- <li><a class="dropdown-item"
                                                             href="{{ route('cureted-section-2024', ['slug' => 'icft-unesco-medal']) }}">ICFT
                                                             UNESCO Gandhi Medal</a></li>
                                                     <li><a class="dropdown-item"
@@ -176,9 +176,9 @@
                                                             Jury Films</a></li>
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('cureted-section-2024', ['slug' => 'special-presentations']) }}">Special
-                                                            Presentations</a></li>
-                                                </ul>
-                                            </li> --}}
+                                                            Presentations</a></li> --}}
+                                                {{-- </ul> --}}
+                                            </li>
 
                                             {{-- Curated Sections 2024 --}}
                                             <li class="nav-item dropend">
