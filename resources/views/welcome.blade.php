@@ -49,7 +49,7 @@
 
     <!-- International competition Section-->
     @include('pages.international-competition', [
-        'internationalCinemas' => app(\App\Http\Controllers\CommonController::class)->internationalCinema(),
+        'internationalCinemas' => app(\App\Http\Controllers\CuratedSectionController::class)->internationalCinema(),
     ])
 
     <!-- Director Section-->
