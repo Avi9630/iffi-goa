@@ -83,20 +83,20 @@ class CommonController extends Controller
         return $latestUpdates;
     }
 
-    public function internationalCinema()
-    {
-        $internationalCinemas = InternationalCinema::with('curatedSection')
-            ->where('curated_section_id', 1)
-            ->where('year', 2024)
-            ->where('status', 1)
-            ->limit(20)
-            ->get()
-            ->map(function ($cinema) {
-                $cinema->curated_section_title = $cinema->curatedSection->title ?? null;
-                return $cinema;
-            });
-        return $internationalCinemas;
-    }
+    // public function internationalCinema()
+    // {
+    //     $internationalCinemas = InternationalCinema::with('curatedSection')
+    //         ->where('curated_section_id', 1)
+    //         ->where('year', 2024)
+    //         ->where('status', 1)
+    //         ->limit(20)
+    //         ->get()
+    //         ->map(function ($cinema) {
+    //             $cinema->curated_section_title = $cinema->curatedSection->title ?? null;
+    //             return $cinema;
+    //         });
+    //     return $internationalCinemas;
+    // }
 
     public function curetedsection2024(Request $request, $slug)
     {
@@ -191,9 +191,7 @@ class CommonController extends Controller
         $fetch_cinema_basic_details = InternationalCinemaBasicDetail::where(['status' => 1, 'cinema_id' => $fetch_cinema_details->id])->first();
         $currentURL = $_SERVER['REQUEST_URI'];
         $list_international_cinema_images = InternationalCinemaImage::where(['status' => '1', 'cinema_id' => $fetch_cinema_details->id])->get();
-
         $list_international_cinema_videos = DB::table('international_cinema_videos')->where('status', '=', '1')->where('cinema_id', '=', $fetch_cinema_details->id)->get();
-
         return view('pages.international-competition-detail', [
             'fetch_cinema_details' => $fetch_cinema_details,
             'fetch_cinema_basic_details' => $fetch_cinema_basic_details,
@@ -425,7 +423,7 @@ class CommonController extends Controller
         $startDate = '2024-11-20';
         $endDate = '2024-11-28';
         $dates = collect(CarbonPeriod::create($startDate, $endDate))->map(fn($date) => $date->toDateString())->toArray();
-        
+
         return view('gallery.new-gallery', [
             'gallery' => $gallery,
             'categories' => PhotoCategory::all(),
@@ -444,11 +442,9 @@ class CommonController extends Controller
         ]);
     }
 
-    function getAllCubes () 
+    function getAllCubes()
     {
-        $cubes = DB::table('cubes')->where('status', 1)
-            ->orderBy('id', 'DESC')
-            ->get();
+        $cubes = DB::table('cubes')->where('status', 1)->orderBy('id', 'DESC')->get();
         return $cubes;
     }
 }
