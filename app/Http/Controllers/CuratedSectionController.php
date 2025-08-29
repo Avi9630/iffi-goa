@@ -69,4 +69,19 @@ class CuratedSectionController extends Controller
             return abort(404);
         }
     }
+
+    public function internationalCinema()
+    {
+        $internationalCinemas = InternationalCinema::with('curatedSection')
+            ->where('curated_section_id', 1)
+            ->where('year', 2024)
+            ->where('status', 1)
+            ->limit(20)
+            ->get()
+            ->map(function ($cinema) {
+                $cinema->curated_section_title = $cinema->curatedSection->title ?? null;
+                return $cinema;
+            });
+        return $internationalCinemas;
+    }
 }
