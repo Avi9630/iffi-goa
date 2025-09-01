@@ -78,7 +78,7 @@
 
                     </p>
                     <div class="col-12 text-center">
-                        <a href="https://iffigoa.org/festival/web-series" class="btn cus-prim-btn m-auto" target="_blank">Submit
+                        <a href="https://iffigoa.org/festival/web-series" class="btn cus-prim-btn m-auto" target="_blank">View
                             your entry
                         </a>
                     </div>
