@@ -91,7 +91,7 @@
                                             <li>
                                                 <a href="https://filmfreeway.com/InternationalFilmFestivalofIndiaIFFI-Goa"
                                                     class="dropdown-item nav-link yelow-color-link"
-                                                    target="_blank">Submit Your Entry</a>
+                                                    target="_blank">View Your Entry</a>
                                             </li>
                                             {{-- Rules & regulation --}}
                                             <li>
