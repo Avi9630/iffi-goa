@@ -529,7 +529,7 @@
                                             <li>
                                                 <a href="https://iffigoa.org/festival/web-series"
                                                     class="dropdown-item nav-link yelow-color-link"
-                                                    target="_blank">Submit Your Entry 2025</a>
+                                                    target="_blank">View Your Entry 2025</a>
                                             </li>
                                             <li>
                                                 <a href="{{ route('web-series-jury') }}" class="dropdown-item">
