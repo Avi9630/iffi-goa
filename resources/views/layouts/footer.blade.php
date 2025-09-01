@@ -33,7 +33,7 @@
                 <div class="col-md-3 col-sm-3">
                     <h4>Web Series</h4>
                     <ul class="text-highlight">
-                        <li><a href="https://iffigoa.org/festival/web-series" target="_blank">Submit your entry 2025</a>
+                        <li><a href="https://iffigoa.org/festival/web-series" target="_blank">View your entry 2025</a>
                         </li>
                     </ul>
                 </div>
