@@ -21,8 +21,7 @@
         <div class="table-responsive">
             <table id="example" class="table table-hover mt-3">
                 <tbody>
-
-                    <tr>
+                    {{-- <tr>
                         <td>
                             <p>Lights, Camera, Goa! Dive into IFFI 2024</p>
                         </td>
@@ -30,9 +29,8 @@
                             <a href="https://www.iffigoa.org/public/press_release/Lights, Camera, Goa! Dive into IFFI 2024.pdf"
                                 class="btn  btn-primary" target="_blank">View</a>
                         </td>
-                    </tr>
+                    </tr> --}}
                     @foreach ($press as $key => $value)
-                        {{-- @if (isset($value->link) && !empty($value->link) && $value->link != '') --}}
                         <tr>
                             <td>
                                 <p>{{ $value->title }}</p>
@@ -42,12 +40,12 @@
                                     <a href="{{ $value->link }}" class="btn  btn-primary" target="_blank">View</a>
                                 @elseif(isset($value->image_url) && !empty($value->image_url))
                                     <a href="{{ $value->image_url }}" class="btn  btn-primary" target="_blank">View</a>
-                                @else                                  
-                                    <a href="{{ asset('public/press_release/'.$value->img_src) }}" class="btn  btn-primary" target="_blank">View</a>
+                                @else
+                                    <a href="{{ asset('public/press_release/' . $value->img_src) }}" class="btn  btn-primary"
+                                        target="_blank">View</a>
                                 @endif
                             </td>
                         </tr>
-                        {{-- @endif --}}
                     @endforeach
                 </tbody>
             </table>

@@ -188,6 +188,9 @@ class CommonController extends Controller
     public function internationalCompetitionDetail($slug)
     {
         $fetch_cinema_details = InternationalCinema::where(['status' => 1, 'slug' => $slug])->first();
+        if(is_null($fetch_cinema_details)){
+            abort(404);
+        }
         $fetch_cinema_basic_details = InternationalCinemaBasicDetail::where(['status' => 1, 'cinema_id' => $fetch_cinema_details->id])->first();
         $currentURL = $_SERVER['REQUEST_URI'];
         $list_international_cinema_images = InternationalCinemaImage::where(['status' => '1', 'cinema_id' => $fetch_cinema_details->id])->get();
