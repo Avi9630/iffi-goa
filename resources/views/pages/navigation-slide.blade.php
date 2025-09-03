@@ -207,7 +207,6 @@
                                                             ICFT UNESCO Gandhi Medal
                                                         </a>
                                                     </li>
-
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('cureted-section', ['year' => 2024, 'slug' => 'from-the-festivals']) }}">From
                                                             The Festivals</a></li>
@@ -267,12 +266,10 @@
 
                                             {{-- Curated Sections 2023 --}}
                                             <li class="nav-item dropend">
-
                                                 <a class="nav-link dropdown-toggle" href="#" role="button"
                                                     data-bs-toggle="dropdown" aria-expanded="false">
                                                     Curated Sections 2023
                                                 </a>
-
                                                 <ul class="dropdown-menu">
 
                                                     <li><a class="dropdown-item"
@@ -393,11 +390,6 @@
                                                 </ul>
                                             </li>
 
-                                            {{-- <li>
-                                                <a href="{{ route('indian-panorama-rules-regulations') }}"
-                                                    class="dropdown-item">Rules & Regulations</a>
-                                            </li> --}}
-
                                             <li class="nav-item dropend">
                                                 <a class="nav-link dropdown-toggle" href="#" role="button"
                                                     data-bs-toggle="dropdown" aria-expanded="false">
@@ -504,12 +496,18 @@
                                                     Indian Cinema - IFFI 2023
                                                 </a>
                                                 <ul class="dropdown-menu">
+                                                    {{-- <li>
+                                                        <a class="dropdown-item"
+                                                            href="{{ route('indian-panorama', ['year' => 2023, 'slug' => 'accessible-india-accessible-films']) }}">
+                                                            Accessible India, Accessible Films</a>
+                                                    </li> --}}
                                                     <li>
                                                         <a class="dropdown-item"
-                                                            href="{{ route('accessible-film', ['slug' => 'accessible-india-accessible-films', 'year' => 2023]) }}">Accessible
-                                                            India-Accessible Films</a>
+                                                            href="{{ route('accessible-film', ['year' => 2023, 'slug' => 'accessible-india-accessible-films']) }}">
+                                                            Accessible India-Accessible Films</a>
                                                     </li>
-                                                    <li><a class="dropdown-item"
+                                                    <li>
+                                                        <a class="dropdown-item"
                                                             href="{{ route('special-screening') }}">Special
                                                             Screening</a>
                                                     </li>
