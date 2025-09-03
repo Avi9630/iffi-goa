@@ -13,6 +13,7 @@ class CuratedSectionController extends Controller
 
     // public function curetedsection2024(Request $request, $slug)
     // {
+    //     dd($slug);
     //     $curatedSections = CuratedSection::all()->keyBy('id');
     //     $curatedSectionId = CuratedSection::where('slug', $slug)->pluck('id')->first();
     //     $internationalCinemas = InternationalCinema::with('curatedSection')
