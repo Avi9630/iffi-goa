@@ -9,7 +9,8 @@ class TickerController extends Controller
 {
     public function getAllTicker()
     {
-        $tickers = Ticker::where(['status' => 1])->orderBy('id', 'DESC')->get();
+        // $tickers = Ticker::where(['status' => 1])->orderBy('id', 'DESC')->get();
+        $tickers = Ticker::where('status', 1)->orderBy('sort_num', 'asc')->get();
         return $tickers;
     }
 }
