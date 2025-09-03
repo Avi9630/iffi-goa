@@ -44,19 +44,19 @@ class IndianPanoramaController extends Controller
         ]);
     }
 
-    public function accessibleFilm(Request $request, $slug, $year)
+    public function accessibleFilm(Request $request,$year ,$slug )
     {
         $indianCinemaId =   IndianCinema::where('slug', $slug)->pluck('id')->first();
         $accessibleFilm =   PanoramaCinema::with('accessibleFilm')
-            ->where('indian_cinema_id', $indianCinemaId)
-            ->where('year', $year)
-            ->where('status', 1)
-            ->limit(8)
-            ->get()
-            ->map(function ($cinema) {
-                $cinema->curated_section_title = $cinema->curatedSection->title ?? null;
-                return $cinema;
-            });
+        ->where('indian_cinema_id', $indianCinemaId)
+        ->where('year', $year)
+        ->where('status', 1)
+        ->limit(8)
+        ->get()
+        ->map(function ($cinema) {
+            $cinema->curated_section_title = $cinema->curatedSection->title ?? null;
+            return $cinema;
+        });
         return view('indian-panorama.accessible-film', [
             'accessibleFilm'    =>  $accessibleFilm,
             'year'              =>  $year,
