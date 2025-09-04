@@ -32,19 +32,21 @@
                         <h5>Creative Minds Of Tomorrow(CMOT)</h5>
                         <p><b>About the Programme</b></p>
                         <p>
-                            The Creative Minds of Tomorrow an annual skill and talent component of the 55th
-                            International
-                            Film Festival of India (IFFI). The novel talent initiative was launched by the Ministry of
-                            Information & Broadcasting (MoIB), and the National Film Development Corporation (NFDC), to
-                            commemorate the celebration of Azadi Ka Amrit Mahotsav at the 2021 edition of IFFI.
+                            Creative Minds of Tomorrow (CMOT) is a visionary initiative by the Ministry of Information &
+                            Broadcasting (MoIB) and the National Film Development Corporation (NFDC), designed to discover,
+                            nurture, and spotlight the rising stars of the Indian film industry. It's not just a talent
+                            program — it's a launchpad for the storytellers of the future, who will drive India's
+                            creative economy.
                         </p>
                         <p>
-                            The initiative has seen three successful editions take place on the sidelines of India’s
-                            premiere film festival, IFFI. In the fourth edition, expanding the scope CMOT will feature
-                            100
-                            youth talent in a total of 13 film crafts, against 75 talent from 10 crafts from the
-                            previous
-                            edition, from across India.
+                            Each year, CMOT transforms raw passion into cinematic brilliance, offering budding filmmakers
+                            from across the country an extraordinary opportunity: to showcase their skills on a global
+                            platform at one of Asia's most prestigious film festivals.
+                        </p>
+                        <p>
+                            The initiative has seen four successful editions take place on the sidelines of India's premiere
+                            film festival, IFFI. In the landmark fifth edition, CMOT will once again feature 100 youth
+                            talents in a total of 13 film crafts from across India.
                         </p>
                         <p><b>Aim and Objectives</b></p>
                         <p>1. To identify the young Indian cinematic talents and offer an International platform to
@@ -53,7 +55,7 @@
                         </p>
                         <p>2. To recognize cinematic excellence craftsmanship across filmmaking disciplines, promising
                             to
-                            contribute to India’s growing stature as a global content hub.
+                            contribute to Indias growing creative economy.
                         </p>
                         <p>3. To encourage and nurture forward-thinking narratives that celebrate Azadi ka Amrit
                             Mahotsab
@@ -75,23 +77,23 @@
                         <p>13. Voice Over/Dubbing</p>
                         <p><b>Eligibility Critera</b></p>
                         <p>1. The applicant should be an Indian Citizen.</p>
-                        <p>2. Applicants must be born on or after July 1, 1989.</p>
-                        <p>3. The total running time of the film/ showreel/ audio track to be submitted should not be
+                        <p>2. Applicants must be born on or after July 1, 1990.</p>
+                        <p>3. The total running time of the film/ showreel/ song file to be submitted should not be
                             more
                             than 10 minutes.</p>
                         <p>4. Regional films being submitted must be subtitled in English.</p>
-                        <p>5. Participants selected in the earlier editions of the ‘75 Creative Minds of Tomorrow’ are
+                        <p>5. Participants selected in the earlier editions of the  Creative Minds of Tomorrow are
                             not
                             eligible to apply in the current edition of the programme.</p>
                         <p>6. Two applicants cannot apply for the same film in the same category/film craft unless they
                             are
                             co-directors/co-writers.</p>
-                        <p>7.Credits of the film proving the applicants’ participation need to be included in the final
+                        <p>7.Credits of the film proving the applicants participation need to be included in the final
                             film uploaded for verification of eligibility.</p>
                         <p><b>Please Note: </b>For any further queries please write to creativeminds@nfdcindia.com</p>
                         <div class="col-12 text-center mt-5">
                             <a href="https://iffigoa.org/festival/creative-mind-tomorrow" class="btn cus-prim-btn m-auto"
-                                target="_blank">View your entry</a>
+                                target="_blank">Submit your entry</a>
                         </div>
                         <br>
                     </div>
