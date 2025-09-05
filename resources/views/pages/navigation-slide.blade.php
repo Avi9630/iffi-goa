@@ -607,12 +607,12 @@
 
                                                 </ul>
                                             </li>
-                                            {{-- <li>
+                                            <li>
                                                 <a href="https://iffigoa.org/festival/creative-mind-tomorrow"
-                                                    class="nav-link yelow-color-link" target="_blank">View
+                                                    class="nav-link yelow-color-link" target="_blank">Submit
                                                     your
                                                     entry</a>
-                                            </li> --}}
+                                            </li>
                                         </ul>
                                     </li>
 
