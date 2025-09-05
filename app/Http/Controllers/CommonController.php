@@ -188,7 +188,7 @@ class CommonController extends Controller
     public function internationalCompetitionDetail($slug)
     {
         $fetch_cinema_details = InternationalCinema::where(['status' => 1, 'slug' => $slug])->first();
-        if(is_null($fetch_cinema_details)){
+        if (is_null($fetch_cinema_details)) {
             abort(404);
         }
         $fetch_cinema_basic_details = InternationalCinemaBasicDetail::where(['status' => 1, 'cinema_id' => $fetch_cinema_details->id])->first();
@@ -370,8 +370,12 @@ class CommonController extends Controller
 
     public function newsUpdate()
     {
-        $newsUpdates = NewsUpdate::where('status', 1)->orderBy('id', 'DESC')->get();
-
+        // $newsUpdates = NewsUpdate::where('status', 1)->orderByRaw('CASE WHEN sort_num IS NULL THEN 1 ELSE 0 END')->orderBy('sort_num', 'asc')->get();
+        $newsUpdates = NewsUpdate::where('status', 1)
+            ->orderByRaw('CASE WHEN sort_num IS NULL THEN 1 ELSE 0 END') // push NULL last
+            ->orderBy('sort_num', 'asc') // sort valid sort_num ascending
+            ->orderByRaw('CASE WHEN sort_num IS NULL THEN id END DESC') // within NULL, sort by id desc
+            ->get();
         return view('media.news-and-update', ['newsUpdates' => $newsUpdates]);
     }
 

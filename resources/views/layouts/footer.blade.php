@@ -38,22 +38,21 @@
                     </ul>
                 </div>
                 <div class="col-md-3 col-sm-3">
+                    <h4>Creative Minds Of Tomorrow (CMOT)</h4>
+                    <ul class="text-highlight">
+                        <li>
+                            <a href="https://iffigoa.org/festival/creative-mind-tomorrow" class="cus-menuP-link"
+                                target="_blank">Submit your entry</a>
+                        </li>
+                    </ul>
+                </div>
+                {{-- <div class="col-md-3 col-sm-3"> --}}
                     {{-- <h4>Indian Debut Director Award</h4> --}}
                     {{-- <ul class="text-highlight">
                         <li><a href="https://iffigoa.org/festival/indian-debut-director" class="cus-menuP-link"
                                 target="_blank">View your entry</a></li>
                     </ul> --}}
-                </div>
-
-                <div class="col-md-3 col-sm-3">
-                    {{-- <h4>Creative Minds Of Tomorrow (CMOT)</h4> --}}
-                    {{-- <ul class="text-highlight">
-                        <li>
-                            <a href="https://iffigoa.org/festival/creative-mind-tomorrow" class="cus-menuP-link"
-                                target="_blank">View your entry</a>
-                        </li>
-                    </ul> --}}
-                </div>
+                {{-- </div> --}}
             </div>
         </div>
     </div>
