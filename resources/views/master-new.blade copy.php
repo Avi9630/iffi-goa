@@ -127,9 +127,8 @@
         document.querySelectorAll('.title-tab').forEach(tab => {
             tab.addEventListener('click', function() {
                 const [dateId, sessionIndex] = this.id.split('-');
-                // const data = modalData[dateId][sessionIndex];
-                const data = modalData[dateId]?.[sessionIndex];
-                if (!data) return;
+                const data = modalData[dateId][sessionIndex];
+
                 if (data) {
                     document.getElementById('exampleModalLabel').innerText = data.title;
                     document.getElementById('modalDate').innerText = data.date;
@@ -170,7 +169,7 @@
 
         function showSpeakerDetails(name, description, image) {
             document.getElementById('speakerDetailsLabel').innerText = name;
-            document.getElementById('speakerDescription').innerHTML  = description;
+            document.getElementById('speakerDescription').innerText = description;
             // document.getElementById('speakerImage').src =image;
             document.getElementById('speakerImage').src = image.replace('/master-class/', '/master-class/webp/');
             const speakerDetailsModal = new bootstrap.Modal(document.getElementById('speakerDetailsModal'));
