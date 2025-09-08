@@ -76,10 +76,7 @@ class CommonController extends Controller
 
     public function getLatestUpdate()
     {
-        $latestUpdates = DB::table('latest_update')
-            ->where(['status' => 1])
-            ->get();
-
+        $latestUpdates = DB::table('latest_update')->where('status', 1)->orderBy('id', 'desc')->get();
         return $latestUpdates;
     }
 
