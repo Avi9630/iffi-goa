@@ -607,12 +607,32 @@
 
                                                 </ul>
                                             </li>
-                                            <li>
-                                                <a href="https://iffigoa.org/festival/creative-mind-tomorrow"
-                                                    class="nav-link yelow-color-link" target="_blank">Submit
-                                                    your
-                                                    entry</a>
+
+                                            <li class="nav-item dropend">
+                                                <a class="nav-link dropdown-toggle" href="#" role="button"
+                                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                                    CMOT Jury-2025
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    {{-- <li><a class="dropdown-item" href="{{ route('cmot-jury') }}"
+                                                            class="dropdown-item">
+                                                            Selection Jury</a>
+                                                    </li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cmot-grand-jury') }}"
+                                                            class="dropdown-item">
+                                                            Grand Jury</a>
+                                                    </li> --}}
+                                                    <li>
+                                                        <a href="https://iffigoa.org/festival/creative-mind-tomorrow"
+                                                            class="nav-link yelow-color-link" target="_blank">
+                                                            Submit your entry
+                                                        </a>
+                                                    </li>
+                                                </ul>
                                             </li>
+
+
                                         </ul>
                                     </li>
 
