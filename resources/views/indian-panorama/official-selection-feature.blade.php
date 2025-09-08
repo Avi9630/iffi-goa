@@ -18,10 +18,10 @@
                     $yearly = $year;
                 }
             @endphp --}}
-            @php
+            {{-- @php
                 $yearly = isset($year) && $year != 2024 ? 2023 : $year ?? 2024;
-            @endphp
-            <h1 class="page-title-header">IFFI Festival {{ $yearly }} Feature film
+            @endphp --}}
+            <h1 class="page-title-header">IFFI Festival {{ $year }} Feature film
             </h1>
         </div>
     </div>

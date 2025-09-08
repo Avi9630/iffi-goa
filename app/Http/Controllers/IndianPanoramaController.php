@@ -15,7 +15,7 @@ class IndianPanoramaController extends Controller
     {
         $payload            =   $request->all();
         $year               =   isset($payload['year']) ? $payload['year'] : '';
-
+        
         $officialFeature = IndianPanorama::with('officialSelection')
             ->where('official_selection_id', 1)
             ->when(!empty($year), function ($query) use ($year) {
