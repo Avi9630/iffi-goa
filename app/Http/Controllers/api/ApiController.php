@@ -892,6 +892,11 @@ class ApiController extends Controller
             }
 
             $files = File::files($folderPath);
+
+            usort($files, function ($a, $b) {
+                return $b->getMTime() <=> $a->getMTime();
+            });
+
             $fileList = [];
 
             foreach ($files as $file) {
