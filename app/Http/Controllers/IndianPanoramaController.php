@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\IndianCinema;
 use App\Models\IndianPanorama;
-use App\Models\OfficialSelection;
 use App\Models\PanoramaCinema;
+use App\Models\IndianCinema;
 use Illuminate\Http\Request;
-use DB;
 
 class IndianPanoramaController extends Controller
 {
@@ -57,7 +55,8 @@ class IndianPanoramaController extends Controller
             $cinema->curated_section_title = $cinema->curatedSection->title ?? null;
             return $cinema;
         });
-        return view('indian-panorama.accessible-film', [
+        // dd($accessibleFilm);
+        return view('indian-cinema.accessible-film', [
             'accessibleFilm'    =>  $accessibleFilm,
             'year'              =>  $year,
         ]);
