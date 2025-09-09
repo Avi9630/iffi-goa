@@ -37,12 +37,14 @@
                             </td>
                             <td>
                                 @if (isset($value->link) && !empty($value->link))
-                                    <a href="{{ $value->link }}" class="btn  btn-primary" target="_blank">View</a>
+                                    {{-- <a href="{{ $value->link }}" class="btn  btn-primary" target="_blank">View</a> --}}
+                                    <a href="{{ preg_match('/^https?:\/\//', $value->link) ? $value->link : 'https://' . $value->link }}"
+                                        class="btn btn-primary" target="_blank">View</a>
                                 @elseif(isset($value->image_url) && !empty($value->image_url))
                                     <a href="{{ $value->image_url }}" class="btn  btn-primary" target="_blank">View</a>
                                 @else
-                                    <a href="{{ asset('public/press_release/' . $value->img_src) }}" class="btn  btn-primary"
-                                        target="_blank">View</a>
+                                    <a href="{{ asset('public/press_release/' . $value->img_src) }}"
+                                        class="btn  btn-primary" target="_blank">View</a>
                                 @endif
                             </td>
                         </tr>

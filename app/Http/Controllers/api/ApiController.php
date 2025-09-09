@@ -876,14 +876,14 @@ class ApiController extends Controller
             $output = [
                 'message' => $validator->errors()->first(),
             ];
-
             return $this->response('validatorerrors', $output);
         }
         try {
             // Destination relative to the public path
             $relativePath = $payload['destination'];
+
             $folderPath = public_path($relativePath);
-            
+
             if (!File::exists($folderPath)) {
                 return $this->response('notfound', [
                     'message' => 'Folder not found.',
@@ -892,20 +892,68 @@ class ApiController extends Controller
             }
 
             $files = File::files($folderPath);
+
+            usort($files, function ($a, $b) {
+                return $b->getMTime() <=> $a->getMTime();
+            });
+
             $fileList = [];
-           
+
             foreach ($files as $file) {
                 $fileList[] = [
                     'name' => $file->getFilename(),
-                    'url' => asset('public/'.$relativePath . '/' . $file->getFilename()),
-                    // 'size' => $file->getSize(),
-                    // 'last_modified' => date('Y-m-d H:i:s', $file->getMTime()),
+                    'url' => asset('public/' . $relativePath . '/' . $file->getFilename()),
+                    'destination' => $payload['destination'],
                 ];
             }
 
             return $this->response('success', [
                 'files' => $fileList,
                 'count' => count($fileList),
+            ]);
+        } catch (\Exception $e) {
+            return $this->response('exception', [
+                'message' => $e->getMessage(),
+            ]);
+        }
+    }
+
+    public function deleteFromFolder(Request $request)
+    {
+        $payload = $request->all();
+
+        $validator = Validator::make($payload, [
+            'destination' => 'required',
+            'file_name' => 'required',
+        ]);
+
+        if ($validator->fails()) {
+            return $this->response('validatorerrors', [
+                'message' => $validator->errors()->first(),
+            ]);
+        }
+
+        try {
+            $relativePath = $request->input('destination');
+            $fileName = $request->input('file_name'); // ✅ match with validator
+
+            $folderPath = public_path($relativePath);
+            $filePath = $folderPath . DIRECTORY_SEPARATOR . $fileName;
+            if (!File::exists($filePath)) {
+                return response()->json(
+                    [
+                        'status' => 'notfound',
+                        'message' => 'File not found.',
+                        'file' => $fileName,
+                    ],
+                    404,
+                );
+            }
+            File::delete($filePath);
+            return response()->json([
+                'status' => 'success',
+                'message' => 'File deleted successfully.',
+                'file' => $fileName,
             ]);
         } catch (\Exception $e) {
             return $this->response('exception', [
