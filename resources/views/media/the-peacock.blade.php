@@ -28,23 +28,49 @@
             <div class="row">
                 @foreach ($thepeacock as $value)
                     <div class="col-md-3 col-sm-4 col-xs-12 d-flex">
-                        <a href="{{ asset('public/images/thePeacock/' . $value->img_src) }}" target="_blank"
-                            class="text-decoration-none">
-                            <div class="card shadow-sm w-100">
-                                <div class="card-image min-size-img">
-                                    <img src="{{ asset('public/images/thePeacock/poster/' . ($value->poster ?? 'pdf.jpg')) }}"
-                                        alt="{{ $value->title }} image" class="img-fluid">
-                                </div>
-                                <div class="card-body text-start">
-                                    <div class="card-text d-flex">
-                                        <div class="iCinema-content">
-                                            {{-- <h6 class="title"> {{ $value->title }} </h6> --}}
-                                            <h6 class="text-uppercase"> {{ $value->title }} </h6>
+                        @if (!empty($value->img_src))
+                            <a href="{{ asset('public/images/thePeacock/' . $value->img_src) }}" target="_blank"
+                                class="text-decoration-none">
+                                <div class="card shadow-sm w-100">
+                                    <div class="card-image min-size-img">
+                                        @if (!empty($value->poster))
+                                            <img src="{{ asset('public/images/thePeacock/poster/' . ($value->poster ?? 'pdf.jpg')) }}"
+                                                alt="{{ $value->title }} image" class="img-fluid">
+                                        @else
+                                            <img src="{{ $value->poster_url }}"alt="image" class="img-fluid" loading="lazy">
+                                        @endif
+                                    </div>
+                                    <div class="card-body text-start">
+                                        <div class="card-text d-flex">
+                                            <div class="iCinema-content">
+                                                <h6 class="text-uppercase"> {{ $value->title }} </h6>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </a>
+                            </a>
+                        @else
+                            <a href="{{ $value->image_url }}" target="_blank"
+                                class="text-decoration-none">
+                                <div class="card shadow-sm w-100">
+                                    <div class="card-image min-size-img">
+                                        @if (!empty($value->poster))
+                                            <img src="{{ asset('public/images/thePeacock/poster/' . ($value->poster ?? 'pdf.jpg')) }}"
+                                                alt="{{ $value->title }} image" class="img-fluid">
+                                        @else
+                                            <img src="{{ $value->poster_url }}"alt="image" class="img-fluid" loading="lazy">
+                                        @endif
+                                    </div>
+                                    <div class="card-body text-start">
+                                        <div class="card-text d-flex">
+                                            <div class="iCinema-content">
+                                                <h6 class="text-uppercase"> {{ $value->title }} </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        @endif
                     </div>
                 @endforeach
             </div>
