@@ -29,8 +29,13 @@
                     <div class="col-md-3 col-sm-4 col-xs-12 d-flex">
                         <div class="card shadow-sm w-100">
                             <div class="card-image min-size-img">
-                                <img src="{{ asset('public/images/cureted-section/' . $internationalCinema->img_src) }}"
-                                    alt="{{ $internationalCinema->title }} image" class="img-fluid">
+                                @if (!empty($internationalCinema->img_src))
+                                    <img src="{{ asset('public/images/cureted-section/' . $internationalCinema->img_src) }}"
+                                        alt="{{ $internationalCinema->title }} image" class="img-fluid">
+                                @else
+                                    <img src="{{ $internationalCinema->img_url }}"
+                                        alt="{{ $internationalCinema->title }} image" class="img-fluid">
+                                @endif
                             </div>
                             <div class="card-body text-start">
                                 <div class="card-text d-flex">
@@ -40,7 +45,6 @@
                                                 href="{{ route('international-competition-detail', ['slug' => $internationalCinema?->slug]) }}">
                                                 {{ $internationalCinema->title }}
                                             </a>
-
                                         </h4>
                                         <h5>
                                             <span>Directed by</span>
