@@ -47,9 +47,9 @@ class CuratedSectionController extends Controller
 
     function curetedsection(Request $request, $year, $slug)
     {
-        // dd($slug);
         $curatedSections = CuratedSection::all()->keyBy('id');
         $curatedSectionId = CuratedSection::where('slug', $slug)->pluck('id')->first();
+        // dd($curatedSectionId);
         $internationalCinemas = InternationalCinema::with('curatedSection')
             ->where(['curated_section_id' => $curatedSectionId, 'status' => 1, 'award_year' => $year])
             ->limit(8)
@@ -58,6 +58,7 @@ class CuratedSectionController extends Controller
                 $cinema->curated_section_title = $cinema->curatedSection->title ?? null;
                 return $cinema;
             });
+        // dd($internationalCinemas);
         if ($year == 2025) {
             $cssClass = $this->headerClass($curatedSectionId);
             return view('international-cinema.2025.curated-section-2025', compact('internationalCinemas', 'curatedSections', 'curatedSectionId', 'year', 'cssClass'));
@@ -67,7 +68,7 @@ class CuratedSectionController extends Controller
         } elseif ($year == 2023) {
             $cssClass = $this->headerClass($curatedSectionId);
             return view('international-cinema.2023.curated-section-2023', compact('internationalCinemas', 'curatedSections', 'curatedSectionId', 'year', 'cssClass'));
-        }else{
+        } else {
             return abort(404);
         }
     }
