@@ -382,10 +382,10 @@
                                                 </a>
                                                 <ul class="dropdown-menu">
                                                     <li><a class="dropdown-item"
-                                                            href="{{ route('indian-panorama-jury-feature') }}">Feature</a>
+                                                            href="{{ route('indian-panorama-jury-feature',['year' => 2024]) }}">Feature</a>
                                                     </li>
                                                     <li><a class="dropdown-item"
-                                                            href="{{ route('indian-panorama-jury-non-feature') }}">Non-Feature</a>
+                                                            href="{{ route('indian-panorama-jury-non-feature', ['year' => 2024]) }}">Non-Feature</a>
                                                     </li>
                                                 </ul>
                                             </li>

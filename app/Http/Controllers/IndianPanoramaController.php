@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\IndianPanorama;
 use App\Models\PanoramaCinema;
 use App\Models\IndianCinema;
+use App\Models\JuryDetail;
 use Illuminate\Http\Request;
 
 class IndianPanoramaController extends Controller
@@ -61,4 +62,17 @@ class IndianPanoramaController extends Controller
             'year'              =>  $year,
         ]);
     }
+
+    function juryFeature ($year)
+    {
+        $juryDetails = JuryDetail::where(['official_selection_id' => 1,'status' => 1,'year'=>$year])->get();
+        return view('indian-panorama.indian-panorama-jury-feature', compact('juryDetails'));
+    }
+
+    function juryNonFeature ($year)
+    {
+        $juryDetails = JuryDetail::where(['official_selection_id' => 2,'status' => 1,'year'=>$year])->get();
+        return view('indian-panorama.indian-panorama-jury-non-feature', compact('juryDetails'));
+    }
+
 }
