@@ -8,19 +8,32 @@
         <div class="owl-carousel international">
 
             @foreach ($internationalCinemas as $cinema)
-                @php
-                    $webpImage = preg_replace('/\.\w+$/', '.webp', $cinema->img_src);
-                @endphp
-                <div class="item card">
-                    <img src="{{ asset('public/images/cureted-section/webp/' . $webpImage) }}" alt="image"
-                        class="img-fluid" loading="lazy">
-                    <div class="International-competition">
-                        <p>
-                            <a href="{{ route('international-competition-detail', ['slug' => $cinema->slug]) }}"
-                                class="post-title">{{ $cinema->title }}</a>
-                        </p>
+                @if (!empty($cinema->img_src))
+                    @php
+                        $webpImage = preg_replace('/\.\w+$/', '.webp', $cinema->img_src);
+                    @endphp
+                    <div class="item card">
+                        <img src="{{ asset('public/images/cureted-section/webp/' . $webpImage) }}" alt="image"
+                            class="img-fluid" loading="lazy">
+                        <div class="International-competition">
+                            <p>
+                                <a href="{{ route('international-competition-detail', ['slug' => $cinema->slug]) }}"
+                                    class="post-title">{{ $cinema->title }}</a>
+                            </p>
+                        </div>
                     </div>
-                </div>
+                @else
+                    <div class="item card">
+                        <img src="{{ $cinema->img_url }}" alt="image"
+                            class="img-fluid" loading="lazy">
+                        <div class="International-competition">
+                            <p>
+                                <a href="{{ route('international-competition-detail', ['slug' => $cinema->slug]) }}"
+                                    class="post-title">{{ $cinema->title }}</a>
+                            </p>
+                        </div>
+                    </div>
+                @endif
             @endforeach
         </div>
     </div>

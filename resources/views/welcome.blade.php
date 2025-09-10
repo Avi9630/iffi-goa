@@ -67,7 +67,7 @@
         </div>
     </section>
 
-    {{-- 55th --}}
+    {{--Indian panorama 55th --}}
     <section>
         <div class="container mb-5">
             <div class="section-heading mb-4">
