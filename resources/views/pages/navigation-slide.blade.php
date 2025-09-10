@@ -588,6 +588,14 @@
                                                 <a href="{{ route('about-cmot') }}" class="dropdown-item">About
                                                     CMOT</a>
                                             </li>
+
+                                            <li>
+                                                <a href="https://iffigoa.org/festival/creative-mind-tomorrow"
+                                                    class="nav-link yelow-color-link" target="_blank">
+                                                    Submit your entry - 2025
+                                                </a>
+                                            </li>
+                                            
                                             {{-- Curated Sections 2024 --}}
                                             <li class="nav-item dropend">
                                                 <a class="nav-link dropdown-toggle" href="#" role="button"
@@ -608,6 +616,8 @@
                                                 </ul>
                                             </li>
 
+                                            
+
                                             {{-- <li class="nav-item dropend">
                                                 <a class="nav-link dropdown-toggle" href="#" role="button"
                                                     data-bs-toggle="dropdown" aria-expanded="false">
@@ -625,14 +635,6 @@
                                                     </li>
                                                 </ul>
                                             </li> --}}
-
-                                            <li>
-                                                <a href="https://iffigoa.org/festival/creative-mind-tomorrow"
-                                                    class="nav-link yelow-color-link" target="_blank">
-                                                    Submit your entry
-                                                </a>
-                                            </li>
-
 
                                         </ul>
                                     </li>
