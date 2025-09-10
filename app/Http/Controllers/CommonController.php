@@ -234,7 +234,8 @@ class CommonController extends Controller
 
     public function indianPanorama($year)
     {
-        $indianPanormas = DB::table('indian_panorama_cinema')->where('status', '=', '1')->where('year', '=', $year)->get();
+        $indianPanormas = DB::table('indian_panorama_cinema')
+        ->where('status','1')->where('year', $year)->get();
         return $indianPanormas;
     }
 
