@@ -6,8 +6,8 @@
                 <img src="{{ asset('public/images/header-logo/goa-govt-logo.png') }}" alt="image" class="lap-view">
                 <img src="{{ asset('public/images/header-logo/mib.png') }}" alt="image"
                     style="width: 20%; height: 88px;" class="Mobile-view">
-                <a href="https://filmbazaarindia.com/" target="_blank">
-                    <img src="{{ asset('public/images/header-logo/Film-Bazar.png') }}" alt="image">
+                <a href="https://films.wavesbazaar.com/" target="_blank">
+                    <img src="{{ asset('public/images/header-logo/WavesFilmBazaar.png') }}" alt="image" height="120px" width="120px">
                 </a>
                 <img src="{{ asset('public/images/header-logo/esg-logo.png') }}" alt="image" class="Mobile-view">
                 <img src="{{ asset('public/images/header-logo/GOG.png') }}" alt="image" style="width:9%"
