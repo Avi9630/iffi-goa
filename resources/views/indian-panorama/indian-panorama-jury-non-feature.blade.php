@@ -22,52 +22,48 @@
     <!-- Inner Page Banner Section -->
     <div class="col-lg-12 mt-5 static-content">
         <div class="container">
-
             <div class="international-jury-text mb-4">
                 <h2 class="mt-3">Indian Panorama Jury - Non-Featured</h2>
-                {{-- <h5>Chairperson</h5> --}}
             </div>
-            <div class="card">
-                <div class="card-body">
-                    <div class="row  align-items-center ">
-                        <div class="col-md-7 ">
-                            <div class="international-jury-text">
-                                <h2 class="mt-3">Shri. Subbiah Nallamuthu</h2>
-                                <h5>Chairperson</h5>
-                            </div>
-                        </div>
-                        <div class="col-md-5 ">
-                            <div class="jury_img">
-                                {{-- <img src="{{ asset('public/images/jury/indian-panorama-jury/Shri. Subbiah Nallamuthu.jpg') }}"
-                                    class="img-fluid" style="width:100%"> --}}
-                                <img src="{{ asset('public/images/jury/indian-panorama-jury/Subbiah Nallamuthu.webp') }}"
-                                    class="img-fluid" style="width:100%">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             @php
-                $features = [
-                    'Shri. Rajnikant Acharya, Producer and Film Director',
-                    'Shri. Ronel Haobam, Film Director',
-                    'Ms. Usha Deshpande, Film Director and Producer',
-                    'Ms. Vandana Kohli, Film Director and Writer',
-                    'Shri. Mithunchandra Chaudhari, Film Director',
-                    'Ms. Shalini Shah, Film Director',
-                ];
+                $chairPerson = $juryDetails->where('position', 'CHAIRPERSON')->first();
             @endphp
-
-            @foreach ($features as $key => $feature)
+            @if (!empty($chairPerson))
                 <div class="card">
                     <div class="card-body">
-                        <h3>{{ $feature }}</h3>
+                        <div class="row  align-items-center ">
+                            <div class="col-md-7 ">
+                                <div class="international-jury-text">
+                                    <h2 class="mt-3">{{ $chairPerson->name }}</h2>
+                                    <h5>{{ $chairPerson->position === 'CHAIRPERSON' ? 'Chairperson' : '' }}</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-5 ">
+                                <div class="jury_img">
+                                    @if (!empty($chairPerson->img_src))
+                                        <img src="{{ asset('public/images/jury/indian-panorama-jury/' . $chairPerson->img_src) }}"
+                                            class="img-fluid">
+                                    @else
+                                        <img src="{{ $chairPerson->img_url }}" class="img-fluid">
+                                    @endif
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            @endforeach
-
-
+            @endif
+            @php
+                $chairPersons = $juryDetails->where('position', '!=', 'CHAIRPERSON');
+            @endphp
+            @if (!empty($chairPersons))
+                @foreach ($chairPersons as $key => $chairPerson)
+                    <div class="card">
+                        <div class="card-body">
+                            <h3>{{ $chairPerson['name'] }}, {{ $chairPerson['position'] }}</h3>
+                        </div>
+                    </div>
+                @endforeach
+            @endif
         </div>
     </div>
 @endsection

@@ -961,4 +961,46 @@ class ApiController extends Controller
             ]);
         }
     }
+
+    public function getImageByName(Request $request)
+    {
+        $payload = $request->all();
+        $validator = Validator::make($payload, [
+            'destination' => 'required|string',
+            'name' => 'required|string',
+        ]);
+
+        if ($validator->fails()) {
+            return $this->response('validatorerrors', [
+                'message' => $validator->errors()->first(),
+            ]);
+        }
+
+        try {
+            $relativePath = $payload['destination'];
+            $fileName = $payload['name'];
+            $filePath = public_path($relativePath . '/' . $fileName);
+            if (!File::exists($filePath)) {
+                return $this->response('notfound', [
+                    'message' => 'Image not found.',
+                    'path' => $relativePath,
+                    'name' => $fileName,
+                ]);
+            }
+            $file = new \SplFileInfo($filePath);
+            // dd($file);
+            return $this->response('success', [
+                'file' => $file,
+                'name' => $file->getFilename(),
+                'url' => asset('public/' . $relativePath . '/' . $file->getFilename()),
+                'destination' => $relativePath,
+                'size' => $file->getSize(),
+                'last_modified' => date('Y-m-d H:i:s', $file->getMTime()),
+            ]);
+        } catch (\Exception $e) {
+            return $this->response('exception', [
+                'message' => $e->getMessage(),
+            ]);
+        }
+    }
 }
