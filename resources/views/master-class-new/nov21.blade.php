@@ -34,8 +34,12 @@
                 </ul>
             </div>
             <br>
-            <a href="{{ $topic->masterClass->session_url }}"
-                class="btn btn-sm btn-primary" target="_blank" style="margin-left: 80px"> View session</a>
+            @if (isset($topic->masterClass) && !empty($topic->masterClass))
+                <a href="{{ $topic->masterClass->session_url }}" class="btn btn-sm btn-primary" target="_blank"
+                    style="margin-left: 80px"> View session</a>
+            @endif
+            {{-- <a href="{{ $topic->masterClass->session_url }}"
+                class="btn btn-sm btn-primary" target="_blank" style="margin-left: 80px"> View session</a> --}}
         </div>
     </div>
 </div>
