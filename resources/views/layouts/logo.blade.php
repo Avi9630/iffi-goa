@@ -18,8 +18,8 @@
                 <a href="https://esg.co.in/" target="_blank">
                     <img src="{{ asset('public/images/header-logo/esg-logo.png') }}" alt="esg-logo" loading="lazy">
                 </a>
-                <a href="https://filmbazaarindia.com/" target="_blank">
-                    <img src="{{ asset('public/images/header-logo/Film-Bazar.png') }}" alt="Film-Bazar" loading="lazy">
+                <a href="https://films.wavesbazaar.com/" target="_blank">
+                    <img src="{{ asset('public/images/header-logo/WavesFilmBazaar.png') }}" alt="Film-Bazar" loading="lazy">
                 </a>
                 <a href="https://mib.gov.in/ " target="_blank">
                     <img src="{{ asset('public/images/header-logo/mib-logo.svg') }}" alt="mib-logo" loading="lazy">
