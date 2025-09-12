@@ -29,7 +29,7 @@
                             <a class="nav-link active" id="all-tab" data-bs-toggle="tab" href="#all" role="tab"
                                 aria-controls="all" aria-selected="true">All</a>
                         </li>
-
+                        
                         @foreach ($dates as $index => $date)
                             @php
                                 $formattedId =
@@ -53,19 +53,17 @@
         <div class="tab-content" id="myTabContent">
             {{-- All Tab --}}
             <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
-                @foreach ($dates as $date)
+                @foreach ($topics as $topic)
                     @php
                         $dateKey =
-                            strtolower(\Carbon\Carbon::parse($date->date)->format('M')) .
-                            \Carbon\Carbon::parse($date->date)->format('d');
+                            strtolower(\Carbon\Carbon::parse($topic->masterDate->date)->format('M')) .
+                            \Carbon\Carbon::parse($topic->masterDate->date)->format('d');
                     @endphp
-
-                    @foreach ($topics->where('master_date_id', $date->id)->values() as $i => $topic)
-                        @include("master-class-new.{$dateKey}", ['topic' => $topic, 'index' => $i])
-                    @endforeach
+                    @include("master-class-new.{$dateKey}", ['topic' => $topic])
                 @endforeach
             </div>
-            {{-- Date - wise --}}
+
+            {{-- Per Date Tabs --}}
             @foreach ($dates as $date)
                 @php
                     $formattedId =
@@ -74,9 +72,8 @@
                 @endphp
                 <div class="tab-pane fade" id="{{ $formattedId }}" role="tabpanel"
                     aria-labelledby="{{ $formattedId }}-tab">
-
-                    @foreach ($topics->where('master_date_id', $date->id)->values() as $i => $topic)
-                        @include("master-class-new.{$formattedId}", ['topic' => $topic, 'index' => $i])
+                    @foreach ($topics->where('master_date_id', $date->id) as $topic)
+                        @include("master-class-new.{$formattedId}", ['topic' => $topic])
                     @endforeach
                 </div>
             @endforeach
@@ -124,82 +121,58 @@
     </div>
     <!-- Speakers Popup End -->
 
-
+    {{-- Script Start --}}
     <script>
         const modalData = {!! $modalData !!};
-        console.log(modalData);
-
         document.querySelectorAll('.title-tab').forEach(tab => {
             tab.addEventListener('click', function() {
-                let [dateId, sessionIndex] = this.id.split('-');
-                sessionIndex = parseInt(sessionIndex);
-                const dayData = modalData[dateId] || [];
-                if (!dayData.length) return;
-                if (sessionIndex >= dayData.length) sessionIndex = dayData.length - 1;
-                const data = dayData[sessionIndex];
-                
-                // Reset modal fields first
-                document.getElementById('exampleModalLabel').innerText = '';
-                document.getElementById('modalDate').innerText = '';
-                document.getElementById('modalModerator').innerText = '';
-                document.getElementById('panel').innerText = '';
-                document.getElementById('modalSpeakers').innerHTML = '';
+                const [dateId, sessionIndex] = this.id.split('-');
+                // const data = modalData[dateId][sessionIndex];
+                const data = modalData[dateId]?.[sessionIndex];
                 if (!data) return;
-                
-                // Populate modal with data
-                document.getElementById('exampleModalLabel').innerText = data.title || 'No Title';
-                document.getElementById('modalDate').innerText = data.date || 'No Date';
-                document.getElementById('modalModerator').innerText = data.moderator || 'No Moderator';
-                document.getElementById('panel').innerText = data.panel || 'No Panel';
-                const speakersList = document.getElementById('modalSpeakers');
-                speakersList.innerHTML = '';
+                if (data) {
+                    document.getElementById('exampleModalLabel').innerText = data.title;
+                    document.getElementById('modalDate').innerText = data.date;
+                    document.getElementById('modalModerator').innerText = data.moderator;
+                    document.getElementById('panel').innerText = data.panel;
 
-                if (data.speakers && data.speakers.length > 0) {
+                    // Clear existing speakers and add new ones
+                    const speakersList = document.getElementById('modalSpeakers');
+                    speakersList.innerHTML = '';
                     data.speakers.forEach(speaker => {
                         const li = document.createElement('li');
                         li.className =
                             'list-group-item d-flex justify-content-between align-items-start title-tab';
                         li.style.cursor = 'pointer';
+
+                        // Add onclick event to li for opening the modal
                         li.onclick = function() {
                             showSpeakerDetails(
-                                speaker.name || '',
-                                (speaker.description || '').replace(/\\/g, ''),
-                                speaker.image || ''
+                                speaker.name.replace(/'/g, "\\'"),
+                                speaker.description.replace(/\\/g, ''),
+                                speaker.image.replace(/'/g, "\\'")
                             );
                         };
-                        li.innerHTML = `
-                        <div class="ms-2 me-auto">
-                            <div class="fw-bold">${speaker.name || ''}</div>
-                        </div>
-                        <span>
-                            <img src="${(speaker.image || '').replace('/master-class/', '/master-class/webp/')}" 
-                                 class="img-circle" 
-                                 alt="${speaker.name || ''}">
-                        </span>
-                    `;
+                        // Populate the speaker list item
+                        li.innerHTML =
+                            `<div class="ms-2 me-auto">
+                                <div class="fw-bold">${speaker.name}</div>
+                            </div>
+                            <span>
+                                <img src="${speaker.image.replace('/master-class/', '/master-class/webp/')}" class="img-circle" alt="${speaker.name}">
+                            </span>
+                            `;
                         speakersList.appendChild(li);
                     });
-                } else {
-                    const li = document.createElement('li');
-                    li.className = 'list-group-item text-muted';
-                    li.innerText = "No speakers available";
-                    speakersList.appendChild(li);
                 }
             });
         });
 
         function showSpeakerDetails(name, description, image) {
-            document.getElementById('speakerDetailsLabel').innerText = '';
-            document.getElementById('speakerDescription').innerHTML = '';
-            document.getElementById('speakerImage').src = '';
-            document.getElementById('speakerDetailsLabel').innerText = name || '';
-            document.getElementById('speakerDescription').innerHTML = description || '';
-
-            if (image) {
-                document.getElementById('speakerImage').src = image.replace('/master-class/', '/master-class/webp/');
-            } else {
-                document.getElementById('speakerImage').src = '/images/default-speaker.png'; // fallback image
-            }
+            document.getElementById('speakerDetailsLabel').innerText = name;
+            document.getElementById('speakerDescription').innerHTML  = description;
+            // document.getElementById('speakerImage').src =image;
+            document.getElementById('speakerImage').src = image.replace('/master-class/', '/master-class/webp/');
             const speakerDetailsModal = new bootstrap.Modal(document.getElementById('speakerDetailsModal'));
             speakerDetailsModal.show();
         }

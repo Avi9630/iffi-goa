@@ -14,7 +14,7 @@
         <div class="col-md-7 col-9">
             <div class="callout">
                 <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab"
-                    id="nov{{ strtolower(date('d', strtotime($topic->masterDate->date))) }}-{{ $index }}-trigger">
+                    id="nov{{ strtolower(date('d', strtotime($topic->masterDate->date))) }}-{{ $loop->index }}-trigger">
                     {{ $topic->title }}
                 </h4>
                 <p>
