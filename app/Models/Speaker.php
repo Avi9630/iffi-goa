@@ -13,9 +13,13 @@ class Speaker extends Model
 
     protected $guarded = [];
 
-    // Define the inverse relationship back to the MasterClass model
     public function masterClass()
     {
         return $this->belongsTo(MasterClass::class, 'master_class_id');
+    }
+
+    public function masterTopic()
+    {
+        return $this->belongsTo(MasterClassTopic::class, 'topic_id');
     }
 }
