@@ -670,7 +670,7 @@
                                         </a>
                                         <ul class="dropdown-menu">
                                             {{-- 2025 --}}
-                                            <li class="nav-item dropend">
+                                            {{-- <li class="nav-item dropend">
                                                 <a class="nav-link dropdown-toggle" href="#" role="button"
                                                     data-bs-toggle="dropdown" aria-expanded="false">
                                                     IFFI festival 2025
@@ -684,11 +684,9 @@
                                                     <li>
                                                         <a class="dropdown-item"
                                                             href="{{ route('media.gallery.videos.byYear', ['year' => '2025']) }}">Videos</a>
-                                                        {{-- <a class="dropdown-item"
-                                                            href="{{ route('media.gallery.byYear', ['year' => '2025']) }}">Videos</a> --}}
                                                     </li>
                                                 </ul>
-                                            </li>
+                                            </li> --}}
                                             {{-- 2024 --}}
                                             <li class="nav-item dropend">
                                                 <a class="nav-link dropdown-toggle" href="#" role="button"
@@ -745,9 +743,9 @@
                                         </a>
 
                                         <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item"
+                                            {{-- <li><a class="dropdown-item"
                                                     href="{{ route('the-peacock', ['year' => 2025]) }}">2025</a>
-                                            </li>
+                                            </li> --}}
                                             <li><a class="dropdown-item"
                                                     href="{{ route('the-peacock', ['year' => 2024]) }}">2024</a>
                                             </li>
@@ -780,14 +778,14 @@
                             <!-- Media Section End -->
 
                             <!-- Delegate Registration Section Start -->
-                            {{-- <div class="col-md-3 col-sm-12 ">
+                            <div class="col-md-3 col-sm-12 ">
                                 <h4 class="menu-title ">IFFI Delegate Registration</h4>
                                 <ul class="navbar-nav vertical-menu-custom">
                                     <li class="nav-item">
                                         <a href="https://my.iffigoa.org/" class="nav-link" target="_blank">Delegate
                                             Login</a>
                                     </li>
-                                    <li class="nav-item">
+                                    {{-- <li class="nav-item">
                                         <a href="https://my.iffigoa.org/extranet/media" class="nav-link"
                                             target="_blank">Media Login</a>
                                     </li>
@@ -803,9 +801,9 @@
                                             href="{{ asset('public/images/MediaPdf/Full-IFFI-Schedule-2024.pdf') }}"
                                             target="_blank" class="nav-link">55<sup>th</sup> IFFI Official
                                             Schedule PDF</a>
-                                    </li>
+                                    </li> --}}
                                 </ul>
-                            </div> --}}
+                            </div>
                             <!-- Delegate Registration Section End -->
 
                             <!-- Film Bazaar Section Start -->
@@ -849,11 +847,11 @@
                                             55<sup>th</sup> IFFI Schedule
                                         </a>
                                     </li>
-                                    <li class="nav-item">
+                                    {{-- <li class="nav-item">
                                         <a href="{{ route('master-classes-56th') }}" class="nav-link">
                                             56<sup>th</sup> IFFI Schedule
                                         </a>
-                                    </li>
+                                    </li> --}}
                                     {{-- <li class="nav-item">
                                         <a href="{{ route('master-class', ['id' => 1]) }}" class="nav-link">
                                             Aditya
