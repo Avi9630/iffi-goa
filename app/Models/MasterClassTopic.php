@@ -19,13 +19,23 @@ class MasterClassTopic extends Model
         return $this->hasMany(Speaker::class, 'topic_id');
     }
 
-    public function moderators()
-    {
-        return $this->hasMany(Moderator::class, 'topic_id');
-    }
+    // public function moderators()
+    // {
+    //     return $this->hasMany(Moderator::class, 'topic_id');
+    // }
 
     public function masterDate()
     {
         return $this->belongsTo(MasterDate::class, 'master_date_id');
+    }
+
+    public function moderators()
+    {
+        return $this->hasOne(Moderator::class, 'topic_id');
+    }
+
+    public function moderator()
+    {
+        return $this->hasOne(Moderator::class, 'topic_id');
     }
 }

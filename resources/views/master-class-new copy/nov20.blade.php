@@ -4,8 +4,7 @@
         @if ($topic->masterClass)
             <div class="col-md-2 col-3">
                 <div class="master-time">
-                    <h4 class="time-div">{{ \Carbon\Carbon::parse($topic->masterClass->start_time)->format('g:i A') }}
-                    </h4>
+                    <h4 class="time-div">{{ \Carbon\Carbon::parse($topic->masterClass->start_time)->format('g:i A') }}</h4>
                     <h5 class="time-div">{{ \Carbon\Carbon::parse($topic->masterClass->end_time)->format('g:i A') }}</h5>
                 </div>
             </div>
@@ -13,13 +12,23 @@
 
         <div class="col-md-7 col-9">
             <div class="callout">
-                <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab"
-                    id="nov{{ strtolower(date('d', strtotime($topic->masterDate->date))) }}-{{ $index }}-trigger">
+                @php
+                    // Unique date key per topic
+                    $dateKey = strtolower(\Carbon\Carbon::parse($topic->masterDate->date)->format('M'))
+                             . \Carbon\Carbon::parse($topic->masterDate->date)->format('d');
+                    // Unique ID combining date and loop index
+                    $uniqueId = $dateKey . '-' . $loop->index;
+                @endphp
+
+                <h4 class="title-tab"
+                    id="{{ $uniqueId }}"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                    style="cursor:pointer">
                     {{ $topic->title }}
                 </h4>
-                <p>
-                    {!! $topic->description !!}
-                </p>
+
+                <p>{!! $topic->description !!}</p>
             </div>
         </div>
 
@@ -35,8 +44,10 @@
             </div>
             <br>
             @if (isset($topic->masterClass) && !empty($topic->masterClass))
-                <a href="{{ $topic->masterClass->session_url }}" class="btn btn-sm btn-primary" target="_blank"
-                    style="margin-left: 80px"> View session</a>
+                <a href="{{ $topic->masterClass->session_url }}"
+                   class="btn btn-sm btn-primary"
+                   target="_blank"
+                   style="margin-left: 80px">View session</a>
             @endif
         </div>
     </div>
