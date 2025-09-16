@@ -42,8 +42,8 @@
                     @endforeach
                 </ul>
                 <!-- Category Filter -->
-                <div class="d-flex justify-content-around mt-3">
-                    <div class="form-group" style="width: 70%;">
+                <div class="d-flex justify-content-around mt-3 filter-form">
+                    <div class="input-group">
                         <select name="category_id" id="categorySelect" class="form-select">
                             <option value="">All Categories</option>
                             @foreach ($categories as $category)
@@ -53,9 +53,10 @@
                                 </option>
                             @endforeach
                         </select>
+                         <span class="input-group-text p-0">   <button type="submit" class="btn cus-prim-btn   text-center">Filter</button></span>
                     </div>
                     <div>
-                        <button type="submit" class="btn cus-prim-btn   text-center">Filter</button>
+                    
                     </div>
                 </div>
             </form>
