@@ -10,7 +10,7 @@
                                     <img src="{{ $cube->image_url }}"
                                         alt="Face {{ $key }} - Round {{ $round + 1 }}" loading="lazy" />
                                 @else
-                                    <img src="https://iffigoa.org/public/images/{{ $cube->image_name }}"
+                                    <img src="{{asset('public/images/cube/webp').'/'. $cube->image_name }}"
                                         alt="Face {{ $key }} - Round {{ $round + 1 }}" loading="lazy" />
                                 @endif
                             </a>
