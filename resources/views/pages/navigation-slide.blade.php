@@ -19,8 +19,8 @@
                         <div class="row">
 
                             <!-- About Us Section Start -->
-                            <div class="col-md-3 col-sm-12 ">
-                                <h4 class="menu-title ">About us</h4>
+                            <div class="col-md-3 col-sm-12">
+                                <h4 class="menu-title">About us</h4>
                                 <ul class="navbar-nav vertical-menu-custom">
                                     <li class="nav-item">
                                         <a href="{{ route('about-iffi') }}" class="nav-link">About
@@ -886,21 +886,23 @@
                             <div class="col-md-3 col-sm-12 ">
                                 <h4 class="menu-title ">Waves Film Bazzar</h4>
                                 <ul class="navbar-nav vertical-menu-custom">
-                                    <li class="nav-item">
+                                    {{-- <li class="nav-item">
                                         <a href="https://films.wavesbazaar.com/programme/screenwriters-lab/features/"
                                             class="nav-link" target="_blank">Screenwriters Lab</a>
+                                    </li> --}}
+                                    <li class="nav-item">
+                                        <a href="https://films.wavesbazaar.com/programme/viewing-room/?utm_source=vr&utm_medium=menu&utm_campaign=header"
+                                            class="nav-link" target="_blank">Viewing Room</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="https://films.wavesbazaar.com/programme/work-in-progress-lab/?utm_source=wip&utm_medium=menu&utm_campaign=header"
+                                            class="nav-link" target="_blank">Work In Progress lab</a>
                                     </li>
                                     {{-- <li class="nav-item">
                                         <a href="{{ route('master-classes') }}" class="nav-link">
                                             55<sup>th</sup> IFFI Schedule
                                         </a>
                                     </li> --}}
-                                    {{-- <li class="nav-item">
-                                        <a href="{{ route('master-class', ['id' => 1]) }}" class="nav-link">
-                                            Aditya
-                                        </a>
-                                    </li> --}}
-
                                     {{-- <li class="nav-item dropdown">
 
                                         <a class="nav-link dropdown-toggle" href="#" role="button"
