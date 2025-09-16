@@ -18,7 +18,7 @@
     <div class="container static-content">
         @if ($year != 2023)
             <form method="GET" action="{{ route('search-gallery-by-cat', $year) }}" class="forms-sample" id="filterForm">
-                @csrf
+                {{-- @csrf --}}
                 <!-- Date Filter -->
                 <ul class="nav nav-tabs calander-tab-new-div" id="dateTabs" role="tablist">
                     <li class="nav-item" role="presentation">

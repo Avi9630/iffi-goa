@@ -4,17 +4,18 @@ namespace App\Http\Controllers;
 
 use App\Models\InternationalCinemaBasicDetail;
 use App\Models\InternationalCinemaImage;
+use Illuminate\Support\Facades\Storage;
 use App\Models\InternationalCinema;
 use App\Models\InternationalMedia;
 use App\Models\UnescoHeritageGoa;
 use App\Models\GoaTouristPlace;
 use App\Models\PhotoCategory;
 use Illuminate\Http\Request;
+use App\Models\PressRelease;
 use App\Models\MasterClass;
 use App\Models\NewsUpdate;
-use App\Models\Photo;
-use App\Models\PressRelease;
 use Carbon\CarbonPeriod;
+use App\Models\Photo;
 use DB;
 
 class CommonController extends Controller
@@ -234,8 +235,7 @@ class CommonController extends Controller
 
     public function indianPanorama($year)
     {
-        $indianPanormas = DB::table('indian_panorama_cinema')
-        ->where('status','1')->where('year', $year)->get();
+        $indianPanormas = DB::table('indian_panorama_cinema')->where('status', '1')->where('year', $year)->get();
         return $indianPanormas;
     }
 
@@ -451,5 +451,16 @@ class CommonController extends Controller
     {
         $cubes = DB::table('cubes')->where('status', 1)->orderBy('id', 'DESC')->get();
         return $cubes;
+    }
+
+    function getMenu()
+    {
+        $path = storage_path('app/menu/menu.json');
+        if (!file_exists($path)) {
+            return response()->json(['error' => 'menu.json file not found'], 404);
+        }
+        $json = file_get_contents($path);
+        $data = json_decode($json, true);
+        return $data;
     }
 }

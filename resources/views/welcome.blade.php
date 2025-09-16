@@ -10,6 +10,9 @@
 
     {{-- @include('layouts.timer') --}}
     <!-- Menu Item's -->
+    {{-- @include('pages.navigation-slide', [
+        'menus' => app(\App\Http\Controllers\CommonController::class)->getMenu(),
+    ]) --}}
     @include('pages.navigation-slide') 
 
     <!-- Video Section -->
