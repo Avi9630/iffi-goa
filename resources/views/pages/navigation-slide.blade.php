@@ -19,8 +19,8 @@
                         <div class="row">
 
                             <!-- About Us Section Start -->
-                            <div class="col-md-3 col-sm-12 ">
-                                <h4 class="menu-title ">About us</h4>
+                            <div class="col-md-3 col-sm-12">
+                                <h4 class="menu-title">About us</h4>
                                 <ul class="navbar-nav vertical-menu-custom">
                                     <li class="nav-item">
                                         <a href="{{ route('about-iffi') }}" class="nav-link">About
