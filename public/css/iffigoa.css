@@ -1110,14 +1110,14 @@ footer a:hover {
   flex-wrap: wrap;
   gap: 10px;
 }
-
+.gallery .grid-item{ width:24%;}
 .gallery img {
   width: 100%;
   height: auto;
   min-height: 180px;
   max-height: 180px;
   transition: transform 0.2s;
-  max-width: 270px;
+
   border-radius: 10px;
 }
 
@@ -1971,6 +1971,7 @@ footer a:hover {
   .tab-pane .pb-3 {
     font-size: 20px !important;
   }
+  .gallery .grid-item{ width:100%;}
 }
 
 .master-time .time-div {
@@ -2223,3 +2224,4 @@ body p {
 .owl-carousel-popup .owl-next {
   margin-right: -20px;
 }
+.filter-form{ background-color: #fff; padding: 10px 15px; border-radius: 10px;}
