@@ -14,7 +14,7 @@ class IndianPanoramaController extends Controller
     {
         $payload            =   $request->all();
         $year               =   isset($payload['year']) ? $payload['year'] : '';
-        
+
         $officialFeature = IndianPanorama::with('officialSelection')
             ->where('official_selection_id', 1)
             ->when(!empty($year), function ($query) use ($year) {
@@ -43,19 +43,19 @@ class IndianPanoramaController extends Controller
         ]);
     }
 
-    public function accessibleFilm(Request $request,$year ,$slug )
+    public function accessibleFilm(Request $request, $year, $slug)
     {
         $indianCinemaId =   IndianCinema::where('slug', $slug)->pluck('id')->first();
         $accessibleFilm =   PanoramaCinema::with('accessibleFilm')
-        ->where('indian_cinema_id', $indianCinemaId)
-        ->where('year', $year)
-        ->where('status', 1)
-        ->limit(8)
-        ->get()
-        ->map(function ($cinema) {
-            $cinema->curated_section_title = $cinema->curatedSection->title ?? null;
-            return $cinema;
-        });
+            ->where('indian_cinema_id', $indianCinemaId)
+            ->where('year', $year)
+            ->where('status', 1)
+            ->limit(8)
+            ->get()
+            ->map(function ($cinema) {
+                $cinema->curated_section_title = $cinema->curatedSection->title ?? null;
+                return $cinema;
+            });
         // dd($accessibleFilm);
         return view('indian-cinema.accessible-film', [
             'accessibleFilm'    =>  $accessibleFilm,
@@ -63,16 +63,15 @@ class IndianPanoramaController extends Controller
         ]);
     }
 
-    function juryFeature ($year)
+    function juryFeature($year)
     {
-        $juryDetails = JuryDetail::where(['official_selection_id' => 1,'status' => 1,'year'=>$year])->get();
+        $juryDetails = JuryDetail::where(['jury_type_id' => 1, 'status' => 1, 'year' => $year])->get();
         return view('indian-panorama.indian-panorama-jury-feature', compact('juryDetails'));
     }
 
-    function juryNonFeature ($year)
+    function juryNonFeature($year)
     {
-        $juryDetails = JuryDetail::where(['official_selection_id' => 2,'status' => 1,'year'=>$year])->get();
+        $juryDetails = JuryDetail::where(['jury_type_id' => 2, 'status' => 1, 'year' => $year])->get();
         return view('indian-panorama.indian-panorama-jury-non-feature', compact('juryDetails'));
     }
-
 }

@@ -26,7 +26,7 @@
                 <h2 class="mt-3">Indian Panorama Jury - Non-Featured</h2>
             </div>
             @php
-                $chairPerson = $juryDetails->where('position', 'CHAIRPERSON')->first();
+                $chairPerson = $juryDetails->where('is_chairperson', '1')->first();
             @endphp
             @if (!empty($chairPerson))
                 <div class="card">
@@ -35,7 +35,7 @@
                             <div class="col-md-7 ">
                                 <div class="international-jury-text">
                                     <h2 class="mt-3">{{ $chairPerson->name }}</h2>
-                                    <h5>{{ $chairPerson->position === 'CHAIRPERSON' ? 'Chairperson' : '' }}</h5>
+                                    <h5>{{ $chairPerson->is_chairperson == '1' ? 'Chairperson' : '' }}</h5>
                                 </div>
                             </div>
                             <div class="col-md-5 ">
@@ -53,13 +53,13 @@
                 </div>
             @endif
             @php
-                $chairPersons = $juryDetails->where('position', '!=', 'CHAIRPERSON');
+                $chairPersons = $juryDetails->where('is_chairperson', 0);
             @endphp
             @if (!empty($chairPersons))
                 @foreach ($chairPersons as $key => $chairPerson)
                     <div class="card">
                         <div class="card-body">
-                            <h3>{{ $chairPerson['name'] }}, {{ $chairPerson['position'] }}</h3>
+                            <h3>{{ $chairPerson['name'] }}, {{ $chairPerson['designation'] }}</h3>
                         </div>
                     </div>
                 @endforeach
