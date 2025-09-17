@@ -1,8 +1,11 @@
 @extends('layouts.app')
-@section('site_title', 'Indian Panorama Jury - Feature Films | IFFI Goa 2024')
+@section('site_title', 'Explore IFFI Goa 2024 International Festival Venues')
 @section('site_description',
-    'Discover the esteemed jury panel selecting India’s finest feature films for Indian
-    Panorama at IFFI Goa 2024. Celebrating excellence in Indian cinema.')
+    'Discover the vibrant festival venues of IFFI Goa 2024. Get detailed information on
+    locations, facilities, and events happening at each venue.')
+@section('site_keywords',
+    'IFFI Goa information, IFFI event venue, About IFFI venue, Festival location details, IFFI
+    history and venue, Film festival India, Film festival venue, IFFI international film festival')
 @section('content')
 
     <!-- Header start-->
@@ -14,18 +17,15 @@
     <!-- Menu slide end -->
 
     <!-- Inner Page Banner Section -->
-    <div class="container-fluid page-header bannerBg-feature py-5">
+    <div class="container-fluid page-header bannerBg-ott py-5">
         <div class="container text-center ">
-            <h1 class="page-title-header">Indian Panorama Jury</h1>
+            <h1 class="page-title-header">Best Web Series Preview Committee {{ $year }}</h1>
         </div>
     </div>
     <!-- Inner Page Banner Section -->
     <div class="col-lg-12 mt-5 static-content">
         <div class="container">
-            <div class="international-jury-text mb-4">
-                <h2 class="mt-3">Indian Panorama Jury - Featured </h2>
-            </div>
-            @php
+            {{-- @php
                 $chairPerson = $juryDetails->where('is_chairperson', '1')->first();
             @endphp
             @if (!empty($chairPerson))
@@ -51,7 +51,7 @@
                         </div>
                     </div>
                 </div>
-            @endif
+            @endif --}}
             @php
                 $juries = $juryDetails->where('is_chairperson', 0);
             @endphp
