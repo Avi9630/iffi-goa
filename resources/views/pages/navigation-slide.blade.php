@@ -538,12 +538,12 @@
                                                     target="_blank">View Your Entry 2025</a>
                                             </li>
                                             <li>
-                                                <a href="{{ route('web-series-jury') }}" class="dropdown-item">
+                                                <a href="{{ route('web-series-jury',['year' => 2024]) }}" class="dropdown-item">
                                                     Best Web Series Jury - 2024</a>
                                             </li>
 
                                             <li>
-                                                <a href="{{ route('Best-web-series-previw-commitee-2024') }}"
+                                                <a href="{{ route('best-web-series-previw-commitee', ['year' => 2024]) }}"
                                                     class="dropdown-item">
                                                     Best Web Series Preview Committee 2024</a>
                                             </li>
@@ -603,20 +603,18 @@
                                                     CMOT Jury-2024
                                                 </a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a class="dropdown-item" href="{{ route('cmot-jury') }}"
+                                                    <li><a class="dropdown-item" href="{{ route('cmot-jury',['year' => 2024]) }}"
                                                             class="dropdown-item">
                                                             Selection Jury</a>
                                                     </li>
                                                     <li><a class="dropdown-item"
-                                                            href="{{ route('cmot-grand-jury') }}"
+                                                            href="{{ route('cmot-grand-jury',['year' => 2024]) }}"
                                                             class="dropdown-item">
                                                             Grand Jury</a>
                                                     </li>
 
                                                 </ul>
                                             </li>
-
-                                            
 
                                             {{-- <li class="nav-item dropend">
                                                 <a class="nav-link dropdown-toggle" href="#" role="button"
