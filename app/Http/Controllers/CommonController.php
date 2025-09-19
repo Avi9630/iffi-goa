@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\InternationalCinemaBasicDetail;
 use App\Models\InternationalCinemaImage;
-use Illuminate\Support\Facades\Storage;
 use App\Models\InternationalCinema;
 use App\Models\InternationalMedia;
 use App\Models\UnescoHeritageGoa;
@@ -80,21 +79,6 @@ class CommonController extends Controller
         $latestUpdates = DB::table('latest_update')->where('status', 1)->orderBy('id', 'desc')->get();
         return $latestUpdates;
     }
-
-    // public function internationalCinema()
-    // {
-    //     $internationalCinemas = InternationalCinema::with('curatedSection')
-    //         ->where('curated_section_id', 1)
-    //         ->where('year', 2024)
-    //         ->where('status', 1)
-    //         ->limit(20)
-    //         ->get()
-    //         ->map(function ($cinema) {
-    //             $cinema->curated_section_title = $cinema->curatedSection->title ?? null;
-    //             return $cinema;
-    //         });
-    //     return $internationalCinemas;
-    // }
 
     public function curetedsection2024(Request $request, $slug)
     {
