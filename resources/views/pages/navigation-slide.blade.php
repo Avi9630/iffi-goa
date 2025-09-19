@@ -33,7 +33,8 @@
                                     </li>
 
                                     <li class="nav-item">
-                                        <a href="{{ route('festival-venue') }}" class="nav-link">Festival Venue</a>
+                                        <a href="{{ route('festival-venue', ['year' => 2024]) }}"
+                                            class="nav-link">Festival Venue</a>
                                     </li>
 
                                     <li class="nav-item dropdown">
@@ -63,11 +64,8 @@
                                     </li>
 
                                     <li class="nav-item">
-                                        {{-- <a href="{{ asset('partners-sponsors') }}" class="nav-link">Our Partners &
-                                            Sponsors</a> --}}
-
-                                        <a href="{{ route('partners-sponsors') }}" class="nav-link">Our Partners &
-                                            Sponsors</a>
+                                        <a href="{{ route('partners-sponsors') }}" class="nav-link">
+                                            Our Partners & Sponsors</a>
                                     </li>
 
                                     <li class="nav-item">
@@ -382,7 +380,7 @@
                                                 </a>
                                                 <ul class="dropdown-menu">
                                                     <li><a class="dropdown-item"
-                                                            href="{{ route('indian-panorama-jury-feature',['year' => 2024]) }}">Feature</a>
+                                                            href="{{ route('indian-panorama-jury-feature', ['year' => 2024]) }}">Feature</a>
                                                     </li>
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('indian-panorama-jury-non-feature', ['year' => 2024]) }}">Non-Feature</a>
@@ -538,7 +536,8 @@
                                                     target="_blank">View Your Entry 2025</a>
                                             </li>
                                             <li>
-                                                <a href="{{ route('web-series-jury',['year' => 2024]) }}" class="dropdown-item">
+                                                <a href="{{ route('web-series-jury', ['year' => 2024]) }}"
+                                                    class="dropdown-item">
                                                     Best Web Series Jury - 2024</a>
                                             </li>
 
@@ -595,7 +594,7 @@
                                                     Submit your entry - 2025
                                                 </a>
                                             </li>
-                                            
+
                                             {{-- Curated Sections 2024 --}}
                                             <li class="nav-item dropend">
                                                 <a class="nav-link dropdown-toggle" href="#" role="button"
@@ -603,12 +602,13 @@
                                                     CMOT Jury-2024
                                                 </a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a class="dropdown-item" href="{{ route('cmot-jury',['year' => 2024]) }}"
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cmot-jury', ['year' => 2024]) }}"
                                                             class="dropdown-item">
                                                             Selection Jury</a>
                                                     </li>
                                                     <li><a class="dropdown-item"
-                                                            href="{{ route('cmot-grand-jury',['year' => 2024]) }}"
+                                                            href="{{ route('cmot-grand-jury', ['year' => 2024]) }}"
                                                             class="dropdown-item">
                                                             Grand Jury</a>
                                                     </li>
