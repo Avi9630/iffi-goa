@@ -832,13 +832,29 @@ class ApiController extends Controller
         }
         try {
             if ($request->hasFile('image')) {
-                $file = $request->file('image');
-                $fileName = $file->getClientOriginalName();
-                $fullFilePath = public_path($payload['destination'] . '/' . $fileName);
-                if (File::exists($fullFilePath)) {
-                    File::delete($fullFilePath);
+                // $file = $request->file('image');
+                // $fileName = $file->getClientOriginalName();
+                // $fullFilePath = public_path($payload['destination'] . '/' . $fileName);
+                // if (File::exists($fullFilePath)) {
+                //     File::delete($fullFilePath);
+                // }
+                // $file->move(public_path($payload['destination']), $fileName);
+                
+                $file         = $request->file('image');
+                $destination  = public_path($payload['destination']);
+                $fileName     = pathinfo($file->getClientOriginalName(), PATHINFO_FILENAME);
+                $extension    = $file->getClientOriginalExtension();
+
+                $finalFileName = $fileName . '.' . $extension;
+                $fullFilePath  = $destination . '/' . $finalFileName;
+                $counter = 1;
+                while (File::exists($fullFilePath)) {
+                    $finalFileName = $fileName . '_' . $counter . '.' . $extension;
+                    $fullFilePath  = $destination . '/' . $finalFileName;
+                    $counter++;
                 }
-                $file->move(public_path($payload['destination']), $fileName);
+                $file->move($destination, $finalFileName);
+
                 $response = [
                     'message' => 'File uploaded successfully.!!',
                     'data' => [
