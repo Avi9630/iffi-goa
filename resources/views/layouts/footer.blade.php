@@ -70,8 +70,10 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('festival-venue') }}" class="cus-menuP-link">Festival
+                    <a href="{{ route('festival-venue',['year' => 2024]) }}" class="cus-menuP-link">Festival
                         Venue</a>
+                    {{-- <a href="{{ route('festival-venue') }}" class="cus-menuP-link">Festival
+                        Venue</a> --}}
                 </li>
                 <li>
                     <a href="{{ route('goa-tourist-places') }}" class="cus-menuP-link">
