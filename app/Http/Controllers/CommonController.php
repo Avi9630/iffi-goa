@@ -232,7 +232,9 @@ class CommonController extends Controller
 
     public function technicalCommittee()
     {
-        $partners = ['barco-logo-png.png', 'Puz-Electronics.png', 'Qube-Cinema.png', 'Smpte.png', 'qubewire.jpeg'];
+        // 'barco-logo-png.png'
+        // 'Qube-Cinema.png'
+        $partners = ['qube.png','Puz-Electronics.png', 'Smpte.png', 'qubewire.jpeg'];
 
         return view('technical-committee', ['partners' => $partners]);
     }
