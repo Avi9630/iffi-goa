@@ -31,7 +31,7 @@
                 <h2>List of Technical Committee Members</h2>
             </div>
             <ul class="about-festival-ul">
-                <li>Shri. A K Bir, Chairman – Technical Committee</li>
+                {{-- <li>Shri. A K Bir, Chairman – Technical Committee</li>
                 <li>Shri Shekhar Kapoor, Festival Director IFFI-55</li>
                 <li>Shri Prithul Kumar, MD, NFDC & Joint Secretary Min. of I & B.</li>
                 <li>Smt. Ankita Mishra, CEO, ESG</li>
@@ -48,7 +48,26 @@
                 <li>Chief Engineer (Elect.), Government of Goa</li>
                 <li>The General Manager – INOX</li>
                 <li>Chairman Kala Academy, Goa</li>
-                <li>Shri. D. Ramakrishnan, GM (P&A) and CEO,55th IFFI</li>
+                <li>Shri. D. Ramakrishnan, GM (P&A) and CEO,55th IFFI</li> --}}
+
+                <li>Padma Shri A.K. Bir, Eminent Film Maker.</li>
+                <li>Shri B. Diwakar, Professor in Cinematography.</li>
+                <li>Shri Shekhar Kapoor, Festival Director, 56th IFFI.</li>
+                <li>Shri Prakash Magdum, MD, NFDC.</li>
+                <li>CEO, ESG, Goa.</li>
+                <li>Commissioner, Panaji Municipality, Govt. of Goa.</li>
+                <li>Chief Engineer (Elect.), Govt. of Goa.</li>
+                <li>Health Officer, Panaji, Govt. o f Goa.</li>
+                <li>Chief Fire Officer, Panaji, Govt. o f Goa.</li>
+                <li>Traffic Commissioner, Panaji, Govt. o f Goa.</li>
+                <li>I n charge, INOX Theatre, Goa.</li>
+                <li>Chairman, Kala Academy, Goa.</li>
+                <li>Shri Anirvan Ghosh, M/s. Pulz Electronics.</li>
+                <li>Shri Ketan Mehta, M/s. Real Image/Qube.</li>
+                <li>Shri Ujwal Nirgudkar, M/s. SMPTE.</li>
+                <li>Shri Love Malik, General Manager, PVR/INOX CINEMA.</li>
+                <li>Shri Ramsahay Yadav, Cinematographer, SSE (Formerly Films Division).</li>
+                <li>Shri Gautam Bhanot, General Manager, IFFI, NFDC.</li>
             </ul>
         </section>
 
