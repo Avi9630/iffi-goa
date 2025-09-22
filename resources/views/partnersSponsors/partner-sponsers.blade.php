@@ -690,12 +690,12 @@
                                                 class="img-fluid" alt="TECHNICAL PARTNERS">
                                         </a>
                                     </li>
-                                    <li class="me-2">
+                                    {{-- <li class="me-2">
                                         <a href="https://www.iffigoa.org/public/images/thePartnerSponsor/14.png">
                                             <img src="https://www.iffigoa.org/public/images/thePartnerSponsor/14.png"
                                                 class="img-fluid" alt="TECHNICAL PARTNERS">
                                         </a>
-                                    </li>
+                                    </li> --}}
                                     <li class="me-2">
                                         <a href="https://www.iffigoa.org/public/images/thePartnerSponsor/15.png">
                                             <img src="https://www.iffigoa.org/public/images/thePartnerSponsor/15.png"
