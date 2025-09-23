@@ -31,6 +31,8 @@
                                     <div class="col-md-7">
                                         <div class="international-jury-text">
                                             <h2 class="mt-3">{{ $internationalJury->name }}</h2>
+                                            <h5>{{ isset($internationalJury->is_chairperson) && $internationalJury->is_chairperson == 1 ? 'Chairperson' : '' }}
+                                            </h5>
                                             <h5>{{ $internationalJury->designation }}</h5>
                                             <p>{{ $internationalJury->description }}</p>
                                         </div>
