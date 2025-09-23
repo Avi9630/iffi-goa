@@ -100,7 +100,7 @@
 
                                             {{-- International Jury --}}
                                             <li>
-                                                <a href="{{ route('international-jury') }}"
+                                                <a href="{{ route('international-jury', ['year' => 2024]) }}"
                                                     class="dropdown-item">International Jury - 2024</a>
                                             </li>
 
