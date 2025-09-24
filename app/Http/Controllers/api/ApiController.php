@@ -858,7 +858,7 @@ class ApiController extends Controller
                 $response = [
                     'message' => 'File uploaded successfully.!!',
                     'data' => [
-                        'fileName' => $fileName,
+                        'fileName' => $finalFileName,
                         'destination' => $payload['destination'],
                         'filePath' => $fullFilePath,
                     ],
