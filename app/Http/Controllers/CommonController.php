@@ -225,17 +225,14 @@ class CommonController extends Controller
 
     public function sponsors()
     {
-        $sponsors = ['barco-logo-png.png', 'big-fm.png', 'Google-Arts-Culture-Logo.png', 'inox.png', 'jist.png', 'Marriott-Hotel.png', 'Puz-Electronics.png', 'Qube-Cinema.png', 'Shorts-TV.png', 'ufo.png', 'unicef.png', 'zee-media.png'];
+        $sponsors = ['barco-logo-png.png', 'big-fm.png', 'Google-Arts-Culture-Logo.png', 'inox.png', 'jist.png', 'Marriott-Hotel.png', 'Puz-Electronics.png', 'qube.png', 'Shorts-TV.png', 'ufo.png', 'unicef.png', 'zee-media.png'];
 
         return $sponsors;
     }
 
     public function technicalCommittee()
     {
-        // 'barco-logo-png.png'
-        // 'Qube-Cinema.png'
-        $partners = ['qube.png','Puz-Electronics.png', 'Smpte.png', 'qubewire.jpeg'];
-
+        $partners = ['qube.png', 'Puz-Electronics.png', 'Smpte.png', 'qubewire.jpeg'];
         return view('technical-committee', ['partners' => $partners]);
     }
 
