@@ -27,9 +27,13 @@
                                             IFFI</a>
                                     </li>
 
-                                    <li class="nav-item">
+                                    {{-- <li class="nav-item">
                                         <a href="https://www.youtube.com/watch?v=lsjuObbzDyM" class="nav-link"
                                             target="_blank">Glimpses of IFFI 2023</a>
+                                    </li> --}}
+                                    <li class="nav-item">
+                                        <a href="https://www.youtube.com/watch?v=IoZU1D4HyYk" class="nav-link"
+                                            target="_blank">Glimpses of IFFI 2024</a>
                                     </li>
 
                                     <li class="nav-item">
@@ -263,7 +267,7 @@
                                             </li>
 
                                             {{-- Curated Sections 2023 --}}
-                                            <li class="nav-item dropend">
+                                            {{-- <li class="nav-item dropend">
                                                 <a class="nav-link dropdown-toggle" href="#" role="button"
                                                     data-bs-toggle="dropdown" aria-expanded="false">
                                                     Curated Sections 2023
@@ -310,7 +314,7 @@
                                                             @
                                                             IFFI</a></li>
                                                 </ul>
-                                            </li>
+                                            </li> --}}
                                         </ul>
                                     </li>
 
@@ -882,12 +886,17 @@
 
                             <!-- Waves Film Bazzar Section Start -->
                             <div class="col-md-3 col-sm-12 ">
-                                <h4 class="menu-title ">Waves Film Bazzar</h4>
+                                <h4 class="menu-title ">Waves Film Bazaar</h4>
                                 <ul class="navbar-nav vertical-menu-custom">
                                     {{-- <li class="nav-item">
                                         <a href="https://films.wavesbazaar.com/programme/screenwriters-lab/features/"
                                             class="nav-link" target="_blank">Screenwriters Lab</a>
                                     </li> --}}
+                                    <li class="nav-item">
+                                        <a href="https://films.wavesbazaar.com/participate/attend-as-a-delegate/"
+                                            class="nav-link" target="_blank">Delegate Registration</a>
+                                    </li>
+
                                     <li class="nav-item">
                                         <a href="https://films.wavesbazaar.com/programme/viewing-room/?utm_source=vr&utm_medium=menu&utm_campaign=header"
                                             class="nav-link" target="_blank">Viewing Room</a>
@@ -896,6 +905,37 @@
                                         <a href="https://films.wavesbazaar.com/programme/work-in-progress-lab/?utm_source=wip&utm_medium=menu&utm_campaign=header"
                                             class="nav-link" target="_blank">Work In Progress lab</a>
                                     </li>
+                                    
+                                    <li class="nav-item">
+                                        <a href="https://films.wavesbazaar.com/programme/screenwriters-lab/features/"
+                                            class="nav-link" target="_blank">Screenwriters' Lab</a>
+                                    </li>
+                                    
+                                    <li class="nav-item">
+                                        <a href="https://films.wavesbazaar.com/programme/co-production-market/feature/"
+                                            class="nav-link" target="_blank">Co-Production Market (Feature)</a>
+                                    </li>
+                                    
+                                    <li class="nav-item">
+                                        <a href="https://films.wavesbazaar.com/programme/co-production-market/documentary/"
+                                            class="nav-link" target="_blank">Co-Production Market (Documentary)</a>
+                                    </li>
+                                    
+                                    <li class="nav-item">
+                                        <a href="https://films.wavesbazaar.com/programme/producers-workshop/"
+                                            class="nav-link" target="_blank">Producers Workshop</a>
+                                    </li>
+                                    
+                                    <li class="nav-item">
+                                        <a href="https://films.wavesbazaar.com/programme/market-screenings/"
+                                            class="nav-link" target="_blank">Market Screenings</a>
+                                    </li>
+                                    
+                                    <li class="nav-item">
+                                        <a href="https://films.wavesbazaar.com/programme/knowledge-series/"
+                                            class="nav-link" target="_blank">Knowledge Series</a>
+                                    </li>
+
                                     {{-- <li class="nav-item">
                                         <a href="{{ route('master-classes') }}" class="nav-link">
                                             55<sup>th</sup> IFFI Schedule
