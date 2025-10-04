@@ -26,7 +26,7 @@
         <div class="container">
             <div class=" mt-5 ">
                 <div class="section-heading title-line mb-4">
-                    <h2>55th IFFI Gala Premiere Content</h2>
+                    <h2>55th IFFI Gala Premiere</h2>
                 </div>
                 <div class="mt-4">
                     <p>
@@ -55,7 +55,6 @@
                         Premieres will offer a heady mix of films not only in terms of genres but also languages including
                         Hindi, English, Marathi, Malayalam and Telugu.
                     </p>
-
 
                     <p><b> Gala Premieres Schedule and Red-Carpet Guests </b></p>
                     <div class=" table-responsive mt-2  pb-4">
