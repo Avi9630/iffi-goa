@@ -108,7 +108,7 @@
                                 class="img-fluid img-radius-5" alt="image">
                         </div>
                     </div>
-                    <p><b> Films showcased/cancelled in Gala Premieres </b></p>
+                    <p><b> Films showcased in Gala Premieres </b></p>
                     <div class=" table-responsive mt-2  pb-4">
                         <table class="table table-bordered">
                             <thead>
@@ -182,7 +182,7 @@
                                         (producer), Swaroop Chaturvedi
                                     </td>
                                 </tr>
-                                <tr>
+                                {{-- <tr>
                                     <th scope="row">6</th>
                                     <td>24.11.23</td>
                                     <td>DEAR JASSI (Punjabi)
@@ -194,9 +194,9 @@
                                     <td>Pavia Sidhu (Lead Actor), Yugum Sood (Actor), Gourav Sood (Actor), Tarsem Singh
                                         (Director), Brendon Galvin (DOP)
                                     </td>
-                                </tr>
+                                </tr> --}}
                                 <tr>
-                                    <th scope="row">7</th>
+                                    <th scope="row">6</th>
                                     <td>25.11.23</td>
                                     <td>RAUTU KI BELI (Hindi)
                                     </td>
@@ -208,7 +208,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">8</th>
+                                    <th scope="row">7</th>
                                     <td>26.11.23</td>
                                     <td>DHOOTHA (Amazon Original Series) (Telugu)
                                     </td>
@@ -220,7 +220,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">9</th>
+                                    <th scope="row">8</th>
                                     <td>27.11.23</td>
                                     <td>DIL HAI GRAY (Hindi)
                                     </td>
@@ -232,7 +232,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">10</th>
+                                    <th scope="row">9</th>
                                     <td>27.11.23</td>
                                     <td>GREY GAMES (Kannada)
                                     </td>

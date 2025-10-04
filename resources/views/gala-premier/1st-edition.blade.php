@@ -37,7 +37,7 @@
                         biggest film festival in India, which is held annually in Goa with the intention of understanding
                         and appreciating the global cultural ethos represented through films along with their social
                         interaction and building cooperation and friendships at a global level.</p>
-                    <p>The department conducted an online Film Poster Design Contest as a tribute to the legendary filmmaker
+                    {{-- <p>The department conducted an online Film Poster Design Contest as a tribute to the legendary filmmaker
                         Satyajit Ray. The theme of the contest was <strong> <i>'The One and Only Ray.'</i></strong> Out of
                         635 entries, the jury, which included renowned artists from the fields of art, film, and painting,
                         selected the 75 best film posters. Shyam Benegal, Anjolie Ela Menon, Dhimant Vyas, Radha Binod
@@ -45,19 +45,19 @@
                         including the jury's evaluation, took place online. Each jury panelist received a unique login and
                         password, and the following scoring criteria were considered to adjudicated the winners –
                         <i>creativity and originality, relevance to the theme, visual contest and the visual impact</i>.
-                    </p>
+                    </p> --}}
                     <div class="mt-4 mb-3 pb-4">
                         <img src="{{ asset('public/images/gala-premier/1st-edition/image1.jpg') }}" alt="image"
                             class="img-fluid img-radius-5">
                     </div>
-                    <p>The top three winners received monetary prizes, the winners were awarded with ₹ 1,00,000/- ,the First
+                    {{-- <p>The top three winners received monetary prizes, the winners were awarded with ₹ 1,00,000/- ,the First
                         &amp; Second Runner up with ₹ 75,000 &amp; ₹ 50,000 respectively, as well as a souvenir created from
                         these
                         three winning film poster designs, were presented to dignitaries &amp; eminent personalities
                         attending
                         53rd IFFI. Each jury panelist received a unique login and password, and the following scoring
                         criteria were considered to adjudicated the winners – <b><i>creativity and originality, relevance to
-                                the theme, visual contest and the visual impact</i></b>.</p>
+                                the theme, visual contest and the visual impact</i></b>.</p> --}}
                     <p>Moreover, the department handled the <b>"Gala Premieres and Special Screenings"</b> a new segment of
                         the festival, which intended to bring mainstream film stars to the public and to celebrate
                         international festival with representing their films keeping the spirit of the film festival intact.
@@ -101,12 +101,12 @@
                                     <td>Ajay Devgn, Shriya Saran, Bhushan Kumar, Kumar Mangat Pathak, Abhishek Pathak
                                         (Director)</td>
                                 </tr>
-                                <tr>
+                                {{-- <tr>
                                     <td>22-Nov-22</td>
                                     <td>Tuesday</td>
                                     <td><i></i></td>
                                     <td></td>
-                                </tr>
+                                </tr> --}}
                                 <tr>
                                     <td>23-Nov-22</td>
                                     <td>Wednesday</td>
@@ -211,13 +211,13 @@
                         section featured two films; NFDC’s Co-Production <b><i>Gandhi</i></b> directed by Richard
                         Attenborough and <b><i>The Storyteller</i></b> directed by Ananth Narayan Mahadevan, which is also
                         one of the film at Gala Premieres &amp; Special Screening section.</p>
-                    <p>Additionally, the <b><i>75 Creative Minds Of Tomorrow</i></b> (CMOT) programme was implemented. As
+                    {{-- <p>Additionally, the <b><i>75 Creative Minds Of Tomorrow</i></b> (CMOT) programme was implemented. As
                         part of the
                         first-ever outreach effort by NFDC, the winning film of the 53-hour filmmaking challenge, which was
                         a component of the CMOT, was screened in front of a huge audience of approx. <b><i>2 Crore school
                                 children</i></b>between the ages of 8 and 12 across <b><i>22,000 schools of India</i></b>.
-                    </p>
-                    <div class="row mt-4">
+                    </p> --}}
+                    {{-- <div class="row mt-4">
                         <div class="col-md-6">
                             <div class="redCarp">
                                 <img src="{{ asset('public/images/gala-premier/1st-edition/image8.jpg') }}" alt="image"
@@ -230,7 +230,7 @@
                                     class="img-fluid img-radius-5">
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                     </b>
                 </div>
             </div>

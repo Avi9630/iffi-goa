@@ -27,10 +27,10 @@
                                             IFFI</a>
                                     </li>
 
-                                    <li class="nav-item">
+                                    {{-- <li class="nav-item">
                                         <a href="https://www.youtube.com/watch?v=lsjuObbzDyM" class="nav-link"
                                             target="_blank">Glimpses of IFFI 2023</a>
-                                    </li>
+                                    </li> --}}
 
                                     <li class="nav-item">
                                         <a href="{{ route('festival-venue', ['year' => 2024]) }}"
@@ -263,7 +263,7 @@
                                             </li>
 
                                             {{-- Curated Sections 2023 --}}
-                                            <li class="nav-item dropend">
+                                            {{-- <li class="nav-item dropend">
                                                 <a class="nav-link dropdown-toggle" href="#" role="button"
                                                     data-bs-toggle="dropdown" aria-expanded="false">
                                                     Curated Sections 2023
@@ -310,7 +310,7 @@
                                                             @
                                                             IFFI</a></li>
                                                 </ul>
-                                            </li>
+                                            </li> --}}
                                         </ul>
                                     </li>
 
