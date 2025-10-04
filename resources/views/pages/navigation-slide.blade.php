@@ -525,15 +525,17 @@
                                             data-bs-toggle="dropdown" aria-expanded="false">Best Web
                                             Series</a>
                                         <ul class="dropdown-menu">
-                                            <li>
-                                                <a href="{{ route('web-series-rules-regulations') }}"
-                                                    class="dropdown-item">Rules & Regulations</a>
-                                            </li>
 
                                             <li>
                                                 <a href="{{ route('about-web-series') }}" class="dropdown-item">About
                                                     Web Series</a>
                                             </li>
+
+                                            <li>
+                                                <a href="{{ route('web-series-rules-regulations') }}"
+                                                    class="dropdown-item">Rules & Regulations</a>
+                                            </li>
+                                            
                                             <li>
                                                 <a href="https://iffigoa.org/festival/web-series"
                                                     class="dropdown-item nav-link yelow-color-link"
