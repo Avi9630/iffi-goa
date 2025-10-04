@@ -339,8 +339,8 @@
                         of followers to accept collaboration requests on Instagram. This strategy resulted in maximum and
                         effective reach, ultimately contributing to an increase in registrations.
                     </p>
-                    <p><b>Travel, Hospitality &amp; Badge details</b></p>
-                    <p>The team meticulously managed the logistics for key attendees at the Gala Premieres
+                    {{-- <p><b>Travel, Hospitality &amp; Badge details</b></p> --}}
+                    {{-- <p>The team meticulously managed the logistics for key attendees at the Gala Premieres
                         section for the 54th International Film Festival of India (IFFI), ensuring seamless travel and
                         accommodation arrangements. A total of 97 flight tickets were booked, encompassing 16 in Business
                         Class and 81 in Economy Class. International travel was facilitated with 3 tickets, while 94 tickets
@@ -348,16 +348,16 @@
                         canceled, with an equal number being rebooked. The team also arranged a total of 109 room nights,
                         with an extension of 3 nights for Pavia Sidhu. Notably, room cancellations occurred for Vipul D Shah
                         and Hemant Kevlani, who were scheduled for a 2-day stay.
-                    </p>
-                    <p>
+                    </p> --}}
+                    {{-- <p>
                         Transportation logistics were efficiently handled, with a fleet of 72 vehicles in use. Among these,
                         special arrangements included 1 bulletproof car for Mr.Salman Khan and 2 Luxary vehicles for the
                         director and producer of "Farrey," providing the necessary security and comfort. Standard vehicles
                         constituted the majority, with 68 serving various transportation needs. This comprehensive report on
                         travel, accommodation, and transportation underscores the Gala Team's commitment to delivering a
                         flawless and memorable experience for the esteemed guests and participants at IFFI.
-                    </p>
-                    <p>
+                    </p> --}}
+                    {{-- <p>
                         The Gala team booked flight tickets for Salman Khan’s team, the Farrey cast team, the cast and crew
                         of Grey Games, and the cast and crew of Dear Jassi. And Car Passes were handed over for the
                         remaining Film teams.
@@ -371,13 +371,13 @@
                         No show/Hold - 1 (Pavia Sidhu)<br>
                         Canceled - 27<br>
                         Rebooked - 27
-                    </p>
-                    <p><b>Hospitality</b></p>
+                    </p> --}}
+                    {{-- <p><b>Hospitality</b></p>
                     <p>Total room nights booked - 109<br>
                         Room night Extensions - 3 nights extended for Pavia Sidhu<br>
                         Rooms canceled - Vipul D Shah and Hemant Kevlani did not show up; they were booked for 2 days.
-                    </p>
-                    <p><b>Ground Transport</b></p>
+                    </p> --}}
+                    {{-- <p><b>Ground Transport</b></p>
                     <p>Total vehicles used - 72<br>
                         Luxury vehicles - 1 bullet proof car for Salman Khan and 2 for the director and producer of
                         Farrey<br>
@@ -392,7 +392,7 @@
                         Duty Card - 3 (Black Badge) <br>
                         Special Invitee - 54 (Yellow Badge)<br>
                         Sponsor - 4 (Coca Cola Management)
-                    </p>
+                    </p> --}}
                     <p><b>Audiences Reception</b></p>
                     <p> Audi seating capacities and delegates filled for Gala Premieres
                         The Gala Premiere titles selection process was significantly enhanced through a meticulous and
@@ -475,7 +475,7 @@
                                     <td>231</td>
                                     <td>214</td>
                                 </tr>
-                                <tr>
+                                {{-- <tr>
                                     <td>Dear Jassi (replaced by Attaam)</td>
                                     <td>Gala Premiere</td>
                                     <td>INOX Screen-I Panaji</td>
@@ -483,7 +483,7 @@
                                     <td>14:30</td>
                                     <td>483</td>
                                     <td>404</td>
-                                </tr>
+                                </tr> --}}
                                 <tr>
                                     <td>Rautu Ki Beli</td>
                                     <td>Gala Premiere</td>
@@ -540,7 +540,7 @@
                                 class="img-fluid img-radius-5">
                         </div>
                     </div>
-                    <p><b>⦁ Challenges – Reason for cancellation of Dear Jassi screening:</b></p>
+                    {{-- <p><b>⦁ Challenges – Reason for cancellation of Dear Jassi screening:</b></p>
                     <p>The completion of the 54th International Film Festival of India (IFFI) in 2023 was not without its
                         challenges, exemplified by the unfortunate cancellation of the screening of the film "Dear Jassi."
                         The impediment arose from a legal dispute initiated by M/s. Dreamline Reality Movies, asserting
@@ -555,23 +555,23 @@
                         and audiences. Moving forward, a robust pre-screening legal assessment protocol should be
                         implemented to prevent such disruptions and safeguard the festival's reputation as a fair and
                         reputable showcase for global cinema.
-                    </p>
-                    <p><b>Red Carpets (Strategic Selection)</b> <br>
+                    </p> --}}
+                    {{-- <p><b>Red Carpets (Strategic Selection)</b> <br>
                         Not every title featured in the Indian Panorama merits red-carpet treatment; the exclusive privilege
                         of gracing the red carpet should be reserved solely for premiere titles. This consideration needs to
                         be discussed and strategically planned to encourage new filmmakers while avoiding conflicts. A
                         suggestion could be made to allocate Red Carpet on the 26th and 27th for Indian Panorama section
                         filmmakers, given their nominations and the opportunity to attend the closing ceremony.
-                    </p>
-                    <p> <b>Timing - </b>Most of the Red carpets that were scheduled during the afternoon faced a lot of
+                    </p> --}}
+                    {{-- <p> <b>Timing - </b>Most of the Red carpets that were scheduled during the afternoon faced a lot of
                         problems
                         with the attendance of media and delegates due to the extreme heat and sunny weather. It was
                         difficult for most of the guests to stand in the sun and pose for photos and give interviews. It
                         would be helpful if we can schedule all the red carpets in the morning or evening or make the venue
                         such that it provides a comfortable and smooth experience for the filmmakers, Media, Delegates and
                         the team working on the Red Carpet.
-                    </p>
-                    <p><b> Media -</b> Sometimes no Media whenever there was a major celebrity coming at a different venue
+                    </p> --}}
+                    {{-- <p><b> Media -</b> Sometimes no Media whenever there was a major celebrity coming at a different venue
                         or during
                         the Press Conference. Even when the Media attended the Red Carpet for smaller and less popular films
                         they were less enthusiastic and were present in low numbers. As a film festival it is our duty to
@@ -579,8 +579,8 @@
                         this was a huge disappointment. About Dry Grasses, a captivating Turkish cinematic masterpiece
                         directed by Nuri Bilge Ceylan, had limited media coverage. A better mechanism needs to be in place
                         to overcome this from the next year onward
-                    </p>
-                    <p><b> Quality and Build of the Red Carpet - </b>After a long discussion and brainstorming the team came
+                    </p> --}}
+                    {{-- <p><b> Quality and Build of the Red Carpet - </b>After a long discussion and brainstorming the team came
                         up with the design of the red carpet, but it had many problems. Starting with the entrance stage
                         which was facing the sun the whole day making the guests uncomfortable and sweaty as soon as they
                         entered. A
@@ -593,82 +593,82 @@
                         carpet, and whenever there was a guest coming, we had to close that path which resulted in a lot of
                         delegates complaining as they got delayed for their screening. The entrance dome was damaged in a
                         few days and some wood pieces came out as it was not constructed properly.
-                    </p>
-                    <p><b> Lounge Area -</b> The VIP Lounge at GMC Building and the lounge at INOX was mostly filled with
+                    </p> --}}
+                    {{-- <p><b> Lounge Area -</b> The VIP Lounge at GMC Building and the lounge at INOX was mostly filled with
                         unnecessary people all the time which led to confusion and arguments between team and delegates. We
                         suggest having a dedicated holding area exclusive for the guest and a separate lounge for Media
                         Interaction.
-                    </p>
-                    <p><b> Parking and Car Passes -</b> Sometimes the mismanagement in the parking area and lack of
+                    </p> --}}
+                    {{-- <p><b> Parking and Car Passes -</b> Sometimes the mismanagement in the parking area and lack of
                         transparency between team members created confusion at the entrance and exit.
-                    </p>
-                    <p><b>⦁ Suggestions for Future Gala Premieres &amp; Red Carpet –</b></p>
+                    </p> --}}
+                    {{-- <p><b>⦁ Suggestions for Future Gala Premieres &amp; Red Carpet –</b></p> --}}
                     <div class="container">
-                        <p>⦁ Extended Q&amp;A Sessions: Proposal for a more extended allocation of time for Q&amp;A
+                        {{-- <p>⦁ Extended Q&amp;A Sessions: Proposal for a more extended allocation of time for Q&amp;A
                             sessions,
                             particularly during premieres with red carpets. Noting that the sudden inclusion of Q&amp;A
                             sessions
                             often leads to delays in subsequent screenings. Emphasizing the importance of clear
                             communication regarding hospitality arrangements to ensure seamless and punctual execution.
-                        </p>
-                        <p> ⦁ Pre-Festival Meetings: Suggestion to organize pre-festival meetings for all teams involved.
+                        </p> --}}
+                        {{-- <p> ⦁ Pre-Festival Meetings: Suggestion to organize pre-festival meetings for all teams involved.
                             Highlighting the potential benefits of better coordination and ensuring everyone is on the same
                             page, with clear channels for escalating situations. Recognizing the importance of enhanced
                             communication for a well-coordinated event.
-                        </p>
-                        <p>Multiple Water Stalls &amp; Eco-Friendly Campus: Recommendation for the installation of multiple
+                        </p> --}}
+                        {{-- <p>Multiple Water Stalls &amp; Eco-Friendly Campus: Recommendation for the installation of multiple
                             water stalls across the venue. Noting that this would cater to the hydration needs of delegates
                             and attendees while contributing to the reduction of plastic bottle wastage.
-                        </p>
-                        <p>⦁ Excess Baggage Allowance: Proposal to consider allowing excess baggage for team members.
+                        </p> --}}
+                        {{-- <p>⦁ Excess Baggage Allowance: Proposal to consider allowing excess baggage for team members.
                             Acknowledging the practicality of this adjustment to cater to individuals' needs for carrying
                             essential items during their stay in a different city.
-                        </p>
-                        <p><b>⦁ Infrastructure Improvements for Red Carpets, Barricades, and VIP Lounge Badges</b></p>
-                        <p>⦁ Enhanced Red Carpet Experience:</p>
-                        <p>⦁ Prioritization of proper ventilation in the red carpet area for improved guest comfort.</p>
-                        <p>⦁ Installation of effective ventilation systems and consideration of optimal scheduling for
+                        </p> --}}
+                        {{-- <p><b>⦁ Infrastructure Improvements for Red Carpets, Barricades, and VIP Lounge Badges</b></p> --}}
+                        {{-- <p>⦁ Enhanced Red Carpet Experience:</p> --}}
+                        {{-- <p>⦁ Prioritization of proper ventilation in the red carpet area for improved guest comfort.</p> --}}
+                        {{-- <p>⦁ Installation of effective ventilation systems and consideration of optimal scheduling for
                             weather conditions.
-                        </p>
-                        <p>⦁ Streamlined VIP Lounge Access:</p>
-                        <p>⦁ Introduction of a new badge system to regulate and enhance access to the VIP lounge.</p>
-                        <p>⦁ Restriction of VIP lounge entry exclusively to film teams and red carpet participants, ensuring
+                        </p> --}}
+                        {{-- <p>⦁ Streamlined VIP Lounge Access:</p> --}}
+                        {{-- <p>⦁ Introduction of a new badge system to regulate and enhance access to the VIP lounge.</p> --}}
+                        {{-- <p>⦁ Restriction of VIP lounge entry exclusively to film teams and red carpet participants, ensuring
                             a more organized and secure environment.
-                        </p>
-                        <p>⦁ Rationalization of badges, types, and access is mandatory for the festival, with compulsory
+                        </p> --}}
+                        {{-- <p>⦁ Rationalization of badges, types, and access is mandatory for the festival, with compulsory
                             badge-wearing as a mandate and PR efforts to be undertaken.
-                        </p>
-                        <p> ⦁ Mojo Barricades and Risk Mitigation:</p>
-                        <p>⦁ Strengthening barricades to withstand external pressures, including the incorporation of Mojo
+                        </p> --}}
+                        {{-- <p> ⦁ Mojo Barricades and Risk Mitigation:</p> --}}
+                        {{-- <p>⦁ Strengthening barricades to withstand external pressures, including the incorporation of Mojo
                             Barricades.
-                        </p>
-                        <p>⦁ Proactive risk mitigation strategies, regular assessments, and collaboration with security
+                        </p> --}}
+                        {{-- <p>⦁ Proactive risk mitigation strategies, regular assessments, and collaboration with security
                             experts for crowd management to provide a secure, comfortable, and exclusive experience for all
                             IFFI participants and guests.
-                        </p>
-                        <p>⦁ Instances like the red carpet events of Salman Khan and Muttaiah Murlidharan highlighted the
+                        </p> --}}
+                        {{-- <p>⦁ Instances like the red carpet events of Salman Khan and Muttaiah Murlidharan highlighted the
                             need for mojo barricades, as the team had to prevent them from falling due to external force
                             from the audience and media.
-                        </p>
-                        <p> ⦁ Optimizing Canopy Design for Comfort:</p>
-                        <p>⦁ Addressing concerns about the red carpet canopy's heat generation by exploring advanced cooling
+                        </p> --}}
+                        {{-- <p> ⦁ Optimizing Canopy Design for Comfort:</p> --}}
+                        {{-- <p>⦁ Addressing concerns about the red carpet canopy's heat generation by exploring advanced cooling
                             solutions or alternative materials.
-                        </p>
-                        <p>⦁ Collaborating with architectural experts to redesign the canopy for improved heat dissipation
+                        </p> --}}
+                        {{-- <p>⦁ Collaborating with architectural experts to redesign the canopy for improved heat dissipation
                             while maintaining its aesthetic appeal.
-                        </p>
-                        <p>⦁ Advising the use of a canopy and ensuring decor in-concurrence with NFDC before floating the
+                        </p> --}}
+                        {{-- <p>⦁ Advising the use of a canopy and ensuring decor in-concurrence with NFDC before floating the
                             RFP.
-                        </p>
-                        <p>⦁ Strategic Fan Placement for Efficient Ventilation:</p>
-                        <p>⦁ Implementing a strategic fan placement strategy along the red carpet area to ensure consistent
+                        </p> --}}
+                        {{-- <p>⦁ Strategic Fan Placement for Efficient Ventilation:</p> --}}
+                        {{-- <p>⦁ Implementing a strategic fan placement strategy along the red carpet area to ensure consistent
                             and effective ventilation.
-                        </p>
-                        <p>⦁ Conducting a thorough assessment of the venue's airflow dynamics to position fans strategically
+                        </p> --}}
+                        {{-- <p>⦁ Conducting a thorough assessment of the venue's airflow dynamics to position fans strategically
                             for optimal comfort and smooth event operations.
-                        </p>
-                        <p>⦁ Additional Points:</p>
-                        <p>⦁ An embargo needs to be imposed for each film showcased to the media, and this information
+                        </p> --}}
+                        {{-- <p>⦁ Additional Points:</p> --}}
+                        {{-- <p>⦁ An embargo needs to be imposed for each film showcased to the media, and this information
                             should be communicated to the ticketing and usher teams.
                         </p>
                         <p>⦁ Given a mandate of 11, the team successfully completed 80 Red Carpets within the span of 7
@@ -683,7 +683,7 @@
                         <p>⦁ The Emcees' were diligent &amp; flawless and exceeded the previous year's performance.</p>
                         <p>⦁ Coca Cola, Nuremberg were connected to IFFI for Collaborations, emphasizing their impact on the
                             festival's success.
-                        </p>
+                        </p> --}}
                         <div class="row mt-4 pb-4 ">
                             <div class="col-md-6 col-sm-6 mb-2">
                                 <img src="{{ asset('public/images/gala-premier/2nd-edition/image42.jpg') }}"
@@ -694,7 +694,7 @@
                                     alt="image" class="img-fluid img-radius-5">
                             </div>
                         </div>
-                        <p>⦁ Master Classes Initiatives</p>
+                        {{-- <p>⦁ Master Classes Initiatives</p>
                         <p>⦁ Successfully initiated key connections for Master Classes.</p>
                         <p>⦁ <b><i>Ae Watan Mere Watan integration</i></b>, though initially associated with Gala Premieres,
                             significantly
@@ -705,9 +705,9 @@
                         </p>
                         <p>⦁ Sunny Deol’s masterclass received a positive response, and the special screening of Gadar 2
                             had a good occupancy percentage of over 75%
-                        </p>
-                        <p>⦁ Zoya Akhtar's session for The Archies (Netflix) was handed over by the Gala Premieres team.</p>
-                        <div class="row mt-4  pb-4">
+                        </p> --}}
+                        {{-- <p>⦁ Zoya Akhtar's session for The Archies (Netflix) was handed over by the Gala Premieres team.</p> --}}
+                        {{-- <div class="row mt-4  pb-4">
                             <div class="col-md-6 col-sm-6 mb-2">
                                 <img src="{{ asset('public/images/gala-premier/2nd-edition/image44.jpg') }}"
                                     alt="image" class="img-fluid img-radius-5">
@@ -716,11 +716,11 @@
                                 <img src="{{ asset('public/images/gala-premier/2nd-edition/image45.jpg') }}"
                                     alt="image" class="img-fluid img-radius-5">
                             </div>
-                        </div>
-                        <p>Addressing &amp; implementing these recommendations would undoubtedly contribute to the smoother
+                        </div> --}}
+                        {{-- <p>Addressing &amp; implementing these recommendations would undoubtedly contribute to the smoother
                             operation of future IFFI events, elevating the overall experience for participants and attendees
                             alike.&nbsp;
-                        </p>
+                        </p> --}}
                     </div>
                 </div>
             </div>
