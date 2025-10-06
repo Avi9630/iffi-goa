@@ -16,8 +16,7 @@
                            
                         @else
                             {{ \Carbon\Carbon::parse($topic->masterClass->end_time)->format('g:i A') }}
-                        @endif
-                        
+                        @endif                        
                     </h5>
                 </div>
             </div>
