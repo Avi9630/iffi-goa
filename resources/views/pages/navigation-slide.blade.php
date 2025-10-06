@@ -846,16 +846,19 @@
                             <div class="col-md-3 col-sm-12 ">
                                 <h4 class="menu-title ">Master Classes</h4>
                                 <ul class="navbar-nav vertical-menu-custom">
-                                    <li class="nav-item">
-                                        <a href="{{ route('master-classes') }}" class="nav-link">
-                                            55<sup>th</sup> IFFI Schedule
-                                        </a>
-                                    </li>
+
                                     <li class="nav-item">
                                         <a href="{{ route('master-classes-56th') }}" class="nav-link">
                                             56<sup>th</sup> IFFI Schedule
                                         </a>
                                     </li>
+                                    
+                                    <li class="nav-item">
+                                        <a href="{{ route('master-classes') }}" class="nav-link">
+                                            55<sup>th</sup> IFFI Schedule
+                                        </a>
+                                    </li>
+                                    
                                     {{-- <li class="nav-item">
                                         <a href="{{ route('master-class', ['id' => 1]) }}" class="nav-link">
                                             Aditya
