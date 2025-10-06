@@ -851,11 +851,11 @@
                                             55<sup>th</sup> IFFI Schedule
                                         </a>
                                     </li>
-                                    {{-- <li class="nav-item">
+                                    <li class="nav-item">
                                         <a href="{{ route('master-classes-56th') }}" class="nav-link">
                                             56<sup>th</sup> IFFI Schedule
                                         </a>
-                                    </li> --}}
+                                    </li>
                                     {{-- <li class="nav-item">
                                         <a href="{{ route('master-class', ['id' => 1]) }}" class="nav-link">
                                             Aditya
