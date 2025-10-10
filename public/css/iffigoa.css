@@ -132,7 +132,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 10px;
+  /* padding-top: 10px; abhishek changes */
+  padding-top: 21px;
 }
 
 .top-logo img {
@@ -1110,7 +1111,11 @@ footer a:hover {
   flex-wrap: wrap;
   gap: 10px;
 }
-.gallery .grid-item{ width:24%;}
+
+.gallery .grid-item {
+  width: 24%;
+}
+
 .gallery img {
   width: 100%;
   height: auto;
@@ -1971,7 +1976,10 @@ footer a:hover {
   .tab-pane .pb-3 {
     font-size: 20px !important;
   }
-  .gallery .grid-item{ width:100%;}
+
+  .gallery .grid-item {
+    width: 100%;
+  }
 }
 
 .master-time .time-div {
@@ -2224,4 +2232,24 @@ body p {
 .owl-carousel-popup .owl-next {
   margin-right: -20px;
 }
-.filter-form{ background-color: #fff; padding: 10px 15px; border-radius: 10px;}
+
+.filter-form {
+  background-color: #fff;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
+
+.languages {
+  padding: 2px 10px;
+  border-radius: 25px;
+  border: solid 2px #fff;
+  background-color: transparent;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.languages:hover {
+  border: solid 2px #000;
+  background-color: transparent;
+}
