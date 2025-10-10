@@ -1,43 +1,67 @@
 <div class="mt-4 mb-4">
-    <h2 class="pb-3">November 23rd, 2024</h2>
+    <h2 class="pb-3">November 23rd, 2025</h2>
     <div class="row">
-        <div class="col-md-2 col-12">
+        {{-- <div class="col-md-2 col-12">
             <div class="master-time">
                 <h4 class="time-div">9:45 AM</h4>
                 <h5 class="time-div">10:30 AM</h5>
             </div>
-        </div>
+        </div> --}}
         <div class="col-md-7 col-12">
             <div class="callout">
                 <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov23-0-trigger">
-                    Film Facilitation: Australia & India's Co Production Journey
+                    Create in India: Incentives and Facilitation
                 </h4>
-                <p></p>
+                <p>
+                    <b>About the Session</b> : India is positioning itself as a global production hub with attractive
+                    incentives, skilled talent, and diverse locations. This panel details government support,
+                    single-window clearances, and co-production opportunities for international filmmakers seeking to
+                    shoot and collaborate in India.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-12">
+            <div class="user-profile-icon-know text-center">
+                <p class="text-center">
+                    <img src="{{ asset('public/images/knowledge-series/Guneet Monga.jpg') }}" alt="image">
+                </p>
+                <p class="text-center">Guneet Monga</p>
             </div>
         </div>
     </div>
 </div>
 
 <div class="mt-4 mb-4">
-    <h2 class="pb-3">November 23rd, 2024</h2>
+    <h2 class="pb-3">November 23rd, 2025</h2>
     <div class="row">
-        <div class="col-md-2 col-12">
+        {{-- <div class="col-md-2 col-12">
             <div class="master-time">
                 <h4 class="time-div">10:45 AM</h4>
                 <h5 class="time-div">11:30 PM</h5>
             </div>
-        </div>
+        </div> --}}
         <div class="col-md-7 col-12">
             <div class="callout">
                 <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov23-1-trigger">
-                    Film Independent's Global Media Makers: Building Bridges And Forging Community Around The World
+                    Indian Author & Film Journalist
                 </h4>
                 <p></p>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-12">
+            <div class="user-profile-icon-know text-center">
+                <p class="text-center">
+                    <img src="{{ asset('public/images/knowledge-series/Anupama Chopra.jpg') }}" alt="image">
+                </p>
+                <p class="text-center">Anupama Chopra</p>
             </div>
         </div>
     </div>
 </div>
 
+{{-- 
 <div class="mt-4 mb-4">
     <h2 class="pb-3">November 23rd, 2024</h2>
     <div class="row">
@@ -163,7 +187,6 @@
     </div>
 </div>
 
-
 <div class="mt-4 mb-4">
     <h2 class="pb-3">November 23rd, 2024</h2>
     <div class="row">
@@ -183,4 +206,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}

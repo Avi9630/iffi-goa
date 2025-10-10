@@ -568,6 +568,10 @@
                                             Carpet</a>
                                         <ul class="dropdown-menu">
                                             <li>
+                                                <a href="{{ route('4th-edition') }}" class="dropdown-item">4th
+                                                    Edition (56th IFFI)</a>
+                                            </li>
+                                            <li>
                                                 <a href="{{ route('3rd-edition') }}" class="dropdown-item">3rd
                                                     Edition (55th IFFI)</a>
                                             </li>
@@ -811,10 +815,10 @@
                             <!-- Delegate Registration Section End -->
 
                             <!-- Film Bazaar Section Start -->
-                            {{-- <div class="col-md-3 col-sm-12 ">
+                            <div class="col-md-3 col-sm-12 ">
                                 <h4 class="menu-title ">Film Bazaar</h4>
                                 <ul class="navbar-nav vertical-menu-custom">
-                                    <li class="nav-item">
+                                    {{-- <li class="nav-item">
                                         <a href="https://filmbazaarindia.com/programme/producers-workshop/"
                                             class="nav-link" target="_blank">
                                             Producers' Workshop Registration
@@ -823,23 +827,23 @@
                                     <li class="nav-item">
                                         <a href="https://filmbazaarindia.com/participate/attend-as-a-delegate/"
                                             class="nav-link" target="_blank">Delegate Registration</a>
-                                    </li>
-                                    <li class="nav-item">
+                                    </li> --}}
+                                    {{-- <li class="nav-item">
                                         <a href="https://filmbazaarindia.com/programme/market-screenings/"
                                             class="nav-link" target="_blank">Market Screenings</a>
-                                    </li>
-                                    <li class="nav-item">
+                                    </li> --}}
+                                    {{-- <li class="nav-item">
                                         <a href="{{ route('filmbazaar-mariott-programme') }}" class="nav-link">
                                             Filmbazaar Marriott Stage Programme
                                         </a>
-                                    </li>
+                                    </li> --}}
                                     <li class="nav-item">
                                         <a href="{{ route('knowledge-series') }}" class="nav-link">
                                             Knowledge series
                                         </a>
                                     </li>
                                 </ul>
-                            </div> --}}
+                            </div>
                             <!-- Film Bazaar Section End -->
 
                             <!-- Master class Section Start -->
