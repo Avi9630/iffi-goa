@@ -1,28 +1,41 @@
 <div class="mt-4 mb-4">
-    <h2 class="pb-3">November 22nd, 2024</h2>
+    <h2 class="pb-3">November 22nd, 2025</h2>
     <div class="row">
 
-        <div class="col-md-2 col-12">
+        {{-- <div class="col-md-2 col-12">
             <div class="master-time">
                 <h4 class="time-div">12:45 PM</h4>
                 <h5 class="time-div">1:30 PM</h5>
             </div>
-        </div>
+        </div> --}}
 
         <div class="col-md-7 col-12">
             <div class="callout">
                 <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov22-0-trigger">
-                    Greenlighting Your Project: Strategies for Film & Series Creators
+                    Indian Actor & Producer
                 </h4>
                 <p>
-
+                    <b>Topic</b> : AI and Cinema: Between Creative Possibility and Ethical Boundaries<br>
+                     <b>About the Session</b> : Artificial intelligence is changing every stage of filmmaking—from screenwriting
+                    and casting to VFX and distribution. This panel debates whether AI is an empowering tool that sparks
+                    creativity and efficiency, or a disruptive force that risks homogenizing artistry and
+                    displacing human talent.
                 </p>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-12">
+            <div class="user-profile-icon-know text-center">
+                <p class="text-center">
+                    <img src="{{ asset('public/images/knowledge-series/Rana_Daggubati.jpg') }}" alt="image">
+                </p>
+                <p class="text-center">Rana Daggubati</p>
             </div>
         </div>
     </div>
 </div>
 
-<div class="mt-4 mb-4">
+{{-- <div class="mt-4 mb-4">
     <h2 class="pb-3">November 22nd, 2024</h2>
     <div class="row">
         <div class="col-md-2 col-12">
@@ -100,4 +113,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}

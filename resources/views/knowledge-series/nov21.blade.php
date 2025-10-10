@@ -1,30 +1,35 @@
 <div class="mt-4 mb-4">
-    <h2 class="pb-3">November 21st, 2024</h2>
+    <h2 class="pb-3">November 21st, 2025</h2>
     <div class="row">
-        <div class="col-md-2 col-12">
+        {{-- <div class="col-md-2 col-12">
             <div class="master-time">
                 <h4 class="time-div">2:45 PM</h4>
                 <h5 class="time-div">3:30 PM</h5>
             </div>
-        </div>
+        </div> --}}
         <div class="col-md-7 col-12">
             <div class="callout">
                 <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov21-0-trigger">
-                    State Focus Session: (From Script to Screen: The Role of Government and Industry Collaboration in
-                    Madhya Pradesh )
+                    Emmy Winner Director of Photography
                 </h4>
                 <p>
-                    This panel will focus on the entire filmmaking process from
-                    scripting to production, how government initiatives can help
-                    streamline processes and foster collaboration between various
-                    stakeholders in the industry.
+                    Known for "Adolescence"
                 </p>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-12">
+            <div class="user-profile-icon-know text-center">
+                <p class="text-center">
+                    <img src="{{ asset('public/images/knowledge-series/Matthew Lewis.jpg') }}" alt="image">
+                </p>
+                <p class="text-center">Matthew Lewis</p>
             </div>
         </div>
     </div>
 </div>
 
-<div class="mt-4 mb-4">
+{{-- <div class="mt-4 mb-4">
     <h2 class="pb-3">November 21st, 2024</h2>
     <div class="row">
         <div class="col-md-2 col-12">
@@ -103,4 +108,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
