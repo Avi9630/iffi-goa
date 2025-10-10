@@ -1,5 +1,5 @@
 <!-- About IFFI -->
-<section>
+<section id="welcome">
     <div class="col-lg-12 mb-5">
         <div class="container">
             <div class="section-heading mb-4 text-center mt-5 center-heading">

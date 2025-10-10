@@ -131,10 +131,12 @@ text-decoration: none;
 }
 
 .top-logo {
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding-top: 10px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding-top: 10px; abhishek changes */
+  padding-top: 21px;
 }
 
 .top-logo img {
@@ -2247,10 +2249,29 @@ background-color: #fff;
 padding: 10px 15px;
 border-radius: 10px;
 }
-
 .user-profile-icon-know img{
 height: 150px;
 width: 150px;
 border-radius: 100%;
 margin-left: -5px;
+}
+
+
+.languages {
+  padding: 2px 10px;
+  border-radius: 25px;
+  border: solid 2px #fff;
+  background-color: transparent;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.languages:hover {
+  border: solid 2px #000;
+  background-color: transparent;
+.user-profile-icon-know  img{
+  height: 150px;
+  width: 150px;
+  border-radius: 100%;
+  margin-left: -5px;
 }
