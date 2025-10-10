@@ -15,9 +15,9 @@
     <!-- Menu slide end -->
 
     <!-- Banner Section -->
-    <div class="container-fluid page-header bannerBg-th_edition py-5">
+    <div class="container-fluid page-header bannerBg-56th_edition py-5">
         <div class="container text-center ">
-            <h1 class="page-title-header">55th IFFI Film Festival</h1>
+            <h1 class="page-title-header">56th IFFI Film Festival</h1>
         </div>
     </div>
 
@@ -26,37 +26,35 @@
         <div class="container">
             <div class=" mt-5 ">
                 <div class="section-heading title-line mb-4">
-                    <h2>55th IFFI Gala Premiere</h2>
+                    <h2>56th IFFI Gala Premiere</h2>
                 </div>
                 <div class="mt-4">
                     <p>
-                        In its third edition, the Gala Premieres and Red-Carpet segment at IFFI continues to get bigger and
-                        better in its third edition. With a spectacular line-up of renowned names from the world of cinema,
-                        Gala Premieres, in the last two years, have added the buzz to the red carpet making it glitzy and
-                        glamorous. Launched with the idea of bridging the gap between audiences and stars, gala premieres
-                        and red carpet allows a platform to see and know stars up, close and personal, as they attend the
-                        festival for the World, Asia and India premieres of their respective films.
-                    </p>
-
-                    <p>In our previous two editions, IFFI witnessed participation from films and web series such as Drishyam
-                        2, Ae Watan Mere Watan, Bhediya, Gandhi Talks, Qala, Lost, Goldfish, Kadak Singh, Farrey, Rauta Ka
-                        Raaz, Telugu series Dhootha, international series Fauda (season 4), international documentary
-                        Interactions, among several others, which brought a fine blend of genres catering to a vast spectrum
-                        of cinephiles. Making the red carpet at IFFI the most sought after, we have had noted celebrities
-                        such as Salman Khan, Ajay Devgn, Aditi Rao Hydari, Nawazzudin Siddiqui, Manoj Bajpayee, Varun
-                        Dhawan, AR Rahman, Sunny Deol, Vijay Sethupathi, Karan Johar, Naga Chaitanya, Sara Ali Khan, Pankaj
-                        Tripathi, Nushrat Bharucha gracing the festival with their presence.
+                        In its fourth edition, the Gala Premieres and Red-Carpet segment at IFFI continues to grow bigger
+                        and better. With a spectacular line-up of renowned names from the world of cinema, Gala Premieres in
+                        the past three years have created tremendous buzz, making the red carpet one of the most glamorous
+                        and sought-after highlights of the festival. Conceived with the idea of bridging the gap between
+                        audiences and stars, Gala Premieres and the Red-Carpet segment offer cinephiles an opportunity to
+                        see and engage with artists up close as they attend the festival for the World, Asia, and India
+                        premieres of their respective films.
                     </p>
 
                     <p>
-                        This year, at the 55th IFFI, Gala Premieres and Red-Carpet segment promises to bring forth a
-                        curation of films and series that would satiate movie lovers like never before. From crime
-                        thrillers, murder mysteries to slice of life and socially relevant cinema, the 3rd edition of Gala
-                        Premieres will offer a heady mix of films not only in terms of genres but also languages including
-                        Hindi, English, Marathi, Malayalam and Telugu.
+                        Over the last three editions, IFFI has showcased an impressive mix of films and series such as
+                        Drishyam 2, Ae Watan Mere Watan, Bhediya, Gandhi Talks, Qala, Lost, Goldfish, Kadak Singh, Farrey,
+                        Rauta Ka Raaz, Telugu series Dhootha, international series Fauda (Season 4), and international
+                        documentary Interactions, among several others. These screenings were graced by leading celebrities
+                        including Salman Khan, Ajay Devgn, Aditi Rao Hydari, Nawazuddin Siddiqui, Manoj Bajpayee, Varun
+                        Dhawan, A.R. Rahman, Sunny Deol, Vijay Sethupathi, Karan Johar, Naga Chaitanya, Sara Ali Khan,
+                        Pankaj Tripathi, and Nushrat Bharucha, making the red carpet a truly star-studded affair.
                     </p>
 
-                    <p><b> Gala Premieres Schedule and Red-Carpet Guests </b></p>
+                    <p>
+                        For the 56th IFFI Gala Premieres, the tentative line-up promises an exciting mix of genres and
+                        languages, further raising the bar. Probable titles under consideration include:
+                    </p>
+
+                    {{-- <p><b> Gala Premieres Schedule and Red-Carpet Guests </b></p>
                     <div class=" table-responsive mt-2  pb-4">
                         <table class="table table-bordered ">
                             <tbody>
@@ -193,18 +191,6 @@
 
                                     </td>
                                 </tr>
-                                {{-- <tr>
-                                    <td>November 25, 2024
-                                    </td>
-                                    <td>
-                                        4:30 pm
-                                    </td>
-                                    <td>Kannappa (Showcase)
-                                    </td>
-                                    <td>Vishnu Manchu,<br>
-                                        Prabhudheva, Kajal Aggarwal, R SarathKumar, Mohan Babu, Mukesh Kumar Singh
-                                    </td>
-                                </tr> --}}
                                 <tr>
                                     <td>November 25, 2024
                                     </td>
@@ -265,7 +251,23 @@
                                 </tr>
                             </tbody>
                         </table>
-                    </div>
+                    </div> --}}
+                    <ul>
+                        <li>Tere Ishk Mein - World Premiere (Hindi Feature) *ing Dhanush, Kriti Sanon.</li>
+                        <li>Rahu Ketu - World Premiere (Hindi Feature) *ing Pulkit Samrat, Varun Sharma, Shalini Pandey.
+                        </li>
+                        <li>Hanti Hanti Pa Pa - World Premiere (Bengali Feature) *ing Rukmini Maitra, Chiranjeet
+                            Chakraborty.</li>
+                        <li>Bindusagar - World Premiere (Odia Feature) *ing Prakruti Mishra, Sukant Rath.</li>
+                        <li>Asambhav - World Premiere (Marathi Feature) *ing Sachit Patil,Mukta Barve,Priya Bapat.</li>
+                        <li>Rudhirvana - World Premiere (Kannada Feature) *ing Paavana Gowda,Apoorva, Krishna Hebbale.</li>
+                        <li>Sholay - Special Showcase (4K Restored Classic Hindi Feature) *ing Amitabh Bacchaan, Dharmendra.
+                        </li>
+                    </ul>
+
+                    <p>This diverse selection, ranging from big-banner Hindi releases to regional cinema, international
+                        showcases, and global OTT premieres, will once again make the Gala Premieres and Red-Carpet segment
+                        a marquee attraction of the 56th IFFI.</p>
                 </div>
             </div>
         </div>

@@ -1,4 +1,12 @@
 {{-- Top grid resizing  --}}
+<?php 
+$key = request()->query('testing'); 
+
+if($key){
+    global $web_data_json; 
+   // echo "<pre>";print_r($web_data_json);die();
+}
+?>
 @include('layouts.gig')
 
 {{-- Top Logo & Menu btn --}}

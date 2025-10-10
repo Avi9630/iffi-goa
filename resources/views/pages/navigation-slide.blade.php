@@ -27,9 +27,13 @@
                                             IFFI</a>
                                     </li>
 
-                                    <li class="nav-item">
+                                    {{-- <li class="nav-item">
                                         <a href="https://www.youtube.com/watch?v=lsjuObbzDyM" class="nav-link"
                                             target="_blank">Glimpses of IFFI 2023</a>
+                                    </li> --}}
+                                    <li class="nav-item">
+                                        <a href="https://www.youtube.com/watch?v=IoZU1D4HyYk" class="nav-link"
+                                            target="_blank">Glimpses of IFFI 2024</a>
                                     </li>
 
                                     <li class="nav-item">
@@ -100,7 +104,7 @@
 
                                             {{-- International Jury --}}
                                             <li>
-                                                <a href="{{ route('international-jury') }}"
+                                                <a href="{{ route('international-jury', ['year' => 2024]) }}"
                                                     class="dropdown-item">International Jury - 2024</a>
                                             </li>
 
@@ -263,7 +267,7 @@
                                             </li>
 
                                             {{-- Curated Sections 2023 --}}
-                                            <li class="nav-item dropend">
+                                            {{-- <li class="nav-item dropend">
                                                 <a class="nav-link dropdown-toggle" href="#" role="button"
                                                     data-bs-toggle="dropdown" aria-expanded="false">
                                                     Curated Sections 2023
@@ -310,7 +314,7 @@
                                                             @
                                                             IFFI</a></li>
                                                 </ul>
-                                            </li>
+                                            </li> --}}
                                         </ul>
                                     </li>
 
@@ -521,15 +525,17 @@
                                             data-bs-toggle="dropdown" aria-expanded="false">Best Web
                                             Series</a>
                                         <ul class="dropdown-menu">
-                                            <li>
-                                                <a href="{{ route('web-series-rules-regulations') }}"
-                                                    class="dropdown-item">Rules & Regulations</a>
-                                            </li>
 
                                             <li>
                                                 <a href="{{ route('about-web-series') }}" class="dropdown-item">About
                                                     Web Series</a>
                                             </li>
+
+                                            <li>
+                                                <a href="{{ route('web-series-rules-regulations') }}"
+                                                    class="dropdown-item">Rules & Regulations</a>
+                                            </li>
+                                            
                                             <li>
                                                 <a href="https://iffigoa.org/festival/web-series"
                                                     class="dropdown-item nav-link yelow-color-link"
@@ -561,6 +567,10 @@
                                             Red
                                             Carpet</a>
                                         <ul class="dropdown-menu">
+                                            <li>
+                                                <a href="{{ route('4th-edition') }}" class="dropdown-item">4th
+                                                    Edition (56th IFFI)</a>
+                                            </li>
                                             <li>
                                                 <a href="{{ route('3rd-edition') }}" class="dropdown-item">3rd
                                                     Edition (55th IFFI)</a>
@@ -805,10 +815,10 @@
                             <!-- Delegate Registration Section End -->
 
                             <!-- Film Bazaar Section Start -->
-                            {{-- <div class="col-md-3 col-sm-12 ">
+                            <div class="col-md-3 col-sm-12 ">
                                 <h4 class="menu-title ">Film Bazaar</h4>
                                 <ul class="navbar-nav vertical-menu-custom">
-                                    <li class="nav-item">
+                                    {{-- <li class="nav-item">
                                         <a href="https://filmbazaarindia.com/programme/producers-workshop/"
                                             class="nav-link" target="_blank">
                                             Producers' Workshop Registration
@@ -817,39 +827,42 @@
                                     <li class="nav-item">
                                         <a href="https://filmbazaarindia.com/participate/attend-as-a-delegate/"
                                             class="nav-link" target="_blank">Delegate Registration</a>
-                                    </li>
-                                    <li class="nav-item">
+                                    </li> --}}
+                                    {{-- <li class="nav-item">
                                         <a href="https://filmbazaarindia.com/programme/market-screenings/"
                                             class="nav-link" target="_blank">Market Screenings</a>
-                                    </li>
-                                    <li class="nav-item">
+                                    </li> --}}
+                                    {{-- <li class="nav-item">
                                         <a href="{{ route('filmbazaar-mariott-programme') }}" class="nav-link">
                                             Filmbazaar Marriott Stage Programme
                                         </a>
-                                    </li>
+                                    </li> --}}
                                     <li class="nav-item">
                                         <a href="{{ route('knowledge-series') }}" class="nav-link">
                                             Knowledge series
                                         </a>
                                     </li>
                                 </ul>
-                            </div> --}}
+                            </div>
                             <!-- Film Bazaar Section End -->
 
                             <!-- Master class Section Start -->
                             <div class="col-md-3 col-sm-12 ">
                                 <h4 class="menu-title ">Master Classes</h4>
                                 <ul class="navbar-nav vertical-menu-custom">
+
+                                    <li class="nav-item">
+                                        <a href="{{ route('master-classes-56th') }}" class="nav-link">
+                                            56<sup>th</sup> IFFI Schedule
+                                        </a>
+                                    </li>
+                                    
                                     <li class="nav-item">
                                         <a href="{{ route('master-classes') }}" class="nav-link">
                                             55<sup>th</sup> IFFI Schedule
                                         </a>
                                     </li>
-                                    {{-- <li class="nav-item">
-                                        <a href="{{ route('master-classes-56th') }}" class="nav-link">
-                                            56<sup>th</sup> IFFI Schedule
-                                        </a>
-                                    </li> --}}
+                                    
                                     {{-- <li class="nav-item">
                                         <a href="{{ route('master-class', ['id' => 1]) }}" class="nav-link">
                                             Aditya
@@ -882,12 +895,17 @@
 
                             <!-- Waves Film Bazzar Section Start -->
                             <div class="col-md-3 col-sm-12 ">
-                                <h4 class="menu-title ">Waves Film Bazzar</h4>
+                                <h4 class="menu-title ">Waves Film Bazaar</h4>
                                 <ul class="navbar-nav vertical-menu-custom">
                                     {{-- <li class="nav-item">
                                         <a href="https://films.wavesbazaar.com/programme/screenwriters-lab/features/"
                                             class="nav-link" target="_blank">Screenwriters Lab</a>
                                     </li> --}}
+                                    <li class="nav-item">
+                                        <a href="https://films.wavesbazaar.com/participate/attend-as-a-delegate/"
+                                            class="nav-link" target="_blank">Delegate Registration</a>
+                                    </li>
+
                                     <li class="nav-item">
                                         <a href="https://films.wavesbazaar.com/programme/viewing-room/?utm_source=vr&utm_medium=menu&utm_campaign=header"
                                             class="nav-link" target="_blank">Viewing Room</a>
@@ -896,6 +914,37 @@
                                         <a href="https://films.wavesbazaar.com/programme/work-in-progress-lab/?utm_source=wip&utm_medium=menu&utm_campaign=header"
                                             class="nav-link" target="_blank">Work In Progress lab</a>
                                     </li>
+                                    
+                                    <li class="nav-item">
+                                        <a href="https://films.wavesbazaar.com/programme/screenwriters-lab/features/"
+                                            class="nav-link" target="_blank">Screenwriters' Lab</a>
+                                    </li>
+                                    
+                                    <li class="nav-item">
+                                        <a href="https://films.wavesbazaar.com/programme/co-production-market/feature/"
+                                            class="nav-link" target="_blank">Co-Production Market (Feature)</a>
+                                    </li>
+                                    
+                                    <li class="nav-item">
+                                        <a href="https://films.wavesbazaar.com/programme/co-production-market/documentary/"
+                                            class="nav-link" target="_blank">Co-Production Market (Documentary)</a>
+                                    </li>
+                                    
+                                    <li class="nav-item">
+                                        <a href="https://films.wavesbazaar.com/programme/producers-workshop/"
+                                            class="nav-link" target="_blank">Producers Workshop</a>
+                                    </li>
+                                    
+                                    <li class="nav-item">
+                                        <a href="https://films.wavesbazaar.com/programme/market-screenings/"
+                                            class="nav-link" target="_blank">Market Screenings</a>
+                                    </li>
+                                    
+                                    <li class="nav-item">
+                                        <a href="https://films.wavesbazaar.com/programme/knowledge-series/"
+                                            class="nav-link" target="_blank">Knowledge Series</a>
+                                    </li>
+
                                     {{-- <li class="nav-item">
                                         <a href="{{ route('master-classes') }}" class="nav-link">
                                             55<sup>th</sup> IFFI Schedule

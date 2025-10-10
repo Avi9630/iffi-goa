@@ -1,25 +1,39 @@
 <div class="mt-4 mb-4">
-    <h2 class="pb-3">November 24th, 2024</h2>
+    <h2 class="pb-3">November 24th, 2025</h2>
     <div class="row">
-        <div class="col-md-2 col-12">
+        {{-- <div class="col-md-2 col-12">
             <div class="master-time">
                 <h4 class="time-div">9:45 AM</h4>
                 <h5 class="time-div">10:30 AM</h5>
             </div>
-        </div>
+        </div> --}}
         <div class="col-md-7 col-12">
             <div class="callout">
                 <h4 data-bs-toggle="modal" data-bs-target="#exampleModal" class="title-tab" id="nov24-0-trigger">
-                    Film Facilitation: Spain & India's Co Production Journey
+                    Indian Actor
                 </h4>
                 <p>
+                    <b>Topic</b> : The Rise of Pan-Indian to Pan-World Cinema.<br>
+                    <b>About the Session</b> : South Indian films and other regional industries have propelled the idea of
+                    “pan-Indian” cinema. Now, their impact is reaching global audiences. This session examines the
+                    international success of Indian films, strategies for global positioning, and the shift toward truly
+                    “pan-world” storytelling.
                 </p>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-12">
+            <div class="user-profile-icon-know text-center">
+                <p class="text-center">
+                    <img src="{{ asset('public/images/knowledge-series/Mohanlal.jpg') }}" alt="image">
+                </p>
+                <p class="text-center">Mohanlal</p>
             </div>
         </div>
     </div>
 </div>
 
-<div class="mt-4 mb-4">
+{{-- <div class="mt-4 mb-4">
     <h2 class="pb-3">November 24th, 2024</h2>
     <div class="row">
         <div class="col-md-2 col-12">
@@ -60,9 +74,9 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 
-<div class="mt-4 mb-4">
+{{-- <div class="mt-4 mb-4">
     <h2 class="pb-3">November 24th, 2024</h2>
     <div class="row">
         <div class="col-md-2 col-12">
@@ -166,4 +180,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}

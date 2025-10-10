@@ -4,9 +4,20 @@
         @if ($topic->masterClass)
             <div class="col-md-2 col-3">
                 <div class="master-time">
-                    <h4 class="time-div">{{ \Carbon\Carbon::parse($topic->masterClass->start_time)->format('g:i A') }}
+                    <h4 class="time-div">
+                        @if ($topic->masterClass->start_time == null)
+                           
+                        @else
+                            {{ \Carbon\Carbon::parse($topic->masterClass->start_time)->format('g:i A') }}
+                        @endif
                     </h4>
-                    <h5 class="time-div">{{ \Carbon\Carbon::parse($topic->masterClass->end_time)->format('g:i A') }}</h5>
+                    <h5 class="time-div">
+                        @if ($topic->masterClass->start_time == null)
+                           
+                        @else
+                            {{ \Carbon\Carbon::parse($topic->masterClass->end_time)->format('g:i A') }}
+                        @endif                        
+                    </h5>
                 </div>
             </div>
         @endif

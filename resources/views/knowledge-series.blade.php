@@ -9,7 +9,7 @@
     <!-- Menu slide end -->
 
     <!-- Inner Page Banner Section -->
-    <div class="container-fluid page-header bannerBg-knowledge-series py-5">
+    <div class="container-fluid page-header py-5">
         <div class="container text-center ">
             <h1 class="page-title-header">Knowledge Series</h1>
         </div>
@@ -18,7 +18,7 @@
         <!-- Inner Page Banner Section -->
         <div class="container mt-5 static-content ">
 
-            <div class="row">
+            {{-- <div class="row">
                 <div class="col-sm-12">
                     <div class="master-nav-bar">
                         <ul class="nav nav-tabs custom-tab-list nav-justified " id="myTabD" role="tablist">
@@ -33,7 +33,7 @@
                         </ul>
                     </div>
                 </div>
-            </div>
+            </div> --}}
 
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
@@ -51,50 +51,7 @@
             </div>
 
         </div>
-
-        </div>
-
-        {{-- POPUP --}}
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <ul class="list-icon">
-                            <li><i class="fa fa-clock-o" aria-hidden="true"></i> <span id="modalDate"></span></li>
-                            <li>
-                                {{-- <i class="fa fa-briefcase" aria-hidden="true"></i> --}}
-                                <span id="panel"></span>
-                            </li>
-                            <li><i class="fa fa-user" aria-hidden="true"></i> Moderator :- <span id="modalModerator"></span>
-                            </li>
-                        </ul>
-                        <h4>Speakers</h4>
-                        <ol class="list-group list-group-numbered" id="modalSpeakers"></ol>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Speaker Details Modal -->
-            <div class="modal fade" id="speakerDetailsModal" tabindex="-1" aria-labelledby="speakerDetailsLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="speakerDetailsLabel"></h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <img id="speakerImage" src="" alt="Speaker Image" class="img-fluid mb-3" />
-                            <p id="speakerDescription"></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Speakers Popup End -->
+        
     </section>
     {{-- Script Start --}}
     <script>
@@ -670,32 +627,32 @@
                 color: #3db223 !important;
             } */
 
-        .knowledge-series .custom-tab-list li a {
+        /* .knowledge-series .custom-tab-list li a {
             color: #3db223 !important;
-        }
+        } */
 
-        .knowledge-series .custom-tab-list li {
+        /* .knowledge-series .custom-tab-list li {
             border-right: solid 1px #3db223;
-        }
+        } */
 
-        .knowledge-series .callout {
+        /* .knowledge-series .callout {
             border-left: solid 4px #3db223;
-        }
+        } */
 
-        .knowledge-series h2,
+        /* .knowledge-series h2,
         h4,
         h5 {
             color: #3db223;
-        }
+        } */
 
-        .knowledge-series .custom-tab-list li .active {
+        /* .knowledge-series .custom-tab-list li .active {
             background: #3db2234a !important;
             border-bottom: solid 3px #3db223 !important;
-        }
+        } */
 
-        .knowledge-series .custom-tab-list li a:hover {
+        /* .knowledge-series .custom-tab-list li a:hover {
             background: #3db2234a !important;
             border-bottom: solid 3px #3db223 !important;
-        }
+        } */
     </style>
 @endsection

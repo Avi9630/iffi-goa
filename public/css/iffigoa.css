@@ -747,6 +747,12 @@ footer a:hover {
   background-size: cover;
 }
 
+.bannerBg-56th_edition {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../images/main-header/iffi-56th-edition.jpg) center center no-repeat !important;
+  background-size: cover;
+}
+
 .bannerBg-Gallery-banner {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url(../images/main-header/Gallery-banner.jpg) center center no-repeat;
@@ -1110,7 +1116,11 @@ footer a:hover {
   flex-wrap: wrap;
   gap: 10px;
 }
-.gallery .grid-item{ width:24%;}
+
+.gallery .grid-item {
+  width: 24%;
+}
+
 .gallery img {
   width: 100%;
   height: auto;
@@ -1971,7 +1981,10 @@ footer a:hover {
   .tab-pane .pb-3 {
     font-size: 20px !important;
   }
-  .gallery .grid-item{ width:100%;}
+
+  .gallery .grid-item {
+    width: 100%;
+  }
 }
 
 .master-time .time-div {
@@ -2224,4 +2237,16 @@ body p {
 .owl-carousel-popup .owl-next {
   margin-right: -20px;
 }
-.filter-form{ background-color: #fff; padding: 10px 15px; border-radius: 10px;}
+
+.filter-form {
+  background-color: #fff;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
+.user-profile-icon-know  img{
+  height: 150px;
+  width: 150px;
+  border-radius: 100%;
+  margin-left: -5px;
+}
