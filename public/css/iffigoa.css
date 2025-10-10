@@ -748,6 +748,12 @@ footer a:hover {
   background-size: cover;
 }
 
+.bannerBg-56th_edition {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../images/main-header/iffi-56th-edition.jpg) center center no-repeat !important;
+  background-size: cover;
+}
+
 .bannerBg-Gallery-banner {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url(../images/main-header/Gallery-banner.jpg) center center no-repeat;
@@ -2239,6 +2245,7 @@ body p {
   border-radius: 10px;
 }
 
+<<<<<<< HEAD
 
 .languages {
   padding: 2px 10px;
@@ -2252,4 +2259,11 @@ body p {
 .languages:hover {
   border: solid 2px #000;
   background-color: transparent;
+=======
+.user-profile-icon-know  img{
+  height: 150px;
+  width: 150px;
+  border-radius: 100%;
+  margin-left: -5px;
+>>>>>>> f8ecf4c88baf8a21550be68d795169591bade054
 }
