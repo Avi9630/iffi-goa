@@ -941,9 +941,13 @@
                                     </li>
                                     
                                     <li class="nav-item">
-                                        <a href="https://films.wavesbazaar.com/programme/knowledge-series/"
+                                        <a href="https://iffigoa.org/knowledge-series"
                                             class="nav-link" target="_blank">Knowledge Series</a>
                                     </li>
+                                    {{-- <li class="nav-item">
+                                        <a href="https://films.wavesbazaar.com/programme/knowledge-series/"
+                                            class="nav-link" target="_blank">Knowledge Series</a>
+                                    </li> --}}
 
                                     {{-- <li class="nav-item">
                                         <a href="{{ route('master-classes') }}" class="nav-link">
