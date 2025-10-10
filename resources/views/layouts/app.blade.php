@@ -1,3 +1,11 @@
+<?php 
+$key = request()->query('testing'); 
+
+if($key){
+    global $web_data_json; 
+    $web_data_json = json_decode(file_get_contents(public_path('web_data.json')), true); 
+}
+?>  
 <!doctype html>
 <html lang="en">
 
