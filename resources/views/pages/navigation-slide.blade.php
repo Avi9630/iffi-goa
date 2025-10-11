@@ -37,7 +37,7 @@
                                     </li>
 
                                     <li class="nav-item">
-                                        <a href="{{ route('festival-venue', ['year' => 2024]) }}"
+                                        <a href="{{ route('festival-venue') }}"
                                             class="nav-link">Festival Venue</a>
                                     </li>
 
