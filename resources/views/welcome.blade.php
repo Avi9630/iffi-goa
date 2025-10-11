@@ -113,6 +113,6 @@
     @include('pages.message')
 
     <!-- Sponsors  Section-->
-    @include('pages.sponsors_partners')
+    <!-- @include('pages.sponsors_partners') -->
 
 @endsection
