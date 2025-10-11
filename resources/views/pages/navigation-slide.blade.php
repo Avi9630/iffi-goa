@@ -876,13 +876,13 @@
 
                                     <li class="nav-item">
                                         <a href="{{ route('knowledge-series') }}" class="nav-link">
-                                            Knowledge series
+                                            Knowledge Series Calender
                                         </a>
                                     </li>
 
                                     <li class="nav-item">
                                         <a href="https://films.wavesbazaar.com/programme/market-screenings/"
-                                            class="nav-link" target="_blank">Market Screenings</a>
+                                            class="nav-link" target="_blank">Market Screening</a>
                                     </li>
 
                                     <li class="nav-item">
