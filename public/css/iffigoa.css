@@ -2272,10 +2272,11 @@ body p {
 .languages:hover {
   border: solid 2px #000;
   background-color: transparent;
+}
 
-  .user-profile-icon-know img {
-    height: 150px;
-    width: 150px;
-    border-radius: 100%;
-    margin-left: -5px;
-  }
+.user-profile-icon-know img {
+  height: 150px;
+  width: 150px;
+  border-radius: 100%;
+  margin-left: -5px;
+}
