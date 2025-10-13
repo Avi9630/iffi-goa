@@ -31,6 +31,7 @@
                                         <a href="https://www.youtube.com/watch?v=lsjuObbzDyM" class="nav-link"
                                             target="_blank">Glimpses of IFFI 2023</a>
                                     </li> --}}
+
                                     <li class="nav-item">
                                         <a href="https://www.youtube.com/watch?v=IoZU1D4HyYk" class="nav-link"
                                             target="_blank">Glimpses of IFFI 2024</a>
@@ -91,9 +92,19 @@
                                         <ul class="dropdown-menu">
 
                                             <li>
+                                                <a href="{{ route('international-cinema-awards') }}"
+                                                    class="dropdown-item">International Cinema Awards - 2025</a>
+                                            </li>
+
+                                            <li>
                                                 <a href="https://filmfreeway.com/InternationalFilmFestivalofIndiaIFFI-Goa"
                                                     class="dropdown-item nav-link yelow-color-link" target="_blank">View
                                                     Your Entry</a>
+                                            </li>
+
+                                            <li>
+                                                <a href="{{ route('icinema-rules-regulation') }}"
+                                                    class="dropdown-item">Rules & Regulations</a>
                                             </li>
 
                                             {{-- Rules & regulation --}}
