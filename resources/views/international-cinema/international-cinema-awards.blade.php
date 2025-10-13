@@ -14,7 +14,7 @@
     @include('pages.navigation-slide')
     <!-- Menu slide end -->
     <!-- Inner Page Banner Section -->
-    <div class="container-fluid page-header bannerBg-rules py-5">
+    <div class="container-fluid page-header bannerBg-international-cinema-awards py-5">
         <div class="container text-center ">
             <h1 class="page-title-header">International Cinema Awards - 2025</h1>
         </div>
