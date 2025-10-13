@@ -15,7 +15,7 @@
     <!-- Inner Page Banner Section -->
     <div class="container-fluid page-header bannerBg-festival-venue py-5">
         <div class="container text-center ">
-            <h1 class="page-title-header">MASTERCLASS AND IN- CONVERSATION SESSION</h1>
+            <h1 class="page-title-header">MASTERCLASS AND <br> IN- CONVERSATION SESSION</h1>
         </div>
     </div>
 
