@@ -31,13 +31,14 @@
                                         <a href="https://www.youtube.com/watch?v=lsjuObbzDyM" class="nav-link"
                                             target="_blank">Glimpses of IFFI 2023</a>
                                     </li> --}}
+
                                     <li class="nav-item">
                                         <a href="https://www.youtube.com/watch?v=IoZU1D4HyYk" class="nav-link"
                                             target="_blank">Glimpses of IFFI 2024</a>
                                     </li>
 
                                     <li class="nav-item">
-                                        <a href="{{ route('festival-venue', ['year' => 2024]) }}"
+                                        <a href="{{ route('festival-venue') }}"
                                             class="nav-link">Festival Venue</a>
                                     </li>
 
@@ -91,9 +92,19 @@
                                         <ul class="dropdown-menu">
 
                                             <li>
+                                                <a href="{{ route('international-cinema-awards') }}"
+                                                    class="dropdown-item">International Cinema Awards - 2025</a>
+                                            </li>
+
+                                            <li>
                                                 <a href="https://filmfreeway.com/InternationalFilmFestivalofIndiaIFFI-Goa"
                                                     class="dropdown-item nav-link yelow-color-link" target="_blank">View
                                                     Your Entry</a>
+                                            </li>
+
+                                            <li>
+                                                <a href="{{ route('icinema-rules-regulation') }}"
+                                                    class="dropdown-item">Rules & Regulations</a>
                                             </li>
 
                                             {{-- Rules & regulation --}}
@@ -814,38 +825,6 @@
                             </div>
                             <!-- Delegate Registration Section End -->
 
-                            <!-- Film Bazaar Section Start -->
-                            <div class="col-md-3 col-sm-12 ">
-                                <h4 class="menu-title ">Film Bazaar</h4>
-                                <ul class="navbar-nav vertical-menu-custom">
-                                    {{-- <li class="nav-item">
-                                        <a href="https://filmbazaarindia.com/programme/producers-workshop/"
-                                            class="nav-link" target="_blank">
-                                            Producers' Workshop Registration
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="https://filmbazaarindia.com/participate/attend-as-a-delegate/"
-                                            class="nav-link" target="_blank">Delegate Registration</a>
-                                    </li> --}}
-                                    {{-- <li class="nav-item">
-                                        <a href="https://filmbazaarindia.com/programme/market-screenings/"
-                                            class="nav-link" target="_blank">Market Screenings</a>
-                                    </li> --}}
-                                    {{-- <li class="nav-item">
-                                        <a href="{{ route('filmbazaar-mariott-programme') }}" class="nav-link">
-                                            Filmbazaar Marriott Stage Programme
-                                        </a>
-                                    </li> --}}
-                                    <li class="nav-item">
-                                        <a href="{{ route('knowledge-series') }}" class="nav-link">
-                                            Knowledge series
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- Film Bazaar Section End -->
-
                             <!-- Master class Section Start -->
                             <div class="col-md-3 col-sm-12 ">
                                 <h4 class="menu-title ">Master Classes</h4>
@@ -907,6 +886,17 @@
                                     </li>
 
                                     <li class="nav-item">
+                                        <a href="{{ route('knowledge-series') }}" class="nav-link">
+                                            Knowledge Series Calender
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="https://films.wavesbazaar.com/programme/market-screenings/"
+                                            class="nav-link" target="_blank">Market Screening</a>
+                                    </li>
+
+                                    <li class="nav-item">
                                         <a href="https://films.wavesbazaar.com/programme/viewing-room/?utm_source=vr&utm_medium=menu&utm_campaign=header"
                                             class="nav-link" target="_blank">Viewing Room</a>
                                     </li>
@@ -934,42 +924,6 @@
                                         <a href="https://films.wavesbazaar.com/programme/producers-workshop/"
                                             class="nav-link" target="_blank">Producers Workshop</a>
                                     </li>
-                                    
-                                    <li class="nav-item">
-                                        <a href="https://films.wavesbazaar.com/programme/market-screenings/"
-                                            class="nav-link" target="_blank">Market Screenings</a>
-                                    </li>
-                                    
-                                    <li class="nav-item">
-                                        <a href="https://films.wavesbazaar.com/programme/knowledge-series/"
-                                            class="nav-link" target="_blank">Knowledge Series</a>
-                                    </li>
-
-                                    {{-- <li class="nav-item">
-                                        <a href="{{ route('master-classes') }}" class="nav-link">
-                                            55<sup>th</sup> IFFI Schedule
-                                        </a>
-                                    </li> --}}
-                                    {{-- <li class="nav-item dropdown">
-
-                                        <a class="nav-link dropdown-toggle" href="#" role="button"
-                                            data-bs-toggle="dropdown" aria-expanded="false">About Goa
-                                        </a>
-                                        <ul class="dropdown-menu">
-
-                                            <li>
-                                                <a href="{{ route('goa-tourist-places') }}" class="dropdown-item">Goa
-                                                    Tourist Places</a>
-                                            </li>
-
-                                            <li>
-                                                <a href="{{ route('connectivity') }}" class="dropdown-item">
-                                                    Connectivity </a>
-                                            </li>
-
-                                        </ul>
-
-                                    </li> --}}
                                 </ul>
                             </div>
                             <!-- Waves Film Bazzar Section End -->

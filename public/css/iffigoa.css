@@ -129,10 +129,12 @@
 }
 
 .top-logo {
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 10px;
+  /* padding-top: 10px; abhishek changes */
+  padding-top: 21px;
 }
 
 .top-logo img {
@@ -498,7 +500,8 @@ footer {
   color: #fff;
 }
 
-/* .footer-logo{ display:flex; justify-content: space-between; margin-bottom: 30px; border-bottom: solid 1px #9fa0a9; padding-bottom: 15px;} */
+/* .footer-logo{ display:flex; justify-content: space-between; margin-bottom: 30px; border-bottom: solid 1px #9fa0a9;
+padding-bottom: 15px;} */
 .footer-logo {
   display: flex;
   justify-content: space-between;
@@ -614,7 +617,7 @@ footer a:hover {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url(../images/main-header/aboutbg.jpg) center center no-repeat;
   /* background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-        url(../images/main-header/55-IFFI-Goa.png) center center no-repeat; */
+url(../images/main-header/55-IFFI-Goa.png) center center no-repeat; */
   background-size: cover;
   /* padding: 150px 0!important; */
   /* height: 100%; */
@@ -723,9 +726,14 @@ footer a:hover {
 }
 
 .bannerBg-rules {
-  /* background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/main-header/rules.jpg) center center no-repeat; */
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url(../images/main-header/rules1.jpg) center center no-repeat;
+  background-size: cover;
+}
+
+.bannerBg-international-cinema-awards {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../images/main-header/internatonal-bg.jpg) center center no-repeat;
   background-size: cover;
 }
 
@@ -1181,7 +1189,7 @@ footer a:hover {
   border-left: solid 4px #1b809e;
 }
 
-/* .user-profile-icon{  } */
+/* .user-profile-icon{ } */
 .user-profile-icon ul {
   padding: 0;
   margin: 0;
@@ -1499,21 +1507,21 @@ footer a:hover {
 }
 
 /* .modal-header {
-    justify-content: space-between;
-    & img {
-        width: 4vw;
-    }
-    & .btn-close {
-        margin: 0;
-        background-color: white;
-        border-radius: 50%;
-    }
+justify-content: space-between;
+& img {
+width: 4vw;
+}
+& .btn-close {
+margin: 0;
+background-color: white;
+border-radius: 50%;
+}
 } */
 .update-btn-content.modal-content {
   background: #3c063c url(../images/peacock.png) center no-repeat;
 
   /* background: linear-gradient(rgb(88 65 85 / 70%), rgb(0 0 0 / 70%)),
-        url(../images/peacock.png) bottom no-repeat; */
+url(../images/peacock.png) bottom no-repeat; */
   & a {
     text-decoration: none;
   }
@@ -1540,8 +1548,8 @@ footer a:hover {
   }
 
   /* & p:nth-child(4) {
-        color: #03ff03;
-    } */
+color: #03ff03;
+} */
   & .link a {
     text-decoration: none;
     /* background: #ffffff; */
@@ -1559,7 +1567,7 @@ footer a:hover {
 }
 
 /* .modal.fade .modal-dialog {
-    animation: slideOutRight 0.5s ease forwards;
+animation: slideOutRight 0.5s ease forwards;
 } */
 
 .countdown-bg {
@@ -2002,44 +2010,44 @@ footer a:hover {
 /* Calender css */
 
 /* #categoryField input[type="radio"] {
-    visibility: hidden !important;
-    width: 1px;
+visibility: hidden !important;
+width: 1px;
 }
 
 .calander {
-    background: url(../images/calander-icon.png) left top no-repeat;
-    width: 76px;
-    height: 88px;
-    text-align: center;
-    margin: 5px;
-    font-weight: bold;
-    cursor: pointer;
+background: url(../images/calander-icon.png) left top no-repeat;
+width: 76px;
+height: 88px;
+text-align: center;
+margin: 5px;
+font-weight: bold;
+cursor: pointer;
 }
 
 #categoryField .active {
-    background: url(../images/calander-icon-active.png) left top no-repeat;
-    width: 76px;
-    height: 88px;
-    text-align: center;
-    margin: 5px;
+background: url(../images/calander-icon-active.png) left top no-repeat;
+width: 76px;
+height: 88px;
+text-align: center;
+margin: 5px;
 }
 
 .calander-text {
-    display: flex;
-    flex-direction: column;
-    line-height: normal;
-    width: 76px;
+display: flex;
+flex-direction: column;
+line-height: normal;
+width: 76px;
 }
 
 .calander-text .white-text {
-    color: #fff;
-    margin-bottom: 5px;
+color: #fff;
+margin-bottom: 5px;
 }
 
 .custom-calander-group {
-    display: flex;
-    justify-content: center;
-    column-gap: 20px;
+display: flex;
+justify-content: center;
+column-gap: 20px;
 } */
 
 .calander-tab-new-div {
@@ -2244,9 +2252,30 @@ body p {
   border-radius: 10px;
 }
 
-.user-profile-icon-know  img{
+.user-profile-icon-know img {
   height: 150px;
   width: 150px;
   border-radius: 100%;
   margin-left: -5px;
 }
+
+
+.languages {
+  padding: 2px 10px;
+  border-radius: 25px;
+  border: solid 2px #fff;
+  background-color: transparent;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.languages:hover {
+  border: solid 2px #000;
+  background-color: transparent;
+
+  .user-profile-icon-know img {
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+    margin-left: -5px;
+  }
