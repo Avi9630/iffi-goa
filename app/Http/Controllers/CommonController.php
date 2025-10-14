@@ -52,7 +52,6 @@ class CommonController extends Controller
         $datas = DB::table('highlights')
             ->where(['status' => 1])
             ->get();
-
         return $datas;
     }
 
