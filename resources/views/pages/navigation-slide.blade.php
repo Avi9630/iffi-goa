@@ -39,7 +39,7 @@
 
                                     <li class="nav-item">
                                         <a href="{{ route('festival-venue') }}"
-                                            class="nav-link">Festival Venue</a>
+                                            class="nav-link">Festival Venues</a>
                                     </li>
 
                                     <li class="nav-item dropdown">
