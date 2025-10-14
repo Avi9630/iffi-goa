@@ -19,7 +19,7 @@
     <!-- Inner Page Banner Section -->
     <div class="container-fluid page-header bannerBg-festival-venue py-5">
         <div class="container text-center ">
-            <h1 class="page-title-header">Festival Venue</h1>
+            <h1 class="page-title-header">Festival Venues</h1>
         </div>
     </div>
     <!-- Inner Page Banner Section -->
