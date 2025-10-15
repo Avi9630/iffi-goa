@@ -1,7 +1,7 @@
 <div class="col-lg-12 mb-5">
     <div class="container">
         <div class="section-heading mb-4">
-            <p>Showcasing 54<sup>th</sup> Indian Cinema's</p>
+            <p>Showcasing 55<sup>th</sup> IFFI Highlights!</p>
             <h2>Highlights!</h2>
         </div>
         <div class="owl-carousel">
