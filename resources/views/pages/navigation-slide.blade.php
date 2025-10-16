@@ -612,7 +612,7 @@
                                             <li>
                                                 <a href="https://iffigoa.org/festival/creative-mind-tomorrow"
                                                     class="nav-link yelow-color-link" target="_blank">
-                                                    Submit your entry - 2025
+                                                    View your entry - 2025
                                                 </a>
                                             </li>
 
@@ -624,9 +624,14 @@
                                                 </a>
                                                 <ul class="dropdown-menu">
                                                     <li><a class="dropdown-item"
+                                                            href="{{ route('cmot-jury', ['year' => 2025]) }}"
+                                                            class="dropdown-item">
+                                                            Selection Jury 2025</a>
+                                                    </li>
+                                                    <li><a class="dropdown-item"
                                                             href="{{ route('cmot-jury', ['year' => 2024]) }}"
                                                             class="dropdown-item">
-                                                            Selection Jury</a>
+                                                            Selection Jury 2024</a>
                                                     </li>
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('cmot-grand-jury', ['year' => 2024]) }}"

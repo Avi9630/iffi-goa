@@ -42,7 +42,7 @@
                     <ul class="text-highlight">
                         <li>
                             <a href="https://iffigoa.org/festival/creative-mind-tomorrow" class="cus-menuP-link"
-                                target="_blank">Submit your entry</a>
+                                target="_blank">View your entry</a>
                         </li>
                     </ul>
                 </div>
