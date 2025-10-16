@@ -93,7 +93,7 @@
                         <p><b>Please Note: </b>For any further queries please write to creativeminds@nfdcindia.com</p>
                         <div class="col-12 text-center mt-5">
                             <a href="https://iffigoa.org/festival/creative-mind-tomorrow" class="btn cus-prim-btn m-auto"
-                                target="_blank">Submit your entry</a>
+                                target="_blank">View your entry</a>
                         </div>
                         <br>
                     </div>
