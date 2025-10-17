@@ -102,11 +102,6 @@
                                                     Your Entry</a>
                                             </li>
 
-                                            <li>
-                                                <a href="{{ route('icinema-rules-regulation') }}"
-                                                    class="dropdown-item">Rules & Regulations</a>
-                                            </li>
-
                                             {{-- Rules & regulation --}}
                                             <li>
                                                 <a href="{{ route('icinema-rules-regulation') }}"
@@ -620,7 +615,7 @@
                                             <li class="nav-item dropend">
                                                 <a class="nav-link dropdown-toggle" href="#" role="button"
                                                     data-bs-toggle="dropdown" aria-expanded="false">
-                                                    CMOT Jury-2024
+                                                    CMOT Jury
                                                 </a>
                                                 <ul class="dropdown-menu">
                                                     <li><a class="dropdown-item"
