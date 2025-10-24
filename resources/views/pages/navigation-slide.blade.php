@@ -806,7 +806,7 @@
                                     </li>
                                     <li class="nav-item">
                                         <a href="https://accreditation.pib.gov.in/eventregistration/login.aspx" class="nav-link"
-                                            target="_blank">Delegate Accreditation</a>
+                                            target="_blank">Media Accreditation</a>
                                     </li>
                                     {{--
                                     <li class="nav-item">
