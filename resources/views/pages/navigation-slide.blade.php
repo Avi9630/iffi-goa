@@ -804,10 +804,11 @@
                                         <a href="https://my.iffigoa.org/" class="nav-link" target="_blank">Delegate
                                             Login</a>
                                     </li>
-                                    {{-- <li class="nav-item">
-                                        <a href="https://my.iffigoa.org/extranet/media" class="nav-link"
-                                            target="_blank">Media Login</a>
+                                    <li class="nav-item">
+                                        <a href="https://accreditation.pib.gov.in/eventregistration/login.aspx" class="nav-link"
+                                            target="_blank">Delegate Accreditation</a>
                                     </li>
+                                    {{--
                                     <li class="nav-item">
                                         <a href="https://filmguide.iffigoa.org/" class="nav-link"
                                             target="_blank">Film Guide & Ticket Booking</a>
@@ -923,6 +924,18 @@
                                     <li class="nav-item">
                                         <a href="https://films.wavesbazaar.com/programme/producers-workshop/"
                                             class="nav-link" target="_blank">Producers Workshop</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Waves Film Bazzar Section End -->
+                           
+                            <!-- Waves Film Bazzar Section Start -->
+                            <div class="col-md-3 col-sm-12 ">
+                                <h4 class="menu-title ">WAVEX</h4>
+                                <ul class="navbar-nav vertical-menu-custom">
+                                    <li class="nav-item">
+                                        <a href="https://wavex.wavesbazaar.com/"
+                                            class="nav-link" target="_blank">SLOT Booking</a>
                                     </li>
                                 </ul>
                             </div>
