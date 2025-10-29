@@ -50,10 +50,15 @@ class CuratedSectionController extends Controller
         $curatedSections = CuratedSection::all()->keyBy('id');
         $curatedSectionId = CuratedSection::where('slug', $slug)->pluck('id')->first();
 
+        // $internationalCinemas = InternationalCinema::with('curatedSection')
+        //     ->where(['curated_section_id' => $curatedSectionId, 'status' => 1, 'award_year' => $year])
+        //     ->paginate(8);
+        
         $internationalCinemas = InternationalCinema::with('curatedSection')
-            ->where(['curated_section_id' => $curatedSectionId, 'status' => 1, 'award_year' => $year])
+            ->where(['curated_section_id' => $curatedSectionId, 'status' => 1])
+            ->whereJsonContains('show_year', (string) $year)
             ->paginate(8);
-
+            
         $internationalCinemas->each(function ($cinema) {
             $cinema->curated_section_title = $cinema->curatedSection->title ?? null;
         });
