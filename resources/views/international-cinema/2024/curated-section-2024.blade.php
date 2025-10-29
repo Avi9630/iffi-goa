@@ -29,8 +29,6 @@
                     <div class="col-md-3 col-sm-4 col-xs-12 d-flex">
                         <div class="card shadow-sm w-100">
                             <div class="card-image min-size-img">
-                                {{-- <img src="{{ asset('public/images/cureted-section/' . $internationalCinema->img_src) }}"
-                                    alt="{{ $internationalCinema->title }} image" class="img-fluid"> --}}
                                 @if (!empty($internationalCinema->img_src))
                                     <img src="{{ asset('public/images/cureted-section/' . $internationalCinema->img_src) }}"
                                         alt="{{ $internationalCinema->title }} image" class="img-fluid">
@@ -70,6 +68,9 @@
                         </div>
                     </div>
                 @endforeach
+            </div>
+            <div class="d-flex justify-content-center">
+                {{ $internationalCinemas->links() }}
             </div>
         </div>
     </div>
