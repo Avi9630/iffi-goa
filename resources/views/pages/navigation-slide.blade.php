@@ -324,42 +324,6 @@
                                         </ul>
                                     </li>
 
-                                    <!-- Indian Debut Director Award menu Start-->
-                                    {{-- <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="#" role="button"
-                                            data-bs-toggle="dropdown" aria-expanded="false">Indian Debut
-                                            Director
-                                            Awards</a>
-                                        <ul class="dropdown-menu">
-                                            <li>
-                                                <a href="{{ route('about-debut-director') }}"
-                                                    class="dropdown-item">About Debut Director</a>
-                                            </li>
-                                            <li>
-                                                <a href="{{ route('debut-director-jury') }}"
-                                                    class="dropdown-item">Debut Director Jury - 2024</a>
-                                            </li>
-                                            <li>
-                                                <a href="{{ route('debut-directors-previw-commitee-2024') }}"
-                                                    class="dropdown-item">
-                                                    Debut Director Preview Committee 2024</a>
-                                            </li>
-                                            <li><a class="dropdown-item"
-                                                    href="{{ route('debut-director-films', ['slug' => 'debut-director-films']) }}">Official
-                                                    Selection - Debut Director Films</a>
-                                            </li>
-                                            <li>
-                                                <a href="https://iffigoa.org/festival/indian-debut-director"
-                                                    class="dropdown-item nav-link yelow-color-link"
-                                                    target="_blank">View your entry</a>
-                                            </li>
-                                            <li>
-                                                <a href="{{ route('dd-rules-regulations') }}"
-                                                    class="dropdown-item">Rules & Regulations</a>
-                                            </li>
-                                        </ul>
-                                    </li> --}}
-
                                     <!-- Indian Panorama-->
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" role="button"
@@ -603,15 +567,13 @@
                                                 <a href="{{ route('about-cmot') }}" class="dropdown-item">About
                                                     CMOT</a>
                                             </li>
-
                                             <li>
                                                 <a href="https://iffigoa.org/festival/creative-mind-tomorrow"
                                                     class="nav-link yelow-color-link" target="_blank">
                                                     View your entry - 2025
                                                 </a>
                                             </li>
-
-                                            {{-- Curated Sections 2024 --}}
+                                            {{--CMOT JURY --}}
                                             <li class="nav-item dropend">
                                                 <a class="nav-link dropdown-toggle" href="#" role="button"
                                                     data-bs-toggle="dropdown" aria-expanded="false">
@@ -629,32 +591,17 @@
                                                             Selection Jury 2024</a>
                                                     </li>
                                                     <li><a class="dropdown-item"
-                                                            href="{{ route('cmot-grand-jury', ['year' => 2024]) }}"
+                                                            href="{{ route('cmot-grand-jury', ['year' => 2025]) }}"
                                                             class="dropdown-item">
-                                                            Grand Jury</a>
-                                                    </li>
-
-                                                </ul>
-                                            </li>
-
-                                            {{-- <li class="nav-item dropend">
-                                                <a class="nav-link dropdown-toggle" href="#" role="button"
-                                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                                    CMOT Jury-2025
-                                                </a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a class="dropdown-item" href="{{ route('cmot-jury') }}"
-                                                            class="dropdown-item">
-                                                            Selection Jury</a>
+                                                            Grand Jury 2025</a>
                                                     </li>
                                                     <li><a class="dropdown-item"
-                                                            href="{{ route('cmot-grand-jury') }}"
+                                                            href="{{ route('cmot-grand-jury', ['year' => 2024]) }}"
                                                             class="dropdown-item">
-                                                            Grand Jury</a>
+                                                            Grand Jury 2024</a>
                                                     </li>
                                                 </ul>
-                                            </li> --}}
-
+                                            </li>
                                         </ul>
                                     </li>
 
