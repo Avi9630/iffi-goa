@@ -68,6 +68,9 @@
                     </div>
                 @endforeach
             </div>
+            <div class="d-flex justify-content-center">
+                {{ $internationalCinemas->links() }}
+            </div>
         </div>
     </div>
 @endsection
