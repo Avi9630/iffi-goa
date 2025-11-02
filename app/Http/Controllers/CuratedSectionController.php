@@ -58,7 +58,7 @@ class CuratedSectionController extends Controller
             ->where(['curated_section_id' => $curatedSectionId, 'status' => 1])
             ->whereJsonContains('show_year', (string) $year)
             ->paginate(8);
-            
+        
         $internationalCinemas->each(function ($cinema) {
             $cinema->curated_section_title = $cinema->curatedSection->title ?? null;
         });

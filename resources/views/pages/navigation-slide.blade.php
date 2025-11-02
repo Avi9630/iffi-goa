@@ -426,6 +426,14 @@
                                         </ul>
                                     </li>
 
+                                    {{-- Cinema AI --}}
+                                    <ul class="navbar-nav vertical-menu-custom">
+                                        <li class="nav-item">
+                                            <a href="https://films.wavesbazaar.com/programme/cinemai-hackathon/" class="nav-link"
+                                                target="_blank">CinemAi</a>
+                                        </li>
+                                    </ul>
+
                                     <!-- Best Web Series menu Start-->
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" role="button"
