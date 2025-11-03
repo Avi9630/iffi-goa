@@ -430,7 +430,11 @@
                                     <ul class="navbar-nav vertical-menu-custom">
                                         <li class="nav-item">
                                             <a href="https://films.wavesbazaar.com/programme/cinemai-hackathon/" class="nav-link"
-                                                target="_blank">CinemAi</a>
+                                                target="_blank">CinemAI Hackathon</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="{{ route('ai-film-festival') }}" class="nav-link"
+                                                target="_blank">AI Film Festival</a>
                                         </li>
                                     </ul>
 
