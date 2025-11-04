@@ -23,13 +23,14 @@
     <!-- Inner Page Banner Section -->
 
     <!-- About IFFI Content Start-->
-    <div class="col-lg-12 mt-5 static-content">
+    <div class="col-lg-12 mt-3 static-content">
         <div class="container">
             <div class="row">
                 <div class=" col-md-12 col-sm-12 col-12">
-                    <h2>About the AI Film Festival</h2>
-                    {{-- <div class="section-heading  mt-5 ">
+                    <p><img src="{{ asset('public/images/ltmindtree.png') }}" alt="ai-film-festival" class="img-fluid"></p>
+                    {{-- <div class="text-center">
                     </div> --}}
+                    <h2>About the AI Film Festival</h2>
                     <p>As part of the 56th <strong>International Film Festival of India</strong> (IFFI),
                         <strong>NFDC</strong> in collaboration with
                         <strong>LTIMindtree</strong> proudly unveils <strong>India's first-ever AI Film Festival</strong> -
