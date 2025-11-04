@@ -33,8 +33,8 @@
                                     </li> --}}
 
                                     <li class="nav-item">
-                                        <a href="https://www.youtube.com/watch?v=IoZU1D4HyYk" class="nav-link"
-                                            target="_blank">Glimpses of IFFI 2024</a>
+                                        <a href="https://youtu.be/yRamd6jVCes?si=jAFclk9vYGgRCNhu" class="nav-link"
+                                            target="_blank">Glimpses of IFFI 2025</a>
                                     </li>
 
                                     <li class="nav-item">
