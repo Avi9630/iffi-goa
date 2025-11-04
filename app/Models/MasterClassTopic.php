@@ -9,10 +9,16 @@ class MasterClassTopic extends Model
     protected $table = 'master_class_topics';
     protected $guarded = [];
 
+    // public function masterClass()
+    // {
+    //     return $this->hasOne(MasterClass::class, 'topic_id');
+    // }
+
     public function masterClass()
     {
-        return $this->hasOne(MasterClass::class, 'topic_id');
+        return $this->hasOne(MasterClass::class, 'topic_id')->orderBy('start_time', 'asc');
     }
+
 
     public function speakers()
     {

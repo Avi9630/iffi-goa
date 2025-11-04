@@ -13,9 +13,23 @@ class MasterClassController extends Controller
             ->orderBy('date')
             ->get();
 
-        $topics = MasterClassTopic::where('year', 2025)
+        // $topics = MasterClassTopic::where('year', 2025)
+        //     ->with(['masterClass', 'speakers', 'moderator', 'masterDate'])
+        //     ->get();
+
+        $topics = MasterClassTopic::select('master_class_topics.*')
+            ->join('master_date', 'master_class_topics.master_date_id', '=', 'master_date.id')
+            ->join('master_classes', 'master_classes.topic_id', '=', 'master_class_topics.id')
+            ->where('master_class_topics.year', 2025)
+            ->where('master_date.status', 1)
+            ->where('master_date.year', 2025)
+            ->orderBy('master_date.date', 'asc')       // Sort by date first
+            ->orderBy('master_classes.start_time', 'asc') // Then by start_time within each date
             ->with(['masterClass', 'speakers', 'moderator', 'masterDate'])
             ->get();
+
+
+        // dd($topics);
         $modalData = [];
         foreach ($dates as $date) {
             $key = strtolower(date('M', strtotime($date->date))) . date('d', strtotime($date->date));
