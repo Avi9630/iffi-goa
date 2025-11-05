@@ -5,8 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\IndianPanorama;
 use App\Models\PanoramaCinema;
 use App\Models\IndianCinema;
-use App\Models\JuryDetail;
 use Illuminate\Http\Request;
+use App\Models\JuryDetail;
 
 class IndianPanoramaController extends Controller
 {
@@ -21,6 +21,7 @@ class IndianPanoramaController extends Controller
                 return $query->where('year', $year);
             })
             ->get();
+
         return view('indian-panorama.official-selection-feature', [
             'officialFeature'   =>    $officialFeature,
             'year'              =>    $year
