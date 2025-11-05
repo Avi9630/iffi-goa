@@ -49,21 +49,24 @@
                         Pankaj Tripathi, and Nushrat Bharucha, making the red carpet a truly star-studded affair.
                     </p>
 
-                    <p>
-                        For the 56th IFFI Gala Premieres, the tentative line-up promises an exciting mix of genres and
-                        languages, further raising the bar. Probable titles under consideration include:
-                    </p>
 
-                    <ul>
-                        <li>Tere Ishk Mein - World Premiere (Hindi Feature) *ing Dhanush, Kriti Sanon.</li>
-                        <li>Rahu Ketu - World Premiere (Hindi Feature) *ing Pulkit Samrat, Varun Sharma, Shalini Pandey.
+
+                    <ul class="list-block">
+                        <p>
+                            <b>
+                            For the 56th IFFI Gala Premieres, the tentative line-up promises an exciting mix of genres and
+                            languages, further raising the bar. Probable titles under consideration include:
+                            </b>
+                        </p>
+                        <li><i class="fa fa-check" aria-hidden="true"></i> Tere Ishk Mein - World Premiere (Hindi Feature) *ing Dhanush, Kriti Sanon.</li>
+                        <li><i class="fa fa-check" aria-hidden="true"></i> Rahu Ketu - World Premiere (Hindi Feature) *ing Pulkit Samrat, Varun Sharma, Shalini Pandey.
                         </li>
-                        <li>Hanti Hanti Pa Pa - World Premiere (Bengali Feature) *ing Rukmini Maitra, Chiranjeet
+                        <li><i class="fa fa-check" aria-hidden="true"></i> Hanti Hanti Pa Pa - World Premiere (Bengali Feature) *ing Rukmini Maitra, Chiranjeet
                             Chakraborty.</li>
-                        <li>Bindusagar - World Premiere (Odia Feature) *ing Prakruti Mishra, Sukant Rath.</li>
-                        <li>Asambhav - World Premiere (Marathi Feature) *ing Sachit Patil,Mukta Barve,Priya Bapat.</li>
-                        <li>Rudhirvana - World Premiere (Kannada Feature) *ing Paavana Gowda,Apoorva, Krishna Hebbale.</li>
-                        <li>Sholay - Special Showcase (4K Restored Classic Hindi Feature) *ing Amitabh Bacchaan, Dharmendra.
+                        <li><i class="fa fa-check" aria-hidden="true"></i> Bindusagar - World Premiere (Odia Feature) *ing Prakruti Mishra, Sukant Rath.</li>
+                        <li><i class="fa fa-check" aria-hidden="true"></i> Asambhav - World Premiere (Marathi Feature) *ing Sachit Patil,Mukta Barve,Priya Bapat.</li>
+                        <li><i class="fa fa-check" aria-hidden="true"></i> Rudhirvana - World Premiere (Kannada Feature) *ing Paavana Gowda,Apoorva, Krishna Hebbale.</li>
+                        <li><i class="fa fa-check" aria-hidden="true"></i>Sholay - Special Showcase (4K Restored Classic Hindi Feature) *ing Amitabh Bacchaan, Dharmendra.
                         </li>
                     </ul>
 

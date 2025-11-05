@@ -30,7 +30,7 @@
             <div class="section-heading mb-4 container">
                 <h2>List of Technical Committee Members</h2>
             </div>
-            <ul class="about-festival-ul">
+            <ul class="about-festival-ul list-block">
                 {{-- <li>Shri. A K Bir, Chairman – Technical Committee</li>
                 <li>Shri Shekhar Kapoor, Festival Director IFFI-55</li>
                 <li>Shri Prithul Kumar, MD, NFDC & Joint Secretary Min. of I & B.</li>
@@ -50,24 +50,24 @@
                 <li>Chairman Kala Academy, Goa</li>
                 <li>Shri. D. Ramakrishnan, GM (P&A) and CEO,55th IFFI</li> --}}
 
-                <li>Padma Shri A.K. Bir, Eminent Film Maker.</li>
-                <li>Shri B. Diwakar, Professor in Cinematography.</li>
-                <li>Shri Shekhar Kapoor, Festival Director, 56th IFFI.</li>
-                <li>Shri Prakash Magdum, MD, NFDC.</li>
-                <li>CEO, ESG, Goa.</li>
-                <li>Commissioner, Panaji Municipality, Govt. of Goa.</li>
-                <li>Chief Engineer (Elect.), Govt. of Goa.</li>
-                <li>Health Officer, Panaji, Govt. o f Goa.</li>
-                <li>Chief Fire Officer, Panaji, Govt. o f Goa.</li>
-                <li>Traffic Commissioner, Panaji, Govt. o f Goa.</li>
-                <li>I n charge, INOX Theatre, Goa.</li>
-                <li>Chairman, Kala Academy, Goa.</li>
-                <li>Shri Anirvan Ghosh, M/s. Pulz Electronics.</li>
-                <li>Shri Ketan Mehta, M/s. Real Image/Qube.</li>
-                <li>Shri Ujwal Nirgudkar, M/s. SMPTE.</li>
-                <li>Shri Love Malik, General Manager, PVR/INOX CINEMA.</li>
-                <li>Shri Ramsahay Yadav, Cinematographer, SSE (Formerly Films Division).</li>
-                <li>Shri Gautam Bhanot, General Manager, IFFI, NFDC.</li>
+                <li><i class="fa fa-check" aria-hidden="true"></i> Padma Shri A.K. Bir, Eminent Film Maker.</li>
+                <li><i class="fa fa-check" aria-hidden="true"></i>Shri B. Diwakar, Professor in Cinematography.</li>
+                <li><i class="fa fa-check" aria-hidden="true"></i> Shri Shekhar Kapoor, Festival Director, 56th IFFI.</li>
+                <li><i class="fa fa-check" aria-hidden="true"></i> Shri Prakash Magdum, MD, NFDC.</li>
+                <li><i class="fa fa-check" aria-hidden="true"></i> CEO, ESG, Goa.</li>
+                <li><i class="fa fa-check" aria-hidden="true"></i> Commissioner, Panaji Municipality, Govt. of Goa.</li>
+                <li><i class="fa fa-check" aria-hidden="true"></i> Chief Engineer (Elect.), Govt. of Goa.</li>
+                <li><i class="fa fa-check" aria-hidden="true"></i> Health Officer, Panaji, Govt. o f Goa.</li>
+                <li><i class="fa fa-check" aria-hidden="true"></i> Chief Fire Officer, Panaji, Govt. o f Goa.</li>
+                <li><i class="fa fa-check" aria-hidden="true"></i> Traffic Commissioner, Panaji, Govt. o f Goa.</li>
+                <li><i class="fa fa-check" aria-hidden="true"></i> In charge, INOX Theatre, Goa.</li>
+                <li><i class="fa fa-check" aria-hidden="true"></i> Chairman, Kala Academy, Goa.</li>
+                <li><i class="fa fa-check" aria-hidden="true"></i> Shri Anirvan Ghosh, M/s. Pulz Electronics.</li>
+                <li><i class="fa fa-check" aria-hidden="true"></i> Shri Ketan Mehta, M/s. Real Image/Qube.</li>
+                <li><i class="fa fa-check" aria-hidden="true"></i> Shri Ujwal Nirgudkar, M/s. SMPTE.</li>
+                <li><i class="fa fa-check" aria-hidden="true"></i> Shri Love Malik, General Manager, PVR/INOX CINEMA.</li>
+                <li><i class="fa fa-check" aria-hidden="true"></i> Shri Ramsahay Yadav, Cinematographer, SSE (Formerly Films Division).</li>
+                <li><i class="fa fa-check" aria-hidden="true"></i> Shri Gautam Bhanot, General Manager, IFFI, NFDC.</li>
             </ul>
         </section>
 
