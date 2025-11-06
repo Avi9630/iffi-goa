@@ -44,7 +44,6 @@
             <p>Embrace creativity, inspire change, and shine in the 56<sup>th</sup></p>
             <h2>International competition</h2>
         </div>
-
         <div id="app">
             <div class="swiper">
                 <div class="swiper-wrapper">
@@ -75,10 +74,7 @@
                     @endforeach
                 </div>
             </div>
-            {{-- <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div> --}}
         </div>
-
     </div>
 </div>
 <script type="module" crossorigin src="https://carousel-slider.uiinitiative.com/assets/index-BAdmAfAi.js"></script>
