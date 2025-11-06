@@ -1,7 +1,7 @@
 <div class="col-lg-12 mb-5">
     <div class="container">
         <div class="section-heading mb-4">
-            <p>Showcasing 55<sup>th</sup> IFFI</p>
+            <p>Showcasing 56<sup>th</sup> IFFI</p>
             <h2>Highlights!</h2>
         </div>
         <div class="owl-carousel">
