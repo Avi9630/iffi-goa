@@ -40,7 +40,7 @@
 
 <div class="col-lg-12 mb-5">
     <div class="container">
-        <div class="section-heading mb-4">
+        <div class="section-heading mb-4 text-center mt-5 center-heading">
             <p>Embrace creativity, inspire change, and shine in the 56<sup>th</sup></p>
             <h2>International competition</h2>
         </div>
@@ -55,17 +55,19 @@
                                     @php
                                         $webpImage = preg_replace('/\.\w+$/', '.webp', $cinema->img_src);
                                     @endphp
-                                    <img src="{{ asset('public/images/cureted-section/webp/' . $webpImage) }}"
-                                        alt="image" class="img-fluid" loading="lazy">
+                                    <img src="{{ asset('public/images/cureted-section/' . $webpImage) }}" alt="image"
+                                        class="img-fluid" loading="lazy">
                                     <div class="slide-content">
-                                        <h2><a href="{{ route('international-competition-detail', ['slug' => $cinema->slug]) }}"
-                                                class="post-title">{{ $cinema->title }}</a></h2>
+                                        <h2 class="text-center">
+                                            <a href="{{ route('international-competition-detail', ['slug' => $cinema->slug]) }}"
+                                                class="post-title" style="color: white; text-decoration: none">{{ $cinema->title }}</a>
+                                        </h2>
                                     </div>
                                 @else
                                     <img src="{{ $cinema->img_url }}" alt="image" class="img-fluid" loading="lazy">
                                     <div class="slide-content">
-                                        <h2><a href="{{ route('international-competition-detail', ['slug' => $cinema->slug]) }}"
-                                                class="post-title">{{ $cinema->title }}</a></h2>
+                                        <h2 class="text-center"><a href="{{ route('international-competition-detail', ['slug' => $cinema->slug]) }}"
+                                                class="post-title" style="color: white; text-decoration: none">{{ $cinema->title }}</a></h2>
                                     </div>
                                 @endif
                             </div>
@@ -76,7 +78,7 @@
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
         </div>
-        
+
     </div>
 </div>
 <script type="module" crossorigin src="https://carousel-slider.uiinitiative.com/assets/index-BAdmAfAi.js"></script>
