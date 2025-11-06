@@ -26,8 +26,16 @@
             <div class="row">
                 <div class="col-md-5">
                     <div class="international-img">
-                        <img src="{{ asset('public/images/cureted-section/' . $fetch_cinema_details->img_src . '') }}"
-                            alt="{{ $fetch_cinema_details->title }} image" class="img-fluid">
+                        {{-- <img src="{{ asset('public/images/cureted-section/' . $fetch_cinema_details->img_src . '') }}"
+                            alt="{{ $fetch_cinema_details->title }} image" class="img-fluid"> --}}
+
+                        @if (!empty($fetch_cinema_details->img_src))
+                            <img src="{{ asset('public/images/cureted-section/' . $fetch_cinema_details->img_src) }}"
+                                alt="{{ $fetch_cinema_details->title }} image" class="img-fluid">
+                        @else
+                            <img src="{{ $fetch_cinema_details->img_url }}" alt="{{ $fetch_cinema_details->title }} image"
+                                class="img-fluid">
+                        @endif
                     </div>
                 </div>
                 <div class="col-md-7">
@@ -94,7 +102,8 @@
                             @endif
                         @endisset
                     </p>
-                    <h2> {{ isset($fetch_cinema_basic_details->award) && !empty($fetch_cinema_basic_details->award) ? 'Award : ' : '' }}</h2>
+                    <h2> {{ isset($fetch_cinema_basic_details->award) && !empty($fetch_cinema_basic_details->award) ? 'Award : ' : '' }}
+                    </h2>
                     <p>
                         @isset($fetch_cinema_basic_details->award)
                             @if (substr($currentURL, -3) === '/en')
