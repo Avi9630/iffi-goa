@@ -16,11 +16,11 @@
 
 <div class="col-lg-12 mb-5">
     <div class="container">
-        <div class="section-heading mb-4">
+        <div class="section-heading mb-4 text-center mt-5 center-heading">
             <p>Showcasing 56<sup>th</sup> IFFI</p>
             <h2>Master class</h2>
         </div>
-        <div class="row">
+        <div class="row m-0 master-row ">
             <div class="col-sm-8">
                 <div class="owl-carousel-masterclass">
                     @foreach ($datas as $data)
