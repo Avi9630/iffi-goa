@@ -91,7 +91,7 @@ class CuratedSectionController extends Controller
     {
         $internationalCinemas = InternationalCinema::with('curatedSection')
             ->where('curated_section_id', 1)
-            ->where('year', 2024)
+            ->where('year', 2025)
             ->where('status', 1)
             ->limit(20)
             ->get()
