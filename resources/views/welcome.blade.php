@@ -31,7 +31,7 @@
     @include('pages.about-iffi')
 
     <!-- 55th IFFI Festival Section-->
-    <section class="">
+    {{-- <section class="">
         <div class="container">
             <div class="section-heading mb-4">
                 <p>Why you should attend</p>
@@ -43,7 +43,11 @@
                 ])
             </div>
         </div>
-    </section>
+    </section> --}}
+
+    @include('pages.55th-iffi-festival', [
+        'datas' => app(\App\Http\Controllers\CommonController::class)->iffiFestival(),
+    ])
 
     <!-- News & Updates Section-->
     @include('pages.news-and-update', [
