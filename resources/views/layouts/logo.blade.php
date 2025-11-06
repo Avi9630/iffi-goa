@@ -1,36 +1,30 @@
-{{-- Top Logo Menu Btn --}}
 <?php
-
 $currentUrl = url()->current();
 $newUrl = preg_replace('/\/(en|hi)\b/', '/hi', $currentUrl);
-
 if ($newUrl === $currentUrl) {
     $newUrl = url('hi' . parse_url($currentUrl, PHP_URL_PATH));
 }
 ?>
+
 <div class="col-lg-12">
     <div class="logo-section " id="menu">
         <div class="text-resize  ">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 col-sm-4  ">
-
                     </div>
                     <div class="col-md-6 col-sm-8 ">
                         <div class="resize-content ">
                             <span><a href="#welcome" class="skip">Skip to Main Content</a></span>
-
                             <div class="dropdown ">
-
-
                                 <a class="btn btn-secondary languages" href="{{ $newUrl }}">HI</a>
-
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        
         <div class="container">
             <div class="top-logo ">
                 <a href="{{ route('/') }}">

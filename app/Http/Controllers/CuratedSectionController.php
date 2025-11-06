@@ -49,15 +49,29 @@ class CuratedSectionController extends Controller
     {
         $curatedSections = CuratedSection::all()->keyBy('id');
         $curatedSectionId = CuratedSection::where('slug', $slug)->pluck('id')->first();
-        // dd($curatedSectionId);
+
+        // $internationalCinemas = InternationalCinema::with('curatedSection')
+        //     ->where(['curated_section_id' => $curatedSectionId, 'status' => 1, 'award_year' => $year])
+        //     ->paginate(8);
+        
         $internationalCinemas = InternationalCinema::with('curatedSection')
-            ->where(['curated_section_id' => $curatedSectionId, 'status' => 1, 'award_year' => $year])
-            ->limit(8)
-            ->get()
-            ->map(function ($cinema) {
-                $cinema->curated_section_title = $cinema->curatedSection->title ?? null;
-                return $cinema;
-            });
+            ->where(['curated_section_id' => $curatedSectionId, 'status' => 1])
+            ->whereJsonContains('show_year', (string) $year)
+            ->paginate(8);
+        
+        $internationalCinemas->each(function ($cinema) {
+            $cinema->curated_section_title = $cinema->curatedSection->title ?? null;
+        });
+
+        // $internationalCinemas = InternationalCinema::with('curatedSection')
+        //     ->where(['curated_section_id' => $curatedSectionId, 'status' => 1, 'award_year' => $year])
+        //     // ->limit(8)
+        //     // ->get()
+        //     ->paginate(12)
+        //     ->map(function ($cinema) {
+        //         $cinema->curated_section_title = $cinema->curatedSection->title ?? null;
+        //         return $cinema;
+        //     });
         // dd($internationalCinemas);
         if ($year == 2025) {
             $cssClass = $this->headerClass($curatedSectionId);
@@ -76,8 +90,8 @@ class CuratedSectionController extends Controller
     public function internationalCinema()
     {
         $internationalCinemas = InternationalCinema::with('curatedSection')
-            ->where('curated_section_id', 1)
-            ->where('year', 2024)
+            ->where('curated_section_id', 15)
+            ->where('year', 2025)
             ->where('status', 1)
             ->limit(20)
             ->get()

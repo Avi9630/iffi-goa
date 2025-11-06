@@ -1,11 +1,11 @@
-<?php 
-$key = request()->query('testing'); 
+<?php
+$key = request()->query('testing');
 
-if($key){
-    global $web_data_json; 
-    $web_data_json = json_decode(file_get_contents(public_path('web_data.json')), true); 
+if ($key) {
+    global $web_data_json;
+    $web_data_json = json_decode(file_get_contents(public_path('web_data.json')), true);
 }
-?>  
+?>
 <!doctype html>
 <html lang="en">
 
@@ -35,6 +35,7 @@ if($key){
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/iffigoa.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('public/css/slider.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/cube.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery.js/dist/css/lightgallery.css">
     <link rel="icon" href="{{ asset('public/images/iffigoa.jpg') }}" />

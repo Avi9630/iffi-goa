@@ -13,7 +13,7 @@
     {{-- @include('pages.navigation-slide', [
         'menus' => app(\App\Http\Controllers\CommonController::class)->getMenu(),
     ]) --}}
-    @include('pages.navigation-slide') 
+    @include('pages.navigation-slide')
 
     <!-- Video Section -->
     @include('pages.video-section')
@@ -52,14 +52,19 @@
 
     <!-- International competition Section-->
     @include('pages.international-competition', [
-        'internationalCinemas' => app(\App\Http\Controllers\CuratedSectionController::class)->internationalCinema(),
+        'internationalCinemas' => app(
+            \App\Http\Controllers\CuratedSectionController::class)->internationalCinema(),
     ])
 
     <!-- Director Section-->
-    <section>
+    {{-- @include('pages.director', [
+        'directorDebutFilm' => app(\App\Http\Controllers\CommonController::class)->directorDebutFilm(),
+    ]) --}}
+
+    {{-- <section>
         <div class="container">
             <div class="section-heading mb-4">
-                <p>Best 55<sup>th</sup> debut feature film of a</p>
+                <p>Best 56<sup>th</sup> debut feature film of a</p>
                 <h2>Director</h2>
             </div>
             <div class="owl-carousel international">
@@ -68,22 +73,26 @@
                 ])
             </div>
         </div>
-    </section>
+    </section> --}}
 
-    {{--Indian panorama 55th --}}
-    <section>
+    {{-- Indian panorama 55th --}}
+    {{-- <section>
         <div class="container mb-5">
             <div class="section-heading mb-4">
-                <p>A Kaleidoscope of Creativity and Culture of 55<sup>th</sup></p>
+                <p>A Kaleidoscope of Creativity and Culture of 56<sup>th</sup></p>
                 <h2>Indian Panorama</h2>
             </div>
             <div class="owl-carousel international">
                 @include('pages.indian-panorama', [
-                    'indianPanormas' => app(\App\Http\Controllers\CommonController::class)->indianPanorama('2024'),
+                    'indianPanormas' => app(\App\Http\Controllers\CommonController::class)->indianPanorama('2025'),
                 ])
             </div>
         </div>
-    </section>
+    </section> --}}
+
+    {{-- @include('pages.indian-panorama', [
+        'indianPanormas' => app(\App\Http\Controllers\CommonController::class)->indianPanorama('2025'),
+    ]) --}}
 
     <!-- Highlights Creative Minds Of Tomorrow-->
     @include('pages.cmot-highlights', [
@@ -106,7 +115,7 @@
     ])
 
     <!-- Social Media Corner  -->
-    @include('pages.social-media-cornor')
+    {{-- @include('pages.social-media-cornor') --}}
     <!-- Social Media Corner end  -->
 
     <!-- Message -->

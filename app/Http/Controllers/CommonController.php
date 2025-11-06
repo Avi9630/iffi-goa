@@ -52,7 +52,6 @@ class CommonController extends Controller
         $datas = DB::table('highlights')
             ->where(['status' => 1])
             ->get();
-
         return $datas;
     }
 
@@ -212,7 +211,7 @@ class CommonController extends Controller
     {
         $directorDebutFilm = InternationalCinema::where([
             'curated_section_id' => 13,
-            'award_year' => 2024,
+            'award_year' => 2025,
         ])->get();
         return $directorDebutFilm;
     }
