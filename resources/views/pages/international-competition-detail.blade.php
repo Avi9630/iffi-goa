@@ -60,10 +60,10 @@
                                 <b>Screenplay:</b>
                                 {{ isset($fetch_cinema_basic_details->screenplay) ? $fetch_cinema_basic_details->screenplay : '' }}
                             </li>
-                            <li>
+                            {{-- <li>
                                 <b>Co-Screenplay:</b>
                                 {{ isset($fetch_cinema_basic_details->co_screenplay) ? $fetch_cinema_basic_details->co_screenplay : '' }}
-                            </li>
+                            </li> --}}
                             <li>
                                 <b>DoP:</b>
                                 {{ isset($fetch_cinema_basic_details->dop) ? $fetch_cinema_basic_details->dop : '' }}
