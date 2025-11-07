@@ -85,7 +85,7 @@
                         <div class="today"><a href="{{ route('master-classes-56th') }}#nov25">25</a></div>
                         <div class="today"><a href="{{ route('master-classes-56th') }}#nov26">26</a></div>
                         <div class="today"><a href="{{ route('master-classes-56th') }}#nov27">27</a></div>
-                        <div>>28</div>
+                        <div>28</div>
                         <div>29</div>
                         <div>30</div>
                     </div>
