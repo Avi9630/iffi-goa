@@ -91,13 +91,25 @@
                                             data-bs-toggle="dropdown" aria-expanded="false">International Cinema</a>
                                         <ul class="dropdown-menu">
 
-                                            {{-- Curated Sections 2025 --}}
+                                            {{-- Curated Sections 2025 statrt here --}}
                                             <li class="nav-item dropend">
                                                 <a class="nav-link dropdown-toggle" href="#" role="button"
                                                     data-bs-toggle="dropdown" aria-expanded="false">
                                                     Curated Sections 2025
                                                 </a>
                                                 <ul class="dropdown-menu">
+                                                    <li>
+                                                        <a class="dropdown-item"
+                                                            href="{{ asset('public/pdfs/INTERNATIONAL COMPETITION.pdf') }}"
+                                                            target="_blank">
+                                                            International Competition</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item"
+                                                            href="{{ asset('public/pdfs/BEST DEBUT FEATURE.pdf') }}"
+                                                            target="_blank">Best Debut Feature</a>
+                                                    </li>
+
                                                     {{-- <li>
                                                         <a class="dropdown-item"
                                                             href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'international-competition']) }}">International
@@ -165,6 +177,7 @@
                                                             Presentations</a></li> --}}
                                                 </ul>
                                             </li>
+                                            {{-- Curated Sections 2025 end here --}}
 
                                             {{-- Curated Sections 2024 --}}
                                             {{-- <li class="nav-item dropend">
