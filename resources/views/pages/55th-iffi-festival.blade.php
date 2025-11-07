@@ -15,7 +15,7 @@
 
 <section class="">
     <div class="container">
-        <div class="section-heading mb-4">
+        <div class="section-heading mb-4 text-center mt-5 center-heading">
             <p>Why you should attend</p>
             <h2>56<sup>th</sup> IFFI Festival?</h2>
         </div>
