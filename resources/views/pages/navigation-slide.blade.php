@@ -117,9 +117,9 @@
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'docu-montage']) }}">Docu-Montage</a>
                                                     </li>
-                                                    {{-- <li><a class="dropdown-item"
+                                                    <li><a class="dropdown-item"
                                                             href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'experimental-films']) }}">Experimental
-                                                            Films</a></li> --}}
+                                                            Films</a></li>
                                                     {{-- <li><a class="dropdown-item"
                                                             href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'macabre-dreams']) }}">Macabre
                                                             Dreams</a></li> --}}
@@ -287,15 +287,14 @@
                                                 <ul class="dropdown-menu">
                                                     <li>
                                                         <a class="dropdown-item"
-                                                            href="{{ asset('public/pdfs/IP 2025 Feature.pdf') }}">
-                                                            Feature
-                                                        </a>
+                                                            href="{{ asset('public/pdfs/IP 2025 Feature.pdf') }}"
+                                                            target="_blank">Feature</a>
                                                     </li>
                                                     <li>
                                                         <a class="dropdown-item"
-                                                            href="{{ asset('public/pdfs/IP 2025 Non-Feature.pdf') }}">
-                                                            Non-Feature
-                                                        </a>
+                                                            href="{{ asset('public/pdfs/IP 2025 Non-Feature.pdf') }}"
+                                                            target="_blank">
+                                                            Non-Feature</a>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -447,6 +446,11 @@
                                             data-bs-toggle="dropdown" aria-expanded="false">Best Web
                                             Series</a>
                                         <ul class="dropdown-menu">
+
+                                            <li class="nav-item">
+                                                <a href="{{ asset('public/pdfs/OTT Catalogue.pdf') }}"
+                                                    class="dropdown-item" target="_blank"> Official Selection</a>
+                                            </li>
 
                                             <li>
                                                 <a href="{{ route('about-web-series') }}" class="dropdown-item">About
