@@ -839,6 +839,18 @@
                                 </ul>
                             </div>
                             <!-- Waves Film Bazzar Section End -->
+                            
+                            <!-- IFFI Schedule Section Start -->
+                            <div class="col-md-3 col-sm-12 ">
+                                <h4 class="menu-title ">Festival Schedule</h4>
+                                <ul class="navbar-nav vertical-menu-custom">
+                                    <li class="nav-item">
+                                        <a href="{{ asset('public/pdfs/Festival Schedule - IFFI 2025.pdf') }}" class="nav-link"
+                                            target="_blank"> IFFI 2025</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- IFFI Schedule Section End -->
                         </div>
                     </div>
                 </div>
