@@ -68,7 +68,7 @@
                         <div>17</div>
                         <div>18</div>
                         <div>19</div>
-                        <div class="today"><a href="{{ route('master-classes-56th') }}">20</a></div>
+                        {{-- <div class="today"><a href="{{ route('master-classes-56th#nov21') }}">20</a></div>
                         <div class="today"><a href="{{ route('master-classes-56th') }}">21</a></div>
                         <div class="today"><a href="{{ route('master-classes-56th') }}">22</a></div>
                         <div class="today"><a href="{{ route('master-classes-56th') }}">23</a></div>
@@ -76,7 +76,16 @@
                         <div class="today"><a href="{{ route('master-classes-56th') }}">25</a></div>
                         <div class="today"><a href="{{ route('master-classes-56th') }}">26</a></div>
                         <div class="today"><a href="{{ route('master-classes-56th') }}">27</a></div>
-                        <div class="today"><a href="{{ route('master-classes-56th') }}">28</a></div>
+                        <div class="today"><a href="{{ route('master-classes-56th') }}">28</a></div> --}}
+                        <div>20</div>
+                        <div class="today"><a href="{{ route('master-classes-56th') }}#nov21">21</a></div>
+                        <div class="today"><a href="{{ route('master-classes-56th') }}#nov22">22</a></div>
+                        <div class="today"><a href="{{ route('master-classes-56th') }}#nov23">23</a></div>
+                        <div class="today"><a href="{{ route('master-classes-56th') }}#nov24">24</a></div>
+                        <div class="today"><a href="{{ route('master-classes-56th') }}#nov25">25</a></div>
+                        <div class="today"><a href="{{ route('master-classes-56th') }}#nov26">26</a></div>
+                        <div class="today"><a href="{{ route('master-classes-56th') }}#nov27">27</a></div>
+                        <div>>28</div>
                         <div>29</div>
                         <div>30</div>
                     </div>
