@@ -59,7 +59,7 @@
                         showcases, and global OTT premieres, will once again make the Gala Premieres and Red-Carpet segment
                         a marquee attraction of the 56th IFFI.
                     </p>
-                    
+
                     @php
                         $schedule['21-Nov-25'] = [
                             'day' => 'Friday',
@@ -96,21 +96,6 @@
                                     'venue' => 'Inox Panjim, Old GMC Building',
                                 ],
                                 [
-                                    'red_carpet_time' => '17:00',
-                                    'show_time' => '17:45',
-                                    'title' => '120 Bahadur',
-                                    // 'red_carpet_guests' => 'Farhan Akthar, Razneesh Ghai',
-                                    'cast' => 'Farhan Akthar, Raashi Khanna, Sparsh Walia',
-                                    'director' => 'Razneesh Ghai',
-                                    'producer' => 'Excel Entertainment',
-                                    'language' => 'Hindi',
-                                    'genre' => 'Action',
-                                    'premiere' => 'Special Showcase',
-                                    'duration' => '150 + 5 min',
-                                    'audi' => 'Panjim Audi 1',
-                                    'venue' => 'Inox Panjim, Old GMC Building',
-                                ],
-                                [
                                     'red_carpet_time' => '13:00',
                                     'show_time' => '13:45',
                                     'title' => '1942: A Love Story',
@@ -123,6 +108,21 @@
                                     'premiere' => 'Special Showcase',
                                     'duration' => '160 + 5 min',
                                     'audi' => 'Panjim Audi 3',
+                                    'venue' => 'Inox Panjim, Old GMC Building',
+                                ],
+                                [
+                                    'red_carpet_time' => '17:00',
+                                    'show_time' => '17:45',
+                                    'title' => '120 Bahadur',
+                                    // 'red_carpet_guests' => 'Farhan Akthar, Razneesh Ghai',
+                                    'cast' => 'Farhan Akthar, Raashi Khanna, Sparsh Walia',
+                                    'director' => 'Razneesh Ghai',
+                                    'producer' => 'Excel Entertainment',
+                                    'language' => 'Hindi',
+                                    'genre' => 'Action',
+                                    'premiere' => 'Special Showcase',
+                                    'duration' => '150 + 5 min',
+                                    'audi' => 'Panjim Audi 1',
                                     'venue' => 'Inox Panjim, Old GMC Building',
                                 ],
                             ],
