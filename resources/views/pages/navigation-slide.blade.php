@@ -251,8 +251,8 @@
                                             {{-- <li>
                                                 <a href="{{ route('international-jury', ['year' => 2024]) }}"
                                                     class="dropdown-item">International Jury - 2024</a>
-                                            </li> --}} 
-                                            
+                                            </li> --}}
+
                                             <li>
                                                 <a href="{{ route('international-cinema-awards') }}"
                                                     class="dropdown-item">International Cinema Awards - 2025</a>
@@ -260,8 +260,7 @@
 
                                             <li>
                                                 <a href="https://filmfreeway.com/InternationalFilmFestivalofIndiaIFFI-Goa"
-                                                    class="dropdown-item nav-link yelow-color-link"
-                                                    target="_blank">View
+                                                    class="dropdown-item nav-link yelow-color-link" target="_blank">View
                                                     Your Entry</a>
                                             </li>
 
@@ -280,6 +279,27 @@
                                             Panorama</a>
                                         <ul class="dropdown-menu">
 
+                                            <li class="nav-item dropend">
+                                                <a class="nav-link dropdown-toggle" href="#" role="button"
+                                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                                    Official Selection IFFI 2025
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li>
+                                                        <a class="dropdown-item"
+                                                            href="{{ asset('public/pdfs/IP 2025 Feature.pdf') }}">
+                                                            Feature
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item"
+                                                            href="{{ asset('public/pdfs/IP 2025 Non-Feature.pdf') }}">
+                                                            Non-Feature
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
                                             <li>
                                                 <a href="{{ route('about-indian-panorama') }}"
                                                     class="dropdown-item">About Indian Panorama</a>
@@ -287,7 +307,8 @@
 
                                             <li>
                                                 <a href="https://iffigoa.org/festival/indian-paranoma"
-                                                    class="dropdown-item nav-link yelow-color-link" target="_blank">View
+                                                    class="dropdown-item nav-link yelow-color-link"
+                                                    target="_blank">View
                                                     Your Entry 2025</a>
                                             </li>
 
@@ -835,14 +856,14 @@
                                 </ul>
                             </div>
                             <!-- Waves Film Bazzar Section End -->
-                            
+
                             <!-- IFFI Schedule Section Start -->
                             <div class="col-md-3 col-sm-12 ">
                                 <h4 class="menu-title ">Festival Schedule</h4>
                                 <ul class="navbar-nav vertical-menu-custom">
                                     <li class="nav-item">
-                                        <a href="{{ asset('public/pdfs/Festival Schedule - IFFI 2025.pdf') }}" class="nav-link"
-                                            target="_blank"> IFFI 2025</a>
+                                        <a href="{{ asset('public/pdfs/Festival Schedule - IFFI 2025.pdf') }}"
+                                            class="nav-link" target="_blank"> IFFI 2025</a>
                                     </li>
                                 </ul>
                             </div>
