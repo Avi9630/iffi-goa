@@ -1,7 +1,7 @@
 @extends('layouts.app')
-@section('site_title', '3rd Edition Gala Premier | IFFI Goa - Celebrating Excellence in Global Cinema')
+@section('site_title', '4th Edition Gala Premier | IFFI Goa - Celebrating Excellence in Global Cinema')
 @section('site_description',
-    'Experience the 3rd Edition of the Gala Premier at IFFI Goa, showcasing the best of
+    'Experience the 4th Edition of the Gala Premier at IFFI Goa, showcasing the best of
     international and Indian cinema. Join us for exclusive screenings, star-studded events, and celebrate cinematic
     excellence in a vibrant festival atmosphere.')
 @section('content')
