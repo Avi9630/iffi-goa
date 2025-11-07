@@ -740,16 +740,12 @@
                                             class="nav-link">News and Updates</a>
                                     </li>
 
-                                    <li class="nav-item dropdown">
+                                    {{-- <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" role="button"
                                             data-bs-toggle="dropdown" aria-expanded="false">
                                             The Peacock
                                         </a>
-
                                         <ul class="dropdown-menu">
-                                            {{-- <li><a class="dropdown-item"
-                                                    href="{{ route('the-peacock', ['year' => 2025]) }}">2025</a>
-                                            </li> --}}
                                             <li><a class="dropdown-item"
                                                     href="{{ route('the-peacock', ['year' => 2024]) }}">2024</a>
                                             </li>
@@ -769,13 +765,13 @@
                                                     href="{{ route('the-peacock', ['year' => 2017]) }}">2017</a>
                                             </li>
                                         </ul>
-                                    </li>
+                                    </li> --}}
 
-                                    <li class="nav-item"><a
+                                    {{-- <li class="nav-item"><a
                                             href="{{ asset('public/images/MediaPdf/55th-IFFI-Catalogue_Website_Single page_Updated.pdf') }}"
-                                            target="_blank" class="nav-link">55<sup>th</sup> IFFI Official
+                                            target="_blank" class="nav-link">56<sup>th</sup> IFFI Official
                                             Catalogue</a>
-                                    </li>
+                                    </li> --}}
 
                                 </ul>
                             </div>
