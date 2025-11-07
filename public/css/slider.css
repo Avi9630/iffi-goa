@@ -689,3 +689,4 @@
      visibility: hidden;
  }
  .master-row{ padding: 20px; background-color: #fff;}
+    .data-table{ white-space: nowrap;}

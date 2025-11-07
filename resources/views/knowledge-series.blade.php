@@ -15,10 +15,18 @@
         </div>
     </div>
     <section class="knowledge-series">
-        <!-- Inner Page Banner Section -->
-        <div class="container mt-5 static-content ">
+        
+            <div class="container mt-4 text-end">
+                <a href="{{ asset('public/pdfs/KS Schedule.pdf') }}" class="btn cus-prim-btn" target="_blank">Know
+                    More About
+                    Knowledge Series Schedule</a>
+            
+        </div>
+            <!-- Inner Page Banner Section -->
+            <div class="container mt-5 static-content ">
 
-            {{-- <div class="row">
+
+                {{-- <div class="row">
                 <div class="col-sm-12">
                     <div class="master-nav-bar">
                         <ul class="nav nav-tabs custom-tab-list nav-justified " id="myTabD" role="tablist">
@@ -35,23 +43,23 @@
                 </div>
             </div> --}}
 
-            <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+                        @foreach (['nov20', 'nov21', 'nov22', 'nov23', 'nov24', 'nov25', 'nov26', 'nov27', 'nov28'] as $date)
+                            @include("knowledge-series.{$date}")
+                        @endforeach
+                    </div>
+
                     @foreach (['nov20', 'nov21', 'nov22', 'nov23', 'nov24', 'nov25', 'nov26', 'nov27', 'nov28'] as $date)
-                        @include("knowledge-series.{$date}")
+                        <div class="tab-pane fade" id="{{ $date }}" role="tabpanel"
+                            aria-labelledby="{{ $date }}-tab">
+                            @include("knowledge-series.{$date}")
+                        </div>
                     @endforeach
                 </div>
 
-                @foreach (['nov20', 'nov21', 'nov22', 'nov23', 'nov24', 'nov25', 'nov26', 'nov27', 'nov28'] as $date)
-                    <div class="tab-pane fade" id="{{ $date }}" role="tabpanel"
-                        aria-labelledby="{{ $date }}-tab">
-                        @include("knowledge-series.{$date}")
-                    </div>
-                @endforeach
             </div>
 
-        </div>
-        
     </section>
     {{-- Script Start --}}
     <script>
@@ -624,35 +632,35 @@
         }
 
         /* .knowledge-series .static-content p {
-                color: #3db223 !important;
-            } */
+                            color: #3db223 !important;
+                        } */
 
         /* .knowledge-series .custom-tab-list li a {
-            color: #3db223 !important;
-        } */
+                        color: #3db223 !important;
+                    } */
 
         /* .knowledge-series .custom-tab-list li {
-            border-right: solid 1px #3db223;
-        } */
+                        border-right: solid 1px #3db223;
+                    } */
 
         /* .knowledge-series .callout {
-            border-left: solid 4px #3db223;
-        } */
+                        border-left: solid 4px #3db223;
+                    } */
 
         /* .knowledge-series h2,
-        h4,
-        h5 {
-            color: #3db223;
-        } */
+                    h4,
+                    h5 {
+                        color: #3db223;
+                    } */
 
         /* .knowledge-series .custom-tab-list li .active {
-            background: #3db2234a !important;
-            border-bottom: solid 3px #3db223 !important;
-        } */
+                        background: #3db2234a !important;
+                        border-bottom: solid 3px #3db223 !important;
+                    } */
 
         /* .knowledge-series .custom-tab-list li a:hover {
-            background: #3db2234a !important;
-            border-bottom: solid 3px #3db223 !important;
-        } */
+                        background: #3db2234a !important;
+                        border-bottom: solid 3px #3db223 !important;
+                    } */
     </style>
 @endsection
