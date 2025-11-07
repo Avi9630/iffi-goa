@@ -117,9 +117,9 @@
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'docu-montage']) }}">Docu-Montage</a>
                                                     </li>
-                                                    {{-- <li><a class="dropdown-item"
+                                                    <li><a class="dropdown-item"
                                                             href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'experimental-films']) }}">Experimental
-                                                            Films</a></li> --}}
+                                                            Films</a></li>
                                                     {{-- <li><a class="dropdown-item"
                                                             href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'macabre-dreams']) }}">Macabre
                                                             Dreams</a></li> --}}
