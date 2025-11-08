@@ -83,7 +83,8 @@
     @include('pages.director', [
         'directorDebutFilm' => app(\App\Http\Controllers\CommonController::class)->directorDebutFilm(),
     ])
-
+    <br><br>
+    
     <!-- Life Time Achievement Award  Section-->
     @include('pages.lifetime-achievement-award')
 
