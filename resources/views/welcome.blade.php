@@ -74,14 +74,14 @@
         'datas' => app(\App\Http\Controllers\CommonController::class)->cmotHighlights(),
     ])
 
-    <!-- Director Section-->
-    @include('pages.director', [
-        'directorDebutFilm' => app(\App\Http\Controllers\CommonController::class)->directorDebutFilm(),
-    ])
-
     <!--Master classs Highlights-->
     @include('pages.master-class-highlights', [
         'datas' => app(\App\Http\Controllers\CommonController::class)->masterClasssHighlights(),
+    ])
+
+    <!-- Director Section-->
+    @include('pages.director', [
+        'directorDebutFilm' => app(\App\Http\Controllers\CommonController::class)->directorDebutFilm(),
     ])
 
     <!-- Life Time Achievement Award  Section-->
