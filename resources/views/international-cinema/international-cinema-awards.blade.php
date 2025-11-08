@@ -561,6 +561,7 @@
                         Scorsese (2021) and Hungarian filmmaker István Szabó (2021); Spanish filmmaker Carlos Saura (2022),
                         American Actor & producer Michael Douglas (2023) and most recently Australian director Phillip Noyce
                         (2024).
+                        <a href="{{ route('satyajit-ray-lifetime-achievement-award') }}" class="btn btn-sm btn-primary">View more</a>
                     </p>
 
                     <p><strong>2. INDIAN FILM PERSONALITY OF THE YEAR</strong><br>

@@ -109,7 +109,7 @@
                                                             href="{{ asset('public/pdfs/BEST DEBUT FEATURE.pdf') }}"
                                                             target="_blank">Best Debut Feature</a>
                                                     </li>
-                                                    
+
                                                     <li>
                                                         <a class="dropdown-item"
                                                             href="{{ asset('public/pdfs/ICFFT UNESCO.pdf') }}"
@@ -138,18 +138,18 @@
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'experimental-films']) }}">Experimental
                                                             Films</a></li>
-                                                    {{-- <li><a class="dropdown-item"
+                                                    <li><a class="dropdown-item"
                                                             href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'macabre-dreams']) }}">Macabre
-                                                            Dreams</a></li> --}}
+                                                            Dreams</a></li>
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'cinema-world']) }}">Cinema
                                                             of the World</a></li>
                                                     {{-- <li><a class="dropdown-item"
                                                             href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'restored-classic']) }}">Restored
                                                             Classics</a></li> --}}
-                                                    {{-- <li><a class="dropdown-item"
+                                                    <li><a class="dropdown-item"
                                                             href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'unicef']) }}">
-                                                            UNICEF@IFFI</a></li> --}}
+                                                            UNICEF@IFFI</a></li>
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'rising-stars']) }}">Rising
                                                             Stars</a></li>
