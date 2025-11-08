@@ -17,6 +17,7 @@ class IndianPanoramaController extends Controller
 
         $officialFeature = IndianPanorama::with('officialSelection')
             ->where('official_selection_id', 1)
+            ->where('status', 1)
             ->when(!empty($year), function ($query) use ($year) {
                 return $query->where('year', $year);
             })
@@ -34,6 +35,7 @@ class IndianPanoramaController extends Controller
         $year               =   isset($payload['year']) ? $payload['year'] : '';
         $officialFeature = IndianPanorama::with('officialSelection')
             ->where('official_selection_id', 2)
+            ->where('status', 1)
             ->when(!empty($year), function ($query) use ($year) {
                 return $query->where('year', $year);
             })
@@ -50,6 +52,7 @@ class IndianPanoramaController extends Controller
         $year               =   isset($payload['year']) ? $payload['year'] : '';
         $bestDebutDirectors = IndianPanorama::with('officialSelection')
             ->where('official_selection_id', 3)
+            ->where('status', 1)
             ->when(!empty($year), function ($query) use ($year) {
                 return $query->where('year', $year);
             })
