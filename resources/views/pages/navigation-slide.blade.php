@@ -153,7 +153,6 @@
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'rising-stars']) }}">Rising
                                                             Stars</a></li>
-
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'mission-life']) }}">Mission
                                                             Life</a></li>
@@ -178,6 +177,8 @@
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'opening-film']) }}">Opening
                                                             Film</a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'mid-fest']) }}">Mid fest</a></li>
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'closing-film']) }}">Closing
                                                             Film</a></li>
