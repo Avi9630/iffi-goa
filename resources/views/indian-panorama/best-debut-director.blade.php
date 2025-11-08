@@ -25,8 +25,14 @@
                     <div class="col-md-3 col-sm-4 col-xs-12 d-flex">
                         <div class="card shadow-sm">
                             <div class="card-image min-size-img">
-                                <img src="{{ asset('public/images/indian-panorama-cinema/' . $bestDebutDirector->img_src) }}"
-                                    alt="image" class="img-fluid">
+                                {{-- <img src="{{ asset('public/images/indian-panorama-cinema/' . $bestDebutDirector->img_src) }}"
+                                    alt="image" class="img-fluid"> --}}
+                                @if (!empty($bestDebutDirector->img_src))
+                                    <img src="{{ asset('public/images/indian-panorama-cinema/' . $bestDebutDirector->img_src) }}"
+                                        alt="image" class="img-fluid">
+                                @else
+                                    <img src="{{ $bestDebutDirector->img_url }}" alt="{{ $bestDebutDirector->title }} image" class="img-fluid">
+                                @endif
                             </div>
                             <div class="card-body text-start">
                                 <div class="card-text d-flex">
