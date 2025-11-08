@@ -309,6 +309,71 @@
                                             <li class="nav-item dropend">
                                                 <a class="nav-link dropdown-toggle" href="#" role="button"
                                                     data-bs-toggle="dropdown" aria-expanded="false">
+                                                    Indian Panorama IFFI 2025
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li>
+                                                        <a class="dropdown-item"
+                                                            href="{{ route('official-selection-feature', ['year' => 2025]) }}">
+                                                            Feature
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item"
+                                                            href="{{ route('official-selection-non-feature', ['year' => 2025]) }}">
+                                                            Non-Feature
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item"
+                                                            href="{{ route('best-debut-director', ['year' => 2025]) }}">
+                                                            Best Debut Director
+                                                        </a>
+                                                    </li>
+                                                    {{-- <li>
+                                                        <a class="dropdown-item"
+                                                            href="{{ route('indian-panorama', ['year' => 2024, 'slug' => 'accessible-india-accessible-films']) }}">
+                                                            Accessible India, Accessible Films</a>
+                                                    </li> --}}
+                                                    {{-- <li class="nav-item dropend">
+                                                        <a class="nav-link dropdown-toggle" href="#"
+                                                            role="button" data-bs-toggle="dropdown"
+                                                            aria-expanded="false">
+                                                            Special Presentation
+                                                        </a>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a class="dropdown-item"
+                                                                    href="{{ route('indian-panorama', ['year' => 2024, 'slug' => 'panorama-feature-jury-recommends']) }}">Panorama
+                                                                    Feature Jury Recommends</a>
+                                                            </li>
+                                                            <li><a class="dropdown-item"
+                                                                    href="{{ route('indian-panorama', ['year' => 2024, 'slug' => 'special-showcase']) }}">Special
+                                                                    Showcase</a>
+                                                            </li>
+                                                            <li><a class="dropdown-item"
+                                                                    href="{{ route('indian-panorama', ['year' => 2024, 'slug' => 'nfdc-showcase-premieres']) }}">NFDC
+                                                                    Showcase & Premieres</a>
+                                                            </li>
+                                                            <li><a class="dropdown-item"
+                                                                    href="{{ route('indian-panorama', ['year' => 2024, 'slug' => 'nfai-classics']) }}">NFAI
+                                                                    Classics</a>
+                                                            </li>
+                                                            <li><a class="dropdown-item"
+                                                                    href="{{ route('indian-panorama', ['year' => 2024, 'slug' => 'prasar-bharti-ott']) }}">Prasar
+                                                                    Bharti OTT</a>
+                                                            </li>
+                                                            <li><a class="dropdown-item"
+                                                                    href="{{ route('indian-panorama', ['year' => 2024, 'slug' => 'prasar-bharti-films']) }}">Prasar
+                                                                    Bharti Films</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li> --}}
+                                                </ul>
+                                            </li>
+
+                                            {{-- <li class="nav-item dropend">
+                                                <a class="nav-link dropdown-toggle" href="#" role="button"
+                                                    data-bs-toggle="dropdown" aria-expanded="false">
                                                     Official Selection IFFI 2025
                                                 </a>
                                                 <ul class="dropdown-menu">
@@ -324,7 +389,7 @@
                                                             Non-Feature</a>
                                                     </li>
                                                 </ul>
-                                            </li>
+                                            </li> --}}
 
                                             <li>
                                                 <a href="{{ route('about-indian-panorama') }}"
@@ -358,6 +423,8 @@
                                                     </li>
                                                 </ul>
                                             </li> --}}
+
+                                            
 
                                             {{-- <li class="nav-item dropend">
                                                 <a class="nav-link dropdown-toggle" href="#" role="button"
