@@ -27,7 +27,7 @@
                     $webpImage = preg_replace('/\.\w+$/', '.webp', $director->img_src);
                 @endphp
                 <div class="item card">
-                    <img src="{{ asset('public/images/cureted-section/webp/' . $webpImage) }}" alt="image"
+                    <img src="{{ asset('public/images/cureted-section/' . $webpImage) }}" alt="image"
                         class="img-fluid" loading="lazy">
                     <div class="International-competition">
                         <p>
