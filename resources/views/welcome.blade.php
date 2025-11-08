@@ -50,11 +50,6 @@
             \App\Http\Controllers\CuratedSectionController::class)->internationalCinema(),
     ])
 
-    <!-- Director Section-->
-    @include('pages.director', [
-        'directorDebutFilm' => app(\App\Http\Controllers\CommonController::class)->directorDebutFilm(),
-    ])
-
     {{-- Indian panorama 55th --}}
     {{-- <section>
         <div class="container mb-5">
@@ -77,6 +72,11 @@
     <!-- Highlights Creative Minds Of Tomorrow-->
     @include('pages.cmot-highlights', [
         'datas' => app(\App\Http\Controllers\CommonController::class)->cmotHighlights(),
+    ])
+
+    <!-- Director Section-->
+    @include('pages.director', [
+        'directorDebutFilm' => app(\App\Http\Controllers\CommonController::class)->directorDebutFilm(),
     ])
 
     <!--Master classs Highlights-->
