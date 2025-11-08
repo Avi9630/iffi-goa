@@ -11,7 +11,7 @@
     <!-- Inner Page Banner Section -->
     <div class="container-fluid page-header bannerBg-feature py-5">
         <div class="container text-center ">
-            <h1 class="page-title-header">IFFI Festival {{ $year }} Feature film
+            <h1 class="page-title-header">IFFI Festival {{ $year }} Feature Film
             </h1>
         </div>
     </div>

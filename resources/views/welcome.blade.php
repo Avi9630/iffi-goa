@@ -32,6 +32,39 @@
     <!-- About IFFI Section-->
     @include('pages.about-iffi')
 
+    <section>
+        <div class="col-lg-12 mb-5">
+            <div class="container">
+                <div class="section-heading mb-4 text-center mt-5 center-heading ">
+                    <h4> Award Winning Films from</h4>
+                    <h2>Top International Film Festivals</h2>
+                </div>
+                <div class="row  m-0 master-row ">
+                    <div class="col-md-2 col-sm-4 col-xs-12 d-flex g-3">
+                        <img src="{{ asset('public/images/award-winner/It Was An Accident.webp') }}" alt="image" class="img-fluid">
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-xs-12 d-flex g-3">
+                        <img src="{{ asset('public/images/award-winner/Father Mother Sister Brother.webp') }}" alt="image" class="img-fluid">
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-xs-12 d-flex g-3">
+                        <img src="{{ asset('public/images/award-winner/Dreams (Sex Love).webp') }}" alt="image" class="img-fluid">
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-xs-12 d-flex g-3">
+                        <img src="{{ asset('public/images/award-winner/Glooming in.webp') }}" alt="image" class="img-fluid">
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-xs-12 d-flex g-3">
+                        <img src="{{ asset('public/images/award-winner/No Other Choice.webp') }}" alt="image" class="img-fluid">
+                        {{-- <div class=" ">
+                        </div> --}}
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-xs-12 d-flex g-3">
+                        <img src="{{ asset('public/images/award-winner/FIUME O MORTE.webp') }}" alt="image" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- 55th IFFI Festival Section-->
     <section class="">
         @include('pages.55th-iffi-festival', [
