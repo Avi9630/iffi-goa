@@ -11,10 +11,10 @@
     <!-- Inner Page Banner Section -->
     <div class="container-fluid page-header bannerBg-non-feature py-5">
         <div class="container text-center ">
-            @php
+            {{-- @php
                 $yearly = isset($year) && $year != 2024 ? 2023 : $year ?? 2024;
-            @endphp
-            <h1 class="page-title-header">IFFI Festival {{ $yearly }} Best Debut Director</h1>
+            @endphp --}}
+            <h1 class="page-title-header">IFFI Festival {{ $year }} Best Debut Director</h1>
         </div>
     </div>
 
