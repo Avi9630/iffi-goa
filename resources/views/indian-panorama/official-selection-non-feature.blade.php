@@ -25,8 +25,8 @@
                     <div class="col-md-3 col-sm-4 col-xs-12 d-flex">
                         <div class="card shadow-sm">
                             <div class="card-image min-size-img">
-                                <img src="{{ asset('public/images/indian-panorama-cinema/' . $feature->img_src) }}"
-                                    alt="image" class="img-fluid">
+                                {{-- <img src="{{ asset('public/images/indian-panorama-cinema/' . $feature->img_src) }}"
+                                    alt="image" class="img-fluid"> --}}
                                 @if (!empty($feature->img_src))
                                     <img src="{{ asset('public/images/indian-panorama-cinema/' . $feature->img_src) }}"
                                         alt="image" class="img-fluid">
