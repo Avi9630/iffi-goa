@@ -39,6 +39,8 @@ trait UICLASSTrait
             34 => 'nfai-classics',
             35 => 'prasar-bharti-ott',
             36 => 'prasar-bharti-films',
+            37 => 'country-focus-japan',
+            38 => 'partner-country-spain',
         ];
         return $cssClasses[$data];
     }
