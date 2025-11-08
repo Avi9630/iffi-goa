@@ -69,9 +69,9 @@
         'indianPanormas' => app(\App\Http\Controllers\CommonController::class)->indianPanorama('2025'),
     ]) --}}
 
-    <!-- Highlights Creative Minds Of Tomorrow-->
-    @include('pages.cmot-highlights', [
-        'datas' => app(\App\Http\Controllers\CommonController::class)->cmotHighlights(),
+    <!-- Director Section-->
+    @include('pages.director', [
+        'directorDebutFilm' => app(\App\Http\Controllers\CommonController::class)->directorDebutFilm(),
     ])
 
     <!--Master classs Highlights-->
@@ -79,12 +79,12 @@
         'datas' => app(\App\Http\Controllers\CommonController::class)->masterClasssHighlights(),
     ])
 
-    <!-- Director Section-->
-    @include('pages.director', [
-        'directorDebutFilm' => app(\App\Http\Controllers\CommonController::class)->directorDebutFilm(),
+    <!-- Highlights Creative Minds Of Tomorrow-->
+    @include('pages.cmot-highlights', [
+        'datas' => app(\App\Http\Controllers\CommonController::class)->cmotHighlights(),
     ])
     <br><br>
-    
+
     <!-- Life Time Achievement Award  Section-->
     @include('pages.lifetime-achievement-award')
 
