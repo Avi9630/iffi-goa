@@ -563,7 +563,7 @@
                         (2024).
                     </p>
                     <p>
-                        <a href="{{ route('satyajit-ray-lifetime-achievement-award') }}" class="btn cus-prim-btn   text-center">Is it now to know more the awardee</a>
+                        <a href="{{ route('satyajit-ray-lifetime-achievement-award') }}" class="btn cus-prim-btn   text-center">Visit now to know more the awardee</a>
                     </p>
 
                     <p><strong>2. INDIAN FILM PERSONALITY OF THE YEAR</strong><br>
@@ -574,7 +574,7 @@
                         Chiranjeevi (2023) and Vikrant Massey (2024).
                     </p>
                     <p>
-                        <a href="{{ route('indian-film-personality-of-the-year-award') }}" class="btn cus-prim-btn   text-center">Is it now to know more the awardee</a>
+                        <a href="{{ route('indian-film-personality-of-the-year-award') }}" class="btn cus-prim-btn   text-center">Visit now to know more the awardee</a>
                     </p>
                 </div>
             </div>
