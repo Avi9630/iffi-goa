@@ -9,10 +9,12 @@
 @section('content')
 
     {{-- @include('layouts.timer') --}}
+
     <!-- Menu Item's -->
     {{-- @include('pages.navigation-slide', [
         'menus' => app(\App\Http\Controllers\CommonController::class)->getMenu(),
     ]) --}}
+
     @include('pages.navigation-slide')
 
     <!-- Video Section -->
@@ -31,23 +33,11 @@
     @include('pages.about-iffi')
 
     <!-- 55th IFFI Festival Section-->
-    {{-- <section class="">
-        <div class="container">
-            <div class="section-heading mb-4">
-                <p>Why you should attend</p>
-                <h2>56<sup>th</sup> IFFI Festival?</h2>
-            </div>
-            <div class="row festival-img">
-                @include('pages.55th-iffi-festival', [
-                    'datas' => app(\App\Http\Controllers\CommonController::class)->iffiFestival(),
-                ])
-            </div>
-        </div>
-    </section> --}}
-
-    @include('pages.55th-iffi-festival', [
-        'datas' => app(\App\Http\Controllers\CommonController::class)->iffiFestival(),
-    ])
+    <section class="">
+        @include('pages.55th-iffi-festival', [
+            'datas' => app(\App\Http\Controllers\CommonController::class)->iffiFestival(),
+        ])
+    </section>
 
     <!-- News & Updates Section-->
     @include('pages.news-and-update', [
@@ -61,23 +51,9 @@
     ])
 
     <!-- Director Section-->
-    {{-- @include('pages.director', [
+    @include('pages.director', [
         'directorDebutFilm' => app(\App\Http\Controllers\CommonController::class)->directorDebutFilm(),
-    ]) --}}
-
-    {{-- <section>
-        <div class="container">
-            <div class="section-heading mb-4">
-                <p>Best 56<sup>th</sup> debut feature film of a</p>
-                <h2>Director</h2>
-            </div>
-            <div class="owl-carousel international">
-                @include('pages.director', [
-                    'directorDebutFilm' => app(\App\Http\Controllers\CommonController::class)->directorDebutFilm(),
-                ])
-            </div>
-        </div>
-    </section> --}}
+    ])
 
     {{-- Indian panorama 55th --}}
     {{-- <section>
