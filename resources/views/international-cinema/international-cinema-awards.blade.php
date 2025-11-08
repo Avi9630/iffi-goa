@@ -562,6 +562,9 @@
                         American Actor & producer Michael Douglas (2023) and most recently Australian director Phillip Noyce
                         (2024).
                     </p>
+                    <p>
+                        <a href="{{ route('satyajit-ray-lifetime-achievement-award') }}" class="btn cus-prim-btn   text-center">Is it now to know more the awardee</a>
+                    </p>
 
                     <p><strong>2. INDIAN FILM PERSONALITY OF THE YEAR</strong><br>
                         The Award is presented to an Indian film personality for their outstanding contribution to Indian
@@ -569,7 +572,9 @@
                         The Prize includes a cash prize of Rs. 10,00,000/-, a certificate, shawl, and the Silver Peacock.
                         The winners of the last couple of years include accomplished actors Madhuri Dixit (2022),
                         Chiranjeevi (2023) and Vikrant Massey (2024).
-
+                    </p>
+                    <p>
+                        <a href="{{ route('indian-film-personality-of-the-year-award') }}" class="btn cus-prim-btn   text-center">Is it now to know more the awardee</a>
                     </p>
                 </div>
             </div>
