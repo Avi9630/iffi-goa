@@ -44,6 +44,22 @@ class IndianPanoramaController extends Controller
         ]);
     }
 
+    public function officialBestDebutDirector(Request $request)
+    {
+        $payload            =   $request->all();
+        $year               =   isset($payload['year']) ? $payload['year'] : '';
+        $bestDebutDirectors = IndianPanorama::with('officialSelection')
+            ->where('official_selection_id', 3)
+            ->when(!empty($year), function ($query) use ($year) {
+                return $query->where('year', $year);
+            })
+            ->get();
+        return view('indian-panorama.best-debut-director', [
+            'bestDebutDirectors' =>  $bestDebutDirectors,
+            'year' =>  $year,
+        ]);
+    }
+
     public function accessibleFilm(Request $request, $year, $slug)
     {
         $indianCinemaId =   IndianCinema::where('slug', $slug)->pluck('id')->first();
