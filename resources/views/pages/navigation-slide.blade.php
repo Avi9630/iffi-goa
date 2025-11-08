@@ -129,9 +129,9 @@
                                                             href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'icft-unesco-medal']) }}">
                                                             ICFT UNESCO Gandhi Medal
                                                         </a></li>
-                                                    {{-- <li><a class="dropdown-item"
+                                                    <li><a class="dropdown-item"
                                                             href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'from-the-festivals']) }}">From
-                                                            The Festivals</a></li> --}}
+                                                            The Festivals</a></li>
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'docu-montage']) }}">Docu-Montage</a>
                                                     </li>
@@ -163,18 +163,24 @@
                                                     {{-- <li><a class="dropdown-item"
                                                             href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'country-focus-australia']) }}">Country
                                                             Focus: Australia</a></li> --}}
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'country-focus-japan']) }}">Country
+                                                            Focus: Japan</a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'partner-country-spain']) }}">Partner
+                                                            Country Spain</a></li>
                                                     {{-- <li><a class="dropdown-item"
                                                             href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'accolades']) }}">Accolades</a>
                                                     </li> --}}
                                                     {{-- <li><a class="dropdown-item"
                                                             href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'from-the-consulate']) }}">From
                                                             The Consulates</a></li> --}}
-                                                    {{-- <li><a class="dropdown-item"
+                                                    <li><a class="dropdown-item"
                                                             href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'opening-film']) }}">Opening
-                                                            Film</a></li> --}}
-                                                    {{-- <li><a class="dropdown-item"
+                                                            Film</a></li>
+                                                    <li><a class="dropdown-item"
                                                             href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'closing-film']) }}">Closing
-                                                            Film</a></li> --}}
+                                                            Film</a></li>
                                                     {{-- <li><a class="dropdown-item"
                                                             href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'international-jury-films']) }}">International
                                                             Jury Films</a></li> --}}
@@ -279,7 +285,8 @@
 
                                             <li>
                                                 <a href="https://filmfreeway.com/InternationalFilmFestivalofIndiaIFFI-Goa"
-                                                    class="dropdown-item nav-link yelow-color-link" target="_blank">View
+                                                    class="dropdown-item nav-link yelow-color-link"
+                                                    target="_blank">View
                                                     Your Entry</a>
                                             </li>
 
