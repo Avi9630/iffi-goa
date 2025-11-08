@@ -113,7 +113,7 @@
                                                     <li>
                                                         <a class="dropdown-item"
                                                             href="{{ asset('public/pdfs/ICFFT UNESCO.pdf') }}"
-                                                            target="_blank">ICFFT UNESCO</a>
+                                                            target="_blank">ICFT UNESCO</a>
                                                     </li>
 
                                                     {{-- <li>
