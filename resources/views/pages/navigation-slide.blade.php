@@ -67,10 +67,10 @@
                                         <a href="{{ route('faq') }}" class="nav-link">FAQ's</a>
                                     </li>
 
-                                    <li class="nav-item">
+                                    {{-- <li class="nav-item">
                                         <a href="{{ route('partners-sponsors') }}" class="nav-link">
                                             Our Partners & Sponsors</a>
-                                    </li>
+                                    </li> --}}
 
                                     <li class="nav-item">
                                         <a href="{{ route('iffi-accessibility') }}" class="nav-link">Accessible IFFI For
