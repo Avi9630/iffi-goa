@@ -98,37 +98,37 @@
                                                     Curated Sections 2025
                                                 </a>
                                                 <ul class="dropdown-menu">
-                                                    <li>
+                                                    {{-- <li>
                                                         <a class="dropdown-item"
                                                             href="{{ asset('public/pdfs/INTERNATIONAL COMPETITION.pdf') }}"
                                                             target="_blank">
                                                             International Competition</a>
-                                                    </li>
-                                                    <li>
+                                                    </li> --}}
+                                                    {{-- <li>
                                                         <a class="dropdown-item"
                                                             href="{{ asset('public/pdfs/BEST DEBUT FEATURE.pdf') }}"
                                                             target="_blank">Best Debut Feature</a>
-                                                    </li>
-
-                                                    <li>
-                                                        <a class="dropdown-item"
-                                                            href="{{ asset('public/pdfs/ICFFT UNESCO.pdf') }}"
-                                                            target="_blank">ICFT UNESCO</a>
-                                                    </li>
+                                                    </li> --}}
 
                                                     {{-- <li>
                                                         <a class="dropdown-item"
+                                                            href="{{ asset('public/pdfs/ICFFT UNESCO.pdf') }}"
+                                                            target="_blank">ICFT UNESCO</a>
+                                                    </li> --}}
+
+                                                    <li>
+                                                        <a class="dropdown-item"
                                                             href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'international-competition']) }}">International
                                                             Competition</a>
-                                                    </li> --}}
-                                                    {{-- <li><a class="dropdown-item"
+                                                    </li>
+                                                    <li><a class="dropdown-item"
                                                             href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'best-debut-feature-film-of-a-director']) }}">
                                                             Best Debut Feature Film of a Director
-                                                        </a></li> --}}
-                                                    {{-- <li><a class="dropdown-item"
+                                                        </a></li>
+                                                    <li><a class="dropdown-item"
                                                             href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'icft-unesco-medal']) }}">
                                                             ICFT UNESCO Gandhi Medal
-                                                        </a></li> --}}
+                                                        </a></li>
                                                     {{-- <li><a class="dropdown-item"
                                                             href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'from-the-festivals']) }}">From
                                                             The Festivals</a></li> --}}
