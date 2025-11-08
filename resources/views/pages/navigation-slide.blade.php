@@ -144,9 +144,9 @@
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'cinema-world']) }}">Cinema
                                                             of the World</a></li>
-                                                    {{-- <li><a class="dropdown-item"
+                                                    <li><a class="dropdown-item"
                                                             href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'restored-classic']) }}">Restored
-                                                            Classics</a></li> --}}
+                                                            Classics</a></li>
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'unicef']) }}">
                                                             UNICEF@IFFI</a></li>
