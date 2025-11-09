@@ -960,7 +960,7 @@
                                 <h4 class="menu-title ">Festival Schedule</h4>
                                 <ul class="navbar-nav vertical-menu-custom">
                                     <li class="nav-item">
-                                        <a href="{{ asset('public/pdfs/Festival Schedule - IFFI 2025.pdf') }}"
+                                        <a href="{{ asset('public/pdfs/IFFI 2025 Festival Schedule - Nov 20-28.pdf') }}"
                                             class="nav-link" target="_blank"> IFFI 2025</a>
                                     </li>
                                 </ul>
