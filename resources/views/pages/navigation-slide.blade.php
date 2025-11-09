@@ -289,6 +289,11 @@
                                             </li>
 
                                             <li>
+                                                <a href="{{ asset('public/pdfs/International Jury 2025.jpg') }}"
+                                                    class="dropdown-item" target="_blank">International Jury - 2025</a>
+                                            </li>
+
+                                            <li>
                                                 <a href="https://filmfreeway.com/InternationalFilmFestivalofIndiaIFFI-Goa"
                                                     class="dropdown-item nav-link yelow-color-link"
                                                     target="_blank">View
