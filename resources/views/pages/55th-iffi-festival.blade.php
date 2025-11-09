@@ -26,10 +26,6 @@
                 @endphp
                 <div class="col-md-4 col-sm-4 col-xs-12 d-flex">
                     <div class="card shadow-sm">
-
-                        {{-- <img src="{{ asset('public/images/desktop-image/webp/' . $webpImage) }}" class="img-fluid"
-                            alt="image" loading="lazy"> --}}
-
                         @if (!empty($data->img_src))
                             <img src="{{ asset('public/images/desktop-image/webp/' . $webpImage) }}" class="img-fluid"
                                 alt="image" loading="lazy">
@@ -37,7 +33,6 @@
                             <img src="{{ $data->img_url }}" alt="{{ $data->title }} image"
                                 class="img-fluid">
                         @endif
-
                         <div class="card-body text-start">
                             <h3>{{ $data->title }}</h3>
                             <p class="card-text">{{ $data->description }}</p>
