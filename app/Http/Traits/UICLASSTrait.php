@@ -41,7 +41,7 @@ trait UICLASSTrait
             36 => 'prasar-bharti-films',
             37 => 'country-focus-japan',
             38 => 'partner-country-spain',
-            39 => 'mid-fest',
+            39 => 'mid-fest-film',
             40 => 'spotlight-australia',
         ];
         return $cssClasses[$data];

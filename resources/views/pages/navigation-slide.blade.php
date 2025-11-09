@@ -90,6 +90,19 @@
                                         <a class="nav-link dropdown-toggle" href="#" role="button"
                                             data-bs-toggle="dropdown" aria-expanded="false">International Cinema</a>
                                         <ul class="dropdown-menu">
+                                            <li>
+                                                <a class="dropdown-item"
+                                                    href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'international-competition']) }}">International
+                                                    Competition</a>
+                                            </li>
+                                            <li><a class="dropdown-item"
+                                                    href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'best-debut-feature-film-of-a-director']) }}">
+                                                    Best Debut Feature Film of a Director
+                                                </a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'icft-unesco-medal']) }}">
+                                                    ICFT UNESCO Gandhi Medal
+                                                </a></li>
 
                                             {{-- Curated Sections 2025 statrt here --}}
                                             <li class="nav-item dropend">
@@ -116,19 +129,6 @@
                                                             target="_blank">ICFT UNESCO</a>
                                                     </li> --}}
 
-                                                    <li>
-                                                        <a class="dropdown-item"
-                                                            href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'international-competition']) }}">International
-                                                            Competition</a>
-                                                    </li>
-                                                    <li><a class="dropdown-item"
-                                                            href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'best-debut-feature-film-of-a-director']) }}">
-                                                            Best Debut Feature Film of a Director
-                                                        </a></li>
-                                                    <li><a class="dropdown-item"
-                                                            href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'icft-unesco-medal']) }}">
-                                                            ICFT UNESCO Gandhi Medal
-                                                        </a></li>
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'from-the-festivals']) }}">From
                                                             The Festivals</a></li>
@@ -178,10 +178,14 @@
                                                             href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'opening-film']) }}">Opening
                                                             Film</a></li>
                                                     <li><a class="dropdown-item"
-                                                            href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'mid-fest']) }}">Mid fest film</a></li>
+                                                            href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'mid-fest']) }}">Mid
+                                                            fest film</a></li>
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'closing-film']) }}">Closing
                                                             Film</a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'spotlight-australia']) }}">Spotlight:
+                                                            Australia</a></li>
                                                     {{-- <li><a class="dropdown-item"
                                                             href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'international-jury-films']) }}">International
                                                             Jury Films</a></li> --}}
@@ -424,7 +428,7 @@
                                                 </ul>
                                             </li> --}}
 
-                                            
+
 
                                             {{-- <li class="nav-item dropend">
                                                 <a class="nav-link dropdown-toggle" href="#" role="button"
