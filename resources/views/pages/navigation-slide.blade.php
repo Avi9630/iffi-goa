@@ -178,7 +178,7 @@
                                                             href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'opening-film']) }}">Opening
                                                             Film</a></li>
                                                     <li><a class="dropdown-item"
-                                                            href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'mid-fest']) }}">Mid
+                                                            href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'mid-fest-film']) }}">Mid
                                                             fest film</a></li>
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'closing-film']) }}">Closing
