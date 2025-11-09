@@ -42,6 +42,7 @@ trait UICLASSTrait
             37 => 'country-focus-japan',
             38 => 'partner-country-spain',
             39 => 'mid-fest',
+            40 => 'spotlight-australia',
         ];
         return $cssClasses[$data];
     }
