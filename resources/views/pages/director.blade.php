@@ -18,7 +18,7 @@
 <section>
     <div class="container">
         <div class="section-heading mb-4 text-center mt-5 center-heading">
-            <p>Best 56<sup>th</sup> debut feature film of a</p>
+            <p>Best debut feature film of a</p>
             <h2>Director</h2>
         </div>
         <div class="owl-carousel international">

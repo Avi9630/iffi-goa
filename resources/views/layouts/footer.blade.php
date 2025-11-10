@@ -88,6 +88,7 @@
                 <li><a href="{{ route('press-release') }}">Press Release</a></li>
                 <li> <a href="{{ route('media.gallery.byYear', ['year' => '2024']) }}">Gallery</a></li>
                 <li> <a href="{{ route('privacy-policy') }}">Privacy Policy</a></li>
+                {{-- <li> <a href="{{ route('archive') }}">Archive</a></li> --}}
             </ul>
         </div>
     </div>
