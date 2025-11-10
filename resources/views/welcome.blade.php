@@ -84,23 +84,10 @@
     ])
 
     {{-- Indian panorama 55th --}}
-    {{-- <section>
-        <div class="container mb-5">
-            <div class="section-heading mb-4">
-                <p>A Kaleidoscope of Creativity and Culture of 56<sup>th</sup></p>
-                <h2>Indian Panorama</h2>
-            </div>
-            <div class="owl-carousel international">
-                @include('pages.indian-panorama', [
-                    'indianPanormas' => app(\App\Http\Controllers\CommonController::class)->indianPanorama('2025'),
-                ])
-            </div>
-        </div>
-    </section> --}}
 
-    {{-- @include('pages.indian-panorama', [
+    @include('pages.indian-panorama', [
         'indianPanormas' => app(\App\Http\Controllers\CommonController::class)->indianPanorama('2025'),
-    ]) --}}
+    ])
 
     <!-- Director Section-->
     @include('pages.director', [
