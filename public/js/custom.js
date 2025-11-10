@@ -95,6 +95,27 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
+    $(".owl-carousel-masterclass").owlCarousel({
+        items: 3, // Number of items you want to display at once
+        loop: true, // Loop through the items
+        margin: 10, // Margin between items
+        dots: false, // Show pagination dots
+        nav: true, // Show navigation arrows
+        responsive: {
+            0: {
+                items: 1, // Number of items at viewport width 0px
+            },
+            600: {
+                items: 2, // Number of items at viewport width 600px
+            },
+            1000: {
+                items: 1, // Number of items at viewport width 1000px
+            },
+        },
+    });
+});
+
+$(document).ready(function () {
     $(".owl-carousel-sponsor").owlCarousel({
         items: 6, // Number of items you want to display at once
         loop: true, // Loop through the items

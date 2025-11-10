@@ -91,7 +91,7 @@
                     </div>
                 </div>
                 <div class=" col-md-12 col-sm-12 col-12">
-                    <p>Winning films will be featured across LTIM, NFDC, and OpenAI global platforms.</p>
+                    <p>Winning films will be featured across LTIMindtree and NFDC global platforms.</p>
                 </div>
             </div>
         </div>

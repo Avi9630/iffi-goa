@@ -59,7 +59,7 @@
                 @foreach ($chairPersons as $key => $chairPerson)
                     <div class="card">
                         <div class="card-body">
-                            <h3>{{ $chairPerson['name'] }}, {{ $chairPerson['designation'] }}</h3>
+                            <h3>{{ $chairPerson['name'] }} {{ $chairPerson['designation'] }}</h3>
                         </div>
                     </div>
                 @endforeach

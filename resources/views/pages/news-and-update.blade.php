@@ -1,7 +1,7 @@
 <!--Home section News & Updates-->
 <div class="col-lg-12 mb-5">
     <div class="container">
-        <div class="section-heading mb-4">
+        <div class="section-heading mb-4 text-center mt-5 center-heading">
             <h2>News & Updates</h2>
         </div>
         <div class="row card-same-height">

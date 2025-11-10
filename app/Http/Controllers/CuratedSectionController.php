@@ -49,7 +49,7 @@ class CuratedSectionController extends Controller
     {
         $curatedSections = CuratedSection::all()->keyBy('id');
         $curatedSectionId = CuratedSection::where('slug', $slug)->pluck('id')->first();
-
+        
         // $internationalCinemas = InternationalCinema::with('curatedSection')
         //     ->where(['curated_section_id' => $curatedSectionId, 'status' => 1, 'award_year' => $year])
         //     ->paginate(8);
@@ -90,7 +90,7 @@ class CuratedSectionController extends Controller
     public function internationalCinema()
     {
         $internationalCinemas = InternationalCinema::with('curatedSection')
-            ->where('curated_section_id', 15)
+            ->where('curated_section_id', 1)
             ->where('year', 2025)
             ->where('status', 1)
             ->limit(20)
