@@ -591,7 +591,7 @@
                                             <li>
                                                 <a href="{{ route('best-web-series-previw-commitee', ['year' => 2025]) }}"
                                                     class="dropdown-item">
-                                                    Best Web Series Preview Committee 2024</a>
+                                                    Best Web Series Preview Committee 2025</a>
                                             </li>
 
                                             {{-- <li>
