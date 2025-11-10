@@ -19,7 +19,7 @@
         </div>
         <div class="owl-carousel international">
             @foreach ($indianPanormas as $panorma)
-                @php
+                {{-- @php
                     $webpImage = preg_replace('/\.\w+$/', '.webp', $panorma->img_src);
                 @endphp
                 <div class="item card">
@@ -28,7 +28,27 @@
                     <div class="International-competition">
                         <p>{{ $panorma->title }}</p>
                     </div>
-                </div>
+                </div> --}}
+
+                @if (!empty($panorma->img_src))
+                    @php
+                        $webpImage = preg_replace('/\.\w+$/', '.webp', $panorma->img_src);
+                    @endphp
+                    <div class="item card">
+                        <img src="{{ asset('public/images/indian-panorama-cinema/' . $webpImage) }}" alt="image"
+                            class="img-fluid" loading="lazy">
+                        <div class="International-competition">
+                            <p>{{ $panorma->title }}</p>
+                        </div>
+                    </div>
+                @else
+                    <div class="item card">
+                        <img src="{{ $panorma->img_url }}" alt="image" class="img-fluid" loading="lazy">
+                        <div class="International-competition">
+                            <p>{{ $panorma->title }}</p>
+                        </div>
+                    </div>
+                @endif
             @endforeach
         </div>
     </div>
