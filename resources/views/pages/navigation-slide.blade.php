@@ -344,6 +344,7 @@
                                                             href="{{ route('indian-panorama', ['year' => 2024, 'slug' => 'accessible-india-accessible-films']) }}">
                                                             Accessible India, Accessible Films</a>
                                                     </li> --}}
+                                                    
                                                     {{-- <li class="nav-item dropend">
                                                         <a class="nav-link dropdown-toggle" href="#"
                                                             role="button" data-bs-toggle="dropdown"
@@ -408,17 +409,30 @@
                                             <li>
                                                 <a href="https://iffigoa.org/festival/indian-paranoma"
                                                     class="dropdown-item nav-link yelow-color-link"
-                                                    target="_blank">View
-                                                    Your Entry 2025</a>
+                                                    target="_blank">View Your Entry 2025</a>
                                             </li>
 
                                             <li>
                                                 <a href="{{ route('indian-panorama-rules-regulations') }}"
                                                     class="dropdown-item">Rules & Regulations</a>
                                             </li>
-
-                                            {{-- 
+                                            
                                             <li class="nav-item dropend">
+                                                <a class="nav-link dropdown-toggle" href="#" role="button"
+                                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                                    Indian Panorama Jury - 2025
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('indian-panorama-jury-feature', ['year' => 2025]) }}">Feature</a>
+                                                    </li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('indian-panorama-jury-non-feature', ['year' => 2025]) }}">Non-Feature</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            {{-- <li class="nav-item dropend">
                                                 <a class="nav-link dropdown-toggle" href="#" role="button"
                                                     data-bs-toggle="dropdown" aria-expanded="false">
                                                     Indian Panorama Jury - 2024
@@ -432,8 +446,6 @@
                                                     </li>
                                                 </ul>
                                             </li> --}}
-
-
 
                                             {{-- <li class="nav-item dropend">
                                                 <a class="nav-link dropdown-toggle" href="#" role="button"
@@ -570,6 +582,18 @@
                                                 <a href="{{ route('web-series-rules-regulations') }}"
                                                     class="dropdown-item">Rules & Regulations</a>
                                             </li>
+                                            <li>
+                                                <a href="{{ route('web-series-jury', ['year' => 2025]) }}"
+                                                    class="dropdown-item">
+                                                    Best Web Series Jury - 2025</a>
+                                            </li>
+
+                                            <li>
+                                                <a href="{{ route('best-web-series-previw-commitee', ['year' => 2025]) }}"
+                                                    class="dropdown-item">
+                                                    Best Web Series Preview Committee 2024</a>
+                                            </li>
+
                                             {{-- <li>
                                                 <a href="{{ route('web-series-jury', ['year' => 2024]) }}"
                                                     class="dropdown-item">
