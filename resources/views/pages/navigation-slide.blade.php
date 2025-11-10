@@ -787,10 +787,6 @@
                                         <a href="https://accreditation.pib.gov.in/eventregistration/login.aspx"
                                             class="nav-link" target="_blank">Media Accreditation</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a href="https://filmguide.iffigoa.org/"
-                                            class="nav-link" target="_blank">Film Guide</a>
-                                    </li>
                                     {{--
                                     <li class="nav-item">
                                         <a href="https://filmguide.iffigoa.org/" class="nav-link"
@@ -940,7 +936,7 @@
 
                                     <li class="nav-item">
                                         <a href="{{ route('master-classes-56th') }}" class="nav-link">
-                                            56<sup>th</sup> IFFI Schedule
+                                            56<sup>th</sup> Master Class Schedule
                                         </a>
                                     </li>
 
@@ -997,8 +993,16 @@
                                 <h4 class="menu-title ">Festival Schedule</h4>
                                 <ul class="navbar-nav vertical-menu-custom">
                                     <li class="nav-item">
+                                        <a href="https://filmguide.iffigoa.org/schedule"
+                                            class="nav-link" target="_blank"> Festival Schedule 2025</a>
+                                    </li>
+                                    {{-- <li class="nav-item">
                                         <a href="{{ asset('public/pdfs/IFFI 2025 Festival Schedule - Nov 20-28.pdf') }}"
                                             class="nav-link" target="_blank"> IFFI 2025</a>
+                                    </li> --}}
+                                    <li class="nav-item">
+                                        <a href="https://filmguide.iffigoa.org/"
+                                            class="nav-link" target="_blank">Film Guide</a>
                                     </li>
                                 </ul>
                             </div>
