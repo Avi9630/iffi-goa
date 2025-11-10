@@ -134,7 +134,7 @@
                                 [
                                     'red_carpet_time' => '12:00',
                                     'show_time' => '12:30',
-                                    'title' => 'Hanti Hanti Pa Pa',
+                                    'title' => 'Haati Haati Pa Pa',
                                     // 'red_carpet_guests' => 'Rukmini Maitra, Arnab Middya, Arunava',
                                     'cast' => 'Rukmini Maitra, Anjana Basu, Tulika Basu',
                                     'director' => 'Arnab Middya',
