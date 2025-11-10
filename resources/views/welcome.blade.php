@@ -66,7 +66,7 @@
     </section>
 
     <!-- 55th IFFI Festival Section-->
-    <section class="">
+    <section>
         @include('pages.55th-iffi-festival', [
             'datas' => app(\App\Http\Controllers\CommonController::class)->iffiFestival(),
         ])
