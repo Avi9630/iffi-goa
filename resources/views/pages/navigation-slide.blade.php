@@ -787,6 +787,10 @@
                                         <a href="https://accreditation.pib.gov.in/eventregistration/login.aspx"
                                             class="nav-link" target="_blank">Media Accreditation</a>
                                     </li>
+                                    <li class="nav-item">
+                                        <a href="https://filmguide.iffigoa.org/"
+                                            class="nav-link" target="_blank">Film Guide</a>
+                                    </li>
                                     {{--
                                     <li class="nav-item">
                                         <a href="https://filmguide.iffigoa.org/" class="nav-link"
