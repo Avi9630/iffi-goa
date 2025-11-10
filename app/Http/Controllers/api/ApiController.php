@@ -161,7 +161,7 @@ class ApiController extends Controller
     public function newsUpdateList()
     {
         try {
-            $newsUpdateList = NewsUpdate::all();
+            $newsUpdateList = NewsUpdate::orderBy('id','DESC')->get();
             // $newsUpdateList = NewsUpdate::where('id')->get();
             $response = [
                 'message' => 'Details fetched successfully.!',
