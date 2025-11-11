@@ -2280,12 +2280,26 @@ body p {
   border-radius: 100%;
   margin-left: -5px;
 }
-.list-block{background: #fff;
-    padding: 20px 30px;
-    border-left: solid 4px #274e74 !important;}
-    .list-block li{
-    color: #333;
-    list-style:none; display: flex;   margin-bottom: 6px;;
-    & .fa{ padding-right: 10px; color:#ffa706 ;}
 
-    }
+.list-block {
+  background: #fff;
+  padding: 20px 30px;
+  border-left: solid 4px #274e74 !important;
+}
+
+.list-block li {
+  color: #333;
+  list-style: none;
+  display: flex;
+  margin-bottom: 6px;
+  ;
+
+  & .fa {
+    padding-right: 10px;
+    color: #ffa706;
+  }
+}
+
+.breaking-news span p {
+  margin: 0;
+}

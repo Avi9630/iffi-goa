@@ -224,7 +224,8 @@
                                                             href="{{ route('cureted-section', ['year' => 2024, 'slug' => 'from-the-festivals']) }}">From
                                                             The Festivals</a></li>
 
-                                                    <li><a class="dropdown-item"
+                                                    <li>
+                                                        <a class="dropdown-item"
                                                             href="{{ route('cureted-section', ['year' => 2024, 'slug' => 'docu-montage']) }}">Docu-Montage</a>
                                                     </li>
                                                     <li><a class="dropdown-item"
@@ -290,7 +291,8 @@
 
                                             <li>
                                                 <a href="{{ asset('public/pdfs/International Jury 2025.jpg') }}"
-                                                    class="dropdown-item" target="_blank">International Jury - 2025</a>
+                                                    class="dropdown-item" target="_blank">International Jury -
+                                                    2025</a>
                                             </li>
 
                                             <li>
@@ -339,84 +341,21 @@
                                                             Best Debut Director
                                                         </a>
                                                     </li>
-                                                    {{-- <li>
-                                                        <a class="dropdown-item"
-                                                            href="{{ route('indian-panorama', ['year' => 2024, 'slug' => 'accessible-india-accessible-films']) }}">
-                                                            Accessible India, Accessible Films</a>
-                                                    </li> --}}
-                                                    
-                                                    {{-- <li class="nav-item dropend">
-                                                        <a class="nav-link dropdown-toggle" href="#"
-                                                            role="button" data-bs-toggle="dropdown"
-                                                            aria-expanded="false">
-                                                            Special Presentation
-                                                        </a>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a class="dropdown-item"
-                                                                    href="{{ route('indian-panorama', ['year' => 2024, 'slug' => 'panorama-feature-jury-recommends']) }}">Panorama
-                                                                    Feature Jury Recommends</a>
-                                                            </li>
-                                                            <li><a class="dropdown-item"
-                                                                    href="{{ route('indian-panorama', ['year' => 2024, 'slug' => 'special-showcase']) }}">Special
-                                                                    Showcase</a>
-                                                            </li>
-                                                            <li><a class="dropdown-item"
-                                                                    href="{{ route('indian-panorama', ['year' => 2024, 'slug' => 'nfdc-showcase-premieres']) }}">NFDC
-                                                                    Showcase & Premieres</a>
-                                                            </li>
-                                                            <li><a class="dropdown-item"
-                                                                    href="{{ route('indian-panorama', ['year' => 2024, 'slug' => 'nfai-classics']) }}">NFAI
-                                                                    Classics</a>
-                                                            </li>
-                                                            <li><a class="dropdown-item"
-                                                                    href="{{ route('indian-panorama', ['year' => 2024, 'slug' => 'prasar-bharti-ott']) }}">Prasar
-                                                                    Bharti OTT</a>
-                                                            </li>
-                                                            <li><a class="dropdown-item"
-                                                                    href="{{ route('indian-panorama', ['year' => 2024, 'slug' => 'prasar-bharti-films']) }}">Prasar
-                                                                    Bharti Films</a>
-                                                            </li>
-                                                        </ul>
-                                                    </li> --}}
                                                 </ul>
                                             </li>
-
-                                            {{-- <li class="nav-item dropend">
-                                                <a class="nav-link dropdown-toggle" href="#" role="button"
-                                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                                    Official Selection IFFI 2025
-                                                </a>
-                                                <ul class="dropdown-menu">
-                                                    <li>
-                                                        <a class="dropdown-item"
-                                                            href="{{ asset('public/pdfs/IP 2025 Feature.pdf') }}"
-                                                            target="_blank">Feature</a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="dropdown-item"
-                                                            href="{{ asset('public/pdfs/IP 2025 Non-Feature.pdf') }}"
-                                                            target="_blank">
-                                                            Non-Feature</a>
-                                                    </li>
-                                                </ul>
-                                            </li> --}}
-
                                             <li>
                                                 <a href="{{ route('about-indian-panorama') }}"
                                                     class="dropdown-item">About Indian Panorama</a>
                                             </li>
-
                                             <li>
                                                 <a href="https://iffigoa.org/festival/indian-paranoma"
                                                     class="dropdown-item nav-link yelow-color-link"
                                                     target="_blank">View Your Entry 2025</a>
                                             </li>
-
                                             <li>
                                                 <a href="{{ route('indian-panorama-rules-regulations') }}"
                                                     class="dropdown-item">Rules & Regulations</a>
                                             </li>
-                                            
                                             <li class="nav-item dropend">
                                                 <a class="nav-link dropdown-toggle" href="#" role="button"
                                                     data-bs-toggle="dropdown" aria-expanded="false">
@@ -431,115 +370,6 @@
                                                     </li>
                                                 </ul>
                                             </li>
-
-                                            {{-- <li class="nav-item dropend">
-                                                <a class="nav-link dropdown-toggle" href="#" role="button"
-                                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                                    Indian Panorama Jury - 2024
-                                                </a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a class="dropdown-item"
-                                                            href="{{ route('indian-panorama-jury-feature', ['year' => 2024]) }}">Feature</a>
-                                                    </li>
-                                                    <li><a class="dropdown-item"
-                                                            href="{{ route('indian-panorama-jury-non-feature', ['year' => 2024]) }}">Non-Feature</a>
-                                                    </li>
-                                                </ul>
-                                            </li> --}}
-
-                                            {{-- <li class="nav-item dropend">
-                                                <a class="nav-link dropdown-toggle" href="#" role="button"
-                                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                                    Indian Panorama IFFI 2024
-                                                </a>
-                                                <ul class="dropdown-menu">
-                                                    <li>
-                                                        <a class="dropdown-item"
-                                                            href="{{ route('official-selection-feature', ['year' => 2024]) }}">
-                                                            Feature
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="dropdown-item"
-                                                            href="{{ route('official-selection-non-feature', ['year' => 2024]) }}">
-                                                            Non-Feature
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="dropdown-item"
-                                                            href="{{ route('indian-panorama', ['year' => 2024, 'slug' => 'accessible-india-accessible-films']) }}">
-                                                            Accessible India, Accessible Films</a>
-                                                    </li>
-                                                    <li class="nav-item dropend">
-                                                        <a class="nav-link dropdown-toggle" href="#"
-                                                            role="button" data-bs-toggle="dropdown"
-                                                            aria-expanded="false">
-                                                            Special Presentation
-                                                        </a>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a class="dropdown-item"
-                                                                    href="{{ route('indian-panorama', ['year' => 2024, 'slug' => 'panorama-feature-jury-recommends']) }}">Panorama
-                                                                    Feature Jury Recommends</a>
-                                                            </li>
-                                                            <li><a class="dropdown-item"
-                                                                    href="{{ route('indian-panorama', ['year' => 2024, 'slug' => 'special-showcase']) }}">Special
-                                                                    Showcase</a>
-                                                            </li>
-                                                            <li><a class="dropdown-item"
-                                                                    href="{{ route('indian-panorama', ['year' => 2024, 'slug' => 'nfdc-showcase-premieres']) }}">NFDC
-                                                                    Showcase & Premieres</a>
-                                                            </li>
-                                                            <li><a class="dropdown-item"
-                                                                    href="{{ route('indian-panorama', ['year' => 2024, 'slug' => 'nfai-classics']) }}">NFAI
-                                                                    Classics</a>
-                                                            </li>
-                                                            <li><a class="dropdown-item"
-                                                                    href="{{ route('indian-panorama', ['year' => 2024, 'slug' => 'prasar-bharti-ott']) }}">Prasar
-                                                                    Bharti OTT</a>
-                                                            </li>
-                                                            <li><a class="dropdown-item"
-                                                                    href="{{ route('indian-panorama', ['year' => 2024, 'slug' => 'prasar-bharti-films']) }}">Prasar
-                                                                    Bharti Films</a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li> --}}
-
-                                            {{-- <li class="nav-item dropend">
-                                                <a class="nav-link dropdown-toggle" href="#" role="button"
-                                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                                    Indian Panorama IFFI 2023
-                                                </a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a class="dropdown-item"
-                                                            href="{{ route('official-selection-feature', ['year' => 2023]) }}">Feature</a>
-                                                    </li>
-                                                    <li><a class="dropdown-item"
-                                                            href="{{ route('official-selection-non-feature', ['year' => 2023]) }}">Non-Feature</a>
-                                                    </li>
-                                                </ul>
-                                            </li> --}}
-
-                                            {{-- <li class="nav-item dropend">
-                                                <a class="nav-link dropdown-toggle" href="#" role="button"
-                                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                                    Indian Cinema - IFFI 2023
-                                                </a>
-                                                <ul class="dropdown-menu">
-                                                    <li>
-                                                        <a class="dropdown-item"
-                                                            href="{{ route('accessible-film', ['year' => 2023, 'slug' => 'accessible-india-accessible-films']) }}">
-                                                            Accessible India-Accessible Films</a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="dropdown-item"
-                                                            href="{{ route('special-screening') }}">Special
-                                                            Screening</a>
-                                                    </li>
-                                                </ul>
-                                            </li> --}}
-
                                         </ul>
                                     </li>
 
@@ -593,23 +423,6 @@
                                                     class="dropdown-item">
                                                     Best Web Series Preview Committee 2025</a>
                                             </li>
-
-                                            {{-- <li>
-                                                <a href="{{ route('web-series-jury', ['year' => 2024]) }}"
-                                                    class="dropdown-item">
-                                                    Best Web Series Jury - 2024</a>
-                                            </li> --}}
-                                            {{-- 
-                                            <li>
-                                                <a href="{{ route('best-web-series-previw-commitee', ['year' => 2024]) }}"
-                                                    class="dropdown-item">
-                                                    Best Web Series Preview Committee 2024</a>
-                                            </li> --}}
-                                            {{-- <li>
-                                                <a class="dropdown-item"
-                                                    href="{{ route('best-web-series', ['year' => 2024, 'slug' => 'best-web-series']) }}">
-                                                    Official Selection - Best Web Series</a>
-                                            </li> --}}
                                         </ul>
                                     </li>
 
@@ -620,31 +433,6 @@
                                                 Gala Premieres & Red Carpet</a>
                                         </li>
                                     </ul>
-
-                                    {{-- <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="#" role="button"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
-                                            Gala Premieres & Red Carpet </a>
-                                            
-                                        <ul class="dropdown-menu">
-                                            <li>
-                                                <a href="{{ route('4th-edition') }}" class="dropdown-item">4th
-                                                    Edition (56th IFFI)</a>
-                                            </li>
-                                            <li>
-                                                <a href="{{ route('3rd-edition') }}" class="dropdown-item">3rd
-                                                    Edition (55th IFFI)</a>
-                                            </li>
-                                            <li>
-                                                <a href="{{ route('2nd-edition') }}" class="dropdown-item">2nd
-                                                    Edition (54th IFFI)</a>
-                                            </li>
-                                            <li>
-                                                <a href="{{ route('1st-edition') }}" class="dropdown-item">
-                                                    1st Edition (53rd IFFI)</a>
-                                            </li>
-                                        </ul>
-                                    </li> --}}
 
                                     <!-- CMOT Section Start-->
                                     <li class="nav-item dropdown">
@@ -675,37 +463,6 @@
                                                     View your entry - 2025
                                                 </a>
                                             </li>
-
-                                            {{-- CMOT JURY --}}
-                                            {{-- <li class="nav-item dropend">
-                                                <a class="nav-link dropdown-toggle" href="#" role="button"
-                                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                                    CMOT Jury
-                                                </a>
-                                                <ul class="dropdown-menu">
-                                                    <li>
-                                                        <a class="dropdown-item"
-                                                            href="{{ route('cmot-jury', ['year' => 2025]) }}"
-                                                            class="dropdown-item">
-                                                            Selection Jury 2025</a>
-                                                    </li>
-                                                    <li><a class="dropdown-item"
-                                                            href="{{ route('cmot-jury', ['year' => 2024]) }}"
-                                                            class="dropdown-item">
-                                                            Selection Jury 2024</a>
-                                                    </li>
-                                                    <li><a class="dropdown-item"
-                                                            href="{{ route('cmot-grand-jury', ['year' => 2025]) }}"
-                                                            class="dropdown-item">
-                                                            Grand Jury 2025</a>
-                                                    </li>
-                                                    <li><a class="dropdown-item"
-                                                            href="{{ route('cmot-grand-jury', ['year' => 2024]) }}"
-                                                            class="dropdown-item">
-                                                            Grand Jury 2024</a>
-                                                    </li>
-                                                </ul>
-                                            </li> --}}
                                         </ul>
                                     </li>
 
@@ -723,10 +480,6 @@
                             <div class="col-md-3 col-sm-12 ">
                                 <h4 class="menu-title ">Waves Film Bazaar</h4>
                                 <ul class="navbar-nav vertical-menu-custom">
-                                    {{-- <li class="nav-item">
-                                        <a href="https://films.wavesbazaar.com/programme/screenwriters-lab/features/"
-                                            class="nav-link" target="_blank">Screenwriters Lab</a>
-                                    </li> --}}
                                     <li class="nav-item">
                                         <a href="https://films.wavesbazaar.com/participate/attend-as-a-delegate/"
                                             class="nav-link" target="_blank">Delegate Registration</a>
@@ -993,16 +746,16 @@
                                 <h4 class="menu-title ">Festival Schedule</h4>
                                 <ul class="navbar-nav vertical-menu-custom">
                                     <li class="nav-item">
-                                        <a href="https://filmguide.iffigoa.org/schedule"
-                                            class="nav-link" target="_blank"> Festival Schedule 2025</a>
+                                        <a href="https://filmguide.iffigoa.org/schedule" class="nav-link"
+                                            target="_blank"> Festival Schedule 2025</a>
                                     </li>
                                     {{-- <li class="nav-item">
                                         <a href="{{ asset('public/pdfs/IFFI 2025 Festival Schedule - Nov 20-28.pdf') }}"
                                             class="nav-link" target="_blank"> IFFI 2025</a>
                                     </li> --}}
                                     <li class="nav-item">
-                                        <a href="https://filmguide.iffigoa.org/"
-                                            class="nav-link" target="_blank">Film Guide</a>
+                                        <a href="https://filmguide.iffigoa.org/" class="nav-link"
+                                            target="_blank">Film Guide</a>
                                     </li>
                                 </ul>
                             </div>
