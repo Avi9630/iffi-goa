@@ -141,7 +141,7 @@
                         @endisset
                     </p>
                     <hr>
-                    <h2> {{ isset($fetch_cinema_basic_details->sales) && !empty($fetch_cinema_basic_details->sales) ? 'Sales' : '' }}
+                    <h2> {{ isset($fetch_cinema_basic_details->sales_agent) && !empty($fetch_cinema_basic_details->sales_agent) ? 'Sales' : '' }}
                     </h2>
                     {{-- <h2> {{ isset($fetch_cinema_basic_details->sales_agent) && !empty($fetch_cinema_basic_details->sales_agent) ? 'Sales' : '' }}
                     </h2> --}}
