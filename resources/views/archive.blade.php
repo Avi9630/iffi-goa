@@ -58,7 +58,7 @@
                 <div class="tab-content mt-3 p-0" id="myTabContent">
 
                     <div class="tab-pane fade show active" id="aboutUs" role="tabpanel" aria-labelledby="about-us">
-                        <div class="row" >
+                        <div class="row">
                             <div class="col-sm-4">
                                 <div class="card mb-4 rounded-3 shadow-sm">
                                     <div class="card-header card-header-active py-3">
@@ -79,7 +79,7 @@
 
                     <div class="tab-pane fade show" id="film-selection" role="tabpanel"
                         aria-labelledby="film-selection-tab">
-                        <div class="row"  data-masonry='{"percentPosition":true}'>
+                        <div class="row" data-masonry='{"percentPosition":true}'>
                             <div class="col-sm-4">
                                 <div class="card mb-4 rounded-3 shadow-sm">
                                     <div class="card-header card-header-active py-3">
@@ -316,64 +316,62 @@
                                         </ul>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="col-sm-4">
-                                <div class="card mb-4 rounded-3 shadow-sm">
-                                    <div class="card-header card-header-active py-3">
-                                        <h4 class="my-0 fw-normal">Gala Premieres & Red Carpet</h4>
+                                <div class="col-sm-12 mt-4">
+                                    <div class="card mb-4 rounded-3 shadow-sm">
+                                        <div class="card-header card-header-active py-3">
+                                            <h4 class="my-0 fw-normal">Gala Premieres & Red Carpet</h4>
+                                        </div>
+                                        <div class="card-body list-archive">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item">
+                                                    <a class="dropdown-link" target="_blank"
+                                                        href="{{ route('3rd-edition') }}">3rd
+                                                        Edition (55th IFFI)</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <a class="dropdown-link" target="_blank"
+                                                        href="{{ route('2nd-edition') }}">2nd
+                                                        Edition (54th IFFI)</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <a class="dropdown-link" target="_blank"
+                                                        href="{{ route('1st-edition') }}">
+                                                        1st Edition (53rd IFFI)</a>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <div class="card-body list-archive">
-                                        <ul class="list-group list-group-flush">
-                                            <li class="list-group-item">
-                                                <a class="dropdown-link" target="_blank"
-                                                    href="{{ route('3rd-edition') }}">3rd
-                                                    Edition (55th IFFI)</a>
-                                            </li>
-                                            <li class="list-group-item">
-                                                <a class="dropdown-link" target="_blank"
-                                                    href="{{ route('2nd-edition') }}">2nd
-                                                    Edition (54th IFFI)</a>
-                                            </li>
-                                            <li class="list-group-item">
-                                                <a class="dropdown-link" target="_blank"
-                                                    href="{{ route('1st-edition') }}">
-                                                    1st Edition (53rd IFFI)</a>
-                                            </li>
-                                        </ul>
+                                </div>
+
+                                <div class="col-sm-12 mt-4">
+                                    <div class="card mb-4 rounded-3 shadow-sm">
+                                        <div class="card-header card-header-active py-3">
+                                            <h4 class="my-0 fw-normal">CMOT'S</h4>
+                                        </div>
+                                        <div class="card-body list-archive">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item">
+                                                    <a class="dropdown-link" target="_blank"
+                                                        href="{{ route('cmot-jury', ['year' => 2024]) }}"
+                                                        class="dropdown-item">
+                                                        Selection Jury 2024</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <a class="dropdown-link" target="_blank"
+                                                        href="{{ route('cmot-grand-jury', ['year' => 2024]) }}"
+                                                        class="dropdown-item">
+                                                        Grand Jury 2024</a>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="col-sm-4">
-                                <div class="card mb-4 rounded-3 shadow-sm">
-                                    <div class="card-header card-header-active py-3">
-                                        <h4 class="my-0 fw-normal">CMOT'S</h4>
-                                    </div>
-                                    <div class="card-body list-archive">
-                                        <ul class="list-group list-group-flush">
-                                            <li class="list-group-item">
-                                                <a class="dropdown-link" target="_blank"
-                                                    href="{{ route('cmot-jury', ['year' => 2024]) }}"
-                                                    class="dropdown-item">
-                                                    Selection Jury 2024</a>
-                                            </li>
-                                            <li class="list-group-item">
-                                                <a class="dropdown-link" target="_blank"
-                                                    href="{{ route('cmot-grand-jury', ['year' => 2024]) }}"
-                                                    class="dropdown-item">
-                                                    Grand Jury 2024</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
                     </div>
 
                     <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                        <div class="row" >
+                        <div class="row" data-masonry='{"percentPosition":true}'>
                             <div class="col-sm-6">
                                 <div class="card mb-4 rounded-3 shadow-sm">
                                     <div class="card-header card-header-active py-3">
@@ -381,13 +379,27 @@
                                     </div>
                                     <div class="card-body list-archive">
                                         <ul class="list-group list-group-flush">
-                                            <li class="list-group-item">IFFI Festival 2024 - Photos</li>
-                                            <li class="list-group-item">IFFI Festival 2024 - Videos</li>
-                                            <li class="list-group-item">IFFI Festival 2023 - Photos</li>
+                                            <li class="list-group-item">
+                                                <a class="dropdown-link" target="_blank"
+                                                    href="{{ route('media.gallery.byYear', ['year' => '2024']) }}">Photos
+                                                    2024
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <a class="dropdown-link" target="_blank"
+                                                    href="{{ route('media.gallery.byYear', ['year' => '2023']) }}">Photos
+                                                    2023
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <a class="dropdown-link" target="_blank"
+                                                    href="{{ route('media.gallery.videos.byYear', ['year' => '2024']) }}">Videos-2024</a>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
+
                             <div class="col-sm-6">
                                 <div class="card mb-4 rounded-3 shadow-sm">
                                     <div class="card-header card-header-active py-3">
@@ -395,12 +407,22 @@
                                     </div>
                                     <div class="card-body list-archive">
                                         <ul class="list-group list-group-flush">
-                                            <li class="list-group-item">2024</li>
-                                            <li class="list-group-item">2023</li>
-                                            <li class="list-group-item">2022</li>
-                                            <li class="list-group-item">2021</li>
-                                            <li class="list-group-item">2018</li>
-                                            <li class="list-group-item">2017</li>
+                                            <li class="list-group-item">
+                                                <a class="dropdown-link" target="_blank"
+                                                    href="{{ route('the-peacock', ['year' => 2024]) }}">2024</a>
+                                            </li>
+                                            <li class="list-group-item"><a class="dropdown-link" target="_blank"
+                                                    href="{{ route('the-peacock', ['year' => 2023]) }}">2023</a></li>
+                                            <li class="list-group-item">
+                                                <a class="dropdown-link" target="_blank"
+                                                    href="{{ route('the-peacock', ['year' => 2022]) }}">2022</a>
+                                            </li>
+                                            <li class="list-group-item"><a class="dropdown-link" target="_blank"
+                                                    href="{{ route('the-peacock', ['year' => 2021]) }}">2021</a></li>
+                                            <li class="list-group-item"><a class="dropdown-link" target="_blank"
+                                                    href="{{ route('the-peacock', ['year' => 2018]) }}">2018</a></li>
+                                            <li class="list-group-item"><a class="dropdown-link" target="_blank"
+                                                    href="{{ route('the-peacock', ['year' => 2017]) }}">2017</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -416,7 +438,11 @@
                                 </div>
                                 <div class="card-body list-archive">
                                     <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">55th IFFI Schedule - 2024</li>
+                                        <li class="list-group-item">
+                                            <a class="nav-link" target="_blank" href="{{ route('master-classes') }}">
+                                                55<sup>th</sup> IFFI Schedule - 2024
+                                            </a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -427,3 +453,25 @@
         </div>
     </div>
 @endsection
+
+
+<style type="text/css">
+    .card-header-active {
+        padding: 20px 20px !important;
+        background: linear-gradient(44.43deg, #3E4EB0 -20.27%, #164E47 105%) !important;
+        color: #fff !important;
+
+        & h4 {
+            color: #fff !important;
+            font-size: 18px
+        }
+    }
+
+    .list-archive li {
+        padding: 5px 0
+    }
+
+    .list-archive li a {
+        text-decoration: none;
+    }
+</style>

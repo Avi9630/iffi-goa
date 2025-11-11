@@ -52,6 +52,7 @@ if ($key) {
         gtag('js', new Date());
         gtag('config', 'G-4NMQ992Q1W');
     </script>
+    
 </head>
 
 <body id="text-resize">

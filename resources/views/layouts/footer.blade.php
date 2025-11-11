@@ -89,7 +89,7 @@
                 <li><a href="{{ route('press-release') }}">Press Release</a></li>
                 <li> <a href="{{ route('media.gallery.byYear', ['year' => '2024']) }}">Gallery</a></li>
                 <li> <a href="{{ route('privacy-policy') }}">Privacy Policy</a></li>
-                {{-- <li> <a href="{{ route('archive') }}">Archive</a></li> --}}
+                <li> <a href="{{ route('archive') }}">Archive</a></li>
             </ul>
         </div>
     </div>
@@ -323,11 +323,6 @@
             }
         });
     });
-</script>
-
-
-<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
-    integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async>
 </script>
 
 </body>
