@@ -392,9 +392,15 @@
                                             Series</a>
                                         <ul class="dropdown-menu">
 
-                                            <li class="nav-item">
+                                            {{-- <li class="nav-item">
                                                 <a href="{{ asset('public/pdfs/OTT Catalogue.pdf') }}"
                                                     class="dropdown-item" target="_blank"> Official Selection</a>
+                                            </li> --}}
+
+                                            <li>
+                                                <a class="dropdown-item"
+                                                    href="{{ route('best-web-series', ['year' => 2025, 'slug' => 'best-web-series']) }}">
+                                                    Official Selection - Best Web Series</a>
                                             </li>
 
                                             <li>
