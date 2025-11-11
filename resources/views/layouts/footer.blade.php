@@ -7,7 +7,8 @@
                 <img src="{{ asset('public/images/header-logo/mib.png') }}" alt="image"
                     style="width: 20%; height: 88px;" class="Mobile-view">
                 <a href="https://films.wavesbazaar.com/" target="_blank">
-                    <img src="{{ asset('public/images/header-logo/WavesFilmBazaar.png') }}" alt="image" height="120px" width="120px">
+                    <img src="{{ asset('public/images/header-logo/WavesFilmBazaar.png') }}" alt="image"
+                        height="120px" width="120px">
                 </a>
                 <img src="{{ asset('public/images/header-logo/esg-logo.png') }}" alt="image" class="Mobile-view">
                 <img src="{{ asset('public/images/header-logo/GOG.png') }}" alt="image" style="width:9%"
@@ -47,8 +48,8 @@
                     </ul>
                 </div>
                 {{-- <div class="col-md-3 col-sm-3"> --}}
-                    {{-- <h4>Indian Debut Director Award</h4> --}}
-                    {{-- <ul class="text-highlight">
+                {{-- <h4>Indian Debut Director Award</h4> --}}
+                {{-- <ul class="text-highlight">
                         <li><a href="https://iffigoa.org/festival/indian-debut-director" class="cus-menuP-link"
                                 target="_blank">View your entry</a></li>
                     </ul> --}}
@@ -70,7 +71,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('festival-venue',['year' => 2024]) }}" class="cus-menuP-link">Festival
+                    <a href="{{ route('festival-venue', ['year' => 2024]) }}" class="cus-menuP-link">Festival
                         Venue</a>
                     {{-- <a href="{{ route('festival-venue') }}" class="cus-menuP-link">Festival
                         Venue</a> --}}
@@ -134,6 +135,7 @@
 
 <script type="text/javascript" src="{{ asset('public/js/custom.js') }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.10.0/js/lightgallery-all.min.js"></script>
+
 <script>
     $(document).ready(function() {
         $("#lightgallery").lightGallery({
@@ -143,7 +145,7 @@
     });
 </script>
 
-<script defer >
+<script defer>
     window.onscroll = function() {
         var menu = document.getElementById('menu');
         if (window.scrollY > 100) { // Change background after scrolling 100px
@@ -167,7 +169,7 @@
     });
 </script>
 
-<script defer >
+<script defer>
     $(document).ready(function() {
         // Function to get a cookie by name
         function getCookie(name) {
@@ -322,6 +324,12 @@
         });
     });
 </script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+    integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async>
+</script>
+
 </body>
 
 </html>
