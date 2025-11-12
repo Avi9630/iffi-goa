@@ -13,11 +13,11 @@
 
 <section>
     <div class="container mb-5">
-        <div class="section-heading mb-4">
+        <div class="section-heading mb-4 text-center mt-5 center-heading">
             <p>A Kaleidoscope of Creativity and Culture of 56<sup>th</sup></p>
             <h2>Indian Panorama</h2>
         </div>
-        <div class="owl-carousel international">
+        <div class="owl-carousel international highlight">
             @foreach ($indianPanormas as $panorma)
                 {{-- @php
                     $webpImage = preg_replace('/\.\w+$/', '.webp', $panorma->img_src);
