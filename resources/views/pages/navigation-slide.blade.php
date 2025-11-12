@@ -464,6 +464,10 @@
                                                     CMOT</a>
                                             </li>
                                             <li>
+                                                <a href="{{ asset('public/pdfs/124 CMOT and CIC selected candidates.pdf') }}"
+                                                    class="nav-link" target="_blank">CMOT 2025 Results</a>
+                                            </li>
+                                            <li>
                                                 <a href="https://iffigoa.org/festival/creative-mind-tomorrow"
                                                     class="nav-link yelow-color-link" target="_blank">
                                                     View your entry - 2025
