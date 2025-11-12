@@ -66,15 +66,15 @@
                     <a href="{{ route('about-iffi') }}" class="cus-menuP-link">About IFFI</a>
                 </li>
                 <li>
-                    <a href="https://www.youtube.com/watch?v=lsjuObbzDyM" target="_blank" class="cus-menuP-link">
-                        Glimpses of IFFI 2023
+                    <a href="https://youtu.be/yRamd6jVCes?si=jAFclk9vYGgRCNhu" target="_blank" class="cus-menuP-link">
+                        Glimpses of IFFI 2025
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('festival-venue', ['year' => 2024]) }}" class="cus-menuP-link">Festival
-                        Venue</a>
-                    {{-- <a href="{{ route('festival-venue') }}" class="cus-menuP-link">Festival
+                    {{-- <a href="{{ route('festival-venue', ['year' => 2025]) }}" class="cus-menuP-link">Festival
                         Venue</a> --}}
+                    <a href="{{ route('festival-venue') }}" class="cus-menuP-link">Festival
+                        Venue</a>
                 </li>
                 <li>
                     <a href="{{ route('goa-tourist-places') }}" class="cus-menuP-link">
