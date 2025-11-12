@@ -400,7 +400,7 @@
 
 .card {
   margin-bottom: 15px;
-  border-radius: 10px;
+  border-radius: 6px;
   overflow: hidden;
 }
 
@@ -466,7 +466,7 @@
 }
 
 .owl-carousel .card {
-  box-shadow: 0px 4px 4px 0px #a9a3a4, 0px 0px 4px 0px #a9a3a4;
+  /* box-shadow: 0px 4px 4px 0px #a9a3a4, 0px 0px 4px 0px #a9a3a4; */
   overflow: hidden;
   margin: 6px;
 }
@@ -2303,3 +2303,4 @@ body p {
 .breaking-news span p {
   margin: 0;
 }
+   .highlight{ background: #fff; padding: 20px; & .card { border-radius: 0px;}}

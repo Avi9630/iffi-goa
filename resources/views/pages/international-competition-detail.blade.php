@@ -93,6 +93,7 @@
                         </ul>
                     </div>
                 </div>
+                
                 <div class="col-md-12">
                     <h2>{{ isset($fetch_cinema_basic_details->festivals) && !empty($fetch_cinema_basic_details->festivals) ? 'Festivals : ' : '' }}
                     </h2>
