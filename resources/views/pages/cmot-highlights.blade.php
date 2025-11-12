@@ -4,7 +4,7 @@
             <p>Showcasing 56<sup>th</sup> IFFI</p>
             <h2>Creative minds of tomorrow</h2>
         </div>
-        <div class="owl-carousel highlight">
+        <div class="owl-carousel">
             @foreach ($datas as $data)
                 <div class="item card">
                     <img src='{{ $data->img_url }}' alt="{{ $data->image }}" class="img-fluid">

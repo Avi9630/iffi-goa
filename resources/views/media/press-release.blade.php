@@ -17,8 +17,8 @@
         </div>
     </div>
     <!-- Inner Page Banner Section -->
-    <div class="container press">
-        <div class="table-responsive">
+    <div class="container press mt-4 mb-4">
+        <div class="table-responsive ">
             <table id="example" class="table table-hover mt-3">
                 <tbody>
                     {{-- <tr>
@@ -53,12 +53,21 @@
             </table>
         </div>
         {{-- Paginations --}}
-        <div class="container">
-            <nav aria-label="Page navigation pb-4">
-                <ul class="pagination overflow-hidden">
-                    {{ $press->withQueryString()->links() }}
+        {{-- <div class="container">
+            <nav aria-label="Page navigation pb-4 text-end" style="justify-content: end; diplay:flex;">
+                <ul class="pagination overflow-hidden text-end" style="">
+                  {{ $press->withQueryString()->links() }}
                 </ul>
             </nav>
+        </div> --}}
+        <div class="d-flex justify-content-center mt-4">
+            {{ $press->withQueryString()->links() }}
         </div>
     </div>
 @endsection
+<style>
+    .press {
+        background: #fff;
+        padding: 20px 40px;
+    }
+</style>
