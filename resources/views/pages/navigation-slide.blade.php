@@ -490,16 +490,24 @@
                             <div class="col-md-3 col-sm-12 ">
                                 <h4 class="menu-title ">Waves Film Bazaar</h4>
                                 <ul class="navbar-nav vertical-menu-custom">
+
                                     <li class="nav-item">
                                         <a href="https://films.wavesbazaar.com/participate/attend-as-a-delegate/"
                                             class="nav-link" target="_blank">Delegate Registration</a>
                                     </li>
 
                                     <li class="nav-item">
-                                        <a href="{{ route('knowledge-series') }}" class="nav-link">
+                                        <a href="{{ asset('public/pdfs/Knowledge series calender.pdf') }}"
+                                            class="nav-link" target="_blank">
                                             Knowledge Series Calender
                                         </a>
                                     </li>
+
+                                    {{-- <li class="nav-item">
+                                        <a href="{{ route('knowledge-series') }}" class="nav-link">
+                                            Knowledge Series Calender
+                                        </a>
+                                    </li> --}}
 
                                     <li class="nav-item">
                                         <a href="https://films.wavesbazaar.com/programme/market-screenings/"
@@ -546,6 +554,7 @@
                                         <a href="https://my.iffigoa.org/" class="nav-link" target="_blank">Delegate
                                             SignUp/SignIn</a>
                                     </li>
+
                                     <li class="nav-item">
                                         <a href="https://accreditation.pib.gov.in/eventregistration/login.aspx"
                                             class="nav-link" target="_blank">Media Accreditation</a>
@@ -739,7 +748,7 @@
                             </div>
                             <!-- Masterclass Section End -->
 
-                            <!-- Waves Film Bazzar Section Start -->
+                            <!-- Wavex Section Start -->
                             <div class="col-md-3 col-sm-12 ">
                                 <h4 class="menu-title ">WAVEX</h4>
                                 <ul class="navbar-nav vertical-menu-custom">
@@ -749,7 +758,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <!-- Waves Film Bazzar Section End -->
+                            <!-- Wavex Section End -->
 
                             <!-- IFFI Schedule Section Start -->
                             <div class="col-md-3 col-sm-12 ">
