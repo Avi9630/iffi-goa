@@ -98,7 +98,7 @@
                                 [
                                     'red_carpet_time' => '13:00',
                                     'show_time' => '13:45',
-                                    'title' => '1942: A Love Story',
+                                    'title' => '1942: A Love Story (4K)', 
                                     // 'red_carpet_guests' => 'Vidhu Vinod Chopra',
                                     'cast' => 'Anil Kapoor, Jackie Shroff',
                                     'director' => 'Vidhu Vinod Chopra',
