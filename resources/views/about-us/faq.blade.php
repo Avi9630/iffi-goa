@@ -18,26 +18,6 @@
     <!-- Inner Page Banner Section -->
     <div class="col-lg-12 mt-5 mb-4 static-content">
         <div class="container">
-            <!-- Faq -->
-            {{-- <div class="accordion" id="accordionExample">
-                @foreach ($faqs as $key => $faq)
-                    <div class="accordion-item ">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapse.{{ $key }}" aria-expanded="false"
-                                aria-controls="collapse.{{ $key }}">
-                                {{ $faq->title }}
-                            </button>
-                        </h2>
-                        <div id="collapse.{{ $key }}" class="accordion-collapse collapse"
-                            data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                {!! $faq->description !!}
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
-            </div> --}}
 
             <div class="accordion" id="accordionExample">
                 <div class="accordion-item ">
@@ -107,9 +87,9 @@
                     </h2>
                     <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                            Delegate registration for the 55th edition of the International Film Festival of India (IFFI),
-                            scheduled in the state from Nov 20 to 28, has opened on 27th September 2024. Film lovers can
-                            apply in the delegate category starting at the cost of Rs 1,000 including the GST, however, in
+                            Delegate registration for the 56th edition of the International Film Festival of India (IFFI),
+                            scheduled in the state from Nov 20 to 28, has opened on 27th September 2025. Film lovers can
+                            apply in the delegate category starting at the cost of Rs 1,080 including the GST, however, in
                             the student category, it is free of charge.
                         </div>
                     </div>
@@ -287,7 +267,7 @@
                             password, create a MYIFFI account. After creating your account, navigate to the Registrations
                             tab and select either Delegate or Media. Choose the appropriate criteria, complete the form, and
                             submit it. Once accepted as a Delegate for IFFI, you will receive a confirmation email. Please
-                            note that there is a registration deadline, so don\'t delay!
+                            note that there is a registration deadline, so don't delay!
                         </div>
                     </div>
                 </div>
@@ -388,7 +368,7 @@
                     </h2>
                     <div id="collapse16" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                            The delegate registration fee is ₹1,000. Once the delegate registration is complete, the
+                            The delegate registration fee is ₹1,080. Once the delegate registration is complete, the
                             applicant
                             can access all film screenings through the booking app. Additionally, delegates can participate
                             in
