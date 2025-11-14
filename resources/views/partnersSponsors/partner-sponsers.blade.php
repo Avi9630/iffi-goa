@@ -28,7 +28,156 @@
         <div class="container">
             <!-- Opening & Closing Venue -->
             <div class="row">
-                <div class="col-md-4 col-sm-6 d-flex">
+                <div class="col-md-12 col-sm-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="title-sponsor">Our Partners & Sponsors</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="sponsor-list-div ">
+                                <ul>
+                                    <li class="me-2">
+                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-01.png') }}"
+                                            class="img-fluid" alt="CONTENT PARTNERS">
+                                    </li>
+                                    <li class="me-2">
+                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-02.png') }}"
+                                            class="img-fluid" alt="CONTENT PARTNERS">
+                                    </li>
+                                    <li class="me-2">
+                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-03.png') }}"
+                                            class="img-fluid" alt="CONTENT PARTNERS">
+                                    </li>
+                                    <li class="me-2">
+                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-04.png') }}"
+                                            class="img-fluid" alt="CONTENT PARTNERS">
+                                    </li>
+                                    <li class="me-2">
+                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-05.png') }}"
+                                            class="img-fluid" alt="CONTENT PARTNERS">
+                                    </li>
+                                    <li class="me-2">
+                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-06.png') }}"
+                                            class="img-fluid" alt="CONTENT PARTNERS">
+                                    </li>
+                                    <li class="me-2">
+                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-07.png') }}"
+                                            class="img-fluid" alt="CONTENT PARTNERS">
+                                    </li>
+                                    <li class="me-2">
+                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-08.png') }}"
+                                            class="img-fluid" alt="CONTENT PARTNERS">
+                                    </li>
+                                    <li class="me-2">
+                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-09.png') }}"
+                                            class="img-fluid" alt="CONTENT PARTNERS">
+                                    </li>
+                                    <li class="me-2">
+                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-10.png') }}"
+                                            class="img-fluid" alt="CONTENT PARTNERS">
+                                    </li>
+                                    <li class="me-2">
+                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-11.png') }}"
+                                            class="img-fluid" alt="CONTENT PARTNERS">
+                                    </li>
+                                    <li class="me-2">
+                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-12.png') }}"
+                                            class="img-fluid" alt="CONTENT PARTNERS">
+                                    </li>
+                                    <li class="me-2">
+                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-13.png') }}"
+                                            class="img-fluid" alt="CONTENT PARTNERS">
+                                    </li>
+                                    <li class="me-2">
+                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-14.png') }}"
+                                            class="img-fluid" alt="CONTENT PARTNERS">
+                                    </li>
+                                    <li class="me-2">
+                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-15.png') }}"
+                                            class="img-fluid" alt="CONTENT PARTNERS">
+                                    </li>
+                                    <li class="me-2">
+                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-16.png') }}"
+                                            class="img-fluid" alt="CONTENT PARTNERS">
+                                    </li>
+                                    <li class="me-2">
+                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-17.png') }}"
+                                            class="img-fluid" alt="CONTENT PARTNERS">
+                                    </li>
+                                    <li class="me-2">
+                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-18.png') }}"
+                                            class="img-fluid" alt="CONTENT PARTNERS">
+                                    </li>
+                                    <li class="me-2">
+                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-19.png') }}"
+                                            class="img-fluid" alt="CONTENT PARTNERS">
+                                    </li>
+                                    <li class="me-2">
+                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-20.png') }}"
+                                            class="img-fluid" alt="CONTENT PARTNERS">
+                                    </li>
+                                    <li class="me-2">
+                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-21.png') }}"
+                                            class="img-fluid" alt="CONTENT PARTNERS">
+                                    </li>
+                                    <li class="me-2">
+                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-22.png') }}"
+                                            class="img-fluid" alt="CONTENT PARTNERS">
+                                    </li>
+                                    <li class="me-2">
+                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-23.png') }}"
+                                            class="img-fluid" alt="CONTENT PARTNERS">
+                                    </li>
+                                    <li class="me-2">
+                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-24.png') }}"
+                                            class="img-fluid" alt="CONTENT PARTNERS">
+                                    </li>
+                                    <li class="me-2">
+                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-25.png') }}"
+                                            class="img-fluid" alt="CONTENT PARTNERS">
+                                    </li>
+                                    <li class="me-2">
+                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-26.png') }}"
+                                            class="img-fluid" alt="CONTENT PARTNERS">
+                                    </li>
+                                    <li class="me-2">
+                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-27.png') }}"
+                                            class="img-fluid" alt="CONTENT PARTNERS">
+                                    </li>
+                                    <li class="me-2">
+                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-28.png') }}"
+                                            class="img-fluid" alt="CONTENT PARTNERS">
+                                    </li>
+                                    <li class="me-2">
+                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-29.png') }}"
+                                            class="img-fluid" alt="CONTENT PARTNERS">
+                                    </li>
+                                    <li class="me-2">
+                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-30.png') }}"
+                                            class="img-fluid" alt="CONTENT PARTNERS">
+                                    </li>
+                                    <li class="me-2">
+                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-31.png') }}"
+                                            class="img-fluid" alt="CONTENT PARTNERS">
+                                    </li>
+                                    <li class="me-2">
+                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-32.png') }}"
+                                            class="img-fluid" alt="CONTENT PARTNERS">
+                                    </li>
+                                    <li class="me-2">
+                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-33.png') }}"
+                                            class="img-fluid" alt="CONTENT PARTNERS">
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                {{-- <div class="col-md-4 col-sm-6 d-flex">
                     <div class="card">
                         <div class="card-header">
                             <h3 class="title-sponsor">ACCESSIBILITY PARTNER</h3>
@@ -84,8 +233,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-12 col-sm-12">
+                </div> --}}
+                {{-- <div class="col-md-12 col-sm-12">
                     <div class="card">
                         <div class="card-header">
                             <h3 class="title-sponsor">CONTENT PARTNERS</h3>
@@ -151,8 +300,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-6 d-flex">
+                </div> --}}
+                {{-- <div class="col-md-4 col-sm-6 d-flex">
                     <div class="card">
                         <div class="card-header">
                             <h3 class="title-sponsor">COUNTRY OF FOCUS</h3>
@@ -176,8 +325,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-6 d-flex">
+                </div> --}}
+                {{-- <div class="col-md-4 col-sm-6 d-flex">
                     <div class="card">
                         <div class="card-header">
                             <h3 class="title-sponsor">DESIGN PARTNERS</h3>
@@ -195,8 +344,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-6 d-flex">
+                </div> --}}
+                {{-- <div class="col-md-4 col-sm-6 d-flex">
                     <div class="card">
                         <div class="card-header">
                             <h3 class="title-sponsor">DIGITAL MEDIA PARTNERS</h3>
@@ -205,23 +354,23 @@
                             <div class="sponsor-list-div ">
                                 <ul>
                                     <li class="me-2">
-                                        {{-- <a href="https://www.iffigoa.org/public/images/thePartnerSponsor/my-gov.png"> --}}
                                         <a href="{{ asset('public/images/thePartnerSponsor/my-gov.png') }}">
                                             <img src="{{ asset('public/images/thePartnerSponsor/my-gov.png') }}"
                                                 class="img-fluid" alt="my-gov">
                                         </a>
-                                    </li <li class="me-2">
-                                    <a href="https://www.iffigoa.org/public/images/thePartnerSponsor/22.png">
-                                        <img src="https://www.iffigoa.org/public/images/thePartnerSponsor/22.png"
-                                            class="img-fluid" alt="DIGITAL MEDIA PARTNERS">
-                                    </a>
+                                    </li>
+                                    <li class="me-2">
+                                        <a href="https://www.iffigoa.org/public/images/thePartnerSponsor/22.png">
+                                            <img src="https://www.iffigoa.org/public/images/thePartnerSponsor/22.png"
+                                                class="img-fluid" alt="DIGITAL MEDIA PARTNERS">
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-6 d-flex">
+                </div> --}}
+                {{-- <div class="col-md-4 col-sm-6 d-flex">
                     <div class="card">
                         <div class="card-header">
                             <h3 class="title-sponsor">ENTERTAINMENT PARTNERS</h3>
@@ -314,8 +463,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-6 d-flex">
+                </div> --}}
+                {{-- <div class="col-md-4 col-sm-6 d-flex">
                     <div class="card">
                         <div class="card-header">
                             <h3 class="title-sponsor">KNOWLEGE PARTNER</h3>
@@ -427,8 +576,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-12 col-sm-12">
+                </div> --}}
+                {{-- <div class="col-md-12 col-sm-12">
                     <div class="card">
                         <div class="card-header">
                             <h3 class="title-sponsor">OTHER PARTNERS</h3>
@@ -556,8 +705,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-6 d-flex">
+                </div> --}}
+                {{-- <div class="col-md-4 col-sm-6 d-flex">
                     <div class="card">
                         <div class="card-header">
                             <h3 class="title-sponsor">PRODUCTION PARTNER</h3>
@@ -600,8 +749,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-6 d-flex">
+                </div> --}}
+                {{-- <div class="col-md-4 col-sm-6 d-flex">
                     <div class="card">
                         <div class="card-header">
                             <h3 class="title-sponsor">SCREENING PARTNER</h3>
@@ -669,8 +818,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-12 col-sm-12">
+                </div> --}}
+                {{-- <div class="col-md-12 col-sm-12">
                     <div class="card">
                         <div class="card-header">
                             <h3 class="title-sponsor">TECHNICAL PARTNERS</h3>
@@ -690,12 +839,6 @@
                                                 class="img-fluid" alt="TECHNICAL PARTNERS">
                                         </a>
                                     </li>
-                                    {{-- <li class="me-2">
-                                        <a href="https://www.iffigoa.org/public/images/thePartnerSponsor/14.png">
-                                            <img src="https://www.iffigoa.org/public/images/thePartnerSponsor/14.png"
-                                                class="img-fluid" alt="TECHNICAL PARTNERS">
-                                        </a>
-                                    </li> --}}
                                     <li class="me-2">
                                         <a href="https://www.iffigoa.org/public/images/thePartnerSponsor/15.png">
                                             <img src="https://www.iffigoa.org/public/images/thePartnerSponsor/15.png"
@@ -719,7 +862,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-md-12 col-sm-12">
                     <div class="card">
                         <div class="card-header">
@@ -750,7 +892,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
