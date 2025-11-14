@@ -89,7 +89,7 @@
                         <div class="accordion-body">
                             Delegate registration for the 56th edition of the International Film Festival of India (IFFI),
                             scheduled in the state from Nov 20 to 28, has opened on 27th September 2025. Film lovers can
-                            apply in the delegate category starting at the cost of Rs 1,080 including the GST, however, in
+                            apply in the delegate category starting at the cost of Rs 1,180 including the GST, however, in
                             the student category, it is free of charge.
                         </div>
                     </div>
@@ -368,7 +368,7 @@
                     </h2>
                     <div id="collapse16" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                            The delegate registration fee is ₹1,080. Once the delegate registration is complete, the
+                            The delegate registration fee is ₹1,180. Once the delegate registration is complete, the
                             applicant
                             can access all film screenings through the booking app. Additionally, delegates can participate
                             in
