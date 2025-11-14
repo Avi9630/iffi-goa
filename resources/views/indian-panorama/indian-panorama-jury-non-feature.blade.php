@@ -52,14 +52,61 @@
                     </div>
                 </div>
             @endif
-            @php
+            {{-- @php
                 $chairPersons = $juryDetails->where('is_chairperson', 0);
-            @endphp
-            @if (!empty($chairPersons))
+            @endphp --}}
+            {{-- @if (!empty($chairPersons))
                 @foreach ($chairPersons as $key => $chairPerson)
                     <div class="card">
                         <div class="card-body">
-                            <h3>{{ $chairPerson['name'] }} {{ $chairPerson['designation'] }}</h3>
+                            <div class="row  align-items-center ">
+                                <div class="col-md-7 ">
+                                    <div class="international-jury-text">
+                                        <h2 class="mt-3">{{ $chairPerson->name }}</h2>
+                                        <p>{{ $chairPerson->description }}</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-5 ">
+                                    <div class="jury_img">
+                                        @if (!empty($chairPerson->img_src))
+                                            <img src="{{ asset('public/images/juries/' . $chairPerson->img_src) }}"
+                                                class="img-fluid">
+                                        @else
+                                            <img src="{{ $chairPerson->img_url }}" class="img-fluid">
+                                        @endif
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            @endif --}}
+
+            @php
+                $juries = $juryDetails->where('is_chairperson', 0);
+            @endphp
+            @if (!empty($juries))
+                @foreach ($juries as $key => $jury)
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row  align-items-center ">
+                                <div class="col-md-7 ">
+                                    <div class="international-jury-text">
+                                        <h2 class="mt-3">{{ $jury->name }}</h2>
+                                        <p>{{ $jury->description }}</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-5 ">
+                                    <div class="jury_img">
+                                        @if (!empty($jury->img_src))
+                                            <img src="{{ asset('public/images/juries/' . $jury->img_src) }}"
+                                                class="img-fluid">
+                                        @else
+                                            <img src="{{ $jury->img_url }}" class="img-fluid">
+                                        @endif
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 @endforeach
