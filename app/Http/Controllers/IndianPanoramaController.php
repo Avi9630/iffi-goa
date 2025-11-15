@@ -67,15 +67,16 @@ class IndianPanoramaController extends Controller
     {
         $payload            =   $request->all();
         $year               =   isset($payload['year']) ? $payload['year'] : '';
-        $bestDebutDirectors = IndianPanorama::with('officialSelection')
+        $data = IndianPanorama::with('officialSelection')
             ->where('official_selection_id', 4)
             ->where('status', 1)
             ->when(!empty($year), function ($query) use ($year) {
                 return $query->where('year', $year);
             })
             ->get();
+        $specialPresentations = $data->groupBy('sub_category');
         return view('indian-panorama.special-presentation', [
-            'bestDebutDirectors' =>  $bestDebutDirectors,
+            'specialPresentations' =>  $specialPresentations,
             'year' =>  $year,
         ]);
     }
@@ -84,7 +85,7 @@ class IndianPanoramaController extends Controller
     {
         $payload            =   $request->all();
         $year               =   isset($payload['year']) ? $payload['year'] : '';
-        $bestDebutDirectors = IndianPanorama::with('officialSelection')
+        $newHorizons = IndianPanorama::with('officialSelection')
             ->where('official_selection_id', 5)
             ->where('status', 1)
             ->when(!empty($year), function ($query) use ($year) {
@@ -92,7 +93,7 @@ class IndianPanoramaController extends Controller
             })
             ->get();
         return view('indian-panorama.new-horizon', [
-            'bestDebutDirectors' =>  $bestDebutDirectors,
+            'newHorizons' =>  $newHorizons,
             'year' =>  $year,
         ]);
     }
