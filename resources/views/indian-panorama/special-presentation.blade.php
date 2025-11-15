@@ -14,7 +14,7 @@
             {{-- @php
                 $yearly = isset($year) && $year != 2024 ? 2023 : $year ?? 2024;
             @endphp --}}
-            <h1 class="page-title-header">IFFI Festival {{ $year }} Special Presentation</h1>
+            <h1 class="page-title-header">IFFI Festival {{ $year }} Special Screening</h1>
         </div>
     </div>
 
@@ -65,7 +65,7 @@
             3 => 'NFAI Milestones',
             4 => 'NFDC  Showcase',
             5 => 'Azadi ki Amrit Kahaniyan',
-            6 => 'Special Releases',
+            6 => 'Special Showcase',
         ];
     @endphp
 
