@@ -73,7 +73,7 @@
         <div class="container">
             <div class="row">
                 @foreach ($specialPresentations as $specialPresentation => $items)
-                    <h3 class="mt-4">{{    $subCategory[$specialPresentation] }}</h3>
+                    <h3 class="mt-4">{{ $subCategory[$specialPresentation] }}</h3>
                     <div class="row">
                         @foreach ($items as $item)
                             <div class="col-md-3 col-sm-4 col-xs-12 d-flex">
@@ -90,9 +90,11 @@
 
                                     <div class="card-body text-start">
                                         <div class="card-text">
+                                            <div class="iCinema-content">
                                             <h4 class="title">{{ $item->title }}</h4>
                                             <h5><span>Directed by:</span> {{ $item->directed_by }}</h5>
                                             <h5><span>Language:</span> {{ $item->language }}</h5>
+                                        </div>
                                         </div>
                                     </div>
                                 </div>
