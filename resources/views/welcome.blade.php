@@ -84,7 +84,6 @@
     ])
 
     {{-- Indian panorama 55th --}}
-
     @include('pages.indian-panorama', [
         'indianPanormas' => app(\App\Http\Controllers\CommonController::class)->indianPanorama('2025'),
     ])
