@@ -31,141 +31,141 @@
                 <div class="col-md-12 col-sm-12">
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="title-sponsor">Our Partners & Sponsors</h3>
+                            <h3 class="title-sponsor text-center"><b>OUR PARTNERS & SPONSORS</b></h3>
                         </div>
                         <div class="card-body">
                             <div class="sponsor-list-div ">
                                 <ul>
                                     <li class="me-2">
-                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-01.png') }}"
+                                        <img src="{{ asset('public/images/sponsor/2025/1.png') }}"
                                             class="img-fluid" alt="CONTENT PARTNERS">
                                     </li>
                                     <li class="me-2">
-                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-02.png') }}"
+                                        <img src="{{ asset('public/images/sponsor/2025/2.png') }}"
                                             class="img-fluid" alt="CONTENT PARTNERS">
                                     </li>
                                     <li class="me-2">
-                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-03.png') }}"
+                                        <img src="{{ asset('public/images/sponsor/2025/3.png') }}"
                                             class="img-fluid" alt="CONTENT PARTNERS">
                                     </li>
                                     <li class="me-2">
-                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-04.png') }}"
+                                        <img src="{{ asset('public/images/sponsor/2025/4.png') }}"
                                             class="img-fluid" alt="CONTENT PARTNERS">
                                     </li>
                                     <li class="me-2">
-                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-05.png') }}"
+                                        <img src="{{ asset('public/images/sponsor/2025/5.png') }}"
                                             class="img-fluid" alt="CONTENT PARTNERS">
                                     </li>
                                     <li class="me-2">
-                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-06.png') }}"
+                                        <img src="{{ asset('public/images/sponsor/2025/6.png') }}"
                                             class="img-fluid" alt="CONTENT PARTNERS">
                                     </li>
                                     <li class="me-2">
-                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-07.png') }}"
+                                        <img src="{{ asset('public/images/sponsor/2025/7.png') }}"
                                             class="img-fluid" alt="CONTENT PARTNERS">
                                     </li>
                                     <li class="me-2">
-                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-08.png') }}"
+                                        <img src="{{ asset('public/images/sponsor/2025/8.png') }}"
                                             class="img-fluid" alt="CONTENT PARTNERS">
                                     </li>
                                     <li class="me-2">
-                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-09.png') }}"
+                                        <img src="{{ asset('public/images/sponsor/2025/9.png') }}"
                                             class="img-fluid" alt="CONTENT PARTNERS">
                                     </li>
                                     <li class="me-2">
-                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-10.png') }}"
+                                        <img src="{{ asset('public/images/sponsor/2025/10.png') }}"
                                             class="img-fluid" alt="CONTENT PARTNERS">
                                     </li>
                                     <li class="me-2">
-                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-11.png') }}"
+                                        <img src="{{ asset('public/images/sponsor/2025/11.png') }}"
                                             class="img-fluid" alt="CONTENT PARTNERS">
                                     </li>
                                     <li class="me-2">
-                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-12.png') }}"
+                                        <img src="{{ asset('public/images/sponsor/2025/12.png') }}"
                                             class="img-fluid" alt="CONTENT PARTNERS">
                                     </li>
                                     <li class="me-2">
-                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-13.png') }}"
+                                        <img src="{{ asset('public/images/sponsor/2025/13.png') }}"
                                             class="img-fluid" alt="CONTENT PARTNERS">
                                     </li>
                                     <li class="me-2">
-                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-14.png') }}"
+                                        <img src="{{ asset('public/images/sponsor/2025/14.png') }}"
                                             class="img-fluid" alt="CONTENT PARTNERS">
                                     </li>
                                     <li class="me-2">
-                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-15.png') }}"
+                                        <img src="{{ asset('public/images/sponsor/2025/15.png') }}"
                                             class="img-fluid" alt="CONTENT PARTNERS">
                                     </li>
                                     <li class="me-2">
-                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-16.png') }}"
+                                        <img src="{{ asset('public/images/sponsor/2025/16.png') }}"
                                             class="img-fluid" alt="CONTENT PARTNERS">
                                     </li>
                                     <li class="me-2">
-                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-17.png') }}"
+                                        <img src="{{ asset('public/images/sponsor/2025/17.png') }}"
                                             class="img-fluid" alt="CONTENT PARTNERS">
                                     </li>
                                     <li class="me-2">
-                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-18.png') }}"
+                                        <img src="{{ asset('public/images/sponsor/2025/18.png') }}"
                                             class="img-fluid" alt="CONTENT PARTNERS">
                                     </li>
                                     <li class="me-2">
-                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-19.png') }}"
+                                        <img src="{{ asset('public/images/sponsor/2025/19.png') }}"
                                             class="img-fluid" alt="CONTENT PARTNERS">
                                     </li>
                                     <li class="me-2">
-                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-20.png') }}"
+                                        <img src="{{ asset('public/images/sponsor/2025/20.png') }}"
                                             class="img-fluid" alt="CONTENT PARTNERS">
                                     </li>
                                     <li class="me-2">
-                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-21.png') }}"
+                                        <img src="{{ asset('public/images/sponsor/2025/21.png') }}"
                                             class="img-fluid" alt="CONTENT PARTNERS">
                                     </li>
                                     <li class="me-2">
-                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-22.png') }}"
+                                        <img src="{{ asset('public/images/sponsor/2025/22.png') }}"
                                             class="img-fluid" alt="CONTENT PARTNERS">
                                     </li>
                                     <li class="me-2">
-                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-23.png') }}"
+                                        <img src="{{ asset('public/images/sponsor/2025/23.png') }}"
                                             class="img-fluid" alt="CONTENT PARTNERS">
                                     </li>
                                     <li class="me-2">
-                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-24.png') }}"
+                                        <img src="{{ asset('public/images/sponsor/2025/24.png') }}"
                                             class="img-fluid" alt="CONTENT PARTNERS">
                                     </li>
                                     <li class="me-2">
-                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-25.png') }}"
+                                        <img src="{{ asset('public/images/sponsor/2025/25.png') }}"
                                             class="img-fluid" alt="CONTENT PARTNERS">
                                     </li>
                                     <li class="me-2">
-                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-26.png') }}"
+                                        <img src="{{ asset('public/images/sponsor/2025/26.png') }}"
                                             class="img-fluid" alt="CONTENT PARTNERS">
                                     </li>
                                     <li class="me-2">
-                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-27.png') }}"
+                                        <img src="{{ asset('public/images/sponsor/2025/27.png') }}"
                                             class="img-fluid" alt="CONTENT PARTNERS">
                                     </li>
                                     <li class="me-2">
-                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-28.png') }}"
+                                        <img src="{{ asset('public/images/sponsor/2025/28.png') }}"
                                             class="img-fluid" alt="CONTENT PARTNERS">
                                     </li>
                                     <li class="me-2">
-                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-29.png') }}"
+                                        <img src="{{ asset('public/images/sponsor/2025/29.png') }}"
                                             class="img-fluid" alt="CONTENT PARTNERS">
                                     </li>
                                     <li class="me-2">
-                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-30.png') }}"
+                                        <img src="{{ asset('public/images/sponsor/2025/30.png') }}"
                                             class="img-fluid" alt="CONTENT PARTNERS">
                                     </li>
                                     <li class="me-2">
-                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-31.png') }}"
+                                        <img src="{{ asset('public/images/sponsor/2025/31.png') }}"
                                             class="img-fluid" alt="CONTENT PARTNERS">
                                     </li>
                                     <li class="me-2">
-                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-32.png') }}"
+                                        <img src="{{ asset('public/images/sponsor/2025/32.png') }}"
                                             class="img-fluid" alt="CONTENT PARTNERS">
                                     </li>
                                     <li class="me-2">
-                                        <img src="{{ asset('public/images/sponsor/2025/Sponsors logo for app-33.png') }}"
+                                        <img src="{{ asset('public/images/sponsor/2025/33.png') }}"
                                             class="img-fluid" alt="CONTENT PARTNERS">
                                     </li>
 
