@@ -341,6 +341,18 @@
                                                             Best Debut Director
                                                         </a>
                                                     </li>
+                                                    <li>
+                                                        <a class="dropdown-item"
+                                                            href="{{ route('special-presentation', ['year' => 2025]) }}">
+                                                            Special Presentation
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item"
+                                                            href="{{ route('new-horizon', ['year' => 2025]) }}">
+                                                            New Horizon
+                                                        </a>
+                                                    </li>
                                                 </ul>
                                             </li>
                                             <li>
