@@ -49,7 +49,7 @@
                                         <h5>
                                             <span>Language</span>
                                             <span>:</span>
-                                            <span>{{ $feature->language }}</span>
+                                            <span>{!! $feature->language !!}</span>
                                         </h5>
                                     </div>
                                 </div>
