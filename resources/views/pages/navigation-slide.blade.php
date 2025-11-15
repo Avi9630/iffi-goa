@@ -344,7 +344,7 @@
                                                     <li>
                                                         <a class="dropdown-item"
                                                             href="{{ route('special-presentation', ['year' => 2025]) }}">
-                                                            Special Presentation
+                                                            Special Screening
                                                         </a>
                                                     </li>
                                                     <li>
