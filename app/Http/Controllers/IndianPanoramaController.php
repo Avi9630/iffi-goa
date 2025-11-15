@@ -63,6 +63,40 @@ class IndianPanoramaController extends Controller
         ]);
     }
 
+    public function specialPresentation(Request $request)
+    {
+        $payload            =   $request->all();
+        $year               =   isset($payload['year']) ? $payload['year'] : '';
+        $bestDebutDirectors = IndianPanorama::with('officialSelection')
+            ->where('official_selection_id', 4)
+            ->where('status', 1)
+            ->when(!empty($year), function ($query) use ($year) {
+                return $query->where('year', $year);
+            })
+            ->get();
+        return view('indian-panorama.special-presentation', [
+            'bestDebutDirectors' =>  $bestDebutDirectors,
+            'year' =>  $year,
+        ]);
+    }
+
+    public function newHorizon(Request $request)
+    {
+        $payload            =   $request->all();
+        $year               =   isset($payload['year']) ? $payload['year'] : '';
+        $bestDebutDirectors = IndianPanorama::with('officialSelection')
+            ->where('official_selection_id', 5)
+            ->where('status', 1)
+            ->when(!empty($year), function ($query) use ($year) {
+                return $query->where('year', $year);
+            })
+            ->get();
+        return view('indian-panorama.new-horizon', [
+            'bestDebutDirectors' =>  $bestDebutDirectors,
+            'year' =>  $year,
+        ]);
+    }
+
     public function accessibleFilm(Request $request, $year, $slug)
     {
         $indianCinemaId =   IndianCinema::where('slug', $slug)->pluck('id')->first();

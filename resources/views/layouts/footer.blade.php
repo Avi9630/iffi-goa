@@ -16,15 +16,32 @@
                 <img src="{{ asset('public/images/header-logo/Svayam.png') }}" alt="image" style="width:20%"
                     class="Mobile-view">
             </div>
+
             <div class="row mt-4 phone-text">
                 <div class="col-md-3 col-sm-3">
-                    {{-- <h4>Indian Debut Director Award</h4> --}}
-                    {{-- <ul class="text-highlight">
-                        <li><a href="https://iffigoa.org/festival/indian-debut-director" class="cus-menuP-link"
-                                target="_blank">View your entry</a></li>
-                    </ul> --}}
+                    {{-- <h4>Download The App</h4> --}}
+                    <ul class="text-highlight">
+                        <li>
+                            <a href="https://apps.apple.com/in/app/iffi-goa/id1596375704" target="_blank">
+                                <img src="{{ asset('public/images/g-app.png') }}" alt="image" style="width:20%"
+                                    class="Mobile-view">
+                            </a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="col-md-3 col-sm-3">
+                    {{-- <h4>Download The App</h4> --}}
+                    <ul class="text-highlight">
+                        <li>
+                            <a href=" https://play.google.com/store/apps/details?id=eu.datakal.iffigoa" target="_blank">
+                                <img src="{{ asset('public/images/g-play.png') }}" alt="image" style="width:20%"
+                                    class="Mobile-view">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                {{-- <div class="col-md-3 col-sm-3">
                     <h4>Indian Panorama</h4>
                     <ul class="text-highlight">
                         <li><a href="https://iffigoa.org/festival/indian-paranoma" class="cus-menuP-link"
@@ -46,17 +63,9 @@
                                 target="_blank">View your entry</a>
                         </li>
                     </ul>
-                </div>
-                {{-- <div class="col-md-3 col-sm-3"> --}}
-                {{-- <h4>Indian Debut Director Award</h4> --}}
-                {{-- <ul class="text-highlight">
-                        <li><a href="https://iffigoa.org/festival/indian-debut-director" class="cus-menuP-link"
-                                target="_blank">View your entry</a></li>
-                    </ul> --}}
-                {{-- </div> --}}
+                </div> --}}
             </div>
         </div>
-    </div>
     </div>
 
     <div class="row ">
@@ -71,8 +80,6 @@
                     </a>
                 </li>
                 <li>
-                    {{-- <a href="{{ route('festival-venue', ['year' => 2025]) }}" class="cus-menuP-link">Festival
-                        Venue</a> --}}
                     <a href="{{ route('festival-venue') }}" class="cus-menuP-link">Festival
                         Venue</a>
                 </li>
@@ -124,6 +131,7 @@
 <!-- Footer ends  -->
 {{-- @livewireScripts --}}
 </body>
+
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v15.0">
 </script>
 <script async src="//www.instagram.com/embed.js"></script>
