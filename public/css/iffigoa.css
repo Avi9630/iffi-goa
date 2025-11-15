@@ -1950,12 +1950,20 @@ animation: slideOutRight 0.5s ease forwards;
   justify-content: center;
   flex-wrap: wrap;
 }
+/* 
+.sponsor-list-div ul li {
+  display: flex;
+  border-radius: 5px;
+  list-style: none;
+  background: #fff;
+} */
 
 .sponsor-list-div ul li {
   display: flex;
   border-radius: 5px;
   list-style: none;
   background: #fff;
+  padding: 0 15px;
 }
 
 .sponsor-list-div ul li img {
@@ -2303,4 +2311,12 @@ body p {
 .breaking-news span p {
   margin: 0;
 }
-   .highlight{ background: #fff; padding: 20px; & .card { border-radius: 0px;}}
+
+.highlight {
+  background: #fff;
+  padding: 20px;
+
+  & .card {
+    border-radius: 0px;
+  }
+}
