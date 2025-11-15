@@ -19,7 +19,15 @@
 
             <div class="row mt-4 phone-text">
                 <div class="col-md-3 col-sm-3">
-                    {{-- <h4>Download The App</h4> --}}
+                    <a href=" https://play.google.com/store/apps/details?id=eu.datakal.iffigoa" target="_blank">
+                        <img src="{{ asset('public/images/g-play.png') }}" alt="image" style="height: 43px;">
+                    </a>
+                    <a href="https://apps.apple.com/in/app/iffi-goa/id1596375704" target="_blank">
+                        <img src="{{ asset('public/images/g-app.png') }}" alt="image" style="height: 43px;">
+                    </a>
+                </div>
+
+                {{-- <div class="col-md-3 col-sm-3">
                     <ul class="text-highlight">
                         <li>
                             <a href="https://apps.apple.com/in/app/iffi-goa/id1596375704" target="_blank">
@@ -30,7 +38,6 @@
                     </ul>
                 </div>
                 <div class="col-md-3 col-sm-3">
-                    {{-- <h4>Download The App</h4> --}}
                     <ul class="text-highlight">
                         <li>
                             <a href=" https://play.google.com/store/apps/details?id=eu.datakal.iffigoa" target="_blank">
@@ -39,7 +46,7 @@
                             </a>
                         </li>
                     </ul>
-                </div>
+                </div> --}}
 
                 {{-- <div class="col-md-3 col-sm-3">
                     <h4>Indian Panorama</h4>
