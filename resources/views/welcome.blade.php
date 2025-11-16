@@ -32,6 +32,10 @@
     <!-- About IFFI Section-->
     @include('pages.about-iffi')
 
+    {{-- @include('pages.opening-parade') --}}
+
+    @include('pages.opening-parade2')
+
     <section>
         <div class="col-lg-12 mb-5">
             <div class="container">
