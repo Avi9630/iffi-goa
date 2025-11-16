@@ -348,12 +348,6 @@
                                                             New Horizon
                                                         </a>
                                                     </li>
-                                                    <li>
-                                                        <a class="dropdown-item"
-                                                            href="{{ route('retrospective-rajnikanth', ['year' => 2025]) }}">
-                                                            Retrospective Rajnikanth
-                                                        </a>
-                                                    </li>
                                                 </ul>
                                             </li>
 
@@ -387,14 +381,16 @@
                                         </ul>
                                     </li>
 
-
-
                                     <ul class="navbar-nav vertical-menu-custom">
                                         <li class="nav-item">
                                             <a href="{{ route('special-presentation', ['year' => 2025]) }}"
                                                 class="nav-link">Special Screening</a>
 
                                         </li>
+                                        {{-- <li class="nav-item">
+                                            <a href="{{ route('retrospective-rajnikanth', ['year' => 2025]) }}"
+                                                class="nav-link">Retrospective Rajnikanth</a>
+                                        </li> --}}
                                     </ul>
 
                                     {{-- Cinema AI --}}
