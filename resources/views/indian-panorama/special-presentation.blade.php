@@ -15,12 +15,13 @@
     </div>
     @php
         $subCategory = [
-            1 => '125 Years of Indian Cinema Legend',
+            1 => '125 Years of V. Shantaravn',
             2 => 'Centenary Tributes By NFDC-NFAI',
-            3 => 'NFAI Milestones',
-            4 => 'NFDC  Showcase',
-            5 => 'Azadi ki Amrit Kahaniyan',
-            6 => 'Special Showcase',
+            // 3 => 'NFAI Milestones',
+            4 => '50 years of NFDC',
+            5 => 'Special Showcase',
+            6 => 'Azadi ki Amrit Kahaniyan',
+            7 => 'Retrospective of Rajnikant',
         ];
     @endphp
 
