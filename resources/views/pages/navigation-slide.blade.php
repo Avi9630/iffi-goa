@@ -353,6 +353,12 @@
                                                             New Horizon
                                                         </a>
                                                     </li>
+                                                    <li>
+                                                        <a class="dropdown-item"
+                                                            href="{{ route('retrospective-rajnikanth', ['year' => 2025]) }}">
+                                                            Retrospective Rajnikanth
+                                                        </a>
+                                                    </li>
                                                 </ul>
                                             </li>
                                             <li>
