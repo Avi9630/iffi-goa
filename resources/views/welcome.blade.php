@@ -32,6 +32,10 @@
     <!-- About IFFI Section-->
     @include('pages.about-iffi')
 
+    {{-- @include('pages.opening-parade') --}}
+
+    @include('pages.opening-parade2')
+
     <section>
         <div class="col-lg-12 mb-5">
             <div class="container">
@@ -41,24 +45,30 @@
                 </div>
                 <div class="row  m-0 master-row ">
                     <div class="col-md-2 col-sm-4 col-xs-12 d-flex g-3">
-                        <img src="{{ asset('public/images/award-winner/It Was An Accident.webp') }}" alt="image" class="img-fluid">
+                        <img src="{{ asset('public/images/award-winner/It Was An Accident.webp') }}" alt="image"
+                            class="img-fluid">
                     </div>
                     <div class="col-md-2 col-sm-4 col-xs-12 d-flex g-3">
-                        <img src="{{ asset('public/images/award-winner/Father Mother Sister Brother.webp') }}" alt="image" class="img-fluid">
+                        <img src="{{ asset('public/images/award-winner/Father Mother Sister Brother.webp') }}" alt="image"
+                            class="img-fluid">
                     </div>
                     <div class="col-md-2 col-sm-4 col-xs-12 d-flex g-3">
-                        <img src="{{ asset('public/images/award-winner/Dreams (Sex Love).webp') }}" alt="image" class="img-fluid">
+                        <img src="{{ asset('public/images/award-winner/Dreams (Sex Love).webp') }}" alt="image"
+                            class="img-fluid">
                     </div>
                     <div class="col-md-2 col-sm-4 col-xs-12 d-flex g-3">
-                        <img src="{{ asset('public/images/award-winner/Glooming in.webp') }}" alt="image" class="img-fluid">
+                        <img src="{{ asset('public/images/award-winner/Glooming in.webp') }}" alt="image"
+                            class="img-fluid">
                     </div>
                     <div class="col-md-2 col-sm-4 col-xs-12 d-flex g-3">
-                        <img src="{{ asset('public/images/award-winner/No Other Choice.webp') }}" alt="image" class="img-fluid">
+                        <img src="{{ asset('public/images/award-winner/No Other Choice.webp') }}" alt="image"
+                            class="img-fluid">
                         {{-- <div class=" ">
                         </div> --}}
                     </div>
                     <div class="col-md-2 col-sm-4 col-xs-12 d-flex g-3">
-                        <img src="{{ asset('public/images/award-winner/FIUME O MORTE.webp') }}" alt="image" class="img-fluid">
+                        <img src="{{ asset('public/images/award-winner/FIUME O MORTE.webp') }}" alt="image"
+                            class="img-fluid">
                     </div>
                 </div>
             </div>
