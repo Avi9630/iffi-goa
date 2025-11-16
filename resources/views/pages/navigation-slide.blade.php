@@ -356,16 +356,7 @@
                                                     </li>
                                                 </ul>
                                             </li>
-                                            <li>
-                                                {{-- <a class="dropdown-item"
-                                                    href="{{ route('special-presentation', ['year' => 2025]) }}">
-                                                    Special Screening
-                                                </a> --}}
 
-                                                <a href="{{ route('special-presentation', ['year' => 2025]) }}"
-                                                    class="dropdown-item">Special Screening</a>
-
-                                            </li>
                                             <li>
                                                 <a href="{{ route('about-indian-panorama') }}"
                                                     class="dropdown-item">About Indian Panorama</a>
@@ -395,6 +386,16 @@
                                             </li>
                                         </ul>
                                     </li>
+
+
+
+                                    <ul class="navbar-nav vertical-menu-custom">
+                                        <li class="nav-item">
+                                            <a href="{{ route('special-presentation', ['year' => 2025]) }}"
+                                                class="nav-link">Special Screening</a>
+
+                                        </li>
+                                    </ul>
 
                                     {{-- Cinema AI --}}
                                     <ul class="navbar-nav vertical-menu-custom">
