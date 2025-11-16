@@ -19,6 +19,7 @@
             <h1 class="page-title-header">Indian Panorama Jury</h1>
         </div>
     </div>
+    
     <!-- Inner Page Banner Section -->
     <div class="col-lg-12 mt-5 static-content">
         <div class="container">
