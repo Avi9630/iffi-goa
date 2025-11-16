@@ -34,7 +34,7 @@
 
     {{-- @include('pages.opening-parade') --}}
 
-    @include('pages.opening-parade2')
+    @include('pages.opening-parade')
 
     <section>
         <div class="col-lg-12 mb-5">
