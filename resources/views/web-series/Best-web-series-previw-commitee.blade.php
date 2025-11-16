@@ -59,7 +59,6 @@
                 @foreach ($juries as $key => $jury)
                     <div class="card">
                         <div class="card-body">
-                            {{-- <h3>{{ $jury['name'] }} {{ $jury['designation'] }}</h3> --}}
                             <div class="row  align-items-center ">
                                 <div class="col-md-7 ">
                                     <div class="international-jury-text">
