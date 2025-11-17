@@ -50,7 +50,7 @@
                                                 <div class="iCinema-content">
                                                     <h4 class="title">{{ $presentation->title }}</h4>
                                                     <h5><span>Directed by:</span> {{ $presentation->directed_by }}</h5>
-                                                    <h5><span>Language:</span> {{ $presentation->language }}</h5>
+                                                    <h5><span>Language:</span> {!! $presentation->language !!}</h5>
                                                 </div>
                                             </div>
                                         </div>

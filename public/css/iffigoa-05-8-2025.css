@@ -1616,9 +1616,9 @@ footer a:hover {
   background: #fff;
 }
 .sponsor-list-div ul li img {
-  width: 140px;
+  /* width: 140px; */
   height: 140px;
-  max-width: 140px !important;
+  max-width: 100% !important;
 }
 .title-sponsor {
   margin-bottom: 0;
