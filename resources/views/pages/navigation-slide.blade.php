@@ -138,15 +138,6 @@
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'restored-classic']) }}">Restored
                                                             Classics</a></li>
-                                                    <li><a class="dropdown-item"
-                                                            href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'opening-film']) }}">Opening
-                                                            Film</a></li>
-                                                    <li><a class="dropdown-item"
-                                                            href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'mid-fest-film']) }}">Mid
-                                                            fest film</a></li>
-                                                    <li><a class="dropdown-item"
-                                                            href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'closing-film']) }}">Closing
-                                                            Film</a></li>
                                                     {{-- <li>
                                                         <a class="dropdown-item"
                                                             href="{{ asset('public/pdfs/INTERNATIONAL COMPETITION.pdf') }}"
@@ -317,6 +308,15 @@
                                             <li><a class="dropdown-item"
                                                     href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'spotlight-australia']) }}">Spotlight:
                                                     Australia</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'opening-film']) }}">Opening
+                                                    Film</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'mid-fest-film']) }}">Mid
+                                                    fest film</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'closing-film']) }}">Closing
+                                                    Film</a></li>
                                         </ul>
                                     </li>
 
