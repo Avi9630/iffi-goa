@@ -19,8 +19,6 @@
                     @endphp
                     <div class="col-md-5 col-sm-6 col-12 mb-4">
                         <p class="newsupdatesView-block-img">
-                            {{-- <img src="{{ asset('public/images/news-update/webp/' . $webpImage) }}" alt="news image"
-                                class="img-fluid img-radius" loading="lazy"> --}}
                             @if (!empty($newsUpdate->img_src))
                                 <img src="{{ asset('public/images/news-update/webp/' . $webpImage) }}"alt="image"
                                     class="img-fluid" loading="lazy">
