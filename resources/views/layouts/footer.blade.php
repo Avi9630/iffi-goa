@@ -7,7 +7,8 @@
                 <img src="{{ asset('public/images/header-logo/mib.png') }}" alt="image"
                     style="width: 20%; height: 88px;" class="Mobile-view">
                 <a href="https://films.wavesbazaar.com/" target="_blank">
-                    <img src="{{ asset('public/images/header-logo/WavesFilmBazaar.png') }}" alt="image" height="120px" width="120px">
+                    <img src="{{ asset('public/images/header-logo/WavesFilmBazaar.png') }}" alt="image"
+                        height="120px" width="120px">
                 </a>
                 <img src="{{ asset('public/images/header-logo/esg-logo.png') }}" alt="image" class="Mobile-view">
                 <img src="{{ asset('public/images/header-logo/GOG.png') }}" alt="image" style="width:9%"
@@ -15,15 +16,39 @@
                 <img src="{{ asset('public/images/header-logo/Svayam.png') }}" alt="image" style="width:20%"
                     class="Mobile-view">
             </div>
+
             <div class="row mt-4 phone-text">
                 <div class="col-md-3 col-sm-3">
-                    {{-- <h4>Indian Debut Director Award</h4> --}}
-                    {{-- <ul class="text-highlight">
-                        <li><a href="https://iffigoa.org/festival/indian-debut-director" class="cus-menuP-link"
-                                target="_blank">View your entry</a></li>
-                    </ul> --}}
+                    <a href=" https://play.google.com/store/apps/details?id=eu.datakal.iffigoa" target="_blank">
+                        <img src="{{ asset('public/images/g-play.png') }}" alt="image" style="height: 43px;">
+                    </a>
+                    <a href="https://apps.apple.com/in/app/iffi-goa/id1596375704" target="_blank">
+                        <img src="{{ asset('public/images/g-app.png') }}" alt="image" style="height: 43px;">
+                    </a>
+                </div>
+
+                {{-- <div class="col-md-3 col-sm-3">
+                    <ul class="text-highlight">
+                        <li>
+                            <a href="https://apps.apple.com/in/app/iffi-goa/id1596375704" target="_blank">
+                                <img src="{{ asset('public/images/g-app.png') }}" alt="image" style="width:20%"
+                                    class="Mobile-view">
+                            </a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="col-md-3 col-sm-3">
+                    <ul class="text-highlight">
+                        <li>
+                            <a href=" https://play.google.com/store/apps/details?id=eu.datakal.iffigoa" target="_blank">
+                                <img src="{{ asset('public/images/g-play.png') }}" alt="image" style="width:20%"
+                                    class="Mobile-view">
+                            </a>
+                        </li>
+                    </ul>
+                </div> --}}
+
+                {{-- <div class="col-md-3 col-sm-3">
                     <h4>Indian Panorama</h4>
                     <ul class="text-highlight">
                         <li><a href="https://iffigoa.org/festival/indian-paranoma" class="cus-menuP-link"
@@ -45,17 +70,9 @@
                                 target="_blank">View your entry</a>
                         </li>
                     </ul>
-                </div>
-                {{-- <div class="col-md-3 col-sm-3"> --}}
-                    {{-- <h4>Indian Debut Director Award</h4> --}}
-                    {{-- <ul class="text-highlight">
-                        <li><a href="https://iffigoa.org/festival/indian-debut-director" class="cus-menuP-link"
-                                target="_blank">View your entry</a></li>
-                    </ul> --}}
-                {{-- </div> --}}
+                </div> --}}
             </div>
         </div>
-    </div>
     </div>
 
     <div class="row ">
@@ -65,15 +82,13 @@
                     <a href="{{ route('about-iffi') }}" class="cus-menuP-link">About IFFI</a>
                 </li>
                 <li>
-                    <a href="https://www.youtube.com/watch?v=lsjuObbzDyM" target="_blank" class="cus-menuP-link">
-                        Glimpses of IFFI 2023
+                    <a href="https://youtu.be/yRamd6jVCes?si=jAFclk9vYGgRCNhu" target="_blank" class="cus-menuP-link">
+                        Glimpses of IFFI 2025
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('festival-venue',['year' => 2024]) }}" class="cus-menuP-link">Festival
+                    <a href="{{ route('festival-venue') }}" class="cus-menuP-link">Festival
                         Venue</a>
-                    {{-- <a href="{{ route('festival-venue') }}" class="cus-menuP-link">Festival
-                        Venue</a> --}}
                 </li>
                 <li>
                     <a href="{{ route('goa-tourist-places') }}" class="cus-menuP-link">
@@ -88,6 +103,7 @@
                 <li><a href="{{ route('press-release') }}">Press Release</a></li>
                 <li> <a href="{{ route('media.gallery.byYear', ['year' => '2024']) }}">Gallery</a></li>
                 <li> <a href="{{ route('privacy-policy') }}">Privacy Policy</a></li>
+                <li> <a href="{{ route('archive') }}">Archive</a></li>
             </ul>
         </div>
     </div>
@@ -122,6 +138,7 @@
 <!-- Footer ends  -->
 {{-- @livewireScripts --}}
 </body>
+
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v15.0">
 </script>
 <script async src="//www.instagram.com/embed.js"></script>
@@ -133,6 +150,7 @@
 
 <script type="text/javascript" src="{{ asset('public/js/custom.js') }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.10.0/js/lightgallery-all.min.js"></script>
+
 <script>
     $(document).ready(function() {
         $("#lightgallery").lightGallery({
@@ -142,7 +160,7 @@
     });
 </script>
 
-<script defer >
+<script defer>
     window.onscroll = function() {
         var menu = document.getElementById('menu');
         if (window.scrollY > 100) { // Change background after scrolling 100px
@@ -166,7 +184,7 @@
     });
 </script>
 
-<script defer >
+<script defer>
     $(document).ready(function() {
         // Function to get a cookie by name
         function getCookie(name) {
@@ -321,6 +339,7 @@
         });
     });
 </script>
+
 </body>
 
 </html>

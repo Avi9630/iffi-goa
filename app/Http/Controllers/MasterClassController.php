@@ -23,13 +23,11 @@ class MasterClassController extends Controller
             ->where('master_class_topics.year', 2025)
             ->where('master_date.status', 1)
             ->where('master_date.year', 2025)
-            ->orderBy('master_date.date', 'asc')       // Sort by date first
-            ->orderBy('master_classes.start_time', 'asc') // Then by start_time within each date
+            ->orderBy('master_date.date', 'asc')
+            ->orderBy('master_classes.start_time', 'asc')
             ->with(['masterClass', 'speakers', 'moderator', 'masterDate'])
             ->get();
-
-
-        // dd($topics);
+        
         $modalData = [];
         foreach ($dates as $date) {
             $key = strtolower(date('M', strtotime($date->date))) . date('d', strtotime($date->date));
@@ -41,29 +39,35 @@ class MasterClassController extends Controller
 
                 foreach ($topics->where('master_date_id', $date->id) as $topic) {
                     $eventDate = optional($topic->masterDate)->date;
-                    if (!$eventDate) continue;
+                    if (!$eventDate) {
+                        continue;
+                    }
 
                     $fullDate = date('F jS, Y', strtotime($eventDate));
                     $timeRange = '';
 
                     if ($topic->masterClass && $topic->masterClass->start_time && $topic->masterClass->end_time) {
                         $startDateTime = $eventDate . ' ' . $topic->masterClass->start_time;
-                        $endDateTime   = $eventDate . ' ' . $topic->masterClass->end_time;
+                        $endDateTime = $eventDate . ' ' . $topic->masterClass->end_time;
 
                         $timeRange = date('h.i A', strtotime($startDateTime)) . ' TO ' . date('h.i A', strtotime($endDateTime));
                     }
 
                     $modalData[$key][] = [
-                        'title'     => $topic->title,
+                        'title' => $topic->title,
                         'moderator' => optional($topic->moderator)->moderator_name ?? '',
-                        'panel'     => optional($topic->masterClass)->format ?? '',
-                        'date'      => $fullDate . ($timeRange ? ' ' . $timeRange : ''),
-                        'speakers'  => $topic->speakers
-                            ? $topic->speakers->map(fn($s) => [
-                                'name'        => $s->speaker_name,
-                                'description' => $s->speaker_detail,
-                                'image'       => $s->image_name ? asset("public/images/master-class/{$s->image_name}") : '',
-                            ])->toArray()
+                        'panel' => optional($topic->masterClass)->format ?? '',
+                        'date' => $fullDate . ($timeRange ? ' ' . $timeRange : ''),
+                        'speakers' => $topic->speakers
+                            ? $topic->speakers
+                                ->map(
+                                    fn($s) => [
+                                        'name' => $s->speaker_name,
+                                        'description' => $s->speaker_detail,
+                                        'image' => $s->image_name ? asset("public/images/master-class/{$s->image_name}") : '',
+                                    ],
+                                )
+                                ->toArray()
                             : [],
                     ];
                 }
@@ -71,12 +75,11 @@ class MasterClassController extends Controller
         }
 
         return view('master-new', [
-            'dates'     => $dates,
-            'topics'    => $topics,
+            'dates' => $dates,
+            'topics' => $topics,
             'modalData' => json_encode($modalData, JSON_PRETTY_PRINT),
         ]);
     }
-
 
     // function index()
     // {

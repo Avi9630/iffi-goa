@@ -1,7 +1,7 @@
 @extends('layouts.app')
-@section('site_title', '3rd Edition Gala Premier | IFFI Goa - Celebrating Excellence in Global Cinema')
+@section('site_title', '4th Edition Gala Premier | IFFI Goa - Celebrating Excellence in Global Cinema')
 @section('site_description',
-    'Experience the 3rd Edition of the Gala Premier at IFFI Goa, showcasing the best of
+    'Experience the 4th Edition of the Gala Premier at IFFI Goa, showcasing the best of
     international and Indian cinema. Join us for exclusive screenings, star-studded events, and celebrate cinematic
     excellence in a vibrant festival atmosphere.')
 @section('content')
@@ -49,33 +49,409 @@
                         Pankaj Tripathi, and Nushrat Bharucha, making the red carpet a truly star-studded affair.
                     </p>
 
+                    <p>
+                        For the 56th IFFI Gala Premieres, the line-up promises an exciting mix of genres and languages,
+                        further raising the bar. The schedule is here -
+                        <br>
+                        <b>SCHEDULE</b><br>
 
-
-                    <ul class="list-block">
-                        <p>
-                            <b>
-                            For the 56th IFFI Gala Premieres, the tentative line-up promises an exciting mix of genres and
-                            languages, further raising the bar. Probable titles under consideration include:
-                            </b>
-                        </p>
-                        <li><i class="fa fa-check" aria-hidden="true"></i> Tere Ishk Mein - World Premiere (Hindi Feature) *ing Dhanush, Kriti Sanon.</li>
-                        <li><i class="fa fa-check" aria-hidden="true"></i> Rahu Ketu - World Premiere (Hindi Feature) *ing Pulkit Samrat, Varun Sharma, Shalini Pandey.
-                        </li>
-                        <li><i class="fa fa-check" aria-hidden="true"></i> Hanti Hanti Pa Pa - World Premiere (Bengali Feature) *ing Rukmini Maitra, Chiranjeet
-                            Chakraborty.</li>
-                        <li><i class="fa fa-check" aria-hidden="true"></i> Bindusagar - World Premiere (Odia Feature) *ing Prakruti Mishra, Sukant Rath.</li>
-                        <li><i class="fa fa-check" aria-hidden="true"></i> Asambhav - World Premiere (Marathi Feature) *ing Sachit Patil,Mukta Barve,Priya Bapat.</li>
-                        <li><i class="fa fa-check" aria-hidden="true"></i> Rudhirvana - World Premiere (Kannada Feature) *ing Paavana Gowda,Apoorva, Krishna Hebbale.</li>
-                        <li><i class="fa fa-check" aria-hidden="true"></i>Sholay - Special Showcase (4K Restored Classic Hindi Feature) *ing Amitabh Bacchaan, Dharmendra.
-                        </li>
-                    </ul>
-
-                    <p>This diverse selection, ranging from big-banner Hindi releases to regional cinema, international
+                        This diverse selection, ranging from big-banner Hindi releases to regional cinema, international
                         showcases, and global OTT premieres, will once again make the Gala Premieres and Red-Carpet segment
-                        a marquee attraction of the 56th IFFI.</p>
+                        a marquee attraction of the 56th IFFI.
+                    </p>
+
+                    @php
+                        $schedule['21-Nov-25'] = [
+                            'day' => 'Friday',
+                            'films' => [
+                                [
+                                    'red_carpet_time' => '12:30',
+                                    'show_time' => '13:15',
+                                    'title' => 'The Family Man (S:3)',
+                                    // 'red_carpet_guests' =>
+                                    //     'Manoj Bajpai, Nimrat Kaur, Jaideep Ahlawat, Raj & DK, Nikhil Madhok',
+                                    'cast' => 'Manoj Bajpai, Nimrat Kaur, Sharib Hashmi, Priyamani, Jaideep Ahlawat',
+                                    'director' => 'Raj & DK',
+                                    'producer' => 'Amazon Prime Video & D2R Films',
+                                    'language' => 'Hindi',
+                                    'genre' => 'Action / Drama',
+                                    'premiere' => 'World Premiere',
+                                    'duration' => '80 min (Ep + Interaction)',
+                                    'audi' => 'Panjim Audi 1',
+                                    'venue' => 'Inox Panjim, Old GMC Building',
+                                ],
+                                [
+                                    'red_carpet_time' => '16:15',
+                                    'show_time' => '17:00',
+                                    'title' => 'Asambhav',
+                                    // 'red_carpet_guests' => 'Sachit Patil, Mukta Barve, Pushkar Shroti, Murli Chhatwani',
+                                    'cast' => 'Sachit Patil, Mukta Barve, Priya Bapat, Sandeep Kulkarni',
+                                    'director' => 'Sachit Patil | Pushkar Shrotri',
+                                    'producer' => 'Panorama Studios',
+                                    'language' => 'Marathi',
+                                    'genre' => 'Mystery/Thriller',
+                                    'premiere' => 'World Premiere',
+                                    'duration' => '140 + 5 min',
+                                    'audi' => 'Panjim Audi 3',
+                                    'venue' => 'Inox Panjim, Old GMC Building',
+                                ],
+                                [
+                                    'red_carpet_time' => '13:00',
+                                    'show_time' => '13:45',
+                                    'title' => '1942: A Love Story (4K)', 
+                                    // 'red_carpet_guests' => 'Vidhu Vinod Chopra',
+                                    'cast' => 'Anil Kapoor, Jackie Shroff',
+                                    'director' => 'Vidhu Vinod Chopra',
+                                    'producer' => 'Vidhu Vinod Chopra',
+                                    'language' => 'Hindi',
+                                    'genre' => 'Romance',
+                                    'premiere' => 'Special Showcase',
+                                    'duration' => '160 + 5 min',
+                                    'audi' => 'Panjim Audi 3',
+                                    'venue' => 'Inox Panjim, Old GMC Building',
+                                ],
+                                [
+                                    'red_carpet_time' => '17:00',
+                                    'show_time' => '17:45',
+                                    'title' => '120 Bahadur',
+                                    // 'red_carpet_guests' => 'Farhan Akthar, Razneesh Ghai',
+                                    'cast' => 'Farhan Akthar, Raashi Khanna, Sparsh Walia',
+                                    'director' => 'Razneesh Ghai',
+                                    'producer' => 'Excel Entertainment',
+                                    'language' => 'Hindi',
+                                    'genre' => 'Action',
+                                    'premiere' => 'Special Showcase',
+                                    'duration' => '150 + 5 min',
+                                    'audi' => 'Panjim Audi 1',
+                                    'venue' => 'Inox Panjim, Old GMC Building',
+                                ],
+                            ],
+                        ];
+
+                        $schedule['22-Nov-25'] = [
+                            'day' => 'Saturday',
+                            'films' => [
+                                [
+                                    'red_carpet_time' => '12:00',
+                                    'show_time' => '12:30',
+                                    'title' => 'Haati Haati Pa Pa',
+                                    // 'red_carpet_guests' => 'Rukmini Maitra, Arnab Middya, Arunava',
+                                    'cast' => 'Rukmini Maitra, Anjana Basu, Tulika Basu',
+                                    'director' => 'Arnab Middya',
+                                    'producer' => 'Celluloid Films',
+                                    'language' => 'Bengali',
+                                    'genre' => 'Romance',
+                                    'premiere' => 'World Premiere',
+                                    'duration' => '125 + 5 min',
+                                    'audi' => 'Panjim Audi 3',
+                                    'venue' => 'Inox Panjim, Old GMC Building',
+                                ],
+                                [
+                                    'red_carpet_time' => '16:15',
+                                    'show_time' => '17:00',
+                                    'title' => 'Spying Stars',
+                                    // 'red_carpet_guests' =>
+                                    //     'Samanalee Fonseka, Indira Tiwari, Kaushalya Fernando, Saumya Liyanage, Vimukti Jayasundara, Nila Madhab Panda',
+                                    'cast' =>
+                                        'Indira Tiwari,Samanalee Fonseka, Kaushalya Fernando, Saumya Liyanage, Hidaayath Hazeer',
+                                    'director'  =>  'Vimukti Jayasundara',
+                                    'producer'  =>  'Nila Madhab Panda',
+                                    'language'  =>  'English & Sinhala',
+                                    'genre'     =>  'Sci fi mystery drama',
+                                    'premiere'  =>  'India Premiere',
+                                    'duration'  =>  '100 min + 20 min',
+                                    'audi'      =>  'Panjim Audi 4',
+                                    'venue'     =>  'Inox Panjim, Old GMC Building',
+                                ],
+                                [
+                                    'red_carpet_time' => '18:00',
+                                    'show_time' => '18:30',
+                                    'title' => 'Papa Buka',
+                                    // 'red_carpet_guests' => 'Dr. Biju Damodaran',
+                                    'cast' => 'Sine Boboro, Ritabhari Chakraborty, Prakash Bare, John Sike',
+                                    'director' => 'Dr. Biju Damodaran',
+                                    'producer' => 'Noelene Taula Wunum, Akshay Kumar Parija, Pa. Ranjith, Prakash Bare',
+                                    'language' => 'Tok Pisin, English',
+                                    'genre' => 'Drama',
+                                    'premiere' => 'Asia Premiere',
+                                    'duration' => '100 min + 5 min',
+                                    'audi' => 'Panjim Audi 2',
+                                    'venue' => 'Inox Panjim, Old GMC Building',
+                                ],
+                            ],
+                        ];
+
+                        $schedule['23-Nov-25'] = [
+                            'day' => 'Sunday',
+                            'films' => [
+                                [
+                                    'red_carpet_time' => '16:00',
+                                    'show_time' => '16:45',
+                                    'title' => 'Lockdown',
+                                    // 'red_carpet_guests' => 'Anupama Parmeshwaran, Charlie, A.R. Jeeva, Subaskaran',
+                                    'cast' => 'Anupama Parmeshwaran, Charlie, Nirosha, Livingston',
+                                    'director' => 'A.R. Jeeva',
+                                    'producer' => 'Subaskaran, Lyca Productions',
+                                    'language' => 'Tamil',
+                                    'genre' => 'Drama/Thriller',
+                                    'premiere' => 'World Premiere',
+                                    'duration' => '122 + 5 min',
+                                    'audi' => 'Panjim Audi 3',
+                                    'venue' => 'Inox Panjim, Old GMC Building',
+                                ],
+                                [
+                                    'red_carpet_time' => '17:00',
+                                    'show_time' => '17:45',
+                                    'title' => 'Vadh 2',
+                                    // 'red_carpet_guests' => 'Sanjay Mishra, Neena Gupta, Jaspal Singh Sandhu',
+                                    'cast' => 'Sanjay Mishra, Neena Gupta',
+                                    'director' => 'Jaspal Singh Sandhu',
+                                    'producer' => 'Luv Films',
+                                    'language' => 'Hindi',
+                                    'genre' => 'Drama',
+                                    'premiere' => 'World Premiere',
+                                    'duration' => '130 + 5 min',
+                                    'audi' => 'Panjim Audi 4',
+                                    'venue' => 'Inox Panjim, Old GMC Building',
+                                ],
+                            ],
+                        ];
+
+                        $schedule['24-Nov-25'] = [
+                            'day' => 'Monday',
+                            'films' => [
+                                [
+                                    'red_carpet_time' => '15:45',
+                                    'show_time' => '16:15',
+                                    'title' => 'Rudhirvana',
+                                    // 'red_carpet_guests' => 'Paavana Gowda, Apoorva, Krishna Hebbale, Agni',
+                                    'cast' => 'Paavana Gowda, Apoorva, Krishna Hebbale, Arjun Kaje, Bala Rajwadi',
+                                    'director' => 'Agni',
+                                    'producer' => 'Point of View Pictures',
+                                    'language' => 'Kannada',
+                                    'genre' => 'Horror',
+                                    'premiere' => 'World Premiere',
+                                    'duration' => '145 + 5 min',
+                                    'audi' => 'Panjim Audi 4',
+                                    'venue' => 'Inox Panjim, Old GMC Building',
+                                ],
+                                [
+                                    'red_carpet_time' => '16:45',
+                                    'show_time' => '17:30',
+                                    'title' => 'Gustaakh Ishq',
+                                    // 'red_carpet_guests' => 'Vijay Verma, Fatima Sana Shaikh, Vibhu Puri',
+                                    'cast' => 'Vijay Verma, Fatima Sana Shaikh',
+                                    'director' => 'Vibhu Puri',
+                                    'producer' => 'Stage5 Productions',
+                                    'language' => 'Hindi',
+                                    'genre' => 'Romance',
+                                    'premiere' => 'World Premiere',
+                                    'duration' => '128 + 10 min',
+                                    'audi' => 'Panjim Audi 3',
+                                    'venue' => 'Inox Panjim, Old GMC Building',
+                                ],
+                            ],
+                        ];
+
+                        $schedule['25-Nov-25'] = [
+                            'day' => 'Tuesday',
+                            'films' => [
+                                [
+                                    'red_carpet_time' => '16:15',
+                                    'show_time' => '17:00',
+                                    'title' => 'Bindusagar',
+                                    // 'red_carpet_guests' => 'Prakruti Mishra, Dipannit Dasmohapatra, Shiladitya Bora',
+                                    'cast' =>
+                                        'Prakruti Mishra, Dipannit Dasmohapatra, Robin Das, Sonalli Sharmistha, Sukant Rath',
+                                    'director' => 'Abhishek Swain',
+                                    'producer' => 'Platoon One Films',
+                                    'language' => 'Odia',
+                                    'genre' => 'Family Drama',
+                                    'premiere' => 'World Premiere',
+                                    'duration' => '130 + 5 min',
+                                    'audi' => 'Panjim Audi 4',
+                                    'venue' => 'Inox Panjim, Old GMC Building',
+                                ],
+                            ],
+                        ];
+
+                        $schedule['26-Nov-25'] = [
+                            'day' => 'Wednesday',
+                            'films' => [
+                                [
+                                    'red_carpet_time' => '16:15',
+                                    'show_time' => '17:00',
+                                    'title' => 'Pennum Porattum',
+                                    // 'red_carpet_guests' =>
+                                    //     'Tovino Thomas*, Rajesh Madhavan, Santhosh T. Kuruvilla, Binu George Alexander',
+                                    'cast' => 'Suttu (dog) along with 100 debut actors and over 400 trained animals',
+                                    'director' => 'Rajesh Madhavan',
+                                    'producer' =>
+                                        'Santhosh T. Kuruvilla, Binu George Alexander, Sherin Rachel Santhosh STK Frames',
+                                    'language' => 'Malayalam',
+                                    'genre' => 'Socio-Environmental Allegory',
+                                    'premiere' => 'World Premiere',
+                                    'duration' => '122 + 5 min',
+                                    'audi' => 'Panjim Audi 3',
+                                    'venue' => 'Inox Panjim, Old GMC Building',
+                                ],
+                                [
+                                    'red_carpet_time' => '17:15',
+                                    'show_time' => '18:00',
+                                    'title' => 'Sholay (4K)',
+                                    // 'red_carpet_guests' => 'Ramesh Sippy, Hema Malini*, Shehazad Sippy',
+                                    'cast' => 'Amitabh Bachchan, Hema Malini, Dharmendra, Jaya Bachchan',
+                                    'director' => 'Ramesh Sippy',
+                                    'producer' =>
+                                        'G P Sippy (1975), Film Heritage Foundation in collaboration with Sippy Films',
+                                    'language' => 'Hindi',
+                                    'genre' => 'Action/Masala Western (Dacoit Style)',
+                                    'premiere' => 'Asia Premiere',
+                                    'duration' => '204 + 10 min',
+                                    'audi' => 'Panjim Audi 1',
+                                    'venue' => 'Inox Panjim, Old GMC Building',
+                                ],
+                            ],
+                        ];
+
+                        $schedule['27-Nov-25'] = [
+                            'day' => 'Thursday',
+                            'films' => [
+                                [
+                                    'red_carpet_time' => '12:30',
+                                    'show_time' => '13:15',
+                                    'title' => 'Andhra King Taluka',
+                                    // 'red_carpet_guests' => 'Upendra*, Cheri Sir*',
+                                    'cast' => 'Ram Pothineni, Bhagyashri Bhorse, Upendra, Rao Ramesh, Murli Sharma',
+                                    'director' => 'Mahesh Babu P.',
+                                    'producer' => 'Mythri Movie Makers',
+                                    'language' => 'Telugu',
+                                    'genre' => 'Drama',
+                                    'premiere' => 'World Premiere',
+                                    'duration' => '160 + 5 min',
+                                    'audi' => 'Panjim Audi 3',
+                                    'venue' => 'Inox Panjim, Old GMC Building',
+                                ],
+                                [
+                                    'red_carpet_time' => '16:00',
+                                    'show_time' => '16:45',
+                                    'title' => 'This Tempting Madness',
+                                    // 'red_carpet_guests' => 'Simone Ashley, Jennifer E. Montgomery, Marcei A. Brown',
+                                    'cast' => 'Simone Ashley, Austin Stowell, Mojean Aria',
+                                    'director' => 'Jennifer E. Montgomery',
+                                    'producer' =>
+                                        'Marcei A. Brown, Smoke Jumper Films, Mango Monster Productions, CatchLight Studios',
+                                    'language' => 'English',
+                                    'genre' => 'Psychological Thriller',
+                                    'premiere' => 'World Premiere',
+                                    'duration' => '100 + 20 min (Interaction)',
+                                    'audi' => 'Panjim Audi 4',
+                                    'venue' => 'Inox Panjim, Old GMC Building',
+                                ],
+                                [
+                                    'red_carpet_time' => '17:00',
+                                    'show_time' => '17:45',
+                                    'title' => 'Raat Akeli Hai: The Bansal Mystery',
+                                    // 'red_carpet_guests' =>
+                                    //     'Nawazuddin Siddiqui, Chitrangada Singh, Honey Trehan, Mahima Kaul',
+                                    'cast' => 'Nawazuddin Siddiqui, Chitrangada Singh, Radhika Apte',
+                                    'director' => 'Honey Trehan',
+                                    'producer' => 'Netflix',
+                                    'language' => 'Hindi',
+                                    'genre' => 'Crime/Mystery',
+                                    'premiere' => 'World Premiere',
+                                    'duration' => '135 + 20 min (Interaction)',
+                                    'audi' => 'Panjim Audi 1',
+                                    'venue' => 'Inox Panjim, Old GMC Building',
+                                ],
+                            ],
+                        ];
+
+                        $schedule['28-Nov-25'] = [
+                            'day' => 'Friday',
+                            'films' => [
+                                [
+                                    'red_carpet_time' => '11:30',
+                                    'show_time' => '12:00',
+                                    'title' => 'Tere Ishq Mein',
+                                    // 'red_carpet_guests' => 'Kriti Sanon, Anand L Rai, Shiv Channana',
+                                    'cast' => 'Dhanush, Kirti Sanon, Prabhudeva',
+                                    'director' => 'Anand L. Rai',
+                                    'producer' => 'Colour Yellow Productions & T-Series',
+                                    'language' => 'Hindi',
+                                    'genre' => 'Romance/Musical',
+                                    'premiere' => 'World Premiere',
+                                    'duration' => '150 min',
+                                    'audi' => 'Panjim Audi 4',
+                                    'venue' => 'Inox Panjim, Old GMC Building',
+                                ],
+                            ],
+                        ];
+                    @endphp
+
+
+                    <p><b> Gala Premieres Schedule and Red-Carpet Guests </b></p>
+                    <div class="table-responsive data-table">
+                        <table class="table table-striped table-bordered table-hover align-middle">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>DATE</th>
+                                    <th>DAY</th>
+                                    <th>RED CARPET TIME</th>
+                                    <th>SHOW TIME</th>
+                                    <th>TITLE</th>
+                                    {{-- <th>GUESTS WALKING RED CARPET</th> --}}
+                                    <th>CAST</th>
+                                    <th>DIRECTOR</th>
+                                    <th>PRODUCER</th>
+                                    <th>LANGUAGE</th>
+                                    <th>GENRE</th>
+                                    <th>PREMIERE</th>
+                                    <th>DURATION</th>
+                                    <th>AUDI</th>
+                                    <th>VENUE</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($schedule as $date => $dayData)
+                                    @foreach ($dayData['films'] as $index => $film)
+                                        <tr>
+                                            @if ($index == 0)
+                                                <td rowspan="{{ count($dayData['films']) }}">
+                                                    {{ \Carbon\Carbon::parse($date)->format('F d, Y') }}
+                                                </td>
+                                                <td rowspan="{{ count($dayData['films']) }}">
+                                                    {{ $dayData['day'] }}
+                                                </td>
+                                            @endif
+
+                                            <td>{{ $film['red_carpet_time'] }}</td>
+                                            <td>{{ $film['show_time'] }}</td>
+                                            <td>{{ $film['title'] }}</td>
+                                            {{-- <td>{{ $film['red_carpet_guests'] }}</td> --}}
+                                            <td>{{ $film['cast'] }}</td>
+                                            <td>{{ $film['director'] }}</td>
+                                            <td>{{ $film['producer'] }}</td>
+                                            <td>{{ $film['language'] }}</td>
+                                            <td>{{ $film['genre'] }}</td>
+                                            <td>{{ $film['premiere'] }}</td>
+                                            <td>{{ $film['duration'] }}</td>
+                                            <td>{{ $film['audi'] }}</td>
+                                            <td>{{ $film['venue'] }}</td>
+                                        </tr>
+                                    @endforeach
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
+
+                {{-- <p>This diverse selection, ranging from big-banner Hindi releases to regional cinema, international
+                    showcases, and global OTT premieres, will once again make the Gala Premieres and Red-Carpet segment
+                    a marquee attraction of the 56th IFFI.</p> --}}
             </div>
         </div>
+    </div>
     </div>
 
 @endsection

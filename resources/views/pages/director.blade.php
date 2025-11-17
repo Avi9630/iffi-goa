@@ -17,8 +17,8 @@
 
 <section>
     <div class="container">
-        <div class="section-heading mb-4">
-            <p>Best 56<sup>th</sup> debut feature film of a</p>
+        <div class="section-heading mb-4 text-center mt-5 center-heading">
+            <p>Best debut feature film of a</p>
             <h2>Director</h2>
         </div>
         <div class="owl-carousel international">
@@ -27,7 +27,7 @@
                     $webpImage = preg_replace('/\.\w+$/', '.webp', $director->img_src);
                 @endphp
                 <div class="item card">
-                    <img src="{{ asset('public/images/cureted-section/webp/' . $webpImage) }}" alt="image"
+                    <img src="{{ asset('public/images/cureted-section/' . $webpImage) }}" alt="image"
                         class="img-fluid" loading="lazy">
                     <div class="International-competition">
                         <p>

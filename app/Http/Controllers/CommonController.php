@@ -49,8 +49,12 @@ class CommonController extends Controller
 
     public function highlights()
     {
+        // $datas = DB::table('highlights')
+        //     ->where(['status' => 1])
+        //     ->get();
         $datas = DB::table('highlights')
-            ->where(['status' => 1])
+            ->where('status', 1)
+            ->orderBy('created_at', 'desc')
             ->get();
         return $datas;
     }
@@ -176,12 +180,13 @@ class CommonController extends Controller
         $currentURL = $_SERVER['REQUEST_URI'];
         $list_international_cinema_images = InternationalCinemaImage::where(['status' => '1', 'cinema_id' => $fetch_cinema_details->id])->get();
         $list_international_cinema_videos = DB::table('international_cinema_videos')->where('status', '=', '1')->where('cinema_id', '=', $fetch_cinema_details->id)->get();
+
         return view('pages.international-competition-detail', [
-            'fetch_cinema_details' => $fetch_cinema_details,
-            'fetch_cinema_basic_details' => $fetch_cinema_basic_details,
-            'currentURL' => $currentURL,
-            'list_international_cinema_images' => $list_international_cinema_images,
-            'list_international_cinema_videos' => $list_international_cinema_videos,
+            'fetch_cinema_details'              =>  $fetch_cinema_details,
+            'fetch_cinema_basic_details'        =>  $fetch_cinema_basic_details,
+            'currentURL'                        =>  $currentURL,
+            'list_international_cinema_images'  =>  $list_international_cinema_images,
+            'list_international_cinema_videos'  =>  $list_international_cinema_videos,
         ]);
     }
 

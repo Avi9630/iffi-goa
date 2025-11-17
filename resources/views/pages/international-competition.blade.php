@@ -38,13 +38,12 @@
 </div> --}}
 
 
-<div class="col-lg-12 mb-5">
+{{-- <div class="col-lg-12 mb-5">
     <div class="container">
         <div class="section-heading mb-4 text-center mt-5 center-heading">
             <p>Embrace creativity, inspire change, and shine in the 56<sup>th</sup></p>
             <h2>International competition</h2>
         </div>
-
         <div id="app">
             <div class="swiper">
                 <div class="swiper-wrapper">
@@ -75,10 +74,209 @@
                     @endforeach
                 </div>
             </div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
         </div>
+    </div>
+</div> --}}
 
+
+<div class="col-lg-12 mb-5">
+    <div class="container">
+        <div class="section-heading mb-4 text-center mt-5 center-heading">
+            <p>Embrace creativity, inspire change, and shine in the 56<sup>th</sup></p>
+            <h2>International competition</h2>
+        </div>
+        <div id="app">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    
+                    <div class="swiper-slide">
+                        <div class="swiper-carousel-animate-opacity">
+                            <img src="{{ asset('public/images/international-competition/2025/A Poet.webp') }}"
+                                alt="image" class="img-fluid" loading="lazy">
+                            <div class="slide-content">
+                                <h2 class="text-center">
+                                    <a href="{{ route('international-competition-detail', ['slug' => 'A Poet']) }}"
+                                        class="post-title" style="color: white; text-decoration: none">A Poet</a>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="swiper-carousel-animate-opacity">
+                            <img src="{{ asset('public/images/international-competition/2025/Cest si Bon.webp') }}"
+                                alt="image" class="img-fluid" loading="lazy">
+                            <div class="slide-content">
+                                <h2 class="text-center">
+                                    <a href="{{ route('international-competition-detail', ['slug' => "C'est Si Bon"]) }}"
+                                        class="post-title" style="color: white; text-decoration: none">C'est Si
+                                        Bon</a>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="swiper-carousel-animate-opacity">
+                            <img src="{{ asset('public/images/international-competition/2025/Little Trouble Girls.webp') }}"
+                                alt="image" class="img-fluid" loading="lazy">
+                            <div class="slide-content">
+                                <h2 class="text-center">
+                                    <a href="{{ route('international-competition-detail', ['slug' => 'Little Trouble Girls']) }}"
+                                        class="post-title" style="color: white; text-decoration: none">Little Trouble
+                                        Girls</a>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="swiper-carousel-animate-opacity">
+                            <img src="{{ asset('public/images/international-competition/2025/Mosquitos.webp') }}"
+                                alt="image" class="img-fluid" loading="lazy">
+                            <div class="slide-content">
+                                <h2 class="text-center">
+                                    <a href="{{ route('international-competition-detail', ['slug' => 'Mosquitoes']) }}"
+                                        class="post-title" style="color: white; text-decoration: none">Mosquitoes</a>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="swiper-carousel-animate-opacity">
+                            <img src="{{ asset('public/images/international-competition/2025/mothers baby.webp') }}"
+                                alt="image" class="img-fluid" loading="lazy">
+                            <div class="slide-content">
+                                <h2 class="text-center">
+                                    <a href="{{ route('international-competition-detail', ['slug' => 'Mothers Baby']) }}"
+                                        class="post-title" style="color: white; text-decoration: none">Mothers Baby</a>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="swiper-carousel-animate-opacity">
+                            <img src="{{ asset('public/images/international-competition/2025/My Fathers shadow.webp') }}"
+                                alt="image" class="img-fluid" loading="lazy">
+                            <div class="slide-content">
+                                <h2 class="text-center">
+                                    <a href="{{ route('international-competition-detail', ['slug' => 'My Fathers Shadow']) }}"
+                                        class="post-title" style="color: white; text-decoration: none">My Fathers
+                                        Shadow</a>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="swiper-carousel-animate-opacity">
+                            <img src="{{ asset('public/images/international-competition/2025/RENOIR.webp') }}"
+                                alt="image" class="img-fluid" loading="lazy">
+                            <div class="slide-content">
+                                <h2 class="text-center">
+                                    <a href="{{ route('international-competition-detail', ['slug' => 'Renoir']) }}"
+                                        class="post-title" style="color: white; text-decoration: none">Renoir</a>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="swiper-carousel-animate-opacity">
+                            <img src="{{ asset('public/images/international-competition/2025/SHAM.webp') }}"
+                                alt="image" class="img-fluid" loading="lazy">
+                            <div class="slide-content">
+                                <h2 class="text-center">
+                                    <a href="{{ route('international-competition-detail', ['slug' => 'Sham']) }}"
+                                        class="post-title" style="color: white; text-decoration: none">Sham</a>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="swiper-carousel-animate-opacity">
+                            <img src="{{ asset('public/images/international-competition/2025/Skin Of Youth.webp') }}"
+                                alt="image" class="img-fluid" loading="lazy">
+                            <div class="slide-content">
+                                <h2 class="text-center">
+                                    <a href="{{ route('international-competition-detail', ['slug' => 'Skin Of Youth']) }}"
+                                        class="post-title" style="color: white; text-decoration: none">Skin Of Youth</a>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="swiper-carousel-animate-opacity">
+                            <img src="{{ asset('public/images/international-competition/2025/Songs of Adam.webp') }}"
+                                alt="image" class="img-fluid" loading="lazy">
+                            <div class="slide-content">
+                                <h2 class="text-center">
+                                    <a href="{{ route('international-competition-detail', ['slug' => 'Songs Of Adam']) }}"
+                                        class="post-title" style="color: white; text-decoration: none">Songs Of Adam</a>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="swiper-carousel-animate-opacity">
+                            <img src="{{ asset('public/images/international-competition/2025/The Visual Feminist Manifesto.webp') }}"
+                                alt="image" class="img-fluid" loading="lazy">
+                            <div class="slide-content">
+                                <h2 class="text-center">
+                                    <a href="{{ route('international-competition-detail', ['slug' => 'The Visual Feminist Manifesto']) }}"
+                                        class="post-title" style="color: white; text-decoration: none">The Visual Feminist Manifesto</a>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="swiper-carousel-animate-opacity">
+                            <img src="{{ asset('public/images/international-competition/2025/A short trip.webp') }}"
+                                alt="image" class="img-fluid" loading="lazy">
+                            <div class="slide-content">
+                                <h2 class="text-center">
+                                    <a href="{{ route('international-competition-detail', ['slug' => 'A Short Trip']) }}"
+                                        class="post-title" style="color: white; text-decoration: none">A Short Trip</a>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="swiper-carousel-animate-opacity">
+                            <img src="{{ asset('public/images/international-competition/2025/amaran.webp') }}"
+                                alt="image" class="img-fluid" loading="lazy">
+                            <div class="slide-content">
+                                <h2 class="text-center">
+                                    <a href="{{ route('international-competition-detail', ['slug' => 'Amaran']) }}"
+                                        class="post-title" style="color: white; text-decoration: none">Amaran</a>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="swiper-carousel-animate-opacity">
+                            <img src="{{ asset('public/images/international-competition/2025/Maharashtrian Ritual.webp') }}"
+                                alt="image" class="img-fluid" loading="lazy">
+                            <div class="slide-content">
+                                <h2 class="text-center">
+                                    <a href="{{ route('international-competition-detail', ['slug' => 'Maharashtrian Ritual']) }}"
+                                        class="post-title" style="color: white; text-decoration: none">Maharashtrian Ritual</a>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+
 <script type="module" crossorigin src="https://carousel-slider.uiinitiative.com/assets/index-BAdmAfAi.js"></script>

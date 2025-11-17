@@ -17,6 +17,7 @@ class IndianPanoramaController extends Controller
 
         $officialFeature = IndianPanorama::with('officialSelection')
             ->where('official_selection_id', 1)
+            ->where('status', 1)
             ->when(!empty($year), function ($query) use ($year) {
                 return $query->where('year', $year);
             })
@@ -34,6 +35,7 @@ class IndianPanoramaController extends Controller
         $year               =   isset($payload['year']) ? $payload['year'] : '';
         $officialFeature = IndianPanorama::with('officialSelection')
             ->where('official_selection_id', 2)
+            ->where('status', 1)
             ->when(!empty($year), function ($query) use ($year) {
                 return $query->where('year', $year);
             })
@@ -41,6 +43,78 @@ class IndianPanoramaController extends Controller
         return view('indian-panorama.official-selection-non-feature', [
             'officialNonFeature' =>  $officialFeature,
             'year' =>  $year,
+        ]);
+    }
+
+    public function officialBestDebutDirector(Request $request)
+    {
+        $payload            =   $request->all();
+        $year               =   isset($payload['year']) ? $payload['year'] : '';
+        $bestDebutDirectors = IndianPanorama::with('officialSelection')
+            ->where('official_selection_id', 3)
+            ->where('status', 1)
+            ->when(!empty($year), function ($query) use ($year) {
+                return $query->where('year', $year);
+            })
+            ->get();
+        return view('indian-panorama.best-debut-director', [
+            'bestDebutDirectors' =>  $bestDebutDirectors,
+            'year' =>  $year,
+        ]);
+    }
+
+    public function specialPresentation(Request $request)
+    {
+        $payload            =   $request->all();
+        $year               =   isset($payload['year']) ? $payload['year'] : '';
+
+        $data = IndianPanorama::with('officialSelection')
+            ->where('official_selection_id', 4)
+            ->where('status', 1)
+            ->when(!empty($year), function ($query) use ($year) {
+                return $query->where('year', $year);
+            })
+            ->get();
+        $specialPresentations = $data->groupBy('sub_category');
+        return view('indian-panorama.special-presentation', [
+            'specialPresentations'  =>  $specialPresentations,
+            'year'                  =>  $year,
+        ]);
+    }
+
+    public function newHorizon(Request $request)
+    {
+        $payload            =   $request->all();
+        $year               =   isset($payload['year']) ? $payload['year'] : '';
+        $newHorizons = IndianPanorama::with('officialSelection')
+            ->where('official_selection_id', 5)
+            ->where('status', 1)
+            ->when(!empty($year), function ($query) use ($year) {
+                return $query->where('year', $year);
+            })
+            ->get();
+        return view('indian-panorama.new-horizon', [
+            'newHorizons' =>  $newHorizons,
+            'year' =>  $year,
+        ]);
+    }
+
+    public function retrospectiveRajnikanth(Request $request)
+    {
+        $payload            =   $request->all();
+        $year               =   isset($payload['year']) ? $payload['year'] : '';
+
+        $newHorizons = IndianPanorama::with('officialSelection')
+            ->where('official_selection_id', 6)
+            ->where('status', 1)
+            ->when(!empty($year), function ($query) use ($year) {
+                return $query->where('year', $year);
+            })
+            ->get();
+
+        return view('indian-panorama.retrospective-rajnikanth', [
+            'newHorizons'   =>  $newHorizons,
+            'year'          =>  $year,
         ]);
     }
 

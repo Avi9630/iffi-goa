@@ -59,13 +59,13 @@
                             strtolower(\Carbon\Carbon::parse($date->date)->format('M')) .
                             \Carbon\Carbon::parse($date->date)->format('d');
                     @endphp
-
                     @foreach ($topics->where('master_date_id', $date->id)->values() as $i => $topic)
                         @include("master-class-new.{$dateKey}", ['topic' => $topic, 'index' => $i])
                     @endforeach
                 @endforeach
             </div>
-            {{-- Date - wise --}}
+
+            {{-- Date --}}
             @foreach ($dates as $date)
                 @php
                     $formattedId =
@@ -127,7 +127,56 @@
 
     <script>
         const modalData = {!! $modalData !!};
-        console.log(modalData);
+
+        document.addEventListener("DOMContentLoaded", function() {
+            let hash = window.location.hash;
+            const defaultTab = document.querySelector('a[href="#all"]');
+
+            if (!hash && defaultTab) {
+                let tab = new bootstrap.Tab(defaultTab);
+                tab.show();
+                history.replaceState(null, null, '#all');
+            }
+
+            if (hash) {
+                let tabTrigger = document.querySelector(`a[href="${hash}"]`);
+                if (tabTrigger) {
+                    let tab = new bootstrap.Tab(tabTrigger);
+                    tab.show();
+                    setTimeout(() => window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    }), 300);
+                }
+            }
+            let tabLinks = document.querySelectorAll('.nav-tabs a[data-bs-toggle="tab"]');
+            tabLinks.forEach(function(link) {
+                link.addEventListener('shown.bs.tab', function(event) {
+                    history.replaceState(null, null, event.target.getAttribute('href'));
+                });
+            });
+        });
+
+        // document.addEventListener("DOMContentLoaded", function() {
+        //     let hash = window.location.hash;
+        //     if (hash) {
+        //         let tabTrigger = document.querySelector(`a[href="${hash}"]`);
+        //         if (tabTrigger) {
+        //             let tab = new bootstrap.Tab(tabTrigger);
+        //             tab.show();
+        //             setTimeout(() => window.scrollTo({
+        //                 top: 0,
+        //                 behavior: 'smooth'
+        //             }), 300);
+        //         }
+        //     }
+        //     let tabLinks = document.querySelectorAll('.nav-tabs a[data-bs-toggle="tab"]');
+        //     tabLinks.forEach(function(link) {
+        //         link.addEventListener('shown.bs.tab', function(event) {
+        //             history.replaceState(null, null, event.target.getAttribute('href'));
+        //         });
+        //     });
+        // });
 
         document.querySelectorAll('.title-tab').forEach(tab => {
             tab.addEventListener('click', function() {
@@ -137,7 +186,7 @@
                 if (!dayData.length) return;
                 if (sessionIndex >= dayData.length) sessionIndex = dayData.length - 1;
                 const data = dayData[sessionIndex];
-                
+
                 // Reset modal fields first
                 document.getElementById('exampleModalLabel').innerText = '';
                 document.getElementById('modalDate').innerText = '';
@@ -145,7 +194,7 @@
                 document.getElementById('panel').innerText = '';
                 document.getElementById('modalSpeakers').innerHTML = '';
                 if (!data) return;
-                
+
                 // Populate modal with data
                 document.getElementById('exampleModalLabel').innerText = data.title || 'No Title';
                 document.getElementById('modalDate').innerText = data.date || 'No Date';
