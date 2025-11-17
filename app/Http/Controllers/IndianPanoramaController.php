@@ -67,6 +67,7 @@ class IndianPanoramaController extends Controller
     {
         $payload            =   $request->all();
         $year               =   isset($payload['year']) ? $payload['year'] : '';
+
         $data = IndianPanorama::with('officialSelection')
             ->where('official_selection_id', 4)
             ->where('status', 1)
@@ -76,8 +77,8 @@ class IndianPanoramaController extends Controller
             ->get();
         $specialPresentations = $data->groupBy('sub_category');
         return view('indian-panorama.special-presentation', [
-            'specialPresentations' =>  $specialPresentations,
-            'year' =>  $year,
+            'specialPresentations'  =>  $specialPresentations,
+            'year'                  =>  $year,
         ]);
     }
 
