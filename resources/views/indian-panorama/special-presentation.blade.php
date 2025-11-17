@@ -17,8 +17,8 @@
     @php
         $subCategory = [
             1 => '125 Years of V. Shantaravn',
-            2 => 'Centenary Tributes By NFDC-NFAI',
-            4 => '50 years of NFDC',
+            2 => 'Centenary Tributes',
+            4 => '50 Years of NFDC',
             5 => 'Special Showcase',
             6 => 'Azadi ki Amrit Kahaniyan',
             7 => 'Retrospective of Rajnikant',
