@@ -52,10 +52,7 @@ class CommonController extends Controller
         // $datas = DB::table('highlights')
         //     ->where(['status' => 1])
         //     ->get();
-        $datas = DB::table('highlights')
-            ->where('status', 1)
-            ->orderBy('created_at', 'desc')
-            ->get();
+        $datas = DB::table('highlights')->where('status', 1)->orderBy('created_at', 'desc')->get();
         return $datas;
     }
 
@@ -182,11 +179,11 @@ class CommonController extends Controller
         $list_international_cinema_videos = DB::table('international_cinema_videos')->where('status', '=', '1')->where('cinema_id', '=', $fetch_cinema_details->id)->get();
 
         return view('pages.international-competition-detail', [
-            'fetch_cinema_details'              =>  $fetch_cinema_details,
-            'fetch_cinema_basic_details'        =>  $fetch_cinema_basic_details,
-            'currentURL'                        =>  $currentURL,
-            'list_international_cinema_images'  =>  $list_international_cinema_images,
-            'list_international_cinema_videos'  =>  $list_international_cinema_videos,
+            'fetch_cinema_details' => $fetch_cinema_details,
+            'fetch_cinema_basic_details' => $fetch_cinema_basic_details,
+            'currentURL' => $currentURL,
+            'list_international_cinema_images' => $list_international_cinema_images,
+            'list_international_cinema_videos' => $list_international_cinema_videos,
         ]);
     }
 
@@ -225,6 +222,49 @@ class CommonController extends Controller
     {
         $indianPanormas = DB::table('indian_panorama_cinema')->where('status', '1')->where('year', $year)->get();
         return $indianPanormas;
+    }
+
+    function peacockAward()
+    {
+        $goldens = InternationalCinema::with('curatedSection')
+            ->where('curated_section_id', 1)
+            ->where('year', 2025)
+            ->where('status', 1)
+            ->limit(20)
+            ->get()
+            ->map(function ($cinema) {
+                $cinema->curated_section_title = $cinema->curatedSection->title ?? null;
+                return $cinema;
+            });
+
+
+        $silvers = InternationalCinema::with('curatedSection')
+            ->where('curated_section_id', 13)
+            ->where('year', 2025)
+            ->where('status', 1)
+            ->limit(20)
+            ->get()
+            ->map(function ($cinema) {
+                $cinema->curated_section_title = $cinema->curatedSection->title ?? null;
+                return $cinema;
+            });
+        return view('awards-2025.peacock-award', compact([
+            'goldens','silvers']));
+    }
+
+    public function focusjapan($year)
+    {
+        $focusJapans = InternationalCinema::with('curatedSection')
+            ->where('curated_section_id', 37)
+            ->where('year', 2025)
+            ->where('status', 1)
+            ->limit(20)
+            ->get()
+            ->map(function ($cinema) {
+                $cinema->curated_section_title = $cinema->curatedSection->title ?? null;
+                return $cinema;
+            });
+        return $focusJapans;
     }
 
     public function sponsors()
