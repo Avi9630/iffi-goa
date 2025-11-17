@@ -103,12 +103,6 @@
                                                     href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'icft-unesco-medal']) }}">
                                                     ICFT UNESCO Gandhi Medal
                                                 </a></li>
-                                            <li><a class="dropdown-item"
-                                                    href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'country-focus-japan']) }}">
-                                                    Country Focus: Japan
-                                                </a></li>
-
-                                            {{-- Curated Sections 2025 statrt here --}}
                                             <li class="nav-item dropend">
                                                 <a class="nav-link dropdown-toggle" href="#" role="button"
                                                     data-bs-toggle="dropdown" aria-expanded="false">
@@ -179,9 +173,11 @@
                                                             Presentations</a></li> --}}
                                                 </ul>
                                             </li>
-                                            {{-- Curated Sections 2025 end here --}}
 
-                                            {{-- Speacial Packages --}}
+                                            <li><a class="dropdown-item"
+                                                    href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'country-focus-japan']) }}">
+                                                    Country Focus: Japan
+                                                </a></li>
                                             <li class="nav-item dropend">
                                                 <a class="nav-link dropdown-toggle" href="#" role="button"
                                                     data-bs-toggle="dropdown" aria-expanded="false">Special Film
@@ -192,21 +188,20 @@
                                                             Country Spain
                                                         </a>
                                                     </li>
-
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'spotlight-australia']) }}">Spotlight:
                                                             Australia</a></li>
-                                                    <li><a class="dropdown-item"
-                                                            href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'opening-film']) }}">Opening
-                                                            Film</a></li>
-                                                    <li><a class="dropdown-item"
-                                                            href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'mid-fest-film']) }}">Mid
-                                                            fest film</a></li>
-                                                    <li><a class="dropdown-item"
-                                                            href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'closing-film']) }}">Closing
-                                                            Film</a></li>
                                                 </ul>
                                             </li>
+                                            <li><a class="dropdown-item"
+                                                    href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'opening-film']) }}">Opening
+                                                    Film</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'mid-fest-film']) }}">Mid
+                                                    fest film</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'closing-film']) }}">Closing
+                                                    Film</a></li>
 
                                             {{-- Curated Sections 2024 --}}
                                             {{-- <li class="nav-item dropend">
