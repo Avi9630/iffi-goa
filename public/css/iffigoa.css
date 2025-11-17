@@ -1985,9 +1985,9 @@ animation: slideOutRight 0.5s ease forwards;
 }
 
 .sponsor-list-div ul li img {
-    width: 140px;
+    /* width: 140px; */
     height: 140px;
-    max-width: 140px !important;
+    max-width: 100% !important;
 }
 
 .title-sponsor {

@@ -16,12 +16,12 @@
 
     @php
         $subCategory = [
-            1 => '125 Years of V. Shantaravn',
+            1 => '125 Years of V. Shantaram',
             2 => 'Centenary Tributes',
             4 => '50 Years of NFDC',
             5 => 'Special Showcase',
             6 => 'Azadi ki Amrit Kahaniyan',
-            7 => 'Retrospective of Rajnikant',
+            7 => 'Retrospective of Rajnikanth',
         ];
         $displayOrder = [1, 2, 4, 5, 6, 7];
     @endphp
@@ -50,7 +50,7 @@
                                                 <div class="iCinema-content">
                                                     <h4 class="title">{{ $presentation->title }}</h4>
                                                     <h5><span>Directed by:</span> {{ $presentation->directed_by }}</h5>
-                                                    <h5><span>Language:</span> {{ $presentation->language }}</h5>
+                                                    <h5><span>Language:</span> {!! $presentation->language !!}</h5>
                                                 </div>
                                             </div>
                                         </div>
