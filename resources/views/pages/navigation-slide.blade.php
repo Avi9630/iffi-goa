@@ -385,12 +385,7 @@
                                         <li class="nav-item">
                                             <a href="{{ route('special-presentation', ['year' => 2025]) }}"
                                                 class="nav-link">Special Screening</a>
-
                                         </li>
-                                        {{-- <li class="nav-item">
-                                            <a href="{{ route('retrospective-rajnikanth', ['year' => 2025]) }}"
-                                                class="nav-link">Retrospective Rajnikanth</a>
-                                        </li> --}}
                                     </ul>
 
                                     {{-- Cinema AI --}}
