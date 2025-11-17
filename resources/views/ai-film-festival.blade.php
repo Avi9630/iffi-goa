@@ -1,11 +1,5 @@
 @extends('layouts.app')
-{{-- @section('site_title', 'Discover what IFFI is all about | IFFI GOA')
-@section('site_description',
-    'Discover the International Film Festival of India (IFFI), showcasing the best of Indian
-    and global cinema, fostering cultural exchange and cinematic excellence.')
-@section('site_keywords', 'About IFFI Goa, IFFI goa, IFFI goa registration, IFFI goa delegate registration, About us') --}}
 @section('content')
-
     <!-- Header start-->
     @include('layouts.header')
     <!-- Header end-->
@@ -74,17 +68,20 @@
                     <div class="policy-page">
                         <ul>
                             <li>
-                                <p><strong>The Craft Master Award</strong> - Best AI Short Film (₹3,00,000) The Grand Prix honor, awarded
+                                <p><strong>The Craft Master Award</strong> - Best AI Short Film (₹3,00,000) The Grand Prix
+                                    honor, awarded
                                     to the most outstanding AI-generated short film for its excellence in storytelling,
                                     execution, and emotional impact.</p>
                             </li>
                             <li>
-                                <p><strong>The Craft Vanguard Award</strong> - Most Innovative Use of AI / Experimental Narrative
+                                <p><strong>The Craft Vanguard Award</strong> - Most Innovative Use of AI / Experimental
+                                    Narrative
                                     (₹2,00,000) Celebrating bold experimentation and creative risk-taking in AI-driven
                                     storytelling.</p>
                             </li>
                             <li>
-                                <p><strong>The Craft Spectra Award</strong> - Best AI Animation / Visual Design (₹1,00,000) Awarded for
+                                <p><strong>The Craft Spectra Award</strong> - Best AI Animation / Visual Design (₹1,00,000)
+                                    Awarded for
                                     exceptional visual artistry and design powered by AI tools and techniques.</p>
                             </li>
                         </ul>

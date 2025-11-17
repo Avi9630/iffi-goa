@@ -36,6 +36,8 @@
 
     @include('pages.opening-parade')
 
+    {{-- @include('pages.rajnikant') --}}
+
     <section>
         <div class="col-lg-12 mb-5">
             <div class="container">
