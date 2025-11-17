@@ -64,12 +64,26 @@
                             <div class="sponsor-list-div ">
                                 <ul>
                                     <li class="me-2">
-                                        <img src="{{ asset('public/images/sponsor/2025/2.png') }}" class="img-fluid"
-                                            alt="BEVERAGE PARTNER">
-                                    </li>
-                                    <li class="me-2">
                                         <img src="{{ asset('public/images/sponsor/2025/34.png') }}" class="img-fluid"
                                             alt="BEVERAGE PARTNER">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 d-flex">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="title-sponsor">TEA PARTNER</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="sponsor-list-div ">
+                                <ul>
+                                    <li class="me-2">
+                                        <img src="{{ asset('public/images/sponsor/2025/2.png') }}" class="img-fluid"
+                                            alt="TEA PARTNER">
                                     </li>
                                 </ul>
                             </div>
