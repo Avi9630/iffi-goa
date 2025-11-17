@@ -65,7 +65,7 @@
                 @endforeach
             </div>
 
-            {{-- Date - wise --}}
+            {{-- Date --}}
             @foreach ($dates as $date)
                 @php
                     $formattedId =
