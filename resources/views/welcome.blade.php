@@ -32,6 +32,12 @@
     <!-- About IFFI Section-->
     @include('pages.about-iffi')
 
+
+    {{-- Country focus Japan --}}
+    @include('pages.focus-japan', [
+        'focusJapans' => app(\App\Http\Controllers\CommonController::class)->focusjapan('2025'),
+    ])
+
     {{-- @include('pages.opening-parade') --}}
 
     @include('pages.opening-parade')
@@ -115,6 +121,10 @@
         'datas' => app(\App\Http\Controllers\CommonController::class)->cmotHighlights(),
     ])
     <br><br>
+
+    <!-- International competition Section-->
+    @include('pages.celebrating')
+
 
     <!-- Life Time Achievement Award  Section-->
     @include('pages.lifetime-achievement-award')
