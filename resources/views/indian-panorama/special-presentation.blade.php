@@ -21,7 +21,7 @@
             4 => '50 Years of NFDC',
             5 => 'Special Showcase',
             6 => 'Azadi ki Amrit Kahaniyan',
-            7 => 'Retrospective of Rajnikant',
+            7 => 'Retrospective of Rajnikanth',
         ];
         $displayOrder = [1, 2, 4, 5, 6, 7];
     @endphp
