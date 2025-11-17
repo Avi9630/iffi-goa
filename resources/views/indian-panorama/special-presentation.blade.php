@@ -16,7 +16,7 @@
 
     @php
         $subCategory = [
-            1 => '125 Years of V. Shantaravn',
+            1 => '125 Years of V. Shantaram',
             2 => 'Centenary Tributes',
             4 => '50 Years of NFDC',
             5 => 'Special Showcase',
