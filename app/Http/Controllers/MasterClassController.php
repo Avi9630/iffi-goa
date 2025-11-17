@@ -27,8 +27,7 @@ class MasterClassController extends Controller
             ->orderBy('master_classes.start_time', 'asc')
             ->with(['masterClass', 'speakers', 'moderator', 'masterDate'])
             ->get();
-
-        // dd($topics);
+        
         $modalData = [];
         foreach ($dates as $date) {
             $key = strtolower(date('M', strtotime($date->date))) . date('d', strtotime($date->date));
