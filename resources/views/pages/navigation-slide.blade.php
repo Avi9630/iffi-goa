@@ -103,6 +103,10 @@
                                                     href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'icft-unesco-medal']) }}">
                                                     ICFT UNESCO Gandhi Medal
                                                 </a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'country-focus-japan']) }}">
+                                                    Country Focus: Japan
+                                                </a></li>
 
                                             {{-- Curated Sections 2025 statrt here --}}
                                             <li class="nav-item dropend">
@@ -176,6 +180,33 @@
                                                 </ul>
                                             </li>
                                             {{-- Curated Sections 2025 end here --}}
+
+                                            {{-- Speacial Packages --}}
+                                            <li class="nav-item dropend">
+                                                <a class="nav-link dropdown-toggle" href="#" role="button"
+                                                    data-bs-toggle="dropdown" aria-expanded="false">Special Film
+                                                    Packages</a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'partner-country-spain']) }}">Partner
+                                                            Country Spain
+                                                        </a>
+                                                    </li>
+
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'spotlight-australia']) }}">Spotlight:
+                                                            Australia</a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'opening-film']) }}">Opening
+                                                            Film</a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'mid-fest-film']) }}">Mid
+                                                            fest film</a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'closing-film']) }}">Closing
+                                                            Film</a></li>
+                                                </ul>
+                                            </li>
 
                                             {{-- Curated Sections 2024 --}}
                                             {{-- <li class="nav-item dropend">
@@ -283,40 +314,6 @@
                                                 <a href="{{ route('icinema-rules-regulation') }}"
                                                     class="dropdown-item">Rules & Regulations</a>
                                             </li>
-                                        </ul>
-                                    </li>
-
-                                    {{-- Country Focus Japan --}}
-                                    <ul class="navbar-nav vertical-menu-custom">
-                                        <li class="nav-item">
-                                            <a href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'country-focus-japan']) }}"
-                                                class="nav-link">Country
-                                                Focus: Japan</a>
-                                        </li>
-                                    </ul>
-
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="#" role="button"
-                                            data-bs-toggle="dropdown" aria-expanded="false">Special Film Packages</a>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item"
-                                                    href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'partner-country-spain']) }}">Partner
-                                                    Country Spain
-                                                </a>
-                                            </li>
-
-                                            <li><a class="dropdown-item"
-                                                    href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'spotlight-australia']) }}">Spotlight:
-                                                    Australia</a></li>
-                                            <li><a class="dropdown-item"
-                                                    href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'opening-film']) }}">Opening
-                                                    Film</a></li>
-                                            <li><a class="dropdown-item"
-                                                    href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'mid-fest-film']) }}">Mid
-                                                    fest film</a></li>
-                                            <li><a class="dropdown-item"
-                                                    href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'closing-film']) }}">Closing
-                                                    Film</a></li>
                                         </ul>
                                     </li>
 
