@@ -388,6 +388,12 @@
                                         </li>
                                     </ul>
 
+                                    <ul class="navbar-nav vertical-menu-custom">
+                                        <li class="nav-item">
+                                            <a href="{{ route('peacock-award') }}" class="nav-link">Peacock Award</a>
+                                        </li>
+                                    </ul>
+
                                     {{-- Cinema AI --}}
                                     <ul class="navbar-nav vertical-menu-custom">
                                         <li class="nav-item">
