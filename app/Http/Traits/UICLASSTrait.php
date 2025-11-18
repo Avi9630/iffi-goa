@@ -43,6 +43,7 @@ trait UICLASSTrait
             38 => 'partner-country-spain',
             39 => 'mid-fest-film',
             40 => 'spotlight-australia',
+            41 => 'special-screening',
         ];
         return $cssClasses[$data];
     }
