@@ -178,6 +178,9 @@
                                                     href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'country-focus-japan']) }}">
                                                     Country Focus: Japan
                                                 </a></li>
+
+                                            {{-- Special Film Package --}}
+
                                             <li class="nav-item dropend">
                                                 <a class="nav-link dropdown-toggle" href="#" role="button"
                                                     data-bs-toggle="dropdown" aria-expanded="false">Special Film
@@ -191,8 +194,12 @@
                                                     <li><a class="dropdown-item"
                                                             href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'spotlight-australia']) }}">Spotlight:
                                                             Australia</a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'special-screening']) }}">Special
+                                                            Screening</a></li>
                                                 </ul>
                                             </li>
+
                                             <li><a class="dropdown-item"
                                                     href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'opening-film']) }}">Opening
                                                     Film</a></li>
