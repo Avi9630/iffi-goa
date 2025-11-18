@@ -2,7 +2,7 @@
 @section('content')
     @include('layouts.header')
     @include('pages.navigation-slide')
-    
+
     <div class="container-fluid page-header bannerBg-non-feature py-5">
         <div class="container text-center ">
             <h1 class="page-title-header">IFFI Festival {{ $year }} Special Screening</h1>
@@ -46,9 +46,11 @@
                                                     <h4 class="title">{{ $presentation->title }}</h4>
                                                     <h5><span>Directed by:</span> {{ $presentation->directed_by }}</h5>
                                                     <h5><span>Language:</span> {!! $presentation->language !!}</h5>
+                                                    <h5><span>{!! $presentation->restored_by_nfai ?? '' !!}</span></h5>
                                                 </div>
                                             </div>
                                         </div>
+                                        <p class="text-center" style="color: #3E4EB0"><b>{!! $presentation->num_of_years ?? '' !!}</b></p>
                                     </div>
                                 </div>
                             @endforeach
