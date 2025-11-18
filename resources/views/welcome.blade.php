@@ -83,6 +83,27 @@
         </div>
     </section>
 
+    {{-- iffiesta --}}
+    <section>
+        <div class="col-md-12">
+            <div class="container">
+                <div class="section-heading mb-4 text-center mt-5 center-heading ">
+                    <h2>IFFIESTA - 2025</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12 d-flex">
+                        <div class="card shadow-sm">
+                            <a href="{{ route('iffi-esta') }}">
+                                <img src="{{ asset('public/images/desktop-image/webp/iffiesta-banner.webp') }}"
+                                    class="img-fluid" alt="image" loading="lazy">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- 55th IFFI Festival Section-->
     <section>
         @include('pages.55th-iffi-festival', [
@@ -90,7 +111,7 @@
         ])
     </section>
 
-    <!-- News & Updates Section-->
+    {{-- News & Updates Section --}}
     @include('pages.news-and-update', [
         'datas' => app(\App\Http\Controllers\CommonController::class)->newsUpdate1(),
     ])
@@ -100,6 +121,7 @@
         'internationalCinemas' => app(
             \App\Http\Controllers\CuratedSectionController::class)->internationalCinema(),
     ])
+
 
     {{-- Indian panorama 55th --}}
     @include('pages.indian-panorama', [
