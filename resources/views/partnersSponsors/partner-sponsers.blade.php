@@ -10,7 +10,7 @@
 @section('content')
     @include('layouts.header')
     @include('pages.navigation-slide')
-    
+
     <div class="container-fluid page-header bannerBg-partnersSponsors py-5">
         <div class="container text-center ">
             <h1 class="page-title-header">Our Partners & Sponsors</h1>
@@ -179,7 +179,7 @@
                                                 alt="MOBILITY PARTNER">
                                         </a>
                                     </li>
-                                    
+
                                     <li class="me-2">
                                         <a href="https://www.iffigoa.org/public/images/sponsor/2025/8.png">
                                             <img src="{{ asset('public/images/sponsor/2025/8.png') }}" class="img-fluid"
@@ -228,7 +228,13 @@
                                     </li>
                                     <li class="me-2">
                                         <a href="https://www.iffigoa.org/public/images/sponsor/2025/44.png">
-                                            <img src="{{ asset('public/images/sponsor/2025/44.png') }}"
+                                            <img src="{{ asset('public/images/sponsor/2025/44.png') }}" class="img-fluid"
+                                                alt="CONTENT PARTNERS">
+                                        </a>
+                                    </li>
+                                    <li class="me-2">
+                                        <a href="https://www.iffigoa.org/public/images/sponsor/2025/52.webp">
+                                            <img src="{{ asset('public/images/sponsor/2025/52.webp') }}"
                                                 class="img-fluid" alt="CONTENT PARTNERS">
                                         </a>
                                     </li>
@@ -310,13 +316,63 @@
                                     </li>
                                     <li class="me-2">
                                         <a href="https://www.iffigoa.org/public/images/sponsor/2025/10.png">
-                                            <img src="{{ asset('public/images/sponsor/2025/10.png') }}"
-                                                class="img-fluid" alt="LICENSING PARTNER">
+                                            <img src="{{ asset('public/images/sponsor/2025/10.png') }}" class="img-fluid"
+                                                alt="LICENSING PARTNER">
                                         </a>
                                     </li>
                                     <li class="me-2">
                                         <img src="{{ asset('public/images/sponsor/2025/13.png') }}" class="img-fluid"
                                             alt="Fly91">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 col-sm-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="title-sponsor">MEDIA PARTNERS</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="sponsor-list-div ">
+                                <ul>
+                                    <li class="me-2">
+                                        <a href="https://www.iffigoa.org/public/images/sponsor/2025/48.png">
+                                            <img src="{{ asset('public/images/sponsor/2025/48.png') }}" class="img-fluid"
+                                                alt="MEDIA PARTNERS">
+                                        </a>
+                                    </li>
+                                    <li class="me-2">
+                                        <a href="https://www.iffigoa.org/public/images/sponsor/2025/50.png">
+                                            <img src="{{ asset('public/images/sponsor/2025/50.png') }}" class="img-fluid"
+                                                alt="MEDIA PARTNERS">
+                                        </a>
+                                    </li>
+                                    <li class="me-2">
+                                        <a href="https://www.iffigoa.org/public/images/sponsor/2025/42.png">
+                                            <img src="{{ asset('public/images/sponsor/2025/42.png') }}" class="img-fluid"
+                                                alt="MEDIA PARTNERS">
+                                        </a>
+                                    </li>
+                                    <li class="me-2">
+                                        <a href="https://www.iffigoa.org/public/images/sponsor/2025/53.webp">
+                                            <img src="{{ asset('public/images/sponsor/2025/53.webp') }}" class="img-fluid"
+                                                alt="MEDIA PARTNERS">
+                                        </a>
+                                    </li>
+                                    <li class="me-2">
+                                        <a href="https://www.iffigoa.org/public/images/sponsor/2025/54.webp">
+                                            <img src="{{ asset('public/images/sponsor/2025/54.webp') }}" class="img-fluid"
+                                                alt="MEDIA PARTNERS">
+                                        </a>
+                                    </li>
+                                    <li class="me-2">
+                                        <a href="https://www.iffigoa.org/public/images/sponsor/2025/55.webp">
+                                            <img src="{{ asset('public/images/sponsor/2025/55.webp') }}" class="img-fluid"
+                                                alt="MEDIA PARTNERS">
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
@@ -445,26 +501,8 @@
                                         </a>
                                     </li>
                                     <li class="me-2">
-                                        <a href="https://www.iffigoa.org/public/images/sponsor/2025/48.png">
-                                            <img src="{{ asset('public/images/sponsor/2025/48.png') }}" class="img-fluid"
-                                                alt="OTHER PARTNERS">
-                                        </a>
-                                    </li>
-                                    <li class="me-2">
                                         <a href="https://www.iffigoa.org/public/images/sponsor/2025/49.png">
                                             <img src="{{ asset('public/images/sponsor/2025/49.png') }}" class="img-fluid"
-                                                alt="OTHER PARTNERS">
-                                        </a>
-                                    </li>
-                                    <li class="me-2">
-                                        <a href="https://www.iffigoa.org/public/images/sponsor/2025/50.png">
-                                            <img src="{{ asset('public/images/sponsor/2025/50.png') }}" class="img-fluid"
-                                                alt="OTHER PARTNERS">
-                                        </a>
-                                    </li>
-                                    <li class="me-2">
-                                        <a href="https://www.iffigoa.org/public/images/sponsor/2025/42.png">
-                                            <img src="{{ asset('public/images/sponsor/2025/42.png') }}" class="img-fluid"
                                                 alt="OTHER PARTNERS">
                                         </a>
                                     </li>
@@ -626,7 +664,7 @@
                             </div>
                         </div>
                     </div>
-                </div> --}}                
+                </div> --}}
 
                 {{-- <div class="col-md-4 col-sm-6 d-flex">
                     <div class="card">
