@@ -732,6 +732,14 @@
                                             Catalogue</a>
                                     </li> --}}
 
+                                    <li class="nav-item">
+                                        <a href="{{ asset('public/pdfs/schedule/Schedule.pdf') }}" class="nav-link" target="_blank">IFFI 56 Schedule</a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="{{ asset('public/pdfs/catalogue/Catalogue.pdf') }}" class="nav-link" target="_blank">IFFI 56 Catalogue</a>
+                                    </li>
+                                    
                                 </ul>
                             </div>
                             <!-- Media Section End -->
