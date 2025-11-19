@@ -18,7 +18,7 @@
             </div>
 
             <div class="row mt-4 phone-text">
-                <div class="col-md-3 col-sm-3">
+                <div class="col-md-3 col-sm-3 mb-2">
                     <a href=" https://play.google.com/store/apps/details?id=eu.datakal.iffigoa" target="_blank">
                         <img src="{{ asset('public/images/g-play.png') }}" alt="image" style="height: 43px;">
                     </a>
