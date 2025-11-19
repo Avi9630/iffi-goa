@@ -94,7 +94,7 @@
                     <div class="col-md-12 col-sm-12 col-xs-12 d-flex">
                         <div class="card shadow-sm">
                             <a href="{{ route('iffi-esta') }}" target="_blank">
-                                <img src="{{ asset('public/images/desktop-image/webp/iffiesta-banner.webp') }}"
+                                <img src="{{ asset('public/images/desktop-image/webp/iffiesta-banner4.webp') }}"
                                     class="img-fluid" alt="image" loading="lazy">
                             </a>
                         </div>

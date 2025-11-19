@@ -386,10 +386,9 @@ class CommonController extends Controller
             $peacock->where('year', $year);
         }
         $thepeacock = $peacock->get();
-
         return view('media.the-peacock', [
-            'thepeacock' => $thepeacock, // Pass the paginated results correctly
-            'year' => $year, // Also pass the year as intended for the header display
+            'thepeacock' => $thepeacock,
+            'year' => $year,
         ]);
     }
 
