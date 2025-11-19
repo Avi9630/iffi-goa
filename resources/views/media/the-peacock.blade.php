@@ -22,9 +22,35 @@
         </div>
     </div>
 
-
-    <div class="col-lg-12 mt-5 static-content">
+    <div class="col-lg-12 mt-5">
         <div class="container">
+            <div class="section-heading mb-4 text-center mt-5 center-heading">
+                <h2>Peacock</h2>
+            </div>
+
+            @php
+                $years = [
+                    2025 => 'active',
+                    2024 => 'active',
+                    2023 => 'active',
+                    2022 => 'active',
+                    2021 => 'active',
+                    2020 => 'active',
+                    2019 => 'active',
+                    2018 => 'active',
+                    2017 => 'active',
+                ];
+            @endphp
+
+            <ul class=" mb-4 tabNavigation" id="myTab" role="tablist">
+
+                @foreach ($years as $year => $value)
+                    <li>
+                        <a href="{{ route('the-peacock', ['year' => $year]) }}"
+                            class=" {{ $value ?? '' }}">{{ $year }}</a>
+                    </li>
+                @endforeach
+            </ul>
             <div class="row">
                 @foreach ($thepeacock as $value)
                     <div class="col-md-3 col-sm-4 col-xs-12 d-flex">
@@ -50,15 +76,15 @@
                                 </div>
                             </a>
                         @else
-                            <a href="{{ $value->image_url }}" target="_blank"
-                                class="text-decoration-none">
+                            <a href="{{ $value->image_url }}" target="_blank" class="text-decoration-none">
                                 <div class="card shadow-sm w-100">
                                     <div class="card-image min-size-img">
                                         @if (!empty($value->poster))
                                             <img src="{{ asset('public/images/thePeacock/poster/' . ($value->poster ?? 'pdf.jpg')) }}"
                                                 alt="{{ $value->title }} image" class="img-fluid">
                                         @else
-                                            <img src="{{ $value->poster_url }}"alt="image" class="img-fluid" loading="lazy">
+                                            <img src="{{ $value->poster_url }}"alt="image" class="img-fluid"
+                                                loading="lazy">
                                         @endif
                                     </div>
                                     <div class="card-body text-start">
@@ -108,3 +134,22 @@
         </div>
     </div> --}}
 @endsection
+<style>
+    .tabNavigation {
+        justify-content: center;
+        margin-bottom: 15px !important;
+        font-weight: bold;
+        column-gap: 5px;
+        row-gap: 15px;
+        display: flex;
+        list-style: none;
+    }
+
+    .tabNavigation .active {
+        color: #000;
+        border: solid 1px #ddd !important;
+        padding: 6px 15px !important;
+        border-radius: 5px !important;
+        text-decoration: none; background: #fff
+    }
+</style>
