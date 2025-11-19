@@ -68,8 +68,6 @@
                                     'red_carpet_time' => '12:30',
                                     'show_time' => '13:15',
                                     'title' => 'The Family Man (S:3)',
-                                    // 'red_carpet_guests' =>
-                                    //     'Manoj Bajpai, Nimrat Kaur, Jaideep Ahlawat, Raj & DK, Nikhil Madhok',
                                     'cast' => 'Manoj Bajpai, Nimrat Kaur, Sharib Hashmi, Priyamani, Jaideep Ahlawat',
                                     'director' => 'Raj & DK',
                                     'producer' => 'Amazon Prime Video & D2R Films',
@@ -84,22 +82,20 @@
                                     'red_carpet_time' => '16:15',
                                     'show_time' => '17:00',
                                     'title' => 'Asambhav',
-                                    // 'red_carpet_guests' => 'Sachit Patil, Mukta Barve, Pushkar Shroti, Murli Chhatwani',
-                                    'cast' => 'Sachit Patil, Mukta Barve, Priya Bapat, Sandeep Kulkarni',
-                                    'director' => 'Sachit Patil | Pushkar Shrotri',
-                                    'producer' => 'Panorama Studios',
+                                    'cast'      => 'Sachit Patil, Mukta Barve, Priya Bapat & Sandeep Kulkarni',
+                                    'director'  => 'Sachit Patil',
+                                    'producer' => 'Nitin Prakash Vaidya and Mr. Sachit Patil',
                                     'language' => 'Marathi',
-                                    'genre' => 'Mystery/Thriller',
-                                    'premiere' => 'World Premiere',
-                                    'duration' => '140 + 5 min',
-                                    'audi' => 'Panjim Audi 3',
-                                    'venue' => 'Inox Panjim, Old GMC Building',
+                                    'genre'     => 'Suspense/Thriller',
+                                    'premiere'  => 'World Premiere',
+                                    'duration'  => '140 + 5 min',
+                                    'audi'      => 'Panjim Audi 3',
+                                    'venue'     => 'Inox Panjim, Old GMC Building',
                                 ],
                                 [
                                     'red_carpet_time' => '13:00',
                                     'show_time' => '13:45',
-                                    'title' => '1942: A Love Story (4K)', 
-                                    // 'red_carpet_guests' => 'Vidhu Vinod Chopra',
+                                    'title' => '1942: A Love Story (4K)',
                                     'cast' => 'Anil Kapoor, Jackie Shroff',
                                     'director' => 'Vidhu Vinod Chopra',
                                     'producer' => 'Vidhu Vinod Chopra',
@@ -114,7 +110,6 @@
                                     'red_carpet_time' => '17:00',
                                     'show_time' => '17:45',
                                     'title' => '120 Bahadur',
-                                    // 'red_carpet_guests' => 'Farhan Akthar, Razneesh Ghai',
                                     'cast' => 'Farhan Akthar, Raashi Khanna, Sparsh Walia',
                                     'director' => 'Razneesh Ghai',
                                     'producer' => 'Excel Entertainment',
@@ -154,14 +149,14 @@
                                     //     'Samanalee Fonseka, Indira Tiwari, Kaushalya Fernando, Saumya Liyanage, Vimukti Jayasundara, Nila Madhab Panda',
                                     'cast' =>
                                         'Indira Tiwari,Samanalee Fonseka, Kaushalya Fernando, Saumya Liyanage, Hidaayath Hazeer',
-                                    'director'  =>  'Vimukti Jayasundara',
-                                    'producer'  =>  'Nila Madhab Panda',
-                                    'language'  =>  'English & Sinhala',
-                                    'genre'     =>  'Sci fi mystery drama',
-                                    'premiere'  =>  'India Premiere',
-                                    'duration'  =>  '100 min + 20 min',
-                                    'audi'      =>  'Panjim Audi 4',
-                                    'venue'     =>  'Inox Panjim, Old GMC Building',
+                                    'director' => 'Vimukti Jayasundara',
+                                    'producer' => 'Nila Madhab Panda',
+                                    'language' => 'English & Sinhala',
+                                    'genre' => 'Sci fi mystery drama',
+                                    'premiere' => 'India Premiere',
+                                    'duration' => '100 min + 20 min',
+                                    'audi' => 'Panjim Audi 4',
+                                    'venue' => 'Inox Panjim, Old GMC Building',
                                 ],
                                 [
                                     'red_carpet_time' => '18:00',
@@ -400,7 +395,6 @@
                                     <th>RED CARPET TIME</th>
                                     <th>SHOW TIME</th>
                                     <th>TITLE</th>
-                                    {{-- <th>GUESTS WALKING RED CARPET</th> --}}
                                     <th>CAST</th>
                                     <th>DIRECTOR</th>
                                     <th>PRODUCER</th>
@@ -428,7 +422,6 @@
                                             <td>{{ $film['red_carpet_time'] }}</td>
                                             <td>{{ $film['show_time'] }}</td>
                                             <td>{{ $film['title'] }}</td>
-                                            {{-- <td>{{ $film['red_carpet_guests'] }}</td> --}}
                                             <td>{{ $film['cast'] }}</td>
                                             <td>{{ $film['director'] }}</td>
                                             <td>{{ $film['producer'] }}</td>
@@ -445,13 +438,8 @@
                         </table>
                     </div>
                 </div>
-
-                {{-- <p>This diverse selection, ranging from big-banner Hindi releases to regional cinema, international
-                    showcases, and global OTT premieres, will once again make the Gala Premieres and Red-Carpet segment
-                    a marquee attraction of the 56th IFFI.</p> --}}
             </div>
         </div>
-    </div>
     </div>
 
 @endsection

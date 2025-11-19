@@ -150,6 +150,11 @@
         border: solid 1px #ddd !important;
         padding: 6px 15px !important;
         border-radius: 5px !important;
-        text-decoration: none; background: #fff
+        text-decoration: none;
+        background: #fff
+    }
+
+    .min-size-img {
+        height: auto !important;
     }
 </style>
