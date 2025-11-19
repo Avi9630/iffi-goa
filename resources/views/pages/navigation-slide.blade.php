@@ -695,6 +695,10 @@
                                             class="nav-link">News and Updates</a>
                                     </li>
 
+                                    <li class="nav-item"><a href="{{ route('the-peacock', ['year' => 2025]) }}"
+                                            class="nav-link">The Peacock</a>
+                                    </li>
+
                                     {{-- <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" role="button"
                                             data-bs-toggle="dropdown" aria-expanded="false">
