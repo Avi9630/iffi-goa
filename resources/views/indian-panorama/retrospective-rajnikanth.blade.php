@@ -21,7 +21,7 @@
                 @foreach ($newHorizons as $newHorizon)
                     <div class="col-md-3 col-sm-4 col-xs-12 d-flex">
                         <div class="card shadow-sm">
-                            <div class="card-image min-size-img">
+                            {{-- min-size-img --}}
                                 @if (!empty($newHorizon->img_src))
                                     <img src="{{ asset('public/images/indian-panorama-cinema/' . $newHorizon->img_src) }}"
                                         alt="image" class="img-fluid">

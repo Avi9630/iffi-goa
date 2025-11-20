@@ -2336,3 +2336,24 @@ body p {
         border-radius: 0px;
     }
 }
+
+.peacockNav {
+	justify-content: center;
+        margin-bottom: 15px !important;
+        font-weight: bold;
+        column-gap: 5px;
+        row-gap: 15px;
+        display: flex;
+        list-style: none;
+        flex-wrap: wrap;       
+}
+
+.peacockNav .active {
+        color: #000;
+        border: solid 1px #ddd !important;
+        padding: 6px 15px !important;
+        border-radius: 5px !important;
+        text-decoration: none;
+        background: #fff
+    }
+
