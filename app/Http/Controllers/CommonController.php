@@ -372,28 +372,19 @@ class CommonController extends Controller
         return response()->json($gallery);
     }
 
-    public function pressRelease()
+    public function pressReleaseByPib()
     {
-        // $data = PressRelease::where('status', '1')->orderBy('id', 'desc')->paginate(10);
-        // $pressReleaseByCategory = $data->groupBy('pr_category_id');   
-        $category1 = PressRelease::where('status', 1)
-            ->where('pr_category_id', 1)
-            ->orderBy('id', 'desc')
-            ->paginate(10);
+        $pressRelease = PressRelease::where(['pr_category_id' => 1, 'status' => '1'])->orderBy('id', 'desc')->paginate(10);
+        return view('media.press-release-pib', [
+            'pressRelease' => $pressRelease
+        ]);
+    }
 
-        $category2 = PressRelease::where('status', 1)
-            ->where('pr_category_id', 2)
-            ->orderBy('id', 'desc')
-            ->paginate(10);
-
-        // $pressReleaseByCategory = [
-        //     1 => $category1,
-        //     2 => $category2
-        // ];
-        return view('media.press-release', [
-            // 'pressReleaseByCategory' => $pressReleaseByCategory
-            'category1' => $category1,
-            'category2' => $category2,
+    public function pressReleaseByNonPib()
+    {
+        $pressRelease = PressRelease::where(['pr_category_id' => 2, 'status' => '1'])->orderBy('id', 'desc')->paginate(10);
+        return view('media.press-release-non-pib', [
+            'pressRelease' => $pressRelease
         ]);
     }
 
