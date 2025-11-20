@@ -542,6 +542,18 @@
                                                 alt="OTHER PARTNERS">
                                         </a>
                                     </li>
+                                    <li class="me-2">
+                                        <a href="https://www.iffigoa.org/public/images/sponsor/2025/56.png">
+                                            <img src="{{ asset('public/images/sponsor/2025/56.png') }}" class="img-fluid"
+                                                alt="OTHER PARTNERS">
+                                        </a>
+                                    </li>
+                                    <li class="me-2">
+                                        <a href="https://www.iffigoa.org/public/images/sponsor/2025/57.png">
+                                            <img src="{{ asset('public/images/sponsor/2025/57.png') }}" class="img-fluid"
+                                                alt="OTHER PARTNERS">
+                                        </a>
+                                    </li>
 
                                     {{-- <li class="me-2">
                                         <a href="https://www.iffigoa.org/public/images/thePartnerSponsor/51.png">

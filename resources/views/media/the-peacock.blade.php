@@ -143,6 +143,7 @@
         row-gap: 15px;
         display: flex;
         list-style: none;
+        flex-wrap: wrap;
     }
 
     .tabNavigation .active {
