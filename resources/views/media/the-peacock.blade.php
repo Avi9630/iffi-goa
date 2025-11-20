@@ -27,7 +27,7 @@
                         2023 => 'active',
                         2022 => 'active',
                         2021 => 'active',
-                        2020 => 'active',
+                        // 2020 => 'active',
                         2019 => 'active',
                         2018 => 'active',
                         2017 => 'active',
@@ -49,7 +49,8 @@
                             <a href="{{ asset('public/images/thePeacock/' . $value->img_src) }}" target="_blank"
                                 class="text-decoration-none">
                                 <div class="card shadow-sm w-100">
-                                    <div class="card-image min-size-img">
+                                    {{-- min-size-img --}}
+                                    <div class="card-image">
                                         @if (!empty($value->poster))
                                             <img src="{{ asset('public/images/thePeacock/poster/' . ($value->poster ?? 'pdf.jpg')) }}"
                                                 alt="{{ $value->title }} image" class="img-fluid">
