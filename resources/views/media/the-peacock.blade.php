@@ -1,11 +1,8 @@
 @extends('layouts.app')
-@section('site_title', 'IFFI Goa 2024 Press Releases | Latest Updates')
-@section('site_description',
-    'Stay updated with the latest press releases from IFFI Goa 2024. Get the newest
-    announcements, news, and media coverage here.')
-@section('site_keywords',
-    'IFFI GOA Press Release, IFFI news update, IFFI announcements, official IFFI statements,
-    Latest IFFI news, IFFI press coverage, IFFI media releases, IFFI event news')
+@section('site_title', 'IFFI GOA Peacock Awards')
+@section('site_description', 'Stay updated with the latest pdfs of peacock awards.')
+@section('site_keywords', 'IFFI GOA Peacock Awards, IFFI peacock award, IFFI announcements')
+
 @section('content')
     @include('layouts.header')
     @include('pages.navigation-slide')
@@ -96,5 +93,3 @@
     </div>
     </div>
 @endsection
-
-
