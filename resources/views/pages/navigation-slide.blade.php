@@ -614,7 +614,11 @@
                                 <ul class="navbar-nav vertical-menu-custom">
 
                                     <li class="nav-item">
-                                        <a href="{{ route('press-release') }}" class="nav-link">Press Release</a>
+                                        <a href="{{ route('press-release-pib') }}" class="nav-link">Press Release PIB</a>
+                                    </li>
+                                    
+                                    <li class="nav-item">
+                                        <a href="{{ route('press-release-non-pib') }}" class="nav-link">Press Release Non PIB</a>
                                     </li>
 
                                     <li class="nav-item">
