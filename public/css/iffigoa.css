@@ -1052,7 +1052,7 @@ url(../images/main-header/55-IFFI-Goa.png) center center no-repeat; */
 
 .owl-carousel .owl-item img {
     object-fit: cover;
-    height: 300px;
+    /* height: 300px; */
 }
 
 .owl-carousel-sponsor .owl-item img {

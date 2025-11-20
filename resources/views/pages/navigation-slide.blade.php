@@ -316,6 +316,7 @@
                                                 <a href="{{ route('icinema-rules-regulation') }}"
                                                     class="dropdown-item">Rules & Regulations</a>
                                             </li>
+
                                         </ul>
                                     </li>
 
@@ -513,6 +514,11 @@
                                             Committee</a>
                                     </li>
                                     <!-- Technical Committee End-->
+
+                                    {{-- <li class="nav-item dropdown">
+                                        <a href="{{ asset('public/pdfs/21-Nov-2025.pdf') }}"
+                                            class="dropdown-item">Film Screenings Schedule</a>
+                                    </li> --}}
                                 </ul>
                             </div>
                             <!-- Film Selection Section End -->
@@ -614,11 +620,13 @@
                                 <ul class="navbar-nav vertical-menu-custom">
 
                                     <li class="nav-item">
-                                        <a href="{{ route('press-release-pib') }}" class="nav-link">Press Release by PIB</a>
+                                        <a href="{{ route('press-release-pib') }}" class="nav-link">Press Release by
+                                            PIB</a>
                                     </li>
-                                    
+
                                     <li class="nav-item">
-                                        <a href="{{ route('press-release-non-pib') }}" class="nav-link">Media Coverage (Non PIB)</a>
+                                        <a href="{{ route('press-release-non-pib') }}" class="nav-link">Media
+                                            Coverage (Non PIB)</a>
                                     </li>
 
                                     <li class="nav-item">
@@ -737,13 +745,15 @@
                                     </li> --}}
 
                                     <li class="nav-item">
-                                        <a href="{{ asset('public/pdfs/schedule/Schedule.pdf') }}" class="nav-link" target="_blank">IFFI 56 Schedule</a>
+                                        <a href="{{ asset('public/pdfs/schedule/Schedule.pdf') }}" class="nav-link"
+                                            target="_blank">IFFI 56 Schedule</a>
                                     </li>
 
                                     <li class="nav-item">
-                                        <a href="{{ asset('public/pdfs/catalogue/Catalogue.pdf') }}" class="nav-link" target="_blank">IFFI 56 Catalogue</a>
+                                        <a href="{{ asset('public/pdfs/catalogue/Catalogue.pdf') }}" class="nav-link"
+                                            target="_blank">IFFI 56 Catalogue</a>
                                     </li>
-                                    
+
                                 </ul>
                             </div>
                             <!-- Media Section End -->
