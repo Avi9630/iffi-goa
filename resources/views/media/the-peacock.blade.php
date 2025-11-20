@@ -22,11 +22,11 @@
         </div>
     </div>
 
-    <div class="col-lg-12 mt-5">
+    <div class="col-lg-12 mt-5 static-content">
         <div class="container">
-            <div class="section-heading mb-4 text-center mt-5 center-heading">
+            {{-- <div class="section-heading mb-4 text-center mt-5 center-heading">
                 <h2>Peacock</h2>
-            </div>
+            </div> --}}
 
             @php
                 $years = [
@@ -43,7 +43,6 @@
             @endphp
 
             <ul class=" mb-4 tabNavigation" id="myTab" role="tablist">
-
                 @foreach ($years as $year => $value)
                     <li>
                         <a href="{{ route('the-peacock', ['year' => $year]) }}"
@@ -103,36 +102,6 @@
         </div>
     </div>
 
-
-    <!-- Inner Page Banner Section -->
-    {{-- <div class="container press">
-        <div class="table-responsive">
-            <table id="example" class="table table-hover mt-3">
-                <tbody>
-                    @foreach ($thepeacock as $value)
-                        <tr>
-                            <td>
-                                <p>{{ $value->title }}</p>
-                            </td>
-                            <td class="text-end">
-                                <a href="{{ asset('public/images/thePeacock/' . $value->img_src) }}" class="btn btn-primary"
-                                    target="_blank">View</a>
-                            </td>
-                        </tr>
-                    @endforeach
-                </tbody>
-            </table>
-        </div>
-
-        <!-- Pagination -->
-        <div class="container">
-            <nav aria-label="Page navigation pb-4">
-                <ul class="pagination overflow-hidden">
-                    {{ $thepeacock->withQueryString()->links() }}
-                </ul>
-            </nav>
-        </div>
-    </div> --}}
 @endsection
 <style>
     .tabNavigation {
