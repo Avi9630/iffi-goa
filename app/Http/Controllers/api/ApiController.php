@@ -818,7 +818,8 @@ class ApiController extends Controller
     {
         $payload = $request->all();
         $validatorArray = [
-            'image' => 'required|file|mimes:jpeg,png,jpg,gif,webp,pdf|max:2048',
+            // 'image' => 'required|file|mimes:jpeg,png,jpg,gif,webp,pdf|max:2048',
+            'image' => 'required|file|mimes:jpeg,png,jpg,gif,webp,pdf',
             'destination' => 'required',
         ];
         $messagesArray = [];
