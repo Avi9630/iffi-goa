@@ -633,7 +633,7 @@
                                         </a>
                                         <ul class="dropdown-menu">
                                             {{-- 2025 --}}
-                                            {{-- <li class="nav-item dropend">
+                                            <li class="nav-item dropend">
                                                 <a class="nav-link dropdown-toggle" href="#" role="button"
                                                     data-bs-toggle="dropdown" aria-expanded="false">
                                                     IFFI festival 2025
@@ -649,7 +649,7 @@
                                                             href="{{ route('media.gallery.videos.byYear', ['year' => '2025']) }}">Videos</a>
                                                     </li>
                                                 </ul>
-                                            </li> --}}
+                                            </li>
                                             {{-- 2024 --}}
                                             <li class="nav-item dropend">
                                                 <a class="nav-link dropdown-toggle" href="#" role="button"
