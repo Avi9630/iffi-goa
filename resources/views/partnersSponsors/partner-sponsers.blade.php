@@ -554,6 +554,12 @@
                                                 alt="OTHER PARTNERS">
                                         </a>
                                     </li>
+                                    <li class="me-2">
+                                        <a href="https://www.iffigoa.org/public/images/sponsor/2025/58.png">
+                                            <img src="{{ asset('public/images/sponsor/2025/58.png') }}" class="img-fluid"
+                                                alt="OTHER PARTNERS">
+                                        </a>
+                                    </li>
 
                                     {{-- <li class="me-2">
                                         <a href="https://www.iffigoa.org/public/images/thePartnerSponsor/51.png">
