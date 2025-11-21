@@ -53,11 +53,10 @@
                                 </option>
                             @endforeach
                         </select>
-                         <span class="input-group-text p-0">   <button type="submit" class="btn cus-prim-btn   text-center">Filter</button></span>
+                        <span class="input-group-text p-0"> <button type="submit"
+                                class="btn cus-prim-btn   text-center">Filter</button></span>
                     </div>
-                    <div>
                     
-                    </div>
                 </div>
             </form>
         @endif
