@@ -9,7 +9,7 @@
     <!-- Menu slide end -->
 
     <!-- Inner Page Banner Section -->
-    <div class="container-fluid page-header bannerBg-knowledge-series py-5">
+    <div class="container-fluid page-header bannerBg-Gallery-banner py-5">
         <div class="container text-center">
             <h1 class="page-title-header">Gallery of {{ $year }} IFFI Festival</h1>
         </div>
@@ -53,11 +53,10 @@
                                 </option>
                             @endforeach
                         </select>
-                         <span class="input-group-text p-0">   <button type="submit" class="btn cus-prim-btn   text-center">Filter</button></span>
+                        <span class="input-group-text p-0"> <button type="submit"
+                                class="btn cus-prim-btn   text-center">Filter</button></span>
                     </div>
-                    <div>
                     
-                    </div>
                 </div>
             </form>
         @endif
