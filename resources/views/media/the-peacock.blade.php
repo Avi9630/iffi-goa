@@ -52,7 +52,7 @@
                                             <img src="{{ asset('public/images/thePeacock/poster/' . ($value->poster ?? 'pdf.jpg')) }}"
                                                 alt="{{ $value->title }} image" class="img-fluid">
                                         @else
-                                            <img src="{{ $value->poster_url }}"alt="image" class="img-fluid" loading="lazy">
+                                            <img src="{{ $value->poster_url }}"alt="{{ $value->title }} image" class="img-fluid" loading="lazy">
                                         @endif
                                     </div>
                                     <div class="card-body text-start">
@@ -67,7 +67,7 @@
                         @else
                             <a href="{{ $value->image_url }}" target="_blank" class="text-decoration-none">
                                 <div class="card shadow-sm w-100">
-                                    <div class="card-image min-size-img">
+                                    <div class="card-image">
                                         @if (!empty($value->poster))
                                             <img src="{{ asset('public/images/thePeacock/poster/' . ($value->poster ?? 'pdf.jpg')) }}"
                                                 alt="{{ $value->title }} image" class="img-fluid">
