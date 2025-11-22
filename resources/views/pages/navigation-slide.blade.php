@@ -412,8 +412,7 @@
                                                 class="nav-link" target="_blank">CinemAI Hackathon</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="{{ route('ai-film-festival') }}" class="nav-link"
-                                                target="_blank">AI Film Festival</a>
+                                            <a href="{{ route('ai-film-festival') }}" class="nav-link">AI Film Festival</a>
                                         </li>
                                     </ul>
 
