@@ -21,7 +21,12 @@
         <div class="container">
             <div class="row">
                 <div class=" col-md-12 col-sm-12 col-12">
-                    <p><b>Powered By -</b> <br><img src="{{ asset('public/images/ltmindtree.png') }}" alt="ai-film-festival" class="img-fluid"></p>
+                    <p>
+                        <b>Powered By -</b> <br>
+                        <img src="{{ asset('public/images/ltmindtree.png') }}" alt="ai-film-festival" class="img-fluid">
+                    </p>
+
+                    {{-- Logos --}}
                     <div class="col-md-12 col-sm-12">
                         <div class="card">
                             <div class="card-header">
@@ -55,6 +60,49 @@
                             </div>
                         </div>
                     </div>
+
+                    {{-- Schedule --}}
+                        <div class="col-md-12 col-sm-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="title-sponsor">Festival Screenings</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="sponsor-list-div ">
+                                   <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>Day</th>
+                                                <th>Date</th>
+                                                <th>Time</th>
+                                                <th>Screening</th>
+                                                <th>Venue</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Day 6</td>
+                                                <td>26th November 2025</td>
+                                                <td>03:00 PM</td>
+                                                <td>ARTIFICIAL INTELLIGENCE (AI) FILMS AND CINEMAI HACKATHON SCREENINGS</td>
+                                                <td>Maquinez Palace Audi-1</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Day 7</td>
+                                                <td>27th November 2025</td>
+                                                <td>4:45 PM</td>
+                                                <td>ARTIFICIAL INTELLIGENCE (AI) FILMS AND CINEMAI HACKATHON SCREENINGS</td>
+                                                <td>Incox Porvorim Audi-4</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <h2>About the AI Film Festival</h2>
                     <p>As part of the 56th <strong>International Film Festival of India</strong> (IFFI),
                         <strong>NFDC</strong> in collaboration with
