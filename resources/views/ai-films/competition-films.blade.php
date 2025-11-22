@@ -36,7 +36,7 @@
 
                                         <div class="card-image">
                                             @if (!empty($presentation->img_src))
-                                                <img src="{{ asset('public/images/ai-festivals/' . $presentation->img_src) }}"
+                                                <img src="{{ asset('public/images/indian-panorama-cinema/' . $presentation->img_src) }}"
                                                     alt="image" class="img-fluid">
                                             @else
                                                 <img src="{{ $presentation->img_url }}"
