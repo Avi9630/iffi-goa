@@ -7,13 +7,14 @@
     @include('layouts.header')
     @include('pages.navigation-slide')
 
-    <!-- Inner Page Banner Section -->
+    {{-- Inner Page Banner Section --}}
     <div class="container-fluid page-header bannerBg-news py-5">
         <div class="container text-center ">
             <h1 class="page-title-header">The Peacock {{ $year }}</h1>
         </div>
     </div>
-    <!-- Inner Page Banner Section -->
+
+    {{-- Inner Page Banner Section --}}
     <div class="col-lg-12 mt-5 static-content">
         <div class="container">
             <div class="row ">
