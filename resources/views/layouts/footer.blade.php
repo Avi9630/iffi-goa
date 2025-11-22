@@ -149,6 +149,7 @@
 <script src="{{ asset('public/js/bootstrap.min.js') }}"></script>
 
 <script type="text/javascript" src="{{ asset('public/js/custom.js') }}"></script>
+<script type="text/javascript" src="{{ asset('public/js/gallery-tab.js') }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.10.0/js/lightgallery-all.min.js"></script>
 
 <script>
