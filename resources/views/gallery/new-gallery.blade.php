@@ -17,7 +17,7 @@
                     <form method="GET" action="{{ route('search-gallery-by-cat', $year) }}" class="forms-sample"
                         id="filterForm">
                         {{-- @csrf --}}
-                        
+
                         {{-- Date Filter --}}
                         <ul class="nav nav-tabs calander-tab-new-div" id="dateTabs" role="tablist">
                             <li class="nav-item" role="presentation">
@@ -101,6 +101,7 @@
             </div>
         </div>
     </div>
+</div>
 @endsection
 
 <script>
