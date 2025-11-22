@@ -82,6 +82,45 @@ class IndianPanoramaController extends Controller
         ]);
     }
 
+    public function aiCompetition(Request $request)
+    {
+        $payload            =   $request->all();
+        $year               =   isset($payload['year']) ? $payload['year'] : '';
+
+        $data = IndianPanorama::with('officialSelection')
+            ->where('official_selection_id', 7)
+            ->where('status', 1)
+            ->when(!empty($year), function ($query) use ($year) {
+                return $query->where('year', $year);
+            })
+            ->get();
+        $competitions = $data->groupBy('sub_category');
+
+        return view('ai-films.competition-films', [
+            'competitions'  =>  $competitions,
+            'year'                  =>  $year,
+        ]);
+    }
+
+    public function aiNonCompetition(Request $request)
+    {
+        $payload            =   $request->all();
+        $year               =   isset($payload['year']) ? $payload['year'] : '';
+
+        $data = IndianPanorama::with('officialSelection')
+            ->where('official_selection_id', 8)
+            ->where('status', 1)
+            ->when(!empty($year), function ($query) use ($year) {
+                return $query->where('year', $year);
+            })
+            ->get();
+        $competitions = $data->groupBy('sub_category');
+        return view('ai-films.non-competition-films', [
+            'competitions'  =>  $competitions,
+            'year'                  =>  $year,
+        ]);
+    }
+
     public function newHorizon(Request $request)
     {
         $payload            =   $request->all();
