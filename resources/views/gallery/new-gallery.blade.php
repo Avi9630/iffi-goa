@@ -17,7 +17,8 @@
                     <form method="GET" action="{{ route('search-gallery-by-cat', $year) }}" class="forms-sample"
                         id="filterForm">
                         {{-- @csrf --}}
-                        <!-- Date Filter -->
+                        
+                        {{-- Date Filter --}}
                         <ul class="nav nav-tabs calander-tab-new-div" id="dateTabs" role="tablist">
                             <li class="nav-item" role="presentation">
                                 <a class="nav-link calanderrr" onclick="resetFilters()">
@@ -42,7 +43,7 @@
                             @endforeach
                         </ul>
 
-                        <!-- Category Filter -->
+                        {{-- Category Filter --}}
                         <div class="d-flex justify-content-around mt-3 filter-form">
                             <div class="input-group">
                                 <select name="category_id" id="categorySelect" class="form-select">
@@ -54,12 +55,11 @@
                                         </option>
                                     @endforeach
                                 </select>
-                                <span class="input-group-text p-0"> <button type="submit"
-                                        class="btn cus-prim-btn   text-center">Filter</button></span>
+                                <span class="input-group-text p-0">
+                                    <button type="submit" class="btn cus-prim-btn   text-center">Filter</button>
+                                </span>
                             </div>
-
                         </div>
-
                     </form>
                 @endif
 
@@ -94,6 +94,7 @@
                         @endforelse
                     </div>
                 @endif
+
                 <div class="mt-4 gallery-pageni">
                     {{ $gallery->appends(request()->input())->links() }}
                 </div>
