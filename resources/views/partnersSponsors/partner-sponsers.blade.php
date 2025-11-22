@@ -358,21 +358,55 @@
                                     </li>
                                     <li class="me-2">
                                         <a href="https://www.iffigoa.org/public/images/sponsor/2025/53.webp">
-                                            <img src="{{ asset('public/images/sponsor/2025/53.webp') }}" class="img-fluid"
-                                                alt="MEDIA PARTNERS">
+                                            <img src="{{ asset('public/images/sponsor/2025/53.webp') }}"
+                                                class="img-fluid" alt="MEDIA PARTNERS">
                                         </a>
                                     </li>
                                     <li class="me-2">
                                         <a href="https://www.iffigoa.org/public/images/sponsor/2025/54.webp">
-                                            <img src="{{ asset('public/images/sponsor/2025/54.webp') }}" class="img-fluid"
-                                                alt="MEDIA PARTNERS">
+                                            <img src="{{ asset('public/images/sponsor/2025/54.webp') }}"
+                                                class="img-fluid" alt="MEDIA PARTNERS">
                                         </a>
                                     </li>
                                     <li class="me-2">
                                         <a href="https://www.iffigoa.org/public/images/sponsor/2025/55.webp">
-                                            <img src="{{ asset('public/images/sponsor/2025/55.webp') }}" class="img-fluid"
-                                                alt="MEDIA PARTNERS">
+                                            <img src="{{ asset('public/images/sponsor/2025/55.webp') }}"
+                                                class="img-fluid" alt="MEDIA PARTNERS">
                                         </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 col-sm-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="title-sponsor">FESTIVAL CURATION PARTNERS</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="sponsor-list-div ">
+                                <ul>
+                                    <li class="me-2">
+                                        <img src="{{ asset('public/images/sponsor/2025/59.png') }}" class="img-fluid"
+                                            alt="FESTIVAL CURATION PARTNERS">
+                                    </li>
+                                    <li class="me-2">
+                                        <img src="{{ asset('public/images/sponsor/2025/60.png') }}" class="img-fluid"
+                                            alt="FESTIVAL CURATION PARTNERS">
+                                    </li>
+                                    <li class="me-2">
+                                        <img src="{{ asset('public/images/sponsor/2025/61.png') }}" class="img-fluid"
+                                            alt="FESTIVAL CURATION PARTNERS">
+                                    </li>
+                                    <li class="me-2">
+                                        <img src="{{ asset('public/images/sponsor/2025/62.png') }}" class="img-fluid"
+                                            alt="FESTIVAL CURATION PARTNERS">
+                                    </li>
+                                    <li class="me-2">
+                                        <img src="{{ asset('public/images/sponsor/2025/63.png') }}" class="img-fluid"
+                                            alt="FESTIVAL CURATION PARTNERS">
                                     </li>
                                 </ul>
                             </div>

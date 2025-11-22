@@ -21,9 +21,40 @@
         <div class="container">
             <div class="row">
                 <div class=" col-md-12 col-sm-12 col-12">
-                    <p><img src="{{ asset('public/images/ltmindtree.png') }}" alt="ai-film-festival" class="img-fluid"></p>
-                    {{-- <div class="text-center">
-                    </div> --}}
+                    <p><b>Powered By -</b> <br><img src="{{ asset('public/images/ltmindtree.png') }}" alt="ai-film-festival" class="img-fluid"></p>
+                    <div class="col-md-12 col-sm-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="title-sponsor">FESTIVAL CURATION PARTNERS</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="sponsor-list-div ">
+                                    <ul>
+                                        <li class="me-2">
+                                            <img src="{{ asset('public/images/sponsor/2025/59.png') }}" class="img-fluid"
+                                                alt="FESTIVAL CURATION PARTNERS">
+                                        </li>
+                                        <li class="me-2">
+                                            <img src="{{ asset('public/images/sponsor/2025/60.png') }}" class="img-fluid"
+                                                alt="FESTIVAL CURATION PARTNERS">
+                                        </li>
+                                        <li class="me-2">
+                                            <img src="{{ asset('public/images/sponsor/2025/61.png') }}" class="img-fluid"
+                                                alt="FESTIVAL CURATION PARTNERS">
+                                        </li>
+                                        <li class="me-2">
+                                            <img src="{{ asset('public/images/sponsor/2025/62.png') }}" class="img-fluid"
+                                                alt="FESTIVAL CURATION PARTNERS">
+                                        </li>
+                                        <li class="me-2">
+                                            <img src="{{ asset('public/images/sponsor/2025/63.png') }}" class="img-fluid"
+                                                alt="FESTIVAL CURATION PARTNERS">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <h2>About the AI Film Festival</h2>
                     <p>As part of the 56th <strong>International Film Festival of India</strong> (IFFI),
                         <strong>NFDC</strong> in collaboration with
@@ -90,6 +121,10 @@
                 <div class=" col-md-12 col-sm-12 col-12">
                     <p>Winning films will be featured across LTIMindtree and NFDC global platforms.</p>
                 </div>
+
+                <a href="{{ asset('public/pdfs/aifestival/ai-festival.pdf') }}" target="_blank"><b>AI Shortlisted
+                        Films</b></a>
+
             </div>
         </div>
     </div>
