@@ -104,16 +104,3 @@
     </div>
     </div>
 @endsection
-
-
-<script>
-    function changeTab(element, date) {
-        document.getElementById('dateInput').value = date;
-        document.getElementById('filterForm').submit();
-    }
-
-    function resetFilters() {
-        document.getElementById('dateInput').value = '';
-        document.getElementById('filterForm').submit();
-    }
-</script>
