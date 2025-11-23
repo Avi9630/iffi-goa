@@ -44,6 +44,7 @@ class GalleryController extends Controller
     public function galleryByCategory(Request $request, $year, COMMONService $commonService)
     {
         $payload = $request->all();
+        
         $category = $payload['category_id'] ?? null;
         $searchDate = $payload['date'] ?? null;
 
