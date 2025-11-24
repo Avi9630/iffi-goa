@@ -1155,8 +1155,6 @@ url(../images/main-header/55-IFFI-Goa.png) center center no-repeat; */
 .gallery img {
     width: 100%;
     height: auto;
-    min-height: 180px;
-    max-height: 180px;
     transition: transform 0.2s;
 
     border-radius: 10px;
@@ -1844,8 +1842,6 @@ animation: slideOutRight 0.5s ease forwards;
     .gallery img {
         width: 100%;
         height: auto;
-        min-height: 150px;
-        max-height: 150px;
     }
 
     .btn-menu img {

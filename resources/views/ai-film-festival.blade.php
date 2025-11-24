@@ -21,11 +21,7 @@
         <div class="container">
             <div class="row">
                 <div class=" col-md-12 col-sm-12 col-12">
-                    {{-- <div class="pull-right">
-                        <a href="{{ route('ai-competition-films') }}" class="btn btn-sm btn-primary" target="_blank">AI COMPETITION</a>
-                        <a href="{{ route('ai-non-competition-films') }}" class="btn btn-sm btn-secondary" target="_blank">AI NON-COMPETITION</a>
-                    </div> --}}
-                   
+                    
                     <p>
                         <b>Powered By -</b> <br>
                         <img src="{{ asset('public/images/ltmindtree.png') }}" alt="ai-film-festival" class="img-fluid">
@@ -80,7 +76,8 @@
                                                 <tr>
                                                     <th>Day</th>
                                                     <th>Date</th>
-                                                    <th>Time</th>
+                                                    <th>Start Time</th>
+                                                    <th>End Time</th>
                                                     <th>Screening</th>
                                                     <th>Venue</th>
                                                 </tr>
@@ -89,7 +86,8 @@
                                                 <tr>
                                                     <td>Day 6</td>
                                                     <td>26th November 2025</td>
-                                                    <td>03:00 PM</td>
+                                                    <td>02:30 PM</td>
+                                                    <td>05:00 PM</td>
                                                     <td>ARTIFICIAL INTELLIGENCE (AI) FILMS AND CINEMAI HACKATHON SCREENINGS
                                                     </td>
                                                     <td>Maquinez Palace Audi-1</td>
@@ -98,6 +96,7 @@
                                                     <td>Day 7</td>
                                                     <td>27th November 2025</td>
                                                     <td>4:45 PM</td>
+                                                    <td>07:15 PM</td>
                                                     <td>ARTIFICIAL INTELLIGENCE (AI) FILMS AND CINEMAI HACKATHON SCREENINGS
                                                     </td>
                                                     <td>Incox Porvorim Audi-4</td>
