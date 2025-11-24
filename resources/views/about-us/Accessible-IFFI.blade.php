@@ -42,12 +42,12 @@
                         highlights, sharing in the excitement, announcements, and celebrations alongside the entire
                         audience. This initiative embodies IFFI’s commitment to inclusivity, ensuring that everyone is
                         welcomed and valued in these landmark moments of the festival.</p>
-                    <h3>Kicking Off Inclusivity: The Grand Opening of the Accessible India Section</h3>
+                    {{-- <h3>Kicking Off Inclusivity: The Grand Opening of the Accessible India Section</h3>
                     <p>The Accessible India Accessible Films section opens with an inspiring screening of 12th Fail, a film
                         enhanced with both audio descriptions and Indian Sign Language, on <b>22nd November at 11:30 AM.</b>
                         In a first, the inaugural will witness a captivating Classical dance performance in Indian Sign
                         Language by acclaimed dancer Methil Devika, as we set the stage for a celebration of inclusivity.
-                    </p>
+                    </p> --}}
                     <h3>Bringing Stories to Everyone – The Accessible India-Accessible Films Section</h3>
                     <p>This year’s Accessible India Films Section makes cinema a place where everyone belongs. Audiences can
                         experience films enriched with audio descriptions and Indian Sign Language, creating an inclusive
