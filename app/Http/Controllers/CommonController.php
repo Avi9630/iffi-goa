@@ -249,7 +249,9 @@ class CommonController extends Controller
                 return $cinema;
             });
         return view('awards-2025.peacock-award', compact([
-            'goldens','silvers']));
+            'goldens',
+            'silvers'
+        ]));
     }
 
     public function focusjapan($year)
@@ -370,10 +372,20 @@ class CommonController extends Controller
         return response()->json($gallery);
     }
 
-    public function pressRelease()
+    public function pressReleaseByPib()
     {
-        $pressRelease = PressRelease::where('status', '1')->orderBy('id', 'desc')->paginate(10);
-        return view('media.press-release', ['press' => $pressRelease]);
+        $pressRelease = PressRelease::where(['pr_category_id' => 1, 'status' => '1'])->orderBy('id', 'desc')->paginate(10);
+        return view('media.press-release-pib', [
+            'pressRelease' => $pressRelease
+        ]);
+    }
+
+    public function pressReleaseByNonPib()
+    {
+        $pressRelease = PressRelease::where(['pr_category_id' => 2, 'status' => '1'])->orderBy('id', 'desc')->paginate(10);
+        return view('media.press-release-non-pib', [
+            'pressRelease' => $pressRelease
+        ]);
     }
 
     public function thepeacock(Request $request)
@@ -386,10 +398,9 @@ class CommonController extends Controller
             $peacock->where('year', $year);
         }
         $thepeacock = $peacock->get();
-
         return view('media.the-peacock', [
-            'thepeacock' => $thepeacock, // Pass the paginated results correctly
-            'year' => $year, // Also pass the year as intended for the header display
+            'thepeacock' => $thepeacock,
+            'year' => $year,
         ]);
     }
 

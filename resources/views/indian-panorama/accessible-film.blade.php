@@ -22,7 +22,8 @@
                 @foreach ($accessibleFilm as $accessible)
                     <div class="col-md-3 col-sm-4 col-xs-12 d-flex">
                         <div class="card shadow-sm">
-                            <div class="card-image min-size-img">
+                            {{-- min-size-img --}}
+                            <div class="card-image">
                                 <img src="{{ asset('public/images/film-selection/indian-panorama/' . $accessible->img_src) }}"
                                     alt="image" class="img-fluid">
                             </div>

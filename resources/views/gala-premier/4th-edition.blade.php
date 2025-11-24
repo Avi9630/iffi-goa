@@ -68,8 +68,6 @@
                                     'red_carpet_time' => '12:30',
                                     'show_time' => '13:15',
                                     'title' => 'The Family Man (S:3)',
-                                    // 'red_carpet_guests' =>
-                                    //     'Manoj Bajpai, Nimrat Kaur, Jaideep Ahlawat, Raj & DK, Nikhil Madhok',
                                     'cast' => 'Manoj Bajpai, Nimrat Kaur, Sharib Hashmi, Priyamani, Jaideep Ahlawat',
                                     'director' => 'Raj & DK',
                                     'producer' => 'Amazon Prime Video & D2R Films',
@@ -84,22 +82,20 @@
                                     'red_carpet_time' => '16:15',
                                     'show_time' => '17:00',
                                     'title' => 'Asambhav',
-                                    // 'red_carpet_guests' => 'Sachit Patil, Mukta Barve, Pushkar Shroti, Murli Chhatwani',
-                                    'cast' => 'Sachit Patil, Mukta Barve, Priya Bapat, Sandeep Kulkarni',
-                                    'director' => 'Sachit Patil | Pushkar Shrotri',
-                                    'producer' => 'Panorama Studios',
+                                    'cast'      => 'Sachit Patil, Mukta Barve, Priya Bapat & Sandeep Kulkarni',
+                                    'director'  => 'Sachit Patil',
+                                    'producer' => 'Nitin Prakash Vaidya and Mr. Sachit Patil',
                                     'language' => 'Marathi',
-                                    'genre' => 'Mystery/Thriller',
-                                    'premiere' => 'World Premiere',
-                                    'duration' => '140 + 5 min',
-                                    'audi' => 'Panjim Audi 3',
-                                    'venue' => 'Inox Panjim, Old GMC Building',
+                                    'genre'     => 'Suspense/Thriller',
+                                    'premiere'  => 'World Premiere',
+                                    'duration'  => '140 + 5 min',
+                                    'audi'      => 'Panjim Audi 3',
+                                    'venue'     => 'Inox Panjim, Old GMC Building',
                                 ],
                                 [
                                     'red_carpet_time' => '13:00',
                                     'show_time' => '13:45',
-                                    'title' => '1942: A Love Story (4K)', 
-                                    // 'red_carpet_guests' => 'Vidhu Vinod Chopra',
+                                    'title' => '1942: A Love Story (4K)',
                                     'cast' => 'Anil Kapoor, Jackie Shroff',
                                     'director' => 'Vidhu Vinod Chopra',
                                     'producer' => 'Vidhu Vinod Chopra',
@@ -114,7 +110,6 @@
                                     'red_carpet_time' => '17:00',
                                     'show_time' => '17:45',
                                     'title' => '120 Bahadur',
-                                    // 'red_carpet_guests' => 'Farhan Akthar, Razneesh Ghai',
                                     'cast' => 'Farhan Akthar, Raashi Khanna, Sparsh Walia',
                                     'director' => 'Razneesh Ghai',
                                     'producer' => 'Excel Entertainment',
@@ -135,7 +130,6 @@
                                     'red_carpet_time' => '12:00',
                                     'show_time' => '12:30',
                                     'title' => 'Haati Haati Pa Pa',
-                                    // 'red_carpet_guests' => 'Rukmini Maitra, Arnab Middya, Arunava',
                                     'cast' => 'Rukmini Maitra, Anjana Basu, Tulika Basu',
                                     'director' => 'Arnab Middya',
                                     'producer' => 'Celluloid Films',
@@ -150,24 +144,21 @@
                                     'red_carpet_time' => '16:15',
                                     'show_time' => '17:00',
                                     'title' => 'Spying Stars',
-                                    // 'red_carpet_guests' =>
-                                    //     'Samanalee Fonseka, Indira Tiwari, Kaushalya Fernando, Saumya Liyanage, Vimukti Jayasundara, Nila Madhab Panda',
                                     'cast' =>
                                         'Indira Tiwari,Samanalee Fonseka, Kaushalya Fernando, Saumya Liyanage, Hidaayath Hazeer',
-                                    'director'  =>  'Vimukti Jayasundara',
-                                    'producer'  =>  'Nila Madhab Panda',
-                                    'language'  =>  'English & Sinhala',
-                                    'genre'     =>  'Sci fi mystery drama',
-                                    'premiere'  =>  'India Premiere',
-                                    'duration'  =>  '100 min + 20 min',
-                                    'audi'      =>  'Panjim Audi 4',
-                                    'venue'     =>  'Inox Panjim, Old GMC Building',
+                                    'director' => 'Vimukti Jayasundara',
+                                    'producer' => 'Nila Madhab Panda',
+                                    'language' => 'English & Sinhala',
+                                    'genre' => 'Sci fi mystery drama',
+                                    'premiere' => 'India Premiere',
+                                    'duration' => '100 min + 20 min',
+                                    'audi' => 'Panjim Audi 4',
+                                    'venue' => 'Inox Panjim, Old GMC Building',
                                 ],
                                 [
                                     'red_carpet_time' => '18:00',
                                     'show_time' => '18:30',
                                     'title' => 'Papa Buka',
-                                    // 'red_carpet_guests' => 'Dr. Biju Damodaran',
                                     'cast' => 'Sine Boboro, Ritabhari Chakraborty, Prakash Bare, John Sike',
                                     'director' => 'Dr. Biju Damodaran',
                                     'producer' => 'Noelene Taula Wunum, Akshay Kumar Parija, Pa. Ranjith, Prakash Bare',
@@ -188,7 +179,6 @@
                                     'red_carpet_time' => '16:00',
                                     'show_time' => '16:45',
                                     'title' => 'Lockdown',
-                                    // 'red_carpet_guests' => 'Anupama Parmeshwaran, Charlie, A.R. Jeeva, Subaskaran',
                                     'cast' => 'Anupama Parmeshwaran, Charlie, Nirosha, Livingston',
                                     'director' => 'A.R. Jeeva',
                                     'producer' => 'Subaskaran, Lyca Productions',
@@ -203,7 +193,6 @@
                                     'red_carpet_time' => '17:00',
                                     'show_time' => '17:45',
                                     'title' => 'Vadh 2',
-                                    // 'red_carpet_guests' => 'Sanjay Mishra, Neena Gupta, Jaspal Singh Sandhu',
                                     'cast' => 'Sanjay Mishra, Neena Gupta',
                                     'director' => 'Jaspal Singh Sandhu',
                                     'producer' => 'Luv Films',
@@ -224,14 +213,13 @@
                                     'red_carpet_time' => '15:45',
                                     'show_time' => '16:15',
                                     'title' => 'Rudhirvana',
-                                    // 'red_carpet_guests' => 'Paavana Gowda, Apoorva, Krishna Hebbale, Agni',
                                     'cast' => 'Paavana Gowda, Apoorva, Krishna Hebbale, Arjun Kaje, Bala Rajwadi',
                                     'director' => 'Agni',
                                     'producer' => 'Point of View Pictures',
                                     'language' => 'Kannada',
                                     'genre' => 'Horror',
                                     'premiere' => 'World Premiere',
-                                    'duration' => '145 + 5 min',
+                                    'duration' => '110',
                                     'audi' => 'Panjim Audi 4',
                                     'venue' => 'Inox Panjim, Old GMC Building',
                                 ],
@@ -239,7 +227,6 @@
                                     'red_carpet_time' => '16:45',
                                     'show_time' => '17:30',
                                     'title' => 'Gustaakh Ishq',
-                                    // 'red_carpet_guests' => 'Vijay Verma, Fatima Sana Shaikh, Vibhu Puri',
                                     'cast' => 'Vijay Verma, Fatima Sana Shaikh',
                                     'director' => 'Vibhu Puri',
                                     'producer' => 'Stage5 Productions',
@@ -260,7 +247,6 @@
                                     'red_carpet_time' => '16:15',
                                     'show_time' => '17:00',
                                     'title' => 'Bindusagar',
-                                    // 'red_carpet_guests' => 'Prakruti Mishra, Dipannit Dasmohapatra, Shiladitya Bora',
                                     'cast' =>
                                         'Prakruti Mishra, Dipannit Dasmohapatra, Robin Das, Sonalli Sharmistha, Sukant Rath',
                                     'director' => 'Abhishek Swain',
@@ -282,8 +268,6 @@
                                     'red_carpet_time' => '16:15',
                                     'show_time' => '17:00',
                                     'title' => 'Pennum Porattum',
-                                    // 'red_carpet_guests' =>
-                                    //     'Tovino Thomas*, Rajesh Madhavan, Santhosh T. Kuruvilla, Binu George Alexander',
                                     'cast' => 'Suttu (dog) along with 100 debut actors and over 400 trained animals',
                                     'director' => 'Rajesh Madhavan',
                                     'producer' =>
@@ -299,7 +283,6 @@
                                     'red_carpet_time' => '17:15',
                                     'show_time' => '18:00',
                                     'title' => 'Sholay (4K)',
-                                    // 'red_carpet_guests' => 'Ramesh Sippy, Hema Malini*, Shehazad Sippy',
                                     'cast' => 'Amitabh Bachchan, Hema Malini, Dharmendra, Jaya Bachchan',
                                     'director' => 'Ramesh Sippy',
                                     'producer' =>
@@ -321,7 +304,6 @@
                                     'red_carpet_time' => '12:30',
                                     'show_time' => '13:15',
                                     'title' => 'Andhra King Taluka',
-                                    // 'red_carpet_guests' => 'Upendra*, Cheri Sir*',
                                     'cast' => 'Ram Pothineni, Bhagyashri Bhorse, Upendra, Rao Ramesh, Murli Sharma',
                                     'director' => 'Mahesh Babu P.',
                                     'producer' => 'Mythri Movie Makers',
@@ -336,7 +318,6 @@
                                     'red_carpet_time' => '16:00',
                                     'show_time' => '16:45',
                                     'title' => 'This Tempting Madness',
-                                    // 'red_carpet_guests' => 'Simone Ashley, Jennifer E. Montgomery, Marcei A. Brown',
                                     'cast' => 'Simone Ashley, Austin Stowell, Mojean Aria',
                                     'director' => 'Jennifer E. Montgomery',
                                     'producer' =>
@@ -352,8 +333,6 @@
                                     'red_carpet_time' => '17:00',
                                     'show_time' => '17:45',
                                     'title' => 'Raat Akeli Hai: The Bansal Mystery',
-                                    // 'red_carpet_guests' =>
-                                    //     'Nawazuddin Siddiqui, Chitrangada Singh, Honey Trehan, Mahima Kaul',
                                     'cast' => 'Nawazuddin Siddiqui, Chitrangada Singh, Radhika Apte',
                                     'director' => 'Honey Trehan',
                                     'producer' => 'Netflix',
@@ -374,7 +353,6 @@
                                     'red_carpet_time' => '11:30',
                                     'show_time' => '12:00',
                                     'title' => 'Tere Ishq Mein',
-                                    // 'red_carpet_guests' => 'Kriti Sanon, Anand L Rai, Shiv Channana',
                                     'cast' => 'Dhanush, Kirti Sanon, Prabhudeva',
                                     'director' => 'Anand L. Rai',
                                     'producer' => 'Colour Yellow Productions & T-Series',
@@ -400,7 +378,6 @@
                                     <th>RED CARPET TIME</th>
                                     <th>SHOW TIME</th>
                                     <th>TITLE</th>
-                                    {{-- <th>GUESTS WALKING RED CARPET</th> --}}
                                     <th>CAST</th>
                                     <th>DIRECTOR</th>
                                     <th>PRODUCER</th>
@@ -428,7 +405,6 @@
                                             <td>{{ $film['red_carpet_time'] }}</td>
                                             <td>{{ $film['show_time'] }}</td>
                                             <td>{{ $film['title'] }}</td>
-                                            {{-- <td>{{ $film['red_carpet_guests'] }}</td> --}}
                                             <td>{{ $film['cast'] }}</td>
                                             <td>{{ $film['director'] }}</td>
                                             <td>{{ $film['producer'] }}</td>
@@ -445,13 +421,8 @@
                         </table>
                     </div>
                 </div>
-
-                {{-- <p>This diverse selection, ranging from big-banner Hindi releases to regional cinema, international
-                    showcases, and global OTT premieres, will once again make the Gala Premieres and Red-Carpet segment
-                    a marquee attraction of the 56th IFFI.</p> --}}
             </div>
         </div>
-    </div>
     </div>
 
 @endsection

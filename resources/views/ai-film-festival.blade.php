@@ -21,9 +21,94 @@
         <div class="container">
             <div class="row">
                 <div class=" col-md-12 col-sm-12 col-12">
-                    <p><img src="{{ asset('public/images/ltmindtree.png') }}" alt="ai-film-festival" class="img-fluid"></p>
-                    {{-- <div class="text-center">
-                    </div> --}}
+                    
+                    <p>
+                        <b>Powered By -</b> <br>
+                        <img src="{{ asset('public/images/ltmindtree.png') }}" alt="ai-film-festival" class="img-fluid">
+                    </p>
+                    
+                    {{-- Logos --}}
+                    <div class="col-md-12 col-sm-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="title-sponsor">FESTIVAL CURATION PARTNERS</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="sponsor-list-div ">
+                                    <ul>
+                                        <li class="me-2">
+                                            <img src="{{ asset('public/images/sponsor/2025/59.png') }}" class="img-fluid"
+                                                alt="FESTIVAL CURATION PARTNERS">
+                                        </li>
+                                        <li class="me-2">
+                                            <img src="{{ asset('public/images/sponsor/2025/60.png') }}" class="img-fluid"
+                                                alt="FESTIVAL CURATION PARTNERS">
+                                        </li>
+                                        <li class="me-2">
+                                            <img src="{{ asset('public/images/sponsor/2025/61.png') }}" class="img-fluid"
+                                                alt="FESTIVAL CURATION PARTNERS">
+                                        </li>
+                                        <li class="me-2">
+                                            <img src="{{ asset('public/images/sponsor/2025/62.png') }}" class="img-fluid"
+                                                alt="FESTIVAL CURATION PARTNERS">
+                                        </li>
+                                        <li class="me-2">
+                                            <img src="{{ asset('public/images/sponsor/2025/63.png') }}" class="img-fluid"
+                                                alt="FESTIVAL CURATION PARTNERS">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {{-- Schedule --}}
+                    <div class="col-md-12 col-sm-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="title-sponsor">Festival Screenings</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="sponsor-list-div ">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>Day</th>
+                                                    <th>Date</th>
+                                                    <th>Start Time</th>
+                                                    <th>End Time</th>
+                                                    <th>Screening</th>
+                                                    <th>Venue</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Day 6</td>
+                                                    <td>26th November 2025</td>
+                                                    <td>02:30 PM</td>
+                                                    <td>05:00 PM</td>
+                                                    <td>ARTIFICIAL INTELLIGENCE (AI) FILMS AND CINEMAI HACKATHON SCREENINGS
+                                                    </td>
+                                                    <td>Maquinez Palace Audi-1</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Day 7</td>
+                                                    <td>27th November 2025</td>
+                                                    <td>4:45 PM</td>
+                                                    <td>07:15 PM</td>
+                                                    <td>ARTIFICIAL INTELLIGENCE (AI) FILMS AND CINEMAI HACKATHON SCREENINGS
+                                                    </td>
+                                                    <td>Incox Porvorim Audi-4</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <h2>About the AI Film Festival</h2>
                     <p>As part of the 56th <strong>International Film Festival of India</strong> (IFFI),
                         <strong>NFDC</strong> in collaboration with
@@ -46,6 +131,7 @@
 
                     </p>
                 </div>
+                
                 <div class="col-lg-12">
                     <h4 class="text-center">The Craft Honors: India's recognition for AI Films</h4>
                     <div class="policy-page">
@@ -63,6 +149,7 @@
                         </ul>
                     </div>
                 </div>
+
                 <div class="col-lg-12">
                     <h2>The Craft Honors</h2>
                     <div class="policy-page">
@@ -87,9 +174,14 @@
                         </ul>
                     </div>
                 </div>
+
                 <div class=" col-md-12 col-sm-12 col-12">
                     <p>Winning films will be featured across LTIMindtree and NFDC global platforms.</p>
                 </div>
+
+                <a href="{{ asset('public/pdfs/aifestival/ai-festival.pdf') }}" target="_blank"><b>AI Shortlisted
+                        Films</b></a>
+
             </div>
         </div>
     </div>

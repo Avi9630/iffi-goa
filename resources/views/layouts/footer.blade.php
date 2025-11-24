@@ -18,7 +18,7 @@
             </div>
 
             <div class="row mt-4 phone-text">
-                <div class="col-md-3 col-sm-3">
+                <div class="col-md-3 col-sm-3 mb-2">
                     <a href=" https://play.google.com/store/apps/details?id=eu.datakal.iffigoa" target="_blank">
                         <img src="{{ asset('public/images/g-play.png') }}" alt="image" style="height: 43px;">
                     </a>
@@ -100,7 +100,7 @@
                     <a href="{{ route('contact-us') }}" class="cus-menuP-link">Contact Us</a>
                 </li>
                 <li> <a href="{{ route('faq') }}" class="cus-menuP-link">FAQ's</a></li>
-                <li><a href="{{ route('press-release') }}">Press Release</a></li>
+                {{-- <li><a href="{{ route('press-release') }}">Press Release</a></li> --}}
                 <li> <a href="{{ route('media.gallery.byYear', ['year' => '2024']) }}">Gallery</a></li>
                 <li> <a href="{{ route('privacy-policy') }}">Privacy Policy</a></li>
                 <li> <a href="{{ route('archive') }}">Archive</a></li>
@@ -149,6 +149,7 @@
 <script src="{{ asset('public/js/bootstrap.min.js') }}"></script>
 
 <script type="text/javascript" src="{{ asset('public/js/custom.js') }}"></script>
+<script type="text/javascript" src="{{ asset('public/js/gallery-tab.js') }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.10.0/js/lightgallery-all.min.js"></script>
 
 <script>

@@ -8,16 +8,9 @@
     'IFFI photo gallery, IFFI Goa pictures, film festival photos, IFFI Goa moments, IFFI Goa
     photography, IFFI Goa visuals')
 @section('content')
-
-    <!-- Header start-->
     @include('layouts.header')
-    <!-- Header end-->
-
-    <!-- Menu slide start-->
     @include('pages.navigation-slide')
-    <!-- Menu slide end -->
 
-    <!-- Inner Page Banner Section -->
     <div class="container-fluid page-header bannerBg-partnersSponsors py-5">
         <div class="container text-center ">
             <h1 class="page-title-header">Our Partners & Sponsors</h1>
@@ -26,7 +19,6 @@
 
     <div class="col-lg-12 mt-5 static-content">
         <div class="container">
-            <!-- Opening & Closing Venue -->
             <div class="row">
 
                 <div class="col-md-4 col-sm-6 d-flex">
@@ -187,7 +179,7 @@
                                                 alt="MOBILITY PARTNER">
                                         </a>
                                     </li>
-                                    
+
                                     <li class="me-2">
                                         <a href="https://www.iffigoa.org/public/images/sponsor/2025/8.png">
                                             <img src="{{ asset('public/images/sponsor/2025/8.png') }}" class="img-fluid"
@@ -236,7 +228,13 @@
                                     </li>
                                     <li class="me-2">
                                         <a href="https://www.iffigoa.org/public/images/sponsor/2025/44.png">
-                                            <img src="{{ asset('public/images/sponsor/2025/44.png') }}"
+                                            <img src="{{ asset('public/images/sponsor/2025/44.png') }}" class="img-fluid"
+                                                alt="CONTENT PARTNERS">
+                                        </a>
+                                    </li>
+                                    <li class="me-2">
+                                        <a href="https://www.iffigoa.org/public/images/sponsor/2025/52.webp">
+                                            <img src="{{ asset('public/images/sponsor/2025/52.webp') }}"
                                                 class="img-fluid" alt="CONTENT PARTNERS">
                                         </a>
                                     </li>
@@ -317,14 +315,98 @@
                                         </a>
                                     </li>
                                     <li class="me-2">
-                                        {{-- <a href="https://www.iffigoa.org/public/images/thePartnerSponsor/rmpl.jpg"> --}}
-                                            <img src="{{ asset('public/images/sponsor/2025/10.png') }}"
-                                                class="img-fluid" alt="LICENSING PARTNER">
-                                        {{-- </a> --}}
+                                        <a href="https://www.iffigoa.org/public/images/sponsor/2025/10.png">
+                                            <img src="{{ asset('public/images/sponsor/2025/10.png') }}" class="img-fluid"
+                                                alt="LICENSING PARTNER">
+                                        </a>
                                     </li>
                                     <li class="me-2">
                                         <img src="{{ asset('public/images/sponsor/2025/13.png') }}" class="img-fluid"
                                             alt="Fly91">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 col-sm-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="title-sponsor">MEDIA PARTNERS</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="sponsor-list-div ">
+                                <ul>
+                                    <li class="me-2">
+                                        <a href="https://www.iffigoa.org/public/images/sponsor/2025/48.png">
+                                            <img src="{{ asset('public/images/sponsor/2025/48.png') }}" class="img-fluid"
+                                                alt="MEDIA PARTNERS">
+                                        </a>
+                                    </li>
+                                    <li class="me-2">
+                                        <a href="https://www.iffigoa.org/public/images/sponsor/2025/50.png">
+                                            <img src="{{ asset('public/images/sponsor/2025/50.png') }}" class="img-fluid"
+                                                alt="MEDIA PARTNERS">
+                                        </a>
+                                    </li>
+                                    <li class="me-2">
+                                        <a href="https://www.iffigoa.org/public/images/sponsor/2025/42.png">
+                                            <img src="{{ asset('public/images/sponsor/2025/42.png') }}" class="img-fluid"
+                                                alt="MEDIA PARTNERS">
+                                        </a>
+                                    </li>
+                                    <li class="me-2">
+                                        <a href="https://www.iffigoa.org/public/images/sponsor/2025/53.webp">
+                                            <img src="{{ asset('public/images/sponsor/2025/53.webp') }}"
+                                                class="img-fluid" alt="MEDIA PARTNERS">
+                                        </a>
+                                    </li>
+                                    <li class="me-2">
+                                        <a href="https://www.iffigoa.org/public/images/sponsor/2025/54.webp">
+                                            <img src="{{ asset('public/images/sponsor/2025/54.webp') }}"
+                                                class="img-fluid" alt="MEDIA PARTNERS">
+                                        </a>
+                                    </li>
+                                    <li class="me-2">
+                                        <a href="https://www.iffigoa.org/public/images/sponsor/2025/55.webp">
+                                            <img src="{{ asset('public/images/sponsor/2025/55.webp') }}"
+                                                class="img-fluid" alt="MEDIA PARTNERS">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 col-sm-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="title-sponsor">FESTIVAL CURATION PARTNERS</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="sponsor-list-div ">
+                                <ul>
+                                    <li class="me-2">
+                                        <img src="{{ asset('public/images/sponsor/2025/59.png') }}" class="img-fluid"
+                                            alt="FESTIVAL CURATION PARTNERS">
+                                    </li>
+                                    <li class="me-2">
+                                        <img src="{{ asset('public/images/sponsor/2025/60.png') }}" class="img-fluid"
+                                            alt="FESTIVAL CURATION PARTNERS">
+                                    </li>
+                                    <li class="me-2">
+                                        <img src="{{ asset('public/images/sponsor/2025/61.png') }}" class="img-fluid"
+                                            alt="FESTIVAL CURATION PARTNERS">
+                                    </li>
+                                    <li class="me-2">
+                                        <img src="{{ asset('public/images/sponsor/2025/62.png') }}" class="img-fluid"
+                                            alt="FESTIVAL CURATION PARTNERS">
+                                    </li>
+                                    <li class="me-2">
+                                        <img src="{{ asset('public/images/sponsor/2025/63.png') }}" class="img-fluid"
+                                            alt="FESTIVAL CURATION PARTNERS">
                                     </li>
                                 </ul>
                             </div>
@@ -420,26 +502,6 @@
                     </div>
                 </div>
 
-                {{-- <div class="col-md-4 col-sm-6 d-flex">
-                    <div class="card">
-                        <div class="card-header">
-                            <h3 class="title-sponsor">SURVEILLANCE PARTNERS</h3>
-                        </div>
-                        <div class="card-body">
-                            <div class="sponsor-list-div ">
-                                <ul>
-                                    <li class="me-2">
-                                        <a href="https://www.iffigoa.org/public/images/thePartnerSponsor/39.png">
-                                            <img src="https://www.iffigoa.org/public/images/thePartnerSponsor/39.png"
-                                                class="img-fluid" alt="SURVEILLANCE PARTNERS">
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div> --}}
-
                 <div class="col-md-12 col-sm-12">
                     <div class="card">
                         <div class="card-header">
@@ -473,26 +535,8 @@
                                         </a>
                                     </li>
                                     <li class="me-2">
-                                        <a href="https://www.iffigoa.org/public/images/sponsor/2025/48.png">
-                                            <img src="{{ asset('public/images/sponsor/2025/48.png') }}" class="img-fluid"
-                                                alt="OTHER PARTNERS">
-                                        </a>
-                                    </li>
-                                    <li class="me-2">
                                         <a href="https://www.iffigoa.org/public/images/sponsor/2025/49.png">
                                             <img src="{{ asset('public/images/sponsor/2025/49.png') }}" class="img-fluid"
-                                                alt="OTHER PARTNERS">
-                                        </a>
-                                    </li>
-                                    <li class="me-2">
-                                        <a href="https://www.iffigoa.org/public/images/sponsor/2025/50.png">
-                                            <img src="{{ asset('public/images/sponsor/2025/50.png') }}" class="img-fluid"
-                                                alt="OTHER PARTNERS">
-                                        </a>
-                                    </li>
-                                    <li class="me-2">
-                                        <a href="https://www.iffigoa.org/public/images/sponsor/2025/42.png">
-                                            <img src="{{ asset('public/images/sponsor/2025/42.png') }}" class="img-fluid"
                                                 alt="OTHER PARTNERS">
                                         </a>
                                     </li>
@@ -529,6 +573,24 @@
                                     <li class="me-2">
                                         <a href="https://www.iffigoa.org/public/images/sponsor/2025/51.png">
                                             <img src="{{ asset('public/images/sponsor/2025/51.png') }}" class="img-fluid"
+                                                alt="OTHER PARTNERS">
+                                        </a>
+                                    </li>
+                                    <li class="me-2">
+                                        <a href="https://www.iffigoa.org/public/images/sponsor/2025/56.png">
+                                            <img src="{{ asset('public/images/sponsor/2025/56.png') }}" class="img-fluid"
+                                                alt="OTHER PARTNERS">
+                                        </a>
+                                    </li>
+                                    <li class="me-2">
+                                        <a href="https://www.iffigoa.org/public/images/sponsor/2025/57.png">
+                                            <img src="{{ asset('public/images/sponsor/2025/57.png') }}" class="img-fluid"
+                                                alt="OTHER PARTNERS">
+                                        </a>
+                                    </li>
+                                    <li class="me-2">
+                                        <a href="https://www.iffigoa.org/public/images/sponsor/2025/58.png">
+                                            <img src="{{ asset('public/images/sponsor/2025/58.png') }}" class="img-fluid"
                                                 alt="OTHER PARTNERS">
                                         </a>
                                     </li>
@@ -635,6 +697,26 @@
                         </div>
                     </div>
                 </div>
+
+                {{-- <div class="col-md-4 col-sm-6 d-flex">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="title-sponsor">SURVEILLANCE PARTNERS</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="sponsor-list-div ">
+                                <ul>
+                                    <li class="me-2">
+                                        <a href="https://www.iffigoa.org/public/images/thePartnerSponsor/39.png">
+                                            <img src="https://www.iffigoa.org/public/images/thePartnerSponsor/39.png"
+                                                class="img-fluid" alt="SURVEILLANCE PARTNERS">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div> --}}
 
                 {{-- <div class="col-md-4 col-sm-6 d-flex">
                     <div class="card">

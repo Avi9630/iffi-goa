@@ -28,7 +28,8 @@
                 @foreach ($internationalCinemas as $internationalCinema)
                     <div class="col-md-3 col-sm-4 col-xs-12 d-flex">
                         <div class="card shadow-sm w-100">
-                            <div class="card-image min-size-img">
+                            {{-- min-size-img --}}
+                            <div class="card-image">
                                 @if (!empty($internationalCinema->img_src))
                                     <img src="{{ asset('public/images/cureted-section/' . $internationalCinema->img_src) }}"
                                         alt="{{ $internationalCinema->title }} image" class="img-fluid">

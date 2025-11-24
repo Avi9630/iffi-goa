@@ -103,8 +103,6 @@
                                                     href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'icft-unesco-medal']) }}">
                                                     ICFT UNESCO Gandhi Medal
                                                 </a></li>
-
-                                            {{-- Curated Sections 2025 statrt here --}}
                                             <li class="nav-item dropend">
                                                 <a class="nav-link dropdown-toggle" href="#" role="button"
                                                     data-bs-toggle="dropdown" aria-expanded="false">
@@ -175,7 +173,42 @@
                                                             Presentations</a></li> --}}
                                                 </ul>
                                             </li>
-                                            {{-- Curated Sections 2025 end here --}}
+
+                                            <li><a class="dropdown-item"
+                                                    href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'country-focus-japan']) }}">
+                                                    Country Focus: Japan
+                                                </a></li>
+
+                                            {{-- Special Film Package --}}
+
+                                            <li class="nav-item dropend">
+                                                <a class="nav-link dropdown-toggle" href="#" role="button"
+                                                    data-bs-toggle="dropdown" aria-expanded="false">Special Film
+                                                    Packages</a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'partner-country-spain']) }}">Partner
+                                                            Country Spain
+                                                        </a>
+                                                    </li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'spotlight-australia']) }}">Spotlight:
+                                                            Australia</a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'special-screening']) }}">Special
+                                                            Screening</a></li>
+                                                </ul>
+                                            </li>
+
+                                            <li><a class="dropdown-item"
+                                                    href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'opening-film']) }}">Opening
+                                                    Film</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'mid-fest-film']) }}">Mid
+                                                    fest film</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'closing-film']) }}">Closing
+                                                    Film</a></li>
 
                                             {{-- Curated Sections 2024 --}}
                                             {{-- <li class="nav-item dropend">
@@ -283,40 +316,7 @@
                                                 <a href="{{ route('icinema-rules-regulation') }}"
                                                     class="dropdown-item">Rules & Regulations</a>
                                             </li>
-                                        </ul>
-                                    </li>
 
-                                    {{-- Country Focus Japan --}}
-                                    <ul class="navbar-nav vertical-menu-custom">
-                                        <li class="nav-item">
-                                            <a href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'country-focus-japan']) }}"
-                                                class="nav-link">Country
-                                                Focus: Japan</a>
-                                        </li>
-                                    </ul>
-
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="#" role="button"
-                                            data-bs-toggle="dropdown" aria-expanded="false">Special Film Packages</a>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item"
-                                                    href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'partner-country-spain']) }}">Partner
-                                                    Country Spain
-                                                </a>
-                                            </li>
-
-                                            <li><a class="dropdown-item"
-                                                    href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'spotlight-australia']) }}">Spotlight:
-                                                    Australia</a></li>
-                                            <li><a class="dropdown-item"
-                                                    href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'opening-film']) }}">Opening
-                                                    Film</a></li>
-                                            <li><a class="dropdown-item"
-                                                    href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'mid-fest-film']) }}">Mid
-                                                    fest film</a></li>
-                                            <li><a class="dropdown-item"
-                                                    href="{{ route('cureted-section', ['year' => 2025, 'slug' => 'closing-film']) }}">Closing
-                                                    Film</a></li>
                                         </ul>
                                     </li>
 
@@ -412,8 +412,7 @@
                                                 class="nav-link" target="_blank">CinemAI Hackathon</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="{{ route('ai-film-festival') }}" class="nav-link"
-                                                target="_blank">AI Film Festival</a>
+                                            <a href="{{ route('ai-film-festival') }}" class="nav-link">AI Film Festival</a>
                                         </li>
                                     </ul>
 
@@ -514,6 +513,11 @@
                                             Committee</a>
                                     </li>
                                     <!-- Technical Committee End-->
+
+                                    {{-- <li class="nav-item dropdown">
+                                        <a href="{{ asset('public/pdfs/21-Nov-2025.pdf') }}"
+                                            class="dropdown-item">Film Screenings Schedule</a>
+                                    </li> --}}
                                 </ul>
                             </div>
                             <!-- Film Selection Section End -->
@@ -615,7 +619,13 @@
                                 <ul class="navbar-nav vertical-menu-custom">
 
                                     <li class="nav-item">
-                                        <a href="{{ route('press-release') }}" class="nav-link">Press Release</a>
+                                        <a href="{{ route('press-release-pib') }}" class="nav-link">Press Release by
+                                            PIB</a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="{{ route('press-release-non-pib') }}" class="nav-link">Media
+                                            Coverage (Non PIB)</a>
                                     </li>
 
                                     <li class="nav-item">
@@ -630,7 +640,7 @@
                                         </a>
                                         <ul class="dropdown-menu">
                                             {{-- 2025 --}}
-                                            {{-- <li class="nav-item dropend">
+                                            <li class="nav-item dropend">
                                                 <a class="nav-link dropdown-toggle" href="#" role="button"
                                                     data-bs-toggle="dropdown" aria-expanded="false">
                                                     IFFI festival 2025
@@ -646,7 +656,7 @@
                                                             href="{{ route('media.gallery.videos.byYear', ['year' => '2025']) }}">Videos</a>
                                                     </li>
                                                 </ul>
-                                            </li> --}}
+                                            </li>
                                             {{-- 2024 --}}
                                             <li class="nav-item dropend">
                                                 <a class="nav-link dropdown-toggle" href="#" role="button"
@@ -696,6 +706,10 @@
                                             class="nav-link">News and Updates</a>
                                     </li>
 
+                                    <li class="nav-item"><a href="{{ route('the-peacock', ['year' => 2025]) }}"
+                                            class="nav-link">The Peacock</a>
+                                    </li>
+
                                     {{-- <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" role="button"
                                             data-bs-toggle="dropdown" aria-expanded="false">
@@ -728,6 +742,16 @@
                                             target="_blank" class="nav-link">56<sup>th</sup> IFFI Official
                                             Catalogue</a>
                                     </li> --}}
+
+                                    <li class="nav-item">
+                                        <a href="{{ asset('public/pdfs/schedule/Schedule.pdf') }}" class="nav-link"
+                                            target="_blank">IFFI 56 Schedule</a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="{{ asset('public/pdfs/catalogue/Catalogue.pdf') }}" class="nav-link"
+                                            target="_blank">IFFI 56 Catalogue</a>
+                                    </li>
 
                                 </ul>
                             </div>
