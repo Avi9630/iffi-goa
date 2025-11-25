@@ -112,7 +112,7 @@ class GalleryController extends Controller
         ]);
     }
 
-     // public function galleryByCategory(Request $request, $year, COMMONService $commonService)
+    // public function galleryByCategory(Request $request, $year, COMMONService $commonService)
     // {
     //     $payload = $request->all();
     //     $category = !empty($payload['category_id']) ? $payload['category_id'] : '';
