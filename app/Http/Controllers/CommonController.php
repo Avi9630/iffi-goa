@@ -59,7 +59,7 @@ class CommonController extends Controller
     public function cmotHighlights()
     {
         $datas = Photo::select('id', 'img_url', 'image')
-            ->where(['category_id' => 9, 'status' => 1, 'year' => 2024, 'highlights' => 1])
+            ->where(['category_id' => 9, 'status' => 1, 'year' => 2025, 'highlights' => 1])
             ->get();
 
         return $datas;
@@ -68,7 +68,7 @@ class CommonController extends Controller
     public function masterClasssHighlights()
     {
         $datas = Photo::select('id', 'img_url', 'image')
-            ->where(['category_id' => 3, 'status' => 1, 'year' => 2024, 'highlights' => 1])
+            ->where(['category_id' => 3, 'status' => 1, 'year' => 2025, 'highlights' => 1])
             ->get();
 
         return $datas;
