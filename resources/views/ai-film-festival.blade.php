@@ -21,12 +21,12 @@
         <div class="container">
             <div class="row">
                 <div class=" col-md-12 col-sm-12 col-12">
-                    
+
                     <p>
                         <b>Powered By -</b> <br>
                         <img src="{{ asset('public/images/ltmindtree.png') }}" alt="ai-film-festival" class="img-fluid">
                     </p>
-                    
+
                     {{-- Logos --}}
                     <div class="col-md-12 col-sm-12">
                         <div class="card">
@@ -131,7 +131,7 @@
 
                     </p>
                 </div>
-                
+
                 <div class="col-lg-12">
                     <h4 class="text-center">The Craft Honors: India's recognition for AI Films</h4>
                     <div class="policy-page">
@@ -181,6 +181,67 @@
 
                 <a href="{{ asset('public/pdfs/aifestival/ai-festival.pdf') }}" target="_blank"><b>AI Shortlisted
                         Films</b></a>
+
+                <br>
+                <section>
+                    <div class="container">
+                        <div class="text-center mt-5 center-heading">
+                            <h2>Jury</h2>
+                        </div>
+                        <div class="owl-carousel">
+                            <div class="item card">
+                                <img src="{{ asset('public/images/jury-image/4.webp') }}" alt="image"
+                                    class="img-fluid" loading="lazy">
+                                <div class="International-competition">
+                                    <p> Shekhar Kapur</p>
+                                    <p style="text-align: inherit"> IFFI Festival Director, Director and Producer </p>
+                                </div>
+                            </div>
+                            <div class="item card">
+                                <img src="{{ asset('public/images/jury-image/6.webp') }}" alt="image"
+                                    class="img-fluid" loading="lazy">
+                                <div class="International-competition">
+                                    <p> Ramdas Naidu </p>
+                                    <p style="text-align: inherit"> Producer, Director </p>
+                                </div>
+                            </div>
+                            <div class="item card">
+                                <img src="{{ asset('public/images/jury-image/1.webp') }}" alt="image"
+                                    class="img-fluid" loading="lazy">
+                                <div class="International-competition">
+                                    <p>Ashwin Kumar </p>
+                                    <p style="text-align: inherit">Director, Animator</p>
+                                </div>
+                            </div>
+                            <div class="item card">
+                                <img src="{{ asset('public/images/jury-image/2.webp') }}" alt="image"
+                                    class="img-fluid" loading="lazy">
+                                <div class="International-competition">
+                                    <p>Asha Batra</p>
+                                    <p style="text-align: inherit">Film Historian, Indian Cinema Heritage Foundation</p>
+                                </div>
+                            </div>
+                            <div class="item card">
+                                <img src="{{ asset('public/images/jury-image/5.webp') }}" alt="image"
+                                    class="img-fluid" loading="lazy">
+                                <div class="International-competition">
+                                    <p>Dr. Sujay Sen </p>
+                                    <p style="text-align: inherit">Executive Vice President & Global Head - Interactive Services, LTIMindtree</p>
+                                </div>
+                            </div>
+
+                            <div class="item card">
+                                <img src="{{ asset('public/images/jury-image/3.webp') }}" alt="image"
+                                    class="img-fluid" loading="lazy">
+                                <div class="International-competition">
+                                    <p>Nayna Raut </p>
+                                    <p style="text-align: inherit">Senior Director - Design Strategy & CraftStudio, Interactive Services, LTIMindtree
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
             </div>
         </div>
