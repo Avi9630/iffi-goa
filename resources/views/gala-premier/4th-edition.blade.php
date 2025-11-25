@@ -339,7 +339,7 @@
                                     'language' => 'Hindi',
                                     'genre' => '',
                                     'premiere' => '',
-                                    'duration' => '',
+                                    'duration' => '33 min',
                                     'audi' => 'Panjim Audi 3',
                                     'venue' => 'Inox Panjim, Old GMC Building',
                                 ],
