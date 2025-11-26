@@ -9,16 +9,21 @@
                 {{-- @php
                     $webpImage = preg_replace('/\.\w+$/', '.webp', $data->img_src);
                 @endphp --}}
-                <div class="item card">
-                    @if (!empty($data->img_src))
+                {{-- <div class="item card"> --}}
+                    {{-- @if (!empty($data->img_src))
                         <img src="{{ asset('public/images/highlights/' . $data->img_src) }}"alt="image" class="img-fluid"
                             loading="lazy">
                     @else
                         <img src="{{ $data->img_url }}"alt="image" class="img-fluid" loading="lazy">
-                    @endif
+                    @endif --}}
+                    @foreach ($datas as $data)
+                        <div class="item card">
+                            <img src='{{ $data->img_url }}' alt="{{ $data->image }}" class="img-fluid">
+                        </div>
+                    @endforeach
                     {{-- <img src="{{ asset('public/images/highlights/' . $data->img_src) }}" alt="image"
                         class="img-fluid"> --}}
-                </div>
+                {{-- </div> --}}
             @endforeach
         </div>
     </div>
