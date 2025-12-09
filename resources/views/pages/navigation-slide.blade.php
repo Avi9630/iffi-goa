@@ -625,7 +625,7 @@
 
                                     <li class="nav-item">
                                         <a href="{{ route('press-release-non-pib') }}" class="nav-link">Media
-                                            Coverage (Non PIB)</a>
+                                            Coverage</a>
                                     </li>
 
                                     <li class="nav-item">
