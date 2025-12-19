@@ -49,17 +49,19 @@ class CommonController extends Controller
 
     public function highlights()
     {
-        // $datas = DB::table('highlights')
-        //     ->where(['status' => 1])
-        //     ->get();
-        $datas = DB::table('highlights')->where('status', 1)->orderBy('created_at', 'desc')->get();
+        // $datas = DB::table('highlights')->where('status', 1)->orderBy('created_at', 'desc')->get();
+
+        $datas = Photo::select('id', 'img_url', 'image')
+            ->where(['category_id' => 18, 'year' => 2025, 'highlights' => 1])
+            ->get();
+
         return $datas;
     }
 
     public function cmotHighlights()
     {
         $datas = Photo::select('id', 'img_url', 'image')
-            ->where(['category_id' => 9, 'status' => 1, 'year' => 2024, 'highlights' => 1])
+            ->where(['category_id' => 9, 'year' => 2025, 'highlights' => 1])
             ->get();
 
         return $datas;
@@ -68,7 +70,7 @@ class CommonController extends Controller
     public function masterClasssHighlights()
     {
         $datas = Photo::select('id', 'img_url', 'image')
-            ->where(['category_id' => 3, 'status' => 1, 'year' => 2024, 'highlights' => 1])
+            ->where(['category_id' => 3, 'year' => 2025, 'highlights' => 1])
             ->get();
 
         return $datas;

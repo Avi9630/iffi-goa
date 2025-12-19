@@ -6,7 +6,7 @@
     <!-- Inner Page Banner Section -->
     <div class="container-fluid page-header bannerBg-news py-5">
         <div class="container text-center ">
-            <h1 class="page-title-header">Press Releases By Non PIB</h1>
+            <h1 class="page-title-header">Media Coverage</h1>
         </div>
     </div>
 
