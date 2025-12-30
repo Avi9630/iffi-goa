@@ -13,10 +13,10 @@
     <div class="col-lg-12 mt-5 static-content">
         <div class="container">
             <div class="row ">
+
                 @if ($year != 2023)
                     <form method="GET" action="{{ route('search-gallery-by-cat', $year) }}" class="forms-sample"
                         id="filterForm">
-                        {{-- @csrf --}}
 
                         <input type="hidden" name="date" id="dateInput" value="{{ request('date') }}">
 
@@ -82,13 +82,55 @@
                             </div>
                         </div>
                     </div>
-                @else
+                @elseif($year == 2024)
                     <div class="gallery mt-4 gallery" id="lightgallery">
                         @forelse ($gallery as $item)
                             <div class="grid-item">
-                                <a href="{{ $item->img_url }}" target="_blank">
-                                    <img src="{{ $item->img_url }}" alt="{{ $item->img_caption }}">
+                                @php
+                                    $pathWithYear =
+                                        'https://storage.googleapis.com/iffi-goa-public-bucket-0001/uploads/gallery/2024/';
+
+                                    $pathWithoutYear =
+                                        'https://storage.googleapis.com/iffi-goa-public-bucket-0001/uploads/';
+
+                                    if (str_contains($item->img_url, $pathWithYear)) {
+                                        $imageName = str_replace($pathWithYear, '', $item->img_url);
+                                    } else {
+                                        $imageName = str_replace($pathWithoutYear, '', $item->img_url);
+                                    }
+                                @endphp
+
+                                <a href="{{ asset('public/images/gallery/2024/' . $imageName) }}" target="_blank">
+                                    <img src="{{ asset('public/images/gallery/2024/' . $imageName) }}"
+                                        alt="{{ $item->img_caption }}">
                                 </a>
+                            </div>
+                        @empty
+                            <p>No images found.!!</p>
+                        @endforelse
+                    </div>
+                @elseif($year == 2025)
+                    <div class="gallery mt-4 gallery" id="lightgallery">
+                        @forelse ($gallery as $item)
+                            <div class="grid-item">
+                                @php
+                                    $pathWithYear =
+                                        'https://storage.googleapis.com/iffi-goa-public-bucket-0001/uploads/gallery/2025/';
+                                    $pathWithoutYear =
+                                        'https://storage.googleapis.com/iffi-goa-public-bucket-0001/uploads/gallery/';
+
+                                    if (str_contains($item->img_url, $pathWithYear)) {
+                                        $imageName = str_replace($pathWithYear, '', $item->img_url);
+                                    } else {
+                                        $imageName = str_replace($pathWithoutYear, '', $item->img_url);
+                                    }
+                                @endphp
+
+                                <a href="{{ asset('public/images/gallery/2025/' . $imageName) }}" target="_blank">
+                                    <img src="{{ asset('public/images/gallery/2025/' . $imageName) }}"
+                                        alt="{{ $item->img_caption }}">
+                                </a>
+
                             </div>
                         @empty
                             <p>No images found.!!</p>
