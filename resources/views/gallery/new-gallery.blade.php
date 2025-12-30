@@ -71,9 +71,9 @@
                                 <div id="lightgallery" class="gallery">
                                     @foreach ($gallery as $gall)
                                         <div class="grid-item">
-                                            <a href="{{ asset('public/images/gallery/' . $gall->image) }}"
-                                                data-src="{{ asset('public/images/gallery/' . $gall->image) }}">
-                                                <img src="{{ asset('public/images/gallery/' . $gall->image) }}"
+                                            <a href="{{ asset('public/images/gallery/2023/' . $gall->image) }}"
+                                                data-src="{{ asset('public/images/gallery/2023/' . $gall->image) }}">
+                                                <img src="{{ asset('public/images/gallery/2023/' . $gall->image) }}"
                                                     alt="{{ $gall->image }}">
                                             </a>
                                         </div>
