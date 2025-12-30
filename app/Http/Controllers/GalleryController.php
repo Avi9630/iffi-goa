@@ -20,11 +20,13 @@ class GalleryController extends Controller
             $query->whereNotNull('category_id');
             $query->whereNotNull('img_url');
         }
+        
         if ($year == 2024) {
             $dates = $commonService->dates2024();
             $query->whereNotNull('category_id');
             $query->whereNotNull('img_url');
         }
+
         if ($year == 2023) {
             $dates = $commonService->dates2023();
             $query->whereNull('category_id');
@@ -32,7 +34,7 @@ class GalleryController extends Controller
         }
 
         $gallery = $query->orderBy('id', 'DESC')->paginate(12);
-
+        
         return view('gallery.new-gallery', [
             'year'          =>  $year,
             'gallery'       =>  $gallery,
