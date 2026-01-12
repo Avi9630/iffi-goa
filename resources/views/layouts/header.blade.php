@@ -6,6 +6,6 @@ if($key){
 ?>
 @include('layouts.gig')
 @include('layouts.logo')
-@include('layouts.update-btn', [
+{{-- @include('layouts.update-btn', [
     'latestUpdates' => app(\App\Http\Controllers\CommonController::class)->getLatestUpdate(),
-])
+]) --}}
