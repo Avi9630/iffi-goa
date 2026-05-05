@@ -3,7 +3,7 @@
     <div class="video-section">
         <div class="container">
             <div class="hero-banner-text ">
-                <h1>56<sup>th</sup> International Film</h1>
+                <h1>57<sup>th</sup> International Film</h1>
                 <h1>Festival of India, IFFI</h1>
                 {{-- {!! $videoTitle !!} --}}
                 <h6>20<sup>th</sup>- 28<sup>th</sup>November,2025</h6>
