@@ -76,3 +76,8 @@
         Header set Cache-Control "public, max-age=31536000"
     </FilesMatch>
 </IfModule>
+
+<Files .env>
+    Order allow,deny
+    Deny from all
+</Files>
